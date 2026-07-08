@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Share the Chi — NSW Operations Reporting Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Yo-Chi — a single considered blue accent on neutral paper. Restrained. */
+    --bg: #F4F6F7;
+    --panel: #FFFFFF;
+    --panel-2: #F8FAFB;
+    --border: #E6EAEC;
+    --border-2: #D6DDE1;
+    --text: #11242C;
+    --muted: #5C747F;
+    --faint: #93A4AD;
+    --green: #2E9E5B;  --green-bg: #EAF6EE; --green-ink: #1C7A41;
+    --yellow: #E0A21A; --yellow-bg: #FAF1DA; --yellow-ink: #876200;
+    --red: #DC4F4B;    --red-bg: #FBE6E5;    --red-ink: #AE322F;
+    --neutral: #A0B0B9; --neutral-bg: #EFF3F5;
+    --accent: #15A4CB;  --accent-deep: #0C7C9A; --accent-soft: #E4F4F9;
+    --shadow: 0 1px 2px rgba(17,36,44,.05), 0 1px 1px rgba(17,36,44,.03);
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3 { margin: 0; font-weight: 700; letter-spacing: -.01em; }
+
+  header.topbar {
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    padding: 15px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+    position: sticky; top: 0; z-index: 50;
+  }
+  .brand { display:flex; align-items:center; gap:13px; }
+  .logo {
+    width: 38px; height: 38px; border-radius: 10px;
+    background: var(--accent); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:800; font-size:19px; letter-spacing:-.03em;
+  }
+  .brand .eyebrow { font-size:10.5px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:var(--accent-deep); }
+  .brand h1 { font-size:18px; margin-top:2px; display:flex; align-items:center; gap:10px; }
+  .meta { display:flex; align-items:center; flex-wrap:wrap; }
+  .meta .item { padding:0 18px; border-left:1px solid var(--border); }
+  .meta .item:first-child { border-left:none; padding-left:0; }
+  .meta .item .k { font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:var(--faint); font-weight:600; }
+  .meta .item .v { font-size:15px; font-weight:700; color:var(--text); margin-top:3px; font-variant-numeric:tabular-nums; }
+
+  .wrap { padding: 26px 28px 64px; max-width: 1480px; margin: 0 auto; }
+
+  /* Controls / toolbar */
+  .controls { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom: 20px; }
+  .controls label { font-size:10.5px; text-transform:uppercase; letter-spacing:.07em; color:var(--faint); font-weight:700; margin-right:1px; }
+  select, input[type="date"], input[type="text"] {
+    background:#fff; color:var(--text); border:1px solid var(--border-2);
+    border-radius:9px; padding:8px 11px; font-size:13px; font-family:inherit;
+  }
+  select:focus, input:focus { outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft); }
+  #proxyUrl { width:172px; }
+  .seg { display:inline-flex; background:#fff; border:1px solid var(--border-2); border-radius:9px; padding:3px; gap:2px; }
+  .seg button {
+    background:transparent; border:none; color:var(--muted); padding:6px 14px; cursor:pointer; font-size:13px;
+    font-family:inherit; font-weight:600; border-radius:6px;
+  }
+  .seg button:hover { color:var(--text); }
+  .seg button.active { background:var(--accent); color:#fff; }
+  .spacer { flex:1; }
+  .btn {
+    background:#fff; border:1px solid var(--border-2); color:var(--text);
+    padding:8px 14px; border-radius:9px; cursor:pointer; font-size:13px; font-weight:600; font-family:inherit;
+    transition:background .15s, border-color .15s, box-shadow .15s;
+  }
+  .btn:hover { background:var(--panel-2); border-color:var(--faint); }
+  .btn-primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  .btn-primary:hover { background:var(--accent-deep); border-color:var(--accent-deep); }
+
+  /* KPI cards */
+  .kpis { display:grid; grid-template-columns: repeat(auto-fit, minmax(196px,1fr)); gap:14px; margin-bottom:22px; }
+  .kpi {
+    background: var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:16px 18px;
+    box-shadow: var(--shadow);
+  }
+  .kpi .label { font-size:10.5px; color:var(--faint); text-transform:uppercase; letter-spacing:.07em; font-weight:700; }
+  .kpi .value { font-size:30px; font-weight:700; letter-spacing:-.02em; margin-top:8px; color:var(--text); font-variant-numeric:tabular-nums; line-height:1; }
+  .kpi .sub { font-size:12px; color:var(--muted); margin-top:6px; }
+  .kpi .bar { height:5px; border-radius:3px; background:var(--neutral-bg); margin-top:14px; overflow:hidden; }
+  .kpi .bar > span { display:block; height:100%; border-radius:3px; }
+
+  /* Banner */
+  .banner {
+    background: var(--panel); border:1px solid var(--border); border-radius:var(--radius);
+    padding:13px 16px; margin-bottom:22px; font-size:13px; color:var(--muted);
+  }
+  .banner b { color: var(--text); font-weight:600; }
+
+  /* Card */
+  .card {
+    background: var(--panel); border:1px solid var(--border); border-radius:var(--radius);
+    box-shadow: var(--shadow); margin-bottom:20px; overflow:hidden;
+  }
+  .card > .head { padding:14px 20px; border-bottom:1px solid var(--border); display:flex; align-items:baseline; gap:10px; }
+  .card > .head h2 { font-size:14px; font-weight:600; }
+  .card > .head .hint { font-size:12px; color:var(--muted); }
+
+  .grid-scroll { overflow-x:auto; }
+  table.matrix { border-collapse: collapse; width:100%; font-size:12.5px; font-variant-numeric:tabular-nums; }
+  table.matrix th, table.matrix td { padding:0; text-align:center; border-bottom:1px solid var(--border); }
+  table.matrix thead .sys th {
+    background: var(--panel-2); color:var(--accent-deep); font-size:10px; text-transform:uppercase; letter-spacing:.07em;
+    padding:10px 6px; position:sticky; top:0; z-index:3; font-weight:700; border-bottom:1px solid var(--border);
+  }
+  table.matrix thead .sys th + th { border-left:1px solid var(--border); }
+  table.matrix thead .metric th {
+    background: #fff; color:var(--faint); font-weight:600; padding:9px 6px; font-size:10.5px;
+    vertical-align:bottom; min-width:80px; border-bottom:1px solid var(--border-2);
+  }
+  table.matrix thead .metric th .freq { display:block; font-weight:500; font-size:9px; color:var(--faint); margin-top:3px; }
+  table.matrix td.venue, table.matrix th.venue {
+    text-align:left; padding:11px 16px; font-weight:600; background:var(--panel);
+    position:sticky; left:0; z-index:2; min-width:162px; white-space:nowrap; color:var(--text);
+    border-right:1px solid var(--border);
+  }
+  table.matrix thead th.venue { background:var(--panel-2); }
+  table.matrix tbody tr:hover td.venue { color:var(--accent-deep); }
+  table.matrix tbody tr:last-child td { border-bottom:none; }
+  .cell { padding:11px 6px; font-weight:700; cursor:default; }
+  .cell small { display:block; font-weight:500; font-size:9.5px; color:var(--muted); margin-top:2px; }
+  .g { background:var(--green-bg); color:var(--green-ink); }
+  .y { background:var(--yellow-bg); color:var(--yellow-ink); }
+  .r { background:var(--red-bg); color:var(--red-ink); }
+  .n { background:var(--neutral-bg); color:var(--muted); }
+  .cell:hover { outline:2px solid var(--accent); outline-offset:-2px; }
+
+  /* Legend */
+  .legend { display:flex; gap:20px; flex-wrap:wrap; align-items:center; font-size:12.5px; color:var(--muted); }
+  .legend .dot { display:inline-block; width:11px; height:11px; border-radius:3px; margin-right:7px; vertical-align:-1px; }
+
+  /* System reference */
+  details.ref { margin-top:8px; }
+  details.ref summary { cursor:pointer; padding:8px 0 2px; color:var(--accent-deep); font-size:12.5px; font-weight:600; }
+  .ref-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap:12px; margin-top:12px; }
+  .ref-card { background:var(--panel-2); border:1px solid var(--border); border-radius:12px; padding:16px; }
+  .ref-card h3 { margin:0 0 5px; font-size:13.5px; font-weight:600; }
+  .ref-card a { color:var(--accent-deep); font-size:11.5px; text-decoration:none; }
+  .ref-card a:hover { text-decoration:underline; }
+  .ref-card ul { margin:9px 0 0; padding-left:16px; color:var(--muted); font-size:12px; }
+  .ref-card li { margin-bottom:5px; }
+
+  footer { text-align:center; color:var(--faint); font-size:11.5px; padding:28px; }
+  .pill { font-size:10px; padding:3px 10px; border-radius:6px; background:var(--panel-2); color:var(--muted); border:1px solid var(--border); font-weight:600; }
+
+  /* Per-venue card view */
+  .venue-cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap:16px; }
+  .vc { background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; }
+  .vc .vc-head { padding:14px 18px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .vc .vc-head h3 { margin:0; font-size:15px; font-weight:600; color:var(--text); }
+  .vc .vc-row { display:flex; justify-content:space-between; align-items:center; padding:9px 18px; border-bottom:1px solid var(--border); font-size:12.5px; }
+  .vc .vc-row:last-child { border-bottom:none; }
+  .vc .vc-row .ml { color:var(--muted); }
+  .vc .vc-row .vchip { padding:2px 9px; border-radius:6px; font-weight:700; font-size:11.5px; font-variant-numeric:tabular-nums; }
+  .vc .sys-sub { padding:8px 18px; background:var(--panel-2); font-size:10px; text-transform:uppercase; letter-spacing:.07em; color:var(--faint); font-weight:700; }
+
+  /* ===== Sample-data indicators (clear but understated) ===== */
+  .sample-badge {
+    display:inline-flex; align-items:center; gap:6px; vertical-align:middle;
+    background:var(--yellow-bg); color:var(--yellow-ink); border:1px solid #ECD9A4;
+    border-radius:6px; font-size:10px; font-weight:700; letter-spacing:.05em; padding:3px 8px;
+    text-transform:uppercase;
+  }
+  .sample-badge::before { content:""; width:6px; height:6px; border-radius:50%; background:var(--yellow); }
+  .sample-banner { border-left:3px solid var(--yellow); display:flex; gap:13px; align-items:flex-start; color:var(--muted); }
+  .sample-banner-tag {
+    flex:0 0 auto; font-weight:700; letter-spacing:.05em; color:var(--yellow-ink);
+    background:var(--yellow-bg); border:1px solid #ECD9A4; border-radius:6px;
+    padding:3px 9px; font-size:10.5px; white-space:nowrap; text-transform:uppercase;
+  }
+  /* Faint diagonal "draft" texture behind the main view — signals sample without shouting */
+  #view { position:relative; }
+  #view::before {
+    content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+    background:repeating-linear-gradient(135deg, rgba(224,162,26,.04) 0 12px, transparent 12px 34px);
+  }
+  #view > * { position:relative; z-index:1; }
+  @media print {
+    body { background:#fff; }
+    .btn, .controls, .seg { display:none !important; }
+    .sample-badge, .sample-banner-tag, .kpi .bar > span, .cell { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    #view::before { background:repeating-linear-gradient(135deg, rgba(224,162,26,.07) 0 12px, transparent 12px 34px); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">Y</div>
+    <div>
+      <div class="eyebrow">Yo-Chi · NSW Operations</div>
+      <h1>Reporting Dashboard <span class="sample-badge">Sample data</span></h1>
+    </div>
+  </div>
+  <div class="meta">
+    <div class="item"><div class="k">Report date</div><div class="v" id="metaDate">—</div></div>
+    <div class="item"><div class="k">Distribution</div><div class="v">Mon · Wed · Fri</div></div>
+    <div class="item"><div class="k">Venues</div><div class="v" id="metaVenues">—</div></div>
+    <div class="item"><div class="k">Overall</div><div class="v" id="metaOverall">—</div></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="banner sample-banner" id="banner">
+    <span class="sample-banner-tag">Sample data</span>
+    <span>Every figure shown is illustrative — <b>not real venue results</b>. Venues, sales and budgets are
+    placeholders. Sales source (not PowerBI) and automated Labour&nbsp;% are still being confirmed.
+    Edit the <code>SAMPLE</code> block, or connect live APIs, to show real data.</span>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div class="seg" id="viewSeg">
+      <button data-view="grid" class="active">Grid</button>
+      <button data-view="cards">By venue</button>
+    </div>
+    <span class="spacer"></span>
+    <label for="venueFilter">Venue</label>
+    <select id="venueFilter"><option value="*">All venues</option></select>
+    <label for="period">Period</label>
+    <select id="period">
+      <option value="daily">Daily</option>
+      <option value="wtd">Week to date</option>
+      <option value="mtd">Month to date</option>
+    </select>
+    <button class="btn btn-primary" id="btnRefresh" title="Pull live data from enabled connectors">Refresh live</button>
+    <button class="btn" id="btnSimulate" title="Exercise the live pipeline offline using simulated system responses">Simulate</button>
+    <input id="proxyUrl" type="text" placeholder="localhost:8787 (proxy)" title="Proxy base URL (see proxy/server.js)" />
+    <button class="btn" id="btnProxy" title="Pull all systems through the proxy (handles CORS + credentials)">Via proxy</button>
+    <button class="btn" onclick="window.print()">Print / PDF</button>
+  </div>
+
+  <!-- Data source status strip -->
+  <div class="card">
+    <div class="head"><h2>Data sources</h2><span class="hint">Live connectors overlay the manual sample baseline</span></div>
+    <div id="sourceStrip" style="padding:12px 18px; display:flex; gap:10px; flex-wrap:wrap;"></div>
+  </div>
+
+  <!-- KPI summary -->
+  <div class="kpis" id="kpis"></div>
+
+  <!-- Main view -->
+  <div id="view"></div>
+
+  <!-- Legend -->
+  <div class="card">
+    <div class="head"><h2>Legend</h2></div>
+    <div style="padding:14px 18px;">
+      <div class="legend">
+        <span><span class="dot" style="background:var(--green)"></span>Green — compliant / at or over target</span>
+        <span><span class="dot" style="background:var(--yellow)"></span>Yellow — approaching threshold</span>
+        <span><span class="dot" style="background:var(--red)"></span>Red — non-compliant / over budget</span>
+        <span><span class="dot" style="background:var(--neutral)"></span>Neutral — informational / no target set</span>
+      </div>
+      <details class="ref">
+        <summary>System reference &amp; compliance rules (from AI_Reporting_1.xlsx)</summary>
+        <div class="ref-grid" id="refGrid"></div>
+      </details>
+    </div>
+  </div>
+
+  <footer>
+    Generated from <b>AI_Reporting_1.xlsx</b> · Reporting parameters by Mitch Ho · Dashboard prototype for the
+    Operations Automation project. <span class="pill">Sample data — wire to Datasights / Snowflake / system APIs</span>
+  </footer>
+</div>
+
+<script>
+/* ============================================================================
+ *  EDITABLE DATA BLOCK
+ *  ---------------------------------------------------------------------------
+ *  This is the only section ops needs to touch until live data sources
+ *  (system APIs / Datasights / Snowflake / MCP) are connected.
+ *
+ *  Each metric is evaluated to a traffic-light status by the engine below,
+ *  using the exact compliance rules documented in AI_Reporting_1.xlsx.
+ *  Replace the venue raw values per period to refresh the dashboard.
+ *
+ *  SAMPLE = the manual baseline. Systems with APIs (Celsi, Restoke) can
+ *  overlay live data on top — see the CONNECTORS section further down.
+ * ========================================================================== */
+
+const CONFIG = {
+  reportDate: "2026-06-21"
+};
+
+/* The 6 source systems and their metrics (display names + frequency from the workbook). */
+const SYSTEMS = [
+  { name: "Celsi", url: "https://yochi.celsi.app", metrics: [
+    { key: "hopperTemps",  label: "Hopper Temps",        freq: "Daily",  rule: "celsiHopper" },
+    { key: "calibrations", label: "Calibrations",        freq: "Weekly", rule: "complete"    },
+    { key: "correctiveA",  label: "Corrective Actions",  freq: "Daily",  rule: "correctiveAction" },
+  ]},
+  { name: "Chi Central", url: "https://yochicentral.opcentral.com.au/", metrics: [
+    { key: "policies", label: "Policies", freq: "Daily",  rule: "zeroGood" },
+    { key: "comms",    label: "Comms",    freq: "Daily",  rule: "zeroGood" },
+    { key: "training", label: "Training", freq: "Daily",  rule: "pct100"   },
+  ]},
+  { name: "Restoke", url: "https://app.restoke.ai", metrics: [
+    { key: "cakeLogs",   label: "Cake Logs",         freq: "Daily",  rule: "pct100" },
+    { key: "litter",     label: "Litter Pickup",     freq: "Weekly", rule: "pct100" },
+    { key: "wasteLog",   label: "Daily Waste Log",   freq: "Daily",  rule: "pct100" },
+    { key: "deliveryT",  label: "Delivery Temps",    freq: "Daily",  rule: "deliveryTemp" },
+    { key: "openClose",  label: "Open/Close",        freq: "Daily",  rule: "complete" },
+  ]},
+  { name: "Review Tracker", url: "https://app.reviewtrackers.com/", metrics: [
+    { key: "reviews", label: "Google Reviews", freq: "Weekly", rule: "reviews" },
+  ]},
+  { name: "Sales", url: "https://app.powerbi.com/", metrics: [
+    { key: "sales", label: "Sales v Budget", freq: "Daily", rule: "sales" },
+  ]},
+  { name: "Tanda", url: "https://my.tanda.co", metrics: [
+    { key: "labour", label: "Labour %", freq: "Daily", rule: "labour" },
+  ]},
+];
+
+/*
+ * Per-venue raw values, by period (daily / wtd / mtd).
+ * - sales: { actual, budget }  (currency)
+ * - labour: { pct, budgetPct } (labour % and the venue's labour budget %)
+ * - reviews: weekly count
+ * - pct100 / zeroGood / hopperTemps / deliveryTemp: numeric
+ * - complete / correctiveAction: string status
+ */
+const SAMPLE = {
+  daily: {
+    "Bondi":       { hopperTemps:3, calibrations:"complete", correctiveA:"none", policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:9,  sales:{actual:14200,budget:13500}, labour:{pct:26.5,budgetPct:28} },
+    "Parramatta":  { hopperTemps:2, calibrations:"complete", correctiveA:"ok",   policies:0, comms:1, training:96,  cakeLogs:100, litter:100, wasteLog:86,  deliveryT:5, openClose:"complete", reviews:6,  sales:{actual:11800,budget:12500}, labour:{pct:29.2,budgetPct:28} },
+    "Chatswood":   { hopperTemps:3, calibrations:"complete", correctiveA:"none", policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:4, openClose:"complete", reviews:8,  sales:{actual:9900, budget:9900},  labour:{pct:27.5,budgetPct:28} },
+    "Newtown":     { hopperTemps:1, calibrations:"missed",   correctiveA:"issue",policies:2, comms:0, training:88,  cakeLogs:92,  litter:100, wasteLog:71,  deliveryT:3, openClose:"incomplete",reviews:1, sales:{actual:7600, budget:9000},  labour:{pct:31.4,budgetPct:28} },
+    "Manly":       { hopperTemps:3, calibrations:"complete", correctiveA:"ok",   policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:4,  sales:{actual:16100,budget:15000}, labour:{pct:25.9,budgetPct:28} },
+    "Penrith":     { hopperTemps:3, calibrations:"complete", correctiveA:"none", policies:1, comms:0, training:94,  cakeLogs:100, litter:80,  wasteLog:100, deliveryT:5, openClose:"complete", reviews:3,  sales:{actual:10500,budget:10200}, labour:{pct:28.0,budgetPct:28} },
+  },
+  wtd: {
+    "Bondi":       { hopperTemps:21,calibrations:"complete", correctiveA:"none", policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:9,  sales:{actual:92000,budget:88000}, labour:{pct:27.1,budgetPct:28} },
+    "Parramatta":  { hopperTemps:18,calibrations:"complete", correctiveA:"ok",   policies:0, comms:1, training:97,  cakeLogs:99,  litter:100, wasteLog:90,  deliveryT:5, openClose:"complete", reviews:6,  sales:{actual:79000,budget:82000}, labour:{pct:29.0,budgetPct:28} },
+    "Chatswood":   { hopperTemps:21,calibrations:"complete", correctiveA:"none", policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:8,  sales:{actual:66000,budget:65000}, labour:{pct:27.6,budgetPct:28} },
+    "Newtown":     { hopperTemps:14,calibrations:"missed",   correctiveA:"issue",policies:3, comms:1, training:90,  cakeLogs:93,  litter:100, wasteLog:78,  deliveryT:4, openClose:"incomplete",reviews:2, sales:{actual:51000,budget:60000}, labour:{pct:30.8,budgetPct:28} },
+    "Manly":       { hopperTemps:21,calibrations:"complete", correctiveA:"ok",   policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:7,  sales:{actual:104000,budget:99000},labour:{pct:26.2,budgetPct:28} },
+    "Penrith":     { hopperTemps:20,calibrations:"complete", correctiveA:"none", policies:1, comms:0, training:95,  cakeLogs:100, litter:80,  wasteLog:100, deliveryT:5, openClose:"complete", reviews:5,  sales:{actual:70000,budget:69000}, labour:{pct:28.3,budgetPct:28} },
+  },
+  mtd: {
+    "Bondi":       { hopperTemps:90,calibrations:"complete", correctiveA:"none", policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:99,  deliveryT:5, openClose:"complete", reviews:34, sales:{actual:392000,budget:375000},labour:{pct:27.3,budgetPct:28} },
+    "Parramatta":  { hopperTemps:78,calibrations:"complete", correctiveA:"ok",   policies:0, comms:2, training:96,  cakeLogs:98,  litter:100, wasteLog:88,  deliveryT:5, openClose:"complete", reviews:24, sales:{actual:330000,budget:350000},labour:{pct:29.1,budgetPct:28} },
+    "Chatswood":   { hopperTemps:90,calibrations:"complete", correctiveA:"none", policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:31, sales:{actual:280000,budget:278000},labour:{pct:27.8,budgetPct:28} },
+    "Newtown":     { hopperTemps:60,calibrations:"missed",   correctiveA:"issue",policies:4, comms:2, training:89,  cakeLogs:91,  litter:75,  wasteLog:74,  deliveryT:4, openClose:"incomplete",reviews:8, sales:{actual:220000,budget:255000},labour:{pct:31.0,budgetPct:28} },
+    "Manly":       { hopperTemps:90,calibrations:"complete", correctiveA:"ok",   policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:29, sales:{actual:445000,budget:420000},labour:{pct:26.4,budgetPct:28} },
+    "Penrith":     { hopperTemps:85,calibrations:"complete", correctiveA:"none", policies:1, comms:0, training:93,  cakeLogs:100, litter:80,  wasteLog:99,  deliveryT:5, openClose:"complete", reviews:18, sales:{actual:298000,budget:295000},labour:{pct:28.1,budgetPct:28} },
+  }
+};
+
+/* ============================================================================
+ *  LIVE CONNECTORS — one adapter per system named in AI_Reporting_1.xlsx.
+ *  ---------------------------------------------------------------------------
+ *  All 6 systems have an adapter. Celsi and Restoke have confirmed APIs;
+ *  Chi Central, Review Tracker, Sales and Tanda are scaffolded with the same
+ *  shape so they can be switched on once a source is confirmed (Sales source
+ *  and automated Labour % are still open questions — see README).
+ *
+ *  Each adapter pulls live data and maps it onto our metric keys, overlaying
+ *  the SAMPLE baseline; anything the API doesn't return stays on sample.
+ *
+ *  TO GO LIVE for a system:
+ *   1. Set `enabled: true`.
+ *   2. Set `baseUrl` to the real API root and supply `apiKey`
+ *      (inject at deploy / via proxy so it isn't committed).
+ *   3. Confirm the JSON in `map()` matches reality and adjust field paths.
+ *      The shapes below mirror the reports/metrics the workbook describes,
+ *      but the exact JSON must be verified against each real API.
+ *
+ *  Adapter contract:
+ *   - metrics:     metric keys this system owns
+ *   - map(p, ctx): API payload for one venue -> our metric raw values.
+ *                  `ctx` is that venue's current data (used by Tanda to
+ *                  compute Labour % = timesheet cost / sales).
+ *   - simulate(d): build a fake payload from a SAMPLE venue record `d`, so the
+ *                  full fetch->map->merge->render pipeline is testable offline.
+ *
+ *  CORS: browsers may block direct calls. If so, point `baseUrl` at a small
+ *  proxy / serverless function — the adapters are unchanged. The
+ *  "Simulate live" button exercises everything offline so it can be verified.
+ * ========================================================================== */
+
+const CONNECTORS = {
+  celsi: {
+    name: "Celsi",
+    enabled: false,
+    baseUrl: "https://yochi.celsi.app/api/v1",   // TODO: confirm real API root
+    apiKey: "",                                   // TODO: inject securely
+    metrics: ["hopperTemps", "calibrations", "correctiveA"],
+    // Assumed shape: { hopper_checks, calibration_status, corrective_action }
+    map(v) {
+      return {
+        hopperTemps:  v.hopper_checks,
+        calibrations: v.calibration_status,
+        correctiveA:  v.corrective_action,
+      };
+    },
+    simulate(d) {
+      return { hopper_checks: d.hopperTemps, calibration_status: d.calibrations, corrective_action: d.correctiveA };
+    },
+  },
+
+  chiCentral: {
+    name: "Chi Central",
+    enabled: false,
+    baseUrl: "https://yochicentral.opcentral.com.au/api",  // TODO: confirm; reports also export to Excel
+    apiKey: "",
+    metrics: ["policies", "comms", "training"],
+    // Assumed shape: { policies_outstanding, comms_outstanding, training_pct }
+    map(v) {
+      return {
+        policies: v.policies_outstanding,
+        comms:    v.comms_outstanding,
+        training: v.training_pct,
+      };
+    },
+    simulate(d) {
+      return { policies_outstanding: d.policies, comms_outstanding: d.comms, training_pct: d.training };
+    },
+  },
+
+  restoke: {
+    name: "Restoke",
+    enabled: false,
+    baseUrl: "https://app.restoke.ai/api",        // TODO: confirm real API root
+    apiKey: "",
+    metrics: ["cakeLogs", "litter", "wasteLog", "deliveryT", "openClose"],
+    // Assumed shape: { procedure_completion:{cake_logs,litter_pickup,opening_closing},
+    //                  waste_log_pct, delivery_temp_dates }
+    map(v) {
+      const p = v.procedure_completion || {};
+      return {
+        cakeLogs:  p.cake_logs,
+        litter:    p.litter_pickup,
+        wasteLog:  v.waste_log_pct,
+        deliveryT: v.delivery_temp_dates,
+        openClose: p.opening_closing,
+      };
+    },
+    simulate(d) {
+      return {
+        procedure_completion: { cake_logs: d.cakeLogs, litter_pickup: d.litter, opening_closing: d.openClose },
+        waste_log_pct: d.wasteLog,
+        delivery_temp_dates: d.deliveryT,
+      };
+    },
+  },
+
+  reviewTracker: {
+    name: "Review Tracker",
+    enabled: false,
+    baseUrl: "https://api.reviewtrackers.com",    // TODO: confirm real API root
+    apiKey: "",
+    metrics: ["reviews"],
+    // Assumed shape: { google_reviews }  (Google source only, per workbook)
+    map(v) {
+      return { reviews: v.google_reviews };
+    },
+    simulate(d) {
+      return { google_reviews: d.reviews };
+    },
+  },
+
+  sales: {
+    name: "Sales",
+    enabled: false,
+    // OPEN QUESTION: source is NOT PowerBI for automation — likely Snowflake /
+    // Datasights / Azure. Point baseUrl at the confirmed source when known.
+    baseUrl: "https://datasights.example/api",    // TODO: confirm real source
+    apiKey: "",
+    metrics: ["sales"],
+    // Assumed shape: { sales_actual, sales_budget }  (budgets pending finalisation)
+    map(v) {
+      return { sales: { actual: v.sales_actual, budget: v.sales_budget } };
+    },
+    simulate(d) {
+      return { sales_actual: d.sales.actual, sales_budget: d.sales.budget };
+    },
+  },
+
+  tanda: {
+    name: "Tanda",
+    enabled: false,
+    baseUrl: "https://my.tanda.co/api/v2",        // TODO: confirm real API root
+    apiKey: "",
+    metrics: ["labour"],
+    // Tanda provides timesheet cost; Labour % = timesheet cost / sales (workbook
+    // formula). Sales must already be loaded for ctx — keep this connector after
+    // `sales` in the iteration order.
+    // Assumed shape: { timesheet_cost, budget_pct }
+    map(v, ctx) {
+      const salesActual = ctx && ctx.sales ? ctx.sales.actual : 0;
+      const pct = salesActual ? (v.timesheet_cost / salesActual) * 100 : 0;
+      return { labour: { pct: Math.round(pct * 10) / 10, budgetPct: v.budget_pct } };
+    },
+    simulate(d) {
+      // Derive a plausible timesheet cost from the sample labour % and sales.
+      return { timesheet_cost: Math.round(d.sales.actual * d.labour.pct / 100), budget_pct: d.labour.budgetPct };
+    },
+  },
+};
+
+/* Optional proxy base (see proxy/server.js). When set, calls route through the
+ * proxy, which injects credentials and handles CORS — no apiKey needed here. */
+let PROXY_BASE = "";
+
+/* The proxy route slug for a system: "Chi Central" -> "chicentral", etc. */
+function connSlug(conn) { return conn.name.toLowerCase().replace(/\s+/g, ""); }
+
+/* Generic fetch for a connector: GET {base}/reporting?period=...
+ * Expected response: { venues: { "Bondi": {...}, ... } }
+ * Returns { [venue]: { metricKey: value } } or throws. */
+async function connectorFetch(conn, period, viaProxy) {
+  const base = viaProxy ? `${PROXY_BASE.replace(/\/$/, "")}/${connSlug(conn)}` : conn.baseUrl;
+  const headers = (!viaProxy && conn.apiKey)
+    ? { Authorization: `Bearer ${conn.apiKey}`, Accept: "application/json" }
+    : { Accept: "application/json" };
+  const res = await fetch(`${base}/reporting?period=${period}`, { headers });
+  if (!res.ok) throw new Error(`${conn.name} API ${res.status}`);
+  const json = await res.json();
+  const out = {};
+  for (const [venue, payload] of Object.entries(json.venues || {})) {
+    if (!DATA[period][venue]) continue;
+    out[venue] = conn.map(payload, DATA[period][venue]);
+  }
+  return out;
+}
+
+/* Builds a fake API response from SAMPLE in each connector's assumed JSON shape,
+ * then runs it back through map(), so the full fetch->map->merge->render pipeline
+ * is exercised offline. Round-trips the baseline numbers, verifying the field
+ * mapping; per-system source pills flip to "Live (sim)". */
+function mapSimulated(conn, period) {
+  const out = {};
+  for (const [venue, d] of Object.entries(SAMPLE[period])) {
+    out[venue] = conn.map(conn.simulate(d), DATA[period][venue]);
+  }
+  return out;
+}
+
+/* Live data store + per-system source tracking. */
+let DATA = structuredClone(SAMPLE);
+const dataSource = {};              // systemName -> 'live' | 'sample' | 'error'
+SYSTEMS.forEach(s => dataSource[s.name] = 'sample');
+
+/* Overlay one connector's data onto DATA for a period. */
+function applyConnectorData(conn, period, byVenue) {
+  for (const [venue, metrics] of Object.entries(byVenue)) {
+    if (!DATA[period][venue]) continue;
+    for (const [k, val] of Object.entries(metrics)) {
+      if (val !== undefined && val !== null) DATA[period][venue][k] = val;
+    }
+  }
+}
+
+/* Load connector data. simulate = offline; proxy = via proxy/server.js;
+ * otherwise direct fetch for any connector with enabled:true. */
+async function loadLiveData({ simulate = false, proxy = false } = {}) {
+  const period = state.period;
+  for (const conn of Object.values(CONNECTORS)) {
+    if (!simulate && !proxy && !conn.enabled) continue;
+    try {
+      const byVenue = simulate ? mapSimulated(conn, period) : await connectorFetch(conn, period, proxy);
+      applyConnectorData(conn, period, byVenue);
+      dataSource[conn.name] = simulate ? 'live (sim)' : (proxy ? 'live (proxy)' : 'live');
+    } catch (e) {
+      dataSource[conn.name] = 'error';
+      console.warn(`${conn.name} live fetch failed, using sample:`, e.message);
+    }
+  }
+  renderSourceStrip();
+  render();
+}
+
+/* ============================================================================
+ *  STATUS ENGINE — encodes the compliance rules from the workbook.
+ *  Returns { status: 'g'|'y'|'r'|'n', display: '...' }
+ * ========================================================================== */
+const RULES = {
+  // Hopper Temps: >=3/day (daily) compliant; weekly target 21; mtd scaled (~90).
+  celsiHopper(v, period) {
+    const target = period === 'daily' ? 3 : period === 'wtd' ? 21 : 90;
+    return { status: v >= target ? 'g' : (v >= target * 0.7 ? 'y' : 'r'), display: v + '×' };
+  },
+  // Complete = compliant, anything else non-compliant.
+  complete(v) {
+    const ok = String(v).toLowerCase() === 'complete';
+    return { status: ok ? 'g' : 'r', display: ok ? 'Complete' : (v[0].toUpperCase()+v.slice(1)) };
+  },
+  // Corrective actions: none/ok = compliant, issue = non-compliant.
+  correctiveAction(v) {
+    const s = String(v).toLowerCase();
+    if (s === 'none') return { status:'g', display:'No CA' };
+    if (s === 'ok')   return { status:'g', display:'OK' };
+    return { status:'r', display:'Issue' };
+  },
+  // 0 = compliant (Policies / Comms outstanding items).
+  zeroGood(v) {
+    return { status: v === 0 ? 'g' : (v <= 1 ? 'y' : 'r'), display: String(v) };
+  },
+  // 100% = compliant, else non-compliant (with a yellow warning band for visibility).
+  pct100(v) {
+    return { status: v >= 100 ? 'g' : (v >= 90 ? 'y' : 'r'), display: v + '%' };
+  },
+  // Delivery temps: 5 different dates logged = compliant.
+  deliveryTemp(v) {
+    return { status: v >= 5 ? 'g' : (v >= 4 ? 'y' : 'r'), display: v + '/5' };
+  },
+  // Google reviews: <1 red, 2-7 yellow, 7+ green (weekly target 7/venue).
+  reviews(v) {
+    return { status: v < 2 ? 'r' : (v <= 7 ? 'y' : 'g'), display: v + ' rev' };
+  },
+  // Sales: at or over budget = green; otherwise neutral (per workbook, black/neutral is fine).
+  sales(v) {
+    const pct = v.budget ? (v.actual / v.budget) * 100 : 0;
+    const status = v.actual >= v.budget ? 'g' : 'n';
+    return { status, display: '$' + (v.actual/1000).toFixed(1) + 'k', sub: pct.toFixed(0) + '% of bdgt' };
+  },
+  // Labour %: under budget = green; within 2% of budget = yellow; on/over = red.
+  labour(v) {
+    let status;
+    if (v.pct >= v.budgetPct) status = 'r';          // on or over budget
+    else if (v.pct >= v.budgetPct - 2) status = 'y'; // approaching (within 2%)
+    else status = 'g';                               // comfortably under
+    return { status, display: v.pct.toFixed(1) + '%', sub: 'bdgt ' + v.budgetPct + '%' };
+  },
+};
+
+function evaluate(metric, raw, period) {
+  if (raw === undefined || raw === null) return { status: 'n', display: '—' };
+  return RULES[metric.rule](raw, period);
+}
+
+/* ============================================================================
+ *  RENDERING
+ * ========================================================================== */
+let state = { view: 'grid', venue: '*', period: 'daily' };
+
+const allMetrics = SYSTEMS.flatMap(s => s.metrics.map(m => ({ ...m, system: s.name })));
+
+function venues(period) { return Object.keys(DATA[period]); }
+
+function statusClass(s){ return s; }
+function statusColor(s){ return s==='g'?'var(--green)':s==='y'?'var(--yellow)':s==='r'?'var(--red)':'var(--neutral)'; }
+
+function computeOverall(period, venueFilter) {
+  let g=0,y=0,r=0,total=0;
+  const vs = venueFilter==='*'?venues(period):[venueFilter];
+  vs.forEach(v => {
+    allMetrics.forEach(m => {
+      const ev = evaluate(m, DATA[period][v][m.key], period);
+      if (ev.status==='n') return;
+      total++;
+      if (ev.status==='g') g++; else if (ev.status==='y') y++; else r++;
+    });
+  });
+  return { g,y,r,total, pct: total? Math.round((g/total)*100):0 };
+}
+
+function renderKpis() {
+  const o = computeOverall(state.period, state.venue);
+  const vs = state.venue==='*'?venues(state.period):[state.venue];
+  // Sales roll-up
+  let salesActual=0, salesBudget=0, labourSum=0, labourBudget=0, labourN=0, reviewsSum=0;
+  vs.forEach(v => {
+    const d = DATA[state.period][v];
+    salesActual += d.sales.actual; salesBudget += d.sales.budget;
+    labourSum += d.labour.pct; labourBudget += d.labour.budgetPct; labourN++;
+    reviewsSum += d.reviews;
+  });
+  const avgLabour = (labourSum/labourN);
+  const avgBudget = (labourBudget/labourN);
+  const salesPct = Math.round((salesActual/salesBudget)*100);
+
+  const el = document.getElementById('kpis');
+  el.innerHTML = `
+    ${kpiCard('Overall Compliance', o.pct + '%', `${o.g} green · ${o.y} yellow · ${o.r} red`, o.pct, o.pct>=90?'var(--green)':o.pct>=75?'var(--yellow)':'var(--red)')}
+    ${kpiCard('Sales v Budget', '$'+(salesActual/1000).toFixed(0)+'k', `${salesPct}% of $${(salesBudget/1000).toFixed(0)}k budget`, Math.min(salesPct,100), salesActual>=salesBudget?'var(--green)':'var(--yellow)')}
+    ${kpiCard('Avg Labour %', avgLabour.toFixed(1)+'%', `budget ${avgBudget.toFixed(1)}% · ${avgLabour<avgBudget?'under':'over'}`, Math.min((avgLabour/ (avgBudget*1.3))*100,100), avgLabour<avgBudget-2?'var(--green)':avgLabour<avgBudget?'var(--yellow)':'var(--red)')}
+    ${kpiCard('Google Reviews', String(reviewsSum), `${vs.length} venue(s) · target 7/venue/wk`, Math.min((reviewsSum/(vs.length*7))*100,100), 'var(--accent)')}
+  `;
+  document.getElementById('metaOverall').textContent = o.pct + '%';
+}
+
+function kpiCard(label, value, sub, barPct, color) {
+  return `<div class="kpi">
+    <div class="label">${label}</div>
+    <div class="value">${value}</div>
+    <div class="sub">${sub}</div>
+    <div class="bar"><span style="width:${Math.max(0,Math.min(100,barPct))}%;background:${color}"></span></div>
+  </div>`;
+}
+
+function renderGrid() {
+  const period = state.period;
+  const vs = state.venue==='*'?venues(period):[state.venue];
+
+  let head1 = '<tr class="sys"><th class="venue">Venue</th>';
+  SYSTEMS.forEach(s => head1 += `<th colspan="${s.metrics.length}" title="${s.url}">${s.name}</th>`);
+  head1 += '</tr>';
+
+  let head2 = '<tr class="metric"><th class="venue"></th>';
+  allMetrics.forEach(m => head2 += `<th>${m.label}<span class="freq">${m.freq}</span></th>`);
+  head2 += '</tr>';
+
+  let body = '';
+  vs.forEach(v => {
+    body += `<tr><td class="venue">${v}</td>`;
+    allMetrics.forEach(m => {
+      const ev = evaluate(m, DATA[period][v][m.key], period);
+      const sub = ev.sub ? `<small>${ev.sub}</small>` : '';
+      body += `<td class="cell ${statusClass(ev.status)}" title="${m.system} · ${m.label} (${m.freq})">${ev.display}${sub}</td>`;
+    });
+    body += '</tr>';
+  });
+
+  document.getElementById('view').innerHTML = `
+    <div class="card">
+      <div class="head"><h2>Venue × Metric Compliance</h2>
+        <span class="hint">Period: ${periodLabel(period)} · hover a cell for detail</span></div>
+      <div class="grid-scroll">
+        <table class="matrix">
+          <thead>${head1}${head2}</thead>
+          <tbody>${body}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
+function renderCards() {
+  const period = state.period;
+  const vs = state.venue==='*'?venues(period):[state.venue];
+  let html = '<div class="venue-cards">';
+  vs.forEach(v => {
+    const o = (() => { let g=0,t=0; allMetrics.forEach(m=>{const e=evaluate(m,DATA[period][v][m.key],period); if(e.status!=='n'){t++; if(e.status==='g')g++;}}); return t?Math.round(g/t*100):0; })();
+    html += `<div class="vc">
+      <div class="vc-head"><h3>${v}</h3>
+        <span class="vchip" style="background:${o>=90?'var(--green-bg)':o>=75?'var(--yellow-bg)':'var(--red-bg)'};color:${o>=90?'#1f7a43':o>=75?'#946b00':'#b23532'}">${o}% compliant</span>
+      </div>`;
+    SYSTEMS.forEach(s => {
+      html += `<div class="sys-sub">${s.name}</div>`;
+      s.metrics.forEach(m => {
+        const ev = evaluate(m, DATA[period][v][m.key], period);
+        html += `<div class="vc-row"><span class="ml">${m.label}</span>
+          <span class="vchip ${statusClass(ev.status)}">${ev.display}${ev.sub?' · '+ev.sub:''}</span></div>`;
+      });
+    });
+    html += '</div>';
+  });
+  html += '</div>';
+  document.getElementById('view').innerHTML = html;
+}
+
+function renderRef() {
+  const rules = {
+    "Celsi": ["Hopper Temps: 3×/day (21×/week) = compliant","Calibrations (Mon): Complete = compliant","Corrective Actions: No CA / OK = compliant, Issue = non-compliant","✅ API available"],
+    "Chi Central": ["Policies: 0 outstanding = compliant","Comms (News): 0 = compliant","Training: 100% = compliant","Chi Check / Venue Audit: TBC","Export to Excel, filter to NSW venues"],
+    "Restoke": ["Cake Logs (Brownie & Cookie hot toppings): 100%","Litter Pickup (Mon): 100%","Daily Waste Log: entry every date = 100%","Delivery Temps: 5 dates logged = compliant","Open/Close checklists: complete each day","APIs recently exposed; Datasights link planned"],
+    "Review Tracker": ["Google Reviews: target 7/venue/week","<1 red · 2–7 yellow · 7+ green"],
+    "Sales": ["Source TBC — not PowerBI for automation","At/over budget = green; otherwise neutral","Budgets pending finalisation"],
+    "Tanda": ["Labour % = timesheet cost ÷ sales (currently manual)","Under budget = green · within 2% = yellow · on/over = red","Custom Real Wage Cost report: select all teams, Employee Status = All"],
+  };
+  document.getElementById('refGrid').innerHTML = SYSTEMS.map(s => `
+    <div class="ref-card">
+      <h3>${s.name}</h3>
+      <a href="${s.url}" target="_blank" rel="noopener">${s.url}</a>
+      <ul>${(rules[s.name]||[]).map(r=>`<li>${r}</li>`).join('')}</ul>
+    </div>`).join('');
+}
+
+function renderSourceStrip() {
+  const apiSystems = new Set(Object.values(CONNECTORS).map(c => c.name));
+  const strip = document.getElementById('sourceStrip');
+  strip.innerHTML = SYSTEMS.map(s => {
+    const src = dataSource[s.name];
+    const hasApi = apiSystems.has(s.name);
+    let color = 'var(--neutral)', text = 'Sample';
+    if (src === 'live') { color = 'var(--green)'; text = 'Live'; }
+    else if (src === 'live (proxy)') { color = 'var(--green)'; text = 'Live (proxy)'; }
+    else if (src === 'live (sim)') { color = 'var(--yellow)'; text = 'Live (sim)'; }
+    else if (src === 'error') { color = 'var(--red)'; text = 'Error → sample'; }
+    else text = hasApi ? 'Sample (API ready)' : 'Manual';
+    return `<span class="pill" style="border-color:${color}">
+      <span class="dot" style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${color};margin-right:6px;vertical-align:-1px"></span>
+      <b style="color:var(--text)">${s.name}</b> · ${text}</span>`;
+  }).join('');
+}
+
+function periodLabel(p){ return p==='daily'?'Daily':p==='wtd'?'Week to date':'Month to date'; }
+
+function render() {
+  document.getElementById('metaDate').textContent = new Date(CONFIG.reportDate).toLocaleDateString('en-AU',{weekday:'short',day:'numeric',month:'short',year:'numeric'});
+  document.getElementById('metaVenues').textContent = venues(state.period).length;
+  renderKpis();
+  if (state.view === 'grid') renderGrid(); else renderCards();
+}
+
+/* Wire up controls */
+function init() {
+  const vf = document.getElementById('venueFilter');
+  venues('daily').forEach(v => { const o=document.createElement('option'); o.value=v; o.textContent=v; vf.appendChild(o); });
+  vf.addEventListener('change', e => { state.venue = e.target.value; render(); });
+  document.getElementById('period').addEventListener('change', e => {
+    state.period = e.target.value;
+    DATA = structuredClone(SAMPLE);                       // reset to baseline for the new period
+    SYSTEMS.forEach(s => dataSource[s.name] = 'sample');
+    renderSourceStrip();
+    render();
+  });
+  document.getElementById('btnRefresh').addEventListener('click', () => loadLiveData());
+  document.getElementById('btnSimulate').addEventListener('click', () => loadLiveData({ simulate: true }));
+  document.getElementById('btnProxy').addEventListener('click', () => {
+    PROXY_BASE = (document.getElementById('proxyUrl').value || 'http://localhost:8787').trim();
+    DATA = structuredClone(SAMPLE);                       // reset baseline before overlay
+    loadLiveData({ proxy: true });
+  });
+  document.querySelectorAll('#viewSeg button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('#viewSeg button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active'); state.view = b.dataset.view; render();
+  }));
+  renderRef();
+  renderSourceStrip();
+  render();
+}
+init();
+</script>
+</body>
+</html>
