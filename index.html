@@ -221,7 +221,7 @@
     <div class="logo">Y</div>
     <div>
       <div class="eyebrow">Yo-Chi · NSW Operations</div>
-      <h1>Reporting Dashboard <span class="sample-badge">Live snapshot · 7 Jul 2026</span></h1>
+      <h1>Reporting Dashboard <span class="sample-badge">Live</span></h1>
     </div>
   </div>
   <div class="meta">
@@ -237,7 +237,7 @@
   <div class="banner sample-banner" id="banner">
     <span class="sample-banner-tag">Live snapshot</span>
     <span><b>Sales, Google Reviews, Celsi food-safety, Labour&nbsp;% and Chi&nbsp;Central</b> are real
-    data from <b>DataSights</b> (YoChi tenant), snapshot as at <b id="bannerDate">Tue 7 Jul&nbsp;2026</b> across 23 NSW venues.
+    data from <b>DataSights</b> (YoChi tenant), snapshot as at <b id="bannerDate">—</b> across <span id="bannerVenues">—</span> NSW venues.
     Chi&nbsp;Central shows policy sign-off and company-news <em>read rates</em> (OpCentral); Labour&nbsp;%
     is Restoke labour cost ÷ net sales. Still <b>—</b>: Chi&nbsp;Central <em>training</em> (no venue
     dimension in source), Restoke checklists, and Labour&nbsp;% / Chi&nbsp;Central for the few venues
@@ -267,7 +267,7 @@
 
   <!-- Data source status strip -->
   <div class="card">
-    <div class="head"><h2>Data sources</h2><span class="hint">Live connectors overlay the manual sample baseline</span></div>
+    <div class="head"><h2>Data sources</h2><span class="hint">Per-system provenance — live from DataSights vs. awaiting source</span></div>
     <div id="sourceStrip" style="padding:12px 18px; display:flex; gap:10px; flex-wrap:wrap;"></div>
   </div>
 
@@ -287,10 +287,6 @@
         <span><span class="dot" style="background:var(--red)"></span>Red — non-compliant / over budget</span>
         <span><span class="dot" style="background:var(--neutral)"></span>Neutral — informational / no target set</span>
       </div>
-      <details class="ref">
-        <summary>System reference &amp; compliance rules (from AI_Reporting_1.xlsx)</summary>
-        <div class="ref-grid" id="refGrid"></div>
-      </details>
     </div>
   </div>
 
@@ -311,8 +307,8 @@
   </div>
 
   <footer>
-    Generated from <b>AI_Reporting_1.xlsx</b> · Reporting parameters by Mitch Ho · Dashboard prototype for the
-    Operations Automation project. <span class="pill">Live snapshot from DataSights — Sales · Reviews · Celsi</span>
+    Reporting parameters by Mitch Ho · Operations Automation project · data live from <b>DataSights</b>, rebuilt daily.
+    <span class="pill">Live from DataSights — Sales · Reviews · Celsi · Labour&nbsp;% · Chi&nbsp;Central</span>
   </footer>
 </div>
 
@@ -320,15 +316,10 @@
 /* ============================================================================
  *  EDITABLE DATA BLOCK
  *  ---------------------------------------------------------------------------
- *  This is the only section ops needs to touch until live data sources
- *  (system APIs / Datasights / Snowflake / MCP) are connected.
- *
- *  Each metric is evaluated to a traffic-light status by the engine below,
- *  using the exact compliance rules documented in AI_Reporting_1.xlsx.
- *  Replace the venue raw values per period to refresh the dashboard.
- *
- *  SAMPLE = the manual baseline. Systems with APIs (Celsi, Restoke) can
- *  overlay live data on top — see the CONNECTORS section further down.
+ *  FALLBACK ONLY. The live dashboard loads data.json (rebuilt daily from
+ *  DataSights by build_data.py). This embedded snapshot is shown only if
+ *  data.json can't be fetched (e.g. opened via file://). Each metric is
+ *  evaluated to a traffic-light status by the engine below.
  * ========================================================================== */
 
 const CONFIG = {
@@ -507,196 +498,6 @@ for (const period of Object.keys(SAMPLE)) {
   for (const [v, pct] of Object.entries(COMMS_PCT))  { if (SAMPLE[period][v]) SAMPLE[period][v].comms = pct; }
 }
 
-/* ============================================================================
- *  LIVE CONNECTORS — one adapter per system named in AI_Reporting_1.xlsx.
- *  ---------------------------------------------------------------------------
- *  All 6 systems have an adapter. Celsi and Restoke have confirmed APIs;
- *  Chi Central, Review Tracker, Sales and Tanda are scaffolded with the same
- *  shape so they can be switched on once a source is confirmed (Sales source
- *  and automated Labour % are still open questions — see README).
- *
- *  Each adapter pulls live data and maps it onto our metric keys, overlaying
- *  the SAMPLE baseline; anything the API doesn't return stays on sample.
- *
- *  TO GO LIVE for a system:
- *   1. Set `enabled: true`.
- *   2. Set `baseUrl` to the real API root and supply `apiKey`
- *      (inject at deploy / via proxy so it isn't committed).
- *   3. Confirm the JSON in `map()` matches reality and adjust field paths.
- *      The shapes below mirror the reports/metrics the workbook describes,
- *      but the exact JSON must be verified against each real API.
- *
- *  Adapter contract:
- *   - metrics:     metric keys this system owns
- *   - map(p, ctx): API payload for one venue -> our metric raw values.
- *                  `ctx` is that venue's current data (used by Tanda to
- *                  compute Labour % = timesheet cost / sales).
- *   - simulate(d): build a fake payload from a SAMPLE venue record `d`, so the
- *                  full fetch->map->merge->render pipeline is testable offline.
- *
- *  CORS: browsers may block direct calls. If so, point `baseUrl` at a small
- *  proxy / serverless function — the adapters are unchanged. The
- *  "Simulate live" button exercises everything offline so it can be verified.
- * ========================================================================== */
-
-const CONNECTORS = {
-  celsi: {
-    name: "Celsi",
-    enabled: false,
-    baseUrl: "https://yochi.celsi.app/api/v1",   // TODO: confirm real API root
-    apiKey: "",                                   // TODO: inject securely
-    metrics: ["hopperTemps", "calibrations", "correctiveA"],
-    // Assumed shape: { hopper_checks, calibration_status, corrective_action }
-    map(v) {
-      return {
-        hopperTemps:  v.hopper_checks,
-        calibrations: v.calibration_status,
-        correctiveA:  v.corrective_action,
-      };
-    },
-    simulate(d) {
-      return { hopper_checks: d.hopperTemps, calibration_status: d.calibrations, corrective_action: d.correctiveA };
-    },
-  },
-
-  chiCentral: {
-    name: "Chi Central",
-    enabled: false,
-    baseUrl: "https://yochicentral.opcentral.com.au/api",  // TODO: confirm; reports also export to Excel
-    apiKey: "",
-    metrics: ["policies", "comms", "training"],
-    // Assumed shape: { policies_outstanding, comms_outstanding, training_pct }
-    map(v) {
-      return {
-        policies: v.policies_outstanding,
-        comms:    v.comms_outstanding,
-        training: v.training_pct,
-      };
-    },
-    simulate(d) {
-      return { policies_outstanding: d.policies, comms_outstanding: d.comms, training_pct: d.training };
-    },
-  },
-
-  restoke: {
-    name: "Restoke",
-    enabled: false,
-    baseUrl: "https://app.restoke.ai/api",        // TODO: confirm real API root
-    apiKey: "",
-    metrics: ["cakeLogs", "litter", "wasteLog", "deliveryT", "openClose"],
-    // Assumed shape: { procedure_completion:{cake_logs,litter_pickup,opening_closing},
-    //                  waste_log_pct, delivery_temp_dates }
-    map(v) {
-      const p = v.procedure_completion || {};
-      return {
-        cakeLogs:  p.cake_logs,
-        litter:    p.litter_pickup,
-        wasteLog:  v.waste_log_pct,
-        deliveryT: v.delivery_temp_dates,
-        openClose: p.opening_closing,
-      };
-    },
-    simulate(d) {
-      return {
-        procedure_completion: { cake_logs: d.cakeLogs, litter_pickup: d.litter, opening_closing: d.openClose },
-        waste_log_pct: d.wasteLog,
-        delivery_temp_dates: d.deliveryT,
-      };
-    },
-  },
-
-  reviewTracker: {
-    name: "Review Tracker",
-    enabled: false,
-    baseUrl: "https://api.reviewtrackers.com",    // TODO: confirm real API root
-    apiKey: "",
-    metrics: ["reviews"],
-    // Assumed shape: { google_reviews }  (Google source only, per workbook)
-    map(v) {
-      return { reviews: v.google_reviews };
-    },
-    simulate(d) {
-      return { google_reviews: d.reviews };
-    },
-  },
-
-  sales: {
-    name: "Sales",
-    enabled: false,
-    // OPEN QUESTION: source is NOT PowerBI for automation — likely Snowflake /
-    // Datasights / Azure. Point baseUrl at the confirmed source when known.
-    baseUrl: "https://datasights.example/api",    // TODO: confirm real source
-    apiKey: "",
-    metrics: ["sales"],
-    // Assumed shape: { sales_actual, sales_budget }  (budgets pending finalisation)
-    map(v) {
-      return { sales: { actual: v.sales_actual, budget: v.sales_budget } };
-    },
-    simulate(d) {
-      return { sales_actual: d.sales.actual, sales_budget: d.sales.budget };
-    },
-  },
-
-  tanda: {
-    name: "Tanda",
-    enabled: false,
-    baseUrl: "https://my.tanda.co/api/v2",        // TODO: confirm real API root
-    apiKey: "",
-    metrics: ["labour"],
-    // Tanda provides timesheet cost; Labour % = timesheet cost / sales (workbook
-    // formula). Sales must already be loaded for ctx — keep this connector after
-    // `sales` in the iteration order.
-    // Assumed shape: { timesheet_cost, budget_pct }
-    map(v, ctx) {
-      const salesActual = ctx && ctx.sales ? ctx.sales.actual : 0;
-      const pct = salesActual ? (v.timesheet_cost / salesActual) * 100 : 0;
-      return { labour: { pct: Math.round(pct * 10) / 10, budgetPct: v.budget_pct } };
-    },
-    simulate(d) {
-      // Derive a plausible timesheet cost from the sample labour % and sales.
-      return { timesheet_cost: Math.round(d.sales.actual * d.labour.pct / 100), budget_pct: d.labour.budgetPct };
-    },
-  },
-};
-
-/* Optional proxy base (see proxy/server.js). When set, calls route through the
- * proxy, which injects credentials and handles CORS — no apiKey needed here. */
-let PROXY_BASE = "";
-
-/* The proxy route slug for a system: "Chi Central" -> "chicentral", etc. */
-function connSlug(conn) { return conn.name.toLowerCase().replace(/\s+/g, ""); }
-
-/* Generic fetch for a connector: GET {base}/reporting?period=...
- * Expected response: { venues: { "Bondi": {...}, ... } }
- * Returns { [venue]: { metricKey: value } } or throws. */
-async function connectorFetch(conn, period, viaProxy) {
-  const base = viaProxy ? `${PROXY_BASE.replace(/\/$/, "")}/${connSlug(conn)}` : conn.baseUrl;
-  const headers = (!viaProxy && conn.apiKey)
-    ? { Authorization: `Bearer ${conn.apiKey}`, Accept: "application/json" }
-    : { Accept: "application/json" };
-  const res = await fetch(`${base}/reporting?period=${period}`, { headers });
-  if (!res.ok) throw new Error(`${conn.name} API ${res.status}`);
-  const json = await res.json();
-  const out = {};
-  for (const [venue, payload] of Object.entries(json.venues || {})) {
-    if (!DATA[period][venue]) continue;
-    out[venue] = conn.map(payload, DATA[period][venue]);
-  }
-  return out;
-}
-
-/* Builds a fake API response from SAMPLE in each connector's assumed JSON shape,
- * then runs it back through map(), so the full fetch->map->merge->render pipeline
- * is exercised offline. Round-trips the baseline numbers, verifying the field
- * mapping; per-system source pills flip to "Live (sim)". */
-function mapSimulated(conn, period) {
-  const out = {};
-  for (const [venue, d] of Object.entries(SAMPLE[period])) {
-    out[venue] = conn.map(conn.simulate(d), DATA[period][venue]);
-  }
-  return out;
-}
-
 /* Live data store + per-system source tracking. */
 let DATA = structuredClone(SAMPLE);
 const dataSource = {};              // systemName -> 'snapshot' | 'nosource' | 'live' | 'error'
@@ -712,35 +513,6 @@ function resetDataSources() {
     : (SNAPSHOT_SYSTEMS.has(s.name) ? 'snapshot' : PARTIAL_SYSTEMS.has(s.name) ? 'partial' : 'nosource'));
 }
 resetDataSources();
-
-/* Overlay one connector's data onto DATA for a period. */
-function applyConnectorData(conn, period, byVenue) {
-  for (const [venue, metrics] of Object.entries(byVenue)) {
-    if (!DATA[period][venue]) continue;
-    for (const [k, val] of Object.entries(metrics)) {
-      if (val !== undefined && val !== null) DATA[period][venue][k] = val;
-    }
-  }
-}
-
-/* Load connector data. simulate = offline; proxy = via proxy/server.js;
- * otherwise direct fetch for any connector with enabled:true. */
-async function loadLiveData({ simulate = false, proxy = false } = {}) {
-  const period = state.period;
-  for (const conn of Object.values(CONNECTORS)) {
-    if (!simulate && !proxy && !conn.enabled) continue;
-    try {
-      const byVenue = simulate ? mapSimulated(conn, period) : await connectorFetch(conn, period, proxy);
-      applyConnectorData(conn, period, byVenue);
-      dataSource[conn.name] = simulate ? 'live (sim)' : (proxy ? 'live (proxy)' : 'live');
-    } catch (e) {
-      dataSource[conn.name] = 'error';
-      console.warn(`${conn.name} live fetch failed, using sample:`, e.message);
-    }
-  }
-  renderSourceStrip();
-  render();
-}
 
 /* ============================================================================
  *  STATUS ENGINE — encodes the compliance rules from the workbook.
@@ -948,23 +720,6 @@ function renderCards() {
   document.getElementById('view').innerHTML = html;
 }
 
-function renderRef() {
-  const rules = {
-    "Celsi": ["Hopper Temps: 3×/day (21×/week) = compliant","Calibrations (Mon): Complete = compliant","Corrective Actions: No CA / OK = compliant, Issue = non-compliant","✅ API available"],
-    "Chi Central": ["Policies: 0 outstanding = compliant","Comms (News): 0 = compliant","Training: 100% = compliant","Chi Check / Venue Audit: TBC","Export to Excel, filter to NSW venues"],
-    "Restoke": ["Cake Logs (Brownie & Cookie hot toppings): 100%","Litter Pickup (Mon): 100%","Daily Waste Log: entry every date = 100%","Delivery Temps: 5 dates logged = compliant","Open/Close checklists: complete each day","APIs recently exposed; Datasights link planned"],
-    "Review Tracker": ["Google Reviews: target 7/venue/week","<1 red · 2–7 yellow · 7+ green"],
-    "Sales": ["Source TBC — not PowerBI for automation","At/over budget = green; otherwise neutral","Budgets pending finalisation"],
-    "Tanda": ["Labour % = timesheet cost ÷ sales (currently manual)","Under budget = green · within 2% = yellow · on/over = red","Custom Real Wage Cost report: select all teams, Employee Status = All"],
-  };
-  document.getElementById('refGrid').innerHTML = SYSTEMS.map(s => `
-    <div class="ref-card">
-      <h3>${s.name}</h3>
-      <a href="${s.url}" target="_blank" rel="noopener">${s.url}</a>
-      <ul>${(rules[s.name]||[]).map(r=>`<li>${r}</li>`).join('')}</ul>
-    </div>`).join('');
-}
-
 /* Per-metric provenance: the exact DataSights source view + rule behind each
  * number, so any value can be traced and reproduced. Mirrors build_data.py. */
 const PROVENANCE = [
@@ -1005,20 +760,12 @@ function renderProvenance() {
 }
 
 function renderSourceStrip() {
-  const apiSystems = new Set(Object.values(CONNECTORS).map(c => c.name));
   const strip = document.getElementById('sourceStrip');
   strip.innerHTML = SYSTEMS.map(s => {
     const src = dataSource[s.name];
-    const hasApi = apiSystems.has(s.name);
-    let color = 'var(--neutral)', text = 'Sample';
+    let color = 'var(--neutral)', text = 'Awaiting source';
     if (src === 'snapshot') { color = 'var(--green)'; text = 'Live · DataSights'; }
     else if (src === 'partial') { color = 'var(--yellow)'; text = 'Live · DataSights (partial)'; }
-    else if (src === 'nosource') { color = 'var(--neutral)'; text = hasApi ? 'Awaiting source (API ready)' : 'Awaiting source'; }
-    else if (src === 'live') { color = 'var(--green)'; text = 'Live'; }
-    else if (src === 'live (proxy)') { color = 'var(--green)'; text = 'Live (proxy)'; }
-    else if (src === 'live (sim)') { color = 'var(--yellow)'; text = 'Live (sim)'; }
-    else if (src === 'error') { color = 'var(--red)'; text = 'Error → sample'; }
-    else text = hasApi ? 'Sample (API ready)' : 'Manual';
     return `<span class="pill" style="border-color:${color}">
       <span class="dot" style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${color};margin-right:6px;vertical-align:-1px"></span>
       <b style="color:var(--text)">${s.name}</b> · ${text}</span>`;
@@ -1056,7 +803,6 @@ function init() {
     document.querySelectorAll('#viewSeg button').forEach(x=>x.classList.remove('active'));
     b.classList.add('active'); state.view = b.dataset.view; render();
   }));
-  renderRef();
   renderProvenance();
   renderSourceStrip();
   render();
@@ -1111,6 +857,8 @@ function applyMeta(meta) {
   }
   const bw = document.getElementById('bannerWindows');
   if (bw && meta.windows) bw.textContent = meta.windows;
+  const bv = document.getElementById('bannerVenues');
+  if (bv && meta.venues != null) bv.textContent = meta.venues;
 }
 
 bootstrap();
