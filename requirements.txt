@@ -1,0 +1,8 @@
+# Dependencies for build_data.py. Keep only what your datasights_query()
+# implementation actually needs.
+#
+# DataSights programmatic API (HTTP):
+requests>=2.31
+#
+# OR direct Azure SQL (uncomment if you go that route):
+# pyodbc>=5.0

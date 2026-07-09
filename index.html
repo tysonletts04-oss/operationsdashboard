@@ -357,7 +357,7 @@ const SYSTEMS = [
  * - hopperTemps / deliveryTemp: numeric
  * - complete / correctiveAction: string status
  */
-const SAMPLE = {
+let SAMPLE = {
   // Google Reviews is a WEEKLY metric — daily & wtd both carry the trailing-week
   // count (1–7 Jul) so the weekly target reads correctly; only the window for
   // sales/hopperTemps narrows per period.
@@ -676,10 +676,12 @@ const dataSource = {};              // systemName -> 'snapshot' | 'nosource' | '
  * Tanda (Labour %) is live but only for venues with clean labour data -> 'partial'. */
 const SNAPSHOT_SYSTEMS = new Set(['Sales', 'Review Tracker', 'Celsi']);
 const PARTIAL_SYSTEMS = new Set(['Tanda', 'Chi Central']);
+/* When data.json is loaded, its meta.sources overrides these defaults. */
+let SOURCE_OVERRIDE = null;
 function resetDataSources() {
-  SYSTEMS.forEach(s => dataSource[s.name] =
-    SNAPSHOT_SYSTEMS.has(s.name) ? 'snapshot' :
-    PARTIAL_SYSTEMS.has(s.name)  ? 'partial'  : 'nosource');
+  SYSTEMS.forEach(s => dataSource[s.name] = SOURCE_OVERRIDE && SOURCE_OVERRIDE[s.name]
+    ? SOURCE_OVERRIDE[s.name]
+    : (SNAPSHOT_SYSTEMS.has(s.name) ? 'snapshot' : PARTIAL_SYSTEMS.has(s.name) ? 'partial' : 'nosource'));
 }
 resetDataSources();
 
@@ -992,7 +994,46 @@ function init() {
   renderSourceStrip();
   render();
 }
-init();
+
+/* ============================================================================
+ *  BOOTSTRAP — load the daily-refreshed data.json (produced by build_data.py),
+ *  falling back to the data embedded in this file if it can't be fetched
+ *  (e.g. opened via file:// or the refresh job hasn't run). This is what makes
+ *  the dashboard a live product: deploy the shell once, refresh data.json daily.
+ * ========================================================================== */
+async function bootstrap() {
+  try {
+    const res = await fetch('data.json', { cache: 'no-store' });
+    if (res.ok) {
+      const d = await res.json();
+      if (d && d.periods) {
+        SAMPLE = d.periods;
+        DATA = structuredClone(SAMPLE);
+        if (d.meta) {
+          if (d.meta.reportDate) CONFIG.reportDate = d.meta.reportDate;
+          if (d.meta.sources) SOURCE_OVERRIDE = d.meta.sources;
+          applyMeta(d.meta);
+        }
+        resetDataSources();
+      }
+    }
+  } catch (e) {
+    console.warn('data.json not loaded — using embedded fallback snapshot.', e);
+  }
+  init();
+}
+
+/* Reflect data.json freshness in the header badge so a stale board is obvious. */
+function applyMeta(meta) {
+  const badge = document.querySelector('.brand .sample-badge');
+  if (badge && meta.reportDate) {
+    const d = new Date(meta.reportDate).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' });
+    badge.textContent = 'Live · ' + d;
+    if (meta.generatedAt) badge.title = 'data.json generated ' + meta.generatedAt;
+  }
+}
+
+bootstrap();
 </script>
 </body>
 </html>
