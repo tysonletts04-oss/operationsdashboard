@@ -221,13 +221,14 @@
 
   <div class="banner sample-banner" id="banner">
     <span class="sample-banner-tag">Live snapshot</span>
-    <span><b>Sales, Google Reviews, Celsi food-safety and Labour&nbsp;%</b> are real data from
-    <b>DataSights</b> (YoChi tenant), snapshot as at <b>Tue 7 Jul&nbsp;2026</b> across 23 NSW venues.
-    Labour&nbsp;% (Restoke labour cost ÷ net sales) is shown for the venues with clean data;
-    the rest — plus Chi&nbsp;Central (policies / comms / training) and Restoke checklists — show <b>—</b>.
-    The Sales <em>budget</em> comparison is intentionally held back: the only Xero budget is
-    monthly to Jun&nbsp;2026 and its “Revenue” basis runs ~2× net POS sales, so a like-for-like
-    comparison needs sign-off first. Windows: daily = 7&nbsp;Jul · WTD = 6–7&nbsp;Jul · MTD = 1–7&nbsp;Jul.</span>
+    <span><b>Sales, Google Reviews, Celsi food-safety, Labour&nbsp;% and Chi&nbsp;Central</b> are real
+    data from <b>DataSights</b> (YoChi tenant), snapshot as at <b>Tue 7 Jul&nbsp;2026</b> across 23 NSW venues.
+    Chi&nbsp;Central shows policy sign-off and company-news <em>read rates</em> (OpCentral); Labour&nbsp;%
+    is Restoke labour cost ÷ net sales. Still <b>—</b>: Chi&nbsp;Central <em>training</em> (no venue
+    dimension in source), Restoke checklists, and Labour&nbsp;% / Chi&nbsp;Central for the few venues
+    without matched data. The Sales <em>budget</em> comparison is intentionally held back — the only
+    Xero budget is monthly to Jun&nbsp;2026 and its “Revenue” basis runs ~2× net POS sales, so a
+    like-for-like comparison needs sign-off first. Windows: daily = 7&nbsp;Jul · WTD = 6–7&nbsp;Jul · MTD = 1–7&nbsp;Jul.</span>
   </div>
 
   <!-- Controls -->
@@ -314,8 +315,8 @@ const SYSTEMS = [
     { key: "correctiveA",  label: "Corrective Actions",  freq: "Daily",  rule: "correctiveAction" },
   ]},
   { name: "Chi Central", url: "https://yochicentral.opcentral.com.au/", metrics: [
-    { key: "policies", label: "Policies", freq: "Daily",  rule: "zeroGood" },
-    { key: "comms",    label: "Comms",    freq: "Daily",  rule: "zeroGood" },
+    { key: "policies", label: "Policy sign-off", freq: "Read %",  rule: "policyPct" },
+    { key: "comms",    label: "Comms read",      freq: "Read %",  rule: "commsPct" },
     { key: "training", label: "Training", freq: "Daily",  rule: "pct100"   },
   ]},
   { name: "Restoke", url: "https://app.restoke.ai", metrics: [
@@ -452,6 +453,30 @@ for (const period of Object.keys(SAMPLE)) {
   for (const [v, pct] of Object.entries(LABOUR_PCT)) {
     if (SAMPLE[period][v]) SAMPLE[period][v].labour = { pct, budgetPct: null };
   }
+}
+
+/* Chi Central (OpCentral) — REAL, from DataSights. Policy sign-off and company-news
+ * read rates per venue: share of required signoffs marked read
+ * (OpCentralPolicySignoffs / OpCentralNewsSignoffs, is_read). Cumulative state, so
+ * the same value applies across periods. Macquarie's workplace name doesn't match,
+ * and Training has no venue dimension in the source, so both stay "—". */
+const POLICY_PCT = {
+  "George St":95.5, "Erina Fair":92.7, "Barangaroo":95.2, "Wollongong":95.0,
+  "Charlestown":93.3, "Rouse Hill":97.3, "Circular Quay":95.1, "Castle Towers":93.9,
+  "Burwood":98.1, "Penrith":98.3, "Manly":92.8, "Chatswood":91.1, "Cronulla":97.2,
+  "Newtown":92.4, "Bondi":87.1, "Coogee":95.9, "Surry Hills":87.7, "Top Ryde":97.1,
+  "Randwick":87.5, "Bondi Junction":94.1, "Lane Cove":91.3, "Double Bay":86.2,
+};
+const COMMS_PCT = {
+  "George St":81.1, "Erina Fair":73.1, "Barangaroo":77.9, "Wollongong":75.6,
+  "Charlestown":78.6, "Rouse Hill":87.3, "Circular Quay":75.4, "Castle Towers":77.3,
+  "Burwood":86.8, "Penrith":82.9, "Manly":68.3, "Chatswood":67.2, "Cronulla":80.2,
+  "Newtown":71.3, "Bondi":51.7, "Coogee":80.1, "Surry Hills":69.7, "Top Ryde":82.3,
+  "Randwick":77.6, "Bondi Junction":77.0, "Lane Cove":63.5, "Double Bay":43.5,
+};
+for (const period of Object.keys(SAMPLE)) {
+  for (const [v, pct] of Object.entries(POLICY_PCT)) { if (SAMPLE[period][v]) SAMPLE[period][v].policies = pct; }
+  for (const [v, pct] of Object.entries(COMMS_PCT))  { if (SAMPLE[period][v]) SAMPLE[period][v].comms = pct; }
 }
 
 /* ============================================================================
@@ -650,7 +675,7 @@ const dataSource = {};              // systemName -> 'snapshot' | 'nosource' | '
 /* Systems whose values in SAMPLE are a real DataSights snapshot vs. still-unwired.
  * Tanda (Labour %) is live but only for venues with clean labour data -> 'partial'. */
 const SNAPSHOT_SYSTEMS = new Set(['Sales', 'Review Tracker', 'Celsi']);
-const PARTIAL_SYSTEMS = new Set(['Tanda']);
+const PARTIAL_SYSTEMS = new Set(['Tanda', 'Chi Central']);
 function resetDataSources() {
   SYSTEMS.forEach(s => dataSource[s.name] =
     SNAPSHOT_SYSTEMS.has(s.name) ? 'snapshot' :
@@ -712,9 +737,17 @@ const RULES = {
     if (s === 'ok')   return { status:'g', display:'OK' };
     return { status:'r', display:'Issue' };
   },
-  // 0 = compliant (Policies / Comms outstanding items).
+  // 0 = compliant (Policies / Comms outstanding items). [legacy — unused]
   zeroGood(v) {
     return { status: v === 0 ? 'g' : (v <= 1 ? 'y' : 'r'), display: String(v) };
+  },
+  // Policy sign-off completion rate (share of required signoffs marked read).
+  policyPct(v) {
+    return { status: v >= 95 ? 'g' : (v >= 90 ? 'y' : 'r'), display: v.toFixed(1) + '%' };
+  },
+  // Company-news read rate (softer band — news acknowledgement runs lower than policy).
+  commsPct(v) {
+    return { status: v >= 85 ? 'g' : (v >= 70 ? 'y' : 'r'), display: v.toFixed(1) + '%' };
   },
   // 100% = compliant, else non-compliant (with a yellow warning band for visibility).
   pct100(v) {
