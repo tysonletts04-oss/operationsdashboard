@@ -43,13 +43,17 @@ import os
 import sys
 
 # ---------------------------------------------------------------------------
-# 1. CONFIG — the reporting window. In live mode these derive from "today".
+# 1. CONFIG — the reporting window.
+#    Live mode computes this each run via resolve_snapshot() (anchors to the
+#    latest COMPLETE data day — data lags ~1 day, so it's not always "today").
+#    This fixed block is only the reference window for --offline / the FIXTURE.
 # ---------------------------------------------------------------------------
 SNAPSHOT = {
-    "reportDate": "2026-07-07",          # last complete trading day
+    "reportDate": "2026-07-07",          # last complete trading day (offline reference)
     "dailyDate":  "2026-07-07",
     "weekStart":  "2026-07-06",          # Monday of the report week
     "monthStart": "2026-07-01",
+    "weekAgo":    "2026-07-01",          # trailing-7-days start (reviews)
     "windows": "daily = 7 Jul · WTD = 6–7 Jul · MTD = 1–7 Jul",
 }
 
@@ -103,6 +107,16 @@ VENUES = [
 #    Each returns the aggregates the transform needs, keyed by venue.
 # ---------------------------------------------------------------------------
 SQL = {
+    # Anchor: the most recent day where (nearly) all NSW venues have sales —
+    # i.e. the latest COMPLETE trading day. Data lags ~1 day behind "today".
+    "anchor": """
+        SELECT TOP 1 s.TxnDate anchor
+        FROM PolygonRedcatNetSalesByStoreDailyView s
+        JOIN Venue_Master vm ON vm.Store = s.StoreName
+        WHERE vm.State = '2. NSW' AND vm.Reporting = 'Yes'
+        GROUP BY s.TxnDate
+        HAVING COUNT(DISTINCT s.StoreName) >= 18
+        ORDER BY s.TxnDate DESC""",
     "sales": """
         SELECT vm.Name venue, s.StoreName store,
           SUM(CASE WHEN s.TxnDate = :dailyDate THEN s.NetSales ELSE 0 END) d,
@@ -112,22 +126,35 @@ SQL = {
         JOIN Venue_Master vm ON vm.Store = s.StoreName
         WHERE vm.State = '2. NSW' AND vm.Reporting = 'Yes'
         GROUP BY vm.Name, s.StoreName""",
+    # Reviews: a true trailing 7 days (weekly metric, stable across the month).
     "reviews": """
         SELECT LTRIM(RTRIM(location_name)) suburb,
-          SUM(CASE WHEN CAST(published_on AS date) >= :monthStart
+          SUM(CASE WHEN CAST(published_on AS date) >= :weekAgo
                     AND CAST(published_on AS date) <= :dailyDate THEN 1 ELSE 0 END) trailing_week
         FROM ReviewTrackersReviews
         WHERE location_state IN ('New South Wales','NSW')
         GROUP BY LTRIM(RTRIM(location_name))""",
-    # Celsi is weekly-bucketed by Date; the latest full-week bucket is one week
-    # of checks (~21). daily = week/7. calibrations/correctiveA = week status.
+    # Celsi is weekly-bucketed by Date. Anchor to the latest COMPLETE week bucket
+    # (>=70% of the busiest recent week's checks) so the current in-progress week
+    # doesn't undercount. daily = week/7; calibrations/correctiveA = that week.
     "celsi": """
         SELECT SUBSTRING(Venue, CHARINDEX('[',Venue)+1, 4) code,
-          SUM(CASE WHEN RecordType='TempCheck' AND Date >= :monthStart AND Date <= :dailyDate THEN 1 ELSE 0 END) temp_week,
-          SUM(CASE WHEN RecordType IN ('HopperCalibration','ProbeCalibration') AND Date >= :monthStart AND Date <= :dailyDate THEN 1 ELSE 0 END) calib,
-          SUM(CASE WHEN RecordType='CorrectiveAction' AND Date >= :monthStart AND Date <= :dailyDate THEN 1 ELSE 0 END) ca,
-          SUM(CASE WHEN RecordType='CorrectiveAction' AND PassFail='0' AND Date >= :monthStart AND Date <= :dailyDate THEN 1 ELSE 0 END) ca_fail
-        FROM CelsiVenueChecksView WHERE Venue LIKE '%.NSW]' GROUP BY SUBSTRING(Venue, CHARINDEX('[',Venue)+1, 4)""",
+          SUM(CASE WHEN RecordType='TempCheck' THEN 1 ELSE 0 END) temp_week,
+          SUM(CASE WHEN RecordType IN ('HopperCalibration','ProbeCalibration') THEN 1 ELSE 0 END) calib,
+          SUM(CASE WHEN RecordType='CorrectiveAction' THEN 1 ELSE 0 END) ca,
+          SUM(CASE WHEN RecordType='CorrectiveAction' AND PassFail='0' THEN 1 ELSE 0 END) ca_fail
+        FROM CelsiVenueChecksView
+        WHERE Venue LIKE '%.NSW]' AND CAST(Date AS date) = (
+          SELECT TOP 1 CAST(Date AS date) d FROM CelsiVenueChecksView
+          WHERE Venue LIKE '%.NSW]' AND RecordType='TempCheck' AND CAST(Date AS date) <= :dailyDate
+          GROUP BY CAST(Date AS date)
+          HAVING COUNT(*) >= 0.7 * (SELECT MAX(c) FROM (
+            SELECT COUNT(*) c FROM CelsiVenueChecksView
+            WHERE Venue LIKE '%.NSW]' AND RecordType='TempCheck'
+              AND CAST(Date AS date) BETWEEN DATEADD(day,-60,:dailyDate) AND :dailyDate
+            GROUP BY CAST(Date AS date)) t)
+          ORDER BY d DESC)
+        GROUP BY SUBSTRING(Venue, CHARINDEX('[',Venue)+1, 4)""",
     # Labour: de-dupe exact-duplicate rows, then cost / net sales. HQ-dump venues
     # (hundreds of "employees") are excluded by the sanity gate downstream.
     "labour": """
@@ -430,10 +457,31 @@ def _index(rows, key):
 REVIEW_ALIAS = {"George St": "George Street", "Rouse Hill": "Rouse Hill Town Centre"}
 
 
-def live_extract():
+def resolve_snapshot():
+    """Discover the reporting window dynamically each run: anchor to the latest
+    COMPLETE NSW sales day (data lags ~1 day behind 'today'), then derive the
+    week/month boundaries from it. This is what makes the report date advance."""
+    rows = datasights_query(SQL["anchor"], {})
+    if not rows:
+        raise SystemExit("resolve_snapshot(): no complete sales day found")
+    anchor = str(rows[0]["anchor"])[:10]
+    d = _dt.date.fromisoformat(anchor)
+    month_start = d.replace(day=1)
+    week_start = d - _dt.timedelta(days=d.weekday())      # Monday of the report week
+    week_ago = d - _dt.timedelta(days=6)                  # trailing 7 days (inclusive)
+    ws = f"{week_start.day} {week_start:%b}" if week_start.month != d.month else f"{week_start.day}"
+    windows = f"daily = {d.day} {d:%b} · WTD = {ws}–{d.day} {d:%b} · MTD = 1–{d.day} {d:%b}"
+    return {
+        "reportDate": anchor, "dailyDate": anchor,
+        "weekStart": week_start.isoformat(), "monthStart": month_start.isoformat(),
+        "weekAgo": week_ago.isoformat(), "windows": windows,
+    }
+
+
+def live_extract(snap):
     """Query DataSights live and shape the results into the FIXTURE tuple form,
     applying the same normalisation the offline snapshot encodes."""
-    p = {k: SNAPSHOT[k] for k in ("dailyDate", "weekStart", "monthStart")}
+    p = {k: snap[k] for k in ("dailyDate", "weekStart", "monthStart", "weekAgo")}
     sales_by_store = _index(datasights_query(SQL["sales"], p), "store")
     reviews_by_sub = _index(datasights_query(SQL["reviews"], p), "suburb")
     celsi_by_code  = _index(datasights_query(SQL["celsi"], p), "code")
@@ -485,7 +533,12 @@ def main():
     ap.add_argument("--out", default=os.path.join(os.path.dirname(__file__), "data.json"))
     args = ap.parse_args()
 
-    fixture = FIXTURE if args.offline else live_extract()
+    if args.offline:
+        snap, fixture = SNAPSHOT, FIXTURE
+    else:
+        snap = resolve_snapshot()
+        print(f"Resolved window: {snap['reportDate']} ({snap['windows']})", file=sys.stderr)
+        fixture = live_extract(snap)
     periods = build_periods(fixture)
     errors, warnings, coverage = validate(periods)
 
@@ -500,9 +553,9 @@ def main():
     generated = _dt.datetime.now(_dt.timezone.utc).replace(microsecond=0).isoformat()
     payload = {
         "meta": {
-            "reportDate": SNAPSHOT["reportDate"],
+            "reportDate": snap["reportDate"],
             "generatedAt": generated,
-            "windows": SNAPSHOT["windows"],
+            "windows": snap["windows"],
             "venues": len(periods["daily"]),
             "sources": SOURCE_STATUS,
             "coverage": coverage,
