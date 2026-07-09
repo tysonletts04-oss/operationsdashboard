@@ -166,22 +166,44 @@ def _access_token():
         DATASIGHTS_SCOPE          (optional — only if DataSights requires one)
     """
     import time
+    import base64
     import requests
     tok = _TOKEN.get("t")
     if tok and tok["exp"] > time.time() + 30:
         return tok["access_token"]
-    data = {
-        "grant_type": "client_credentials",
-        "client_id": os.environ["DATASIGHTS_CLIENT_ID"],
-        "client_secret": os.environ["DATASIGHTS_CLIENT_SECRET"],
-    }
+
+    token_url = os.environ["DATASIGHTS_TOKEN_URL"]
+    cid = os.environ["DATASIGHTS_CLIENT_ID"].strip()
+    csec = os.environ["DATASIGHTS_CLIENT_SECRET"].strip()
+    base = {"grant_type": "client_credentials"}
     if os.environ.get("DATASIGHTS_SCOPE"):
-        data["scope"] = os.environ["DATASIGHTS_SCOPE"]
-    r = requests.post(os.environ["DATASIGHTS_TOKEN_URL"], data=data, timeout=60)
-    r.raise_for_status()
-    j = r.json()
-    _TOKEN["t"] = {"access_token": j["access_token"], "exp": time.time() + j.get("expires_in", 3600)}
-    return j["access_token"]
+        base["scope"] = os.environ["DATASIGHTS_SCOPE"].strip()
+
+    # OAuth2 servers accept client auth two ways; try both (Basic is required by
+    # some IdentityServer configs). .strip() guards against copy-paste whitespace.
+    attempts = [
+        {"data": {**base, "client_id": cid, "client_secret": csec}},          # client_secret_post
+        {"data": base,                                                        # client_secret_basic
+         "headers": {"Authorization": "Basic " + base64.b64encode(f"{cid}:{csec}".encode()).decode()}},
+    ]
+    last = None
+    for a in attempts:
+        last = requests.post(token_url, timeout=60, **a)
+        if last.status_code == 200:
+            j = last.json()
+            _TOKEN["t"] = {"access_token": j["access_token"], "exp": time.time() + j.get("expires_in", 3600)}
+            return j["access_token"]
+
+    try:
+        detail = json.dumps(last.json())          # IdentityServer returns e.g. {"error":"invalid_client"}
+    except Exception:
+        detail = (last.text or "")[:300]
+    raise SystemExit(
+        f"Token request rejected ({last.status_code}): {detail}\n"
+        "  invalid_client   -> Client ID/Secret wrong, or this token endpoint isn't the right URL\n"
+        "  invalid_scope    -> set DATASIGHTS_SCOPE (ask DataSights which scope)\n"
+        "  unauthorized_client -> the client_credentials grant isn't enabled for this client"
+    )
 
 
 def datasights_query(sql, params):
@@ -207,7 +229,16 @@ def datasights_query(sql, params):
         json={"sql": _bind(sql, params)},          # <-- confirm the field name ('sql'/'query')
         timeout=120,
     )
-    r.raise_for_status()
+    if r.status_code != 200:
+        try:
+            detail = json.dumps(r.json())
+        except Exception:
+            detail = (r.text or "")[:300]
+        raise SystemExit(
+            f"Query request failed ({r.status_code}) at {query_url}: {detail}\n"
+            "Confirm DATASIGHTS_QUERY_URL is the SQL query endpoint and the request field "
+            "name ('sql' vs 'query')."
+        )
     body = r.json()
     # Tolerant to the exact envelope — DataSights returned {"Rows":[...]} in testing.
     if isinstance(body, list):
