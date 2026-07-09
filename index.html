@@ -120,6 +120,20 @@
   .card > .head .hint { font-size:12px; color:var(--muted); }
 
   .grid-scroll { overflow-x:auto; }
+
+  /* Data & definitions (provenance) table */
+  table.prov { border-collapse:collapse; width:100%; font-size:12.5px; }
+  table.prov th, table.prov td { text-align:left; padding:10px 14px; border-bottom:1px solid var(--border); vertical-align:top; }
+  table.prov thead th { background:var(--panel-2); color:var(--accent-deep); font-size:10px; text-transform:uppercase; letter-spacing:.06em; font-weight:700; position:sticky; top:0; }
+  table.prov td.sys { font-weight:700; color:var(--text); white-space:nowrap; }
+  table.prov td.metric { font-weight:600; color:var(--text); white-space:nowrap; }
+  table.prov code, table.prov .src { font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:11.5px; color:var(--accent-deep); }
+  table.prov td.rule { color:var(--muted); min-width:260px; }
+  table.prov .st { font-size:10px; font-weight:700; padding:2px 8px; border-radius:6px; white-space:nowrap; text-transform:uppercase; letter-spacing:.03em; }
+  table.prov .st-live { background:var(--green-bg); color:var(--green-ink); }
+  table.prov .st-partial { background:var(--yellow-bg); color:var(--yellow-ink); }
+  table.prov .st-held { background:var(--neutral-bg); color:var(--muted); }
+  table.prov tbody tr:last-child td { border-bottom:none; }
   table.matrix { border-collapse: collapse; width:100%; font-size:12.5px; font-variant-numeric:tabular-nums; }
   table.matrix th, table.matrix td { padding:0; text-align:center; border-bottom:1px solid var(--border); }
   table.matrix thead .sys th {
@@ -276,6 +290,22 @@
         <summary>System reference &amp; compliance rules (from AI_Reporting_1.xlsx)</summary>
         <div class="ref-grid" id="refGrid"></div>
       </details>
+    </div>
+  </div>
+
+  <!-- Data & definitions: trace every number to its DataSights source -->
+  <div class="card">
+    <div class="head"><h2>Data &amp; definitions</h2>
+      <span class="hint">Every metric, its exact DataSights source and rule — so any number can be traced and reproduced</span></div>
+    <div class="grid-scroll">
+      <table class="prov">
+        <thead><tr><th>System</th><th>Metric</th><th>DataSights source</th><th>Definition / rule</th><th>Status</th></tr></thead>
+        <tbody id="provBody"></tbody>
+      </table>
+    </div>
+    <div style="padding:10px 18px; font-size:11.5px; color:var(--muted); border-top:1px solid var(--border);">
+      Reproduce any value: run the source view in DataSights for the period, or read the exact SQL in
+      <code>build_data.py</code>. Rebuilt daily by GitHub Actions — no manual entry.
     </div>
   </div>
 
@@ -934,6 +964,45 @@ function renderRef() {
     </div>`).join('');
 }
 
+/* Per-metric provenance: the exact DataSights source view + rule behind each
+ * number, so any value can be traced and reproduced. Mirrors build_data.py. */
+const PROVENANCE = [
+  ["Sales", "Sales (actual)", "PolygonRedcatNetSalesByStoreDailyView",
+   "SUM(NetSales) per venue over the period (ex-GST POS net sales), joined to Venue_Master (State='2. NSW').", "live"],
+  ["Sales", "Sales v Budget", "Xero consolidated budget",
+   "Held back — the only Xero budget is monthly to Jun 2026 and its “Revenue” basis ≈2× POS net sales; needs sign-off before comparison.", "held"],
+  ["Review Tracker", "Google Reviews", "ReviewTrackersReviews",
+   "Count of reviews published in the trailing 7 days per venue. Weekly metric; target 7/venue/wk (<2 red · 2–7 yellow · 7+ green).", "live"],
+  ["Celsi", "Hopper Temps", "CelsiVenueChecksView · RecordType='TempCheck'",
+   "Count of temp checks. Weekly-bucketed source: WTD/MTD = week count (target 21), daily = week ÷ 7 (target 3). ≥target green.", "live"],
+  ["Celsi", "Calibrations", "CelsiVenueChecksView · Hopper/ProbeCalibration",
+   "Complete if ≥1 calibration logged in the period, else Missed.", "live"],
+  ["Celsi", "Corrective Actions", "CelsiVenueChecksView · RecordType='CorrectiveAction'",
+   "Issue if any failed CA (PassFail=0); OK if any CA logged; None if zero.", "live"],
+  ["Chi Central", "Policy sign-off %", "OpCentralPolicySignoffs",
+   "Share of required policy signoffs marked read (is_read). ≥95% green · ≥90% yellow · else red.", "live"],
+  ["Chi Central", "Comms read %", "OpCentralNewsSignoffs",
+   "Share of company-news items acknowledged (is_read). ≥85% green · ≥70% yellow · else red.", "live"],
+  ["Chi Central", "Training", "OpCentralTrainingAllResultPrograms",
+   "Held back — the source has no venue dimension and no user→venue bridge, so it can’t be attributed per venue.", "held"],
+  ["Tanda", "Labour %", "RestokeLaborCost ÷ Sales",
+   "De-duplicated labour cost ÷ net sales, per venue. Excludes HQ-dump venues (100s of “staff”) and values outside 5–45% as implausible. No labour budget source yet, so shown as informational.", "partial"],
+  ["Restoke", "Cake / Litter / Waste / Delivery / Open-Close", "—",
+   "Held back — these operational checklists are not exposed in DataSights yet (connection planned).", "held"],
+];
+
+function renderProvenance() {
+  const stLabel = { live: "Live", partial: "Partial", held: "Not shown" };
+  document.getElementById('provBody').innerHTML = PROVENANCE.map(([sys, metric, src, rule, st]) => `
+    <tr>
+      <td class="sys">${sys}</td>
+      <td class="metric">${metric}</td>
+      <td><span class="src">${src}</span></td>
+      <td class="rule">${rule}</td>
+      <td><span class="st st-${st}">${stLabel[st]}</span></td>
+    </tr>`).join('');
+}
+
 function renderSourceStrip() {
   const apiSystems = new Set(Object.values(CONNECTORS).map(c => c.name));
   const strip = document.getElementById('sourceStrip');
@@ -987,6 +1056,7 @@ function init() {
     b.classList.add('active'); state.view = b.dataset.view; render();
   }));
   renderRef();
+  renderProvenance();
   renderSourceStrip();
   render();
 }
