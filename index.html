@@ -237,13 +237,13 @@
   <div class="banner sample-banner" id="banner">
     <span class="sample-banner-tag">Live snapshot</span>
     <span><b>Sales, Google Reviews, Celsi food-safety, Labour&nbsp;% and Chi&nbsp;Central</b> are real
-    data from <b>DataSights</b> (YoChi tenant), snapshot as at <b>Tue 7 Jul&nbsp;2026</b> across 23 NSW venues.
+    data from <b>DataSights</b> (YoChi tenant), snapshot as at <b id="bannerDate">Tue 7 Jul&nbsp;2026</b> across 23 NSW venues.
     Chi&nbsp;Central shows policy sign-off and company-news <em>read rates</em> (OpCentral); Labour&nbsp;%
     is Restoke labour cost ÷ net sales. Still <b>—</b>: Chi&nbsp;Central <em>training</em> (no venue
     dimension in source), Restoke checklists, and Labour&nbsp;% / Chi&nbsp;Central for the few venues
     without matched data. The Sales <em>budget</em> comparison is intentionally held back — the only
     Xero budget is monthly to Jun&nbsp;2026 and its “Revenue” basis runs ~2× net POS sales, so a
-    like-for-like comparison needs sign-off first. Windows: daily = 7&nbsp;Jul · WTD = 6–7&nbsp;Jul · MTD = 1–7&nbsp;Jul.</span>
+    like-for-like comparison needs sign-off first. Windows: <span id="bannerWindows">daily = 7&nbsp;Jul · WTD = 6–7&nbsp;Jul · MTD = 1–7&nbsp;Jul</span>.</span>
   </div>
 
   <!-- Controls -->
@@ -1098,12 +1098,19 @@ async function bootstrap() {
 
 /* Reflect data.json freshness in the header badge so a stale board is obvious. */
 function applyMeta(meta) {
-  const badge = document.querySelector('.brand .sample-badge');
-  if (badge && meta.reportDate) {
-    const d = new Date(meta.reportDate).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' });
-    badge.textContent = 'Live · ' + d;
-    if (meta.generatedAt) badge.title = 'data.json generated ' + meta.generatedAt;
+  if (meta.reportDate) {
+    const short = new Date(meta.reportDate).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' });
+    const full = new Date(meta.reportDate).toLocaleDateString('en-AU', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+    const badge = document.querySelector('.brand .sample-badge');
+    if (badge) {
+      badge.textContent = 'Live · ' + short;
+      if (meta.generatedAt) badge.title = 'data.json generated ' + meta.generatedAt;
+    }
+    const bd = document.getElementById('bannerDate');
+    if (bd) bd.textContent = full;
   }
+  const bw = document.getElementById('bannerWindows');
+  if (bw && meta.windows) bw.textContent = meta.windows;
 }
 
 bootstrap();
