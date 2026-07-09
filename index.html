@@ -246,10 +246,7 @@
       <option value="wtd">Week to date</option>
       <option value="mtd">Month to date</option>
     </select>
-    <button class="btn btn-primary" id="btnRefresh" title="Pull live data from enabled connectors">Refresh live</button>
-    <button class="btn" id="btnSimulate" title="Exercise the live pipeline offline using simulated system responses">Simulate</button>
-    <input id="proxyUrl" type="text" placeholder="localhost:8787 (proxy)" title="Proxy base URL (see proxy/server.js)" />
-    <button class="btn" id="btnProxy" title="Pull all systems through the proxy (handles CORS + credentials)">Via proxy</button>
+    <button class="btn btn-primary" id="btnRefresh" title="Re-fetch the latest data.json (rebuilt each morning from DataSights)">Refresh</button>
     <button class="btn" onclick="window.print()">Print / PDF</button>
   </div>
 
@@ -979,12 +976,11 @@ function init() {
     renderSourceStrip();
     render();
   });
-  document.getElementById('btnRefresh').addEventListener('click', () => loadLiveData());
-  document.getElementById('btnSimulate').addEventListener('click', () => loadLiveData({ simulate: true }));
-  document.getElementById('btnProxy').addEventListener('click', () => {
-    PROXY_BASE = (document.getElementById('proxyUrl').value || 'http://localhost:8787').trim();
-    DATA = structuredClone(SAMPLE);                       // reset baseline before overlay
-    loadLiveData({ proxy: true });
+  document.getElementById('btnRefresh').addEventListener('click', async (e) => {
+    const btn = e.currentTarget; btn.disabled = true; const label = btn.textContent; btn.textContent = 'Refreshing…';
+    await loadData();                                     // re-pull the latest data.json
+    renderSourceStrip(); render();
+    btn.disabled = false; btn.textContent = label;
   });
   document.querySelectorAll('#viewSeg button').forEach(b => b.addEventListener('click', () => {
     document.querySelectorAll('#viewSeg button').forEach(x=>x.classList.remove('active'));
@@ -1001,7 +997,7 @@ function init() {
  *  (e.g. opened via file:// or the refresh job hasn't run). This is what makes
  *  the dashboard a live product: deploy the shell once, refresh data.json daily.
  * ========================================================================== */
-async function bootstrap() {
+async function loadData() {
   try {
     const res = await fetch('data.json', { cache: 'no-store' });
     if (res.ok) {
@@ -1015,11 +1011,17 @@ async function bootstrap() {
           applyMeta(d.meta);
         }
         resetDataSources();
+        return true;
       }
     }
   } catch (e) {
     console.warn('data.json not loaded — using embedded fallback snapshot.', e);
   }
+  return false;
+}
+
+async function bootstrap() {
+  await loadData();
   init();
 }
 
