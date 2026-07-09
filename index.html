@@ -221,11 +221,13 @@
 
   <div class="banner sample-banner" id="banner">
     <span class="sample-banner-tag">Live snapshot</span>
-    <span><b>Sales, Google Reviews and Celsi food-safety</b> are real data pulled from
+    <span><b>Sales, Google Reviews, Celsi food-safety and Labour&nbsp;%</b> are real data from
     <b>DataSights</b> (YoChi tenant), snapshot as at <b>Tue 7 Jul&nbsp;2026</b> across 23 NSW venues.
-    Remaining metrics — Chi&nbsp;Central (policies / comms / training), Restoke checklists,
-    Tanda Labour&nbsp;% and the Sales <em>budget</em> comparison — show <b>—</b> until those
-    DataSights sources are wired. Windows: daily = 7&nbsp;Jul · WTD = 6–7&nbsp;Jul · MTD = 1–7&nbsp;Jul.</span>
+    Labour&nbsp;% (Restoke labour cost ÷ net sales) is shown for the venues with clean data;
+    the rest — plus Chi&nbsp;Central (policies / comms / training) and Restoke checklists — show <b>—</b>.
+    The Sales <em>budget</em> comparison is intentionally held back: the only Xero budget is
+    monthly to Jun&nbsp;2026 and its “Revenue” basis runs ~2× net POS sales, so a like-for-like
+    comparison needs sign-off first. Windows: daily = 7&nbsp;Jul · WTD = 6–7&nbsp;Jul · MTD = 1–7&nbsp;Jul.</span>
   </div>
 
   <!-- Controls -->
@@ -435,6 +437,23 @@ const SAMPLE = {
   }
 };
 
+/* Labour % — REAL, from DataSights: RestokeLaborCost (deduped) ÷ NetSales over
+ * the MTD window (1–7 Jul 2026). Only venues whose labour is cleanly attributable
+ * are included; the rest (no rows, or swallowed into Restoke's HQ-dump buckets)
+ * stay "—". No labour BUDGET source is confirmed yet, so budgetPct is null and the
+ * figure is shown as informational rather than pass/fail. The ratio is applied
+ * across periods (labour % is broadly stable day-to-week-to-month). */
+const LABOUR_PCT = {
+  "George St":15.1, "Barangaroo":14.7, "Chatswood":12.4, "Cronulla":13.4,
+  "Newtown":18.3, "Bondi":19.9, "Coogee":17.9, "Top Ryde":49.5,
+  "Bondi Junction":19.6, "Double Bay":15.1,
+};
+for (const period of Object.keys(SAMPLE)) {
+  for (const [v, pct] of Object.entries(LABOUR_PCT)) {
+    if (SAMPLE[period][v]) SAMPLE[period][v].labour = { pct, budgetPct: null };
+  }
+}
+
 /* ============================================================================
  *  LIVE CONNECTORS — one adapter per system named in AI_Reporting_1.xlsx.
  *  ---------------------------------------------------------------------------
@@ -628,10 +647,14 @@ function mapSimulated(conn, period) {
 /* Live data store + per-system source tracking. */
 let DATA = structuredClone(SAMPLE);
 const dataSource = {};              // systemName -> 'snapshot' | 'nosource' | 'live' | 'error'
-/* Systems whose values in SAMPLE are a real DataSights snapshot vs. still-unwired. */
+/* Systems whose values in SAMPLE are a real DataSights snapshot vs. still-unwired.
+ * Tanda (Labour %) is live but only for venues with clean labour data -> 'partial'. */
 const SNAPSHOT_SYSTEMS = new Set(['Sales', 'Review Tracker', 'Celsi']);
+const PARTIAL_SYSTEMS = new Set(['Tanda']);
 function resetDataSources() {
-  SYSTEMS.forEach(s => dataSource[s.name] = SNAPSHOT_SYSTEMS.has(s.name) ? 'snapshot' : 'nosource');
+  SYSTEMS.forEach(s => dataSource[s.name] =
+    SNAPSHOT_SYSTEMS.has(s.name) ? 'snapshot' :
+    PARTIAL_SYSTEMS.has(s.name)  ? 'partial'  : 'nosource');
 }
 resetDataSources();
 
@@ -715,6 +738,8 @@ const RULES = {
   },
   // Labour %: under budget = green; within 2% of budget = yellow; on/over = red.
   labour(v) {
+    // No labour budget source yet -> show actual % as neutral/informational.
+    if (v.budgetPct == null) return { status: 'n', display: v.pct.toFixed(1) + '%', sub: 'actual' };
     let status;
     if (v.pct >= v.budgetPct) status = 'r';          // on or over budget
     else if (v.pct >= v.budgetPct - 2) status = 'y'; // approaching (within 2%)
@@ -759,25 +784,27 @@ function renderKpis() {
   const vs = state.venue==='*'?venues(state.period):[state.venue];
   // Roll-ups — tolerant of metrics whose source isn't wired yet (budget, labour).
   let salesActual=0, salesBudget=0, hasBudget=false;
-  let labourSum=0, labourBudget=0, labourN=0, reviewsSum=0;
+  let labourSum=0, labourBudget=0, labourBudgetN=0, labourN=0, reviewsSum=0;
   vs.forEach(v => {
     const d = DATA[state.period][v];
     if (d.sales) { salesActual += d.sales.actual||0; if (d.sales.budget!=null){ salesBudget += d.sales.budget; hasBudget=true; } }
-    if (d.labour && d.labour.pct!=null) { labourSum += d.labour.pct; labourBudget += d.labour.budgetPct; labourN++; }
+    if (d.labour && d.labour.pct!=null) { labourSum += d.labour.pct; labourN++; if (d.labour.budgetPct!=null){ labourBudget += d.labour.budgetPct; labourBudgetN++; } }
     if (d.reviews!=null) reviewsSum += d.reviews;
   });
   const salesPct = (hasBudget && salesBudget) ? Math.round((salesActual/salesBudget)*100) : null;
   const avgLabour = labourN ? (labourSum/labourN) : null;
-  const avgBudget = labourN ? (labourBudget/labourN) : null;
+  const avgBudget = labourBudgetN ? (labourBudget/labourBudgetN) : null;
 
   const salesCard = kpiCard('Sales (actual)', '$'+(salesActual/1000).toFixed(0)+'k',
     salesPct!=null ? `${salesPct}% of $${(salesBudget/1000).toFixed(0)}k budget` : 'net sales · budget not yet wired',
     salesPct!=null ? Math.min(salesPct,100) : 100,
     salesPct==null ? 'var(--accent)' : (salesActual>=salesBudget?'var(--green)':'var(--yellow)'));
 
-  const labourCard = avgLabour!=null
-    ? kpiCard('Avg Labour %', avgLabour.toFixed(1)+'%', `budget ${avgBudget.toFixed(1)}% · ${avgLabour<avgBudget?'under':'over'}`, Math.min((avgLabour/(avgBudget*1.3))*100,100), avgLabour<avgBudget-2?'var(--green)':avgLabour<avgBudget?'var(--yellow)':'var(--red)')
-    : kpiCard('Avg Labour %', '—', 'Tanda source not yet wired', 0, 'var(--neutral)');
+  const labourCard = avgLabour==null
+    ? kpiCard('Avg Labour %', '—', 'labour source not yet wired', 0, 'var(--neutral)')
+    : (avgBudget!=null
+      ? kpiCard('Avg Labour %', avgLabour.toFixed(1)+'%', `budget ${avgBudget.toFixed(1)}% · ${avgLabour<avgBudget?'under':'over'}`, Math.min((avgLabour/(avgBudget*1.3))*100,100), avgLabour<avgBudget-2?'var(--green)':avgLabour<avgBudget?'var(--yellow)':'var(--red)')
+      : kpiCard('Avg Labour %', avgLabour.toFixed(1)+'%', `${labourN} of ${vs.length} venues · budget not yet wired`, Math.min((avgLabour/30)*100,100), 'var(--accent)'));
 
   const el = document.getElementById('kpis');
   el.innerHTML = `
@@ -883,6 +910,7 @@ function renderSourceStrip() {
     const hasApi = apiSystems.has(s.name);
     let color = 'var(--neutral)', text = 'Sample';
     if (src === 'snapshot') { color = 'var(--green)'; text = 'Live · DataSights'; }
+    else if (src === 'partial') { color = 'var(--yellow)'; text = 'Live · DataSights (partial)'; }
     else if (src === 'nosource') { color = 'var(--neutral)'; text = hasApi ? 'Awaiting source (API ready)' : 'Awaiting source'; }
     else if (src === 'live') { color = 'var(--green)'; text = 'Live'; }
     else if (src === 'live (proxy)') { color = 'var(--green)'; text = 'Live (proxy)'; }
