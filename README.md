@@ -69,15 +69,23 @@ Then serve the folder (`python -m http.server`) and open `index.html`.
 ### The one thing to wire: an unattended credential
 
 An interactive DataSights/MCP login can't be used by a 6am cron job — nobody's
-logged in. The job needs a **standing credential**. Ask DataSights: *"how do I
-query my views from an unattended script?"* You'll get one of:
+logged in. Use the DataSights **"Custom / API"** connect screen → **Generate
+Credentials** to get a **Client ID + Client Secret** (OAuth2 client-credentials).
 
-- a DataSights **API key** → set `DATASIGHTS_API_URL` + `DATASIGHTS_API_KEY`
-- an **Azure SQL** connection string → set `AZURE_SQL_CONNECTION_STRING`
+`datasights_query()` already implements the token exchange + query call. Set:
 
-Add it as a GitHub Actions **secret**, then implement `datasights_query()` in
-`build_data.py` (the function has copy-paste examples for both). Nothing else in
-the pipeline talks to the database, so that's the only change.
+| Env var | From |
+|---|---|
+| `DATASIGHTS_TOKEN_URL` | the `/connect/token` URL on the connect screen |
+| `DATASIGHTS_QUERY_URL` | the query endpoint (confirm the path with DataSights) |
+| `DATASIGHTS_CLIENT_ID` | Generate Credentials |
+| `DATASIGHTS_CLIENT_SECRET` | Generate Credentials — **store as a secret, never in code** |
+| `DATASIGHTS_SCOPE` | optional, only if required |
+
+Add the **secret** under repo *Settings → Secrets and variables → Actions*. The
+only things left to confirm against a real response are the query endpoint URL,
+the request field name (`sql` vs `query`), and the response envelope — all flagged
+in `datasights_query()`.
 
 ## Deploying
 

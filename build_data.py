@@ -20,15 +20,20 @@ RUNNING IT
 
 CREDENTIAL (live mode)
 ----------------------
-A scheduled job cannot use the interactive DataSights/MCP login. It needs a
-standing credential. Set ONE of these in the environment (e.g. GitHub Actions
-secret) and implement datasights_query() to use it:
+A scheduled job cannot use the interactive DataSights/MCP login. It uses the
+DataSights "Custom / API" connect flow: click *Generate Credentials* to get a
+Client ID + Client Secret (OAuth2 client-credentials). Set these in the
+environment (put the SECRET in GitHub Actions secrets, never in code):
 
-  DATASIGHTS_API_URL + DATASIGHTS_API_KEY   # DataSights programmatic query API
-  AZURE_SQL_CONNECTION_STRING               # direct to the underlying Azure SQL
+  DATASIGHTS_TOKEN_URL     the /connect/token URL from the connect screen
+  DATASIGHTS_QUERY_URL     the query endpoint (confirm the path with DataSights)
+  DATASIGHTS_CLIENT_ID
+  DATASIGHTS_CLIENT_SECRET
+  DATASIGHTS_SCOPE         optional — only if DataSights requires a scope
 
-Ask DataSights: "how do I query my views from an unattended script?" — whatever
-they give you plugs into datasights_query() and nothing else changes.
+datasights_query() already implements the token exchange + query POST; the only
+things to confirm against a real response are the query endpoint URL, the request
+field name ('sql' vs 'query'), and the response envelope (see the function).
 """
 
 import argparse
@@ -139,31 +144,75 @@ SQL = {
 }
 
 
+def _bind(sql, params):
+    """Substitute :named date params as quoted literals (dates only — no user input)."""
+    out = sql
+    for k, v in (params or {}).items():
+        out = out.replace(f":{k}", f"'{v}'")
+    return out
+
+
+_TOKEN = {}   # simple in-process cache: {"access_token": ..., "exp": epoch}
+
+
+def _access_token():
+    """OAuth2 client-credentials — exchange Client ID/Secret for a bearer token.
+
+    Matches the DataSights "Custom / API" connect flow (Generate Credentials).
+    Env vars (set the SECRET as a GitHub Actions secret, never in code):
+        DATASIGHTS_TOKEN_URL      e.g. https://<your-datasights>/connect/token
+        DATASIGHTS_CLIENT_ID
+        DATASIGHTS_CLIENT_SECRET
+        DATASIGHTS_SCOPE          (optional — only if DataSights requires one)
+    """
+    import time
+    import requests
+    tok = _TOKEN.get("t")
+    if tok and tok["exp"] > time.time() + 30:
+        return tok["access_token"]
+    data = {
+        "grant_type": "client_credentials",
+        "client_id": os.environ["DATASIGHTS_CLIENT_ID"],
+        "client_secret": os.environ["DATASIGHTS_CLIENT_SECRET"],
+    }
+    if os.environ.get("DATASIGHTS_SCOPE"):
+        data["scope"] = os.environ["DATASIGHTS_SCOPE"]
+    r = requests.post(os.environ["DATASIGHTS_TOKEN_URL"], data=data, timeout=60)
+    r.raise_for_status()
+    j = r.json()
+    _TOKEN["t"] = {"access_token": j["access_token"], "exp": time.time() + j.get("expires_in", 3600)}
+    return j["access_token"]
+
+
 def datasights_query(sql, params):
     """Run one query against DataSights and return a list of dict rows.
 
-    >>> IMPLEMENT ME with your standing credential (see module docstring). <<<
-    Everything else in this file is source-agnostic; only this function talks
-    to the database. Example shapes:
+    Uses the OAuth2 client-credentials token from _access_token(), then POSTs the
+    SQL to the DataSights query endpoint. The only thing to confirm against a real
+    response is the request field name and the response envelope (marked below) —
+    everything else in this file is source-agnostic.
 
-        # DataSights programmatic API:
-        import requests
-        r = requests.post(os.environ["DATASIGHTS_API_URL"],
-                          headers={"Authorization": f"Bearer {os.environ['DATASIGHTS_API_KEY']}"},
-                          json={"sql": _bind(sql, params)}, timeout=120)
-        r.raise_for_status(); return r.json()["Rows"]
-
-        # Direct Azure SQL:
-        import pyodbc
-        cn = pyodbc.connect(os.environ["AZURE_SQL_CONNECTION_STRING"])
-        cur = cn.cursor(); cur.execute(_bind(sql, params))
-        cols = [c[0] for c in cur.description]
-        return [dict(zip(cols, row)) for row in cur.fetchall()]
+    Env: DATASIGHTS_QUERY_URL   the REST query endpoint (e.g. https://<host>/api/query)
     """
-    raise NotImplementedError(
-        "datasights_query() needs a standing credential. Run with --offline to "
-        "rebuild from the bundled snapshot, or wire this up per the docstring."
+    import requests
+    query_url = os.environ.get("DATASIGHTS_QUERY_URL")
+    if not query_url:
+        raise NotImplementedError(
+            "Set DATASIGHTS_QUERY_URL + DATASIGHTS_TOKEN_URL + DATASIGHTS_CLIENT_ID/SECRET "
+            "(from the DataSights 'Custom / API' tab), or run with --offline."
+        )
+    r = requests.post(
+        query_url,
+        headers={"Authorization": f"Bearer {_access_token()}", "Accept": "application/json"},
+        json={"sql": _bind(sql, params)},          # <-- confirm the field name ('sql'/'query')
+        timeout=120,
     )
+    r.raise_for_status()
+    body = r.json()
+    # Tolerant to the exact envelope — DataSights returned {"Rows":[...]} in testing.
+    if isinstance(body, list):
+        return body
+    return body.get("Rows") or body.get("rows") or body.get("data") or []
 
 
 # ---------------------------------------------------------------------------

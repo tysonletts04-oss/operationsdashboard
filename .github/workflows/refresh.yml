@@ -31,11 +31,13 @@ jobs:
 
       - name: Rebuild data.json from DataSights
         env:
-          # Provide ONE of these as a repo secret and implement datasights_query()
-          # in build_data.py to use it (see that file's docstring).
-          DATASIGHTS_API_URL: ${{ secrets.DATASIGHTS_API_URL }}
-          DATASIGHTS_API_KEY: ${{ secrets.DATASIGHTS_API_KEY }}
-          AZURE_SQL_CONNECTION_STRING: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
+          # From the DataSights "Custom / API" connect screen (Generate Credentials).
+          # Add the SECRET under repo Settings > Secrets and variables > Actions.
+          DATASIGHTS_TOKEN_URL: ${{ secrets.DATASIGHTS_TOKEN_URL }}
+          DATASIGHTS_QUERY_URL: ${{ secrets.DATASIGHTS_QUERY_URL }}
+          DATASIGHTS_CLIENT_ID: ${{ secrets.DATASIGHTS_CLIENT_ID }}
+          DATASIGHTS_CLIENT_SECRET: ${{ secrets.DATASIGHTS_CLIENT_SECRET }}
+          DATASIGHTS_SCOPE: ${{ secrets.DATASIGHTS_SCOPE }}
         run: |
           # Live refresh. If a validation gate fails, build_data.py exits non-zero
           # and data.json is left untouched — the board keeps its last good copy.
