@@ -206,18 +206,93 @@ def _access_token():
     )
 
 
+_MCP = {}   # per-process MCP session cache
+
+
+def _jsonrpc_result(resp):
+    """Extract a JSON-RPC response from an application/json OR text/event-stream reply."""
+    ctype = resp.headers.get("Content-Type", "")
+    if "text/event-stream" in ctype:
+        for line in resp.text.splitlines():
+            line = line.strip()
+            if line.startswith("data:"):
+                data = line[5:].strip()
+                if data and data != "[DONE]":
+                    obj = json.loads(data)
+                    if isinstance(obj, dict) and ("result" in obj or "error" in obj):
+                        return obj
+        raise SystemExit(f"MCP: no JSON-RPC result in stream: {(resp.text or '')[:300]}")
+    return resp.json()
+
+
+def _mcp_post(mcp_url, token, method, params, msg_id):
+    import requests
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json",
+        "Accept": "application/json, text/event-stream",
+    }
+    if _MCP.get("session"):
+        headers["Mcp-Session-Id"] = _MCP["session"]
+    payload = {"jsonrpc": "2.0", "method": method, "params": params}
+    if msg_id is not None:
+        payload["id"] = msg_id
+    r = requests.post(mcp_url, headers=headers, json=payload, timeout=120)
+    sid = r.headers.get("Mcp-Session-Id")
+    if sid:
+        _MCP["session"] = sid
+    if r.status_code >= 400:
+        raise SystemExit(f"MCP {method} failed ({r.status_code}) at {mcp_url}: {(r.text or '')[:300]}")
+    return None if msg_id is None else _jsonrpc_result(r)
+
+
+def _mcp_query(mcp_url, token, sql):
+    """Query DataSights through its MCP endpoint (JSON-RPC: initialize -> tools/call query)."""
+    if not _MCP.get("init"):
+        _mcp_post(mcp_url, token, "initialize", {
+            "protocolVersion": "2025-06-18",
+            "capabilities": {},
+            "clientInfo": {"name": "yochi-dashboard", "version": "1.0"},
+        }, 1)
+        try:
+            _mcp_post(mcp_url, token, "notifications/initialized", {}, None)
+        except SystemExit:
+            pass   # some servers don't require the initialized notification
+        _MCP["init"] = True
+    resp = _mcp_post(mcp_url, token, "tools/call",
+                     {"name": os.environ.get("DATASIGHTS_MCP_TOOL", "query"), "arguments": {"sql": sql}}, 2)
+    if "error" in resp:
+        raise SystemExit(f"MCP query error: {json.dumps(resp['error'])[:300]}")
+    result = resp.get("result", {})
+    # Tool output text is JSON like {"Rows":[...]} (same as the interactive tool).
+    text = next((c.get("text") for c in result.get("content", []) if c.get("text")), None)
+    if text is None:
+        sc = result.get("structuredContent") or {}
+        return sc.get("Rows") or sc.get("rows") or []
+    obj = json.loads(text)
+    return obj.get("Rows") or obj.get("rows") or obj.get("data") or []
+
+
 def datasights_query(sql, params):
     """Run one query against DataSights and return a list of dict rows.
 
-    Uses the OAuth2 client-credentials token from _access_token(), then POSTs the
-    SQL to the DataSights query endpoint. The only thing to confirm against a real
-    response is the request field name and the response envelope (marked below) —
-    everything else in this file is source-agnostic.
-
-    Env: DATASIGHTS_QUERY_URL   the REST query endpoint (e.g. https://<host>/api/query)
+    Two transports, picked by which env var is set:
+      DATASIGHTS_MCP_URL    -> query via the MCP endpoint (JSON-RPC). Preferred:
+                               this is what the "AI Connect via MCP" screen exposes.
+      DATASIGHTS_QUERY_URL  -> POST {"sql": ...} to a REST query endpoint (if one exists).
+    Both use the OAuth2 client-credentials bearer token from _access_token().
     """
-    import requests
+    bound = _bind(sql, params)
+    token = _access_token()
+    mcp_url = os.environ.get("DATASIGHTS_MCP_URL")
     query_url = os.environ.get("DATASIGHTS_QUERY_URL")
+    # Auto-detect: if the query URL points at the MCP endpoint, speak MCP.
+    if not mcp_url and query_url and query_url.rstrip("/").endswith("/mcp"):
+        mcp_url = query_url
+    if mcp_url:
+        return _mcp_query(mcp_url, token, bound)
+
+    import requests
     if not query_url:
         raise NotImplementedError(
             "Set DATASIGHTS_QUERY_URL + DATASIGHTS_TOKEN_URL + DATASIGHTS_CLIENT_ID/SECRET "
