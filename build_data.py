@@ -415,19 +415,68 @@ def validate(periods):
 #    the exact same transform/validation as offline. Fill in once the query
 #    function works — the mapping keys are already defined above.)
 # ---------------------------------------------------------------------------
+def _num(x, default=0.0):
+    try:
+        return float(x)
+    except (TypeError, ValueError):
+        return default
+
+
+def _index(rows, key):
+    return {r[key]: r for r in (rows or []) if isinstance(r, dict) and r.get(key) is not None}
+
+
+# Reviews name a few venues differently from their display name.
+REVIEW_ALIAS = {"George St": "George Street", "Rouse Hill": "Rouse Hill Town Centre"}
+
+
 def live_extract():
+    """Query DataSights live and shape the results into the FIXTURE tuple form,
+    applying the same normalisation the offline snapshot encodes."""
     p = {k: SNAPSHOT[k] for k in ("dailyDate", "weekStart", "monthStart")}
-    sales    = datasights_query(SQL["sales"], p)
-    reviews  = datasights_query(SQL["reviews"], p)
-    celsi    = datasights_query(SQL["celsi"], p)
-    labour   = datasights_query(SQL["labour"], p)
-    policies = datasights_query(SQL["policies"], p)
-    comms    = datasights_query(SQL["comms"], p)
-    # TODO: join these by the VENUES mapping into the FIXTURE tuple shape,
-    #       applying the labour HQ-dump guard (drop venues with emps > ~120)
-    #       and hopper daily = round(temp_week / 7). The offline FIXTURE above
-    #       is the reference output for 2026-07-07 to test this against.
-    raise NotImplementedError("live_extract(): map query rows to FIXTURE shape once datasights_query() is wired")
+    sales_by_store = _index(datasights_query(SQL["sales"], p), "store")
+    reviews_by_sub = _index(datasights_query(SQL["reviews"], p), "suburb")
+    celsi_by_code  = _index(datasights_query(SQL["celsi"], p), "code")
+    labour_by_venue = _index(datasights_query(SQL["labour"], p), "venue")
+    policy_by_wp   = _index(datasights_query(SQL["policies"], p), "workplace_name")
+    comms_by_wp    = _index(datasights_query(SQL["comms"], p), "workplace_name")
+
+    fixture = {}
+    for display, sales_store, code, opcentral_wp, labour_venue in VENUES:
+        s = sales_by_store.get(sales_store)
+        if not s:
+            print(f"WARN  no sales row for {display} (store={sales_store})", file=sys.stderr)
+            continue
+        sd, sw, sm = round(_num(s["d"])), round(_num(s["w"])), round(_num(s["m"]))
+
+        # Celsi (weekly-bucketed): count -> daily rate; status from calib/corrective.
+        c = celsi_by_code.get(code, {})
+        temp_week = int(_num(c.get("temp_week")))
+        ht_daily = round(temp_week / 7) if temp_week else 0
+        calib = "complete" if _num(c.get("calib")) > 0 else "missed"
+        ca_n, ca_fail = _num(c.get("ca")), _num(c.get("ca_fail"))
+        correctiveA = "issue" if ca_fail > 0 else ("ok" if ca_n > 0 else "none")
+
+        rv = reviews_by_sub.get(REVIEW_ALIAS.get(display, display))
+        reviews_week = int(_num(rv["trailing_week"])) if rv else 0
+
+        # Labour %: cost / net sales, with the HQ-dump + plausibility guards.
+        labour_pct = None
+        if labour_venue:
+            lr = labour_by_venue.get(labour_venue)
+            if lr and _num(lr.get("emps")) <= 120 and sm > 0:
+                pct = round(100.0 * _num(lr.get("labour_cost")) / sm, 1)
+                if 5 <= pct <= 45:
+                    labour_pct = pct
+
+        pol = policy_by_wp.get(opcentral_wp) if opcentral_wp else None
+        cm = comms_by_wp.get(opcentral_wp) if opcentral_wp else None
+        policy_pct = round(_num(pol["read_pct"]), 1) if pol else None
+        comms_pct = round(_num(cm["read_pct"]), 1) if cm else None
+
+        fixture[display] = (sd, sw, sm, ht_daily, temp_week, calib, correctiveA,
+                            reviews_week, labour_pct, policy_pct, comms_pct)
+    return fixture
 
 
 def main():
