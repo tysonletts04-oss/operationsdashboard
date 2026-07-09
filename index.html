@@ -191,18 +191,12 @@
     background:var(--yellow-bg); border:1px solid #ECD9A4; border-radius:6px;
     padding:3px 9px; font-size:10.5px; white-space:nowrap; text-transform:uppercase;
   }
-  /* Faint diagonal "draft" texture behind the main view — signals sample without shouting */
   #view { position:relative; }
-  #view::before {
-    content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
-    background:repeating-linear-gradient(135deg, rgba(224,162,26,.04) 0 12px, transparent 12px 34px);
-  }
   #view > * { position:relative; z-index:1; }
   @media print {
     body { background:#fff; }
     .btn, .controls, .seg { display:none !important; }
     .sample-badge, .sample-banner-tag, .kpi .bar > span, .cell { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-    #view::before { background:repeating-linear-gradient(135deg, rgba(224,162,26,.07) 0 12px, transparent 12px 34px); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   }
 </style>
 </head>
@@ -212,7 +206,7 @@
     <div class="logo">Y</div>
     <div>
       <div class="eyebrow">Yo-Chi · NSW Operations</div>
-      <h1>Reporting Dashboard <span class="sample-badge">Sample data</span></h1>
+      <h1>Reporting Dashboard <span class="sample-badge">Live snapshot · 7 Jul 2026</span></h1>
     </div>
   </div>
   <div class="meta">
@@ -226,10 +220,15 @@
 <div class="wrap">
 
   <div class="banner sample-banner" id="banner">
-    <span class="sample-banner-tag">Sample data</span>
-    <span>Every figure shown is illustrative — <b>not real venue results</b>. Venues, sales and budgets are
-    placeholders. Sales source (not PowerBI) and automated Labour&nbsp;% are still being confirmed.
-    Edit the <code>SAMPLE</code> block, or connect live APIs, to show real data.</span>
+    <span class="sample-banner-tag">Live snapshot</span>
+    <span><b>Sales, Google Reviews, Celsi food-safety, Labour&nbsp;% and Chi&nbsp;Central</b> are real
+    data from <b>DataSights</b> (YoChi tenant), snapshot as at <b>Tue 7 Jul&nbsp;2026</b> across 23 NSW venues.
+    Chi&nbsp;Central shows policy sign-off and company-news <em>read rates</em> (OpCentral); Labour&nbsp;%
+    is Restoke labour cost ÷ net sales. Still <b>—</b>: Chi&nbsp;Central <em>training</em> (no venue
+    dimension in source), Restoke checklists, and Labour&nbsp;% / Chi&nbsp;Central for the few venues
+    without matched data. The Sales <em>budget</em> comparison is intentionally held back — the only
+    Xero budget is monthly to Jun&nbsp;2026 and its “Revenue” basis runs ~2× net POS sales, so a
+    like-for-like comparison needs sign-off first. Windows: daily = 7&nbsp;Jul · WTD = 6–7&nbsp;Jul · MTD = 1–7&nbsp;Jul.</span>
   </div>
 
   <!-- Controls -->
@@ -285,7 +284,7 @@
 
   <footer>
     Generated from <b>AI_Reporting_1.xlsx</b> · Reporting parameters by Mitch Ho · Dashboard prototype for the
-    Operations Automation project. <span class="pill">Sample data — wire to Datasights / Snowflake / system APIs</span>
+    Operations Automation project. <span class="pill">Live snapshot from DataSights — Sales · Reviews · Celsi</span>
   </footer>
 </div>
 
@@ -305,7 +304,7 @@
  * ========================================================================== */
 
 const CONFIG = {
-  reportDate: "2026-06-21"
+  reportDate: "2026-07-07"   // snapshot basis — last complete trading day (Tue 7 Jul 2026)
 };
 
 /* The 6 source systems and their metrics (display names + frequency from the workbook). */
@@ -316,8 +315,8 @@ const SYSTEMS = [
     { key: "correctiveA",  label: "Corrective Actions",  freq: "Daily",  rule: "correctiveAction" },
   ]},
   { name: "Chi Central", url: "https://yochicentral.opcentral.com.au/", metrics: [
-    { key: "policies", label: "Policies", freq: "Daily",  rule: "zeroGood" },
-    { key: "comms",    label: "Comms",    freq: "Daily",  rule: "zeroGood" },
+    { key: "policies", label: "Policy sign-off", freq: "Read %",  rule: "policyPct" },
+    { key: "comms",    label: "Comms read",      freq: "Read %",  rule: "commsPct" },
     { key: "training", label: "Training", freq: "Daily",  rule: "pct100"   },
   ]},
   { name: "Restoke", url: "https://app.restoke.ai", metrics: [
@@ -340,38 +339,145 @@ const SYSTEMS = [
 
 /*
  * Per-venue raw values, by period (daily / wtd / mtd).
- * - sales: { actual, budget }  (currency)
- * - labour: { pct, budgetPct } (labour % and the venue's labour budget %)
- * - reviews: weekly count
- * - pct100 / zeroGood / hopperTemps / deliveryTemp: numeric
+ *  ── REAL DATA ── pulled from DataSights (YoChi tenant), snapshot as at Tue 7 Jul 2026.
+ *  Live systems: Sales (PolygonRedcatNetSalesByStoreDailyView), Google Reviews
+ *  (ReviewTrackersReviews) and Celsi food-safety (CelsiVenueChecksView).
+ *
+ *  Window per period:  daily = 7 Jul · wtd = Mon 6–7 Jul · mtd = 1–7 Jul.
+ *  Celsi is weekly-native (checks are bucketed by reporting week); hopperTemps
+ *  therefore uses the latest full week's count for wtd/mtd and its per-day rate
+ *  for daily. calibrations/correctiveA are the latest week's status.
+ *
+ *  Metrics with no DataSights source yet (Chi Central policies/comms/training,
+ *  Restoke cake/litter/waste/delivery/open-close, Tanda labour %, and the Sales
+ *  BUDGET side) are omitted -> they render as "—" until those sources are wired.
+ *
+ * - sales: { actual, budget }  (budget:null until Xero mapping is confirmed)
+ * - reviews: count in period
+ * - hopperTemps / deliveryTemp: numeric
  * - complete / correctiveAction: string status
  */
-const SAMPLE = {
+let SAMPLE = {
+  // Google Reviews is a WEEKLY metric — daily & wtd both carry the trailing-week
+  // count (1–7 Jul) so the weekly target reads correctly; only the window for
+  // sales/hopperTemps narrows per period.
   daily: {
-    "Bondi":       { hopperTemps:3, calibrations:"complete", correctiveA:"none", policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:9,  sales:{actual:14200,budget:13500}, labour:{pct:26.5,budgetPct:28} },
-    "Parramatta":  { hopperTemps:2, calibrations:"complete", correctiveA:"ok",   policies:0, comms:1, training:96,  cakeLogs:100, litter:100, wasteLog:86,  deliveryT:5, openClose:"complete", reviews:6,  sales:{actual:11800,budget:12500}, labour:{pct:29.2,budgetPct:28} },
-    "Chatswood":   { hopperTemps:3, calibrations:"complete", correctiveA:"none", policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:4, openClose:"complete", reviews:8,  sales:{actual:9900, budget:9900},  labour:{pct:27.5,budgetPct:28} },
-    "Newtown":     { hopperTemps:1, calibrations:"missed",   correctiveA:"issue",policies:2, comms:0, training:88,  cakeLogs:92,  litter:100, wasteLog:71,  deliveryT:3, openClose:"incomplete",reviews:1, sales:{actual:7600, budget:9000},  labour:{pct:31.4,budgetPct:28} },
-    "Manly":       { hopperTemps:3, calibrations:"complete", correctiveA:"ok",   policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:4,  sales:{actual:16100,budget:15000}, labour:{pct:25.9,budgetPct:28} },
-    "Penrith":     { hopperTemps:3, calibrations:"complete", correctiveA:"none", policies:1, comms:0, training:94,  cakeLogs:100, litter:80,  wasteLog:100, deliveryT:5, openClose:"complete", reviews:3,  sales:{actual:10500,budget:10200}, labour:{pct:28.0,budgetPct:28} },
+    "George St":      { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:17, sales:{actual:19777,budget:null} },
+    "Erina Fair":     { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:5,  sales:{actual:15213,budget:null} },
+    "Barangaroo":     { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:16, sales:{actual:11015,budget:null} },
+    "Wollongong":     { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:3,  sales:{actual:12965,budget:null} },
+    "Charlestown":    { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:2,  sales:{actual:13915,budget:null} },
+    "Rouse Hill":     { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:4,  sales:{actual:12293,budget:null} },
+    "Circular Quay":  { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:12, sales:{actual:11186,budget:null} },
+    "Macquarie":      { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:5,  sales:{actual:12222,budget:null} },
+    "Castle Towers":  { hopperTemps:3, calibrations:"complete", correctiveA:"ok",   reviews:8,  sales:{actual:11343,budget:null} },
+    "Burwood":        { hopperTemps:4, calibrations:"complete", correctiveA:"none", reviews:13, sales:{actual:9642, budget:null} },
+    "Penrith":        { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:1,  sales:{actual:9889, budget:null} },
+    "Manly":          { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:9,  sales:{actual:8658, budget:null} },
+    "Chatswood":      { hopperTemps:3, calibrations:"missed",   correctiveA:"none", reviews:8,  sales:{actual:8697, budget:null} },
+    "Cronulla":       { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:7,  sales:{actual:7374, budget:null} },
+    "Newtown":        { hopperTemps:4, calibrations:"complete", correctiveA:"none", reviews:26, sales:{actual:7505, budget:null} },
+    "Bondi":          { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:9,  sales:{actual:5646, budget:null} },
+    "Coogee":         { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:5286, budget:null} },
+    "Surry Hills":    { hopperTemps:4, calibrations:"complete", correctiveA:"none", reviews:5,  sales:{actual:4955, budget:null} },
+    "Top Ryde":       { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:5,  sales:{actual:5141, budget:null} },
+    "Randwick":       { hopperTemps:4, calibrations:"complete", correctiveA:"none", reviews:0,  sales:{actual:4472, budget:null} },
+    "Bondi Junction": { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:17, sales:{actual:4759, budget:null} },
+    "Lane Cove":      { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:0,  sales:{actual:3527, budget:null} },
+    "Double Bay":     { hopperTemps:2, calibrations:"complete", correctiveA:"none", reviews:6,  sales:{actual:3404, budget:null} },
   },
   wtd: {
-    "Bondi":       { hopperTemps:21,calibrations:"complete", correctiveA:"none", policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:9,  sales:{actual:92000,budget:88000}, labour:{pct:27.1,budgetPct:28} },
-    "Parramatta":  { hopperTemps:18,calibrations:"complete", correctiveA:"ok",   policies:0, comms:1, training:97,  cakeLogs:99,  litter:100, wasteLog:90,  deliveryT:5, openClose:"complete", reviews:6,  sales:{actual:79000,budget:82000}, labour:{pct:29.0,budgetPct:28} },
-    "Chatswood":   { hopperTemps:21,calibrations:"complete", correctiveA:"none", policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:8,  sales:{actual:66000,budget:65000}, labour:{pct:27.6,budgetPct:28} },
-    "Newtown":     { hopperTemps:14,calibrations:"missed",   correctiveA:"issue",policies:3, comms:1, training:90,  cakeLogs:93,  litter:100, wasteLog:78,  deliveryT:4, openClose:"incomplete",reviews:2, sales:{actual:51000,budget:60000}, labour:{pct:30.8,budgetPct:28} },
-    "Manly":       { hopperTemps:21,calibrations:"complete", correctiveA:"ok",   policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:7,  sales:{actual:104000,budget:99000},labour:{pct:26.2,budgetPct:28} },
-    "Penrith":     { hopperTemps:20,calibrations:"complete", correctiveA:"none", policies:1, comms:0, training:95,  cakeLogs:100, litter:80,  wasteLog:100, deliveryT:5, openClose:"complete", reviews:5,  sales:{actual:70000,budget:69000}, labour:{pct:28.3,budgetPct:28} },
+    "George St":      { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:17, sales:{actual:35286,budget:null} },
+    "Erina Fair":     { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:5,  sales:{actual:30367,budget:null} },
+    "Barangaroo":     { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:16, sales:{actual:20588,budget:null} },
+    "Wollongong":     { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:3,  sales:{actual:24679,budget:null} },
+    "Charlestown":    { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:2,  sales:{actual:27230,budget:null} },
+    "Rouse Hill":     { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:4,  sales:{actual:22304,budget:null} },
+    "Circular Quay":  { hopperTemps:24, calibrations:"complete", correctiveA:"none", reviews:12, sales:{actual:20497,budget:null} },
+    "Macquarie":      { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:5,  sales:{actual:23603,budget:null} },
+    "Castle Towers":  { hopperTemps:19, calibrations:"complete", correctiveA:"ok",   reviews:8,  sales:{actual:20641,budget:null} },
+    "Burwood":        { hopperTemps:26, calibrations:"complete", correctiveA:"none", reviews:13, sales:{actual:19396,budget:null} },
+    "Penrith":        { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:1,  sales:{actual:18814,budget:null} },
+    "Manly":          { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:9,  sales:{actual:16555,budget:null} },
+    "Chatswood":      { hopperTemps:20, calibrations:"missed",   correctiveA:"none", reviews:8,  sales:{actual:15954,budget:null} },
+    "Cronulla":       { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:7,  sales:{actual:13486,budget:null} },
+    "Newtown":        { hopperTemps:26, calibrations:"complete", correctiveA:"none", reviews:26, sales:{actual:14302,budget:null} },
+    "Bondi":          { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:9,  sales:{actual:10541,budget:null} },
+    "Coogee":         { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:10013,budget:null} },
+    "Surry Hills":    { hopperTemps:26, calibrations:"complete", correctiveA:"none", reviews:5,  sales:{actual:9242, budget:null} },
+    "Top Ryde":       { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:5,  sales:{actual:8985, budget:null} },
+    "Randwick":       { hopperTemps:26, calibrations:"complete", correctiveA:"none", reviews:0,  sales:{actual:8223, budget:null} },
+    "Bondi Junction": { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:17, sales:{actual:8909, budget:null} },
+    "Lane Cove":      { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:0,  sales:{actual:6349, budget:null} },
+    "Double Bay":     { hopperTemps:17, calibrations:"complete", correctiveA:"none", reviews:6,  sales:{actual:6494, budget:null} },
   },
   mtd: {
-    "Bondi":       { hopperTemps:90,calibrations:"complete", correctiveA:"none", policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:99,  deliveryT:5, openClose:"complete", reviews:34, sales:{actual:392000,budget:375000},labour:{pct:27.3,budgetPct:28} },
-    "Parramatta":  { hopperTemps:78,calibrations:"complete", correctiveA:"ok",   policies:0, comms:2, training:96,  cakeLogs:98,  litter:100, wasteLog:88,  deliveryT:5, openClose:"complete", reviews:24, sales:{actual:330000,budget:350000},labour:{pct:29.1,budgetPct:28} },
-    "Chatswood":   { hopperTemps:90,calibrations:"complete", correctiveA:"none", policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:31, sales:{actual:280000,budget:278000},labour:{pct:27.8,budgetPct:28} },
-    "Newtown":     { hopperTemps:60,calibrations:"missed",   correctiveA:"issue",policies:4, comms:2, training:89,  cakeLogs:91,  litter:75,  wasteLog:74,  deliveryT:4, openClose:"incomplete",reviews:8, sales:{actual:220000,budget:255000},labour:{pct:31.0,budgetPct:28} },
-    "Manly":       { hopperTemps:90,calibrations:"complete", correctiveA:"ok",   policies:0, comms:0, training:100, cakeLogs:100, litter:100, wasteLog:100, deliveryT:5, openClose:"complete", reviews:29, sales:{actual:445000,budget:420000},labour:{pct:26.4,budgetPct:28} },
-    "Penrith":     { hopperTemps:85,calibrations:"complete", correctiveA:"none", policies:1, comms:0, training:93,  cakeLogs:100, litter:80,  wasteLog:99,  deliveryT:5, openClose:"complete", reviews:18, sales:{actual:298000,budget:295000},labour:{pct:28.1,budgetPct:28} },
+    "George St":      { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:17, sales:{actual:132139,budget:null} },
+    "Erina Fair":     { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:5,  sales:{actual:108145,budget:null} },
+    "Barangaroo":     { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:16, sales:{actual:100751,budget:null} },
+    "Wollongong":     { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:3,  sales:{actual:97415, budget:null} },
+    "Charlestown":    { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:2,  sales:{actual:96458, budget:null} },
+    "Rouse Hill":     { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:4,  sales:{actual:93015, budget:null} },
+    "Circular Quay":  { hopperTemps:24, calibrations:"complete", correctiveA:"none", reviews:12, sales:{actual:86270, budget:null} },
+    "Macquarie":      { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:5,  sales:{actual:82619, budget:null} },
+    "Castle Towers":  { hopperTemps:19, calibrations:"complete", correctiveA:"ok",   reviews:8,  sales:{actual:82478, budget:null} },
+    "Burwood":        { hopperTemps:26, calibrations:"complete", correctiveA:"none", reviews:13, sales:{actual:78495, budget:null} },
+    "Penrith":        { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:1,  sales:{actual:74877, budget:null} },
+    "Manly":          { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:9,  sales:{actual:73836, budget:null} },
+    "Chatswood":      { hopperTemps:20, calibrations:"missed",   correctiveA:"none", reviews:8,  sales:{actual:69139, budget:null} },
+    "Cronulla":       { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:7,  sales:{actual:66725, budget:null} },
+    "Newtown":        { hopperTemps:26, calibrations:"complete", correctiveA:"none", reviews:26, sales:{actual:63813, budget:null} },
+    "Bondi":          { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:9,  sales:{actual:55241, budget:null} },
+    "Coogee":         { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:52745, budget:null} },
+    "Surry Hills":    { hopperTemps:26, calibrations:"complete", correctiveA:"none", reviews:5,  sales:{actual:51564, budget:null} },
+    "Top Ryde":       { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:5,  sales:{actual:40010, budget:null} },
+    "Randwick":       { hopperTemps:26, calibrations:"complete", correctiveA:"none", reviews:0,  sales:{actual:38275, budget:null} },
+    "Bondi Junction": { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:17, sales:{actual:36889, budget:null} },
+    "Lane Cove":      { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:0,  sales:{actual:30458, budget:null} },
+    "Double Bay":     { hopperTemps:17, calibrations:"complete", correctiveA:"none", reviews:6,  sales:{actual:29482, budget:null} },
   }
 };
+
+/* Labour % — REAL, from DataSights: RestokeLaborCost (deduped) ÷ NetSales over
+ * the MTD window (1–7 Jul 2026). Only venues whose labour is cleanly attributable
+ * are included; the rest (no rows, or swallowed into Restoke's HQ-dump buckets)
+ * stay "—". No labour BUDGET source is confirmed yet, so budgetPct is null and the
+ * figure is shown as informational rather than pass/fail. The ratio is applied
+ * across periods (labour % is broadly stable day-to-week-to-month). */
+const LABOUR_PCT = {
+  "George St":15.1, "Barangaroo":14.7, "Chatswood":12.4, "Cronulla":13.4,
+  "Newtown":18.3, "Bondi":19.9, "Coogee":17.9, "Top Ryde":49.5,
+  "Bondi Junction":19.6, "Double Bay":15.1,
+};
+for (const period of Object.keys(SAMPLE)) {
+  for (const [v, pct] of Object.entries(LABOUR_PCT)) {
+    if (SAMPLE[period][v]) SAMPLE[period][v].labour = { pct, budgetPct: null };
+  }
+}
+
+/* Chi Central (OpCentral) — REAL, from DataSights. Policy sign-off and company-news
+ * read rates per venue: share of required signoffs marked read
+ * (OpCentralPolicySignoffs / OpCentralNewsSignoffs, is_read). Cumulative state, so
+ * the same value applies across periods. Macquarie's workplace name doesn't match,
+ * and Training has no venue dimension in the source, so both stay "—". */
+const POLICY_PCT = {
+  "George St":95.5, "Erina Fair":92.7, "Barangaroo":95.2, "Wollongong":95.0,
+  "Charlestown":93.3, "Rouse Hill":97.3, "Circular Quay":95.1, "Castle Towers":93.9,
+  "Burwood":98.1, "Penrith":98.3, "Manly":92.8, "Chatswood":91.1, "Cronulla":97.2,
+  "Newtown":92.4, "Bondi":87.1, "Coogee":95.9, "Surry Hills":87.7, "Top Ryde":97.1,
+  "Randwick":87.5, "Bondi Junction":94.1, "Lane Cove":91.3, "Double Bay":86.2,
+};
+const COMMS_PCT = {
+  "George St":81.1, "Erina Fair":73.1, "Barangaroo":77.9, "Wollongong":75.6,
+  "Charlestown":78.6, "Rouse Hill":87.3, "Circular Quay":75.4, "Castle Towers":77.3,
+  "Burwood":86.8, "Penrith":82.9, "Manly":68.3, "Chatswood":67.2, "Cronulla":80.2,
+  "Newtown":71.3, "Bondi":51.7, "Coogee":80.1, "Surry Hills":69.7, "Top Ryde":82.3,
+  "Randwick":77.6, "Bondi Junction":77.0, "Lane Cove":63.5, "Double Bay":43.5,
+};
+for (const period of Object.keys(SAMPLE)) {
+  for (const [v, pct] of Object.entries(POLICY_PCT)) { if (SAMPLE[period][v]) SAMPLE[period][v].policies = pct; }
+  for (const [v, pct] of Object.entries(COMMS_PCT))  { if (SAMPLE[period][v]) SAMPLE[period][v].comms = pct; }
+}
 
 /* ============================================================================
  *  LIVE CONNECTORS — one adapter per system named in AI_Reporting_1.xlsx.
@@ -565,8 +671,19 @@ function mapSimulated(conn, period) {
 
 /* Live data store + per-system source tracking. */
 let DATA = structuredClone(SAMPLE);
-const dataSource = {};              // systemName -> 'live' | 'sample' | 'error'
-SYSTEMS.forEach(s => dataSource[s.name] = 'sample');
+const dataSource = {};              // systemName -> 'snapshot' | 'nosource' | 'live' | 'error'
+/* Systems whose values in SAMPLE are a real DataSights snapshot vs. still-unwired.
+ * Tanda (Labour %) is live but only for venues with clean labour data -> 'partial'. */
+const SNAPSHOT_SYSTEMS = new Set(['Sales', 'Review Tracker', 'Celsi']);
+const PARTIAL_SYSTEMS = new Set(['Tanda', 'Chi Central']);
+/* When data.json is loaded, its meta.sources overrides these defaults. */
+let SOURCE_OVERRIDE = null;
+function resetDataSources() {
+  SYSTEMS.forEach(s => dataSource[s.name] = SOURCE_OVERRIDE && SOURCE_OVERRIDE[s.name]
+    ? SOURCE_OVERRIDE[s.name]
+    : (SNAPSHOT_SYSTEMS.has(s.name) ? 'snapshot' : PARTIAL_SYSTEMS.has(s.name) ? 'partial' : 'nosource'));
+}
+resetDataSources();
 
 /* Overlay one connector's data onto DATA for a period. */
 function applyConnectorData(conn, period, byVenue) {
@@ -604,7 +721,10 @@ async function loadLiveData({ simulate = false, proxy = false } = {}) {
 const RULES = {
   // Hopper Temps: >=3/day (daily) compliant; weekly target 21; mtd scaled (~90).
   celsiHopper(v, period) {
-    const target = period === 'daily' ? 3 : period === 'wtd' ? 21 : 90;
+    // daily 3/day, weekly 21; mtd scales to days elapsed (3/day) so an early-month
+    // snapshot isn't judged against a full-month target.
+    const dom = new Date(CONFIG.reportDate).getDate();
+    const target = period === 'daily' ? 3 : period === 'wtd' ? 21 : 3 * dom;
     return { status: v >= target ? 'g' : (v >= target * 0.7 ? 'y' : 'r'), display: v + '×' };
   },
   // Complete = compliant, anything else non-compliant.
@@ -619,9 +739,17 @@ const RULES = {
     if (s === 'ok')   return { status:'g', display:'OK' };
     return { status:'r', display:'Issue' };
   },
-  // 0 = compliant (Policies / Comms outstanding items).
+  // 0 = compliant (Policies / Comms outstanding items). [legacy — unused]
   zeroGood(v) {
     return { status: v === 0 ? 'g' : (v <= 1 ? 'y' : 'r'), display: String(v) };
+  },
+  // Policy sign-off completion rate (share of required signoffs marked read).
+  policyPct(v) {
+    return { status: v >= 95 ? 'g' : (v >= 90 ? 'y' : 'r'), display: v.toFixed(1) + '%' };
+  },
+  // Company-news read rate (softer band — news acknowledgement runs lower than policy).
+  commsPct(v) {
+    return { status: v >= 85 ? 'g' : (v >= 70 ? 'y' : 'r'), display: v.toFixed(1) + '%' };
   },
   // 100% = compliant, else non-compliant (with a yellow warning band for visibility).
   pct100(v) {
@@ -637,12 +765,16 @@ const RULES = {
   },
   // Sales: at or over budget = green; otherwise neutral (per workbook, black/neutral is fine).
   sales(v) {
+    // Budget side not yet wired (Xero mapping pending) -> show actual as neutral/informational.
+    if (v.budget == null) return { status: 'n', display: '$' + (v.actual/1000).toFixed(1) + 'k', sub: 'actual' };
     const pct = v.budget ? (v.actual / v.budget) * 100 : 0;
     const status = v.actual >= v.budget ? 'g' : 'n';
     return { status, display: '$' + (v.actual/1000).toFixed(1) + 'k', sub: pct.toFixed(0) + '% of bdgt' };
   },
   // Labour %: under budget = green; within 2% of budget = yellow; on/over = red.
   labour(v) {
+    // No labour budget source yet -> show actual % as neutral/informational.
+    if (v.budgetPct == null) return { status: 'n', display: v.pct.toFixed(1) + '%', sub: 'actual' };
     let status;
     if (v.pct >= v.budgetPct) status = 'r';          // on or over budget
     else if (v.pct >= v.budgetPct - 2) status = 'y'; // approaching (within 2%)
@@ -685,23 +817,35 @@ function computeOverall(period, venueFilter) {
 function renderKpis() {
   const o = computeOverall(state.period, state.venue);
   const vs = state.venue==='*'?venues(state.period):[state.venue];
-  // Sales roll-up
-  let salesActual=0, salesBudget=0, labourSum=0, labourBudget=0, labourN=0, reviewsSum=0;
+  // Roll-ups — tolerant of metrics whose source isn't wired yet (budget, labour).
+  let salesActual=0, salesBudget=0, hasBudget=false;
+  let labourSum=0, labourBudget=0, labourBudgetN=0, labourN=0, reviewsSum=0;
   vs.forEach(v => {
     const d = DATA[state.period][v];
-    salesActual += d.sales.actual; salesBudget += d.sales.budget;
-    labourSum += d.labour.pct; labourBudget += d.labour.budgetPct; labourN++;
-    reviewsSum += d.reviews;
+    if (d.sales) { salesActual += d.sales.actual||0; if (d.sales.budget!=null){ salesBudget += d.sales.budget; hasBudget=true; } }
+    if (d.labour && d.labour.pct!=null) { labourSum += d.labour.pct; labourN++; if (d.labour.budgetPct!=null){ labourBudget += d.labour.budgetPct; labourBudgetN++; } }
+    if (d.reviews!=null) reviewsSum += d.reviews;
   });
-  const avgLabour = (labourSum/labourN);
-  const avgBudget = (labourBudget/labourN);
-  const salesPct = Math.round((salesActual/salesBudget)*100);
+  const salesPct = (hasBudget && salesBudget) ? Math.round((salesActual/salesBudget)*100) : null;
+  const avgLabour = labourN ? (labourSum/labourN) : null;
+  const avgBudget = labourBudgetN ? (labourBudget/labourBudgetN) : null;
+
+  const salesCard = kpiCard('Sales (actual)', '$'+(salesActual/1000).toFixed(0)+'k',
+    salesPct!=null ? `${salesPct}% of $${(salesBudget/1000).toFixed(0)}k budget` : 'net sales · budget not yet wired',
+    salesPct!=null ? Math.min(salesPct,100) : 100,
+    salesPct==null ? 'var(--accent)' : (salesActual>=salesBudget?'var(--green)':'var(--yellow)'));
+
+  const labourCard = avgLabour==null
+    ? kpiCard('Avg Labour %', '—', 'labour source not yet wired', 0, 'var(--neutral)')
+    : (avgBudget!=null
+      ? kpiCard('Avg Labour %', avgLabour.toFixed(1)+'%', `budget ${avgBudget.toFixed(1)}% · ${avgLabour<avgBudget?'under':'over'}`, Math.min((avgLabour/(avgBudget*1.3))*100,100), avgLabour<avgBudget-2?'var(--green)':avgLabour<avgBudget?'var(--yellow)':'var(--red)')
+      : kpiCard('Avg Labour %', avgLabour.toFixed(1)+'%', `${labourN} of ${vs.length} venues · budget not yet wired`, Math.min((avgLabour/30)*100,100), 'var(--accent)'));
 
   const el = document.getElementById('kpis');
   el.innerHTML = `
     ${kpiCard('Overall Compliance', o.pct + '%', `${o.g} green · ${o.y} yellow · ${o.r} red`, o.pct, o.pct>=90?'var(--green)':o.pct>=75?'var(--yellow)':'var(--red)')}
-    ${kpiCard('Sales v Budget', '$'+(salesActual/1000).toFixed(0)+'k', `${salesPct}% of $${(salesBudget/1000).toFixed(0)}k budget`, Math.min(salesPct,100), salesActual>=salesBudget?'var(--green)':'var(--yellow)')}
-    ${kpiCard('Avg Labour %', avgLabour.toFixed(1)+'%', `budget ${avgBudget.toFixed(1)}% · ${avgLabour<avgBudget?'under':'over'}`, Math.min((avgLabour/ (avgBudget*1.3))*100,100), avgLabour<avgBudget-2?'var(--green)':avgLabour<avgBudget?'var(--yellow)':'var(--red)')}
+    ${salesCard}
+    ${labourCard}
     ${kpiCard('Google Reviews', String(reviewsSum), `${vs.length} venue(s) · target 7/venue/wk`, Math.min((reviewsSum/(vs.length*7))*100,100), 'var(--accent)')}
   `;
   document.getElementById('metaOverall').textContent = o.pct + '%';
@@ -800,7 +944,10 @@ function renderSourceStrip() {
     const src = dataSource[s.name];
     const hasApi = apiSystems.has(s.name);
     let color = 'var(--neutral)', text = 'Sample';
-    if (src === 'live') { color = 'var(--green)'; text = 'Live'; }
+    if (src === 'snapshot') { color = 'var(--green)'; text = 'Live · DataSights'; }
+    else if (src === 'partial') { color = 'var(--yellow)'; text = 'Live · DataSights (partial)'; }
+    else if (src === 'nosource') { color = 'var(--neutral)'; text = hasApi ? 'Awaiting source (API ready)' : 'Awaiting source'; }
+    else if (src === 'live') { color = 'var(--green)'; text = 'Live'; }
     else if (src === 'live (proxy)') { color = 'var(--green)'; text = 'Live (proxy)'; }
     else if (src === 'live (sim)') { color = 'var(--yellow)'; text = 'Live (sim)'; }
     else if (src === 'error') { color = 'var(--red)'; text = 'Error → sample'; }
@@ -828,7 +975,7 @@ function init() {
   document.getElementById('period').addEventListener('change', e => {
     state.period = e.target.value;
     DATA = structuredClone(SAMPLE);                       // reset to baseline for the new period
-    SYSTEMS.forEach(s => dataSource[s.name] = 'sample');
+    resetDataSources();
     renderSourceStrip();
     render();
   });
@@ -847,7 +994,46 @@ function init() {
   renderSourceStrip();
   render();
 }
-init();
+
+/* ============================================================================
+ *  BOOTSTRAP — load the daily-refreshed data.json (produced by build_data.py),
+ *  falling back to the data embedded in this file if it can't be fetched
+ *  (e.g. opened via file:// or the refresh job hasn't run). This is what makes
+ *  the dashboard a live product: deploy the shell once, refresh data.json daily.
+ * ========================================================================== */
+async function bootstrap() {
+  try {
+    const res = await fetch('data.json', { cache: 'no-store' });
+    if (res.ok) {
+      const d = await res.json();
+      if (d && d.periods) {
+        SAMPLE = d.periods;
+        DATA = structuredClone(SAMPLE);
+        if (d.meta) {
+          if (d.meta.reportDate) CONFIG.reportDate = d.meta.reportDate;
+          if (d.meta.sources) SOURCE_OVERRIDE = d.meta.sources;
+          applyMeta(d.meta);
+        }
+        resetDataSources();
+      }
+    }
+  } catch (e) {
+    console.warn('data.json not loaded — using embedded fallback snapshot.', e);
+  }
+  init();
+}
+
+/* Reflect data.json freshness in the header badge so a stale board is obvious. */
+function applyMeta(meta) {
+  const badge = document.querySelector('.brand .sample-badge');
+  if (badge && meta.reportDate) {
+    const d = new Date(meta.reportDate).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' });
+    badge.textContent = 'Live · ' + d;
+    if (meta.generatedAt) badge.title = 'data.json generated ' + meta.generatedAt;
+  }
+}
+
+bootstrap();
 </script>
 </body>
 </html>

@@ -1,0 +1,56 @@
+name: Refresh dashboard data
+
+# Regenerates data.json from DataSights every morning and commits it back.
+# Committing data.json is what triggers the static host (Vercel / GitHub Pages /
+# Azure Static Web Apps) to redeploy — so the dashboard refreshes itself.
+
+on:
+  schedule:
+    - cron: "0 20 * * *"      # 20:00 UTC = 06:00 AEST — before the venues open
+  workflow_dispatch: {}         # allow a manual run from the Actions tab
+
+permissions:
+  contents: write               # needed to commit data.json back to the repo
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Rebuild data.json from DataSights
+        env:
+          # From the DataSights "Custom / API" connect screen (Generate Credentials).
+          # Add the SECRET under repo Settings > Secrets and variables > Actions.
+          DATASIGHTS_TOKEN_URL: ${{ secrets.DATASIGHTS_TOKEN_URL }}
+          DATASIGHTS_QUERY_URL: ${{ secrets.DATASIGHTS_QUERY_URL }}
+          DATASIGHTS_CLIENT_ID: ${{ secrets.DATASIGHTS_CLIENT_ID }}
+          DATASIGHTS_CLIENT_SECRET: ${{ secrets.DATASIGHTS_CLIENT_SECRET }}
+          DATASIGHTS_SCOPE: ${{ secrets.DATASIGHTS_SCOPE }}
+        run: |
+          # Live refresh. If a validation gate fails, build_data.py exits non-zero
+          # and data.json is left untouched — the board keeps its last good copy.
+          python build_data.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  "yochi-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet -- data.json; then
+            echo "data.json unchanged — nothing to commit."
+          else
+            git add data.json
+            git commit -m "chore: refresh dashboard data ($(date -u +%Y-%m-%d))"
+            git push
+          fi
