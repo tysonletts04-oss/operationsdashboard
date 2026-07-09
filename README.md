@@ -54,6 +54,23 @@ Every metric had a trap that lives as documented logic in `build_data.py`:
 
 These render as **"—"** and are labelled on the board's data-source strip.
 
+## Verifying the numbers (trust / provenance)
+
+Every value is traceable — you never have to take the dashboard's word for it:
+
+1. **On the dashboard** — the **"Data & definitions"** section lists each metric, its
+   exact DataSights source view, and the rule behind it.
+2. **Reproduce a value** — run the source view in DataSights for the period, e.g.
+   *"George St net sales 1–7 Jul 2026"* against `PolygonRedcatNetSalesByStoreDailyView`,
+   and compare to the board. The SQL is in `build_data.py` (`SQL` dict) — plain
+   `SELECT`s, nothing hidden.
+3. **No manual entry** — `data.json` is written by the GitHub Actions job, which
+   authenticates to DataSights with a service credential and runs those queries.
+   The commit that changes `data.json` is made by `yochi-data-bot`, and the run log
+   shows it executing. A re-run pulls fresh from source each time.
+4. **Honest gaps** — anything not verifiable renders as **"—"** and is marked
+   *Not shown* (Sales budget, training, Restoke checklists), not filled with a guess.
+
 ## Running it
 
 ```bash
