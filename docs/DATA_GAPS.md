@@ -1,93 +1,112 @@
 # Data gaps & how to close them
 
+*Current as at report date **8 Jul 2026**, 23 NSW venues.*
+
 The dashboard shows a metric only when its data is in DataSights **and**
-trustworthy; otherwise it shows **"—"** — by design, no guessed numbers. This
-is the complete list of every gap, why it exists, and exactly what's needed to
-close it.
+trustworthy; otherwise it shows **"—"** — by design, no guessed numbers. This is
+the complete picture of what's populated and what isn't, with exactly what's
+needed to close each gap.
 
-## Summary
+## Current coverage (every metric)
 
-| # | Metric | Coverage | What's blocking it | Owner |
-|---|---|---|---|---|
-| 1 | Sales **v Budget** | 0/23 | A decision on the Xero revenue basis | Finance |
-| 2 | Chi Central **Training %** | 0/23 | Build work (name-bridge to venue) | Dashboard |
-| 3 | Restoke **checklists** (×5) | 0/23 | Not exposed in DataSights | DataSights / Restoke |
-| 4 | Tanda **Labour %** | 9/23 | Restoke mis-attributes venues | Restoke integration |
-| 5 | Policy/Comms — **Macquarie** | fixed ✅ | Name mismatch (resolved) | — |
+| System | Metric | Coverage | State |
+|---|---|---|---|
+| Sales | Sales (actual) | **23/23** | ✅ live |
+| Sales | **Budget** (Sales v Budget) | 0/23 | ❌ empty |
+| Review Tracker | Google Reviews | **23/23** | ✅ live |
+| Celsi | Hopper Temps | **23/23** | ✅ live |
+| Celsi | Calibrations | **23/23** | ✅ live |
+| Celsi | Corrective Actions | **23/23** | ✅ live |
+| Chi Central | Policy sign-off % | **23/23** | ✅ live |
+| Chi Central | Comms read % | **23/23** | ✅ live |
+| Chi Central | **Training** | 0/23 | ❌ empty |
+| Tanda | **Labour %** | 9/23 | ⚠️ partial |
+| Restoke | **Cake Logs** | 0/23 | ❌ empty |
+| Restoke | **Litter Pickup** | 0/23 | ❌ empty |
+| Restoke | **Daily Waste Log** | 0/23 | ❌ empty |
+| Restoke | **Delivery Temps** | 0/23 | ❌ empty |
+| Restoke | **Open/Close** | 0/23 | ❌ empty |
 
-Everything **already live**: Sales (actual), Google Reviews, Celsi (hopper
-temps / calibrations / corrective actions), Policy & Comms read %, Labour % for
-9 venues.
+**8 metrics fully live · 1 partial (Tanda) · 6 empty (Budget, Training, ×5 Restoke).**
+The whole **Restoke** system is empty; **Tanda** is empty for 14 of 23 venues.
 
 ---
 
-## A. Whole metrics not yet shown
+## ⚠️ Partial — Tanda: Labour % (9 of 23 venues)
 
-### 1. Sales v Budget — *needs a finance decision, not data*
-- **Now:** sales actual is live; the budget side shows "—".
-- **Why:** the Xero budget exists (`XeroConsolidationBudgetGroupReportViewWithFX`,
-  per venue via the "Location" tracking category, e.g. `48. GEOR.NSW`), but
-  (a) it only runs **monthly through Jun 2026**, and (b) its "Revenue" line
-  reconciles to **~2× POS net sales** — a different basis (likely GST-inclusive
-  and/or includes non-POS revenue). Comparing as-is would show every venue ~50%
-  under budget, which is false.
-- **To integrate:**
-  1. Finance confirms what the Xero "Revenue" budget represents vs POS net sales,
-     and the adjustment (e.g. ÷1.1 for GST, include/exclude catering/delivery).
-  2. Ensure budgets are loaded for current months (not just to June).
-  3. Wire the budget view per venue into the sales rule (map Location code → venue).
-- **Effort:** Low once the basis is agreed. **Blocker is the decision.**
+- **Populated (9):** George St, Barangaroo, Chatswood, Cronulla, Newtown, Bondi,
+  Coogee, Bondi Junction, Double Bay.
+- **Empty (14):** Erina Fair, Wollongong, Charlestown, Rouse Hill, Circular Quay,
+  Macquarie, Castle Towers, Burwood, Penrith, Manly, Surry Hills, Top Ryde,
+  Randwick, Lane Cove.
+- **Why:** Restoke's labour data mis-attributes venues. 12 of the empty venues
+  have **no labour rows at all** — their staff are dumped into aggregate buckets
+  ("Yo-Chi Randwick" = 474 "employees"; "Yo-Chi Prospect"). "Randwick" itself is
+  that dump (excluded); Top Ryde (~50%) is excluded as implausible. The board
+  shows "—" rather than a wrong number.
+- **How to integrate:** fix Restoke's labour export so each venue's staff file
+  under **that** venue, not an aggregate. Source-side, in Restoke / the
+  integration. The pipeline auto-includes the venues once attributed correctly —
+  no dashboard change needed.
+- **Owner:** Restoke integration. **Blocker:** source data.
 
-### 2. Chi Central — Training % — *buildable, no source change needed*
-- **Now:** "—" all venues.
+---
+
+## ❌ Empty — whole Restoke system (5 metrics, 0/23)
+
+Cake Logs · Litter Pickup · Daily Waste Log · Delivery Temps · Open/Close.
+
+- **Why:** these operational checklists are **not exposed in DataSights at all.**
+  Restoke's DataSights views cover ordering / sales / invoices / labour only;
+  there is no checklist/form-submission view. (`OpCentralForms` holds form
+  *definitions*, not per-venue submissions.)
+- **How to integrate:** DataSights — with Restoke / OpCentral — must publish the
+  checklist submissions as a queryable view: **per venue, per date, completion.**
+  Once a view exists, each of the 5 metrics is one query + one rule (Low effort
+  each).
+- **Owner:** DataSights / Restoke integration. **Blocker:** source not exposed —
+  nothing to query yet.
+
+---
+
+## ❌ Empty — Chi Central: Training (0/23)
+
 - **Why:** training completion lives in `OpCentralTrainingAllResultPrograms`
-  (has % + user), but has **no direct venue column**.
-- **To integrate:** bridge by name —
+  (has % + user) but has **no direct venue column.**
+- **How to integrate:** bridge by name —
   `OpCentralTrainingAllResults.user_full_name` →
   `OpCentralPolicySignoffs.full_name` → `workplace_name` attributes each user to a
-  venue; then compute completion % per venue. Name matching is fuzzy (handle
-  duplicate names / leavers), but workable in `build_data.py`.
-- **Effort:** Medium. Can be built on our side — **no DataSights change required.**
-
-### 3. Restoke checklists — Cake Logs · Litter Pickup · Daily Waste Log · Delivery Temps · Open/Close
-- **Now:** "—" all venues (5 metrics).
-- **Why:** **not exposed in DataSights.** Restoke's DataSights views cover
-  ordering / sales / invoices / labour only; the operational checklists aren't
-  published as a view. `OpCentralForms` holds form *definitions*, not per-venue
-  submissions.
-- **To integrate:** DataSights (with Restoke/OpCentral) must expose the
-  checklist/form-submission data — **per venue, per date, completion** — as a
-  queryable view. Once a view exists, each metric is one query + one rule.
-- **Effort:** **Blocked on the source** adding the view. Then Low per metric.
+  venue; then compute completion % per venue. Fuzzy (handle duplicate names /
+  leavers) but workable in `build_data.py`.
+- **Owner:** Dashboard. **Blocker:** build work only — **no source change needed.**
+  This is the one gap we can close entirely on our side.
 
 ---
 
-## B. Per-venue coverage gaps in a live metric
+## ❌ Empty — Sales: Budget (0/23)
 
-### 4. Tanda — Labour % (9 of 23 venues)
-- **Why:** Restoke's labour data mis-attributes venues. **12 venues have no
-  labour rows at all** — their staff are dumped into aggregate buckets
-  ("Yo-Chi Randwick" = 474 "employees"; "Yo-Chi Prospect"). "Randwick" itself is
-  that dump (excluded), and Top Ryde (~50%) is excluded as implausible. The
-  dashboard shows "—" rather than a wrong number.
-- **To integrate:** fix Restoke's labour export so each venue's staff file under
-  **that** venue, not an aggregate. Source-side (Restoke / the integration).
-- **Effort:** **Blocked on the source.** The pipeline auto-includes the venues
-  once the data is attributed correctly — no dashboard change needed.
-
-### 5. Chi Central Policy/Comms — Macquarie — *fixed ✅*
-- **Why:** OpCentral names the venue "Macquarie Park"; the venue mapping had it
-  unset, so policy/comms showed "—" for Macquarie only.
-- **Fix:** added "Macquarie Park" to the mapping — populates on the next refresh.
+- **Why:** the Xero budget exists (`XeroConsolidationBudgetGroupReportViewWithFX`,
+  per venue via the "Location" tracking category, e.g. `48. GEOR.NSW`) but
+  (a) only runs **monthly through Jun 2026**, and (b) its "Revenue" line
+  reconciles to **~2× POS net sales** — a different basis (likely GST-inclusive
+  and/or includes non-POS revenue). Comparing as-is would show every venue ~50%
+  under budget (false).
+- **How to integrate:** Finance confirms what the Xero "Revenue" budget represents
+  vs POS net sales and the adjustment (GST, catering/delivery); ensure current
+  months are loaded; then wire the budget view per venue into the sales rule.
+- **Owner:** Finance (decision), then Dashboard. **Blocker:** the decision, not data.
 
 ---
 
-## Who does what
+## Who closes what
 
-- **Finance:** decide the budget basis (#1).
-- **DataSights / Restoke integration:** expose the checklist views (#3); fix the
-  labour venue attribution (#4).
-- **Dashboard:** build the training name-bridge (#2) on request; Macquarie fixed (#5).
+| Gap | Blocker type | Owner | We can do it? |
+|---|---|---|---|
+| Tanda Labour % (14 venues) | Source data (Restoke attribution) | Restoke integration | No — upstream |
+| Restoke checklists (×5) | Source not exposed in DataSights | DataSights / Restoke | No — upstream |
+| Chi Central Training | Build (name-bridge) | Dashboard | **Yes** |
+| Sales Budget | A finance decision | Finance → Dashboard | After the decision |
 
-None of these are dashboard *bugs* — they're upstream data availability or a
-pending decision. The board is correctly showing everything it can trust today.
+None are dashboard *bugs* — every "—" is upstream data availability or a pending
+decision. The board is correctly showing everything it can trust today (8 of the
+9 non-Restoke metrics fully populated).
