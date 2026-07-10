@@ -24,10 +24,9 @@ DataSights, across 23 NSW venues:
 | Sales | Net sales (actual) | ✅ Live |
 | Review Tracker | Google Reviews | ✅ Live |
 | Celsi | Hopper temps, calibrations, corrective actions | ✅ Live |
-| Chi Central | Policy sign-off %, comms read % | ✅ Live (22/23) |
-| Tanda | Labour % | 🟡 Live (10/23 — see data notes) |
+| Chi Central | Policy %, comms read %, training completion % | ✅ Live (23/23) |
+| Tanda | Labour % | 🟡 Live (9/23 — Restoke attribution, see data notes) |
 | Sales | Budget comparison | ⛔ Held pending a definition decision |
-| Chi Central | Training | ⛔ No venue dimension in source |
 | Restoke | Cake/litter/waste/delivery/open-close checklists | ⛔ Not yet exposed in DataSights |
 
 It refreshes itself daily and costs effectively nothing to run.
@@ -93,7 +92,7 @@ maintenance.
    line represents (GST? non-POS revenue?) before showing a Sales-vs-Budget number
    nobody will trust.
 3. **Source gaps** worth prioritising: Restoke operational checklists and
-   training-by-venue need their DataSights connections completed.
+   need their DataSights connection completed.
 4. **Metric ownership.** A short, agreed definition per metric (thresholds, what
    "compliant" means) so teams don't argue about the numbers.
 

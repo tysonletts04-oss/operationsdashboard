@@ -64,8 +64,8 @@ SOURCE_STATUS = {
     "Sales": "snapshot",
     "Review Tracker": "snapshot",
     "Celsi": "snapshot",
-    "Tanda": "partial",          # Labour % — clean for ~10 of 23 venues
-    "Chi Central": "partial",    # policies + comms live; training has no venue dim
+    "Tanda": "partial",          # Labour % — clean for ~9 of 23 venues (Restoke attribution)
+    "Chi Central": "snapshot",   # policies + comms + training all live (23/23)
     "Restoke": "nosource",       # cake/litter/waste/delivery/open-close not exposed
 }
 
@@ -168,6 +168,16 @@ SQL = {
     "comms": """
         SELECT workplace_name, 100.0*SUM(CASE WHEN is_read=1 THEN 1 ELSE 0 END)/COUNT(*) read_pct
         FROM OpCentralNewsSignoffs GROUP BY workplace_name""",
+    # Training: avg programme completion % per venue. Training has no venue column,
+    # so bridge user_id -> user_full_name -> policy-signoff workplace_name.
+    "training": """
+        SELECT p.workplace_name, CAST(AVG(tp.percentage) AS decimal(5,1)) train_pct
+        FROM OpCentralTrainingAllResultPrograms tp
+        JOIN (SELECT user_id, MIN(user_full_name) user_full_name FROM OpCentralTrainingAllResults GROUP BY user_id) u
+          ON u.user_id = tp.user_id
+        JOIN (SELECT full_name, MAX(workplace_name) workplace_name FROM OpCentralPolicySignoffs GROUP BY full_name) p
+          ON p.full_name = u.user_full_name
+        GROUP BY p.workplace_name""",
 }
 
 
@@ -356,36 +366,38 @@ def datasights_query(sql, params):
 #            reviews_week, labour_pct, policy_pct, comms_pct)
 # ---------------------------------------------------------------------------
 _N = None
+# tuple: (sales_d, sales_w, sales_m, ht_daily, ht_week, calib, correctiveA,
+#         reviews_week, labour_pct, policy_pct, comms_pct, training_pct)
 FIXTURE = {
-    "George St":      (19777, 35286, 132139, 3, 21, "complete", "none", 17, 15.1, 95.5, 81.1),
-    "Erina Fair":     (15213, 30367, 108145, 3, 20, "complete", "none",  5,  _N, 92.7, 73.1),
-    "Barangaroo":     (11015, 20588, 100751, 3, 21, "complete", "none", 16, 14.7, 95.2, 77.9),
-    "Wollongong":     (12965, 24679,  97415, 3, 20, "complete", "none",  3,  _N, 95.0, 75.6),
-    "Charlestown":    (13915, 27230,  96458, 3, 21, "complete", "none",  2,  _N, 93.3, 78.6),
-    "Rouse Hill":     (12293, 22304,  93015, 3, 20, "complete", "none",  4,  _N, 97.3, 87.3),
-    "Circular Quay":  (11186, 20497,  86270, 3, 24, "complete", "none", 12,  _N, 95.1, 75.4),
-    "Macquarie":      (12222, 23603,  82619, 3, 20, "complete", "none",  5,  _N,  _N,  _N),
-    "Castle Towers":  (11343, 20641,  82478, 3, 19, "complete", "ok",    8,  _N, 93.9, 77.3),
-    "Burwood":        ( 9642, 19396,  78495, 4, 26, "complete", "none", 13,  _N, 98.1, 86.8),
-    "Penrith":        ( 9889, 18814,  74877, 3, 20, "complete", "none",  1,  _N, 98.3, 82.9),
-    "Manly":          ( 8658, 16555,  73836, 3, 21, "complete", "none",  9,  _N, 92.8, 68.3),
-    "Chatswood":      ( 8697, 15954,  69139, 3, 20, "missed",   "none",  8, 12.4, 91.1, 67.2),
-    "Cronulla":       ( 7374, 13486,  66725, 3, 21, "complete", "none",  7, 13.4, 97.2, 80.2),
-    "Newtown":        ( 7505, 14302,  63813, 4, 26, "complete", "none", 26, 18.3, 92.4, 71.3),
-    "Bondi":          ( 5646, 10541,  55241, 3, 20, "complete", "none",  9, 19.9, 87.1, 51.7),
-    "Coogee":         ( 5286, 10013,  52745, 3, 20, "complete", "none", 10, 17.9, 95.9, 80.1),
-    "Surry Hills":    ( 4955,  9242,  51564, 4, 26, "complete", "none",  5,  _N, 87.7, 69.7),
-    "Top Ryde":       ( 5141,  8985,  40010, 3, 20, "complete", "none",  5, 49.5, 97.1, 82.3),
-    "Randwick":       ( 4472,  8223,  38275, 4, 26, "complete", "none",  0,  _N, 87.5, 77.6),
-    "Bondi Junction": ( 4759,  8909,  36889, 3, 21, "complete", "none", 17, 19.6, 94.1, 77.0),
-    "Lane Cove":      ( 3527,  6349,  30458, 3, 20, "complete", "none",  0,  _N, 91.3, 63.5),
-    "Double Bay":     ( 3404,  6494,  29482, 2, 17, "complete", "none",  6, 15.1, 86.2, 43.5),
+    "George St":      (19777, 35286, 132139, 3, 21, "complete", "none", 17, 15.1, 95.5, 81.1, 83.7),
+    "Erina Fair":     (15213, 30367, 108145, 3, 20, "complete", "none",  5,  _N, 92.7, 73.1, 84.1),
+    "Barangaroo":     (11015, 20588, 100751, 3, 21, "complete", "none", 16, 14.7, 95.2, 77.9, 77.5),
+    "Wollongong":     (12965, 24679,  97415, 3, 20, "complete", "none",  3,  _N, 95.0, 75.6, 79.9),
+    "Charlestown":    (13915, 27230,  96458, 3, 21, "complete", "none",  2,  _N, 93.3, 78.6, 88.6),
+    "Rouse Hill":     (12293, 22304,  93015, 3, 20, "complete", "none",  4,  _N, 97.3, 87.3, 92.0),
+    "Circular Quay":  (11186, 20497,  86270, 3, 24, "complete", "none", 12,  _N, 95.1, 75.4, 79.8),
+    "Macquarie":      (12222, 23603,  82619, 3, 20, "complete", "none",  5,  _N, 94.4, 77.3, 83.5),
+    "Castle Towers":  (11343, 20641,  82478, 3, 19, "complete", "ok",    8,  _N, 93.9, 77.3, 87.3),
+    "Burwood":        ( 9642, 19396,  78495, 4, 26, "complete", "none", 13,  _N, 98.1, 86.8, 87.2),
+    "Penrith":        ( 9889, 18814,  74877, 3, 20, "complete", "none",  1,  _N, 98.3, 82.9, 92.1),
+    "Manly":          ( 8658, 16555,  73836, 3, 21, "complete", "none",  9,  _N, 92.8, 68.3, 77.0),
+    "Chatswood":      ( 8697, 15954,  69139, 3, 20, "missed",   "none",  8, 12.4, 91.1, 67.2, 78.4),
+    "Cronulla":       ( 7374, 13486,  66725, 3, 21, "complete", "none",  7, 13.4, 97.2, 80.2, 85.2),
+    "Newtown":        ( 7505, 14302,  63813, 4, 26, "complete", "none", 26, 18.3, 92.4, 71.3, 85.0),
+    "Bondi":          ( 5646, 10541,  55241, 3, 20, "complete", "none",  9, 19.9, 87.1, 51.7, 65.3),
+    "Coogee":         ( 5286, 10013,  52745, 3, 20, "complete", "none", 10, 17.9, 95.9, 80.1, 92.4),
+    "Surry Hills":    ( 4955,  9242,  51564, 4, 26, "complete", "none",  5,  _N, 87.7, 69.7, 80.7),
+    "Top Ryde":       ( 5141,  8985,  40010, 3, 20, "complete", "none",  5, 49.5, 97.1, 82.3, 89.1),
+    "Randwick":       ( 4472,  8223,  38275, 4, 26, "complete", "none",  0,  _N, 87.5, 77.6, 67.9),
+    "Bondi Junction": ( 4759,  8909,  36889, 3, 21, "complete", "none", 17, 19.6, 94.1, 77.0, 87.0),
+    "Lane Cove":      ( 3527,  6349,  30458, 3, 20, "complete", "none",  0,  _N, 91.3, 63.5, 76.2),
+    "Double Bay":     ( 3404,  6494,  29482, 2, 17, "complete", "none",  6, 15.1, 86.2, 43.5, 71.4),
 }
 
 
 def _venue_record(period, row):
     """Assemble one venue's per-period record in the shape the dashboard reads."""
-    sd, sw, sm, ht_d, ht_w, calib, ca, rev, lab, pol, comms = row
+    sd, sw, sm, ht_d, ht_w, calib, ca, rev, lab, pol, comms, train = row
     sales_actual = {"daily": sd, "wtd": sw, "mtd": sm}[period]
     hopper = ht_d if period == "daily" else ht_w   # daily rate vs weekly count
     rec = {
@@ -401,6 +413,8 @@ def _venue_record(period, row):
         rec["policies"] = pol
     if comms is not None:
         rec["comms"] = comms
+    if train is not None:
+        rec["training"] = train
     return rec
 
 
@@ -432,7 +446,7 @@ def validate(periods):
 
     # coverage report (not fatal — surfaced on the board as "—")
     cov = lambda key: sum(1 for r in periods["mtd"].values() if key in r)
-    coverage = {k: f"{cov(k)}/{len(venues)}" for k in ("labour", "policies", "comms")}
+    coverage = {k: f"{cov(k)}/{len(venues)}" for k in ("labour", "policies", "comms", "training")}
     return errors, warnings, coverage
 
 
@@ -488,6 +502,7 @@ def live_extract(snap):
     labour_by_venue = _index(datasights_query(SQL["labour"], p), "venue")
     policy_by_wp   = _index(datasights_query(SQL["policies"], p), "workplace_name")
     comms_by_wp    = _index(datasights_query(SQL["comms"], p), "workplace_name")
+    train_by_wp    = _index(datasights_query(SQL["training"], p), "workplace_name")
 
     fixture = {}
     for display, sales_store, code, opcentral_wp, labour_venue in VENUES:
@@ -519,11 +534,13 @@ def live_extract(snap):
 
         pol = policy_by_wp.get(opcentral_wp) if opcentral_wp else None
         cm = comms_by_wp.get(opcentral_wp) if opcentral_wp else None
+        tr = train_by_wp.get(opcentral_wp) if opcentral_wp else None
         policy_pct = round(_num(pol["read_pct"]), 1) if pol else None
         comms_pct = round(_num(cm["read_pct"]), 1) if cm else None
+        training_pct = round(_num(tr["train_pct"]), 1) if tr else None
 
         fixture[display] = (sd, sw, sm, ht_daily, temp_week, calib, correctiveA,
-                            reviews_week, labour_pct, policy_pct, comms_pct)
+                            reviews_week, labour_pct, policy_pct, comms_pct, training_pct)
     return fixture
 
 
