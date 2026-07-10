@@ -19,7 +19,7 @@ needed to close each gap.
 | Celsi | Corrective Actions | **23/23** | ✅ live |
 | Chi Central | Policy sign-off % | **23/23** | ✅ live |
 | Chi Central | Comms read % | **23/23** | ✅ live |
-| Chi Central | **Training** | 0/23 | ❌ empty |
+| Chi Central | Training | **23/23** | ✅ live |
 | Tanda | **Labour %** | 9/23 | ⚠️ partial |
 | Restoke | **Cake Logs** | 0/23 | ❌ empty |
 | Restoke | **Litter Pickup** | 0/23 | ❌ empty |
@@ -27,8 +27,9 @@ needed to close each gap.
 | Restoke | **Delivery Temps** | 0/23 | ❌ empty |
 | Restoke | **Open/Close** | 0/23 | ❌ empty |
 
-**8 metrics fully live · 1 partial (Tanda) · 6 empty (Budget, Training, ×5 Restoke).**
+**8 metrics fully live · 1 partial (Tanda) · 6 empty (Budget + ×5 Restoke).**
 The whole **Restoke** system is empty; **Tanda** is empty for 14 of 23 venues.
+(Chi Central **Training** is now live — bridged to venue by name.)
 
 ---
 
@@ -71,17 +72,14 @@ Cake Logs · Litter Pickup · Daily Waste Log · Delivery Temps · Open/Close.
 
 ---
 
-## ❌ Empty — Chi Central: Training (0/23)
+## ✅ Done — Chi Central: Training (23/23)
 
-- **Why:** training completion lives in `OpCentralTrainingAllResultPrograms`
-  (has % + user) but has **no direct venue column.**
-- **How to integrate:** bridge by name —
-  `OpCentralTrainingAllResults.user_full_name` →
-  `OpCentralPolicySignoffs.full_name` → `workplace_name` attributes each user to a
-  venue; then compute completion % per venue. Fuzzy (handle duplicate names /
-  leavers) but workable in `build_data.py`.
-- **Owner:** Dashboard. **Blocker:** build work only — **no source change needed.**
-  This is the one gap we can close entirely on our side.
+- **Now live.** Average programme completion % per venue, from
+  `OpCentralTrainingAllResultPrograms`.
+- **How it was closed:** training has no venue column, so it's bridged by name —
+  `user_id` → `user_full_name` → policy-signoff `workplace_name`. Rule: ≥90% green
+  · ≥75% yellow · else red. Built entirely on our side, no source change.
+- Chi Central is now fully live (policy + comms + training, 23/23).
 
 ---
 
@@ -106,7 +104,7 @@ Cake Logs · Litter Pickup · Daily Waste Log · Delivery Temps · Open/Close.
 |---|---|---|---|
 | Tanda Labour % (14 venues) | Source data (Restoke attribution) | Restoke integration | No — upstream |
 | Restoke checklists (×5) | Source not exposed in DataSights | DataSights / Restoke | No — upstream |
-| Chi Central Training | Build (name-bridge) | Dashboard | **Yes** |
+| Chi Central Training | ~~Build (name-bridge)~~ | Dashboard | ✅ **done** |
 | Sales Budget | A finance decision | Finance → Dashboard | After the decision |
 
 None are dashboard *bugs* — every "—" is upstream data availability or a pending

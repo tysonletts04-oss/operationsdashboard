@@ -33,8 +33,8 @@ fraction of the cost.*
 
 - **Sales vs Budget** — pending a finance decision on the Xero "Revenue" basis
   (it currently reconciles to ~2× POS net sales, so a like-for-like needs sign-off).
-- **Chi Central training** and **Restoke checklists** — pending their DataSights
-  connections.
+- **Restoke checklists** — pending a DataSights connection (not yet exposed).
+- **Labour %** for 14 venues — pending a Restoke venue-attribution fix (source-side).
 - **Access control** — put the site behind a login (Cloudflare Access, free) before
   wider distribution.
 - **Failure alerting** and **metric sign-off** with ops/finance.
@@ -57,7 +57,7 @@ reporting product — delivered on our own low-cost stack.
    names its DataSights source and rule. Nothing is hand-entered; anyone can trace
    it back and reproduce it."
 5. **Point at the '—' cells.** "Where we can't yet verify a number — the budget
-   comparison, training, some checklists — we show a dash and say why, rather than
+   comparison, some checklists — we show a dash and say why, rather than
    guess. That's Phase 2."
 6. **Close on value.** "It runs for effectively nothing, replaces per-venue Power BI,
    and we own it. Phase 1 is live today; Phase 2 is scoped and waiting on a couple of
