@@ -49,6 +49,8 @@ The whole **Restoke** system is empty; **Tanda** is empty for 14 of 23 venues.
   integration. The pipeline auto-includes the venues once attributed correctly —
   no dashboard change needed.
 - **Owner:** Restoke integration. **Blocker:** source data.
+- **Ready-to-hand ticket:** see [`RESTOKE_LABOUR_FIX.md`](RESTOKE_LABOUR_FIX.md)
+  — exact broken buckets, affected venues, the fix, and a verification query.
 
 ---
 
