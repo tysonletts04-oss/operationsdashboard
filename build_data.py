@@ -84,7 +84,7 @@ VENUES = [
     ("Charlestown",      "Yo-Chi Charlestown",   "CHAR",     "Charlestown Square", None),
     ("Rouse Hill",       "Yo-Chi Rouse Hill",    "ROUS",     "Rouse Hill",         None),
     ("Circular Quay",    "Yo-Chi Circular Quay", "CIRC",     "Circular Quay",      None),
-    ("Macquarie",        "Yo-Chi Macquarie",     "MACQ",     None,                 None),
+    ("Macquarie",        "Yo-Chi Macquarie",     "MACQ",     "Macquarie Park",     None),
     ("Castle Towers",    "Yo-Chi Castle Towers", "CAST",     "Castle Towers",      None),
     ("Burwood",          "Yo-Chi Burwood",       "BURW",     "Burwood",            None),
     ("Penrith",          "Yo-Chi Penrith",       "PENR",     "Penrith",            None),
