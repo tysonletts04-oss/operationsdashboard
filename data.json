@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-07-08",
-  "generatedAt": "2026-07-09T22:24:29+00:00",
+  "generatedAt": "2026-07-10T00:28:17+00:00",
   "windows": "daily = 8 Jul · WTD = 6–8 Jul · MTD = 1–8 Jul",
   "venues": 23,
   "sources": {
@@ -14,8 +14,8 @@
   },
   "coverage": {
    "labour": "9/23",
-   "policies": "22/23",
-   "comms": "22/23"
+   "policies": "23/23",
+   "comms": "23/23"
   }
  },
  "periods": {
@@ -120,7 +120,9 @@
     "sales": {
      "actual": 11522,
      "budget": null
-    }
+    },
+    "policies": 94.4,
+    "comms": 77.3
    },
    "Castle Towers": {
     "hopperTemps": 3,
@@ -432,7 +434,9 @@
     "sales": {
      "actual": 35125,
      "budget": null
-    }
+    },
+    "policies": 94.4,
+    "comms": 77.3
    },
    "Castle Towers": {
     "hopperTemps": 19,
@@ -744,7 +748,9 @@
     "sales": {
      "actual": 94140,
      "budget": null
-    }
+    },
+    "policies": 94.4,
+    "comms": 77.3
    },
    "Castle Towers": {
     "hopperTemps": 19,
