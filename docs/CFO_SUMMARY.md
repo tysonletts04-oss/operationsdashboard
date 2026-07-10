@@ -44,6 +44,10 @@ fraction of the cost.*
 A **progress payment** for Phase 1: a working, live, automated, auditable
 reporting product — delivered on our own low-cost stack.
 
+See **[`ROI.md`](ROI.md)** for the value case: ~$20k–45k/year in hard savings
+(manual reporting + tooling) at ≈$0 running cost, scaling to every other team —
+with the assumptions laid out so they can be pressure-tested.
+
 ---
 
 ## 3-minute demo script
