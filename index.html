@@ -741,7 +741,7 @@ const PROVENANCE = [
   ["Chi Central", "Comms read %", "OpCentralNewsSignoffs",
    "Share of company-news items acknowledged (is_read). ≥85% green · ≥70% yellow · else red.", "live"],
   ["Chi Central", "Training", "OpCentralTrainingAllResultPrograms",
-   "Average programme completion % per venue. Bridged to venue by name (user → policy-signoff workplace). ≥90% green · ≥75% yellow · else red.", "live"],
+   "AVG of each staff member's training-programme completion % across their enrolled OpCentral programmes, averaged per venue. Training has no venue field, so each user is mapped to a venue by name (user_id → user_full_name → their policy-signoff workplace). ≥90% green · ≥75% yellow · else red.", "live"],
   ["Tanda", "Labour %", "RestokeLaborCost ÷ Sales",
    "De-duplicated labour cost ÷ net sales, per venue. Excludes HQ-dump venues (100s of “staff”) and values outside 5–45% as implausible. No labour budget source yet, so shown as informational.", "partial"],
   ["Restoke", "Cake / Litter / Waste / Delivery / Open-Close", "—",
