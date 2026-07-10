@@ -24,6 +24,41 @@ staff into two "catch-all" venue buckets instead of each venue. Over 8 days
 ~15–50 staff). These two buckets are absorbing the staff that should sit against
 the venues below.
 
+## Proof it's a pooling problem (not real headcount)
+
+Cross-referencing the **employees inside the "Yo-Chi Randwick" labour bucket**
+against where each person actually works (OpCentral `workplace_name`) shows the
+bucket is full of *other venues'* staff — **only 8 of the ~474 actually work at
+Randwick**:
+
+| Where they actually work | Staff mis-filed into "Yo-Chi Randwick" |
+|---|---|
+| Rouse Hill | 32 |
+| George Street | 30 |
+| Barangaroo | 25 |
+| Circular Quay | 22 |
+| Castle Towers | 22 |
+| Manly | 20 |
+| Chatswood | 19 |
+| Macquarie Park | 18 |
+| Burwood / Penrith / Top Ryde | 16 each |
+| Cronulla 14 · Newtown 13 · Coogee 11 · Bondi 11 · Surry Hills 10 · Lane Cove 8 | … |
+| **Randwick (actually Randwick)** | **8** |
+
+Consequence: the missing venues' labour is trapped here, **and** the venues that
+*do* report (George St, Barangaroo, Chatswood…) are **understated**, because some
+of their staff are split into this bucket too. Fixing attribution corrects both.
+
+Reproduce:
+```sql
+SELECT p.workplace_name AS actual_venue, COUNT(DISTINCT l.employee_name) staff
+FROM (SELECT DISTINCT employee_name FROM RestokeLaborCost
+      WHERE venue='Yo-Chi Randwick' AND date >= DATEADD(day,-8,GETDATE())) l
+JOIN (SELECT DISTINCT full_name, workplace_name FROM OpCentralPolicySignoffs) p
+  ON p.full_name = l.employee_name
+GROUP BY p.workplace_name ORDER BY staff DESC;
+```
+
 ## Affected venues (Labour % currently "—")
 
 Erina Fair · Wollongong · Charlestown · Rouse Hill · Circular Quay · Macquarie ·
