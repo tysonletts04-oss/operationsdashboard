@@ -1,12 +1,17 @@
 name: Refresh dashboard data
 
-# Regenerates data.json from DataSights every morning and commits it back.
-# Committing data.json is what triggers the static host (Vercel / GitHub Pages /
-# Azure Static Web Apps) to redeploy — so the dashboard refreshes itself.
+# Regenerates data.json from DataSights and commits it back when the data changes.
+# Committing data.json is what triggers the static host (Cloudflare/GitHub Pages)
+# to redeploy — so the dashboard refreshes itself.
+#
+# Runs every ~3 hours: DataSights finishes loading each day's data at some point
+# during the day, so checking often means the board advances to the latest
+# complete day within hours of it landing (not the next morning). build_data.py
+# only rewrites data.json when the data actually changed, so idle runs are no-ops.
 
 on:
   schedule:
-    - cron: "0 20 * * *"      # 20:00 UTC = 06:00 AEST — before the venues open
+    - cron: "0 */3 * * *"       # every 3 hours — catch new complete days promptly
   workflow_dispatch: {}         # allow a manual run from the Actions tab
 
 permissions:
