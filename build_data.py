@@ -579,9 +579,26 @@ def main():
         },
         "periods": periods,
     }
+
+    # Only rewrite (and therefore commit/redeploy) when the DATA actually changed
+    # — ignore the generatedAt timestamp. Lets the job run every few hours to catch
+    # new data promptly without spamming commits when nothing has moved.
+    def _without_ts(p):
+        import copy
+        c = copy.deepcopy(p)
+        c.get("meta", {}).pop("generatedAt", None)
+        return c
+    try:
+        with open(args.out) as f:
+            if _without_ts(json.load(f)) == _without_ts(payload):
+                print(f"No change (report {snap['reportDate']}); data.json left as-is.")
+                return
+    except (FileNotFoundError, ValueError):
+        pass
+
     with open(args.out, "w") as f:
         json.dump(payload, f, indent=1, ensure_ascii=False)
-    print(f"Wrote {args.out}: {len(periods['daily'])} venues, coverage={coverage}, generatedAt={generated}")
+    print(f"Wrote {args.out}: report {snap['reportDate']}, coverage={coverage}, generatedAt={generated}")
 
 
 if __name__ == "__main__":
