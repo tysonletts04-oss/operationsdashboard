@@ -215,7 +215,7 @@
     </div>
   </div>
   <div class="meta">
-    <div class="item"><div class="k">Report date</div><div class="v" id="metaDate">—</div><div class="cap">latest complete day</div></div>
+    <div class="item" id="metaDateItem"><div class="k">Report date</div><div class="v" id="metaDate">—</div><div class="cap" id="metaDateCap">latest complete day</div></div>
     <div class="item"><div class="k">Refreshes</div><div class="v">Auto · every ~3 hrs</div></div>
     <div class="item"><div class="k">Venues</div><div class="v" id="metaVenues">—</div></div>
     <div class="item"><div class="k">Overall</div><div class="v" id="metaOverall">—</div></div>
@@ -724,7 +724,25 @@ function renderSourceStrip() {
 function periodLabel(p){ return p==='daily'?'Daily':p==='wtd'?'Week to date':'Month to date'; }
 
 function render() {
-  document.getElementById('metaDate').textContent = new Date(CONFIG.reportDate).toLocaleDateString('en-AU',{weekday:'short',day:'numeric',month:'short',year:'numeric'});
+  // Parse the report date at LOCAL midnight so the "days behind" maths lines up with
+  // the viewer's own calendar day (a bare Date("YYYY-MM-DD") is UTC and can be off by one).
+  const rd = new Date(CONFIG.reportDate + 'T00:00:00');
+  document.getElementById('metaDate').textContent = rd.toLocaleDateString('en-AU',{weekday:'short',day:'numeric',month:'short',year:'numeric'});
+  // How far behind today is the latest COMPLETE trading day? Data syncs from the POS into
+  // DataSights with a ~1–2 day lag (longer over weekends), so the board is intentionally
+  // "as at" the freshest complete day, not a live same-day figure.
+  const now = new Date();
+  const days = Math.round((new Date(now.getFullYear(), now.getMonth(), now.getDate()) - rd) / 86400000);
+  const cap = document.getElementById('metaDateCap');
+  cap.textContent = days <= 0 ? 'latest complete day · up to date'
+                              : `latest complete day · ${days} day${days === 1 ? '' : 's'} behind today`;
+  document.getElementById('metaDateItem').title =
+    'Sales, reviews and food-safety checks sync from the POS/source systems into DataSights with '
+    + 'roughly a 1–2 day lag (longer over weekends). The board always shows the most recent COMPLETE '
+    + 'trading day and advances on its own as newer days land — it is not a live same-day figure.';
+  // Normal lag is 1–2 days; flag amber only if it's stale enough to suggest the feed has stalled.
+  cap.style.color = days >= 4 ? 'var(--yellow)' : '';
+  cap.style.fontWeight = days >= 4 ? '700' : '';
   document.getElementById('metaVenues').textContent = venues(state.period).length;
   renderKpis();
   if (state.view === 'grid') renderGrid(); else renderCards();
