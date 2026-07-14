@@ -533,7 +533,14 @@ const RULES = {
 };
 
 function evaluate(metric, raw, period) {
-  if (raw === undefined || raw === null) return { status: 'n', display: '—' };
+  if (raw === undefined || raw === null) {
+    // Labour goes missing for a specific, known reason (Restoke doesn't attribute it to
+    // this venue), so label it plainly instead of a bare "—" that reads like a glitch.
+    if (metric.rule === 'labour')
+      return { status: 'n', display: 'no data',
+               note: 'Labour % isn’t attributed to this venue in Restoke yet — a source-data gap, not an error. It appears automatically once Restoke files this venue’s staff correctly.' };
+    return { status: 'n', display: '—' };
+  }
   return RULES[metric.rule](raw, period);
 }
 
@@ -548,6 +555,22 @@ function venues(period) { return Object.keys(DATA[period]); }
 
 function statusClass(s){ return s; }
 function statusColor(s){ return s==='g'?'var(--green)':s==='y'?'var(--yellow)':s==='r'?'var(--red)':'var(--neutral)'; }
+
+/* The calendar week the Google Reviews figure covers: Monday of the report week → report day. */
+function reportWeekLabel() {
+  const M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const rd = new Date(CONFIG.reportDate + 'T00:00:00');
+  const monday = new Date(rd);
+  monday.setDate(rd.getDate() - ((rd.getDay() + 6) % 7));   // step back to Monday
+  const fmt = d => `${d.getDate()} ${M[d.getMonth()]}`;
+  return fmt(monday) === fmt(rd) ? fmt(rd) : `${fmt(monday)}–${fmt(rd)}`;
+}
+/* Hover text for a metric cell — Google Reviews spells out which week it's counting. */
+function cellTitle(m) {
+  return m.rule === 'reviews'
+    ? `${m.system} · ${m.label} — reporting week ${reportWeekLabel()} (resets each Monday)`
+    : `${m.system} · ${m.label} (${m.freq})`;
+}
 
 function computeOverall(period, venueFilter) {
   let g=0,y=0,r=0,total=0;
@@ -595,7 +618,7 @@ function renderKpis() {
     ${kpiCard('Overall Compliance', o.pct + '%', `${o.g} green · ${o.y} yellow · ${o.r} red`, o.pct, o.pct>=90?'var(--green)':o.pct>=75?'var(--yellow)':'var(--red)')}
     ${salesCard}
     ${labourCard}
-    ${kpiCard('Google Reviews', String(reviewsSum), `${vs.length} venue(s) · target 7/venue/wk`, Math.min((reviewsSum/(vs.length*7))*100,100), 'var(--accent)')}
+    ${kpiCard('Google Reviews', String(reviewsSum), `wk of ${reportWeekLabel()} · target 7/venue/wk`, Math.min((reviewsSum/(vs.length*7))*100,100), 'var(--accent)')}
   `;
   document.getElementById('metaOverall').textContent = o.pct + '%';
 }
@@ -627,7 +650,7 @@ function renderGrid() {
     allMetrics.forEach(m => {
       const ev = evaluate(m, DATA[period][v][m.key], period);
       const sub = ev.sub ? `<small>${ev.sub}</small>` : '';
-      body += `<td class="cell ${statusClass(ev.status)}" title="${m.system} · ${m.label} (${m.freq})">${ev.display}${sub}</td>`;
+      body += `<td class="cell ${statusClass(ev.status)}" title="${ev.note || cellTitle(m)}">${ev.display}${sub}</td>`;
     });
     body += '</tr>';
   });
@@ -660,7 +683,7 @@ function renderCards() {
       s.metrics.forEach(m => {
         const ev = evaluate(m, DATA[period][v][m.key], period);
         html += `<div class="vc-row"><span class="ml">${m.label}</span>
-          <span class="vchip ${statusClass(ev.status)}">${ev.display}${ev.sub?' · '+ev.sub:''}</span></div>`;
+          <span class="vchip ${statusClass(ev.status)}" title="${ev.note || cellTitle(m)}">${ev.display}${ev.sub?' · '+ev.sub:''}</span></div>`;
       });
     });
     html += '</div>';
