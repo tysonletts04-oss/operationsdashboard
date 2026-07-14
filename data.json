@@ -1,9 +1,9 @@
 {
  "meta": {
   "reportDate": "2026-07-12",
-  "generatedAt": "2026-07-13T19:27:29+00:00",
+  "generatedAt": "2026-07-14T04:03:55+00:00",
   "windows": "daily = 12 Jul · WTD = 6–12 Jul · MTD = 1–12 Jul",
-  "venues": 23,
+  "venues": 27,
   "sources": {
    "Sales": "snapshot",
    "Review Tracker": "snapshot",
@@ -13,10 +13,10 @@
    "Restoke": "nosource"
   },
   "coverage": {
-   "labour": "9/23",
-   "policies": "23/23",
-   "comms": "23/23",
-   "training": "23/23"
+   "labour": "10/27",
+   "policies": "27/27",
+   "comms": "27/27",
+   "training": "27/27"
   }
  },
  "periods": {
@@ -39,8 +39,8 @@
     "training": 83.7
    },
    "Erina Fair": {
-    "hopperTemps": 0,
-    "calibrations": "missed",
+    "hopperTemps": 3,
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
@@ -69,8 +69,8 @@
     "training": 78.7
    },
    "Wollongong": {
-    "hopperTemps": 0,
-    "calibrations": "missed",
+    "hopperTemps": 3,
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
@@ -82,8 +82,8 @@
     "training": 80.2
    },
    "Charlestown": {
-    "hopperTemps": 0,
-    "calibrations": "missed",
+    "hopperTemps": 3,
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
@@ -108,8 +108,8 @@
     "training": 92.9
    },
    "Circular Quay": {
-    "hopperTemps": 0,
-    "calibrations": "missed",
+    "hopperTemps": 3,
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 6,
     "sales": {
@@ -355,6 +355,62 @@
     "policies": 86.2,
     "comms": 45.7,
     "training": 71.4
+   },
+   "Chippendale": {
+    "hopperTemps": 3,
+    "calibrations": "complete",
+    "correctiveA": "none",
+    "reviews": 0,
+    "sales": {
+     "actual": 3772,
+     "budget": null
+    },
+    "policies": 95.5,
+    "comms": 76.2,
+    "training": 72.2
+   },
+   "Crows Nest": {
+    "hopperTemps": 3,
+    "calibrations": "complete",
+    "correctiveA": "none",
+    "reviews": 1,
+    "sales": {
+     "actual": 5252,
+     "budget": null
+    },
+    "policies": 93.1,
+    "comms": 72.0,
+    "training": 77.4
+   },
+   "Fish Market": {
+    "hopperTemps": 4,
+    "calibrations": "complete",
+    "correctiveA": "none",
+    "reviews": 8,
+    "sales": {
+     "actual": 6762,
+     "budget": null
+    },
+    "policies": 84.1,
+    "comms": 39.0,
+    "training": 61.2
+   },
+   "Green Hills": {
+    "hopperTemps": 3,
+    "calibrations": "complete",
+    "correctiveA": "none",
+    "reviews": 5,
+    "sales": {
+     "actual": 13105,
+     "budget": null
+    },
+    "labour": {
+     "pct": 21.4,
+     "budgetPct": null
+    },
+    "policies": 94.3,
+    "comms": 64.1,
+    "training": 84.7
    }
   },
   "wtd": {
@@ -376,8 +432,8 @@
     "training": 83.7
    },
    "Erina Fair": {
-    "hopperTemps": 0,
-    "calibrations": "missed",
+    "hopperTemps": 18,
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
@@ -406,8 +462,8 @@
     "training": 78.7
    },
    "Wollongong": {
-    "hopperTemps": 0,
-    "calibrations": "missed",
+    "hopperTemps": 21,
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
@@ -419,8 +475,8 @@
     "training": 80.2
    },
    "Charlestown": {
-    "hopperTemps": 0,
-    "calibrations": "missed",
+    "hopperTemps": 18,
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
@@ -445,8 +501,8 @@
     "training": 92.9
    },
    "Circular Quay": {
-    "hopperTemps": 0,
-    "calibrations": "missed",
+    "hopperTemps": 24,
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 6,
     "sales": {
@@ -692,6 +748,62 @@
     "policies": 86.2,
     "comms": 45.7,
     "training": 71.4
+   },
+   "Chippendale": {
+    "hopperTemps": 23,
+    "calibrations": "complete",
+    "correctiveA": "none",
+    "reviews": 0,
+    "sales": {
+     "actual": 34227,
+     "budget": null
+    },
+    "policies": 95.5,
+    "comms": 76.2,
+    "training": 72.2
+   },
+   "Crows Nest": {
+    "hopperTemps": 21,
+    "calibrations": "complete",
+    "correctiveA": "none",
+    "reviews": 1,
+    "sales": {
+     "actual": 39698,
+     "budget": null
+    },
+    "policies": 93.1,
+    "comms": 72.0,
+    "training": 77.4
+   },
+   "Fish Market": {
+    "hopperTemps": 25,
+    "calibrations": "complete",
+    "correctiveA": "none",
+    "reviews": 8,
+    "sales": {
+     "actual": 32411,
+     "budget": null
+    },
+    "policies": 84.1,
+    "comms": 39.0,
+    "training": 61.2
+   },
+   "Green Hills": {
+    "hopperTemps": 19,
+    "calibrations": "complete",
+    "correctiveA": "none",
+    "reviews": 5,
+    "sales": {
+     "actual": 96513,
+     "budget": null
+    },
+    "labour": {
+     "pct": 21.4,
+     "budgetPct": null
+    },
+    "policies": 94.3,
+    "comms": 64.1,
+    "training": 84.7
    }
   },
   "mtd": {
@@ -713,8 +825,8 @@
     "training": 83.7
    },
    "Erina Fair": {
-    "hopperTemps": 0,
-    "calibrations": "missed",
+    "hopperTemps": 18,
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
@@ -743,8 +855,8 @@
     "training": 78.7
    },
    "Wollongong": {
-    "hopperTemps": 0,
-    "calibrations": "missed",
+    "hopperTemps": 21,
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
@@ -756,8 +868,8 @@
     "training": 80.2
    },
    "Charlestown": {
-    "hopperTemps": 0,
-    "calibrations": "missed",
+    "hopperTemps": 18,
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
@@ -782,8 +894,8 @@
     "training": 92.9
    },
    "Circular Quay": {
-    "hopperTemps": 0,
-    "calibrations": "missed",
+    "hopperTemps": 24,
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 6,
     "sales": {
@@ -1029,6 +1141,62 @@
     "policies": 86.2,
     "comms": 45.7,
     "training": 71.4
+   },
+   "Chippendale": {
+    "hopperTemps": 23,
+    "calibrations": "complete",
+    "correctiveA": "none",
+    "reviews": 0,
+    "sales": {
+     "actual": 56562,
+     "budget": null
+    },
+    "policies": 95.5,
+    "comms": 76.2,
+    "training": 72.2
+   },
+   "Crows Nest": {
+    "hopperTemps": 21,
+    "calibrations": "complete",
+    "correctiveA": "none",
+    "reviews": 1,
+    "sales": {
+     "actual": 74104,
+     "budget": null
+    },
+    "policies": 93.1,
+    "comms": 72.0,
+    "training": 77.4
+   },
+   "Fish Market": {
+    "hopperTemps": 25,
+    "calibrations": "complete",
+    "correctiveA": "none",
+    "reviews": 8,
+    "sales": {
+     "actual": 55526,
+     "budget": null
+    },
+    "policies": 84.1,
+    "comms": 39.0,
+    "training": 61.2
+   },
+   "Green Hills": {
+    "hopperTemps": 19,
+    "calibrations": "complete",
+    "correctiveA": "none",
+    "reviews": 5,
+    "sales": {
+     "actual": 167329,
+     "budget": null
+    },
+    "labour": {
+     "pct": 21.4,
+     "budgetPct": null
+    },
+    "policies": 94.3,
+    "comms": 64.1,
+    "training": 84.7
    }
   }
  }

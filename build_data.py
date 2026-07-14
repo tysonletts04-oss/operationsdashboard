@@ -51,9 +51,8 @@ import sys
 SNAPSHOT = {
     "reportDate": "2026-07-07",          # last complete trading day (offline reference)
     "dailyDate":  "2026-07-07",
-    "weekStart":  "2026-07-06",          # Monday of the report week
+    "weekStart":  "2026-07-06",          # Monday of the report week (also the reviews week start)
     "monthStart": "2026-07-01",
-    "weekAgo":    "2026-07-01",          # trailing-7-days start (reviews)
     "windows": "daily = 7 Jul · WTD = 6–7 Jul · MTD = 1–7 Jul",
 }
 
@@ -78,12 +77,12 @@ SOURCE_STATUS = {
 VENUES = [
     # display            sales_store             celsi/xero  opcentral_wp          labour_venue
     ("George St",        "Yo-Chi George St",     "GEOR",     "George Street",      "Yo-Chi George St"),
-    ("Erina Fair",       "Yo-Chi Erina Fair",    "ERIN",     "Erina Fair",         None),
+    ("Erina Fair",       "Yo-Chi Erina Fair",    "F.ERIN",   "Erina Fair",         None),
     ("Barangaroo",       "Yo-Chi Barangaroo",    "BARA",     "Barangaroo",         "Yo-Chi Barangaroo"),
-    ("Wollongong",       "Yo-Chi Wollongong",    "WOLL",     "Wollongong",         None),
-    ("Charlestown",      "Yo-Chi Charlestown",   "CHAR",     "Charlestown Square", None),
+    ("Wollongong",       "Yo-Chi Wollongong",    "F.WOLL",   "Wollongong",         None),
+    ("Charlestown",      "Yo-Chi Charlestown",   "F.CSQU",   "Charlestown Square", None),
     ("Rouse Hill",       "Yo-Chi Rouse Hill",    "ROUS",     "Rouse Hill",         None),
-    ("Circular Quay",    "Yo-Chi Circular Quay", "CIRC",     "Circular Quay",      None),
+    ("Circular Quay",    "Yo-Chi Circular Quay", "CRLQ",     "Circular Quay",      None),
     ("Macquarie",        "Yo-Chi Macquarie",     "MACQ",     "Macquarie Park",     None),
     ("Castle Towers",    "Yo-Chi Castle Towers", "CAST",     "Castle Towers",      None),
     ("Burwood",          "Yo-Chi Burwood",       "BURW",     "Burwood",            None),
@@ -100,6 +99,11 @@ VENUES = [
     ("Bondi Junction",   "Yo-Chi Bondi Junction","BNDJ",     "Bondi Junction",     "Yo-Chi Bondi Junction"),
     ("Lane Cove",        "Yo-Chi Lane Cove",     "LANE",     "Lane Cove",          None),
     ("Double Bay",       "Yo-Chi Double Bay",    "DOUB",     "Double Bay",         "Yo-Chi Double Bay"),
+    # Newly-onboarded NSW venues (added Jul 2026).
+    ("Chippendale",      "Yo-Chi Chippendale",   "CHIP",     "Chippendale",        None),
+    ("Crows Nest",       "Yo-Chi Crows Nest",    "CN",       "Crows Nest",         None),
+    ("Fish Market",      "Yo-Chi Fish Market",   "FISH",     "Fish Market",        None),
+    ("Green Hills",      "Yo-Chi Greenhills",    "F.GREE",   "Greenhills",         "Yo-Chi Greenhills"),
 ]
 
 # ---------------------------------------------------------------------------
@@ -117,28 +121,36 @@ SQL = {
         GROUP BY s.TxnDate
         HAVING COUNT(DISTINCT s.StoreName) >= 18
         ORDER BY s.TxnDate DESC""",
+    # Net sales per store, keyed by StoreName only. The VENUES table below is the
+    # authoritative NSW allow-list (live_extract picks the stores it needs), so we don't
+    # depend on Venue_Master.Reporting here — that flag isn't set for newly-onboarded
+    # venues (Chippendale, Crows Nest, Fish Market, Green Hills), which would otherwise
+    # be silently dropped. The query returns every store; live_extract keeps ours.
     "sales": """
-        SELECT vm.Name venue, s.StoreName store,
+        SELECT s.StoreName store,
           SUM(CASE WHEN s.TxnDate = :dailyDate THEN s.NetSales ELSE 0 END) d,
           SUM(CASE WHEN s.TxnDate >= :weekStart AND s.TxnDate <= :dailyDate THEN s.NetSales ELSE 0 END) w,
           SUM(CASE WHEN s.TxnDate >= :monthStart AND s.TxnDate <= :dailyDate THEN s.NetSales ELSE 0 END) m
         FROM PolygonRedcatNetSalesByStoreDailyView s
-        JOIN Venue_Master vm ON vm.Store = s.StoreName
-        WHERE vm.State = '2. NSW' AND vm.Reporting = 'Yes'
-        GROUP BY vm.Name, s.StoreName""",
-    # Reviews: a true trailing 7 days (weekly metric, stable across the month).
+        GROUP BY s.StoreName""",
+    # Reviews: count published from the Monday of the current calendar week through the
+    # report day (calendar-week-to-date). Venues are KPI'd on Google Reviews per calendar
+    # week (Mon–Sun), so this resets each Monday rather than being a rolling 7-day figure.
     "reviews": """
         SELECT LTRIM(RTRIM(location_name)) suburb,
-          SUM(CASE WHEN CAST(published_on AS date) >= :weekAgo
-                    AND CAST(published_on AS date) <= :dailyDate THEN 1 ELSE 0 END) trailing_week
+          SUM(CASE WHEN CAST(published_on AS date) >= :weekStart
+                    AND CAST(published_on AS date) <= :dailyDate THEN 1 ELSE 0 END) week_count
         FROM ReviewTrackersReviews
         WHERE location_state IN ('New South Wales','NSW')
         GROUP BY LTRIM(RTRIM(location_name))""",
     # Celsi is weekly-bucketed by Date. Anchor to the latest COMPLETE week bucket
     # (>=70% of the busiest recent week's checks) so the current in-progress week
     # doesn't undercount. daily = week/7; calibrations/correctiveA = that week.
+    # Venue codes vary in length ("GEOR", "CN", "F.WOLL"), so extract everything
+    # between '[' and '.NSW]' rather than a fixed 4 chars (a fixed slice mangled
+    # codes like CN/F.WOLL/CRLQ and dropped those venues' food-safety data).
     "celsi": """
-        SELECT SUBSTRING(Venue, CHARINDEX('[',Venue)+1, 4) code,
+        SELECT SUBSTRING(Venue, CHARINDEX('[',Venue)+1, CHARINDEX('.NSW]',Venue)-CHARINDEX('[',Venue)-1) code,
           SUM(CASE WHEN RecordType='TempCheck' THEN 1 ELSE 0 END) temp_week,
           SUM(CASE WHEN RecordType IN ('HopperCalibration','ProbeCalibration') THEN 1 ELSE 0 END) calib,
           SUM(CASE WHEN RecordType='CorrectiveAction' THEN 1 ELSE 0 END) ca,
@@ -154,7 +166,7 @@ SQL = {
               AND CAST(Date AS date) BETWEEN DATEADD(day,-60,:dailyDate) AND :dailyDate
             GROUP BY CAST(Date AS date)) t)
           ORDER BY d DESC)
-        GROUP BY SUBSTRING(Venue, CHARINDEX('[',Venue)+1, 4)""",
+        GROUP BY SUBSTRING(Venue, CHARINDEX('[',Venue)+1, CHARINDEX('.NSW]',Venue)-CHARINDEX('[',Venue)-1)""",
     # Labour: de-dupe exact-duplicate rows, then cost / net sales. HQ-dump venues
     # (hundreds of "employees") are excluded by the sanity gate downstream.
     "labour": """
@@ -368,30 +380,35 @@ def datasights_query(sql, params):
 _N = None
 # tuple: (sales_d, sales_w, sales_m, ht_daily, ht_week, calib, correctiveA,
 #         reviews_week, labour_pct, policy_pct, comms_pct, training_pct)
+#         reviews_week is calendar-week-to-date (Mon 6 – Tue 7 Jul for this snapshot).
 FIXTURE = {
-    "George St":      (19777, 35286, 132139, 3, 21, "complete", "none", 17, 15.1, 95.5, 81.1, 83.7),
-    "Erina Fair":     (15213, 30367, 108145, 3, 20, "complete", "none",  5,  _N, 92.7, 73.1, 84.1),
-    "Barangaroo":     (11015, 20588, 100751, 3, 21, "complete", "none", 16, 14.7, 95.2, 77.9, 77.5),
-    "Wollongong":     (12965, 24679,  97415, 3, 20, "complete", "none",  3,  _N, 95.0, 75.6, 79.9),
-    "Charlestown":    (13915, 27230,  96458, 3, 21, "complete", "none",  2,  _N, 93.3, 78.6, 88.6),
-    "Rouse Hill":     (12293, 22304,  93015, 3, 20, "complete", "none",  4,  _N, 97.3, 87.3, 92.0),
-    "Circular Quay":  (11186, 20497,  86270, 3, 24, "complete", "none", 12,  _N, 95.1, 75.4, 79.8),
-    "Macquarie":      (12222, 23603,  82619, 3, 20, "complete", "none",  5,  _N, 94.4, 77.3, 83.5),
-    "Castle Towers":  (11343, 20641,  82478, 3, 19, "complete", "ok",    8,  _N, 93.9, 77.3, 87.3),
-    "Burwood":        ( 9642, 19396,  78495, 4, 26, "complete", "none", 13,  _N, 98.1, 86.8, 87.2),
-    "Penrith":        ( 9889, 18814,  74877, 3, 20, "complete", "none",  1,  _N, 98.3, 82.9, 92.1),
-    "Manly":          ( 8658, 16555,  73836, 3, 21, "complete", "none",  9,  _N, 92.8, 68.3, 77.0),
-    "Chatswood":      ( 8697, 15954,  69139, 3, 20, "missed",   "none",  8, 12.4, 91.1, 67.2, 78.4),
-    "Cronulla":       ( 7374, 13486,  66725, 3, 21, "complete", "none",  7, 13.4, 97.2, 80.2, 85.2),
-    "Newtown":        ( 7505, 14302,  63813, 4, 26, "complete", "none", 26, 18.3, 92.4, 71.3, 85.0),
-    "Bondi":          ( 5646, 10541,  55241, 3, 20, "complete", "none",  9, 19.9, 87.1, 51.7, 65.3),
-    "Coogee":         ( 5286, 10013,  52745, 3, 20, "complete", "none", 10, 17.9, 95.9, 80.1, 92.4),
-    "Surry Hills":    ( 4955,  9242,  51564, 4, 26, "complete", "none",  5,  _N, 87.7, 69.7, 80.7),
-    "Top Ryde":       ( 5141,  8985,  40010, 3, 20, "complete", "none",  5, 49.5, 97.1, 82.3, 89.1),
+    "George St":      (19777, 35286, 132139, 3, 21, "complete", "none",  6, 15.1, 95.5, 81.1, 83.7),
+    "Erina Fair":     (15213, 30367, 108145, 3, 20, "complete", "none",  0,  _N, 92.7, 73.1, 84.1),
+    "Barangaroo":     (11015, 20588, 100751, 3, 21, "complete", "none",  0, 14.7, 95.2, 77.9, 77.5),
+    "Wollongong":     (12965, 24679,  97415, 3, 20, "complete", "none",  1,  _N, 95.0, 75.6, 79.9),
+    "Charlestown":    (13915, 27230,  96458, 3, 21, "complete", "none",  1,  _N, 93.3, 78.6, 88.6),
+    "Rouse Hill":     (12293, 22304,  93015, 3, 20, "complete", "none",  1,  _N, 97.3, 87.3, 92.0),
+    "Circular Quay":  (11186, 20497,  86270, 3, 24, "complete", "none",  1,  _N, 95.1, 75.4, 79.8),
+    "Macquarie":      (12222, 23603,  82619, 3, 20, "complete", "none",  0,  _N, 94.4, 77.3, 83.5),
+    "Castle Towers":  (11343, 20641,  82478, 3, 19, "complete", "ok",    0,  _N, 93.9, 77.3, 87.3),
+    "Burwood":        ( 9642, 19396,  78495, 4, 26, "complete", "none",  0,  _N, 98.1, 86.8, 87.2),
+    "Penrith":        ( 9889, 18814,  74877, 3, 20, "complete", "none",  0,  _N, 98.3, 82.9, 92.1),
+    "Manly":          ( 8658, 16555,  73836, 3, 21, "complete", "none",  1,  _N, 92.8, 68.3, 77.0),
+    "Chatswood":      ( 8697, 15954,  69139, 3, 20, "missed",   "none",  1, 12.4, 91.1, 67.2, 78.4),
+    "Cronulla":       ( 7374, 13486,  66725, 3, 21, "complete", "none",  0, 13.4, 97.2, 80.2, 85.2),
+    "Newtown":        ( 7505, 14302,  63813, 4, 26, "complete", "none", 13, 18.3, 92.4, 71.3, 85.0),
+    "Bondi":          ( 5646, 10541,  55241, 3, 20, "complete", "none",  0, 19.9, 87.1, 51.7, 65.3),
+    "Coogee":         ( 5286, 10013,  52745, 3, 20, "complete", "none",  3, 17.9, 95.9, 80.1, 92.4),
+    "Surry Hills":    ( 4955,  9242,  51564, 4, 26, "complete", "none",  2,  _N, 87.7, 69.7, 80.7),
+    "Top Ryde":       ( 5141,  8985,  40010, 3, 20, "complete", "none",  3, 49.5, 97.1, 82.3, 89.1),
     "Randwick":       ( 4472,  8223,  38275, 4, 26, "complete", "none",  0,  _N, 87.5, 77.6, 67.9),
-    "Bondi Junction": ( 4759,  8909,  36889, 3, 21, "complete", "none", 17, 19.6, 94.1, 77.0, 87.0),
-    "Lane Cove":      ( 3527,  6349,  30458, 3, 20, "complete", "none",  0,  _N, 91.3, 63.5, 76.2),
-    "Double Bay":     ( 3404,  6494,  29482, 2, 17, "complete", "none",  6, 15.1, 86.2, 43.5, 71.4),
+    "Bondi Junction": ( 4759,  8909,  36889, 3, 21, "complete", "none",  7, 19.6, 94.1, 77.0, 87.0),
+    "Lane Cove":      ( 3527,  6349,  30458, 3, 20, "complete", "none",  2,  _N, 91.3, 63.5, 76.2),
+    "Double Bay":     ( 3404,  6494,  29482, 2, 17, "complete", "none",  2, 15.1, 86.2, 43.5, 71.4),
+    "Chippendale":    ( 4844,  8892,  31227, 4, 25, "complete", "none",  0,  _N, 95.5, 76.2, 72.2),
+    "Crows Nest":     ( 4616,  8447,  42854, 3, 21, "missed",   "none",  1,  _N, 93.1, 72.0, 77.4),
+    "Fish Market":    ( 3844,  7193,  30308, 3, 24, "complete", "none",  0,  _N, 84.1, 39.0, 61.2),
+    "Green Hills":    (12764, 25154,  95969, 3, 18, "complete", "none",  1, 20.9, 94.3, 64.1, 84.7),
 }
 
 
@@ -468,7 +485,8 @@ def _index(rows, key):
 
 
 # Reviews name a few venues differently from their display name.
-REVIEW_ALIAS = {"George St": "George Street", "Rouse Hill": "Rouse Hill Town Centre"}
+REVIEW_ALIAS = {"George St": "George Street", "Rouse Hill": "Rouse Hill Town Centre",
+                "Green Hills": "Greenhills"}
 
 
 def resolve_snapshot():
@@ -482,20 +500,19 @@ def resolve_snapshot():
     d = _dt.date.fromisoformat(anchor)
     month_start = d.replace(day=1)
     week_start = d - _dt.timedelta(days=d.weekday())      # Monday of the report week
-    week_ago = d - _dt.timedelta(days=6)                  # trailing 7 days (inclusive)
     ws = f"{week_start.day} {week_start:%b}" if week_start.month != d.month else f"{week_start.day}"
     windows = f"daily = {d.day} {d:%b} · WTD = {ws}–{d.day} {d:%b} · MTD = 1–{d.day} {d:%b}"
     return {
         "reportDate": anchor, "dailyDate": anchor,
         "weekStart": week_start.isoformat(), "monthStart": month_start.isoformat(),
-        "weekAgo": week_ago.isoformat(), "windows": windows,
+        "windows": windows,
     }
 
 
 def live_extract(snap):
     """Query DataSights live and shape the results into the FIXTURE tuple form,
     applying the same normalisation the offline snapshot encodes."""
-    p = {k: snap[k] for k in ("dailyDate", "weekStart", "monthStart", "weekAgo")}
+    p = {k: snap[k] for k in ("dailyDate", "weekStart", "monthStart")}
     sales_by_store = _index(datasights_query(SQL["sales"], p), "store")
     reviews_by_sub = _index(datasights_query(SQL["reviews"], p), "suburb")
     celsi_by_code  = _index(datasights_query(SQL["celsi"], p), "code")
@@ -521,7 +538,7 @@ def live_extract(snap):
         correctiveA = "issue" if ca_fail > 0 else ("ok" if ca_n > 0 else "none")
 
         rv = reviews_by_sub.get(REVIEW_ALIAS.get(display, display))
-        reviews_week = int(_num(rv["trailing_week"])) if rv else 0
+        reviews_week = int(_num(rv["week_count"])) if rv else 0
 
         # Labour %: cost / net sales, with the HQ-dump + plausibility guards.
         labour_pct = None
