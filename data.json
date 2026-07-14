@@ -1,19 +1,19 @@
 {
  "meta": {
   "reportDate": "2026-07-13",
-  "generatedAt": "2026-07-14T19:25:12+00:00",
+  "generatedAt": "2026-07-14T22:30:10+00:00",
   "windows": "daily = 13 Jul · WTD = 13–13 Jul · MTD = 1–13 Jul",
   "venues": 27,
   "sources": {
    "Sales": "snapshot",
    "Review Tracker": "snapshot",
    "Celsi": "snapshot",
-   "Tanda": "partial",
+   "Tanda": "snapshot",
    "Chi Central": "snapshot",
    "Restoke": "nosource"
   },
   "coverage": {
-   "labour": "10/27",
+   "labour": "23/27",
    "policies": "27/27",
    "comms": "27/27",
    "training": "27/27"
@@ -31,7 +31,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.0,
+     "pct": 15.8,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -61,7 +61,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 96.3,
@@ -103,6 +103,10 @@
      "actual": 12222,
      "budget": null
     },
+    "labour": {
+     "pct": 14.1,
+     "budgetPct": null
+    },
     "policies": 97.2,
     "comms": 87.6,
     "training": 92.9
@@ -115,6 +119,10 @@
     "sales": {
      "actual": 11766,
      "budget": null
+    },
+    "labour": {
+     "pct": 14.9,
+     "budgetPct": null
     },
     "policies": 95.3,
     "comms": 76.8,
@@ -129,6 +137,10 @@
      "actual": 10563,
      "budget": null
     },
+    "labour": {
+     "pct": 14.0,
+     "budgetPct": null
+    },
     "policies": 98.0,
     "comms": 79.2,
     "training": 83.9
@@ -141,6 +153,10 @@
     "sales": {
      "actual": 10440,
      "budget": null
+    },
+    "labour": {
+     "pct": 14.8,
+     "budgetPct": null
     },
     "policies": 96.6,
     "comms": 79.5,
@@ -155,6 +171,10 @@
      "actual": 9993,
      "budget": null
     },
+    "labour": {
+     "pct": 15.7,
+     "budgetPct": null
+    },
     "policies": 98.0,
     "comms": 87.9,
     "training": 87.4
@@ -168,6 +188,10 @@
      "actual": 10992,
      "budget": null
     },
+    "labour": {
+     "pct": 14.6,
+     "budgetPct": null
+    },
     "policies": 98.1,
     "comms": 84.1,
     "training": 92.1
@@ -180,6 +204,10 @@
     "sales": {
      "actual": 12454,
      "budget": null
+    },
+    "labour": {
+     "pct": 14.9,
+     "budgetPct": null
     },
     "policies": 94.8,
     "comms": 71.4,
@@ -195,7 +223,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 16.2,
      "budgetPct": null
     },
     "policies": 90.7,
@@ -212,7 +240,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.2,
+     "pct": 16.7,
      "budgetPct": null
     },
     "policies": 97.6,
@@ -229,7 +257,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 17.3,
+     "pct": 18.8,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -246,7 +274,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 22.7,
+     "pct": 18.3,
      "budgetPct": null
     },
     "policies": 88.5,
@@ -263,7 +291,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.8,
+     "pct": 19.4,
      "budgetPct": null
     },
     "policies": 88.8,
@@ -279,6 +307,10 @@
      "actual": 5916,
      "budget": null
     },
+    "labour": {
+     "pct": 20.2,
+     "budgetPct": null
+    },
     "policies": 90.8,
     "comms": 74.6,
     "training": 81.6
@@ -292,6 +324,10 @@
      "actual": 4594,
      "budget": null
     },
+    "labour": {
+     "pct": 18.2,
+     "budgetPct": null
+    },
     "policies": 97.1,
     "comms": 84.3,
     "training": 89.7
@@ -304,6 +340,10 @@
     "sales": {
      "actual": 3967,
      "budget": null
+    },
+    "labour": {
+     "pct": 19.7,
+     "budgetPct": null
     },
     "policies": 88.0,
     "comms": 77.6,
@@ -319,7 +359,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 22.0,
+     "pct": 17.8,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -335,6 +375,10 @@
      "actual": 4193,
      "budget": null
     },
+    "labour": {
+     "pct": 23.7,
+     "budgetPct": null
+    },
     "policies": 93.0,
     "comms": 65.9,
     "training": 77.6
@@ -349,7 +393,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 20.8,
      "budgetPct": null
     },
     "policies": 88.1,
@@ -365,6 +409,10 @@
      "actual": 4448,
      "budget": null
     },
+    "labour": {
+     "pct": 19.2,
+     "budgetPct": null
+    },
     "policies": 95.5,
     "comms": 76.2,
     "training": 72.2
@@ -377,6 +425,10 @@
     "sales": {
      "actual": 4653,
      "budget": null
+    },
+    "labour": {
+     "pct": 18.9,
+     "budgetPct": null
     },
     "policies": 92.9,
     "comms": 72.3,
@@ -391,6 +443,10 @@
      "actual": 3514,
      "budget": null
     },
+    "labour": {
+     "pct": 24.1,
+     "budgetPct": null
+    },
     "policies": 85.7,
     "comms": 40.0,
     "training": 60.6
@@ -403,10 +459,6 @@
     "sales": {
      "actual": 11027,
      "budget": null
-    },
-    "labour": {
-     "pct": 21.3,
-     "budgetPct": null
     },
     "policies": 93.8,
     "comms": 64.1,
@@ -424,7 +476,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.0,
+     "pct": 15.8,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -454,7 +506,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 96.3,
@@ -496,6 +548,10 @@
      "actual": 12222,
      "budget": null
     },
+    "labour": {
+     "pct": 14.1,
+     "budgetPct": null
+    },
     "policies": 97.2,
     "comms": 87.6,
     "training": 92.9
@@ -508,6 +564,10 @@
     "sales": {
      "actual": 11766,
      "budget": null
+    },
+    "labour": {
+     "pct": 14.9,
+     "budgetPct": null
     },
     "policies": 95.3,
     "comms": 76.8,
@@ -522,6 +582,10 @@
      "actual": 10563,
      "budget": null
     },
+    "labour": {
+     "pct": 14.0,
+     "budgetPct": null
+    },
     "policies": 98.0,
     "comms": 79.2,
     "training": 83.9
@@ -534,6 +598,10 @@
     "sales": {
      "actual": 10440,
      "budget": null
+    },
+    "labour": {
+     "pct": 14.8,
+     "budgetPct": null
     },
     "policies": 96.6,
     "comms": 79.5,
@@ -548,6 +616,10 @@
      "actual": 9993,
      "budget": null
     },
+    "labour": {
+     "pct": 15.7,
+     "budgetPct": null
+    },
     "policies": 98.0,
     "comms": 87.9,
     "training": 87.4
@@ -561,6 +633,10 @@
      "actual": 10992,
      "budget": null
     },
+    "labour": {
+     "pct": 14.6,
+     "budgetPct": null
+    },
     "policies": 98.1,
     "comms": 84.1,
     "training": 92.1
@@ -573,6 +649,10 @@
     "sales": {
      "actual": 12454,
      "budget": null
+    },
+    "labour": {
+     "pct": 14.9,
+     "budgetPct": null
     },
     "policies": 94.8,
     "comms": 71.4,
@@ -588,7 +668,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 16.2,
      "budgetPct": null
     },
     "policies": 90.7,
@@ -605,7 +685,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.2,
+     "pct": 16.7,
      "budgetPct": null
     },
     "policies": 97.6,
@@ -622,7 +702,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 17.3,
+     "pct": 18.8,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -639,7 +719,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 22.7,
+     "pct": 18.3,
      "budgetPct": null
     },
     "policies": 88.5,
@@ -656,7 +736,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.8,
+     "pct": 19.4,
      "budgetPct": null
     },
     "policies": 88.8,
@@ -672,6 +752,10 @@
      "actual": 5916,
      "budget": null
     },
+    "labour": {
+     "pct": 20.2,
+     "budgetPct": null
+    },
     "policies": 90.8,
     "comms": 74.6,
     "training": 81.6
@@ -685,6 +769,10 @@
      "actual": 4594,
      "budget": null
     },
+    "labour": {
+     "pct": 18.2,
+     "budgetPct": null
+    },
     "policies": 97.1,
     "comms": 84.3,
     "training": 89.7
@@ -697,6 +785,10 @@
     "sales": {
      "actual": 3967,
      "budget": null
+    },
+    "labour": {
+     "pct": 19.7,
+     "budgetPct": null
     },
     "policies": 88.0,
     "comms": 77.6,
@@ -712,7 +804,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 22.0,
+     "pct": 17.8,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -728,6 +820,10 @@
      "actual": 4193,
      "budget": null
     },
+    "labour": {
+     "pct": 23.7,
+     "budgetPct": null
+    },
     "policies": 93.0,
     "comms": 65.9,
     "training": 77.6
@@ -742,7 +838,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 20.8,
      "budgetPct": null
     },
     "policies": 88.1,
@@ -758,6 +854,10 @@
      "actual": 4448,
      "budget": null
     },
+    "labour": {
+     "pct": 19.2,
+     "budgetPct": null
+    },
     "policies": 95.5,
     "comms": 76.2,
     "training": 72.2
@@ -770,6 +870,10 @@
     "sales": {
      "actual": 4653,
      "budget": null
+    },
+    "labour": {
+     "pct": 18.9,
+     "budgetPct": null
     },
     "policies": 92.9,
     "comms": 72.3,
@@ -784,6 +888,10 @@
      "actual": 3514,
      "budget": null
     },
+    "labour": {
+     "pct": 24.1,
+     "budgetPct": null
+    },
     "policies": 85.7,
     "comms": 40.0,
     "training": 60.6
@@ -796,10 +904,6 @@
     "sales": {
      "actual": 11027,
      "budget": null
-    },
-    "labour": {
-     "pct": 21.3,
-     "budgetPct": null
     },
     "policies": 93.8,
     "comms": 64.1,
@@ -817,7 +921,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.0,
+     "pct": 15.8,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -847,7 +951,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 96.3,
@@ -889,6 +993,10 @@
      "actual": 176300,
      "budget": null
     },
+    "labour": {
+     "pct": 14.1,
+     "budgetPct": null
+    },
     "policies": 97.2,
     "comms": 87.6,
     "training": 92.9
@@ -901,6 +1009,10 @@
     "sales": {
      "actual": 160477,
      "budget": null
+    },
+    "labour": {
+     "pct": 14.9,
+     "budgetPct": null
     },
     "policies": 95.3,
     "comms": 76.8,
@@ -915,6 +1027,10 @@
      "actual": 154533,
      "budget": null
     },
+    "labour": {
+     "pct": 14.0,
+     "budgetPct": null
+    },
     "policies": 98.0,
     "comms": 79.2,
     "training": 83.9
@@ -927,6 +1043,10 @@
     "sales": {
      "actual": 159519,
      "budget": null
+    },
+    "labour": {
+     "pct": 14.8,
+     "budgetPct": null
     },
     "policies": 96.6,
     "comms": 79.5,
@@ -941,6 +1061,10 @@
      "actual": 147856,
      "budget": null
     },
+    "labour": {
+     "pct": 15.7,
+     "budgetPct": null
+    },
     "policies": 98.0,
     "comms": 87.9,
     "training": 87.4
@@ -954,6 +1078,10 @@
      "actual": 144258,
      "budget": null
     },
+    "labour": {
+     "pct": 14.6,
+     "budgetPct": null
+    },
     "policies": 98.1,
     "comms": 84.1,
     "training": 92.1
@@ -966,6 +1094,10 @@
     "sales": {
      "actual": 144139,
      "budget": null
+    },
+    "labour": {
+     "pct": 14.9,
+     "budgetPct": null
     },
     "policies": 94.8,
     "comms": 71.4,
@@ -981,7 +1113,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 16.2,
      "budgetPct": null
     },
     "policies": 90.7,
@@ -998,7 +1130,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.2,
+     "pct": 16.7,
      "budgetPct": null
     },
     "policies": 97.6,
@@ -1015,7 +1147,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 17.3,
+     "pct": 18.8,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -1032,7 +1164,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 22.7,
+     "pct": 18.3,
      "budgetPct": null
     },
     "policies": 88.5,
@@ -1049,7 +1181,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.8,
+     "pct": 19.4,
      "budgetPct": null
     },
     "policies": 88.8,
@@ -1065,6 +1197,10 @@
      "actual": 94464,
      "budget": null
     },
+    "labour": {
+     "pct": 20.2,
+     "budgetPct": null
+    },
     "policies": 90.8,
     "comms": 74.6,
     "training": 81.6
@@ -1078,6 +1214,10 @@
      "actual": 74133,
      "budget": null
     },
+    "labour": {
+     "pct": 18.2,
+     "budgetPct": null
+    },
     "policies": 97.1,
     "comms": 84.3,
     "training": 89.7
@@ -1090,6 +1230,10 @@
     "sales": {
      "actual": 67451,
      "budget": null
+    },
+    "labour": {
+     "pct": 19.7,
+     "budgetPct": null
     },
     "policies": 88.0,
     "comms": 77.6,
@@ -1105,7 +1249,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 22.0,
+     "pct": 17.8,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -1121,6 +1265,10 @@
      "actual": 57229,
      "budget": null
     },
+    "labour": {
+     "pct": 23.7,
+     "budgetPct": null
+    },
     "policies": 93.0,
     "comms": 65.9,
     "training": 77.6
@@ -1135,7 +1283,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 20.8,
      "budgetPct": null
     },
     "policies": 88.1,
@@ -1151,6 +1299,10 @@
      "actual": 61011,
      "budget": null
     },
+    "labour": {
+     "pct": 19.2,
+     "budgetPct": null
+    },
     "policies": 95.5,
     "comms": 76.2,
     "training": 72.2
@@ -1163,6 +1315,10 @@
     "sales": {
      "actual": 78757,
      "budget": null
+    },
+    "labour": {
+     "pct": 18.9,
+     "budgetPct": null
     },
     "policies": 92.9,
     "comms": 72.3,
@@ -1177,6 +1333,10 @@
      "actual": 59040,
      "budget": null
     },
+    "labour": {
+     "pct": 24.1,
+     "budgetPct": null
+    },
     "policies": 85.7,
     "comms": 40.0,
     "training": 60.6
@@ -1189,10 +1349,6 @@
     "sales": {
      "actual": 178356,
      "budget": null
-    },
-    "labour": {
-     "pct": 21.3,
-     "budgetPct": null
     },
     "policies": 93.8,
     "comms": 64.1,
