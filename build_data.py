@@ -10,8 +10,9 @@ normalises the results, validates them, and writes data.json. Run it on a
 schedule (see .github/workflows/refresh.yml) and the dashboard refreshes itself.
 
 The real IP is not the HTML — it's the normalisation logic below: the venue-name
-mapping across six systems, the labour de-duplication, the Celsi weekly-bucket
-handling, and the validation gates that stop bad data reaching the board.
+mapping across six systems, the Tanda department->location labour attribution, the
+Celsi weekly-bucket handling, and the validation gates that stop bad data reaching
+the board.
 
 RUNNING IT
 ----------
@@ -63,7 +64,7 @@ SOURCE_STATUS = {
     "Sales": "snapshot",
     "Review Tracker": "snapshot",
     "Celsi": "snapshot",
-    "Tanda": "partial",          # Labour % — clean for ~9 of 23 venues (Restoke attribution)
+    "Tanda": "snapshot",         # Labour % — real timesheet cost, all 23 company venues (franchises excl.)
     "Chi Central": "snapshot",   # policies + comms + training all live (23/23)
     "Restoke": "nosource",       # cake/litter/waste/delivery/open-close not exposed
 }
@@ -74,36 +75,40 @@ SOURCE_STATUS = {
 #    None where that system has no match (metric renders "—").
 #    (Codes match the [XXXX.NSW] suffix used by Celsi and the Xero Location tag.)
 # ---------------------------------------------------------------------------
+#    labour_venue = the Tanda *location* name (TandaLocations.name). Labour comes
+#    from Tanda timesheets now, so this is the join key into the labour query.
+#    Franchise venues (the four "F." Celsi codes) run their own payroll and are
+#    NOT in the company Tanda org, so they carry None and render labour as "—".
 VENUES = [
-    # display            sales_store             celsi/xero  opcentral_wp          labour_venue
-    ("George St",        "Yo-Chi George St",     "GEOR",     "George Street",      "Yo-Chi George St"),
-    ("Erina Fair",       "Yo-Chi Erina Fair",    "F.ERIN",   "Erina Fair",         None),
-    ("Barangaroo",       "Yo-Chi Barangaroo",    "BARA",     "Barangaroo",         "Yo-Chi Barangaroo"),
-    ("Wollongong",       "Yo-Chi Wollongong",    "F.WOLL",   "Wollongong",         None),
-    ("Charlestown",      "Yo-Chi Charlestown",   "F.CSQU",   "Charlestown Square", None),
-    ("Rouse Hill",       "Yo-Chi Rouse Hill",    "ROUS",     "Rouse Hill",         None),
-    ("Circular Quay",    "Yo-Chi Circular Quay", "CRLQ",     "Circular Quay",      None),
-    ("Macquarie",        "Yo-Chi Macquarie",     "MACQ",     "Macquarie Park",     None),
-    ("Castle Towers",    "Yo-Chi Castle Towers", "CAST",     "Castle Towers",      None),
-    ("Burwood",          "Yo-Chi Burwood",       "BURW",     "Burwood",            None),
-    ("Penrith",          "Yo-Chi Penrith",       "PENR",     "Penrith",            None),
-    ("Manly",            "Yo-Chi Manly",         "MANL",     "Manly",              None),
-    ("Chatswood",        "Yo-Chi Chatswood",     "CHAT",     "Chatswood",          "Yo-Chi Chatswood"),
-    ("Cronulla",         "Yo-Chi Cronulla",      "CRON",     "Cronulla",           "Yo-Chi Cronulla"),
-    ("Newtown",          "Yo-Chi Newtown",       "NEWT",     "Newtown",            "Yo-Chi Newtown [ETC HQ]"),
-    ("Bondi",            "Yo-Chi Bondi",         "BOND",     "Bondi",              "Yo-Chi Bondi"),
-    ("Coogee",           "Yo-Chi Coogee",        "COOG",     "Coogee",             "Yo-Chi Coogee"),
-    ("Surry Hills",      "Yo-Chi Surry Hills",   "SURR",     "Surry Hills",        None),
-    ("Top Ryde",         "Yo-Chi Top Ryde",      "TOPR",     "Top Ryde",           "Yo-Chi Top Ryde"),
-    ("Randwick",         "Yo-Chi Randwick",      "RAND",     "Randwick",           None),   # labour = HQ-dump, excluded
-    ("Bondi Junction",   "Yo-Chi Bondi Junction","BNDJ",     "Bondi Junction",     "Yo-Chi Bondi Junction"),
-    ("Lane Cove",        "Yo-Chi Lane Cove",     "LANE",     "Lane Cove",          None),
-    ("Double Bay",       "Yo-Chi Double Bay",    "DOUB",     "Double Bay",         "Yo-Chi Double Bay"),
+    # display            sales_store             celsi/xero  opcentral_wp          tanda_location
+    ("George St",        "Yo-Chi George St",     "GEOR",     "George Street",      "GeorgeST"),
+    ("Erina Fair",       "Yo-Chi Erina Fair",    "F.ERIN",   "Erina Fair",         None),          # franchise — not in Tanda
+    ("Barangaroo",       "Yo-Chi Barangaroo",    "BARA",     "Barangaroo",         "Barangaroo"),
+    ("Wollongong",       "Yo-Chi Wollongong",    "F.WOLL",   "Wollongong",         None),          # franchise — not in Tanda
+    ("Charlestown",      "Yo-Chi Charlestown",   "F.CSQU",   "Charlestown Square", None),          # franchise — not in Tanda
+    ("Rouse Hill",       "Yo-Chi Rouse Hill",    "ROUS",     "Rouse Hill",         "Rouse Hill"),
+    ("Circular Quay",    "Yo-Chi Circular Quay", "CRLQ",     "Circular Quay",      "Circular Quay"),
+    ("Macquarie",        "Yo-Chi Macquarie",     "MACQ",     "Macquarie Park",     "Macquarie Park"),
+    ("Castle Towers",    "Yo-Chi Castle Towers", "CAST",     "Castle Towers",      "Castle Towers"),
+    ("Burwood",          "Yo-Chi Burwood",       "BURW",     "Burwood",            "Burwood"),
+    ("Penrith",          "Yo-Chi Penrith",       "PENR",     "Penrith",            "Penrith"),
+    ("Manly",            "Yo-Chi Manly",         "MANL",     "Manly",              "Manly Yo-Chi"),
+    ("Chatswood",        "Yo-Chi Chatswood",     "CHAT",     "Chatswood",          "Chatswood"),
+    ("Cronulla",         "Yo-Chi Cronulla",      "CRON",     "Cronulla",           "Cronulla"),
+    ("Newtown",          "Yo-Chi Newtown",       "NEWT",     "Newtown",            "Newtown"),
+    ("Bondi",            "Yo-Chi Bondi",         "BOND",     "Bondi",              "Bondi"),
+    ("Coogee",           "Yo-Chi Coogee",        "COOG",     "Coogee",             "Coogee"),
+    ("Surry Hills",      "Yo-Chi Surry Hills",   "SURR",     "Surry Hills",        "Surry Hills"),
+    ("Top Ryde",         "Yo-Chi Top Ryde",      "TOPR",     "Top Ryde",           "Top Ryde"),
+    ("Randwick",         "Yo-Chi Randwick",      "RAND",     "Randwick",           "Randwick"),
+    ("Bondi Junction",   "Yo-Chi Bondi Junction","BNDJ",     "Bondi Junction",     "Bondi Junction"),
+    ("Lane Cove",        "Yo-Chi Lane Cove",     "LANE",     "Lane Cove",          "Lane Cove"),
+    ("Double Bay",       "Yo-Chi Double Bay",    "DOUB",     "Double Bay",         "Double Bay"),
     # Newly-onboarded NSW venues (added Jul 2026).
-    ("Chippendale",      "Yo-Chi Chippendale",   "CHIP",     "Chippendale",        None),
-    ("Crows Nest",       "Yo-Chi Crows Nest",    "CN",       "Crows Nest",         None),
-    ("Fish Market",      "Yo-Chi Fish Market",   "FISH",     "Fish Market",        None),
-    ("Green Hills",      "Yo-Chi Greenhills",    "F.GREE",   "Greenhills",         "Yo-Chi Greenhills"),
+    ("Chippendale",      "Yo-Chi Chippendale",   "CHIP",     "Chippendale",        "Chippendale"),
+    ("Crows Nest",       "Yo-Chi Crows Nest",    "CN",       "Crows Nest",         "Crows Nest"),
+    ("Fish Market",      "Yo-Chi Fish Market",   "FISH",     "Fish Market",        "Fish Market"),
+    ("Green Hills",      "Yo-Chi Greenhills",    "F.GREE",   "Greenhills",         None),          # franchise — not in Tanda
 ]
 
 # ---------------------------------------------------------------------------
@@ -167,13 +172,21 @@ SQL = {
             GROUP BY CAST(Date AS date)) t)
           ORDER BY d DESC)
         GROUP BY SUBSTRING(Venue, CHARINDEX('[',Venue)+1, CHARINDEX('.NSW]',Venue)-CHARINDEX('[',Venue)-1)""",
-    # Labour: de-dupe exact-duplicate rows, then cost / net sales. HQ-dump venues
-    # (hundreds of "employees") are excluded by the sanity gate downstream.
+    # Labour: actual timesheet cost per venue, straight from Tanda (the payroll/
+    # rostering system of record). A shift's department_id -> TandaTeams.team_id
+    # gives the team's location_id -> TandaLocations.name (the venue). 'cost' is the
+    # award-interpreted shift cost (award + allowances), so SUM(cost) is real spend.
+    # NSW only (public_holiday_regions carries the state); the shared Support Office
+    # ($0 shift cost, HQ) maps to no venue row and drops out. Restoke's dirty
+    # attribution and the de-dup/HQ-dump gymnastics are gone — Tanda is clean per venue.
     "labour": """
-        SELECT venue, SUM(total) labour_cost, COUNT(DISTINCT employee_name) emps
-        FROM (SELECT DISTINCT venue, date, employee_name, hours, rate, TRY_CAST(total AS float) total
-              FROM RestokeLaborCost WHERE date >= :monthStart AND date <= :dailyDate) x
-        WHERE venue LIKE '%Yo-Chi%' GROUP BY venue""",
+        SELECT loc.name venue, SUM(ts.cost) labour_cost, COUNT(DISTINCT ts.user_id) emps
+        FROM TandaTimesheetShifts ts
+        JOIN TandaTeams tm ON tm.team_id = ts.department_id
+        JOIN TandaLocations loc ON loc.location_id = tm.location_id
+        WHERE CAST(ts.date AS date) >= :monthStart AND CAST(ts.date AS date) <= :dailyDate
+          AND loc.public_holiday_regions LIKE '%au_nsw%'
+        GROUP BY loc.name""",
     "policies": """
         SELECT workplace_name, 100.0*SUM(CASE WHEN is_read=1 THEN 1 ELSE 0 END)/COUNT(*) read_pct
         FROM OpCentralPolicySignoffs GROUP BY workplace_name""",
@@ -382,33 +395,33 @@ _N = None
 #         reviews_week, labour_pct, policy_pct, comms_pct, training_pct)
 #         reviews_week is calendar-week-to-date (Mon 6 – Tue 7 Jul for this snapshot).
 FIXTURE = {
-    "George St":      (19777, 35286, 132139, 3, 21, "complete", "none",  6, 15.1, 95.5, 81.1, 83.7),
+    "George St":      (19777, 35286, 132139, 3, 21, "complete", "none",  6, 16.0, 95.5, 81.1, 83.7),
     "Erina Fair":     (15213, 30367, 108145, 3, 20, "complete", "none",  0,  _N, 92.7, 73.1, 84.1),
-    "Barangaroo":     (11015, 20588, 100751, 3, 21, "complete", "none",  0, 14.7, 95.2, 77.9, 77.5),
+    "Barangaroo":     (11015, 20588, 100751, 3, 21, "complete", "none",  0, 16.6, 95.2, 77.9, 77.5),
     "Wollongong":     (12965, 24679,  97415, 3, 20, "complete", "none",  1,  _N, 95.0, 75.6, 79.9),
     "Charlestown":    (13915, 27230,  96458, 3, 21, "complete", "none",  1,  _N, 93.3, 78.6, 88.6),
-    "Rouse Hill":     (12293, 22304,  93015, 3, 20, "complete", "none",  1,  _N, 97.3, 87.3, 92.0),
-    "Circular Quay":  (11186, 20497,  86270, 3, 24, "complete", "none",  1,  _N, 95.1, 75.4, 79.8),
-    "Macquarie":      (12222, 23603,  82619, 3, 20, "complete", "none",  0,  _N, 94.4, 77.3, 83.5),
-    "Castle Towers":  (11343, 20641,  82478, 3, 19, "complete", "ok",    0,  _N, 93.9, 77.3, 87.3),
-    "Burwood":        ( 9642, 19396,  78495, 4, 26, "complete", "none",  0,  _N, 98.1, 86.8, 87.2),
-    "Penrith":        ( 9889, 18814,  74877, 3, 20, "complete", "none",  0,  _N, 98.3, 82.9, 92.1),
-    "Manly":          ( 8658, 16555,  73836, 3, 21, "complete", "none",  1,  _N, 92.8, 68.3, 77.0),
-    "Chatswood":      ( 8697, 15954,  69139, 3, 20, "missed",   "none",  1, 12.4, 91.1, 67.2, 78.4),
-    "Cronulla":       ( 7374, 13486,  66725, 3, 21, "complete", "none",  0, 13.4, 97.2, 80.2, 85.2),
-    "Newtown":        ( 7505, 14302,  63813, 4, 26, "complete", "none", 13, 18.3, 92.4, 71.3, 85.0),
-    "Bondi":          ( 5646, 10541,  55241, 3, 20, "complete", "none",  0, 19.9, 87.1, 51.7, 65.3),
-    "Coogee":         ( 5286, 10013,  52745, 3, 20, "complete", "none",  3, 17.9, 95.9, 80.1, 92.4),
-    "Surry Hills":    ( 4955,  9242,  51564, 4, 26, "complete", "none",  2,  _N, 87.7, 69.7, 80.7),
-    "Top Ryde":       ( 5141,  8985,  40010, 3, 20, "complete", "none",  3, 49.5, 97.1, 82.3, 89.1),
-    "Randwick":       ( 4472,  8223,  38275, 4, 26, "complete", "none",  0,  _N, 87.5, 77.6, 67.9),
-    "Bondi Junction": ( 4759,  8909,  36889, 3, 21, "complete", "none",  7, 19.6, 94.1, 77.0, 87.0),
-    "Lane Cove":      ( 3527,  6349,  30458, 3, 20, "complete", "none",  2,  _N, 91.3, 63.5, 76.2),
-    "Double Bay":     ( 3404,  6494,  29482, 2, 17, "complete", "none",  2, 15.1, 86.2, 43.5, 71.4),
-    "Chippendale":    ( 4844,  8892,  31227, 4, 25, "complete", "none",  0,  _N, 95.5, 76.2, 72.2),
-    "Crows Nest":     ( 4616,  8447,  42854, 3, 21, "missed",   "none",  1,  _N, 93.1, 72.0, 77.4),
-    "Fish Market":    ( 3844,  7193,  30308, 3, 24, "complete", "none",  0,  _N, 84.1, 39.0, 61.2),
-    "Green Hills":    (12764, 25154,  95969, 3, 18, "complete", "none",  1, 20.9, 94.3, 64.1, 84.7),
+    "Rouse Hill":     (12293, 22304,  93015, 3, 20, "complete", "none",  1, 14.4, 97.3, 87.3, 92.0),
+    "Circular Quay":  (11186, 20497,  86270, 3, 24, "complete", "none",  1, 15.0, 95.1, 75.4, 79.8),
+    "Macquarie":      (12222, 23603,  82619, 3, 20, "complete", "none",  0, 13.0, 94.4, 77.3, 83.5),
+    "Castle Towers":  (11343, 20641,  82478, 3, 19, "complete", "ok",    0, 14.4, 93.9, 77.3, 87.3),
+    "Burwood":        ( 9642, 19396,  78495, 4, 26, "complete", "none",  0, 15.8, 98.1, 86.8, 87.2),
+    "Penrith":        ( 9889, 18814,  74877, 3, 20, "complete", "none",  0, 14.4, 98.3, 82.9, 92.1),
+    "Manly":          ( 8658, 16555,  73836, 3, 21, "complete", "none",  1, 16.6, 92.8, 68.3, 77.0),
+    "Chatswood":      ( 8697, 15954,  69139, 3, 20, "missed",   "none",  1, 15.5, 91.1, 67.2, 78.4),
+    "Cronulla":       ( 7374, 13486,  66725, 3, 21, "complete", "none",  0, 16.8, 97.2, 80.2, 85.2),
+    "Newtown":        ( 7505, 14302,  63813, 4, 26, "complete", "none", 13, 19.3, 92.4, 71.3, 85.0),
+    "Bondi":          ( 5646, 10541,  55241, 3, 20, "complete", "none",  0, 19.4, 87.1, 51.7, 65.3),
+    "Coogee":         ( 5286, 10013,  52745, 3, 20, "complete", "none",  3, 19.4, 95.9, 80.1, 92.4),
+    "Surry Hills":    ( 4955,  9242,  51564, 4, 26, "complete", "none",  2, 19.0, 87.7, 69.7, 80.7),
+    "Top Ryde":       ( 5141,  8985,  40010, 3, 20, "complete", "none",  3, 19.3, 97.1, 82.3, 89.1),
+    "Randwick":       ( 4472,  8223,  38275, 4, 26, "complete", "none",  0, 18.4, 87.5, 77.6, 67.9),
+    "Bondi Junction": ( 4759,  8909,  36889, 3, 21, "complete", "none",  7, 18.2, 94.1, 77.0, 87.0),
+    "Lane Cove":      ( 3527,  6349,  30458, 3, 20, "complete", "none",  2, 21.3, 91.3, 63.5, 76.2),
+    "Double Bay":     ( 3404,  6494,  29482, 2, 17, "complete", "none",  2, 20.0, 86.2, 43.5, 71.4),
+    "Chippendale":    ( 4844,  8892,  31227, 4, 25, "complete", "none",  0, 20.4, 95.5, 76.2, 72.2),
+    "Crows Nest":     ( 4616,  8447,  42854, 3, 21, "missed",   "none",  1, 19.7, 93.1, 72.0, 77.4),
+    "Fish Market":    ( 3844,  7193,  30308, 3, 24, "complete", "none",  0, 25.2, 84.1, 39.0, 61.2),
+    "Green Hills":    (12764, 25154,  95969, 3, 18, "complete", "none",  1,  _N, 94.3, 64.1, 84.7),
 }
 
 
@@ -540,11 +553,13 @@ def live_extract(snap):
         rv = reviews_by_sub.get(REVIEW_ALIAS.get(display, display))
         reviews_week = int(_num(rv["week_count"])) if rv else 0
 
-        # Labour %: cost / net sales, with the HQ-dump + plausibility guards.
+        # Labour %: Tanda timesheet cost / net sales (MTD), with a plausibility guard.
+        # Tanda attributes per venue cleanly, so no HQ-dump de-dup is needed; the
+        # 5-45% band only catches a divide-by-tiny-sales blip or a mapping slip.
         labour_pct = None
         if labour_venue:
             lr = labour_by_venue.get(labour_venue)
-            if lr and _num(lr.get("emps")) <= 120 and sm > 0:
+            if lr and sm > 0:
                 pct = round(100.0 * _num(lr.get("labour_cost")) / sm, 1)
                 if 5 <= pct <= 45:
                     labour_pct = pct

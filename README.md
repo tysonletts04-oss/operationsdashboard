@@ -41,7 +41,7 @@ Every metric had a trap that lives as documented logic in `build_data.py`:
 | Sales | Net sales (actual) | joins POS to `Venue_Master`; NSW = `State='2. NSW'` |
 | Review Tracker | Google Reviews | weekly metric; trailing-7-day count per venue |
 | Celsi | Hopper temps / calibrations / corrective | **weekly-bucketed** by `Date`; daily = week ÷ 7 |
-| Tanda | Labour % | Restoke labour cost ÷ net sales, **de-duplicated**; HQ-dump venues (100s of "staff") excluded by a sanity gate |
+| Tanda | Labour % | **Tanda timesheet cost** ÷ net sales (MTD); shift `department_id` → team → venue location. Franchise venues run own payroll (not in Tanda) → "—" |
 | Chi Central | Policy / comms read % | OpCentral sign-off completion rate (not raw unread counts) |
 
 **Held back on purpose:**
@@ -119,7 +119,8 @@ The site is a static folder — host it anywhere cheap:
 - **Provenance on the board** — the data-source strip shows each system as
   *Live · DataSights* / *partial* / *awaiting source*, and the header badge shows
   the snapshot date, so a stale or partial board is obvious.
-- **Coverage** is reported in `data.json` `meta.coverage` (e.g. labour `10/23`).
+- **Coverage** is reported in `data.json` `meta.coverage` (e.g. labour `23/27` —
+  all company venues; the four franchise venues aren't in the company Tanda org).
 
 ## Onboarding another venue or team
 

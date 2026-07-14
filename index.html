@@ -229,8 +229,8 @@
     <span><b>Sales, Google Reviews, Celsi food-safety, Chi&nbsp;Central and Labour&nbsp;%</b> are real
     data from <b>DataSights</b> (YoChi tenant), snapshot as at <b id="bannerDate">—</b> across <span id="bannerVenues">—</span> NSW venues.
     Chi&nbsp;Central shows policy sign-off, company-news <em>read rates</em> and <em>training completion</em> (OpCentral);
-    Labour&nbsp;% is Restoke labour cost ÷ net sales. Still <b>—</b>: Restoke daily checklists, Labour&nbsp;% for
-    the venues Restoke mis-attributes, and the Sales <em>budget</em> comparison (held back — the only Xero
+    Labour&nbsp;% is <b>Tanda</b> timesheet cost ÷ net sales. Still <b>—</b>: Restoke daily checklists, Labour&nbsp;% for
+    the franchise venues (own payroll, not in company Tanda), and the Sales <em>budget</em> comparison (held back — the only Xero
     budget is monthly to Jun&nbsp;2026 and its “Revenue” basis runs ~2× net POS sales, so a like-for-like
     comparison needs sign-off first). Windows: <span id="bannerWindows">daily = 7&nbsp;Jul · WTD = 6–7&nbsp;Jul · MTD = 1–7&nbsp;Jul</span>.</span>
   </div>
@@ -355,91 +355,91 @@ const SYSTEMS = [
  */
 let SAMPLE = {
   daily: {
-    "George St":         { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:12, sales:{actual:18069,budget:null}, labour:{pct:14.9,budgetPct:null}, policies:95.9, comms:83.3, training:83.7 },
+    "George St":         { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:12, sales:{actual:18069,budget:null}, labour:{pct:15.9,budgetPct:null}, policies:95.9, comms:83.3, training:83.7 },
     "Erina Fair":        { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:15191,budget:null}, policies:93.8, comms:76.0, training:87.1 },
-    "Barangaroo":        { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:3, sales:{actual:15394,budget:null}, labour:{pct:15.4,budgetPct:null}, policies:96.5, comms:83.0, training:78.7 },
+    "Barangaroo":        { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:3, sales:{actual:15394,budget:null}, labour:{pct:15.9,budgetPct:null}, policies:96.5, comms:83.0, training:78.7 },
     "Wollongong":        { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:15574,budget:null}, policies:95.4, comms:76.8, training:80.2 },
     "Charlestown":       { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:13464,budget:null}, policies:96.4, comms:83.8, training:91.0 },
-    "Rouse Hill":        { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:13310,budget:null}, policies:97.5, comms:87.6, training:92.9 },
-    "Circular Quay":     { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:6, sales:{actual:12220,budget:null}, policies:95.2, comms:76.8, training:77.3 },
-    "Macquarie":         { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:11, sales:{actual:11061,budget:null}, policies:98.2, comms:79.2, training:83.9 },
-    "Castle Towers":     { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:13484,budget:null}, policies:96.8, comms:79.5, training:88.3 },
-    "Burwood":           { hopperTemps:4, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:11754,budget:null}, policies:98.1, comms:87.9, training:87.2 },
-    "Penrith":           { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:11839,budget:null}, policies:98.3, comms:84.1, training:92.1 },
-    "Manly":             { hopperTemps:3, calibrations:"missed", correctiveA:"ok", reviews:6, sales:{actual:11889,budget:null}, policies:94.8, comms:71.1, training:77.0 },
-    "Chatswood":         { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:4, sales:{actual:8768,budget:null}, labour:{pct:12.9,budgetPct:null}, policies:89.1, comms:67.8, training:76.3 },
-    "Cronulla":          { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:11377,budget:null}, labour:{pct:13.0,budgetPct:null}, policies:97.6, comms:83.2, training:85.2 },
-    "Newtown":           { hopperTemps:4, calibrations:"complete", correctiveA:"none", reviews:18, sales:{actual:10492,budget:null}, labour:{pct:17.1,budgetPct:null}, policies:96.2, comms:77.1, training:84.6 },
-    "Bondi":             { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:10350,budget:null}, labour:{pct:24.8,budgetPct:null}, policies:88.6, comms:55.2, training:65.3 },
-    "Coogee":            { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:11059,budget:null}, labour:{pct:17.9,budgetPct:null}, policies:94.4, comms:80.4, training:92.8 },
-    "Surry Hills":       { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:4, sales:{actual:6959,budget:null}, policies:90.7, comms:74.6, training:81.1 },
-    "Top Ryde":          { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:8, sales:{actual:6502,budget:null}, policies:97.3, comms:84.3, training:89.3 },
-    "Randwick":          { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:5413,budget:null}, policies:87.5, comms:77.6, training:67.9 },
-    "Bondi Junction":    { hopperTemps:3, calibrations:"complete", correctiveA:"ok", reviews:16, sales:{actual:5085,budget:null}, labour:{pct:19.1,budgetPct:null}, policies:95.8, comms:80.7, training:87.0 },
-    "Lane Cove":         { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:3, sales:{actual:4308,budget:null}, policies:92.1, comms:65.1, training:77.2 },
-    "Double Bay":        { hopperTemps:3, calibrations:"missed", correctiveA:"none", reviews:3, sales:{actual:3900,budget:null}, labour:{pct:19.1,budgetPct:null}, policies:86.2, comms:45.7, training:71.4 },
-    "Chippendale":       { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:0, sales:{actual:3772,budget:null}, policies:95.5, comms:76.2, training:72.2 },
-    "Crows Nest":        { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:5252,budget:null}, policies:93.1, comms:72.0, training:77.4 },
-    "Fish Market":       { hopperTemps:4, calibrations:"complete", correctiveA:"none", reviews:8, sales:{actual:6762,budget:null}, policies:84.1, comms:39.0, training:61.2 },
-    "Green Hills":       { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:13105,budget:null}, labour:{pct:21.4,budgetPct:null}, policies:94.3, comms:64.1, training:84.7 },
+    "Rouse Hill":        { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:13310,budget:null}, labour:{pct:14.0,budgetPct:null}, policies:97.5, comms:87.6, training:92.9 },
+    "Circular Quay":     { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:6, sales:{actual:12220,budget:null}, labour:{pct:14.9,budgetPct:null}, policies:95.2, comms:76.8, training:77.3 },
+    "Macquarie":         { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:11, sales:{actual:11061,budget:null}, labour:{pct:13.8,budgetPct:null}, policies:98.2, comms:79.2, training:83.9 },
+    "Castle Towers":     { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:13484,budget:null}, labour:{pct:14.6,budgetPct:null}, policies:96.8, comms:79.5, training:88.3 },
+    "Burwood":           { hopperTemps:4, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:11754,budget:null}, labour:{pct:15.6,budgetPct:null}, policies:98.1, comms:87.9, training:87.2 },
+    "Penrith":           { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:11839,budget:null}, labour:{pct:14.6,budgetPct:null}, policies:98.3, comms:84.1, training:92.1 },
+    "Manly":             { hopperTemps:3, calibrations:"missed", correctiveA:"ok", reviews:6, sales:{actual:11889,budget:null}, labour:{pct:15.4,budgetPct:null}, policies:94.8, comms:71.1, training:77.0 },
+    "Chatswood":         { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:4, sales:{actual:8768,budget:null}, labour:{pct:16.1,budgetPct:null}, policies:89.1, comms:67.8, training:76.3 },
+    "Cronulla":          { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:11377,budget:null}, labour:{pct:16.6,budgetPct:null}, policies:97.6, comms:83.2, training:85.2 },
+    "Newtown":           { hopperTemps:4, calibrations:"complete", correctiveA:"none", reviews:18, sales:{actual:10492,budget:null}, labour:{pct:18.2,budgetPct:null}, policies:96.2, comms:77.1, training:84.6 },
+    "Bondi":             { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:10350,budget:null}, labour:{pct:18.3,budgetPct:null}, policies:88.6, comms:55.2, training:65.3 },
+    "Coogee":            { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:11059,budget:null}, labour:{pct:19.3,budgetPct:null}, policies:94.4, comms:80.4, training:92.8 },
+    "Surry Hills":       { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:4, sales:{actual:6959,budget:null}, labour:{pct:20.0,budgetPct:null}, policies:90.7, comms:74.6, training:81.1 },
+    "Top Ryde":          { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:8, sales:{actual:6502,budget:null}, labour:{pct:17.7,budgetPct:null}, policies:97.3, comms:84.3, training:89.3 },
+    "Randwick":          { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:5413,budget:null}, labour:{pct:19.2,budgetPct:null}, policies:87.5, comms:77.6, training:67.9 },
+    "Bondi Junction":    { hopperTemps:3, calibrations:"complete", correctiveA:"ok", reviews:16, sales:{actual:5085,budget:null}, labour:{pct:17.8,budgetPct:null}, policies:95.8, comms:80.7, training:87.0 },
+    "Lane Cove":         { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:3, sales:{actual:4308,budget:null}, labour:{pct:23.5,budgetPct:null}, policies:92.1, comms:65.1, training:77.2 },
+    "Double Bay":        { hopperTemps:3, calibrations:"missed", correctiveA:"none", reviews:3, sales:{actual:3900,budget:null}, labour:{pct:20.5,budgetPct:null}, policies:86.2, comms:45.7, training:71.4 },
+    "Chippendale":       { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:0, sales:{actual:3772,budget:null}, labour:{pct:19.2,budgetPct:null}, policies:95.5, comms:76.2, training:72.2 },
+    "Crows Nest":        { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:5252,budget:null}, labour:{pct:18.9,budgetPct:null}, policies:93.1, comms:72.0, training:77.4 },
+    "Fish Market":       { hopperTemps:4, calibrations:"complete", correctiveA:"none", reviews:8, sales:{actual:6762,budget:null}, labour:{pct:23.5,budgetPct:null}, policies:84.1, comms:39.0, training:61.2 },
+    "Green Hills":       { hopperTemps:3, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:13105,budget:null}, policies:94.3, comms:64.1, training:84.7 },
   },
   wtd: {
-    "George St":         { hopperTemps:19, calibrations:"complete", correctiveA:"none", reviews:12, sales:{actual:136730,budget:null}, labour:{pct:14.9,budgetPct:null}, policies:95.9, comms:83.3, training:83.7 },
+    "George St":         { hopperTemps:19, calibrations:"complete", correctiveA:"none", reviews:12, sales:{actual:136730,budget:null}, labour:{pct:15.9,budgetPct:null}, policies:95.9, comms:83.3, training:83.7 },
     "Erina Fair":        { hopperTemps:18, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:116600,budget:null}, policies:93.8, comms:76.0, training:87.1 },
-    "Barangaroo":        { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:3, sales:{actual:107648,budget:null}, labour:{pct:15.4,budgetPct:null}, policies:96.5, comms:83.0, training:78.7 },
+    "Barangaroo":        { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:3, sales:{actual:107648,budget:null}, labour:{pct:15.9,budgetPct:null}, policies:96.5, comms:83.0, training:78.7 },
     "Wollongong":        { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:105991,budget:null}, policies:95.4, comms:76.8, training:80.2 },
     "Charlestown":       { hopperTemps:18, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:104240,budget:null}, policies:96.4, comms:83.8, training:91.0 },
-    "Rouse Hill":        { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:93367,budget:null}, policies:97.5, comms:87.6, training:92.9 },
-    "Circular Quay":     { hopperTemps:24, calibrations:"complete", correctiveA:"none", reviews:6, sales:{actual:82938,budget:null}, policies:95.2, comms:76.8, training:77.3 },
-    "Macquarie":         { hopperTemps:18, calibrations:"complete", correctiveA:"none", reviews:11, sales:{actual:84955,budget:null}, policies:98.2, comms:79.2, training:83.9 },
-    "Castle Towers":     { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:87241,budget:null}, policies:96.8, comms:79.5, training:88.3 },
-    "Burwood":           { hopperTemps:29, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:78763,budget:null}, policies:98.1, comms:87.9, training:87.2 },
-    "Penrith":           { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:77203,budget:null}, policies:98.3, comms:84.1, training:92.1 },
-    "Manly":             { hopperTemps:18, calibrations:"missed", correctiveA:"ok", reviews:6, sales:{actual:74403,budget:null}, policies:94.8, comms:71.1, training:77.0 },
-    "Chatswood":         { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:4, sales:{actual:67405,budget:null}, labour:{pct:12.9,budgetPct:null}, policies:89.1, comms:67.8, training:76.3 },
-    "Cronulla":          { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:68492,budget:null}, labour:{pct:13.0,budgetPct:null}, policies:97.6, comms:83.2, training:85.2 },
-    "Newtown":           { hopperTemps:27, calibrations:"complete", correctiveA:"none", reviews:18, sales:{actual:65216,budget:null}, labour:{pct:17.1,budgetPct:null}, policies:96.2, comms:77.1, training:84.6 },
-    "Bondi":             { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:51667,budget:null}, labour:{pct:24.8,budgetPct:null}, policies:88.6, comms:55.2, training:65.3 },
-    "Coogee":            { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:49845,budget:null}, labour:{pct:17.9,budgetPct:null}, policies:94.4, comms:80.4, training:92.8 },
-    "Surry Hills":       { hopperTemps:23, calibrations:"complete", correctiveA:"none", reviews:4, sales:{actual:46226,budget:null}, policies:90.7, comms:74.6, training:81.1 },
-    "Top Ryde":          { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:8, sales:{actual:38514,budget:null}, policies:97.3, comms:84.3, training:89.3 },
-    "Randwick":          { hopperTemps:23, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:33432,budget:null}, policies:87.5, comms:77.6, training:67.9 },
-    "Bondi Junction":    { hopperTemps:20, calibrations:"complete", correctiveA:"ok", reviews:16, sales:{actual:34477,budget:null}, labour:{pct:19.1,budgetPct:null}, policies:95.8, comms:80.7, training:87.0 },
-    "Lane Cove":         { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:3, sales:{actual:28928,budget:null}, policies:92.1, comms:65.1, training:77.2 },
-    "Double Bay":        { hopperTemps:19, calibrations:"missed", correctiveA:"none", reviews:3, sales:{actual:26061,budget:null}, labour:{pct:19.1,budgetPct:null}, policies:86.2, comms:45.7, training:71.4 },
-    "Chippendale":       { hopperTemps:23, calibrations:"complete", correctiveA:"none", reviews:0, sales:{actual:34227,budget:null}, policies:95.5, comms:76.2, training:72.2 },
-    "Crows Nest":        { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:39698,budget:null}, policies:93.1, comms:72.0, training:77.4 },
-    "Fish Market":       { hopperTemps:25, calibrations:"complete", correctiveA:"none", reviews:8, sales:{actual:32411,budget:null}, policies:84.1, comms:39.0, training:61.2 },
-    "Green Hills":       { hopperTemps:19, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:96513,budget:null}, labour:{pct:21.4,budgetPct:null}, policies:94.3, comms:64.1, training:84.7 },
+    "Rouse Hill":        { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:93367,budget:null}, labour:{pct:14.0,budgetPct:null}, policies:97.5, comms:87.6, training:92.9 },
+    "Circular Quay":     { hopperTemps:24, calibrations:"complete", correctiveA:"none", reviews:6, sales:{actual:82938,budget:null}, labour:{pct:14.9,budgetPct:null}, policies:95.2, comms:76.8, training:77.3 },
+    "Macquarie":         { hopperTemps:18, calibrations:"complete", correctiveA:"none", reviews:11, sales:{actual:84955,budget:null}, labour:{pct:13.8,budgetPct:null}, policies:98.2, comms:79.2, training:83.9 },
+    "Castle Towers":     { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:87241,budget:null}, labour:{pct:14.6,budgetPct:null}, policies:96.8, comms:79.5, training:88.3 },
+    "Burwood":           { hopperTemps:29, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:78763,budget:null}, labour:{pct:15.6,budgetPct:null}, policies:98.1, comms:87.9, training:87.2 },
+    "Penrith":           { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:77203,budget:null}, labour:{pct:14.6,budgetPct:null}, policies:98.3, comms:84.1, training:92.1 },
+    "Manly":             { hopperTemps:18, calibrations:"missed", correctiveA:"ok", reviews:6, sales:{actual:74403,budget:null}, labour:{pct:15.4,budgetPct:null}, policies:94.8, comms:71.1, training:77.0 },
+    "Chatswood":         { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:4, sales:{actual:67405,budget:null}, labour:{pct:16.1,budgetPct:null}, policies:89.1, comms:67.8, training:76.3 },
+    "Cronulla":          { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:68492,budget:null}, labour:{pct:16.6,budgetPct:null}, policies:97.6, comms:83.2, training:85.2 },
+    "Newtown":           { hopperTemps:27, calibrations:"complete", correctiveA:"none", reviews:18, sales:{actual:65216,budget:null}, labour:{pct:18.2,budgetPct:null}, policies:96.2, comms:77.1, training:84.6 },
+    "Bondi":             { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:51667,budget:null}, labour:{pct:18.3,budgetPct:null}, policies:88.6, comms:55.2, training:65.3 },
+    "Coogee":            { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:49845,budget:null}, labour:{pct:19.3,budgetPct:null}, policies:94.4, comms:80.4, training:92.8 },
+    "Surry Hills":       { hopperTemps:23, calibrations:"complete", correctiveA:"none", reviews:4, sales:{actual:46226,budget:null}, labour:{pct:20.0,budgetPct:null}, policies:90.7, comms:74.6, training:81.1 },
+    "Top Ryde":          { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:8, sales:{actual:38514,budget:null}, labour:{pct:17.7,budgetPct:null}, policies:97.3, comms:84.3, training:89.3 },
+    "Randwick":          { hopperTemps:23, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:33432,budget:null}, labour:{pct:19.2,budgetPct:null}, policies:87.5, comms:77.6, training:67.9 },
+    "Bondi Junction":    { hopperTemps:20, calibrations:"complete", correctiveA:"ok", reviews:16, sales:{actual:34477,budget:null}, labour:{pct:17.8,budgetPct:null}, policies:95.8, comms:80.7, training:87.0 },
+    "Lane Cove":         { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:3, sales:{actual:28928,budget:null}, labour:{pct:23.5,budgetPct:null}, policies:92.1, comms:65.1, training:77.2 },
+    "Double Bay":        { hopperTemps:19, calibrations:"missed", correctiveA:"none", reviews:3, sales:{actual:26061,budget:null}, labour:{pct:20.5,budgetPct:null}, policies:86.2, comms:45.7, training:71.4 },
+    "Chippendale":       { hopperTemps:23, calibrations:"complete", correctiveA:"none", reviews:0, sales:{actual:34227,budget:null}, labour:{pct:19.2,budgetPct:null}, policies:95.5, comms:76.2, training:72.2 },
+    "Crows Nest":        { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:39698,budget:null}, labour:{pct:18.9,budgetPct:null}, policies:93.1, comms:72.0, training:77.4 },
+    "Fish Market":       { hopperTemps:25, calibrations:"complete", correctiveA:"none", reviews:8, sales:{actual:32411,budget:null}, labour:{pct:23.5,budgetPct:null}, policies:84.1, comms:39.0, training:61.2 },
+    "Green Hills":       { hopperTemps:19, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:96513,budget:null}, policies:94.3, comms:64.1, training:84.7 },
   },
   mtd: {
-    "George St":         { hopperTemps:19, calibrations:"complete", correctiveA:"none", reviews:12, sales:{actual:233583,budget:null}, labour:{pct:14.9,budgetPct:null}, policies:95.9, comms:83.3, training:83.7 },
+    "George St":         { hopperTemps:19, calibrations:"complete", correctiveA:"none", reviews:12, sales:{actual:233583,budget:null}, labour:{pct:15.9,budgetPct:null}, policies:95.9, comms:83.3, training:83.7 },
     "Erina Fair":        { hopperTemps:18, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:194378,budget:null}, policies:93.8, comms:76.0, training:87.1 },
-    "Barangaroo":        { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:3, sales:{actual:187811,budget:null}, labour:{pct:15.4,budgetPct:null}, policies:96.5, comms:83.0, training:78.7 },
+    "Barangaroo":        { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:3, sales:{actual:187811,budget:null}, labour:{pct:15.9,budgetPct:null}, policies:96.5, comms:83.0, training:78.7 },
     "Wollongong":        { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:178727,budget:null}, policies:95.4, comms:76.8, training:80.2 },
     "Charlestown":       { hopperTemps:18, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:173468,budget:null}, policies:96.4, comms:83.8, training:91.0 },
-    "Rouse Hill":        { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:164078,budget:null}, policies:97.5, comms:87.6, training:92.9 },
-    "Circular Quay":     { hopperTemps:24, calibrations:"complete", correctiveA:"none", reviews:6, sales:{actual:148711,budget:null}, policies:95.2, comms:76.8, training:77.3 },
-    "Macquarie":         { hopperTemps:18, calibrations:"complete", correctiveA:"none", reviews:11, sales:{actual:143970,budget:null}, policies:98.2, comms:79.2, training:83.9 },
-    "Castle Towers":     { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:149078,budget:null}, policies:96.8, comms:79.5, training:88.3 },
-    "Burwood":           { hopperTemps:29, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:137863,budget:null}, policies:98.1, comms:87.9, training:87.2 },
-    "Penrith":           { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:133266,budget:null}, policies:98.3, comms:84.1, training:92.1 },
-    "Manly":             { hopperTemps:18, calibrations:"missed", correctiveA:"ok", reviews:6, sales:{actual:131684,budget:null}, policies:94.8, comms:71.1, training:77.0 },
-    "Chatswood":         { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:4, sales:{actual:120589,budget:null}, labour:{pct:12.9,budgetPct:null}, policies:89.1, comms:67.8, training:76.3 },
-    "Cronulla":          { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:121731,budget:null}, labour:{pct:13.0,budgetPct:null}, policies:97.6, comms:83.2, training:85.2 },
-    "Newtown":           { hopperTemps:27, calibrations:"complete", correctiveA:"none", reviews:18, sales:{actual:114727,budget:null}, labour:{pct:17.1,budgetPct:null}, policies:96.2, comms:77.1, training:84.6 },
-    "Bondi":             { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:96367,budget:null}, labour:{pct:24.8,budgetPct:null}, policies:88.6, comms:55.2, training:65.3 },
-    "Coogee":            { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:92577,budget:null}, labour:{pct:17.9,budgetPct:null}, policies:94.4, comms:80.4, training:92.8 },
-    "Surry Hills":       { hopperTemps:23, calibrations:"complete", correctiveA:"none", reviews:4, sales:{actual:88548,budget:null}, policies:90.7, comms:74.6, training:81.1 },
-    "Top Ryde":          { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:8, sales:{actual:69539,budget:null}, policies:97.3, comms:84.3, training:89.3 },
-    "Randwick":          { hopperTemps:23, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:63484,budget:null}, policies:87.5, comms:77.6, training:67.9 },
-    "Bondi Junction":    { hopperTemps:20, calibrations:"complete", correctiveA:"ok", reviews:16, sales:{actual:62457,budget:null}, labour:{pct:19.1,budgetPct:null}, policies:95.8, comms:80.7, training:87.0 },
-    "Lane Cove":         { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:3, sales:{actual:53036,budget:null}, policies:92.1, comms:65.1, training:77.2 },
-    "Double Bay":        { hopperTemps:19, calibrations:"missed", correctiveA:"none", reviews:3, sales:{actual:49049,budget:null}, labour:{pct:19.1,budgetPct:null}, policies:86.2, comms:45.7, training:71.4 },
-    "Chippendale":       { hopperTemps:23, calibrations:"complete", correctiveA:"none", reviews:0, sales:{actual:56562,budget:null}, policies:95.5, comms:76.2, training:72.2 },
-    "Crows Nest":        { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:74104,budget:null}, policies:93.1, comms:72.0, training:77.4 },
-    "Fish Market":       { hopperTemps:25, calibrations:"complete", correctiveA:"none", reviews:8, sales:{actual:55526,budget:null}, policies:84.1, comms:39.0, training:61.2 },
-    "Green Hills":       { hopperTemps:19, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:167329,budget:null}, labour:{pct:21.4,budgetPct:null}, policies:94.3, comms:64.1, training:84.7 },
+    "Rouse Hill":        { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:164078,budget:null}, labour:{pct:14.0,budgetPct:null}, policies:97.5, comms:87.6, training:92.9 },
+    "Circular Quay":     { hopperTemps:24, calibrations:"complete", correctiveA:"none", reviews:6, sales:{actual:148711,budget:null}, labour:{pct:14.9,budgetPct:null}, policies:95.2, comms:76.8, training:77.3 },
+    "Macquarie":         { hopperTemps:18, calibrations:"complete", correctiveA:"none", reviews:11, sales:{actual:143970,budget:null}, labour:{pct:13.8,budgetPct:null}, policies:98.2, comms:79.2, training:83.9 },
+    "Castle Towers":     { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:2, sales:{actual:149078,budget:null}, labour:{pct:14.6,budgetPct:null}, policies:96.8, comms:79.5, training:88.3 },
+    "Burwood":           { hopperTemps:29, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:137863,budget:null}, labour:{pct:15.6,budgetPct:null}, policies:98.1, comms:87.9, training:87.2 },
+    "Penrith":           { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:133266,budget:null}, labour:{pct:14.6,budgetPct:null}, policies:98.3, comms:84.1, training:92.1 },
+    "Manly":             { hopperTemps:18, calibrations:"missed", correctiveA:"ok", reviews:6, sales:{actual:131684,budget:null}, labour:{pct:15.4,budgetPct:null}, policies:94.8, comms:71.1, training:77.0 },
+    "Chatswood":         { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:4, sales:{actual:120589,budget:null}, labour:{pct:16.1,budgetPct:null}, policies:89.1, comms:67.8, training:76.3 },
+    "Cronulla":          { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:10, sales:{actual:121731,budget:null}, labour:{pct:16.6,budgetPct:null}, policies:97.6, comms:83.2, training:85.2 },
+    "Newtown":           { hopperTemps:27, calibrations:"complete", correctiveA:"none", reviews:18, sales:{actual:114727,budget:null}, labour:{pct:18.2,budgetPct:null}, policies:96.2, comms:77.1, training:84.6 },
+    "Bondi":             { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:96367,budget:null}, labour:{pct:18.3,budgetPct:null}, policies:88.6, comms:55.2, training:65.3 },
+    "Coogee":            { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:92577,budget:null}, labour:{pct:19.3,budgetPct:null}, policies:94.4, comms:80.4, training:92.8 },
+    "Surry Hills":       { hopperTemps:23, calibrations:"complete", correctiveA:"none", reviews:4, sales:{actual:88548,budget:null}, labour:{pct:20.0,budgetPct:null}, policies:90.7, comms:74.6, training:81.1 },
+    "Top Ryde":          { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:8, sales:{actual:69539,budget:null}, labour:{pct:17.7,budgetPct:null}, policies:97.3, comms:84.3, training:89.3 },
+    "Randwick":          { hopperTemps:23, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:63484,budget:null}, labour:{pct:19.2,budgetPct:null}, policies:87.5, comms:77.6, training:67.9 },
+    "Bondi Junction":    { hopperTemps:20, calibrations:"complete", correctiveA:"ok", reviews:16, sales:{actual:62457,budget:null}, labour:{pct:17.8,budgetPct:null}, policies:95.8, comms:80.7, training:87.0 },
+    "Lane Cove":         { hopperTemps:20, calibrations:"complete", correctiveA:"none", reviews:3, sales:{actual:53036,budget:null}, labour:{pct:23.5,budgetPct:null}, policies:92.1, comms:65.1, training:77.2 },
+    "Double Bay":        { hopperTemps:19, calibrations:"missed", correctiveA:"none", reviews:3, sales:{actual:49049,budget:null}, labour:{pct:20.5,budgetPct:null}, policies:86.2, comms:45.7, training:71.4 },
+    "Chippendale":       { hopperTemps:23, calibrations:"complete", correctiveA:"none", reviews:0, sales:{actual:56562,budget:null}, labour:{pct:19.2,budgetPct:null}, policies:95.5, comms:76.2, training:72.2 },
+    "Crows Nest":        { hopperTemps:21, calibrations:"complete", correctiveA:"none", reviews:1, sales:{actual:74104,budget:null}, labour:{pct:18.9,budgetPct:null}, policies:93.1, comms:72.0, training:77.4 },
+    "Fish Market":       { hopperTemps:25, calibrations:"complete", correctiveA:"none", reviews:8, sales:{actual:55526,budget:null}, labour:{pct:23.5,budgetPct:null}, policies:84.1, comms:39.0, training:61.2 },
+    "Green Hills":       { hopperTemps:19, calibrations:"complete", correctiveA:"none", reviews:5, sales:{actual:167329,budget:null}, policies:94.3, comms:64.1, training:84.7 },
   },
 };
 
@@ -447,9 +447,10 @@ let SAMPLE = {
 let DATA = structuredClone(SAMPLE);
 const dataSource = {};              // systemName -> 'snapshot' | 'nosource' | 'live' | 'error'
 /* Systems whose values in SAMPLE are a real DataSights snapshot vs. still-unwired.
- * Tanda (Labour %) is live but only for venues with clean labour data -> 'partial'. */
-const SNAPSHOT_SYSTEMS = new Set(['Sales', 'Review Tracker', 'Celsi', 'Chi Central']);
-const PARTIAL_SYSTEMS = new Set(['Tanda']);
+ * Tanda (Labour %) is real timesheet cost for all company venues; the four
+ * franchise venues run their own payroll and render labour as '—'. */
+const SNAPSHOT_SYSTEMS = new Set(['Sales', 'Review Tracker', 'Celsi', 'Chi Central', 'Tanda']);
+const PARTIAL_SYSTEMS = new Set([]);
 /* When data.json is loaded, its meta.sources overrides these defaults. */
 let SOURCE_OVERRIDE = null;
 function resetDataSources() {
@@ -534,11 +535,12 @@ const RULES = {
 
 function evaluate(metric, raw, period) {
   if (raw === undefined || raw === null) {
-    // Labour goes missing for a specific, known reason (Restoke doesn't attribute it to
-    // this venue), so label it plainly instead of a bare "—" that reads like a glitch.
+    // Labour goes missing for a specific, known reason (franchise venues run their
+    // own payroll and aren't in the company Tanda org), so label it plainly instead
+    // of a bare "—" that reads like a glitch.
     if (metric.rule === 'labour')
       return { status: 'n', display: 'no data',
-               note: 'Labour % isn’t attributed to this venue in Restoke yet — a source-data gap, not an error. It appears automatically once Restoke files this venue’s staff correctly.' };
+               note: 'Labour % comes from Tanda timesheets. This is a franchise venue on its own payroll (not in the company Tanda org), so there’s no labour cost to report here — a source scope gap, not an error.' };
     return { status: 'n', display: '—' };
   }
   return RULES[metric.rule](raw, period);
@@ -713,8 +715,8 @@ const PROVENANCE = [
    "Share of company-news items acknowledged (is_read). ≥85% green · ≥70% yellow · else red.", "live"],
   ["Chi Central", "Training", "OpCentralTrainingAllResultPrograms",
    "AVG of each staff member's training-programme completion % across their enrolled OpCentral programmes, averaged per venue. Training has no venue field, so each user is mapped to a venue by name (user_id → user_full_name → their policy-signoff workplace). ≥90% green · ≥75% yellow · else red.", "live"],
-  ["Tanda", "Labour %", "RestokeLaborCost ÷ Sales",
-   "De-duplicated labour cost ÷ net sales, per venue. Excludes HQ-dump venues (100s of “staff”) and values outside 5–45% as implausible. No labour budget source yet, so shown as informational.", "partial"],
+  ["Tanda", "Labour %", "TandaTimesheetShifts ÷ Sales",
+   "Actual Tanda timesheet cost (award-interpreted) ÷ net sales (MTD), per venue. A shift’s department maps team → venue location; NSW company venues only. Franchise venues run their own payroll (not in the company Tanda org) and show “—”. Values outside 5–45% are treated as implausible. No labour budget source yet, so shown as informational.", "live"],
   ["Restoke", "Cake / Litter / Waste / Delivery / Open-Close", "—",
    "Held back — these operational checklists are not exposed in DataSights yet (connection planned).", "held"],
 ];
