@@ -1,108 +1,59 @@
-# Restoke labour fix — venue attribution
+# Labour attribution — RESOLVED (moved to Tanda)
 
-**For:** whoever administers Restoke for Yo-Chi (and/or the Restoke ↔ DataSights
-integration owner).
-**Impact:** Labour % is missing for **14 of 23 NSW venues** on the operations
-dashboard, because their staff labour is not recorded against the right venue in
-Restoke.
-**Nothing to change on the dashboard** — once Restoke attributes labour correctly,
-the numbers flow through DataSights and appear automatically.
+**Status:** ✅ Resolved. Labour % is now sourced from **Tanda**, the payroll /
+rostering system of record. The Restoke attribution problem described below is no
+longer relevant to the dashboard — **no Restoke fix is required.**
 
-## The problem
+**Result:** Labour % is now live for **all 23 company venues** (coverage `23/27`).
+The four franchise venues (Erina Fair, Wollongong, Charlestown, Green Hills) run
+their own payroll and are not in the company Tanda org, so they intentionally
+show "—".
 
-Restoke's labour data (`RestokeLaborCost` in DataSights) is pooling many venues'
-staff into two "catch-all" venue buckets instead of each venue. Over 8 days
-(1–8 Jul 2026), deduplicated:
+## What changed
 
-| Restoke venue | Distinct "employees" | Labour cost | Expected |
-|---|---|---|---|
-| **Yo-Chi Randwick** | **474** | **$830,834** | ~15–50 staff, ~$8–20k |
-| **Yo-Chi Prospect** | **316** | **$823,197** | ~15–50 staff, ~$8–20k |
-| Yo-Chi Top Ryde | 46 | $22,496 | plausibility-flagged (~50% labour) |
+- Labour was previously computed from `RestokeLaborCost`, which only attributed
+  cleanly for ~9–10 venues and produced some impossible figures (e.g. Top Ryde
+  reading ~50%).
+- The labour query now reads **`TandaTimesheetShifts`**: a shift's `department_id`
+  → `TandaTeams.team_id` → `TandaLocations.name` gives the venue, and `SUM(cost)`
+  (award-interpreted) is the real spend. NSW company venues only.
+- Tanda attributes labour cleanly per venue, so the old de-dup / HQ-dump gymnastics
+  are gone. Corrected figures land in a tight, believable 13–25% band.
 
-474 and 316 distinct employees under one store is impossible (a Yo-Chi venue runs
-~15–50 staff). These two buckets are absorbing the staff that should sit against
-the venues below.
+See the pipeline in `build_data.py` (`SQL["labour"]` and `live_extract`).
 
-## Proof it's a pooling problem (not real headcount)
+## How to confirm
 
-Cross-referencing the **employees inside the "Yo-Chi Randwick" labour bucket**
-against where each person actually works (OpCentral `workplace_name`) shows the
-bucket is full of *other venues'* staff — **only 8 of the ~474 actually work at
-Randwick**:
-
-| Where they actually work | Staff mis-filed into "Yo-Chi Randwick" |
-|---|---|
-| Rouse Hill | 32 |
-| George Street | 30 |
-| Barangaroo | 25 |
-| Circular Quay | 22 |
-| Castle Towers | 22 |
-| Manly | 20 |
-| Chatswood | 19 |
-| Macquarie Park | 18 |
-| Burwood / Penrith / Top Ryde | 16 each |
-| Cronulla 14 · Newtown 13 · Coogee 11 · Bondi 11 · Surry Hills 10 · Lane Cove 8 | … |
-| **Randwick (actually Randwick)** | **8** |
-
-Consequence: the missing venues' labour is trapped here, **and** the venues that
-*do* report (George St, Barangaroo, Chatswood…) are **understated**, because some
-of their staff are split into this bucket too. Fixing attribution corrects both.
-
-Reproduce:
-```sql
-SELECT p.workplace_name AS actual_venue, COUNT(DISTINCT l.employee_name) staff
-FROM (SELECT DISTINCT employee_name FROM RestokeLaborCost
-      WHERE venue='Yo-Chi Randwick' AND date >= DATEADD(day,-8,GETDATE())) l
-JOIN (SELECT DISTINCT full_name, workplace_name FROM OpCentralPolicySignoffs) p
-  ON p.full_name = l.employee_name
-GROUP BY p.workplace_name ORDER BY staff DESC;
-```
-
-## Affected venues (Labour % currently "—")
-
-Erina Fair · Wollongong · Charlestown · Rouse Hill · Circular Quay · Macquarie ·
-Castle Towers · Burwood · Penrith · Manly · Surry Hills · Top Ryde · Randwick ·
-Lane Cove
-
-(The 9 venues that *do* report correctly — George St, Barangaroo, Chatswood,
-Cronulla, Newtown, Bondi, Coogee, Bondi Junction, Double Bay — show Labour %
-fine, which is how we know the pipeline works.)
-
-## What to fix in Restoke
-
-1. Confirm every NSW venue exists as its **own location / cost centre** in Restoke
-   (the 14 above may be missing, or merged into "Randwick"/"Prospect").
-2. **Reassign employees to their correct home venue** so their rostered/timesheet
-   labour is booked against the venue they actually work at — not pooled into
-   "Yo-Chi Randwick" or "Yo-Chi Prospect".
-3. Re-run / re-sync the labour feed so DataSights picks up the corrected mapping.
-
-## How to confirm it's fixed
-
-Run this in DataSights — every venue should have a **sane headcount (~15–50)** and
-**no venue over ~120**:
+In DataSights, every company venue returns a sane headcount and cost:
 
 ```sql
-SELECT venue, COUNT(DISTINCT employee_name) emps, CAST(SUM(total) AS decimal(12,0)) cost
-FROM (SELECT DISTINCT venue, date, employee_name, hours, rate, TRY_CAST(total AS float) total
-      FROM RestokeLaborCost
-      WHERE date >= DATEADD(day,-8,GETDATE())) x
-WHERE venue LIKE '%Yo-Chi%'
-GROUP BY venue
-ORDER BY emps DESC;
+SELECT loc.name venue, COUNT(DISTINCT ts.user_id) emps,
+       CAST(SUM(ts.cost) AS decimal(12,0)) cost
+FROM TandaTimesheetShifts ts
+JOIN TandaTeams tm      ON tm.team_id      = ts.department_id
+JOIN TandaLocations loc ON loc.location_id = tm.location_id
+WHERE CAST(ts.date AS date) >= DATEADD(day,-12,GETDATE())
+  AND loc.public_holiday_regions LIKE '%au_nsw%'
+GROUP BY loc.name
+ORDER BY cost DESC;
 ```
 
-- **Before:** "Yo-Chi Randwick" 474, "Yo-Chi Prospect" 316 at the top.
-- **After (fixed):** no venue over ~120; the 14 venues above each appear with a
-  realistic headcount.
+Every NSW company venue appears with ~8–45 staff and a plausible cost; the shared
+Support Office ($0 shift cost, HQ) maps to no dashboard venue and drops out.
 
-Once that's true, the dashboard's Labour % for those venues populates on the next
-daily refresh — **no dashboard change required** (the pipeline computes
-labour cost ÷ net sales per venue and only excludes venues with >120 staff or an
-implausible % ; corrected data clears both filters).
+---
 
-## Contact
+## Historical context — why Restoke was abandoned for labour
 
-Dashboard side: the pipeline is ready and waiting — as soon as `RestokeLaborCost`
-attributes labour per venue, coverage goes from 9/23 toward 23/23 automatically.
+Restoke's `RestokeLaborCost` pooled many venues' staff into two catch-all buckets
+("Yo-Chi Randwick" showed 474 distinct "employees", "Yo-Chi Prospect" 316), so 14
+of the venues had their labour trapped in an aggregate rather than booked against
+the venue where staff actually worked. Cross-referencing the "Yo-Chi Randwick"
+bucket against OpCentral `workplace_name` showed only ~8 of the ~474 actually
+worked at Randwick — the rest belonged to Rouse Hill, George St, Barangaroo, etc.
+
+Rather than wait on a source-side Restoke re-attribution, the labour metric was
+repointed at Tanda (which already attributes correctly), resolving the gap for all
+company venues at once. Restoke remains the intended source only for the
+operational checklists (cake/litter/waste/delivery/open-close), which are still not
+exposed in DataSights — see [`DATA_GAPS.md`](DATA_GAPS.md).

@@ -25,7 +25,7 @@ DataSights, across 23 NSW venues:
 | Review Tracker | Google Reviews | ✅ Live |
 | Celsi | Hopper temps, calibrations, corrective actions | ✅ Live |
 | Chi Central | Policy %, comms read %, training completion % | ✅ Live (23/23) |
-| Tanda | Labour % | 🟡 Live (9/23 — Restoke attribution, see data notes) |
+| Tanda | Labour % | ✅ Live (23/27 — Tanda timesheets; 4 franchise venues run own payroll, N/A) |
 | Sales | Budget comparison | ⛔ Held pending a definition decision |
 | Restoke | Cake/litter/waste/delivery/open-close checklists | ⛔ Not yet exposed in DataSights |
 

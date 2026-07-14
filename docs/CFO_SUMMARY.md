@@ -34,7 +34,6 @@ fraction of the cost.*
 - **Sales vs Budget** — pending a finance decision on the Xero "Revenue" basis
   (it currently reconciles to ~2× POS net sales, so a like-for-like needs sign-off).
 - **Restoke checklists** — pending a DataSights connection (not yet exposed).
-- **Labour %** for 14 venues — pending a Restoke venue-attribution fix (source-side).
 - **Access control** — put the site behind a login (Cloudflare Access, free) before
   wider distribution.
 - **Failure alerting** and **metric sign-off** with ops/finance.

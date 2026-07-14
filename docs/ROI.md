@@ -52,7 +52,8 @@ A direct step toward retiring Power BI for ops reporting.
   line; even a 0.5% improvement across NSW is material. *(Not included above —
   it's genuine but too situational to bank.)*
 - **Data-quality wins already delivered** — surfaced the Restoke labour
-  mis-attribution and the Xero budget-basis mismatch, both worth fixing regardless.
+  mis-attribution (since resolved by moving Labour % to Tanda) and the Xero
+  budget-basis mismatch, both worth fixing regardless.
 - **Trust** — every number traces to DataSights on-screen; no black box.
 
 ---
