@@ -115,14 +115,19 @@ VENUES = [
 # 3. SQL — the live queries (documented here; used when a credential is set).
 #    Each returns the aggregates the transform needs, keyed by venue.
 # ---------------------------------------------------------------------------
+# NSW store names (the sales-view StoreName for every venue) built from VENUES —
+# our own NSW allow-list, so the anchor scopes to NSW without Venue_Master. A
+# permission change on that table then can't stall the whole refresh.
+_NSW_STORE_IN = ", ".join("'" + v[1].replace("'", "''") + "'" for v in VENUES)
+
 SQL = {
     # Anchor: the most recent day where (nearly) all NSW venues have sales —
     # i.e. the latest COMPLETE trading day. Data lags ~1 day behind "today".
-    "anchor": """
+    # Scoped by our own NSW store list (no Venue_Master dependency).
+    "anchor": f"""
         SELECT TOP 1 s.TxnDate anchor
         FROM PolygonRedcatNetSalesByStoreDailyView s
-        JOIN Venue_Master vm ON vm.Store = s.StoreName
-        WHERE vm.State = '2. NSW' AND vm.Reporting = 'Yes'
+        WHERE s.StoreName IN ({_NSW_STORE_IN})
         GROUP BY s.TxnDate
         HAVING COUNT(DISTINCT s.StoreName) >= 18
         ORDER BY s.TxnDate DESC""",
