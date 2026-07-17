@@ -527,17 +527,42 @@ def resolve_snapshot():
     }
 
 
+# Map each source query to the dashboard "system" it feeds, so a source that goes
+# dark can be flagged on the board's status strip instead of just silently blanking.
+_QUERY_SYSTEM = {
+    "reviews": "Review Tracker", "celsi": "Celsi", "labour": "Tanda",
+    "policies": "Chi Central", "comms": "Chi Central", "training": "Chi Central",
+}
+
+
+def _safe_query(name, sql, params, down):
+    """Run a non-essential source query. If that source is unavailable (a permission
+    revocation, a disconnected connector, or a transient error), degrade to no data
+    for its metrics rather than failing the whole refresh — and record the outage in
+    `down`. Sales/anchor stay strict: there's no board without them."""
+    try:
+        return datasights_query(sql, params)
+    except SystemExit as e:
+        down.add(_QUERY_SYSTEM.get(name, name))
+        print(f"WARN  source '{name}' unavailable — its metrics render '—' this run: {str(e)[:160]}",
+              file=sys.stderr)
+        return []
+
+
 def live_extract(snap):
     """Query DataSights live and shape the results into the FIXTURE tuple form,
-    applying the same normalisation the offline snapshot encodes."""
+    applying the same normalisation the offline snapshot encodes. A source that is
+    unavailable this run blanks only its own metrics; the rest still refresh."""
     p = {k: snap[k] for k in ("dailyDate", "weekStart", "monthStart")}
+    down = set()   # dashboard "systems" whose source went dark this run
+    # Sales is the backbone (it also defines the venue list) — let it fail loudly.
     sales_by_store = _index(datasights_query(SQL["sales"], p), "store")
-    reviews_by_sub = _index(datasights_query(SQL["reviews"], p), "suburb")
-    celsi_by_code  = _index(datasights_query(SQL["celsi"], p), "code")
-    labour_by_venue = _index(datasights_query(SQL["labour"], p), "venue")
-    policy_by_wp   = _index(datasights_query(SQL["policies"], p), "workplace_name")
-    comms_by_wp    = _index(datasights_query(SQL["comms"], p), "workplace_name")
-    train_by_wp    = _index(datasights_query(SQL["training"], p), "workplace_name")
+    reviews_by_sub = _index(_safe_query("reviews", SQL["reviews"], p, down), "suburb")
+    celsi_by_code  = _index(_safe_query("celsi", SQL["celsi"], p, down), "code")
+    labour_by_venue = _index(_safe_query("labour", SQL["labour"], p, down), "venue")
+    policy_by_wp   = _index(_safe_query("policies", SQL["policies"], p, down), "workplace_name")
+    comms_by_wp    = _index(_safe_query("comms", SQL["comms"], p, down), "workplace_name")
+    train_by_wp    = _index(_safe_query("training", SQL["training"], p, down), "workplace_name")
 
     fixture = {}
     for display, sales_store, code, opcentral_wp, labour_venue in VENUES:
@@ -548,15 +573,21 @@ def live_extract(snap):
         sd, sw, sm = round(_num(s["d"])), round(_num(s["w"])), round(_num(s["m"]))
 
         # Celsi (weekly-bucketed): count -> daily rate; status from calib/corrective.
-        c = celsi_by_code.get(code, {})
-        temp_week = int(_num(c.get("temp_week")))
-        ht_daily = round(temp_week / 7) if temp_week else 0
-        calib = "complete" if _num(c.get("calib")) > 0 else "missed"
-        ca_n, ca_fail = _num(c.get("ca")), _num(c.get("ca_fail"))
-        correctiveA = "issue" if ca_fail > 0 else ("ok" if ca_n > 0 else "none")
+        if "Celsi" in down:                    # source down -> blank ("—"), not a false "Missed"/0
+            ht_daily = temp_week = calib = correctiveA = None
+        else:
+            c = celsi_by_code.get(code, {})
+            temp_week = int(_num(c.get("temp_week")))
+            ht_daily = round(temp_week / 7) if temp_week else 0
+            calib = "complete" if _num(c.get("calib")) > 0 else "missed"
+            ca_n, ca_fail = _num(c.get("ca")), _num(c.get("ca_fail"))
+            correctiveA = "issue" if ca_fail > 0 else ("ok" if ca_n > 0 else "none")
 
         rv = reviews_by_sub.get(REVIEW_ALIAS.get(display, display))
-        reviews_week = int(_num(rv["week_count"])) if rv else 0
+        if "Review Tracker" in down:
+            reviews_week = None                       # source down -> render "—", not a misleading 0
+        else:
+            reviews_week = int(_num(rv["week_count"])) if rv else 0
 
         # Labour %: Tanda timesheet cost / net sales (MTD), with a plausibility guard.
         # Tanda attributes per venue cleanly, so no HQ-dump de-dup is needed; the
@@ -578,7 +609,7 @@ def live_extract(snap):
 
         fixture[display] = (sd, sw, sm, ht_daily, temp_week, calib, correctiveA,
                             reviews_week, labour_pct, policy_pct, comms_pct, training_pct)
-    return fixture
+    return fixture, down
 
 
 def main():
@@ -588,11 +619,11 @@ def main():
     args = ap.parse_args()
 
     if args.offline:
-        snap, fixture = SNAPSHOT, FIXTURE
+        snap, fixture, down = SNAPSHOT, FIXTURE, set()
     else:
         snap = resolve_snapshot()
         print(f"Resolved window: {snap['reportDate']} ({snap['windows']})", file=sys.stderr)
-        fixture = live_extract(snap)
+        fixture, down = live_extract(snap)
     periods = build_periods(fixture)
     errors, warnings, coverage = validate(periods)
 
@@ -604,6 +635,15 @@ def main():
         print("Validation failed — data.json NOT written (dashboard keeps last good copy).", file=sys.stderr)
         sys.exit(1)
 
+    # Sources that went dark this run render as "awaiting source" (grey) on the
+    # board rather than green/live, so the blanked metrics read as a known outage.
+    sources = dict(SOURCE_STATUS)
+    for sysname in down:
+        sources[sysname] = "nosource"
+    if down:
+        print(f"WARN  degraded sources this run: {', '.join(sorted(down))} — refreshed everything else",
+              file=sys.stderr)
+
     generated = _dt.datetime.now(_dt.timezone.utc).replace(microsecond=0).isoformat()
     payload = {
         "meta": {
@@ -611,7 +651,7 @@ def main():
             "generatedAt": generated,
             "windows": snap["windows"],
             "venues": len(periods["daily"]),
-            "sources": SOURCE_STATUS,
+            "sources": sources,
             "coverage": coverage,
         },
         "periods": periods,
