@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-07-17",
-  "generatedAt": "2026-07-18T16:00:27+00:00",
+  "generatedAt": "2026-07-18T19:10:23+00:00",
   "windows": "daily = 17 Jul · WTD = 13–17 Jul · MTD = 1–17 Jul",
   "venues": 27,
   "sources": {
@@ -31,7 +31,7 @@
      "budget": null
     },
     "policies": 95.9,
-    "comms": 84.1,
+    "comms": 84.3,
     "training": 83.7
    },
    "Erina Fair": {
@@ -56,9 +56,9 @@
      "actual": 13833,
      "budget": null
     },
-    "policies": 96.3,
-    "comms": 83.0,
-    "training": 78.7
+    "policies": 92.5,
+    "comms": 79.1,
+    "training": 78.3
    },
    "Wollongong": {
     "hopperTemps": null,
@@ -69,9 +69,9 @@
      "actual": 15813,
      "budget": null
     },
-    "policies": 96.4,
-    "comms": 78.3,
-    "training": 80.2
+    "policies": 94.3,
+    "comms": 76.7,
+    "training": 79.0
    },
    "Charlestown": {
     "hopperTemps": null,
@@ -134,8 +134,8 @@
      "actual": 14603,
      "budget": null
     },
-    "policies": 96.6,
-    "comms": 79.5,
+    "policies": 94.4,
+    "comms": 77.8,
     "training": 89.0
    },
    "Burwood": {
@@ -160,8 +160,8 @@
      "actual": 13495,
      "budget": null
     },
-    "policies": 92.5,
-    "comms": 75.0,
+    "policies": 94.5,
+    "comms": 76.4,
     "training": 88.9
    },
    "Manly": {
@@ -186,22 +186,22 @@
      "actual": 11905,
      "budget": null
     },
-    "policies": 93.8,
-    "comms": 69.0,
+    "policies": 94.2,
+    "comms": 69.4,
     "training": 79.3
    },
    "Cronulla": {
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 10,
+    "reviews": 11,
     "sales": {
      "actual": 10505,
      "budget": null
     },
     "policies": 97.6,
     "comms": 83.9,
-    "training": 86.7
+    "training": 86.8
    },
    "Newtown": {
     "hopperTemps": null,
@@ -238,9 +238,9 @@
      "actual": 6009,
      "budget": null
     },
-    "policies": 88.5,
-    "comms": 74.6,
-    "training": 90.3
+    "policies": 93.9,
+    "comms": 80.0,
+    "training": 92.1
    },
    "Surry Hills": {
     "hopperTemps": null,
@@ -277,7 +277,7 @@
      "actual": 5029,
      "budget": null
     },
-    "policies": 83.3,
+    "policies": 83.5,
     "comms": 72.5,
     "training": 63.8
    },
@@ -304,7 +304,7 @@
      "budget": null
     },
     "policies": 93.1,
-    "comms": 65.9,
+    "comms": 67.5,
     "training": 77.8
    },
    "Double Bay": {
@@ -342,9 +342,9 @@
      "actual": 5180,
      "budget": null
     },
-    "policies": 93.1,
-    "comms": 73.0,
-    "training": 78.2
+    "policies": 93.3,
+    "comms": 74.4,
+    "training": 78.6
    },
    "Fish Market": {
     "hopperTemps": null,
@@ -355,8 +355,8 @@
      "actual": 3589,
      "budget": null
     },
-    "policies": 86.2,
-    "comms": 40.0,
+    "policies": 86.3,
+    "comms": 40.3,
     "training": 60.6
    },
    "Green Hills": {
@@ -384,7 +384,7 @@
      "budget": null
     },
     "policies": 95.9,
-    "comms": 84.1,
+    "comms": 84.3,
     "training": 83.7
    },
    "Erina Fair": {
@@ -409,9 +409,9 @@
      "actual": 69667,
      "budget": null
     },
-    "policies": 96.3,
-    "comms": 83.0,
-    "training": 78.7
+    "policies": 92.5,
+    "comms": 79.1,
+    "training": 78.3
    },
    "Wollongong": {
     "hopperTemps": null,
@@ -422,9 +422,9 @@
      "actual": 71859,
      "budget": null
     },
-    "policies": 96.4,
-    "comms": 78.3,
-    "training": 80.2
+    "policies": 94.3,
+    "comms": 76.7,
+    "training": 79.0
    },
    "Charlestown": {
     "hopperTemps": null,
@@ -487,8 +487,8 @@
      "actual": 61203,
      "budget": null
     },
-    "policies": 96.6,
-    "comms": 79.5,
+    "policies": 94.4,
+    "comms": 77.8,
     "training": 89.0
    },
    "Burwood": {
@@ -513,8 +513,8 @@
      "actual": 57434,
      "budget": null
     },
-    "policies": 92.5,
-    "comms": 75.0,
+    "policies": 94.5,
+    "comms": 76.4,
     "training": 88.9
    },
    "Manly": {
@@ -539,22 +539,22 @@
      "actual": 45284,
      "budget": null
     },
-    "policies": 93.8,
-    "comms": 69.0,
+    "policies": 94.2,
+    "comms": 69.4,
     "training": 79.3
    },
    "Cronulla": {
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 10,
+    "reviews": 11,
     "sales": {
      "actual": 45905,
      "budget": null
     },
     "policies": 97.6,
     "comms": 83.9,
-    "training": 86.7
+    "training": 86.8
    },
    "Newtown": {
     "hopperTemps": null,
@@ -591,9 +591,9 @@
      "actual": 33542,
      "budget": null
     },
-    "policies": 88.5,
-    "comms": 74.6,
-    "training": 90.3
+    "policies": 93.9,
+    "comms": 80.0,
+    "training": 92.1
    },
    "Surry Hills": {
     "hopperTemps": null,
@@ -630,7 +630,7 @@
      "actual": 22862,
      "budget": null
     },
-    "policies": 83.3,
+    "policies": 83.5,
     "comms": 72.5,
     "training": 63.8
    },
@@ -657,7 +657,7 @@
      "budget": null
     },
     "policies": 93.1,
-    "comms": 65.9,
+    "comms": 67.5,
     "training": 77.8
    },
    "Double Bay": {
@@ -695,9 +695,9 @@
      "actual": 23797,
      "budget": null
     },
-    "policies": 93.1,
-    "comms": 73.0,
-    "training": 78.2
+    "policies": 93.3,
+    "comms": 74.4,
+    "training": 78.6
    },
    "Fish Market": {
     "hopperTemps": null,
@@ -708,8 +708,8 @@
      "actual": 17577,
      "budget": null
     },
-    "policies": 86.2,
-    "comms": 40.0,
+    "policies": 86.3,
+    "comms": 40.3,
     "training": 60.6
    },
    "Green Hills": {
@@ -737,7 +737,7 @@
      "budget": null
     },
     "policies": 95.9,
-    "comms": 84.1,
+    "comms": 84.3,
     "training": 83.7
    },
    "Erina Fair": {
@@ -762,9 +762,9 @@
      "actual": 257478,
      "budget": null
     },
-    "policies": 96.3,
-    "comms": 83.0,
-    "training": 78.7
+    "policies": 92.5,
+    "comms": 79.1,
+    "training": 78.3
    },
    "Wollongong": {
     "hopperTemps": null,
@@ -775,9 +775,9 @@
      "actual": 250586,
      "budget": null
     },
-    "policies": 96.4,
-    "comms": 78.3,
-    "training": 80.2
+    "policies": 94.3,
+    "comms": 76.7,
+    "training": 79.0
    },
    "Charlestown": {
     "hopperTemps": null,
@@ -840,8 +840,8 @@
      "actual": 210281,
      "budget": null
     },
-    "policies": 96.6,
-    "comms": 79.5,
+    "policies": 94.4,
+    "comms": 77.8,
     "training": 89.0
    },
    "Burwood": {
@@ -866,8 +866,8 @@
      "actual": 190700,
      "budget": null
     },
-    "policies": 92.5,
-    "comms": 75.0,
+    "policies": 94.5,
+    "comms": 76.4,
     "training": 88.9
    },
    "Manly": {
@@ -892,22 +892,22 @@
      "actual": 165873,
      "budget": null
     },
-    "policies": 93.8,
-    "comms": 69.0,
+    "policies": 94.2,
+    "comms": 69.4,
     "training": 79.3
    },
    "Cronulla": {
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 10,
+    "reviews": 11,
     "sales": {
      "actual": 167636,
      "budget": null
     },
     "policies": 97.6,
     "comms": 83.9,
-    "training": 86.7
+    "training": 86.8
    },
    "Newtown": {
     "hopperTemps": null,
@@ -944,9 +944,9 @@
      "actual": 126119,
      "budget": null
     },
-    "policies": 88.5,
-    "comms": 74.6,
-    "training": 90.3
+    "policies": 93.9,
+    "comms": 80.0,
+    "training": 92.1
    },
    "Surry Hills": {
     "hopperTemps": null,
@@ -983,7 +983,7 @@
      "actual": 86346,
      "budget": null
     },
-    "policies": 83.3,
+    "policies": 83.5,
     "comms": 72.5,
     "training": 63.8
    },
@@ -1010,7 +1010,7 @@
      "budget": null
     },
     "policies": 93.1,
-    "comms": 65.9,
+    "comms": 67.5,
     "training": 77.8
    },
    "Double Bay": {
@@ -1048,9 +1048,9 @@
      "actual": 97902,
      "budget": null
     },
-    "policies": 93.1,
-    "comms": 73.0,
-    "training": 78.2
+    "policies": 93.3,
+    "comms": 74.4,
+    "training": 78.6
    },
    "Fish Market": {
     "hopperTemps": null,
@@ -1061,8 +1061,8 @@
      "actual": 73103,
      "budget": null
     },
-    "policies": 86.2,
-    "comms": 40.0,
+    "policies": 86.3,
+    "comms": 40.3,
     "training": 60.6
    },
    "Green Hills": {
