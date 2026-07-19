@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-07-18",
-  "generatedAt": "2026-07-19T16:00:27+00:00",
+  "generatedAt": "2026-07-19T19:11:36+00:00",
   "windows": "daily = 18 Jul · WTD = 13–18 Jul · MTD = 1–18 Jul",
   "venues": 27,
   "sources": {
@@ -58,7 +58,7 @@
     },
     "policies": 92.5,
     "comms": 79.1,
-    "training": 78.3
+    "training": 78.4
    },
    "Wollongong": {
     "hopperTemps": null,
@@ -90,13 +90,13 @@
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
      "actual": 17518,
      "budget": null
     },
     "policies": 97.2,
-    "comms": 87.6,
+    "comms": 87.8,
     "training": 92.9
    },
    "Circular Quay": {
@@ -110,7 +110,7 @@
     },
     "policies": 95.3,
     "comms": 76.8,
-    "training": 77.3
+    "training": 78.2
    },
    "Macquarie": {
     "hopperTemps": null,
@@ -134,7 +134,7 @@
      "actual": 16600,
      "budget": null
     },
-    "policies": 94.4,
+    "policies": 95.6,
     "comms": 77.8,
     "training": 89.0
    },
@@ -160,9 +160,9 @@
      "actual": 14416,
      "budget": null
     },
-    "policies": 94.5,
-    "comms": 76.4,
-    "training": 88.9
+    "policies": 93.0,
+    "comms": 73.8,
+    "training": 86.2
    },
    "Manly": {
     "hopperTemps": null,
@@ -207,13 +207,13 @@
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 16,
+    "reviews": 17,
     "sales": {
      "actual": 11618,
      "budget": null
     },
-    "policies": 91.8,
-    "comms": 72.5,
+    "policies": 92.6,
+    "comms": 73.1,
     "training": 84.2
    },
    "Bondi": {
@@ -246,7 +246,7 @@
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 5,
+    "reviews": 6,
     "sales": {
      "actual": 9791,
      "budget": null
@@ -304,7 +304,7 @@
      "budget": null
     },
     "policies": 93.1,
-    "comms": 67.5,
+    "comms": 67.9,
     "training": 77.8
    },
    "Double Bay": {
@@ -329,8 +329,8 @@
      "actual": 5473,
      "budget": null
     },
-    "policies": 96.7,
-    "comms": 81.6,
+    "policies": 97.0,
+    "comms": 82.5,
     "training": 72.2
    },
    "Crows Nest": {
@@ -356,19 +356,19 @@
      "budget": null
     },
     "policies": 86.3,
-    "comms": 40.3,
+    "comms": 41.4,
     "training": 60.6
    },
    "Green Hills": {
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 15777,
      "budget": null
     },
-    "policies": 94.7,
+    "policies": 95.3,
     "comms": 64.1,
     "training": 85.0
    }
@@ -411,7 +411,7 @@
     },
     "policies": 92.5,
     "comms": 79.1,
-    "training": 78.3
+    "training": 78.4
    },
    "Wollongong": {
     "hopperTemps": null,
@@ -443,13 +443,13 @@
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
      "actual": 84988,
      "budget": null
     },
     "policies": 97.2,
-    "comms": 87.6,
+    "comms": 87.8,
     "training": 92.9
    },
    "Circular Quay": {
@@ -463,7 +463,7 @@
     },
     "policies": 95.3,
     "comms": 76.8,
-    "training": 77.3
+    "training": 78.2
    },
    "Macquarie": {
     "hopperTemps": null,
@@ -487,7 +487,7 @@
      "actual": 77803,
      "budget": null
     },
-    "policies": 94.4,
+    "policies": 95.6,
     "comms": 77.8,
     "training": 89.0
    },
@@ -513,9 +513,9 @@
      "actual": 71850,
      "budget": null
     },
-    "policies": 94.5,
-    "comms": 76.4,
-    "training": 88.9
+    "policies": 93.0,
+    "comms": 73.8,
+    "training": 86.2
    },
    "Manly": {
     "hopperTemps": null,
@@ -560,13 +560,13 @@
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 16,
+    "reviews": 17,
     "sales": {
      "actual": 50560,
      "budget": null
     },
-    "policies": 91.8,
-    "comms": 72.5,
+    "policies": 92.6,
+    "comms": 73.1,
     "training": 84.2
    },
    "Bondi": {
@@ -599,7 +599,7 @@
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 5,
+    "reviews": 6,
     "sales": {
      "actual": 39922,
      "budget": null
@@ -657,7 +657,7 @@
      "budget": null
     },
     "policies": 93.1,
-    "comms": 67.5,
+    "comms": 67.9,
     "training": 77.8
    },
    "Double Bay": {
@@ -682,8 +682,8 @@
      "actual": 31088,
      "budget": null
     },
-    "policies": 96.7,
-    "comms": 81.6,
+    "policies": 97.0,
+    "comms": 82.5,
     "training": 72.2
    },
    "Crows Nest": {
@@ -709,19 +709,19 @@
      "budget": null
     },
     "policies": 86.3,
-    "comms": 40.3,
+    "comms": 41.4,
     "training": 60.6
    },
    "Green Hills": {
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 83090,
      "budget": null
     },
-    "policies": 94.7,
+    "policies": 95.3,
     "comms": 64.1,
     "training": 85.0
    }
@@ -764,7 +764,7 @@
     },
     "policies": 92.5,
     "comms": 79.1,
-    "training": 78.3
+    "training": 78.4
    },
    "Wollongong": {
     "hopperTemps": null,
@@ -796,13 +796,13 @@
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
      "actual": 249067,
      "budget": null
     },
     "policies": 97.2,
-    "comms": 87.6,
+    "comms": 87.8,
     "training": 92.9
    },
    "Circular Quay": {
@@ -816,7 +816,7 @@
     },
     "policies": 95.3,
     "comms": 76.8,
-    "training": 77.3
+    "training": 78.2
    },
    "Macquarie": {
     "hopperTemps": null,
@@ -840,7 +840,7 @@
      "actual": 226881,
      "budget": null
     },
-    "policies": 94.4,
+    "policies": 95.6,
     "comms": 77.8,
     "training": 89.0
    },
@@ -866,9 +866,9 @@
      "actual": 205116,
      "budget": null
     },
-    "policies": 94.5,
-    "comms": 76.4,
-    "training": 88.9
+    "policies": 93.0,
+    "comms": 73.8,
+    "training": 86.2
    },
    "Manly": {
     "hopperTemps": null,
@@ -913,13 +913,13 @@
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 16,
+    "reviews": 17,
     "sales": {
      "actual": 165286,
      "budget": null
     },
-    "policies": 91.8,
-    "comms": 72.5,
+    "policies": 92.6,
+    "comms": 73.1,
     "training": 84.2
    },
    "Bondi": {
@@ -952,7 +952,7 @@
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 5,
+    "reviews": 6,
     "sales": {
      "actual": 128470,
      "budget": null
@@ -1010,7 +1010,7 @@
      "budget": null
     },
     "policies": 93.1,
-    "comms": 67.5,
+    "comms": 67.9,
     "training": 77.8
    },
    "Double Bay": {
@@ -1035,8 +1035,8 @@
      "actual": 87650,
      "budget": null
     },
-    "policies": 96.7,
-    "comms": 81.6,
+    "policies": 97.0,
+    "comms": 82.5,
     "training": 72.2
    },
    "Crows Nest": {
@@ -1062,19 +1062,19 @@
      "budget": null
     },
     "policies": 86.3,
-    "comms": 40.3,
+    "comms": 41.4,
     "training": 60.6
    },
    "Green Hills": {
     "hopperTemps": null,
     "calibrations": null,
     "correctiveA": null,
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 250419,
      "budget": null
     },
-    "policies": 94.7,
+    "policies": 95.3,
     "comms": 64.1,
     "training": 85.0
    }
