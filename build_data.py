@@ -120,12 +120,18 @@ VENUES = [
 # permission change on that table then can't stall the whole refresh.
 _NSW_STORE_IN = ", ".join("'" + v[1].replace("'", "''") + "'" for v in VENUES)
 
-# Reusable-bowl 10% discount compliance (Polygon line items). A sale that rings up
-# any of these bowl tares should also carry the "Reusable 10% Off" discount line;
-# where it doesn't, staff missed applying the reusable discount.
+# Reusable-bowl discount compliance (Polygon line items). A sale that rings up any of
+# these bowl tares should carry the "Reusable 10% Off" discount line. Mitch's official
+# Polygon report only counts a sale as a MISS when it carried NO discount of any kind:
+# a bowl sale that was comped or discounted another way (Team Free Yo-Chi, Free Yo-Chi,
+# any LAM tier, vouchers, loyalty redemptions) is excluded, because a different discount
+# was legitimately applied instead of the 10%. Every discount line in Polygon lives in
+# the "POS Discounts" category, so that category is how we catch "any discount" without
+# hard-coding each promo name.
 REUSABLE_ITEMS = ("Go Bowl Tare", "RG Bowl Tare", "Icy Go Bowl Tare", "Co-Chi Bowl Tare")
 REUSABLE_DISCOUNT = "Reusable 10% Off"
-_REUSABLE_IN = ", ".join("'" + i + "'" for i in REUSABLE_ITEMS + (REUSABLE_DISCOUNT,))
+DISCOUNT_CATEGORY = "POS Discounts"
+_BOWLS_IN = ", ".join("'" + i.replace("'", "''") + "'" for i in REUSABLE_ITEMS)
 
 SQL = {
     # Anchor: the most recent day where (nearly) all NSW venues have sales —
@@ -138,20 +144,24 @@ SQL = {
         GROUP BY s.TxnDate
         HAVING COUNT(DISTINCT s.StoreName) >= 18
         ORDER BY s.TxnDate DESC""",
-    # Reusable-discount compliance: one row per reusable-bowl sale in the window,
-    # with the bowl used and whether the 10% discount was applied. Queried per venue
-    # (StoreName is the only fast filter on this huge line-item view — a multi-store
-    # scan times out). live_extract loops venues; each call stays well under 120s.
+    # Reusable-discount compliance: one row per reusable-bowl sale in the window, with
+    # the bowl used, whether the 10% reusable discount was applied, and whether ANY POS
+    # discount was applied. We keep only lines that are either a reusable bowl or a POS
+    # discount, group by sale, and keep sales that contain a bowl — so each sale is
+    # classified as got-10% / other-discount / no-discount. Queried per venue (StoreName
+    # is the only fast filter on this huge line-item view — a multi-store scan times
+    # out). live_extract loops venues; each call stays well under 120s.
     "discount_detail": f"""
         SELECT SaleID,
           MIN(TxnDate) txn_date, MIN(TxnTime) txn_time,
-          MAX(CASE WHEN PLUItem <> '{REUSABLE_DISCOUNT}' THEN PLUItem END) bowl,
-          MAX(CASE WHEN PLUItem = '{REUSABLE_DISCOUNT}' THEN 1 ELSE 0 END) discounted
+          MAX(CASE WHEN PLUItem IN ({_BOWLS_IN}) THEN PLUItem END) bowl,
+          MAX(CASE WHEN PLUItem = '{REUSABLE_DISCOUNT}' THEN 1 ELSE 0 END) got_10,
+          MAX(CASE WHEN CategoryName = '{DISCOUNT_CATEGORY}' THEN 1 ELSE 0 END) any_disc
         FROM PolygonRedcatSalesReport
         WHERE StoreName = :store AND TxnDate >= :winStart AND TxnDate <= :dailyDate
-          AND PLUItem IN ({_REUSABLE_IN})
+          AND ( PLUItem IN ({_BOWLS_IN}) OR CategoryName = '{DISCOUNT_CATEGORY}' )
         GROUP BY SaleID
-        HAVING MAX(CASE WHEN PLUItem <> '{REUSABLE_DISCOUNT}' THEN 1 ELSE 0 END) = 1""",
+        HAVING MAX(CASE WHEN PLUItem IN ({_BOWLS_IN}) THEN 1 ELSE 0 END) = 1""",
     # Net sales per store, keyed by StoreName only. The VENUES table below is the
     # authoritative NSW allow-list (live_extract picks the stores it needs), so we don't
     # depend on Venue_Master.Reporting here — that flag isn't set for newly-onboarded
@@ -637,12 +647,17 @@ _MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct',
 
 
 def compute_discounts(snap):
-    """Per-venue reusable-bowl 10% discount compliance over a trailing 7-day window.
+    """Per-venue reusable-bowl discount compliance for the calendar week to date
+    (Monday -> latest complete trading day), mirroring Mitch's Polygon "on or after
+    start of this week" filter. Each reusable-bowl sale is classified: got the 10%
+    reusable discount (compliant), got another POS discount instead (excluded, as his
+    report does), or carried no discount at all (a MISS). Compliance % is measured over
+    eligible sales only (compliant + missed), so comped/free sales don't dilute it.
     Queried one venue at a time (StoreName is the only fast filter on the big Polygon
     line-item view); each venue is wrapped so a slow or failed one is skipped rather
     than sinking the whole section. Returns None if nothing was retrievable."""
     end = snap["dailyDate"]
-    start = (_dt.date.fromisoformat(end) - _dt.timedelta(days=6)).isoformat()
+    start = snap["weekStart"]
     out = {}
     for display, sales_store, *_ in VENUES:
         try:
@@ -651,43 +666,49 @@ def compute_discounts(snap):
         except SystemExit as e:
             print(f"WARN  discounts unavailable for {display}: {str(e)[:120]}", file=sys.stderr)
             continue
-        discounted = sum(1 for r in rows if int(_num(r.get("discounted"))) == 1)
+        discounted = sum(1 for r in rows if int(_num(r.get("got_10"))) == 1)
+        other = sum(1 for r in rows
+                    if int(_num(r.get("got_10"))) == 0 and int(_num(r.get("any_disc"))) == 1)
         missed = sorted(
             ({"saleId": str(r.get("SaleID")), "date": str(r.get("txn_date"))[:10],
               "time": str(r.get("txn_time"))[:8], "bowl": r.get("bowl")}
-             for r in rows if int(_num(r.get("discounted"))) == 0),
+             for r in rows if int(_num(r.get("any_disc"))) == 0),
             key=lambda m: (m["date"], m["time"]))
-        out[display] = {"reusable": len(rows), "discounted": discounted, "missed": len(missed),
-                        "pct": round(100.0 * discounted / len(rows), 1) if rows else None,
+        eligible = discounted + len(missed)
+        out[display] = {"reusable": len(rows), "discounted": discounted, "otherDisc": other,
+                        "missed": len(missed),
+                        "pct": round(100.0 * discounted / eligible, 1) if eligible else None,
                         "missedList": missed}
     if not out:
         return None
     tr = sum(v["reusable"] for v in out.values())
     td = sum(v["discounted"] for v in out.values())
+    to = sum(v["otherDisc"] for v in out.values())
+    tm = sum(v["missed"] for v in out.values())
+    elig = td + tm
     d0, d1 = _dt.date.fromisoformat(start), _dt.date.fromisoformat(end)
     window = f"{d0.day} {_MONTHS[d0.month-1]} – {d1.day} {_MONTHS[d1.month-1]}"
     return {"metric": "Reusable bowl 10% discount", "items": list(REUSABLE_ITEMS),
             "discountName": REUSABLE_DISCOUNT, "windowStart": start, "windowEnd": end, "window": window,
-            "totals": {"reusable": tr, "discounted": td, "missed": tr - td,
-                       "pct": round(100.0 * td / tr, 1) if tr else None},
+            "totals": {"reusable": tr, "discounted": td, "otherDisc": to, "missed": tm,
+                       "pct": round(100.0 * td / elig, 1) if elig else None},
             "venues": out}
 
 
-# Offline sample for the Reusable Discounts tab (real Yo-Chi Burwood figures, 12–18 Jul);
-# live mode replaces this with all venues via compute_discounts().
+# Offline sample for the Reusable Discounts tab (real Yo-Chi Burwood figures, calendar
+# week 13–19 Jul; matches Mitch's official Polygon report: 4 missed). Live mode replaces
+# this with all venues via compute_discounts().
 DISCOUNT_FIXTURE = {
     "metric": "Reusable bowl 10% discount", "items": list(REUSABLE_ITEMS),
-    "discountName": REUSABLE_DISCOUNT, "windowStart": "2026-07-12", "windowEnd": "2026-07-18",
-    "window": "12 Jul – 18 Jul",
-    "totals": {"reusable": 77, "discounted": 25, "missed": 52, "pct": 32.5},
+    "discountName": REUSABLE_DISCOUNT, "windowStart": "2026-07-13", "windowEnd": "2026-07-19",
+    "window": "13 Jul – 19 Jul",
+    "totals": {"reusable": 76, "discounted": 26, "otherDisc": 46, "missed": 4, "pct": 86.7},
     "venues": {
-        "Burwood": {"reusable": 77, "discounted": 25, "missed": 52, "pct": 32.5, "missedList": [
-            {"saleId": "114219284", "date": "2026-07-12", "time": "13:33:54", "bowl": "Go Bowl Tare"},
-            {"saleId": "114219413", "date": "2026-07-12", "time": "15:09:54", "bowl": "Icy Go Bowl Tare"},
-            {"saleId": "115219470", "date": "2026-07-12", "time": "15:52:49", "bowl": "Icy Go Bowl Tare"},
-            {"saleId": "114219499", "date": "2026-07-12", "time": "16:15:09", "bowl": "Go Bowl Tare"},
-            {"saleId": "114219708", "date": "2026-07-12", "time": "19:05:23", "bowl": "Go Bowl Tare"},
-            {"saleId": "114219890", "date": "2026-07-12", "time": "21:22:01", "bowl": "Go Bowl Tare"},
+        "Burwood": {"reusable": 76, "discounted": 26, "otherDisc": 46, "missed": 4, "pct": 86.7, "missedList": [
+            {"saleId": "115220135", "date": "2026-07-13", "time": "13:59:37", "bowl": "Icy Go Bowl Tare"},
+            {"saleId": "115220155", "date": "2026-07-13", "time": "14:17:26", "bowl": "Icy Go Bowl Tare"},
+            {"saleId": "115221326", "date": "2026-07-14", "time": "19:31:05", "bowl": "Icy Go Bowl Tare"},
+            {"saleId": "114221327", "date": "2026-07-14", "time": "19:31:06", "bowl": "Icy Go Bowl Tare"},
         ]},
     },
 }
