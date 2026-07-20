@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-07-19",
-  "generatedAt": "2026-07-20T20:22:44+00:00",
+  "generatedAt": "2026-07-20T22:53:04+00:00",
   "windows": "daily = 19 Jul · WTD = 13–19 Jul · MTD = 1–19 Jul",
   "venues": 27,
   "sources": {
@@ -1942,5 +1942,593 @@
     ]
    }
   }
+ },
+ "discountsLive": {
+  "metric": "Reusable bowl 10% discount",
+  "items": [
+   "Go Bowl Tare",
+   "RG Bowl Tare",
+   "Icy Go Bowl Tare",
+   "Co-Chi Bowl Tare"
+  ],
+  "discountName": "Reusable 10% Off",
+  "windowStart": "2026-07-13",
+  "windowEnd": "2026-07-19",
+  "window": "13 Jul – 19 Jul",
+  "totals": {
+   "reusable": 1536,
+   "discounted": 558,
+   "otherDisc": 923,
+   "missed": 55,
+   "pct": 91.0
+  },
+  "venues": {
+   "George St": {
+    "reusable": 83,
+    "discounted": 24,
+    "otherDisc": 57,
+    "missed": 2,
+    "pct": 92.3,
+    "missedList": [
+     {
+      "saleId": "103493212",
+      "date": "2026-07-18",
+      "time": "19:37:29",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "103494656",
+      "date": "2026-07-19",
+      "time": "17:19:58",
+      "bowl": "Icy Go Bowl Tare"
+     }
+    ]
+   },
+   "Erina Fair": {
+    "reusable": 74,
+    "discounted": 46,
+    "otherDisc": 23,
+    "missed": 5,
+    "pct": 90.2,
+    "missedList": [
+     {
+      "saleId": "105125613",
+      "date": "2026-07-16",
+      "time": "13:22:22",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106126745",
+      "date": "2026-07-17",
+      "time": "11:27:29",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106130497",
+      "date": "2026-07-19",
+      "time": "19:45:56",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106130498",
+      "date": "2026-07-19",
+      "time": "19:46:17",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106130674",
+      "date": "2026-07-19",
+      "time": "21:39:06",
+      "bowl": "Icy Go Bowl Tare"
+     }
+    ]
+   },
+   "Barangaroo": {
+    "reusable": 59,
+    "discounted": 18,
+    "otherDisc": 40,
+    "missed": 1,
+    "pct": 94.7,
+    "missedList": [
+     {
+      "saleId": "73549426",
+      "date": "2026-07-14",
+      "time": "19:30:46",
+      "bowl": "Go Bowl Tare"
+     }
+    ]
+   },
+   "Wollongong": {
+    "reusable": 85,
+    "discounted": 27,
+    "otherDisc": 57,
+    "missed": 1,
+    "pct": 96.4,
+    "missedList": [
+     {
+      "saleId": "105306203",
+      "date": "2026-07-16",
+      "time": "15:17:34",
+      "bowl": "Icy Go Bowl Tare"
+     }
+    ]
+   },
+   "Charlestown": {
+    "reusable": 100,
+    "discounted": 17,
+    "otherDisc": 79,
+    "missed": 4,
+    "pct": 81.0,
+    "missedList": [
+     {
+      "saleId": "106241275",
+      "date": "2026-07-13",
+      "time": "18:42:53",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106245954",
+      "date": "2026-07-17",
+      "time": "20:32:51",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "106246330",
+      "date": "2026-07-18",
+      "time": "13:06:38",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106247041",
+      "date": "2026-07-18",
+      "time": "19:51:18",
+      "bowl": "RG Bowl Tare"
+     }
+    ]
+   },
+   "Rouse Hill": {
+    "reusable": 86,
+    "discounted": 29,
+    "otherDisc": 52,
+    "missed": 5,
+    "pct": 85.3,
+    "missedList": [
+     {
+      "saleId": "120211358",
+      "date": "2026-07-13",
+      "time": "21:43:00",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "120211382",
+      "date": "2026-07-13",
+      "time": "22:00:54",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "121212194",
+      "date": "2026-07-14",
+      "time": "20:41:33",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "120212362",
+      "date": "2026-07-14",
+      "time": "22:08:38",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "120216754",
+      "date": "2026-07-19",
+      "time": "14:51:43",
+      "bowl": "Co-Chi Bowl Tare"
+     }
+    ]
+   },
+   "Circular Quay": {
+    "reusable": 59,
+    "discounted": 15,
+    "otherDisc": 44,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Macquarie": {
+    "reusable": 69,
+    "discounted": 28,
+    "otherDisc": 38,
+    "missed": 3,
+    "pct": 90.3,
+    "missedList": [
+     {
+      "saleId": "33442820",
+      "date": "2026-07-14",
+      "time": "20:44:04",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "33445912",
+      "date": "2026-07-17",
+      "time": "20:33:51",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "32446820",
+      "date": "2026-07-18",
+      "time": "19:04:09",
+      "bowl": "Go Bowl Tare"
+     }
+    ]
+   },
+   "Castle Towers": {
+    "reusable": 61,
+    "discounted": 22,
+    "otherDisc": 37,
+    "missed": 2,
+    "pct": 91.7,
+    "missedList": [
+     {
+      "saleId": "116209927",
+      "date": "2026-07-14",
+      "time": "19:03:50",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "116215344",
+      "date": "2026-07-19",
+      "time": "22:30:11",
+      "bowl": "Go Bowl Tare"
+     }
+    ]
+   },
+   "Burwood": {
+    "reusable": 76,
+    "discounted": 26,
+    "otherDisc": 46,
+    "missed": 4,
+    "pct": 86.7,
+    "missedList": [
+     {
+      "saleId": "115220135",
+      "date": "2026-07-13",
+      "time": "13:59:37",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "115220155",
+      "date": "2026-07-13",
+      "time": "14:17:26",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "115221326",
+      "date": "2026-07-14",
+      "time": "19:31:05",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "114221327",
+      "date": "2026-07-14",
+      "time": "19:31:06",
+      "bowl": "Icy Go Bowl Tare"
+     }
+    ]
+   },
+   "Penrith": {
+    "reusable": 49,
+    "discounted": 25,
+    "otherDisc": 21,
+    "missed": 3,
+    "pct": 89.3,
+    "missedList": [
+     {
+      "saleId": "72321857",
+      "date": "2026-07-17",
+      "time": "20:31:29",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "72322628",
+      "date": "2026-07-18",
+      "time": "18:21:46",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "72323820",
+      "date": "2026-07-19",
+      "time": "21:08:26",
+      "bowl": "Icy Go Bowl Tare"
+     }
+    ]
+   },
+   "Manly": {
+    "reusable": 64,
+    "discounted": 27,
+    "otherDisc": 36,
+    "missed": 1,
+    "pct": 96.4,
+    "missedList": [
+     {
+      "saleId": "43401391",
+      "date": "2026-07-17",
+      "time": "16:10:56",
+      "bowl": "Go Bowl Tare"
+     }
+    ]
+   },
+   "Chatswood": {
+    "reusable": 77,
+    "discounted": 20,
+    "otherDisc": 56,
+    "missed": 1,
+    "pct": 95.2,
+    "missedList": [
+     {
+      "saleId": "108057980",
+      "date": "2026-07-16",
+      "time": "19:35:55",
+      "bowl": "Go Bowl Tare"
+     }
+    ]
+   },
+   "Cronulla": {
+    "reusable": 48,
+    "discounted": 14,
+    "otherDisc": 34,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Newtown": {
+    "reusable": 81,
+    "discounted": 34,
+    "otherDisc": 47,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Bondi": {
+    "reusable": 45,
+    "discounted": 7,
+    "otherDisc": 38,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Coogee": {
+    "reusable": 49,
+    "discounted": 11,
+    "otherDisc": 36,
+    "missed": 2,
+    "pct": 84.6,
+    "missedList": [
+     {
+      "saleId": "69351431",
+      "date": "2026-07-14",
+      "time": "14:49:51",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "70353264",
+      "date": "2026-07-18",
+      "time": "13:20:00",
+      "bowl": "Go Bowl Tare"
+     }
+    ]
+   },
+   "Surry Hills": {
+    "reusable": 60,
+    "discounted": 20,
+    "otherDisc": 39,
+    "missed": 1,
+    "pct": 95.2,
+    "missedList": [
+     {
+      "saleId": "14344615",
+      "date": "2026-07-15",
+      "time": "17:43:04",
+      "bowl": "Go Bowl Tare"
+     }
+    ]
+   },
+   "Top Ryde": {
+    "reusable": 40,
+    "discounted": 15,
+    "otherDisc": 24,
+    "missed": 1,
+    "pct": 93.8,
+    "missedList": [
+     {
+      "saleId": "84173766",
+      "date": "2026-07-18",
+      "time": "14:48:08",
+      "bowl": "Icy Go Bowl Tare"
+     }
+    ]
+   },
+   "Randwick": {
+    "reusable": 38,
+    "discounted": 16,
+    "otherDisc": 22,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Bondi Junction": {
+    "reusable": 25,
+    "discounted": 9,
+    "otherDisc": 16,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Lane Cove": {
+    "reusable": 23,
+    "discounted": 16,
+    "otherDisc": 7,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Double Bay": {
+    "reusable": 19,
+    "discounted": 10,
+    "otherDisc": 9,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Chippendale": {
+    "reusable": 36,
+    "discounted": 15,
+    "otherDisc": 20,
+    "missed": 1,
+    "pct": 93.8,
+    "missedList": [
+     {
+      "saleId": "125142670",
+      "date": "2026-07-15",
+      "time": "19:56:19",
+      "bowl": "Icy Go Bowl Tare"
+     }
+    ]
+   },
+   "Crows Nest": {
+    "reusable": 50,
+    "discounted": 27,
+    "otherDisc": 20,
+    "missed": 3,
+    "pct": 90.0,
+    "missedList": [
+     {
+      "saleId": "142039329",
+      "date": "2026-07-14",
+      "time": "18:31:39",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "142039351",
+      "date": "2026-07-14",
+      "time": "19:14:26",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "141040603",
+      "date": "2026-07-17",
+      "time": "21:28:01",
+      "bowl": "Icy Go Bowl Tare"
+     }
+    ]
+   },
+   "Fish Market": {
+    "reusable": 14,
+    "discounted": 6,
+    "otherDisc": 7,
+    "missed": 1,
+    "pct": 85.7,
+    "missedList": [
+     {
+      "saleId": "143012549",
+      "date": "2026-07-14",
+      "time": "20:29:51",
+      "bowl": "Icy Go Bowl Tare"
+     }
+    ]
+   },
+   "Green Hills": {
+    "reusable": 66,
+    "discounted": 34,
+    "otherDisc": 18,
+    "missed": 14,
+    "pct": 70.8,
+    "missedList": [
+     {
+      "saleId": "105034262",
+      "date": "2026-07-13",
+      "time": "18:01:51",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105034263",
+      "date": "2026-07-13",
+      "time": "18:02:28",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105034273",
+      "date": "2026-07-13",
+      "time": "18:16:11",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105034276",
+      "date": "2026-07-13",
+      "time": "18:18:48",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105034315",
+      "date": "2026-07-13",
+      "time": "19:03:17",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105035658",
+      "date": "2026-07-15",
+      "time": "14:47:15",
+      "bowl": "Co-Chi Bowl Tare"
+     },
+     {
+      "saleId": "105036391",
+      "date": "2026-07-16",
+      "time": "13:06:12",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105037514",
+      "date": "2026-07-17",
+      "time": "14:01:40",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106037999",
+      "date": "2026-07-17",
+      "time": "19:57:07",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105038921",
+      "date": "2026-07-18",
+      "time": "18:53:08",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105038962",
+      "date": "2026-07-18",
+      "time": "19:18:50",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105039403",
+      "date": "2026-07-19",
+      "time": "13:14:06",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105039599",
+      "date": "2026-07-19",
+      "time": "15:21:52",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105039919",
+      "date": "2026-07-19",
+      "time": "19:41:07",
+      "bowl": "Icy Go Bowl Tare"
+     }
+    ]
+   }
+  },
+  "live": true
  }
 }
