@@ -1,8 +1,8 @@
 {
  "meta": {
-  "reportDate": "2026-07-18",
-  "generatedAt": "2026-07-20T04:07:40+00:00",
-  "windows": "daily = 18 Jul · WTD = 13–18 Jul · MTD = 1–18 Jul",
+  "reportDate": "2026-07-19",
+  "generatedAt": "2026-07-20T14:16:18+00:00",
+  "windows": "daily = 19 Jul · WTD = 13–19 Jul · MTD = 1–19 Jul",
   "venues": 27,
   "sources": {
    "Sales": "snapshot",
@@ -25,9 +25,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 9,
     "sales": {
-     "actual": 22936,
+     "actual": 18678,
      "budget": null
     },
     "labour": {
@@ -44,7 +44,7 @@
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 20825,
+     "actual": 17406,
      "budget": null
     },
     "policies": 93.8,
@@ -55,13 +55,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 12,
     "sales": {
-     "actual": 22858,
+     "actual": 16651,
      "budget": null
     },
     "labour": {
-     "pct": 16.4,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 92.5,
@@ -74,7 +74,7 @@
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 20250,
+     "actual": 15869,
      "budget": null
     },
     "policies": 94.3,
@@ -87,7 +87,7 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 16973,
+     "actual": 15161,
      "budget": null
     },
     "policies": 96.5,
@@ -100,11 +100,11 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 17518,
+     "actual": 16221,
      "budget": null
     },
     "labour": {
-     "pct": 14.0,
+     "pct": 13.8,
      "budgetPct": null
     },
     "policies": 97.2,
@@ -115,13 +115,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 10,
     "sales": {
-     "actual": 16022,
+     "actual": 14325,
      "budget": null
     },
     "labour": {
-     "pct": 15.1,
+     "pct": 15.0,
      "budgetPct": null
     },
     "policies": 95.3,
@@ -132,13 +132,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
-     "actual": 13851,
+     "actual": 12034,
      "budget": null
     },
     "labour": {
-     "pct": 14.0,
+     "pct": 13.9,
      "budgetPct": null
     },
     "policies": 98.0,
@@ -149,13 +149,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 12,
     "sales": {
-     "actual": 16600,
+     "actual": 14998,
      "budget": null
     },
     "labour": {
-     "pct": 14.2,
+     "pct": 14.1,
      "budgetPct": null
     },
     "policies": 95.6,
@@ -165,14 +165,14 @@
    "Burwood": {
     "hopperTemps": 4,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 6,
+    "correctiveA": "ok",
+    "reviews": 11,
     "sales": {
-     "actual": 13141,
+     "actual": 12658,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 15.5,
      "budgetPct": null
     },
     "policies": 98.0,
@@ -185,11 +185,11 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 14416,
+     "actual": 12659,
      "budget": null
     },
     "labour": {
-     "pct": 13.9,
+     "pct": 13.8,
      "budgetPct": null
     },
     "policies": 93.0,
@@ -198,15 +198,15 @@
    },
    "Manly": {
     "hopperTemps": 3,
-    "calibrations": "missed",
-    "correctiveA": "ok",
+    "calibrations": "complete",
+    "correctiveA": "none",
     "reviews": 7,
     "sales": {
-     "actual": 15000,
+     "actual": 13756,
      "budget": null
     },
     "labour": {
-     "pct": 14.9,
+     "pct": 14.8,
      "budgetPct": null
     },
     "policies": 95.2,
@@ -217,13 +217,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 21,
+    "reviews": 30,
     "sales": {
-     "actual": 11523,
+     "actual": 10951,
      "budget": null
     },
     "labour": {
-     "pct": 16.5,
+     "pct": 16.6,
      "budgetPct": null
     },
     "policies": 94.2,
@@ -234,13 +234,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 13,
     "sales": {
-     "actual": 14997,
+     "actual": 13638,
      "budget": null
     },
     "labour": {
-     "pct": 16.8,
+     "pct": 16.7,
      "budgetPct": null
     },
     "policies": 97.6,
@@ -253,11 +253,11 @@
     "correctiveA": "none",
     "reviews": 17,
     "sales": {
-     "actual": 11618,
+     "actual": 9617,
      "budget": null
     },
     "labour": {
-     "pct": 19.2,
+     "pct": 19.0,
      "budgetPct": null
     },
     "policies": 92.6,
@@ -270,11 +270,11 @@
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 10870,
+     "actual": 11796,
      "budget": null
     },
     "labour": {
-     "pct": 18.3,
+     "pct": 17.9,
      "budgetPct": null
     },
     "policies": 90.5,
@@ -285,13 +285,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 10,
     "sales": {
-     "actual": 9226,
+     "actual": 11005,
      "budget": null
     },
     "labour": {
-     "pct": 19.3,
+     "pct": 18.9,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -300,15 +300,15 @@
    },
    "Surry Hills": {
     "hopperTemps": 3,
-    "calibrations": "complete",
+    "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
-     "actual": 9791,
+     "actual": 8485,
      "budget": null
     },
     "labour": {
-     "pct": 20.4,
+     "pct": 20.3,
      "budgetPct": null
     },
     "policies": 89.7,
@@ -317,15 +317,15 @@
    },
    "Top Ryde": {
     "hopperTemps": 3,
-    "calibrations": "complete",
+    "calibrations": "missed",
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 7031,
+     "actual": 6711,
      "budget": null
     },
     "labour": {
-     "pct": 18.0,
+     "pct": 17.7,
      "budgetPct": null
     },
     "policies": 97.3,
@@ -333,16 +333,16 @@
     "training": 89.7
    },
    "Randwick": {
-    "hopperTemps": 3,
+    "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
-     "actual": 5981,
+     "actual": 6001,
      "budget": null
     },
     "labour": {
-     "pct": 19.4,
+     "pct": 19.6,
      "budgetPct": null
     },
     "policies": 83.5,
@@ -352,14 +352,14 @@
    "Bondi Junction": {
     "hopperTemps": 3,
     "calibrations": "complete",
-    "correctiveA": "ok",
+    "correctiveA": "none",
     "reviews": 13,
     "sales": {
-     "actual": 5219,
+     "actual": 5537,
      "budget": null
     },
     "labour": {
-     "pct": 18.1,
+     "pct": 18.2,
      "budgetPct": null
     },
     "policies": 96.9,
@@ -372,11 +372,11 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 5059,
+     "actual": 4871,
      "budget": null
     },
     "labour": {
-     "pct": 24.7,
+     "pct": 24.5,
      "budgetPct": null
     },
     "policies": 93.1,
@@ -385,15 +385,15 @@
    },
    "Double Bay": {
     "hopperTemps": 3,
-    "calibrations": "missed",
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 0,
     "sales": {
-     "actual": 4502,
+     "actual": 5151,
      "budget": null
     },
     "labour": {
-     "pct": 21.4,
+     "pct": 21.3,
      "budgetPct": null
     },
     "policies": 88.1,
@@ -401,16 +401,16 @@
     "training": 71.6
    },
    "Chippendale": {
-    "hopperTemps": 3,
-    "calibrations": "complete",
+    "hopperTemps": 4,
+    "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
-     "actual": 5473,
+     "actual": 4745,
      "budget": null
     },
     "labour": {
-     "pct": 18.1,
+     "pct": 18.3,
      "budgetPct": null
     },
     "policies": 97.0,
@@ -423,11 +423,11 @@
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 7502,
+     "actual": 7063,
      "budget": null
     },
     "labour": {
-     "pct": 18.9,
+     "pct": 18.7,
      "budgetPct": null
     },
     "policies": 93.3,
@@ -435,16 +435,16 @@
     "training": 78.6
    },
    "Fish Market": {
-    "hopperTemps": 4,
+    "hopperTemps": 3,
     "calibrations": "complete",
-    "correctiveA": "none",
+    "correctiveA": "ok",
     "reviews": 4,
     "sales": {
-     "actual": 6526,
+     "actual": 5854,
      "budget": null
     },
     "labour": {
-     "pct": 23.3,
+     "pct": 22.9,
      "budgetPct": null
     },
     "policies": 86.3,
@@ -457,7 +457,7 @@
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 15777,
+     "actual": 13852,
      "budget": null
     },
     "policies": 95.3,
@@ -470,9 +470,9 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 9,
     "sales": {
-     "actual": 119848,
+     "actual": 138526,
      "budget": null
     },
     "labour": {
@@ -489,7 +489,7 @@
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 105189,
+     "actual": 122595,
      "budget": null
     },
     "policies": 93.8,
@@ -497,16 +497,16 @@
     "training": 87.2
    },
    "Barangaroo": {
-    "hopperTemps": 20,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 12,
     "sales": {
-     "actual": 92525,
+     "actual": 109176,
      "budget": null
     },
     "labour": {
-     "pct": 16.4,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 92.5,
@@ -514,12 +514,12 @@
     "training": 78.4
    },
    "Wollongong": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 92109,
+     "actual": 107978,
      "budget": null
     },
     "policies": 94.3,
@@ -527,12 +527,12 @@
     "training": 79.0
    },
    "Charlestown": {
-    "hopperTemps": 18,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 90179,
+     "actual": 105340,
      "budget": null
     },
     "policies": 96.5,
@@ -545,11 +545,11 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 84988,
+     "actual": 101210,
      "budget": null
     },
     "labour": {
-     "pct": 14.0,
+     "pct": 13.8,
      "budgetPct": null
     },
     "policies": 97.2,
@@ -557,16 +557,16 @@
     "training": 92.9
    },
    "Circular Quay": {
-    "hopperTemps": 24,
+    "hopperTemps": 22,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 10,
     "sales": {
-     "actual": 70944,
+     "actual": 85269,
      "budget": null
     },
     "labour": {
-     "pct": 15.1,
+     "pct": 15.0,
      "budgetPct": null
     },
     "policies": 95.3,
@@ -574,16 +574,16 @@
     "training": 78.2
    },
    "Macquarie": {
-    "hopperTemps": 18,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
-     "actual": 74399,
+     "actual": 86433,
      "budget": null
     },
     "labour": {
-     "pct": 14.0,
+     "pct": 13.9,
      "budgetPct": null
     },
     "policies": 98.0,
@@ -594,13 +594,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 12,
     "sales": {
-     "actual": 77803,
+     "actual": 92800,
      "budget": null
     },
     "labour": {
-     "pct": 14.2,
+     "pct": 14.1,
      "budgetPct": null
     },
     "policies": 95.6,
@@ -608,16 +608,16 @@
     "training": 89.0
    },
    "Burwood": {
-    "hopperTemps": 29,
+    "hopperTemps": 25,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 6,
+    "correctiveA": "ok",
+    "reviews": 11,
     "sales": {
-     "actual": 68609,
+     "actual": 81267,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 15.5,
      "budgetPct": null
     },
     "policies": 98.0,
@@ -625,16 +625,16 @@
     "training": 87.4
    },
    "Penrith": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 71850,
+     "actual": 84509,
      "budget": null
     },
     "labour": {
-     "pct": 13.9,
+     "pct": 13.8,
      "budgetPct": null
     },
     "policies": 93.0,
@@ -642,16 +642,16 @@
     "training": 86.2
    },
    "Manly": {
-    "hopperTemps": 18,
-    "calibrations": "missed",
-    "correctiveA": "ok",
+    "hopperTemps": 20,
+    "calibrations": "complete",
+    "correctiveA": "none",
     "reviews": 7,
     "sales": {
-     "actual": 67910,
+     "actual": 81666,
      "budget": null
     },
     "labour": {
-     "pct": 14.9,
+     "pct": 14.8,
      "budgetPct": null
     },
     "policies": 95.2,
@@ -662,13 +662,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 21,
+    "reviews": 30,
     "sales": {
-     "actual": 56807,
+     "actual": 67758,
      "budget": null
     },
     "labour": {
-     "pct": 16.5,
+     "pct": 16.6,
      "budgetPct": null
     },
     "policies": 94.2,
@@ -679,13 +679,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 13,
     "sales": {
-     "actual": 60902,
+     "actual": 74540,
      "budget": null
     },
     "labour": {
-     "pct": 16.8,
+     "pct": 16.7,
      "budgetPct": null
     },
     "policies": 97.6,
@@ -693,16 +693,16 @@
     "training": 86.8
    },
    "Newtown": {
-    "hopperTemps": 27,
+    "hopperTemps": 25,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 17,
     "sales": {
-     "actual": 50560,
+     "actual": 60177,
      "budget": null
     },
     "labour": {
-     "pct": 19.2,
+     "pct": 19.0,
      "budgetPct": null
     },
     "policies": 92.6,
@@ -710,16 +710,16 @@
     "training": 84.2
    },
    "Bondi": {
-    "hopperTemps": 21,
+    "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 45217,
+     "actual": 57014,
      "budget": null
     },
     "labour": {
-     "pct": 18.3,
+     "pct": 17.9,
      "budgetPct": null
     },
     "policies": 90.5,
@@ -727,16 +727,16 @@
     "training": 65.4
    },
    "Coogee": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 10,
     "sales": {
-     "actual": 42768,
+     "actual": 53772,
      "budget": null
     },
     "labour": {
-     "pct": 19.3,
+     "pct": 18.9,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -744,16 +744,16 @@
     "training": 92.1
    },
    "Surry Hills": {
-    "hopperTemps": 23,
-    "calibrations": "complete",
+    "hopperTemps": 24,
+    "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
-     "actual": 39922,
+     "actual": 48407,
      "budget": null
     },
     "labour": {
-     "pct": 20.4,
+     "pct": 20.3,
      "budgetPct": null
     },
     "policies": 89.7,
@@ -762,15 +762,15 @@
    },
    "Top Ryde": {
     "hopperTemps": 20,
-    "calibrations": "complete",
+    "calibrations": "missed",
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 32334,
+     "actual": 39045,
      "budget": null
     },
     "labour": {
-     "pct": 18.0,
+     "pct": 17.7,
      "budgetPct": null
     },
     "policies": 97.3,
@@ -778,16 +778,16 @@
     "training": 89.7
    },
    "Randwick": {
-    "hopperTemps": 23,
+    "hopperTemps": 26,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
-     "actual": 28843,
+     "actual": 34844,
      "budget": null
     },
     "labour": {
-     "pct": 19.4,
+     "pct": 19.6,
      "budgetPct": null
     },
     "policies": 83.5,
@@ -795,16 +795,16 @@
     "training": 63.8
    },
    "Bondi Junction": {
-    "hopperTemps": 20,
+    "hopperTemps": 22,
     "calibrations": "complete",
-    "correctiveA": "ok",
+    "correctiveA": "none",
     "reviews": 13,
     "sales": {
-     "actual": 26946,
+     "actual": 32483,
      "budget": null
     },
     "labour": {
-     "pct": 18.1,
+     "pct": 18.2,
      "budgetPct": null
     },
     "policies": 96.9,
@@ -812,16 +812,16 @@
     "training": 86.9
    },
    "Lane Cove": {
-    "hopperTemps": 20,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 24875,
+     "actual": 29746,
      "budget": null
     },
     "labour": {
-     "pct": 24.7,
+     "pct": 24.5,
      "budgetPct": null
     },
     "policies": 93.1,
@@ -830,15 +830,15 @@
    },
    "Double Bay": {
     "hopperTemps": 19,
-    "calibrations": "missed",
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 0,
     "sales": {
-     "actual": 22133,
+     "actual": 27284,
      "budget": null
     },
     "labour": {
-     "pct": 21.4,
+     "pct": 21.3,
      "budgetPct": null
     },
     "policies": 88.1,
@@ -846,16 +846,16 @@
     "training": 71.6
    },
    "Chippendale": {
-    "hopperTemps": 23,
-    "calibrations": "complete",
+    "hopperTemps": 27,
+    "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
-     "actual": 31088,
+     "actual": 35833,
      "budget": null
     },
     "labour": {
-     "pct": 18.1,
+     "pct": 18.3,
      "budgetPct": null
     },
     "policies": 97.0,
@@ -868,11 +868,11 @@
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 31299,
+     "actual": 38362,
      "budget": null
     },
     "labour": {
-     "pct": 18.9,
+     "pct": 18.7,
      "budgetPct": null
     },
     "policies": 93.3,
@@ -880,16 +880,16 @@
     "training": 78.6
    },
    "Fish Market": {
-    "hopperTemps": 25,
+    "hopperTemps": 24,
     "calibrations": "complete",
-    "correctiveA": "none",
+    "correctiveA": "ok",
     "reviews": 4,
     "sales": {
-     "actual": 24103,
+     "actual": 29957,
      "budget": null
     },
     "labour": {
-     "pct": 23.3,
+     "pct": 22.9,
      "budgetPct": null
     },
     "policies": 86.3,
@@ -902,7 +902,7 @@
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 83090,
+     "actual": 96942,
      "budget": null
     },
     "policies": 95.3,
@@ -915,9 +915,9 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 9,
     "sales": {
-     "actual": 353431,
+     "actual": 372109,
      "budget": null
     },
     "labour": {
@@ -934,7 +934,7 @@
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 299567,
+     "actual": 316973,
      "budget": null
     },
     "policies": 93.8,
@@ -942,16 +942,16 @@
     "training": 87.2
    },
    "Barangaroo": {
-    "hopperTemps": 20,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 12,
     "sales": {
-     "actual": 280336,
+     "actual": 296987,
      "budget": null
     },
     "labour": {
-     "pct": 16.4,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 92.5,
@@ -959,12 +959,12 @@
     "training": 78.4
    },
    "Wollongong": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 270836,
+     "actual": 286705,
      "budget": null
     },
     "policies": 94.3,
@@ -972,12 +972,12 @@
     "training": 79.0
    },
    "Charlestown": {
-    "hopperTemps": 18,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 263647,
+     "actual": 278808,
      "budget": null
     },
     "policies": 96.5,
@@ -990,11 +990,11 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 249067,
+     "actual": 265288,
      "budget": null
     },
     "labour": {
-     "pct": 14.0,
+     "pct": 13.8,
      "budgetPct": null
     },
     "policies": 97.2,
@@ -1002,16 +1002,16 @@
     "training": 92.9
    },
    "Circular Quay": {
-    "hopperTemps": 24,
+    "hopperTemps": 22,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 10,
     "sales": {
-     "actual": 219655,
+     "actual": 233980,
      "budget": null
     },
     "labour": {
-     "pct": 15.1,
+     "pct": 15.0,
      "budgetPct": null
     },
     "policies": 95.3,
@@ -1019,16 +1019,16 @@
     "training": 78.2
    },
    "Macquarie": {
-    "hopperTemps": 18,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
-     "actual": 218369,
+     "actual": 230403,
      "budget": null
     },
     "labour": {
-     "pct": 14.0,
+     "pct": 13.9,
      "budgetPct": null
     },
     "policies": 98.0,
@@ -1039,13 +1039,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 12,
     "sales": {
-     "actual": 226881,
+     "actual": 241878,
      "budget": null
     },
     "labour": {
-     "pct": 14.2,
+     "pct": 14.1,
      "budgetPct": null
     },
     "policies": 95.6,
@@ -1053,16 +1053,16 @@
     "training": 89.0
    },
    "Burwood": {
-    "hopperTemps": 29,
+    "hopperTemps": 25,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 6,
+    "correctiveA": "ok",
+    "reviews": 11,
     "sales": {
-     "actual": 206472,
+     "actual": 219130,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 15.5,
      "budgetPct": null
     },
     "policies": 98.0,
@@ -1070,16 +1070,16 @@
     "training": 87.4
    },
    "Penrith": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 205116,
+     "actual": 217775,
      "budget": null
     },
     "labour": {
-     "pct": 13.9,
+     "pct": 13.8,
      "budgetPct": null
     },
     "policies": 93.0,
@@ -1087,16 +1087,16 @@
     "training": 86.2
    },
    "Manly": {
-    "hopperTemps": 18,
-    "calibrations": "missed",
-    "correctiveA": "ok",
+    "hopperTemps": 20,
+    "calibrations": "complete",
+    "correctiveA": "none",
     "reviews": 7,
     "sales": {
-     "actual": 199594,
+     "actual": 213350,
      "budget": null
     },
     "labour": {
-     "pct": 14.9,
+     "pct": 14.8,
      "budgetPct": null
     },
     "policies": 95.2,
@@ -1107,13 +1107,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 21,
+    "reviews": 30,
     "sales": {
-     "actual": 177396,
+     "actual": 188347,
      "budget": null
     },
     "labour": {
-     "pct": 16.5,
+     "pct": 16.6,
      "budgetPct": null
     },
     "policies": 94.2,
@@ -1124,13 +1124,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 13,
     "sales": {
-     "actual": 182633,
+     "actual": 196271,
      "budget": null
     },
     "labour": {
-     "pct": 16.8,
+     "pct": 16.7,
      "budgetPct": null
     },
     "policies": 97.6,
@@ -1138,16 +1138,16 @@
     "training": 86.8
    },
    "Newtown": {
-    "hopperTemps": 27,
+    "hopperTemps": 25,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 17,
     "sales": {
-     "actual": 165286,
+     "actual": 174903,
      "budget": null
     },
     "labour": {
-     "pct": 19.2,
+     "pct": 19.0,
      "budgetPct": null
     },
     "policies": 92.6,
@@ -1155,16 +1155,16 @@
     "training": 84.2
    },
    "Bondi": {
-    "hopperTemps": 21,
+    "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 141584,
+     "actual": 153380,
      "budget": null
     },
     "labour": {
-     "pct": 18.3,
+     "pct": 17.9,
      "budgetPct": null
     },
     "policies": 90.5,
@@ -1172,16 +1172,16 @@
     "training": 65.4
    },
    "Coogee": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 10,
     "sales": {
-     "actual": 135345,
+     "actual": 146349,
      "budget": null
     },
     "labour": {
-     "pct": 19.3,
+     "pct": 18.9,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -1189,16 +1189,16 @@
     "training": 92.1
    },
    "Surry Hills": {
-    "hopperTemps": 23,
-    "calibrations": "complete",
+    "hopperTemps": 24,
+    "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
-     "actual": 128470,
+     "actual": 136955,
      "budget": null
     },
     "labour": {
-     "pct": 20.4,
+     "pct": 20.3,
      "budgetPct": null
     },
     "policies": 89.7,
@@ -1207,15 +1207,15 @@
    },
    "Top Ryde": {
     "hopperTemps": 20,
-    "calibrations": "complete",
+    "calibrations": "missed",
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 101874,
+     "actual": 108584,
      "budget": null
     },
     "labour": {
-     "pct": 18.0,
+     "pct": 17.7,
      "budgetPct": null
     },
     "policies": 97.3,
@@ -1223,16 +1223,16 @@
     "training": 89.7
    },
    "Randwick": {
-    "hopperTemps": 23,
+    "hopperTemps": 26,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
-     "actual": 92327,
+     "actual": 98328,
      "budget": null
     },
     "labour": {
-     "pct": 19.4,
+     "pct": 19.6,
      "budgetPct": null
     },
     "policies": 83.5,
@@ -1240,16 +1240,16 @@
     "training": 63.8
    },
    "Bondi Junction": {
-    "hopperTemps": 20,
+    "hopperTemps": 22,
     "calibrations": "complete",
-    "correctiveA": "ok",
+    "correctiveA": "none",
     "reviews": 13,
     "sales": {
-     "actual": 89403,
+     "actual": 94940,
      "budget": null
     },
     "labour": {
-     "pct": 18.1,
+     "pct": 18.2,
      "budgetPct": null
     },
     "policies": 96.9,
@@ -1257,16 +1257,16 @@
     "training": 86.9
    },
    "Lane Cove": {
-    "hopperTemps": 20,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 77912,
+     "actual": 82782,
      "budget": null
     },
     "labour": {
-     "pct": 24.7,
+     "pct": 24.5,
      "budgetPct": null
     },
     "policies": 93.1,
@@ -1275,15 +1275,15 @@
    },
    "Double Bay": {
     "hopperTemps": 19,
-    "calibrations": "missed",
+    "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 0,
     "sales": {
-     "actual": 71182,
+     "actual": 76333,
      "budget": null
     },
     "labour": {
-     "pct": 21.4,
+     "pct": 21.3,
      "budgetPct": null
     },
     "policies": 88.1,
@@ -1291,16 +1291,16 @@
     "training": 71.6
    },
    "Chippendale": {
-    "hopperTemps": 23,
-    "calibrations": "complete",
+    "hopperTemps": 27,
+    "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
-     "actual": 87650,
+     "actual": 92395,
      "budget": null
     },
     "labour": {
-     "pct": 18.1,
+     "pct": 18.3,
      "budgetPct": null
     },
     "policies": 97.0,
@@ -1313,11 +1313,11 @@
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 105404,
+     "actual": 112467,
      "budget": null
     },
     "labour": {
-     "pct": 18.9,
+     "pct": 18.7,
      "budgetPct": null
     },
     "policies": 93.3,
@@ -1325,16 +1325,16 @@
     "training": 78.6
    },
    "Fish Market": {
-    "hopperTemps": 25,
+    "hopperTemps": 24,
     "calibrations": "complete",
-    "correctiveA": "none",
+    "correctiveA": "ok",
     "reviews": 4,
     "sales": {
-     "actual": 79629,
+     "actual": 85483,
      "budget": null
     },
     "labour": {
-     "pct": 23.3,
+     "pct": 22.9,
      "budgetPct": null
     },
     "policies": 86.3,
@@ -1347,7 +1347,7 @@
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 250419,
+     "actual": 264270,
      "budget": null
     },
     "policies": 95.3,
@@ -1365,88 +1365,22 @@
    "Co-Chi Bowl Tare"
   ],
   "discountName": "Reusable 10% Off",
-  "windowStart": "2026-07-12",
-  "windowEnd": "2026-07-18",
-  "window": "12 Jul – 18 Jul",
+  "windowStart": "2026-07-13",
+  "windowEnd": "2026-07-19",
+  "window": "13 Jul – 19 Jul",
   "totals": {
-   "reusable": 1525,
-   "discounted": 566,
-   "missed": 959,
-   "pct": 37.1
+   "reusable": 1536,
+   "discounted": 558,
+   "missed": 978,
+   "pct": 36.3
   },
   "venues": {
    "George St": {
     "reusable": 83,
-    "discounted": 26,
-    "missed": 57,
-    "pct": 31.3,
+    "discounted": 24,
+    "missed": 59,
+    "pct": 28.9,
     "missedList": [
-     {
-      "saleId": "104483037",
-      "date": "2026-07-12",
-      "time": "13:03:33",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "103483051",
-      "date": "2026-07-12",
-      "time": "13:13:57",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "103483080",
-      "date": "2026-07-12",
-      "time": "13:37:06",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "104483150",
-      "date": "2026-07-12",
-      "time": "14:16:05",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "104483470",
-      "date": "2026-07-12",
-      "time": "16:39:49",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "104483694",
-      "date": "2026-07-12",
-      "time": "18:24:13",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "104483724",
-      "date": "2026-07-12",
-      "time": "18:32:35",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "103483759",
-      "date": "2026-07-12",
-      "time": "18:47:51",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "103483766",
-      "date": "2026-07-12",
-      "time": "18:51:40",
-      "bowl": "RG Bowl Tare"
-     },
-     {
-      "saleId": "103484004",
-      "date": "2026-07-12",
-      "time": "20:11:21",
-      "bowl": "RG Bowl Tare"
-     },
-     {
-      "saleId": "103484266",
-      "date": "2026-07-12",
-      "time": "21:54:16",
-      "bowl": "Icy Go Bowl Tare"
-     },
      {
       "saleId": "104484600",
       "date": "2026-07-13",
@@ -1722,51 +1656,93 @@
       "date": "2026-07-18",
       "time": "23:02:18",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "103494021",
+      "date": "2026-07-19",
+      "time": "11:24:46",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "103494068",
+      "date": "2026-07-19",
+      "time": "12:43:31",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "103494267",
+      "date": "2026-07-19",
+      "time": "14:32:15",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "103494431",
+      "date": "2026-07-19",
+      "time": "15:43:53",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "103494651",
+      "date": "2026-07-19",
+      "time": "17:18:31",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "103494656",
+      "date": "2026-07-19",
+      "time": "17:19:58",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "104494744",
+      "date": "2026-07-19",
+      "time": "18:13:16",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "104494791",
+      "date": "2026-07-19",
+      "time": "18:32:16",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "104494820",
+      "date": "2026-07-19",
+      "time": "18:46:20",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "104494869",
+      "date": "2026-07-19",
+      "time": "19:05:16",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "104494952",
+      "date": "2026-07-19",
+      "time": "19:36:30",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "103495089",
+      "date": "2026-07-19",
+      "time": "20:20:03",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "104495098",
+      "date": "2026-07-19",
+      "time": "20:23:55",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Erina Fair": {
-    "reusable": 71,
-    "discounted": 45,
-    "missed": 26,
-    "pct": 63.4,
+    "reusable": 74,
+    "discounted": 46,
+    "missed": 28,
+    "pct": 62.2,
     "missedList": [
-     {
-      "saleId": "106120992",
-      "date": "2026-07-12",
-      "time": "10:46:03",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105121088",
-      "date": "2026-07-12",
-      "time": "12:18:27",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105121201",
-      "date": "2026-07-12",
-      "time": "13:30:21",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105121410",
-      "date": "2026-07-12",
-      "time": "15:11:19",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105121420",
-      "date": "2026-07-12",
-      "time": "15:17:03",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105121705",
-      "date": "2026-07-12",
-      "time": "18:40:54",
-      "bowl": "Icy Go Bowl Tare"
-     },
      {
       "saleId": "105122674",
       "date": "2026-07-13",
@@ -1886,51 +1862,63 @@
       "date": "2026-07-18",
       "time": "15:22:19",
       "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106129816",
+      "date": "2026-07-19",
+      "time": "14:04:10",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105129885",
+      "date": "2026-07-19",
+      "time": "14:28:34",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "105129980",
+      "date": "2026-07-19",
+      "time": "15:12:46",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105130108",
+      "date": "2026-07-19",
+      "time": "16:06:22",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106130497",
+      "date": "2026-07-19",
+      "time": "19:45:56",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106130498",
+      "date": "2026-07-19",
+      "time": "19:46:17",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106130627",
+      "date": "2026-07-19",
+      "time": "20:48:12",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106130674",
+      "date": "2026-07-19",
+      "time": "21:39:06",
+      "bowl": "Icy Go Bowl Tare"
      }
     ]
    },
    "Barangaroo": {
-    "reusable": 65,
-    "discounted": 26,
-    "missed": 39,
-    "pct": 40.0,
+    "reusable": 59,
+    "discounted": 18,
+    "missed": 41,
+    "pct": 30.5,
     "missedList": [
-     {
-      "saleId": "73546623",
-      "date": "2026-07-12",
-      "time": "13:09:47",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "73547086",
-      "date": "2026-07-12",
-      "time": "17:38:59",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "74547126",
-      "date": "2026-07-12",
-      "time": "18:33:30",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "74547161",
-      "date": "2026-07-12",
-      "time": "19:02:21",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "73547262",
-      "date": "2026-07-12",
-      "time": "20:04:01",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "74547309",
-      "date": "2026-07-12",
-      "time": "20:33:46",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "73547568",
       "date": "2026-07-13",
@@ -2128,69 +2116,63 @@
       "date": "2026-07-18",
       "time": "19:31:14",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "74554218",
+      "date": "2026-07-19",
+      "time": "11:25:41",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "74554242",
+      "date": "2026-07-19",
+      "time": "12:15:39",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "74554243",
+      "date": "2026-07-19",
+      "time": "12:16:24",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "74554267",
+      "date": "2026-07-19",
+      "time": "12:53:15",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "74554758",
+      "date": "2026-07-19",
+      "time": "17:30:25",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "74554830",
+      "date": "2026-07-19",
+      "time": "18:26:42",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "74554958",
+      "date": "2026-07-19",
+      "time": "19:37:50",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "74555270",
+      "date": "2026-07-19",
+      "time": "22:25:04",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Wollongong": {
-    "reusable": 84,
-    "discounted": 25,
-    "missed": 59,
-    "pct": 29.8,
+    "reusable": 85,
+    "discounted": 27,
+    "missed": 58,
+    "pct": 31.8,
     "missedList": [
-     {
-      "saleId": "106302193",
-      "date": "2026-07-12",
-      "time": "12:36:22",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "106302332",
-      "date": "2026-07-12",
-      "time": "14:11:02",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "106302400",
-      "date": "2026-07-12",
-      "time": "14:49:24",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "106302599",
-      "date": "2026-07-12",
-      "time": "16:35:40",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "106302698",
-      "date": "2026-07-12",
-      "time": "18:23:11",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "106302708",
-      "date": "2026-07-12",
-      "time": "18:33:41",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "106302837",
-      "date": "2026-07-12",
-      "time": "19:23:25",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "106303049",
-      "date": "2026-07-12",
-      "time": "21:19:57",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "105303071",
-      "date": "2026-07-12",
-      "time": "21:48:29",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "106303123",
       "date": "2026-07-13",
@@ -2490,111 +2472,63 @@
       "date": "2026-07-18",
       "time": "22:02:26",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "106309558",
+      "date": "2026-07-19",
+      "time": "13:17:15",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "106309721",
+      "date": "2026-07-19",
+      "time": "14:53:53",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "106309872",
+      "date": "2026-07-19",
+      "time": "16:16:24",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "105309903",
+      "date": "2026-07-19",
+      "time": "16:34:32",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "106309968",
+      "date": "2026-07-19",
+      "time": "17:49:19",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "106310018",
+      "date": "2026-07-19",
+      "time": "18:36:08",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "106310073",
+      "date": "2026-07-19",
+      "time": "19:11:33",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "106310323",
+      "date": "2026-07-19",
+      "time": "21:04:22",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Charlestown": {
-    "reusable": 105,
-    "discounted": 20,
-    "missed": 85,
-    "pct": 19.0,
+    "reusable": 100,
+    "discounted": 17,
+    "missed": 83,
+    "pct": 17.0,
     "missedList": [
-     {
-      "saleId": "106239895",
-      "date": "2026-07-12",
-      "time": "13:10:36",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105240069",
-      "date": "2026-07-12",
-      "time": "15:04:59",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105240111",
-      "date": "2026-07-12",
-      "time": "15:22:50",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "105240178",
-      "date": "2026-07-12",
-      "time": "16:07:30",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "106240246",
-      "date": "2026-07-12",
-      "time": "17:11:49",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "106240253",
-      "date": "2026-07-12",
-      "time": "17:19:16",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105240285",
-      "date": "2026-07-12",
-      "time": "17:45:09",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105240401",
-      "date": "2026-07-12",
-      "time": "18:54:53",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "105240410",
-      "date": "2026-07-12",
-      "time": "19:03:27",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "105240555",
-      "date": "2026-07-12",
-      "time": "20:06:08",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "106240556",
-      "date": "2026-07-12",
-      "time": "20:06:52",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "106240625",
-      "date": "2026-07-12",
-      "time": "20:51:50",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "105240626",
-      "date": "2026-07-12",
-      "time": "20:52:01",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105240637",
-      "date": "2026-07-12",
-      "time": "21:04:57",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "105240660",
-      "date": "2026-07-12",
-      "time": "21:26:01",
-      "bowl": "RG Bowl Tare"
-     },
-     {
-      "saleId": "106240669",
-      "date": "2026-07-12",
-      "time": "21:34:02",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "105240722",
       "date": "2026-07-13",
@@ -3008,57 +2942,99 @@
       "date": "2026-07-18",
       "time": "21:53:19",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "105247355",
+      "date": "2026-07-19",
+      "time": "10:41:38",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "105247357",
+      "date": "2026-07-19",
+      "time": "10:45:26",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105247379",
+      "date": "2026-07-19",
+      "time": "11:17:59",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105247448",
+      "date": "2026-07-19",
+      "time": "12:19:44",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106247714",
+      "date": "2026-07-19",
+      "time": "14:42:21",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105247906",
+      "date": "2026-07-19",
+      "time": "16:14:18",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "105247934",
+      "date": "2026-07-19",
+      "time": "16:46:55",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "105247937",
+      "date": "2026-07-19",
+      "time": "16:49:33",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "105247938",
+      "date": "2026-07-19",
+      "time": "16:49:52",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "105248051",
+      "date": "2026-07-19",
+      "time": "18:45:42",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105248085",
+      "date": "2026-07-19",
+      "time": "19:08:57",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "106248120",
+      "date": "2026-07-19",
+      "time": "19:40:35",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "106248327",
+      "date": "2026-07-19",
+      "time": "21:08:34",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "106248331",
+      "date": "2026-07-19",
+      "time": "21:10:14",
+      "bowl": "Icy Go Bowl Tare"
      }
     ]
    },
    "Rouse Hill": {
-    "reusable": 87,
-    "discounted": 32,
-    "missed": 55,
-    "pct": 36.8,
+    "reusable": 86,
+    "discounted": 29,
+    "missed": 57,
+    "pct": 33.7,
     "missedList": [
-     {
-      "saleId": "120209831",
-      "date": "2026-07-12",
-      "time": "14:56:00",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "121209872",
-      "date": "2026-07-12",
-      "time": "15:14:53",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "121210241",
-      "date": "2026-07-12",
-      "time": "19:24:40",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "121210330",
-      "date": "2026-07-12",
-      "time": "20:05:19",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "121210402",
-      "date": "2026-07-12",
-      "time": "20:41:00",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "121210445",
-      "date": "2026-07-12",
-      "time": "21:04:10",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "121210524",
-      "date": "2026-07-12",
-      "time": "22:04:44",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "121211003",
       "date": "2026-07-13",
@@ -3346,57 +3322,69 @@
       "date": "2026-07-18",
       "time": "22:56:50",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "121216680",
+      "date": "2026-07-19",
+      "time": "14:01:45",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "120216709",
+      "date": "2026-07-19",
+      "time": "14:20:46",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "120216754",
+      "date": "2026-07-19",
+      "time": "14:51:43",
+      "bowl": "Co-Chi Bowl Tare"
+     },
+     {
+      "saleId": "121217089",
+      "date": "2026-07-19",
+      "time": "18:18:21",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "121217301",
+      "date": "2026-07-19",
+      "time": "19:53:48",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "121217304",
+      "date": "2026-07-19",
+      "time": "19:54:23",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "121217414",
+      "date": "2026-07-19",
+      "time": "20:31:37",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "120217513",
+      "date": "2026-07-19",
+      "time": "21:12:08",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "121217567",
+      "date": "2026-07-19",
+      "time": "21:46:33",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Circular Quay": {
     "reusable": 59,
-    "discounted": 14,
-    "missed": 45,
-    "pct": 23.7,
+    "discounted": 15,
+    "missed": 44,
+    "pct": 25.4,
     "missedList": [
-     {
-      "saleId": "77420721",
-      "date": "2026-07-12",
-      "time": "11:29:31",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "77420730",
-      "date": "2026-07-12",
-      "time": "11:48:03",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "77421181",
-      "date": "2026-07-12",
-      "time": "17:03:25",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "78421441",
-      "date": "2026-07-12",
-      "time": "20:04:44",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "77421455",
-      "date": "2026-07-12",
-      "time": "20:17:32",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "77421458",
-      "date": "2026-07-12",
-      "time": "20:18:57",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "77421480",
-      "date": "2026-07-12",
-      "time": "20:31:57",
-      "bowl": "Icy Go Bowl Tare"
-     },
      {
       "saleId": "77421676",
       "date": "2026-07-13",
@@ -3624,39 +3612,51 @@
       "date": "2026-07-18",
       "time": "19:42:01",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "78427119",
+      "date": "2026-07-19",
+      "time": "10:55:24",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "77427191",
+      "date": "2026-07-19",
+      "time": "12:42:07",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "77427334",
+      "date": "2026-07-19",
+      "time": "14:14:06",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "77427401",
+      "date": "2026-07-19",
+      "time": "14:53:24",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "77427927",
+      "date": "2026-07-19",
+      "time": "19:55:13",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "77428011",
+      "date": "2026-07-19",
+      "time": "20:35:40",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Macquarie": {
-    "reusable": 62,
-    "discounted": 24,
-    "missed": 38,
-    "pct": 38.7,
+    "reusable": 69,
+    "discounted": 28,
+    "missed": 41,
+    "pct": 40.6,
     "missedList": [
-     {
-      "saleId": "32440095",
-      "date": "2026-07-12",
-      "time": "12:52:13",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "32440286",
-      "date": "2026-07-12",
-      "time": "15:06:06",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "33440588",
-      "date": "2026-07-12",
-      "time": "18:07:25",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "32440873",
-      "date": "2026-07-12",
-      "time": "21:02:47",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "32441225",
       "date": "2026-07-13",
@@ -3860,27 +3860,57 @@
       "date": "2026-07-18",
       "time": "22:06:38",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "32447307",
+      "date": "2026-07-19",
+      "time": "13:05:41",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "32447357",
+      "date": "2026-07-19",
+      "time": "13:34:43",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "32447422",
+      "date": "2026-07-19",
+      "time": "14:11:09",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "32447627",
+      "date": "2026-07-19",
+      "time": "16:06:46",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "32447729",
+      "date": "2026-07-19",
+      "time": "17:02:30",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "32448027",
+      "date": "2026-07-19",
+      "time": "20:03:47",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "32448194",
+      "date": "2026-07-19",
+      "time": "22:11:59",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Castle Towers": {
-    "reusable": 52,
-    "discounted": 19,
-    "missed": 33,
-    "pct": 36.5,
+    "reusable": 61,
+    "discounted": 22,
+    "missed": 39,
+    "pct": 36.1,
     "missedList": [
-     {
-      "saleId": "116207868",
-      "date": "2026-07-12",
-      "time": "15:10:53",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "116207898",
-      "date": "2026-07-12",
-      "time": "15:21:25",
-      "bowl": "Icy Go Bowl Tare"
-     },
      {
       "saleId": "117208763",
       "date": "2026-07-13",
@@ -4066,51 +4096,63 @@
       "date": "2026-07-18",
       "time": "23:07:23",
       "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "117214838",
+      "date": "2026-07-19",
+      "time": "17:39:16",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "117214872",
+      "date": "2026-07-19",
+      "time": "18:04:24",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "116215013",
+      "date": "2026-07-19",
+      "time": "19:35:12",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "117215132",
+      "date": "2026-07-19",
+      "time": "20:24:30",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "116215238",
+      "date": "2026-07-19",
+      "time": "21:03:51",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "116215329",
+      "date": "2026-07-19",
+      "time": "22:02:54",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "116215344",
+      "date": "2026-07-19",
+      "time": "22:30:11",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "116215345",
+      "date": "2026-07-19",
+      "time": "22:37:11",
+      "bowl": "Icy Go Bowl Tare"
      }
     ]
    },
    "Burwood": {
-    "reusable": 77,
-    "discounted": 25,
-    "missed": 52,
-    "pct": 32.5,
+    "reusable": 76,
+    "discounted": 26,
+    "missed": 50,
+    "pct": 34.2,
     "missedList": [
-     {
-      "saleId": "114219284",
-      "date": "2026-07-12",
-      "time": "13:33:54",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "114219413",
-      "date": "2026-07-12",
-      "time": "15:09:54",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "115219470",
-      "date": "2026-07-12",
-      "time": "15:52:49",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "114219499",
-      "date": "2026-07-12",
-      "time": "16:15:09",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "114219708",
-      "date": "2026-07-12",
-      "time": "19:05:23",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "114219890",
-      "date": "2026-07-12",
-      "time": "21:22:01",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "115219979",
       "date": "2026-07-13",
@@ -4386,39 +4428,39 @@
       "date": "2026-07-18",
       "time": "21:29:48",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "114225189",
+      "date": "2026-07-19",
+      "time": "13:52:30",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "114225249",
+      "date": "2026-07-19",
+      "time": "14:29:23",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "114225406",
+      "date": "2026-07-19",
+      "time": "16:07:27",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "114225911",
+      "date": "2026-07-19",
+      "time": "22:34:35",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Penrith": {
-    "reusable": 51,
-    "discounted": 26,
-    "missed": 25,
+    "reusable": 49,
+    "discounted": 25,
+    "missed": 24,
     "pct": 51.0,
     "missedList": [
-     {
-      "saleId": "71317584",
-      "date": "2026-07-12",
-      "time": "16:33:39",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "72317624",
-      "date": "2026-07-12",
-      "time": "17:03:44",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "72317638",
-      "date": "2026-07-12",
-      "time": "17:12:08",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "72317977",
-      "date": "2026-07-12",
-      "time": "21:34:02",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "71318393",
       "date": "2026-07-13",
@@ -4544,39 +4586,33 @@
       "date": "2026-07-18",
       "time": "21:26:23",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "72323484",
+      "date": "2026-07-19",
+      "time": "17:03:52",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "72323820",
+      "date": "2026-07-19",
+      "time": "21:08:26",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "71323831",
+      "date": "2026-07-19",
+      "time": "21:27:34",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Manly": {
-    "reusable": 65,
-    "discounted": 29,
-    "missed": 36,
-    "pct": 44.6,
+    "reusable": 64,
+    "discounted": 27,
+    "missed": 37,
+    "pct": 42.2,
     "missedList": [
-     {
-      "saleId": "43396911",
-      "date": "2026-07-12",
-      "time": "11:28:26",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "44397049",
-      "date": "2026-07-12",
-      "time": "13:53:25",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "43397284",
-      "date": "2026-07-12",
-      "time": "16:15:05",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "43397680",
-      "date": "2026-07-12",
-      "time": "20:32:31",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "43397880",
       "date": "2026-07-13",
@@ -4768,51 +4804,45 @@
       "date": "2026-07-18",
       "time": "21:58:38",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "44402936",
+      "date": "2026-07-19",
+      "time": "10:05:38",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "43402944",
+      "date": "2026-07-19",
+      "time": "10:27:21",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "44403033",
+      "date": "2026-07-19",
+      "time": "12:31:31",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "44403443",
+      "date": "2026-07-19",
+      "time": "16:10:02",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "44403771",
+      "date": "2026-07-19",
+      "time": "19:43:21",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Chatswood": {
-    "reusable": 81,
-    "discounted": 25,
-    "missed": 56,
-    "pct": 30.9,
+    "reusable": 77,
+    "discounted": 20,
+    "missed": 57,
+    "pct": 26.0,
     "missedList": [
-     {
-      "saleId": "109054643",
-      "date": "2026-07-12",
-      "time": "13:09:49",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "109054712",
-      "date": "2026-07-12",
-      "time": "14:03:10",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "109054784",
-      "date": "2026-07-12",
-      "time": "15:02:48",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "109055066",
-      "date": "2026-07-12",
-      "time": "19:04:27",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "109055067",
-      "date": "2026-07-12",
-      "time": "19:04:43",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "109055258",
-      "date": "2026-07-12",
-      "time": "21:29:03",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "109055540",
       "date": "2026-07-13",
@@ -5112,45 +5142,57 @@
       "date": "2026-07-18",
       "time": "21:30:29",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "109060219",
+      "date": "2026-07-19",
+      "time": "12:51:42",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "109060387",
+      "date": "2026-07-19",
+      "time": "14:31:16",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "109060560",
+      "date": "2026-07-19",
+      "time": "16:06:48",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "109060575",
+      "date": "2026-07-19",
+      "time": "16:19:31",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "109060724",
+      "date": "2026-07-19",
+      "time": "18:41:39",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "109060758",
+      "date": "2026-07-19",
+      "time": "19:09:59",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "109060933",
+      "date": "2026-07-19",
+      "time": "20:59:03",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Cronulla": {
-    "reusable": 49,
-    "discounted": 15,
+    "reusable": 48,
+    "discounted": 14,
     "missed": 34,
-    "pct": 30.6,
+    "pct": 29.2,
     "missedList": [
-     {
-      "saleId": "100276227",
-      "date": "2026-07-12",
-      "time": "13:03:03",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "100276395",
-      "date": "2026-07-12",
-      "time": "15:04:06",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "100276766",
-      "date": "2026-07-12",
-      "time": "19:48:00",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "100276869",
-      "date": "2026-07-12",
-      "time": "20:49:05",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "100276891",
-      "date": "2026-07-12",
-      "time": "21:19:02",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "100277513",
       "date": "2026-07-13",
@@ -5324,69 +5366,45 @@
       "date": "2026-07-18",
       "time": "21:15:04",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "101281687",
+      "date": "2026-07-19",
+      "time": "13:37:16",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "100281777",
+      "date": "2026-07-19",
+      "time": "14:36:09",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "100282069",
+      "date": "2026-07-19",
+      "time": "18:24:05",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "100282144",
+      "date": "2026-07-19",
+      "time": "19:17:59",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "100282345",
+      "date": "2026-07-19",
+      "time": "20:47:18",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Newtown": {
-    "reusable": 82,
-    "discounted": 35,
+    "reusable": 81,
+    "discounted": 34,
     "missed": 47,
-    "pct": 42.7,
+    "pct": 42.0,
     "missedList": [
-     {
-      "saleId": "21395254",
-      "date": "2026-07-12",
-      "time": "14:21:11",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "21395331",
-      "date": "2026-07-12",
-      "time": "15:13:29",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "21395401",
-      "date": "2026-07-12",
-      "time": "16:08:50",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "22395537",
-      "date": "2026-07-12",
-      "time": "18:09:49",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "21395585",
-      "date": "2026-07-12",
-      "time": "18:45:06",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "21395709",
-      "date": "2026-07-12",
-      "time": "19:57:20",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "21395725",
-      "date": "2026-07-12",
-      "time": "20:04:23",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "21395789",
-      "date": "2026-07-12",
-      "time": "20:34:07",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "21395914",
-      "date": "2026-07-12",
-      "time": "21:33:19",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "22396157",
       "date": "2026-07-13",
@@ -5614,45 +5632,69 @@
       "date": "2026-07-18",
       "time": "22:23:41",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "22400205",
+      "date": "2026-07-19",
+      "time": "12:33:35",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "21400388",
+      "date": "2026-07-19",
+      "time": "15:46:41",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "21400434",
+      "date": "2026-07-19",
+      "time": "16:22:40",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "21400534",
+      "date": "2026-07-19",
+      "time": "18:13:22",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "21400557",
+      "date": "2026-07-19",
+      "time": "18:29:00",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "21400624",
+      "date": "2026-07-19",
+      "time": "19:23:27",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "21400706",
+      "date": "2026-07-19",
+      "time": "20:07:03",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "21400715",
+      "date": "2026-07-19",
+      "time": "20:11:13",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "21400904",
+      "date": "2026-07-19",
+      "time": "22:23:39",
+      "bowl": "Icy Go Bowl Tare"
      }
     ]
    },
    "Bondi": {
-    "reusable": 44,
-    "discounted": 6,
+    "reusable": 45,
+    "discounted": 7,
     "missed": 38,
-    "pct": 13.6,
+    "pct": 15.6,
     "missedList": [
-     {
-      "saleId": "59363518",
-      "date": "2026-07-12",
-      "time": "12:35:04",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "59363534",
-      "date": "2026-07-12",
-      "time": "13:02:32",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "58364230",
-      "date": "2026-07-12",
-      "time": "20:41:08",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "59364265",
-      "date": "2026-07-12",
-      "time": "21:16:03",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "58364275",
-      "date": "2026-07-12",
-      "time": "21:28:04",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "59364361",
       "date": "2026-07-13",
@@ -5850,57 +5892,45 @@
       "date": "2026-07-18",
       "time": "21:42:44",
       "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "59368394",
+      "date": "2026-07-19",
+      "time": "15:18:15",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "58368554",
+      "date": "2026-07-19",
+      "time": "16:45:01",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "59368852",
+      "date": "2026-07-19",
+      "time": "19:46:15",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "59368937",
+      "date": "2026-07-19",
+      "time": "20:31:29",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "59368984",
+      "date": "2026-07-19",
+      "time": "21:14:11",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Coogee": {
-    "reusable": 42,
-    "discounted": 8,
-    "missed": 34,
-    "pct": 19.0,
+    "reusable": 49,
+    "discounted": 11,
+    "missed": 38,
+    "pct": 22.4,
     "missedList": [
-     {
-      "saleId": "69350111",
-      "date": "2026-07-12",
-      "time": "14:43:47",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "69350404",
-      "date": "2026-07-12",
-      "time": "17:34:07",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "70350542",
-      "date": "2026-07-12",
-      "time": "19:41:55",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "69350617",
-      "date": "2026-07-12",
-      "time": "20:31:10",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "70350632",
-      "date": "2026-07-12",
-      "time": "20:44:45",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "70350635",
-      "date": "2026-07-12",
-      "time": "20:53:03",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "69350650",
-      "date": "2026-07-12",
-      "time": "21:05:15",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "69350918",
       "date": "2026-07-13",
@@ -6062,69 +6092,81 @@
       "date": "2026-07-18",
       "time": "21:33:21",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "70353895",
+      "date": "2026-07-19",
+      "time": "11:45:35",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "70353898",
+      "date": "2026-07-19",
+      "time": "11:54:04",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "69353929",
+      "date": "2026-07-19",
+      "time": "12:33:24",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "70354005",
+      "date": "2026-07-19",
+      "time": "13:51:13",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "69354100",
+      "date": "2026-07-19",
+      "time": "15:09:03",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "69354453",
+      "date": "2026-07-19",
+      "time": "18:38:45",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "69354504",
+      "date": "2026-07-19",
+      "time": "19:15:57",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "69354592",
+      "date": "2026-07-19",
+      "time": "20:13:50",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "70354661",
+      "date": "2026-07-19",
+      "time": "21:00:35",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "69354667",
+      "date": "2026-07-19",
+      "time": "21:04:35",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "69354690",
+      "date": "2026-07-19",
+      "time": "21:24:28",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Surry Hills": {
-    "reusable": 62,
-    "discounted": 19,
-    "missed": 43,
-    "pct": 30.6,
+    "reusable": 60,
+    "discounted": 20,
+    "missed": 40,
+    "pct": 33.3,
     "missedList": [
-     {
-      "saleId": "15342957",
-      "date": "2026-07-12",
-      "time": "12:14:57",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "15343007",
-      "date": "2026-07-12",
-      "time": "14:03:42",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "14343101",
-      "date": "2026-07-12",
-      "time": "16:02:24",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "14343115",
-      "date": "2026-07-12",
-      "time": "16:22:55",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "14343171",
-      "date": "2026-07-12",
-      "time": "17:36:31",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "15343361",
-      "date": "2026-07-12",
-      "time": "20:25:32",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "15343401",
-      "date": "2026-07-12",
-      "time": "20:59:09",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "14343463",
-      "date": "2026-07-12",
-      "time": "22:17:42",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "14343464",
-      "date": "2026-07-12",
-      "time": "22:21:20",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "15343472",
       "date": "2026-07-13",
@@ -6328,27 +6370,51 @@
       "date": "2026-07-18",
       "time": "21:28:30",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "15346723",
+      "date": "2026-07-19",
+      "time": "12:32:56",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "14346766",
+      "date": "2026-07-19",
+      "time": "13:42:37",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "14346924",
+      "date": "2026-07-19",
+      "time": "15:58:47",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "15346959",
+      "date": "2026-07-19",
+      "time": "16:34:56",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "15347192",
+      "date": "2026-07-19",
+      "time": "20:21:49",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "14347254",
+      "date": "2026-07-19",
+      "time": "21:01:35",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Top Ryde": {
-    "reusable": 38,
-    "discounted": 16,
-    "missed": 22,
-    "pct": 42.1,
+    "reusable": 40,
+    "discounted": 15,
+    "missed": 25,
+    "pct": 37.5,
     "missedList": [
-     {
-      "saleId": "83171482",
-      "date": "2026-07-12",
-      "time": "15:10:09",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "84171585",
-      "date": "2026-07-12",
-      "time": "18:05:47",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "84171956",
       "date": "2026-07-13",
@@ -6468,33 +6534,45 @@
       "date": "2026-07-18",
       "time": "22:27:42",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "84174180",
+      "date": "2026-07-19",
+      "time": "11:39:37",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "84174598",
+      "date": "2026-07-19",
+      "time": "21:03:47",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "84174600",
+      "date": "2026-07-19",
+      "time": "21:05:30",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "84174632",
+      "date": "2026-07-19",
+      "time": "21:54:00",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "83174644",
+      "date": "2026-07-19",
+      "time": "22:28:45",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Randwick": {
-    "reusable": 36,
-    "discounted": 14,
+    "reusable": 38,
+    "discounted": 16,
     "missed": 22,
-    "pct": 38.9,
+    "pct": 42.1,
     "missedList": [
-     {
-      "saleId": "123106280",
-      "date": "2026-07-12",
-      "time": "18:02:40",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "123106307",
-      "date": "2026-07-12",
-      "time": "18:39:34",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "123106429",
-      "date": "2026-07-12",
-      "time": "20:36:42",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "122106481",
       "date": "2026-07-13",
@@ -6608,39 +6686,33 @@
       "date": "2026-07-18",
       "time": "13:40:22",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "122108757",
+      "date": "2026-07-19",
+      "time": "12:19:58",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "122108799",
+      "date": "2026-07-19",
+      "time": "14:10:25",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "123109020",
+      "date": "2026-07-19",
+      "time": "18:49:06",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Bondi Junction": {
-    "reusable": 26,
-    "discounted": 10,
+    "reusable": 25,
+    "discounted": 9,
     "missed": 16,
-    "pct": 38.5,
+    "pct": 36.0,
     "missedList": [
-     {
-      "saleId": "86181081",
-      "date": "2026-07-12",
-      "time": "13:51:40",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "85181314",
-      "date": "2026-07-12",
-      "time": "18:59:49",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "85181315",
-      "date": "2026-07-12",
-      "time": "19:00:24",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "86181338",
-      "date": "2026-07-12",
-      "time": "19:17:37",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "85181591",
       "date": "2026-07-13",
@@ -6712,27 +6784,39 @@
       "date": "2026-07-18",
       "time": "19:29:26",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "85183770",
+      "date": "2026-07-19",
+      "time": "16:29:17",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "85183869",
+      "date": "2026-07-19",
+      "time": "18:28:19",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "86183887",
+      "date": "2026-07-19",
+      "time": "18:49:56",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "85183951",
+      "date": "2026-07-19",
+      "time": "20:14:05",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Lane Cove": {
-    "reusable": 20,
-    "discounted": 13,
+    "reusable": 23,
+    "discounted": 16,
     "missed": 7,
-    "pct": 65.0,
+    "pct": 69.6,
     "missedList": [
-     {
-      "saleId": "37213132",
-      "date": "2026-07-12",
-      "time": "18:23:48",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "36213164",
-      "date": "2026-07-12",
-      "time": "19:19:47",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "36213293",
       "date": "2026-07-13",
@@ -6762,27 +6846,27 @@
       "date": "2026-07-16",
       "time": "19:11:36",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "37215382",
+      "date": "2026-07-19",
+      "time": "12:41:30",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "37215426",
+      "date": "2026-07-19",
+      "time": "13:51:00",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Double Bay": {
-    "reusable": 16,
-    "discounted": 7,
+    "reusable": 19,
+    "discounted": 10,
     "missed": 9,
-    "pct": 43.8,
+    "pct": 52.6,
     "missedList": [
-     {
-      "saleId": "66195520",
-      "date": "2026-07-12",
-      "time": "14:47:51",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "66195555",
-      "date": "2026-07-12",
-      "time": "15:31:44",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "64195789",
       "date": "2026-07-13",
@@ -6824,27 +6908,27 @@
       "date": "2026-07-16",
       "time": "20:03:42",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "66197517",
+      "date": "2026-07-19",
+      "time": "13:55:36",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "66197761",
+      "date": "2026-07-19",
+      "time": "19:49:09",
+      "bowl": "Icy Go Bowl Tare"
      }
     ]
    },
    "Chippendale": {
-    "reusable": 31,
-    "discounted": 12,
-    "missed": 19,
-    "pct": 38.7,
+    "reusable": 36,
+    "discounted": 15,
+    "missed": 21,
+    "pct": 41.7,
     "missedList": [
-     {
-      "saleId": "126141192",
-      "date": "2026-07-12",
-      "time": "18:55:27",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "126141219",
-      "date": "2026-07-12",
-      "time": "19:26:16",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "126141465",
       "date": "2026-07-13",
@@ -6946,27 +7030,39 @@
       "date": "2026-07-18",
       "time": "18:57:41",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "126144126",
+      "date": "2026-07-19",
+      "time": "13:49:42",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "126144273",
+      "date": "2026-07-19",
+      "time": "17:48:02",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "126144317",
+      "date": "2026-07-19",
+      "time": "19:00:12",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "126144347",
+      "date": "2026-07-19",
+      "time": "19:37:28",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Crows Nest": {
-    "reusable": 52,
-    "discounted": 31,
-    "missed": 21,
-    "pct": 59.6,
+    "reusable": 50,
+    "discounted": 27,
+    "missed": 23,
+    "pct": 54.0,
     "missedList": [
-     {
-      "saleId": "141038693",
-      "date": "2026-07-12",
-      "time": "20:09:23",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "142038737",
-      "date": "2026-07-12",
-      "time": "21:13:34",
-      "bowl": "Go Bowl Tare"
-     },
      {
       "saleId": "141038982",
       "date": "2026-07-13",
@@ -7080,27 +7176,39 @@
       "date": "2026-07-18",
       "time": "22:39:46",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "142041288",
+      "date": "2026-07-19",
+      "time": "13:08:43",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "141041387",
+      "date": "2026-07-19",
+      "time": "15:35:38",
+      "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "141041416",
+      "date": "2026-07-19",
+      "time": "16:03:50",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "142041425",
+      "date": "2026-07-19",
+      "time": "16:13:09",
+      "bowl": "Icy Go Bowl Tare"
      }
     ]
    },
    "Fish Market": {
-    "reusable": 17,
-    "discounted": 7,
-    "missed": 10,
-    "pct": 41.2,
+    "reusable": 14,
+    "discounted": 6,
+    "missed": 8,
+    "pct": 42.9,
     "missedList": [
-     {
-      "saleId": "143011552",
-      "date": "2026-07-12",
-      "time": "12:22:15",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "143012001",
-      "date": "2026-07-12",
-      "time": "20:58:45",
-      "bowl": "Icy Go Bowl Tare"
-     },
      {
       "saleId": "143012241",
       "date": "2026-07-13",
@@ -7152,35 +7260,11 @@
     ]
    },
    "Green Hills": {
-    "reusable": 68,
-    "discounted": 37,
-    "missed": 31,
-    "pct": 54.4,
+    "reusable": 66,
+    "discounted": 34,
+    "missed": 32,
+    "pct": 51.5,
     "missedList": [
-     {
-      "saleId": "105033315",
-      "date": "2026-07-12",
-      "time": "15:45:18",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105033378",
-      "date": "2026-07-12",
-      "time": "16:34:47",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "106033489",
-      "date": "2026-07-12",
-      "time": "18:39:52",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "106033700",
-      "date": "2026-07-12",
-      "time": "21:13:34",
-      "bowl": "Icy Go Bowl Tare"
-     },
      {
       "saleId": "105034262",
       "date": "2026-07-13",
@@ -7341,6 +7425,36 @@
       "saleId": "105038962",
       "date": "2026-07-18",
       "time": "19:18:50",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105039403",
+      "date": "2026-07-19",
+      "time": "13:14:06",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105039561",
+      "date": "2026-07-19",
+      "time": "14:57:29",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105039599",
+      "date": "2026-07-19",
+      "time": "15:21:52",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105039643",
+      "date": "2026-07-19",
+      "time": "15:52:31",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105039919",
+      "date": "2026-07-19",
+      "time": "19:41:07",
       "bowl": "Icy Go Bowl Tare"
      }
     ]
