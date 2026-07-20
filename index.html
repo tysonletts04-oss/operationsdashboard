@@ -198,6 +198,18 @@
   }
   #view { position:relative; }
   #view > * { position:relative; z-index:1; }
+  /* Reusable Discounts tab */
+  .disc-summary { display:flex; flex-wrap:wrap; gap:26px; padding:14px 18px 6px; }
+  .disc-summary .k { font-size:10px; text-transform:uppercase; letter-spacing:.07em; color:var(--faint); font-weight:700; }
+  .disc-summary .v { font-size:26px; font-weight:700; margin-top:3px; font-variant-numeric:tabular-nums; line-height:1; }
+  .disc-table th:not(.venue), .disc-table td:not(.venue) { text-align:right; }
+  tr.disc-row { cursor:pointer; }
+  tr.disc-row:hover td { background:var(--neutral-bg); }
+  .disc-caret { color:var(--faint); font-size:10px; }
+  tr.disc-detail > td { background:var(--neutral-bg); padding:10px 16px; }
+  table.mini { width:100%; border-collapse:collapse; font-size:12px; font-variant-numeric:tabular-nums; }
+  table.mini th { text-align:left; color:var(--faint); font-weight:700; padding:4px 10px; border-bottom:1px solid var(--border); text-transform:uppercase; font-size:9.5px; letter-spacing:.05em; }
+  table.mini td { text-align:left; padding:4px 10px; border-bottom:1px solid var(--border); }
   @media print {
     body { background:#fff; }
     .btn, .controls, .seg { display:none !important; }
@@ -240,6 +252,7 @@
     <div class="seg" id="viewSeg">
       <button data-view="grid" class="active">Grid</button>
       <button data-view="cards">By venue</button>
+      <button data-view="discounts">Reusable Discounts</button>
     </div>
     <span class="spacer"></span>
     <label for="venueFilter">Venue</label>
@@ -748,6 +761,66 @@ function renderSourceStrip() {
 
 function periodLabel(p){ return p==='daily'?'Daily':p==='wtd'?'Week to date':'Month to date'; }
 
+/* ── Reusable Discounts tab ──────────────────────────────────────────────────
+ * Fed by data.json `discounts` (a trailing 7-day window from Polygon line items).
+ * The embedded object below is a fallback so the tab still renders via file://. */
+let DISCOUNTS = {
+  metric:"Reusable bowl 10% discount", discountName:"Reusable 10% Off", window:"12 Jul – 18 Jul",
+  items:["Go Bowl Tare","RG Bowl Tare","Icy Go Bowl Tare","Co-Chi Bowl Tare"],
+  totals:{reusable:77,discounted:25,missed:52,pct:32.5},
+  venues:{ "Burwood":{reusable:77,discounted:25,missed:52,pct:32.5,missedList:[
+    {saleId:"114219284",date:"2026-07-12",time:"13:33:54",bowl:"Go Bowl Tare"},
+    {saleId:"114219413",date:"2026-07-12",time:"15:09:54",bowl:"Icy Go Bowl Tare"}
+  ]}}
+};
+const _DM=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function fmtDate(iso){ const p=(iso||'').split('-'); return p.length===3? (+p[2])+' '+_DM[+p[1]-1] : (iso||''); }
+function toggleDisc(i){ const el=document.getElementById('disc-'+i); if(el) el.style.display = el.style.display==='none'?'':'none'; }
+
+function renderDiscounts(){
+  const D=DISCOUNTS, host=document.getElementById('view');
+  if(!D || !D.venues || !Object.keys(D.venues).length){
+    host.innerHTML='<div class="card"><div class="head"><h2>Reusable Discount Compliance</h2></div>'+
+      '<p style="padding:16px;color:var(--muted)">No discount data yet — it loads from the live feed on the next refresh.</p></div>';
+    return;
+  }
+  const t=D.totals||{};
+  const rows=Object.entries(D.venues).sort((a,b)=>(b[1].missed)-(a[1].missed) || (b[1].reusable)-(a[1].reusable));
+  const pctCell=(pct)=>{ if(pct==null) return '<span style="color:var(--faint)">—</span>';
+    const c= pct>=90?'var(--green)':pct>=70?'var(--yellow)':'var(--red)';
+    return `<b style="color:${c}">${pct}%</b>`; };
+  let body='';
+  rows.forEach(([v,d],i)=>{
+    body+=`<tr class="disc-row" onclick="toggleDisc(${i})" title="Click for the missed sales">
+      <td class="venue">${v} <span class="disc-caret">▸</span></td>
+      <td>${d.reusable}</td><td>${d.discounted}</td><td><b>${d.missed}</b></td><td>${pctCell(d.pct)}</td></tr>`;
+    const ml=d.missedList||[];
+    const detail = ml.length
+      ? '<table class="mini"><thead><tr><th>Date</th><th>Time</th><th>Reusable item</th><th>Sale ID</th></tr></thead><tbody>'+
+        ml.map(m=>`<tr><td>${fmtDate(m.date)}</td><td>${m.time||''}</td><td>${m.bowl||''}</td><td>${m.saleId||''}</td></tr>`).join('')+
+        '</tbody></table>'
+      : '<p style="margin:0;color:var(--muted)">No missed discounts in this window 🎉</p>';
+    body+=`<tr class="disc-detail" id="disc-${i}" style="display:none"><td colspan="5">${detail}</td></tr>`;
+  });
+  host.innerHTML=`
+    <div class="card">
+      <div class="head"><h2>Reusable Discount Compliance</h2>
+        <span class="hint">10% discount on reusable bowls (${(D.items||[]).join(', ')}) · ${D.window||''} · click a venue for the missed sales</span></div>
+      <div class="disc-summary">
+        <div><div class="k">Overall compliance</div><div class="v">${t.pct==null?'—':t.pct+'%'}</div></div>
+        <div><div class="k">Reusable-bowl sales</div><div class="v">${t.reusable||0}</div></div>
+        <div><div class="k">Discount applied</div><div class="v">${t.discounted||0}</div></div>
+        <div><div class="k">Missed</div><div class="v" style="color:var(--red)">${t.missed||0}</div></div>
+      </div>
+      <div class="grid-scroll">
+        <table class="matrix disc-table">
+          <thead><tr><th class="venue">Venue</th><th>Reusable sales</th><th>Discounted</th><th>Missed</th><th>Compliance</th></tr></thead>
+          <tbody>${body}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
 function render() {
   // Parse the report date at LOCAL midnight so the "days behind" maths lines up with
   // the viewer's own calendar day (a bare Date("YYYY-MM-DD") is UTC and can be off by one).
@@ -770,7 +843,9 @@ function render() {
   cap.style.fontWeight = days >= 4 ? '700' : '';
   document.getElementById('metaVenues').textContent = venues(state.period).length;
   renderKpis();
-  if (state.view === 'grid') renderGrid(); else renderCards();
+  if (state.view === 'grid') renderGrid();
+  else if (state.view === 'cards') renderCards();
+  else renderDiscounts();
 }
 
 /* Wire up controls */
@@ -813,6 +888,7 @@ async function loadData() {
       const d = await res.json();
       if (d && d.periods) {
         SAMPLE = d.periods;
+        if (d.discounts) DISCOUNTS = d.discounts;
         DATA = structuredClone(SAMPLE);
         if (d.meta) {
           if (d.meta.reportDate) CONFIG.reportDate = d.meta.reportDate;
