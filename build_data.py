@@ -144,6 +144,13 @@ SQL = {
         GROUP BY s.TxnDate
         HAVING COUNT(DISTINCT s.StoreName) >= 18
         ORDER BY s.TxnDate DESC""",
+    # Latest day that has ANY NSW sales — including today's in-progress day. Powers the
+    # Live tab's window (current calendar week through the freshest data), whereas the
+    # anchor above deliberately lags to the last COMPLETE day for the main board.
+    "live_date": f"""
+        SELECT MAX(s.TxnDate) live_date
+        FROM PolygonRedcatNetSalesByStoreDailyView s
+        WHERE s.StoreName IN ({_NSW_STORE_IN})""",
     # Reusable-discount compliance: one row per reusable-bowl sale in the window, with
     # the bowl used, whether the 10% reusable discount was applied, and whether ANY POS
     # discount was applied. We keep only lines that are either a reusable bowl or a POS
@@ -646,18 +653,17 @@ def live_extract(snap):
 _MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 
-def compute_discounts(snap):
-    """Per-venue reusable-bowl discount compliance for the calendar week to date
-    (Monday -> latest complete trading day), mirroring Mitch's Polygon "on or after
-    start of this week" filter. Each reusable-bowl sale is classified: got the 10%
-    reusable discount (compliant), got another POS discount instead (excluded, as his
-    report does), or carried no discount at all (a MISS). Compliance % is measured over
-    eligible sales only (compliant + missed), so comped/free sales don't dilute it.
+def compute_discounts(start, end):
+    """Per-venue reusable-bowl discount compliance over the window start..end,
+    mirroring Mitch's Polygon "on or after start of this week" filter. Each
+    reusable-bowl sale is classified: got the 10% reusable discount (compliant), got
+    another POS discount instead (excluded, as his report does), or carried no discount
+    at all (a MISS). Compliance % is measured over eligible sales only (compliant +
+    missed), so comped/free sales don't dilute it. Called twice: once for the stable
+    week-to-last-complete-day view, once for the Live tab (current week through today).
     Queried one venue at a time (StoreName is the only fast filter on the big Polygon
     line-item view); each venue is wrapped so a slow or failed one is skipped rather
     than sinking the whole section. Returns None if nothing was retrievable."""
-    end = snap["dailyDate"]
-    start = snap["weekStart"]
     out = {}
     for display, sales_store, *_ in VENUES:
         try:
@@ -687,7 +693,8 @@ def compute_discounts(snap):
     tm = sum(v["missed"] for v in out.values())
     elig = td + tm
     d0, d1 = _dt.date.fromisoformat(start), _dt.date.fromisoformat(end)
-    window = f"{d0.day} {_MONTHS[d0.month-1]} – {d1.day} {_MONTHS[d1.month-1]}"
+    window = (f"{d1.day} {_MONTHS[d1.month-1]}" if d0 == d1
+              else f"{d0.day} {_MONTHS[d0.month-1]} – {d1.day} {_MONTHS[d1.month-1]}")
     return {"metric": "Reusable bowl 10% discount", "items": list(REUSABLE_ITEMS),
             "discountName": REUSABLE_DISCOUNT, "windowStart": start, "windowEnd": end, "window": window,
             "totals": {"reusable": tr, "discounted": td, "otherDisc": to, "missed": tm,
@@ -713,6 +720,19 @@ DISCOUNT_FIXTURE = {
     },
 }
 
+# Offline sample for the Live tab (current calendar week through today, in progress).
+DISCOUNT_FIXTURE_LIVE = {
+    "metric": "Reusable bowl 10% discount", "items": list(REUSABLE_ITEMS),
+    "discountName": REUSABLE_DISCOUNT, "windowStart": "2026-07-20", "windowEnd": "2026-07-20",
+    "window": "20 Jul", "live": True,
+    "totals": {"reusable": 11, "discounted": 4, "otherDisc": 6, "missed": 1, "pct": 80.0},
+    "venues": {
+        "Burwood": {"reusable": 11, "discounted": 4, "otherDisc": 6, "missed": 1, "pct": 80.0, "missedList": [
+            {"saleId": "115230011", "date": "2026-07-20", "time": "12:04:11", "bowl": "Go Bowl Tare"},
+        ]},
+    },
+}
+
 
 def main():
     ap = argparse.ArgumentParser(description="Rebuild data.json for the NSW Operations Dashboard")
@@ -723,17 +743,31 @@ def main():
     if args.offline:
         snap, fixture, down = SNAPSHOT, FIXTURE, set()
         discounts = DISCOUNT_FIXTURE
+        discounts_live = DISCOUNT_FIXTURE_LIVE
     else:
         snap = resolve_snapshot()
         print(f"Resolved window: {snap['reportDate']} ({snap['windows']})", file=sys.stderr)
         fixture, down = live_extract(snap)
         # Reusable-discount compliance is a heavy Polygon crunch; never let it sink the
         # board — on any failure the tab just keeps its last data.
+        # Stable view: this week through the last COMPLETE day (matches the closed-week report).
         try:
-            discounts = compute_discounts(snap)
+            discounts = compute_discounts(snap["weekStart"], snap["dailyDate"])
         except SystemExit as e:
             print(f"WARN  discount compliance skipped: {str(e)[:160]}", file=sys.stderr)
             discounts = None
+        # Live view: the CURRENT calendar week through the freshest data (includes today).
+        try:
+            lrows = datasights_query(SQL["live_date"], {}) or []
+            live_end = str(lrows[0]["live_date"])[:10] if lrows and lrows[0].get("live_date") else snap["dailyDate"]
+            le = _dt.date.fromisoformat(live_end)
+            live_start = (le - _dt.timedelta(days=le.weekday())).isoformat()
+            discounts_live = compute_discounts(live_start, live_end)
+            if discounts_live:
+                discounts_live["live"] = True
+        except SystemExit as e:
+            print(f"WARN  live discount view skipped: {str(e)[:160]}", file=sys.stderr)
+            discounts_live = None
     periods = build_periods(fixture)
     errors, warnings, coverage = validate(periods)
 
@@ -768,6 +802,8 @@ def main():
     }
     if discounts:
         payload["discounts"] = discounts
+    if discounts_live:
+        payload["discountsLive"] = discounts_live
 
     # Only rewrite (and therefore commit/redeploy) when the DATA actually changed
     # — ignore the generatedAt timestamp. Lets the job run every few hours to catch

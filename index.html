@@ -228,7 +228,7 @@
   </div>
   <div class="meta">
     <div class="item" id="metaDateItem"><div class="k">Report date</div><div class="v" id="metaDate">—</div><div class="cap" id="metaDateCap">latest complete day</div></div>
-    <div class="item"><div class="k">Refreshes</div><div class="v">Auto · every ~3 hrs</div></div>
+    <div class="item"><div class="k">Refreshes</div><div class="v">Auto · hourly</div></div>
     <div class="item"><div class="k">Venues</div><div class="v" id="metaVenues">—</div></div>
     <div class="item"><div class="k">Overall</div><div class="v" id="metaOverall">—</div></div>
     <a class="item logout" href="/api/logout" title="Sign out" style="text-decoration:none"><div class="k">Session</div><div class="v" style="color:var(--acc,#0E88A6)">Log out ↪</div></a>
@@ -251,7 +251,8 @@
   <!-- Controls -->
   <div class="controls">
     <div class="seg" id="viewSeg">
-      <button data-view="grid" class="active">Grid</button>
+      <button data-view="live" class="active">Live</button>
+      <button data-view="grid">Grid</button>
       <button data-view="cards">By venue</button>
       <button data-view="discounts">Reusable Discounts</button>
     </div>
@@ -563,7 +564,7 @@ function evaluate(metric, raw, period) {
 /* ============================================================================
  *  RENDERING
  * ========================================================================== */
-let state = { view: 'grid', venue: '*', period: 'daily' };
+let state = { view: 'live', venue: '*', period: 'daily' };
 
 const allMetrics = SYSTEMS.flatMap(s => s.metrics.map(m => ({ ...m, system: s.name })));
 
@@ -778,15 +779,30 @@ let DISCOUNTS = {
     {saleId:"114221327",date:"2026-07-14",time:"19:31:06",bowl:"Icy Go Bowl Tare"}
   ]}}
 };
+/* Live view: current calendar week through the freshest data (includes today). Fed by
+ * data.json `discountsLive`; refreshed hourly. Same shape as DISCOUNTS above. */
+let DISCOUNTS_LIVE = {
+  metric:"Reusable bowl 10% discount", discountName:"Reusable 10% Off", window:"20 Jul", live:true,
+  items:["Go Bowl Tare","RG Bowl Tare","Icy Go Bowl Tare","Co-Chi Bowl Tare"],
+  totals:{reusable:11,discounted:4,otherDisc:6,missed:1,pct:80.0},
+  venues:{ "Burwood":{reusable:11,discounted:4,otherDisc:6,missed:1,pct:80.0,missedList:[
+    {saleId:"115230011",date:"2026-07-20",time:"12:04:11",bowl:"Go Bowl Tare"}
+  ]}}
+};
 const _DM=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 function fmtDate(iso){ const p=(iso||'').split('-'); return p.length===3? (+p[2])+' '+_DM[+p[1]-1] : (iso||''); }
 function toggleDisc(i){ const el=document.getElementById('disc-'+i); if(el) el.style.display = el.style.display==='none'?'':'none'; }
 
-function renderDiscounts(){
-  const D=DISCOUNTS, host=document.getElementById('view');
+function renderDiscounts(D, mode){
+  D = D || DISCOUNTS;
+  const live = mode === 'live';
+  const title = live ? 'Live · Reusable Discounts' : 'Reusable Discount Compliance';
+  const host=document.getElementById('view');
   if(!D || !D.venues || !Object.keys(D.venues).length){
-    host.innerHTML='<div class="card"><div class="head"><h2>Reusable Discount Compliance</h2></div>'+
-      '<p style="padding:16px;color:var(--muted)">No discount data yet — it loads from the live feed on the next refresh.</p></div>';
+    host.innerHTML='<div class="card"><div class="head"><h2>'+title+'</h2></div>'+
+      '<p style="padding:16px;color:var(--muted)">'+(live
+        ? 'No sales in the current week yet — this fills in as today’s transactions come through.'
+        : 'No discount data yet — it loads from the live feed on the next refresh.')+'</p></div>';
     return;
   }
   const t=D.totals||{};
@@ -807,10 +823,14 @@ function renderDiscounts(){
       : '<p style="margin:0;color:var(--muted)">No missed discounts in this window 🎉</p>';
     body+=`<tr class="disc-detail" id="disc-${i}" style="display:none"><td colspan="6">${detail}</td></tr>`;
   });
+  const hint = live
+    ? `Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · <b>this week so far, incl. today (${D.window||''})</b> · updates through the day · a “miss” had no discount of any kind · click a venue for the exact sales`
+    : `Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · this week to date (${D.window||''}) · a “miss” had no discount of any kind, matching the official Polygon report · click a venue for the sales`;
+  const badge = live ? ' <span class="sample-badge" style="background:var(--red);color:#fff">LIVE</span>' : '';
   host.innerHTML=`
     <div class="card">
-      <div class="head"><h2>Reusable Discount Compliance</h2>
-        <span class="hint">Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · this week to date (${D.window||''}) · a “miss” had no discount of any kind, matching the official Polygon report · click a venue for the sales</span></div>
+      <div class="head"><h2>${title}${badge}</h2>
+        <span class="hint">${hint}</span></div>
       <div class="disc-summary">
         <div><div class="k">Overall compliance</div><div class="v">${t.pct==null?'—':t.pct+'%'}</div></div>
         <div><div class="k">Reusable-bowl sales</div><div class="v">${t.reusable||0}</div></div>
@@ -851,7 +871,8 @@ function render() {
   renderKpis();
   if (state.view === 'grid') renderGrid();
   else if (state.view === 'cards') renderCards();
-  else renderDiscounts();
+  else if (state.view === 'live') renderDiscounts(DISCOUNTS_LIVE, 'live');
+  else renderDiscounts(DISCOUNTS, 'stable');
 }
 
 /* Wire up controls */
@@ -895,6 +916,7 @@ async function loadData() {
       if (d && d.periods) {
         SAMPLE = d.periods;
         if (d.discounts) DISCOUNTS = d.discounts;
+        if (d.discountsLive) DISCOUNTS_LIVE = d.discountsLive;
         DATA = structuredClone(SAMPLE);
         if (d.meta) {
           if (d.meta.reportDate) CONFIG.reportDate = d.meta.reportDate;

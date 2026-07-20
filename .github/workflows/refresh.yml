@@ -4,14 +4,15 @@ name: Refresh dashboard data
 # Committing data.json is what triggers the static host (Cloudflare/GitHub Pages)
 # to redeploy — so the dashboard refreshes itself.
 #
-# Runs every ~3 hours: DataSights finishes loading each day's data at some point
-# during the day, so checking often means the board advances to the latest
-# complete day within hours of it landing (not the next morning). build_data.py
-# only rewrites data.json when the data actually changed, so idle runs are no-ops.
+# Runs hourly: the Live tab shows the current week's reusable-discount compliance
+# through the freshest data (including today), so refreshing every hour keeps that
+# view close to live. The main board still advances only to the latest COMPLETE day.
+# build_data.py only rewrites data.json when the data actually changed, so idle runs
+# are no-ops (no commit, no redeploy).
 
 on:
   schedule:
-    - cron: "0 */3 * * *"       # every 3 hours — catch new complete days promptly
+    - cron: "0 * * * *"         # hourly — keep the Live tab close to real time
   workflow_dispatch: {}         # allow a manual run from the Actions tab
 
 permissions:
