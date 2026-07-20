@@ -144,13 +144,15 @@ SQL = {
         GROUP BY s.TxnDate
         HAVING COUNT(DISTINCT s.StoreName) >= 18
         ORDER BY s.TxnDate DESC""",
-    # Latest day that has ANY NSW sales — including today's in-progress day. Powers the
-    # Live tab's window (current calendar week through the freshest data), whereas the
-    # anchor above deliberately lags to the last COMPLETE day for the main board.
-    "live_date": f"""
-        SELECT MAX(s.TxnDate) live_date
-        FROM PolygonRedcatNetSalesByStoreDailyView s
-        WHERE s.StoreName IN ({_NSW_STORE_IN})""",
+    # Latest day that has ANY sales — including today's in-progress day. Powers the Live
+    # tab's window (current calendar week through the freshest data), whereas the anchor
+    # above deliberately lags to the last COMPLETE day for the main board. We read the
+    # RAW sales report here (not the daily aggregate view, which trails it by ~a day),
+    # bounded to the last few days so the MAX stays a fast, indexed scan.
+    "live_date": """
+        SELECT MAX(TxnDate) live_date
+        FROM PolygonRedcatSalesReport
+        WHERE TxnDate >= :recent""",
     # Reusable-discount compliance: one row per reusable-bowl sale in the window, with
     # the bowl used, whether the 10% reusable discount was applied, and whether ANY POS
     # discount was applied. We keep only lines that are either a reusable bowl or a POS
@@ -760,7 +762,8 @@ def main():
             discounts = None
         # Live view: the CURRENT calendar week through the freshest data (includes today).
         try:
-            lrows = datasights_query(SQL["live_date"], {}) or []
+            recent = (_dt.date.fromisoformat(snap["dailyDate"]) - _dt.timedelta(days=4)).isoformat()
+            lrows = datasights_query(SQL["live_date"], {"recent": recent}) or []
             live_end = str(lrows[0]["live_date"])[:10] if lrows and lrows[0].get("live_date") else snap["dailyDate"]
             le = _dt.date.fromisoformat(live_end)
             live_start = (le - _dt.timedelta(days=le.weekday())).isoformat()
