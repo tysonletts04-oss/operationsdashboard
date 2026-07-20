@@ -762,15 +762,19 @@ function renderSourceStrip() {
 function periodLabel(p){ return p==='daily'?'Daily':p==='wtd'?'Week to date':'Month to date'; }
 
 /* ── Reusable Discounts tab ──────────────────────────────────────────────────
- * Fed by data.json `discounts` (a trailing 7-day window from Polygon line items).
+ * Fed by data.json `discounts` (calendar week to date, from Polygon line items).
+ * "Missed" = a reusable-bowl sale with no discount of any kind, matching Mitch's
+ * official Polygon report; sales discounted another way sit in "Other discount".
  * The embedded object below is a fallback so the tab still renders via file://. */
 let DISCOUNTS = {
-  metric:"Reusable bowl 10% discount", discountName:"Reusable 10% Off", window:"12 Jul – 18 Jul",
+  metric:"Reusable bowl 10% discount", discountName:"Reusable 10% Off", window:"13 Jul – 19 Jul",
   items:["Go Bowl Tare","RG Bowl Tare","Icy Go Bowl Tare","Co-Chi Bowl Tare"],
-  totals:{reusable:77,discounted:25,missed:52,pct:32.5},
-  venues:{ "Burwood":{reusable:77,discounted:25,missed:52,pct:32.5,missedList:[
-    {saleId:"114219284",date:"2026-07-12",time:"13:33:54",bowl:"Go Bowl Tare"},
-    {saleId:"114219413",date:"2026-07-12",time:"15:09:54",bowl:"Icy Go Bowl Tare"}
+  totals:{reusable:76,discounted:26,otherDisc:46,missed:4,pct:86.7},
+  venues:{ "Burwood":{reusable:76,discounted:26,otherDisc:46,missed:4,pct:86.7,missedList:[
+    {saleId:"115220135",date:"2026-07-13",time:"13:59:37",bowl:"Icy Go Bowl Tare"},
+    {saleId:"115220155",date:"2026-07-13",time:"14:17:26",bowl:"Icy Go Bowl Tare"},
+    {saleId:"115221326",date:"2026-07-14",time:"19:31:05",bowl:"Icy Go Bowl Tare"},
+    {saleId:"114221327",date:"2026-07-14",time:"19:31:06",bowl:"Icy Go Bowl Tare"}
   ]}}
 };
 const _DM=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -793,28 +797,29 @@ function renderDiscounts(){
   rows.forEach(([v,d],i)=>{
     body+=`<tr class="disc-row" onclick="toggleDisc(${i})" title="Click for the missed sales">
       <td class="venue">${v} <span class="disc-caret">▸</span></td>
-      <td>${d.reusable}</td><td>${d.discounted}</td><td><b>${d.missed}</b></td><td>${pctCell(d.pct)}</td></tr>`;
+      <td>${d.reusable}</td><td>${d.discounted}</td><td>${d.otherDisc==null?'—':d.otherDisc}</td><td><b>${d.missed}</b></td><td>${pctCell(d.pct)}</td></tr>`;
     const ml=d.missedList||[];
     const detail = ml.length
       ? '<table class="mini"><thead><tr><th>Date</th><th>Time</th><th>Reusable item</th><th>Sale ID</th></tr></thead><tbody>'+
         ml.map(m=>`<tr><td>${fmtDate(m.date)}</td><td>${m.time||''}</td><td>${m.bowl||''}</td><td>${m.saleId||''}</td></tr>`).join('')+
         '</tbody></table>'
       : '<p style="margin:0;color:var(--muted)">No missed discounts in this window 🎉</p>';
-    body+=`<tr class="disc-detail" id="disc-${i}" style="display:none"><td colspan="5">${detail}</td></tr>`;
+    body+=`<tr class="disc-detail" id="disc-${i}" style="display:none"><td colspan="6">${detail}</td></tr>`;
   });
   host.innerHTML=`
     <div class="card">
       <div class="head"><h2>Reusable Discount Compliance</h2>
-        <span class="hint">10% discount on reusable bowls (${(D.items||[]).join(', ')}) · ${D.window||''} · click a venue for the missed sales</span></div>
+        <span class="hint">Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · this week to date (${D.window||''}) · a “miss” had no discount of any kind, matching the official Polygon report · click a venue for the sales</span></div>
       <div class="disc-summary">
         <div><div class="k">Overall compliance</div><div class="v">${t.pct==null?'—':t.pct+'%'}</div></div>
         <div><div class="k">Reusable-bowl sales</div><div class="v">${t.reusable||0}</div></div>
-        <div><div class="k">Discount applied</div><div class="v">${t.discounted||0}</div></div>
+        <div><div class="k">10% applied</div><div class="v">${t.discounted||0}</div></div>
+        <div><div class="k">Other discount</div><div class="v">${t.otherDisc||0}</div></div>
         <div><div class="k">Missed</div><div class="v" style="color:var(--red)">${t.missed||0}</div></div>
       </div>
       <div class="grid-scroll">
         <table class="matrix disc-table">
-          <thead><tr><th class="venue">Venue</th><th>Reusable sales</th><th>Discounted</th><th>Missed</th><th>Compliance</th></tr></thead>
+          <thead><tr><th class="venue">Venue</th><th>Reusable sales</th><th>10% applied</th><th>Other discount</th><th>Missed</th><th>Compliance</th></tr></thead>
           <tbody>${body}</tbody>
         </table>
       </div>
