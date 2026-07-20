@@ -120,6 +120,13 @@ VENUES = [
 # permission change on that table then can't stall the whole refresh.
 _NSW_STORE_IN = ", ".join("'" + v[1].replace("'", "''") + "'" for v in VENUES)
 
+# Reusable-bowl 10% discount compliance (Polygon line items). A sale that rings up
+# any of these bowl tares should also carry the "Reusable 10% Off" discount line;
+# where it doesn't, staff missed applying the reusable discount.
+REUSABLE_ITEMS = ("Go Bowl Tare", "RG Bowl Tare", "Icy Go Bowl Tare", "Co-Chi Bowl Tare")
+REUSABLE_DISCOUNT = "Reusable 10% Off"
+_REUSABLE_IN = ", ".join("'" + i + "'" for i in REUSABLE_ITEMS + (REUSABLE_DISCOUNT,))
+
 SQL = {
     # Anchor: the most recent day where (nearly) all NSW venues have sales —
     # i.e. the latest COMPLETE trading day. Data lags ~1 day behind "today".
@@ -131,6 +138,20 @@ SQL = {
         GROUP BY s.TxnDate
         HAVING COUNT(DISTINCT s.StoreName) >= 18
         ORDER BY s.TxnDate DESC""",
+    # Reusable-discount compliance: one row per reusable-bowl sale in the window,
+    # with the bowl used and whether the 10% discount was applied. Queried per venue
+    # (StoreName is the only fast filter on this huge line-item view — a multi-store
+    # scan times out). live_extract loops venues; each call stays well under 120s.
+    "discount_detail": f"""
+        SELECT SaleID,
+          MIN(TxnDate) txn_date, MIN(TxnTime) txn_time,
+          MAX(CASE WHEN PLUItem <> '{REUSABLE_DISCOUNT}' THEN PLUItem END) bowl,
+          MAX(CASE WHEN PLUItem = '{REUSABLE_DISCOUNT}' THEN 1 ELSE 0 END) discounted
+        FROM PolygonRedcatSalesReport
+        WHERE StoreName = :store AND TxnDate >= :winStart AND TxnDate <= :dailyDate
+          AND PLUItem IN ({_REUSABLE_IN})
+        GROUP BY SaleID
+        HAVING MAX(CASE WHEN PLUItem <> '{REUSABLE_DISCOUNT}' THEN 1 ELSE 0 END) = 1""",
     # Net sales per store, keyed by StoreName only. The VENUES table below is the
     # authoritative NSW allow-list (live_extract picks the stores it needs), so we don't
     # depend on Venue_Master.Reporting here — that flag isn't set for newly-onboarded
@@ -612,6 +633,66 @@ def live_extract(snap):
     return fixture, down
 
 
+_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+
+def compute_discounts(snap):
+    """Per-venue reusable-bowl 10% discount compliance over a trailing 7-day window.
+    Queried one venue at a time (StoreName is the only fast filter on the big Polygon
+    line-item view); each venue is wrapped so a slow or failed one is skipped rather
+    than sinking the whole section. Returns None if nothing was retrievable."""
+    end = snap["dailyDate"]
+    start = (_dt.date.fromisoformat(end) - _dt.timedelta(days=6)).isoformat()
+    out = {}
+    for display, sales_store, *_ in VENUES:
+        try:
+            rows = datasights_query(SQL["discount_detail"],
+                                    {"store": sales_store, "winStart": start, "dailyDate": end}) or []
+        except SystemExit as e:
+            print(f"WARN  discounts unavailable for {display}: {str(e)[:120]}", file=sys.stderr)
+            continue
+        discounted = sum(1 for r in rows if int(_num(r.get("discounted"))) == 1)
+        missed = sorted(
+            ({"saleId": str(r.get("SaleID")), "date": str(r.get("txn_date"))[:10],
+              "time": str(r.get("txn_time"))[:8], "bowl": r.get("bowl")}
+             for r in rows if int(_num(r.get("discounted"))) == 0),
+            key=lambda m: (m["date"], m["time"]))
+        out[display] = {"reusable": len(rows), "discounted": discounted, "missed": len(missed),
+                        "pct": round(100.0 * discounted / len(rows), 1) if rows else None,
+                        "missedList": missed}
+    if not out:
+        return None
+    tr = sum(v["reusable"] for v in out.values())
+    td = sum(v["discounted"] for v in out.values())
+    d0, d1 = _dt.date.fromisoformat(start), _dt.date.fromisoformat(end)
+    window = f"{d0.day} {_MONTHS[d0.month-1]} – {d1.day} {_MONTHS[d1.month-1]}"
+    return {"metric": "Reusable bowl 10% discount", "items": list(REUSABLE_ITEMS),
+            "discountName": REUSABLE_DISCOUNT, "windowStart": start, "windowEnd": end, "window": window,
+            "totals": {"reusable": tr, "discounted": td, "missed": tr - td,
+                       "pct": round(100.0 * td / tr, 1) if tr else None},
+            "venues": out}
+
+
+# Offline sample for the Reusable Discounts tab (real Yo-Chi Burwood figures, 12–18 Jul);
+# live mode replaces this with all venues via compute_discounts().
+DISCOUNT_FIXTURE = {
+    "metric": "Reusable bowl 10% discount", "items": list(REUSABLE_ITEMS),
+    "discountName": REUSABLE_DISCOUNT, "windowStart": "2026-07-12", "windowEnd": "2026-07-18",
+    "window": "12 Jul – 18 Jul",
+    "totals": {"reusable": 77, "discounted": 25, "missed": 52, "pct": 32.5},
+    "venues": {
+        "Burwood": {"reusable": 77, "discounted": 25, "missed": 52, "pct": 32.5, "missedList": [
+            {"saleId": "114219284", "date": "2026-07-12", "time": "13:33:54", "bowl": "Go Bowl Tare"},
+            {"saleId": "114219413", "date": "2026-07-12", "time": "15:09:54", "bowl": "Icy Go Bowl Tare"},
+            {"saleId": "115219470", "date": "2026-07-12", "time": "15:52:49", "bowl": "Icy Go Bowl Tare"},
+            {"saleId": "114219499", "date": "2026-07-12", "time": "16:15:09", "bowl": "Go Bowl Tare"},
+            {"saleId": "114219708", "date": "2026-07-12", "time": "19:05:23", "bowl": "Go Bowl Tare"},
+            {"saleId": "114219890", "date": "2026-07-12", "time": "21:22:01", "bowl": "Go Bowl Tare"},
+        ]},
+    },
+}
+
+
 def main():
     ap = argparse.ArgumentParser(description="Rebuild data.json for the NSW Operations Dashboard")
     ap.add_argument("--offline", action="store_true", help="rebuild from the bundled snapshot (no DB)")
@@ -620,10 +701,18 @@ def main():
 
     if args.offline:
         snap, fixture, down = SNAPSHOT, FIXTURE, set()
+        discounts = DISCOUNT_FIXTURE
     else:
         snap = resolve_snapshot()
         print(f"Resolved window: {snap['reportDate']} ({snap['windows']})", file=sys.stderr)
         fixture, down = live_extract(snap)
+        # Reusable-discount compliance is a heavy Polygon crunch; never let it sink the
+        # board — on any failure the tab just keeps its last data.
+        try:
+            discounts = compute_discounts(snap)
+        except SystemExit as e:
+            print(f"WARN  discount compliance skipped: {str(e)[:160]}", file=sys.stderr)
+            discounts = None
     periods = build_periods(fixture)
     errors, warnings, coverage = validate(periods)
 
@@ -656,6 +745,8 @@ def main():
         },
         "periods": periods,
     }
+    if discounts:
+        payload["discounts"] = discounts
 
     # Only rewrite (and therefore commit/redeploy) when the DATA actually changed
     # — ignore the generatedAt timestamp. Lets the job run every few hours to catch
