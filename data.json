@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-07-19",
-  "generatedAt": "2026-07-20T14:16:18+00:00",
+  "generatedAt": "2026-07-20T16:27:34+00:00",
   "windows": "daily = 19 Jul · WTD = 13–19 Jul · MTD = 1–19 Jul",
   "venues": 27,
   "sources": {
@@ -31,7 +31,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.8,
+     "pct": 16.0,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -61,7 +61,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.1,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 92.5,
@@ -104,7 +104,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.8,
+     "pct": 13.9,
      "budgetPct": null
     },
     "policies": 97.2,
@@ -121,7 +121,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.0,
+     "pct": 15.1,
      "budgetPct": null
     },
     "policies": 95.3,
@@ -138,7 +138,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.9,
+     "pct": 14.6,
      "budgetPct": null
     },
     "policies": 98.0,
@@ -155,7 +155,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.1,
+     "pct": 14.2,
      "budgetPct": null
     },
     "policies": 95.6,
@@ -223,7 +223,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 16.7,
      "budgetPct": null
     },
     "policies": 94.2,
@@ -257,7 +257,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 19.0,
+     "pct": 18.8,
      "budgetPct": null
     },
     "policies": 92.6,
@@ -291,7 +291,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.9,
+     "pct": 19.0,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -325,7 +325,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 17.7,
+     "pct": 17.6,
      "budgetPct": null
     },
     "policies": 97.3,
@@ -342,7 +342,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 19.6,
+     "pct": 19.8,
      "budgetPct": null
     },
     "policies": 83.5,
@@ -376,7 +376,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 24.5,
+     "pct": 24.7,
      "budgetPct": null
     },
     "policies": 93.1,
@@ -410,7 +410,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.3,
+     "pct": 18.5,
      "budgetPct": null
     },
     "policies": 97.0,
@@ -427,7 +427,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.7,
+     "pct": 18.8,
      "budgetPct": null
     },
     "policies": 93.3,
@@ -444,7 +444,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 22.9,
+     "pct": 23.2,
      "budgetPct": null
     },
     "policies": 86.3,
@@ -476,7 +476,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.8,
+     "pct": 16.0,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -506,7 +506,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.1,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 92.5,
@@ -549,7 +549,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.8,
+     "pct": 13.9,
      "budgetPct": null
     },
     "policies": 97.2,
@@ -566,7 +566,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.0,
+     "pct": 15.1,
      "budgetPct": null
     },
     "policies": 95.3,
@@ -583,7 +583,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.9,
+     "pct": 14.6,
      "budgetPct": null
     },
     "policies": 98.0,
@@ -600,7 +600,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.1,
+     "pct": 14.2,
      "budgetPct": null
     },
     "policies": 95.6,
@@ -668,7 +668,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 16.7,
      "budgetPct": null
     },
     "policies": 94.2,
@@ -702,7 +702,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 19.0,
+     "pct": 18.8,
      "budgetPct": null
     },
     "policies": 92.6,
@@ -736,7 +736,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.9,
+     "pct": 19.0,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -770,7 +770,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 17.7,
+     "pct": 17.6,
      "budgetPct": null
     },
     "policies": 97.3,
@@ -787,7 +787,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 19.6,
+     "pct": 19.8,
      "budgetPct": null
     },
     "policies": 83.5,
@@ -821,7 +821,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 24.5,
+     "pct": 24.7,
      "budgetPct": null
     },
     "policies": 93.1,
@@ -855,7 +855,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.3,
+     "pct": 18.5,
      "budgetPct": null
     },
     "policies": 97.0,
@@ -872,7 +872,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.7,
+     "pct": 18.8,
      "budgetPct": null
     },
     "policies": 93.3,
@@ -889,7 +889,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 22.9,
+     "pct": 23.2,
      "budgetPct": null
     },
     "policies": 86.3,
@@ -921,7 +921,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.8,
+     "pct": 16.0,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -951,7 +951,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.1,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 92.5,
@@ -994,7 +994,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.8,
+     "pct": 13.9,
      "budgetPct": null
     },
     "policies": 97.2,
@@ -1011,7 +1011,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.0,
+     "pct": 15.1,
      "budgetPct": null
     },
     "policies": 95.3,
@@ -1028,7 +1028,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.9,
+     "pct": 14.6,
      "budgetPct": null
     },
     "policies": 98.0,
@@ -1045,7 +1045,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.1,
+     "pct": 14.2,
      "budgetPct": null
     },
     "policies": 95.6,
@@ -1113,7 +1113,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 16.7,
      "budgetPct": null
     },
     "policies": 94.2,
@@ -1147,7 +1147,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 19.0,
+     "pct": 18.8,
      "budgetPct": null
     },
     "policies": 92.6,
@@ -1181,7 +1181,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.9,
+     "pct": 19.0,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -1215,7 +1215,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 17.7,
+     "pct": 17.6,
      "budgetPct": null
     },
     "policies": 97.3,
@@ -1232,7 +1232,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 19.6,
+     "pct": 19.8,
      "budgetPct": null
     },
     "policies": 83.5,
@@ -1266,7 +1266,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 24.5,
+     "pct": 24.7,
      "budgetPct": null
     },
     "policies": 93.1,
@@ -1300,7 +1300,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.3,
+     "pct": 18.5,
      "budgetPct": null
     },
     "policies": 97.0,
@@ -1317,7 +1317,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.7,
+     "pct": 18.8,
      "budgetPct": null
     },
     "policies": 93.3,
@@ -1334,7 +1334,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 22.9,
+     "pct": 23.2,
      "budgetPct": null
     },
     "policies": 86.3,
