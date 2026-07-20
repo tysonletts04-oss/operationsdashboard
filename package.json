@@ -1,0 +1,10 @@
+{
+  "name": "operationsdashboard",
+  "private": true,
+  "type": "module",
+  "description": "Auth0 login gate (Vercel middleware + functions) in front of the NSW Operations Dashboard.",
+  "dependencies": {
+    "@vercel/functions": "^3.7.5",
+    "jose": "^6.2.3"
+  }
+}
