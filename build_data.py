@@ -669,7 +669,9 @@ def compute_discounts(start, end):
         try:
             rows = datasights_query(SQL["discount_detail"],
                                     {"store": sales_store, "winStart": start, "dailyDate": end}) or []
-        except SystemExit as e:
+        except (SystemExit, Exception) as e:
+            # Optional enrichment: skip this venue on ANY failure (permission, MCP
+            # error, or a network read-timeout) rather than sinking the whole refresh.
             print(f"WARN  discounts unavailable for {display}: {str(e)[:120]}", file=sys.stderr)
             continue
         discounted = sum(1 for r in rows if int(_num(r.get("got_10"))) == 1)
@@ -753,7 +755,7 @@ def main():
         # Stable view: this week through the last COMPLETE day (matches the closed-week report).
         try:
             discounts = compute_discounts(snap["weekStart"], snap["dailyDate"])
-        except SystemExit as e:
+        except (SystemExit, Exception) as e:
             print(f"WARN  discount compliance skipped: {str(e)[:160]}", file=sys.stderr)
             discounts = None
         # Live view: the CURRENT calendar week through the freshest data (includes today).
@@ -765,7 +767,7 @@ def main():
             discounts_live = compute_discounts(live_start, live_end)
             if discounts_live:
                 discounts_live["live"] = True
-        except SystemExit as e:
+        except (SystemExit, Exception) as e:
             print(f"WARN  live discount view skipped: {str(e)[:160]}", file=sys.stderr)
             discounts_live = None
     periods = build_periods(fixture)
