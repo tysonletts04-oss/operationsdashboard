@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-07-20",
-  "generatedAt": "2026-07-21T13:49:31+00:00",
+  "generatedAt": "2026-07-21T17:21:40+00:00",
   "windows": "daily = 20 Jul · WTD = 20–20 Jul · MTD = 1–20 Jul",
   "venues": 27,
   "sources": {
@@ -31,7 +31,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.0,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -104,7 +104,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.9,
+     "pct": 14.1,
      "budgetPct": null
     },
     "policies": 97.2,
@@ -155,7 +155,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.2,
+     "pct": 14.3,
      "budgetPct": null
     },
     "policies": 95.6,
@@ -189,7 +189,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.8,
+     "pct": 14.0,
      "budgetPct": null
     },
     "policies": 93.0,
@@ -308,7 +308,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 20.0,
+     "pct": 20.2,
      "budgetPct": null
     },
     "policies": 90.0,
@@ -359,7 +359,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.2,
+     "pct": 18.3,
      "budgetPct": null
     },
     "policies": 96.9,
@@ -376,7 +376,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 24.5,
+     "pct": 24.9,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -476,7 +476,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.0,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -549,7 +549,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.9,
+     "pct": 14.1,
      "budgetPct": null
     },
     "policies": 97.2,
@@ -600,7 +600,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.2,
+     "pct": 14.3,
      "budgetPct": null
     },
     "policies": 95.6,
@@ -634,7 +634,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.8,
+     "pct": 14.0,
      "budgetPct": null
     },
     "policies": 93.0,
@@ -753,7 +753,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 20.0,
+     "pct": 20.2,
      "budgetPct": null
     },
     "policies": 90.0,
@@ -804,7 +804,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.2,
+     "pct": 18.3,
      "budgetPct": null
     },
     "policies": 96.9,
@@ -821,7 +821,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 24.5,
+     "pct": 24.9,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -921,7 +921,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.0,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -994,7 +994,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.9,
+     "pct": 14.1,
      "budgetPct": null
     },
     "policies": 97.2,
@@ -1045,7 +1045,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.2,
+     "pct": 14.3,
      "budgetPct": null
     },
     "policies": 95.6,
@@ -1079,7 +1079,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.8,
+     "pct": 14.0,
      "budgetPct": null
     },
     "policies": 93.0,
@@ -1198,7 +1198,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 20.0,
+     "pct": 20.2,
      "budgetPct": null
     },
     "policies": 90.0,
@@ -1249,7 +1249,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.2,
+     "pct": 18.3,
      "budgetPct": null
     },
     "policies": 96.9,
@@ -1266,7 +1266,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 24.5,
+     "pct": 24.9,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -1618,86 +1618,93 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-07-20",
-  "windowEnd": "2026-07-20",
-  "window": "20 Jul",
+  "windowEnd": "2026-07-21",
+  "window": "20 Jul – 21 Jul",
   "totals": {
-   "reusable": 173,
-   "discounted": 78,
-   "otherDisc": 93,
-   "missed": 2,
-   "pct": 97.5
+   "reusable": 340,
+   "discounted": 152,
+   "otherDisc": 185,
+   "missed": 3,
+   "pct": 98.1
   },
   "venues": {
    "George St": {
-    "reusable": 8,
-    "discounted": 0,
-    "otherDisc": 8,
-    "missed": 0,
-    "pct": null,
-    "missedList": []
-   },
-   "Erina Fair": {
-    "reusable": 9,
-    "discounted": 7,
-    "otherDisc": 2,
+    "reusable": 18,
+    "discounted": 4,
+    "otherDisc": 14,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
+   "Erina Fair": {
+    "reusable": 16,
+    "discounted": 12,
+    "otherDisc": 3,
+    "missed": 1,
+    "pct": 92.3,
+    "missedList": [
+     {
+      "saleId": "106132125",
+      "date": "2026-07-21",
+      "time": "20:02:57",
+      "bowl": "RG Bowl Tare"
+     }
+    ]
+   },
    "Barangaroo": {
-    "reusable": 8,
-    "discounted": 3,
-    "otherDisc": 5,
+    "reusable": 12,
+    "discounted": 4,
+    "otherDisc": 8,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Wollongong": {
-    "reusable": 13,
-    "discounted": 1,
-    "otherDisc": 12,
+    "reusable": 26,
+    "discounted": 4,
+    "otherDisc": 22,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Charlestown": {
-    "reusable": 5,
-    "discounted": 2,
-    "otherDisc": 3,
+    "reusable": 10,
+    "discounted": 5,
+    "otherDisc": 5,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Rouse Hill": {
-    "reusable": 6,
-    "discounted": 4,
-    "otherDisc": 2,
+    "reusable": 16,
+    "discounted": 9,
+    "otherDisc": 7,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Circular Quay": {
-    "reusable": 6,
-    "discounted": 0,
-    "otherDisc": 6,
+    "reusable": 15,
+    "discounted": 4,
+    "otherDisc": 11,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": []
    },
    "Macquarie": {
-    "reusable": 10,
-    "discounted": 4,
-    "otherDisc": 6,
+    "reusable": 18,
+    "discounted": 8,
+    "otherDisc": 10,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Castle Towers": {
-    "reusable": 6,
-    "discounted": 4,
+    "reusable": 11,
+    "discounted": 9,
     "otherDisc": 1,
     "missed": 1,
-    "pct": 80.0,
+    "pct": 90.0,
     "missedList": [
      {
       "saleId": "116215543",
@@ -1708,43 +1715,43 @@
     ]
    },
    "Burwood": {
-    "reusable": 7,
-    "discounted": 1,
-    "otherDisc": 6,
+    "reusable": 17,
+    "discounted": 3,
+    "otherDisc": 14,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Penrith": {
-    "reusable": 4,
-    "discounted": 1,
-    "otherDisc": 3,
-    "missed": 0,
-    "pct": 100.0,
-    "missedList": []
-   },
-   "Manly": {
-    "reusable": 4,
-    "discounted": 1,
-    "otherDisc": 3,
-    "missed": 0,
-    "pct": 100.0,
-    "missedList": []
-   },
-   "Chatswood": {
-    "reusable": 10,
-    "discounted": 4,
+    "reusable": 8,
+    "discounted": 2,
     "otherDisc": 6,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
-   "Cronulla": {
-    "reusable": 8,
+   "Manly": {
+    "reusable": 7,
+    "discounted": 3,
+    "otherDisc": 4,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Chatswood": {
+    "reusable": 16,
     "discounted": 5,
-    "otherDisc": 2,
+    "otherDisc": 11,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Cronulla": {
+    "reusable": 11,
+    "discounted": 7,
+    "otherDisc": 3,
     "missed": 1,
-    "pct": 83.3,
+    "pct": 87.5,
     "missedList": [
      {
       "saleId": "101283025",
@@ -1755,105 +1762,105 @@
     ]
    },
    "Newtown": {
-    "reusable": 10,
-    "discounted": 5,
-    "otherDisc": 5,
+    "reusable": 22,
+    "discounted": 11,
+    "otherDisc": 11,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Bondi": {
-    "reusable": 5,
-    "discounted": 1,
-    "otherDisc": 4,
+    "reusable": 10,
+    "discounted": 2,
+    "otherDisc": 8,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Coogee": {
-    "reusable": 4,
-    "discounted": 4,
-    "otherDisc": 0,
+    "reusable": 11,
+    "discounted": 6,
+    "otherDisc": 5,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Surry Hills": {
-    "reusable": 5,
-    "discounted": 1,
-    "otherDisc": 4,
+    "reusable": 12,
+    "discounted": 5,
+    "otherDisc": 7,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Top Ryde": {
-    "reusable": 3,
-    "discounted": 2,
+    "reusable": 5,
+    "discounted": 4,
     "otherDisc": 1,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Randwick": {
-    "reusable": 7,
-    "discounted": 4,
-    "otherDisc": 3,
+    "reusable": 13,
+    "discounted": 7,
+    "otherDisc": 6,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Bondi Junction": {
-    "reusable": 1,
+    "reusable": 2,
     "discounted": 0,
-    "otherDisc": 1,
+    "otherDisc": 2,
     "missed": 0,
     "pct": null,
     "missedList": []
    },
    "Lane Cove": {
-    "reusable": 2,
-    "discounted": 2,
-    "otherDisc": 0,
+    "reusable": 5,
+    "discounted": 4,
+    "otherDisc": 1,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Double Bay": {
-    "reusable": 3,
-    "discounted": 2,
-    "otherDisc": 1,
+    "reusable": 9,
+    "discounted": 5,
+    "otherDisc": 4,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Chippendale": {
-    "reusable": 5,
-    "discounted": 2,
-    "otherDisc": 3,
+    "reusable": 11,
+    "discounted": 4,
+    "otherDisc": 7,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Crows Nest": {
-    "reusable": 11,
-    "discounted": 8,
-    "otherDisc": 3,
+    "reusable": 20,
+    "discounted": 13,
+    "otherDisc": 7,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Fish Market": {
-    "reusable": 1,
+    "reusable": 2,
     "discounted": 0,
-    "otherDisc": 1,
+    "otherDisc": 2,
     "missed": 0,
     "pct": null,
     "missedList": []
    },
    "Green Hills": {
-    "reusable": 12,
-    "discounted": 10,
-    "otherDisc": 2,
+    "reusable": 17,
+    "discounted": 12,
+    "otherDisc": 5,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
