@@ -203,6 +203,8 @@
   .disc-summary .k { font-size:10px; text-transform:uppercase; letter-spacing:.07em; color:var(--faint); font-weight:700; }
   .disc-summary .v { font-size:26px; font-weight:700; margin-top:3px; font-variant-numeric:tabular-nums; line-height:1; }
   .disc-table th:not(.venue), .disc-table td:not(.venue) { text-align:right; }
+  .disc-table th.disc-sort { cursor:pointer; user-select:none; white-space:nowrap; }
+  .disc-table th.disc-sort:hover { color:var(--acc); }
   tr.disc-row { cursor:pointer; }
   tr.disc-row:hover td { background:var(--neutral-bg); }
   .disc-caret { color:var(--faint); font-size:10px; }
@@ -793,6 +795,37 @@ const _DM=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','De
 function fmtDate(iso){ const p=(iso||'').split('-'); return p.length===3? (+p[2])+' '+_DM[+p[1]-1] : (iso||''); }
 function toggleDisc(i){ const el=document.getElementById('disc-'+i); if(el) el.style.display = el.style.display==='none'?'':'none'; }
 
+/* Column sort for the discount tables. Default keeps "most misses first"; clicking a
+ * header sorts by that column — Compliance starts ascending so sub-100% venues rise
+ * to the top (what area leaders want to action first). Venues with no eligible bowls
+ * (null %) always sink to the bottom. */
+let DISC_SORT = { by: 'default', asc: true };
+const DISC_COLS = [
+  { key:'reusable',   label:'Reusable sales' },
+  { key:'discounted', label:'10% applied' },
+  { key:'otherDisc',  label:'Other discount' },
+  { key:'missed',     label:'Missed' },
+  { key:'pct',        label:'Compliance' },
+];
+function sortDisc(by){
+  if (DISC_SORT.by === by) DISC_SORT.asc = !DISC_SORT.asc;
+  else { DISC_SORT.by = by; DISC_SORT.asc = (by === 'pct'); }  // %: low→high first; others: high→low
+  render();
+}
+function discSortRows(venues){
+  const entries = Object.entries(venues);
+  if (DISC_SORT.by === 'default')
+    return entries.sort((a,b)=>(b[1].missed-a[1].missed) || (b[1].reusable-a[1].reusable));
+  const dir = DISC_SORT.asc ? 1 : -1;
+  return entries.sort((a,b)=>{
+    const va=a[1][DISC_SORT.by], vb=b[1][DISC_SORT.by];
+    if (va==null && vb==null) return 0;
+    if (va==null) return 1;        // nulls to the bottom, either direction
+    if (vb==null) return -1;
+    return (va-vb)*dir || (b[1].missed-a[1].missed);
+  });
+}
+
 function renderDiscounts(D, mode){
   D = D || DISCOUNTS;
   const live = mode === 'live';
@@ -806,7 +839,7 @@ function renderDiscounts(D, mode){
     return;
   }
   const t=D.totals||{};
-  const rows=Object.entries(D.venues).sort((a,b)=>(b[1].missed)-(a[1].missed) || (b[1].reusable)-(a[1].reusable));
+  const rows=discSortRows(D.venues);
   const pctCell=(pct)=>{ if(pct==null) return '<span style="color:var(--faint)">—</span>';
     const c= pct>=90?'var(--green)':pct>=70?'var(--yellow)':'var(--red)';
     return `<b style="color:${c}">${pct}%</b>`; };
@@ -824,8 +857,8 @@ function renderDiscounts(D, mode){
     body+=`<tr class="disc-detail" id="disc-${i}" style="display:none"><td colspan="6">${detail}</td></tr>`;
   });
   const hint = live
-    ? `Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · <b>this week so far, incl. today (${D.window||''})</b> · updates through the day · a “miss” had no discount of any kind · click a venue for the exact sales`
-    : `Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · this week to date (${D.window||''}) · a “miss” had no discount of any kind, matching the official Polygon report · click a venue for the sales`;
+    ? `Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · <b>this week so far, incl. today (${D.window||''})</b> · updates through the day · a “miss” had no discount of any kind · click a venue for the exact sales · click a column header to sort`
+    : `Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · this week to date (${D.window||''}) · a “miss” had no discount of any kind, matching the official Polygon report · click a venue for the sales · click a column header to sort`;
   const badge = live ? ' <span class="sample-badge" style="background:var(--red);color:#fff">LIVE</span>' : '';
   host.innerHTML=`
     <div class="card">
@@ -840,7 +873,7 @@ function renderDiscounts(D, mode){
       </div>
       <div class="grid-scroll">
         <table class="matrix disc-table">
-          <thead><tr><th class="venue">Venue</th><th>Reusable sales</th><th>10% applied</th><th>Other discount</th><th>Missed</th><th>Compliance</th></tr></thead>
+          <thead><tr><th class="venue">Venue</th>${DISC_COLS.map(c=>`<th class="disc-sort" onclick="sortDisc('${c.key}')" title="Sort by ${c.label}">${c.label}${DISC_SORT.by===c.key?(DISC_SORT.asc?' ▲':' ▼'):''}</th>`).join('')}</tr></thead>
           <tbody>${body}</tbody>
         </table>
       </div>
