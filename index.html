@@ -857,9 +857,9 @@ function renderDiscounts(D, mode){
     body+=`<tr class="disc-detail" id="disc-${i}" style="display:none"><td colspan="6">${detail}</td></tr>`;
   });
   const hint = live
-    ? `Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · <b>this week so far, incl. today (${D.window||''})</b> · updates through the day · a “miss” had no discount of any kind · click a venue for the exact sales · click a column header to sort`
+    ? `Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · <b>this week to date (${D.window||''})</b> · updated each morning with the previous day’s sales, not same-day · a “miss” had no discount of any kind · click a venue for the exact sales · click a column header to sort`
     : `Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · this week to date (${D.window||''}) · a “miss” had no discount of any kind, matching the official Polygon report · click a venue for the sales · click a column header to sort`;
-  const badge = live ? ' <span class="sample-badge" style="background:var(--red);color:#fff">LIVE</span>' : '';
+  const badge = live ? ' <span class="sample-badge" style="background:var(--neutral,#8a9aa5);color:#fff">UPDATED DAILY</span>' : '';
   host.innerHTML=`
     <div class="card">
       <div class="head"><h2>${title}${badge}</h2>
