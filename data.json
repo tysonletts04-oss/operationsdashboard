@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-07-22",
-  "generatedAt": "2026-07-22T19:20:16+00:00",
+  "generatedAt": "2026-07-23T16:00:34+00:00",
   "windows": "daily = 22 Jul · WTD = 20–22 Jul · MTD = 1–22 Jul",
   "venues": 27,
   "sources": {
@@ -1665,30 +1665,30 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-07-20",
-  "windowEnd": "2026-07-22",
-  "window": "20 Jul – 22 Jul",
+  "windowEnd": "2026-07-23",
+  "window": "20 Jul – 23 Jul",
   "totals": {
-   "reusable": 509,
-   "discounted": 224,
-   "otherDisc": 276,
-   "missed": 9,
-   "pct": 96.1
+   "reusable": 635,
+   "discounted": 273,
+   "otherDisc": 348,
+   "missed": 14,
+   "pct": 95.1
   },
   "venues": {
    "George St": {
-    "reusable": 25,
-    "discounted": 8,
-    "otherDisc": 17,
+    "reusable": 35,
+    "discounted": 12,
+    "otherDisc": 23,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Erina Fair": {
-    "reusable": 22,
-    "discounted": 15,
+    "reusable": 28,
+    "discounted": 21,
     "otherDisc": 6,
     "missed": 1,
-    "pct": 93.8,
+    "pct": 95.5,
     "missedList": [
      {
       "saleId": "106132125",
@@ -1699,43 +1699,50 @@
     ]
    },
    "Barangaroo": {
-    "reusable": 23,
-    "discounted": 9,
-    "otherDisc": 14,
+    "reusable": 29,
+    "discounted": 12,
+    "otherDisc": 17,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Wollongong": {
-    "reusable": 35,
-    "discounted": 8,
-    "otherDisc": 27,
+    "reusable": 44,
+    "discounted": 11,
+    "otherDisc": 33,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Charlestown": {
-    "reusable": 20,
-    "discounted": 8,
-    "otherDisc": 12,
-    "missed": 0,
-    "pct": 100.0,
-    "missedList": []
+    "reusable": 24,
+    "discounted": 9,
+    "otherDisc": 14,
+    "missed": 1,
+    "pct": 90.0,
+    "missedList": [
+     {
+      "saleId": "105250645",
+      "date": "2026-07-23",
+      "time": "19:10:05",
+      "bowl": "RG Bowl Tare"
+     }
+    ]
    },
    "Rouse Hill": {
-    "reusable": 26,
+    "reusable": 29,
     "discounted": 13,
-    "otherDisc": 13,
+    "otherDisc": 16,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Circular Quay": {
-    "reusable": 24,
-    "discounted": 7,
-    "otherDisc": 15,
+    "reusable": 27,
+    "discounted": 8,
+    "otherDisc": 17,
     "missed": 2,
-    "pct": 77.8,
+    "pct": 80.0,
     "missedList": [
      {
       "saleId": "78429706",
@@ -1752,19 +1759,19 @@
     ]
    },
    "Macquarie": {
-    "reusable": 25,
-    "discounted": 10,
-    "otherDisc": 15,
+    "reusable": 34,
+    "discounted": 15,
+    "otherDisc": 19,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Castle Towers": {
-    "reusable": 18,
-    "discounted": 12,
-    "otherDisc": 4,
+    "reusable": 21,
+    "discounted": 14,
+    "otherDisc": 5,
     "missed": 2,
-    "pct": 85.7,
+    "pct": 87.5,
     "missedList": [
      {
       "saleId": "116215543",
@@ -1781,17 +1788,17 @@
     ]
    },
    "Burwood": {
-    "reusable": 25,
-    "discounted": 7,
-    "otherDisc": 18,
+    "reusable": 33,
+    "discounted": 8,
+    "otherDisc": 25,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Penrith": {
-    "reusable": 19,
+    "reusable": 23,
     "discounted": 8,
-    "otherDisc": 10,
+    "otherDisc": 14,
     "missed": 1,
     "pct": 88.9,
     "missedList": [
@@ -1804,17 +1811,17 @@
     ]
    },
    "Manly": {
-    "reusable": 10,
-    "discounted": 6,
+    "reusable": 11,
+    "discounted": 7,
     "otherDisc": 4,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Chatswood": {
-    "reusable": 21,
+    "reusable": 26,
     "discounted": 6,
-    "otherDisc": 15,
+    "otherDisc": 20,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
@@ -1835,67 +1842,67 @@
     ]
    },
    "Newtown": {
-    "reusable": 31,
-    "discounted": 15,
-    "otherDisc": 16,
+    "reusable": 35,
+    "discounted": 17,
+    "otherDisc": 18,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Bondi": {
-    "reusable": 14,
+    "reusable": 17,
     "discounted": 4,
-    "otherDisc": 10,
+    "otherDisc": 13,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Coogee": {
-    "reusable": 15,
+    "reusable": 17,
     "discounted": 6,
-    "otherDisc": 9,
-    "missed": 0,
-    "pct": 100.0,
-    "missedList": []
-   },
-   "Surry Hills": {
-    "reusable": 20,
-    "discounted": 9,
     "otherDisc": 11,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
+   "Surry Hills": {
+    "reusable": 25,
+    "discounted": 11,
+    "otherDisc": 14,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
    "Top Ryde": {
-    "reusable": 9,
-    "discounted": 5,
-    "otherDisc": 4,
+    "reusable": 14,
+    "discounted": 7,
+    "otherDisc": 7,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Randwick": {
-    "reusable": 18,
-    "discounted": 10,
-    "otherDisc": 8,
+    "reusable": 22,
+    "discounted": 12,
+    "otherDisc": 10,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Bondi Junction": {
-    "reusable": 3,
-    "discounted": 0,
-    "otherDisc": 3,
+    "reusable": 6,
+    "discounted": 2,
+    "otherDisc": 4,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": []
    },
    "Lane Cove": {
-    "reusable": 9,
-    "discounted": 6,
-    "otherDisc": 2,
+    "reusable": 12,
+    "discounted": 8,
+    "otherDisc": 3,
     "missed": 1,
-    "pct": 85.7,
+    "pct": 88.9,
     "missedList": [
      {
       "saleId": "37216547",
@@ -1906,48 +1913,72 @@
     ]
    },
    "Double Bay": {
-    "reusable": 13,
-    "discounted": 6,
-    "otherDisc": 7,
+    "reusable": 17,
+    "discounted": 7,
+    "otherDisc": 10,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Chippendale": {
-    "reusable": 13,
-    "discounted": 5,
-    "otherDisc": 8,
+    "reusable": 17,
+    "discounted": 7,
+    "otherDisc": 10,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Crows Nest": {
-    "reusable": 25,
-    "discounted": 16,
-    "otherDisc": 9,
+    "reusable": 32,
+    "discounted": 18,
+    "otherDisc": 14,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Fish Market": {
-    "reusable": 4,
+    "reusable": 5,
     "discounted": 0,
-    "otherDisc": 4,
+    "otherDisc": 5,
     "missed": 0,
     "pct": null,
     "missedList": []
    },
    "Green Hills": {
-    "reusable": 25,
-    "discounted": 16,
-    "otherDisc": 8,
-    "missed": 1,
-    "pct": 94.1,
+    "reusable": 35,
+    "discounted": 21,
+    "otherDisc": 9,
+    "missed": 5,
+    "pct": 80.8,
     "missedList": [
      {
       "saleId": "105041694",
       "date": "2026-07-22",
       "time": "20:37:10",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105041862",
+      "date": "2026-07-23",
+      "time": "13:45:54",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105042126",
+      "date": "2026-07-23",
+      "time": "18:14:53",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105042143",
+      "date": "2026-07-23",
+      "time": "18:21:34",
+      "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "105042362",
+      "date": "2026-07-23",
+      "time": "20:17:53",
       "bowl": "Icy Go Bowl Tare"
      }
     ]
