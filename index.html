@@ -257,6 +257,7 @@
       <button data-view="grid">Grid</button>
       <button data-view="cards">By venue</button>
       <button data-view="discounts">Reusable Discounts</button>
+      <button data-view="applied">Discounts Applied</button>
     </div>
     <span class="spacer"></span>
     <label for="venueFilter">Venue</label>
@@ -787,9 +788,16 @@ let DISCOUNTS_LIVE = {
   metric:"Reusable bowl 10% discount", discountName:"Reusable 10% Off", window:"20 Jul", live:true,
   items:["Go Bowl Tare","RG Bowl Tare","Icy Go Bowl Tare","Co-Chi Bowl Tare"],
   totals:{reusable:11,discounted:4,otherDisc:6,missed:1,pct:80.0},
-  venues:{ "Burwood":{reusable:11,discounted:4,otherDisc:6,missed:1,pct:80.0,missedList:[
-    {saleId:"115230011",date:"2026-07-20",time:"12:04:11",bowl:"Go Bowl Tare"}
-  ]}}
+  venues:{ "Burwood":{reusable:11,discounted:4,otherDisc:6,missed:1,pct:80.0,
+    missedList:[ {saleId:"115230011",date:"2026-07-20",time:"12:04:11",bowl:"Go Bowl Tare"} ],
+    otherList:[
+      {saleId:"115225978",date:"2026-07-20",time:"12:33:21",bowl:"Go Bowl Tare",discounts:"Team Free Yo-Chi"},
+      {saleId:"114226041",date:"2026-07-20",time:"13:21:12",bowl:"Go Bowl Tare",discounts:"LAM 10%"},
+      {saleId:"114226105",date:"2026-07-20",time:"14:07:06",bowl:"Icy Go Bowl Tare",discounts:"$10 OFF BIRTHDAY VOUCHER"},
+      {saleId:"115226263",date:"2026-07-20",time:"15:51:52",bowl:"Go Bowl Tare",discounts:"Ops Only 100%"},
+      {saleId:"114226351",date:"2026-07-20",time:"17:07:31",bowl:"Go Bowl Tare",discounts:"Loyalty Redemptions"},
+      {saleId:"114226628",date:"2026-07-20",time:"22:07:15",bowl:"Go Bowl Tare",discounts:"Team Free Yo-Chi"}
+    ]}}
 };
 const _DM=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 function fmtDate(iso){ const p=(iso||'').split('-'); return p.length===3? (+p[2])+' '+_DM[+p[1]-1] : (iso||''); }
@@ -880,6 +888,55 @@ function renderDiscounts(D, mode){
     </div>`;
 }
 
+/* Discounts Applied screen — the transaction-level companion to the Live tab. For each
+ * reusable bowl that was discounted another way (not the 10%), it lists the sale and the
+ * discount that was applied. Fed by the live dataset's per-venue `otherList`. */
+function toggleApplied(i){ const el=document.getElementById('appl-'+i); if(el) el.style.display = el.style.display==='none'?'':'none'; }
+
+function renderApplied(){
+  const D=DISCOUNTS_LIVE, host=document.getElementById('view');
+  const title='Discounts Applied · Reusable Bowls';
+  if(!D || !D.venues || !Object.keys(D.venues).length){
+    host.innerHTML='<div class="card"><div class="head"><h2>'+title+'</h2></div>'+
+      '<p style="padding:16px;color:var(--muted)">No data yet — it loads on the next refresh.</p></div>';
+    return;
+  }
+  const t=D.totals||{};
+  const rows=Object.entries(D.venues).filter(([v,d])=>(d.otherDisc||0)>0)
+    .sort((a,b)=>(b[1].otherDisc)-(a[1].otherDisc));
+  let body='';
+  rows.forEach(([v,d],i)=>{
+    body+=`<tr class="disc-row" onclick="toggleApplied(${i})" title="Click for the transactions">
+      <td class="venue">${v} <span class="disc-caret">▸</span></td>
+      <td>${d.reusable}</td><td>${d.discounted}</td><td><b>${d.otherDisc}</b></td></tr>`;
+    const ol=d.otherList||[];
+    const detail = ol.length
+      ? '<table class="mini"><thead><tr><th>Date</th><th>Time</th><th>Reusable item</th><th>Discount applied</th><th>Sale ID</th></tr></thead><tbody>'+
+        ol.map(m=>`<tr><td>${fmtDate(m.date)}</td><td>${m.time||''}</td><td>${m.bowl||''}</td><td><b>${m.discounts||'—'}</b></td><td>${m.saleId||''}</td></tr>`).join('')+
+        '</tbody></table>'
+      : '<p style="margin:0;color:var(--muted)">No other-discount transactions in this window</p>';
+    body+=`<tr class="disc-detail" id="appl-${i}" style="display:none"><td colspan="4">${detail}</td></tr>`;
+  });
+  if(!rows.length) body='<tr><td colspan="4" style="padding:14px;color:var(--muted)">No reusable bowls were discounted another way in this window.</td></tr>';
+  host.innerHTML=`
+    <div class="card">
+      <div class="head"><h2>${title} <span class="sample-badge" style="background:var(--neutral,#8a9aa5);color:#fff">UPDATED DAILY</span></h2>
+        <span class="hint">Reusable bowls that were discounted another way instead of the 10% · this week to date (${D.window||''}) · updated each morning with the previous day’s sales · click a venue to see each transaction and the discount applied</span></div>
+      <div class="disc-summary">
+        <div><div class="k">Reusable-bowl sales</div><div class="v">${t.reusable||0}</div></div>
+        <div><div class="k">10% applied</div><div class="v">${t.discounted||0}</div></div>
+        <div><div class="k">Other discount</div><div class="v">${t.otherDisc||0}</div></div>
+        <div><div class="k">Missed (no discount)</div><div class="v" style="color:var(--red)">${t.missed||0}</div></div>
+      </div>
+      <div class="grid-scroll">
+        <table class="matrix disc-table">
+          <thead><tr><th class="venue">Venue</th><th>Reusable sales</th><th>10% applied</th><th>Other discount</th></tr></thead>
+          <tbody>${body}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
 function render() {
   // Parse the report date at LOCAL midnight so the "days behind" maths lines up with
   // the viewer's own calendar day (a bare Date("YYYY-MM-DD") is UTC and can be off by one).
@@ -905,6 +962,7 @@ function render() {
   if (state.view === 'grid') renderGrid();
   else if (state.view === 'cards') renderCards();
   else if (state.view === 'live') renderDiscounts(DISCOUNTS_LIVE, 'live');
+  else if (state.view === 'applied') renderApplied();
   else renderDiscounts(DISCOUNTS, 'stable');
 }
 

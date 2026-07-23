@@ -165,7 +165,8 @@ SQL = {
           MIN(TxnDate) txn_date, MIN(TxnTime) txn_time,
           MAX(CASE WHEN PLUItem IN ({_BOWLS_IN}) THEN PLUItem END) bowl,
           MAX(CASE WHEN PLUItem = '{REUSABLE_DISCOUNT}' THEN 1 ELSE 0 END) got_10,
-          MAX(CASE WHEN CategoryName = '{DISCOUNT_CATEGORY}' THEN 1 ELSE 0 END) any_disc
+          MAX(CASE WHEN CategoryName = '{DISCOUNT_CATEGORY}' THEN 1 ELSE 0 END) any_disc,
+          STRING_AGG(CASE WHEN CategoryName = '{DISCOUNT_CATEGORY}' THEN PLUItem END, ', ') disc_names
         FROM PolygonRedcatSalesReport
         WHERE StoreName = :store AND TxnDate >= :winStart AND TxnDate <= :dailyDate
           AND ( PLUItem IN ({_BOWLS_IN}) OR CategoryName = '{DISCOUNT_CATEGORY}' )
@@ -655,7 +656,19 @@ def live_extract(snap):
 _MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 
-def compute_discounts(start, end):
+def _dedupe_discounts(s):
+    """Collapse a repeated STRING_AGG list ('LAM 10%, LAM 10%, Team Free') to unique
+    names in first-seen order ('LAM 10%, Team Free')."""
+    seen, out = set(), []
+    for x in (s or "").split(", "):
+        x = x.strip()
+        if x and x not in seen:
+            seen.add(x)
+            out.append(x)
+    return ", ".join(out)
+
+
+def compute_discounts(start, end, with_other=False):
     """Per-venue reusable-bowl discount compliance over the window start..end,
     mirroring Mitch's Polygon "on or after start of this week" filter. Each
     reusable-bowl sale is classified: got the 10% reusable discount (compliant), got
@@ -663,9 +676,11 @@ def compute_discounts(start, end):
     at all (a MISS). Compliance % is measured over eligible sales only (compliant +
     missed), so comped/free sales don't dilute it. Called twice: once for the stable
     week-to-last-complete-day view, once for the Live tab (current week through today).
-    Queried one venue at a time (StoreName is the only fast filter on the big Polygon
-    line-item view); each venue is wrapped so a slow or failed one is skipped rather
-    than sinking the whole section. Returns None if nothing was retrievable."""
+    When with_other is set, each venue also gets an `otherList` of the sales discounted
+    another way, with the discount name(s) applied — this powers the Discounts Applied
+    screen. Queried one venue at a time (StoreName is the only fast filter on the big
+    Polygon line-item view); each venue is wrapped so a slow or failed one is skipped
+    rather than sinking the whole section. Returns None if nothing was retrievable."""
     out = {}
     for display, sales_store, *_ in VENUES:
         try:
@@ -685,10 +700,19 @@ def compute_discounts(start, end):
              for r in rows if int(_num(r.get("any_disc"))) == 0),
             key=lambda m: (m["date"], m["time"]))
         eligible = discounted + len(missed)
-        out[display] = {"reusable": len(rows), "discounted": discounted, "otherDisc": other,
-                        "missed": len(missed),
-                        "pct": round(100.0 * discounted / eligible, 1) if eligible else None,
-                        "missedList": missed}
+        entry = {"reusable": len(rows), "discounted": discounted, "otherDisc": other,
+                 "missed": len(missed),
+                 "pct": round(100.0 * discounted / eligible, 1) if eligible else None,
+                 "missedList": missed}
+        if with_other:
+            entry["otherList"] = sorted(
+                ({"saleId": str(r.get("SaleID")), "date": str(r.get("txn_date"))[:10],
+                  "time": str(r.get("txn_time"))[:8], "bowl": r.get("bowl"),
+                  "discounts": _dedupe_discounts(r.get("disc_names"))}
+                 for r in rows
+                 if int(_num(r.get("got_10"))) == 0 and int(_num(r.get("any_disc"))) == 1),
+                key=lambda m: (m["date"], m["time"]))
+        out[display] = entry
     if not out:
         return None
     tr = sum(v["reusable"] for v in out.values())
@@ -731,9 +755,18 @@ DISCOUNT_FIXTURE_LIVE = {
     "window": "20 Jul", "live": True,
     "totals": {"reusable": 11, "discounted": 4, "otherDisc": 6, "missed": 1, "pct": 80.0},
     "venues": {
-        "Burwood": {"reusable": 11, "discounted": 4, "otherDisc": 6, "missed": 1, "pct": 80.0, "missedList": [
-            {"saleId": "115230011", "date": "2026-07-20", "time": "12:04:11", "bowl": "Go Bowl Tare"},
-        ]},
+        "Burwood": {"reusable": 11, "discounted": 4, "otherDisc": 6, "missed": 1, "pct": 80.0,
+            "missedList": [
+                {"saleId": "115230011", "date": "2026-07-20", "time": "12:04:11", "bowl": "Go Bowl Tare"},
+            ],
+            "otherList": [
+                {"saleId": "115225978", "date": "2026-07-20", "time": "12:33:21", "bowl": "Go Bowl Tare", "discounts": "Team Free Yo-Chi"},
+                {"saleId": "114226041", "date": "2026-07-20", "time": "13:21:12", "bowl": "Go Bowl Tare", "discounts": "LAM 10%"},
+                {"saleId": "114226105", "date": "2026-07-20", "time": "14:07:06", "bowl": "Icy Go Bowl Tare", "discounts": "$10 OFF BIRTHDAY VOUCHER"},
+                {"saleId": "115226263", "date": "2026-07-20", "time": "15:51:52", "bowl": "Go Bowl Tare", "discounts": "Ops Only 100%"},
+                {"saleId": "114226351", "date": "2026-07-20", "time": "17:07:31", "bowl": "Go Bowl Tare", "discounts": "Loyalty Redemptions"},
+                {"saleId": "114226628", "date": "2026-07-20", "time": "22:07:15", "bowl": "Go Bowl Tare", "discounts": "Team Free Yo-Chi"},
+            ]},
     },
 }
 
@@ -767,7 +800,7 @@ def main():
             live_end = str(lrows[0]["live_date"])[:10] if lrows and lrows[0].get("live_date") else snap["dailyDate"]
             le = _dt.date.fromisoformat(live_end)
             live_start = (le - _dt.timedelta(days=le.weekday())).isoformat()
-            discounts_live = compute_discounts(live_start, live_end)
+            discounts_live = compute_discounts(live_start, live_end, with_other=True)
             if discounts_live:
                 discounts_live["live"] = True
         except (SystemExit, Exception) as e:
