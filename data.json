@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-07-22",
-  "generatedAt": "2026-07-23T19:18:59+00:00",
+  "generatedAt": "2026-07-23T22:06:10+00:00",
   "windows": "daily = 22 Jul · WTD = 20–22 Jul · MTD = 1–22 Jul",
   "venues": 27,
   "sources": {
@@ -1681,7 +1681,177 @@
     "otherDisc": 24,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "103495596",
+      "date": "2026-07-20",
+      "time": "13:18:35",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103495687",
+      "date": "2026-07-20",
+      "time": "13:56:41",
+      "bowl": "RG Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103495912",
+      "date": "2026-07-20",
+      "time": "15:45:45",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103495970",
+      "date": "2026-07-20",
+      "time": "16:06:26",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103496021",
+      "date": "2026-07-20",
+      "time": "16:32:27",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103496459",
+      "date": "2026-07-20",
+      "time": "20:13:26",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103496546",
+      "date": "2026-07-20",
+      "time": "20:54:07",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "104496576",
+      "date": "2026-07-20",
+      "time": "21:06:21",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103496768",
+      "date": "2026-07-21",
+      "time": "11:44:36",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103496782",
+      "date": "2026-07-21",
+      "time": "12:16:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "104497317",
+      "date": "2026-07-21",
+      "time": "18:32:36",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "104497390",
+      "date": "2026-07-21",
+      "time": "19:10:13",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "104497487",
+      "date": "2026-07-21",
+      "time": "19:42:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "104497839",
+      "date": "2026-07-21",
+      "time": "21:58:48",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103497979",
+      "date": "2026-07-22",
+      "time": "12:07:52",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103498306",
+      "date": "2026-07-22",
+      "time": "16:38:31",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103498490",
+      "date": "2026-07-22",
+      "time": "18:35:07",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103499209",
+      "date": "2026-07-23",
+      "time": "11:52:09",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103499225",
+      "date": "2026-07-23",
+      "time": "12:31:59",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103499351",
+      "date": "2026-07-23",
+      "time": "14:15:07",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103499538",
+      "date": "2026-07-23",
+      "time": "16:16:26",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "104499745",
+      "date": "2026-07-23",
+      "time": "18:32:02",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "104499804",
+      "date": "2026-07-23",
+      "time": "19:03:03",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103500236",
+      "date": "2026-07-23",
+      "time": "21:44:02",
+      "bowl": "RG Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Erina Fair": {
     "reusable": 30,
@@ -1708,6 +1878,50 @@
       "time": "21:04:46",
       "bowl": "Go Bowl Tare"
      }
+    ],
+    "otherList": [
+     {
+      "saleId": "105130764",
+      "date": "2026-07-20",
+      "time": "11:24:19",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106130997",
+      "date": "2026-07-20",
+      "time": "13:31:13",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 10%"
+     },
+     {
+      "saleId": "106131993",
+      "date": "2026-07-21",
+      "time": "17:54:29",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 10%"
+     },
+     {
+      "saleId": "106132556",
+      "date": "2026-07-22",
+      "time": "16:22:27",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 10%"
+     },
+     {
+      "saleId": "106132682",
+      "date": "2026-07-22",
+      "time": "19:08:52",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 10%"
+     },
+     {
+      "saleId": "106132823",
+      "date": "2026-07-22",
+      "time": "20:55:59",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 10%"
+     }
     ]
    },
    "Barangaroo": {
@@ -1716,7 +1930,128 @@
     "otherDisc": 17,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "73555316",
+      "date": "2026-07-20",
+      "time": "11:25:33",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74555849",
+      "date": "2026-07-20",
+      "time": "18:43:36",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "73555898",
+      "date": "2026-07-20",
+      "time": "19:25:50",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74555937",
+      "date": "2026-07-20",
+      "time": "19:52:07",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74556022",
+      "date": "2026-07-20",
+      "time": "20:56:35",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74556542",
+      "date": "2026-07-21",
+      "time": "17:41:48",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74556594",
+      "date": "2026-07-21",
+      "time": "18:58:00",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74556719",
+      "date": "2026-07-21",
+      "time": "20:40:19",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74556838",
+      "date": "2026-07-22",
+      "time": "12:15:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74557141",
+      "date": "2026-07-22",
+      "time": "15:51:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74557197",
+      "date": "2026-07-22",
+      "time": "17:07:33",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74557359",
+      "date": "2026-07-22",
+      "time": "19:32:45",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74557393",
+      "date": "2026-07-22",
+      "time": "20:00:01",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74557504",
+      "date": "2026-07-22",
+      "time": "21:04:07",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "73557627",
+      "date": "2026-07-23",
+      "time": "12:22:19",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "73558102",
+      "date": "2026-07-23",
+      "time": "18:42:10",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "73558210",
+      "date": "2026-07-23",
+      "time": "20:06:45",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Wollongong": {
     "reusable": 48,
@@ -1724,7 +2059,268 @@
     "otherDisc": 37,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "106310449",
+      "date": "2026-07-20",
+      "time": "11:27:12",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105310609",
+      "date": "2026-07-20",
+      "time": "13:32:00",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106310724",
+      "date": "2026-07-20",
+      "time": "14:39:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106310791",
+      "date": "2026-07-20",
+      "time": "15:32:58",
+      "bowl": "RG Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106310863",
+      "date": "2026-07-20",
+      "time": "16:43:46",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106310927",
+      "date": "2026-07-20",
+      "time": "18:34:19",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105311011",
+      "date": "2026-07-20",
+      "time": "19:47:36",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106311012",
+      "date": "2026-07-20",
+      "time": "19:48:15",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Free Yo-Chi $10"
+     },
+     {
+      "saleId": "105311131",
+      "date": "2026-07-20",
+      "time": "21:02:06",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105311162",
+      "date": "2026-07-20",
+      "time": "22:02:21",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105311166",
+      "date": "2026-07-20",
+      "time": "22:15:25",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105311170",
+      "date": "2026-07-20",
+      "time": "22:22:06",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106311187",
+      "date": "2026-07-21",
+      "time": "10:57:25",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106311197",
+      "date": "2026-07-21",
+      "time": "11:33:52",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106311202",
+      "date": "2026-07-21",
+      "time": "11:46:28",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106311230",
+      "date": "2026-07-21",
+      "time": "12:54:48",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105311423",
+      "date": "2026-07-21",
+      "time": "16:37:45",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106311489",
+      "date": "2026-07-21",
+      "time": "17:59:06",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106311553",
+      "date": "2026-07-21",
+      "time": "19:16:38",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105311618",
+      "date": "2026-07-21",
+      "time": "19:51:38",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106311638",
+      "date": "2026-07-21",
+      "time": "20:05:23",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105311752",
+      "date": "2026-07-21",
+      "time": "21:33:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105311852",
+      "date": "2026-07-22",
+      "time": "12:29:16",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106312257",
+      "date": "2026-07-22",
+      "time": "19:52:08",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106312443",
+      "date": "2026-07-22",
+      "time": "21:37:12",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105312444",
+      "date": "2026-07-22",
+      "time": "21:39:37",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105312458",
+      "date": "2026-07-22",
+      "time": "22:10:47",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106312482",
+      "date": "2026-07-23",
+      "time": "10:59:02",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi, Loyalty Redemptions"
+     },
+     {
+      "saleId": "105312513",
+      "date": "2026-07-23",
+      "time": "12:38:41",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105312519",
+      "date": "2026-07-23",
+      "time": "12:49:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106312810",
+      "date": "2026-07-23",
+      "time": "18:32:50",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106312923",
+      "date": "2026-07-23",
+      "time": "19:30:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105312930",
+      "date": "2026-07-23",
+      "time": "19:37:04",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106313139",
+      "date": "2026-07-23",
+      "time": "21:01:08",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106313152",
+      "date": "2026-07-23",
+      "time": "21:12:34",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105313166",
+      "date": "2026-07-23",
+      "time": "21:34:29",
+      "bowl": "RG Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105313209",
+      "date": "2026-07-23",
+      "time": "22:20:23",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Charlestown": {
     "reusable": 28,
@@ -1739,6 +2335,134 @@
       "time": "19:10:05",
       "bowl": "RG Bowl Tare"
      }
+    ],
+    "otherList": [
+     {
+      "saleId": "105248564",
+      "date": "2026-07-20",
+      "time": "13:42:34",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105248920",
+      "date": "2026-07-20",
+      "time": "19:43:44",
+      "bowl": "RG Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105248999",
+      "date": "2026-07-20",
+      "time": "20:34:47",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105249125",
+      "date": "2026-07-21",
+      "time": "12:30:05",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105249335",
+      "date": "2026-07-21",
+      "time": "18:23:01",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105249707",
+      "date": "2026-07-22",
+      "time": "12:52:34",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105249724",
+      "date": "2026-07-22",
+      "time": "13:15:17",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106249831",
+      "date": "2026-07-22",
+      "time": "15:47:40",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105249910",
+      "date": "2026-07-22",
+      "time": "17:55:11",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105249975",
+      "date": "2026-07-22",
+      "time": "19:07:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105250131",
+      "date": "2026-07-22",
+      "time": "20:38:57",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105250156",
+      "date": "2026-07-22",
+      "time": "20:54:22",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106250388",
+      "date": "2026-07-23",
+      "time": "15:18:00",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105250651",
+      "date": "2026-07-23",
+      "time": "19:11:47",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105250870",
+      "date": "2026-07-23",
+      "time": "20:27:26",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105250881",
+      "date": "2026-07-23",
+      "time": "20:31:32",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106250909",
+      "date": "2026-07-23",
+      "time": "20:44:08",
+      "bowl": "RG Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105251039",
+      "date": "2026-07-23",
+      "time": "22:04:35",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
     ]
    },
    "Rouse Hill": {
@@ -1747,7 +2471,135 @@
     "otherDisc": 18,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "120217732",
+      "date": "2026-07-20",
+      "time": "12:59:09",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121218352",
+      "date": "2026-07-20",
+      "time": "20:58:41",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121218874",
+      "date": "2026-07-21",
+      "time": "19:49:45",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121218917",
+      "date": "2026-07-21",
+      "time": "20:17:54",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121218934",
+      "date": "2026-07-21",
+      "time": "20:38:51",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121218948",
+      "date": "2026-07-21",
+      "time": "20:54:18",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121218996",
+      "date": "2026-07-21",
+      "time": "21:35:27",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "120219023",
+      "date": "2026-07-22",
+      "time": "11:46:00",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121219045",
+      "date": "2026-07-22",
+      "time": "12:52:17",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121219150",
+      "date": "2026-07-22",
+      "time": "15:22:50",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team 25% Off"
+     },
+     {
+      "saleId": "121219330",
+      "date": "2026-07-22",
+      "time": "18:20:59",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121219503",
+      "date": "2026-07-22",
+      "time": "20:32:52",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121219544",
+      "date": "2026-07-22",
+      "time": "20:59:14",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121219747",
+      "date": "2026-07-23",
+      "time": "15:06:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121219943",
+      "date": "2026-07-23",
+      "time": "17:57:59",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121220063",
+      "date": "2026-07-23",
+      "time": "19:25:20",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121220274",
+      "date": "2026-07-23",
+      "time": "20:53:19",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121220395",
+      "date": "2026-07-23",
+      "time": "22:00:42",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Circular Quay": {
     "reusable": 28,
@@ -1768,6 +2620,134 @@
       "time": "13:39:24",
       "bowl": "Icy Go Bowl Tare"
      }
+    ],
+    "otherList": [
+     {
+      "saleId": "77428201",
+      "date": "2026-07-20",
+      "time": "10:37:27",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77428206",
+      "date": "2026-07-20",
+      "time": "11:12:13",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "78428220",
+      "date": "2026-07-20",
+      "time": "11:47:53",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77428723",
+      "date": "2026-07-20",
+      "time": "19:02:06",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77428799",
+      "date": "2026-07-20",
+      "time": "20:29:29",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77428822",
+      "date": "2026-07-20",
+      "time": "20:54:34",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77428880",
+      "date": "2026-07-21",
+      "time": "11:01:17",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Loyalty Redemptions"
+     },
+     {
+      "saleId": "77429204",
+      "date": "2026-07-21",
+      "time": "16:10:16",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77429346",
+      "date": "2026-07-21",
+      "time": "18:48:31",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "78429389",
+      "date": "2026-07-21",
+      "time": "19:27:55",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "78429474",
+      "date": "2026-07-21",
+      "time": "20:52:18",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Free Yo-Chi $10"
+     },
+     {
+      "saleId": "78429784",
+      "date": "2026-07-22",
+      "time": "14:36:30",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "$10 OFF BIRTHDAY VOUCHER"
+     },
+     {
+      "saleId": "78429969",
+      "date": "2026-07-22",
+      "time": "17:03:24",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77430097",
+      "date": "2026-07-22",
+      "time": "19:01:39",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "78430250",
+      "date": "2026-07-22",
+      "time": "21:23:24",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77430520",
+      "date": "2026-07-23",
+      "time": "14:40:11",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "78430715",
+      "date": "2026-07-23",
+      "time": "16:43:23",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "78431017",
+      "date": "2026-07-23",
+      "time": "21:49:42",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
     ]
    },
    "Macquarie": {
@@ -1776,7 +2756,142 @@
     "otherDisc": 19,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "33448270",
+      "date": "2026-07-20",
+      "time": "12:11:11",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32448273",
+      "date": "2026-07-20",
+      "time": "12:14:40",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "33448311",
+      "date": "2026-07-20",
+      "time": "12:58:35",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Free Yo-Chi $10"
+     },
+     {
+      "saleId": "32448855",
+      "date": "2026-07-20",
+      "time": "19:16:04",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32448931",
+      "date": "2026-07-20",
+      "time": "20:21:13",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32449022",
+      "date": "2026-07-20",
+      "time": "21:07:39",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32449228",
+      "date": "2026-07-21",
+      "time": "14:50:56",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32449229",
+      "date": "2026-07-21",
+      "time": "14:52:31",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32449497",
+      "date": "2026-07-21",
+      "time": "19:05:33",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "33449624",
+      "date": "2026-07-21",
+      "time": "20:37:13",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32449775",
+      "date": "2026-07-22",
+      "time": "13:06:10",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "33450017",
+      "date": "2026-07-22",
+      "time": "17:36:14",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32450137",
+      "date": "2026-07-22",
+      "time": "19:31:28",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32450205",
+      "date": "2026-07-22",
+      "time": "20:12:49",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32450278",
+      "date": "2026-07-22",
+      "time": "21:15:00",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Loyalty Redemptions, Team Free Yo-Chi"
+     },
+     {
+      "saleId": "33450417",
+      "date": "2026-07-23",
+      "time": "13:14:54",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Free Yo-Chi $10"
+     },
+     {
+      "saleId": "32450842",
+      "date": "2026-07-23",
+      "time": "19:15:10",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "33450868",
+      "date": "2026-07-23",
+      "time": "19:31:38",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32450925",
+      "date": "2026-07-23",
+      "time": "19:53:55",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Castle Towers": {
     "reusable": 24,
@@ -1797,6 +2912,50 @@
       "time": "18:48:31",
       "bowl": "Icy Go Bowl Tare"
      }
+    ],
+    "otherList": [
+     {
+      "saleId": "116215911",
+      "date": "2026-07-20",
+      "time": "20:12:21",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Loyalty Redemptions, LAM 10%"
+     },
+     {
+      "saleId": "116216570",
+      "date": "2026-07-22",
+      "time": "13:01:47",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "117216738",
+      "date": "2026-07-22",
+      "time": "18:44:20",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "116217005",
+      "date": "2026-07-22",
+      "time": "22:35:28",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "116217264",
+      "date": "2026-07-23",
+      "time": "18:28:25",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "$10 OFF BIRTHDAY VOUCHER"
+     },
+     {
+      "saleId": "116217594",
+      "date": "2026-07-23",
+      "time": "22:22:07",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
     ]
    },
    "Burwood": {
@@ -1805,7 +2964,198 @@
     "otherDisc": 27,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "115225978",
+      "date": "2026-07-20",
+      "time": "12:33:21",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114226041",
+      "date": "2026-07-20",
+      "time": "13:21:12",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114226105",
+      "date": "2026-07-20",
+      "time": "14:07:06",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "115226263",
+      "date": "2026-07-20",
+      "time": "15:51:52",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114226351",
+      "date": "2026-07-20",
+      "time": "17:07:31",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114226628",
+      "date": "2026-07-20",
+      "time": "22:07:15",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114226692",
+      "date": "2026-07-21",
+      "time": "13:21:24",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114226702",
+      "date": "2026-07-21",
+      "time": "13:38:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "115226996",
+      "date": "2026-07-21",
+      "time": "18:46:56",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Free Yo-Chi $10"
+     },
+     {
+      "saleId": "115226997",
+      "date": "2026-07-21",
+      "time": "18:48:14",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Free Yo-Chi $10"
+     },
+     {
+      "saleId": "115226998",
+      "date": "2026-07-21",
+      "time": "18:49:12",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Free Yo-Chi $10"
+     },
+     {
+      "saleId": "114227004",
+      "date": "2026-07-21",
+      "time": "18:52:38",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114227072",
+      "date": "2026-07-21",
+      "time": "19:52:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114227246",
+      "date": "2026-07-21",
+      "time": "22:32:22",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114227433",
+      "date": "2026-07-22",
+      "time": "15:45:46",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114227465",
+      "date": "2026-07-22",
+      "time": "16:04:28",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114227842",
+      "date": "2026-07-22",
+      "time": "22:00:33",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114227859",
+      "date": "2026-07-22",
+      "time": "22:19:26",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "115227888",
+      "date": "2026-07-23",
+      "time": "12:27:36",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Ops Only 100%"
+     },
+     {
+      "saleId": "114227894",
+      "date": "2026-07-23",
+      "time": "12:35:10",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "115227942",
+      "date": "2026-07-23",
+      "time": "13:46:57",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114228089",
+      "date": "2026-07-23",
+      "time": "16:08:36",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114228099",
+      "date": "2026-07-23",
+      "time": "16:18:51",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114228105",
+      "date": "2026-07-23",
+      "time": "16:23:18",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114228333",
+      "date": "2026-07-23",
+      "time": "19:45:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "115228504",
+      "date": "2026-07-23",
+      "time": "21:49:18",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114228527",
+      "date": "2026-07-23",
+      "time": "22:29:15",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Penrith": {
     "reusable": 25,
@@ -1820,6 +3170,120 @@
       "time": "19:08:05",
       "bowl": "RG Bowl Tare"
      }
+    ],
+    "otherList": [
+     {
+      "saleId": "72323965",
+      "date": "2026-07-20",
+      "time": "12:26:33",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi, Free Yo-Chi $10"
+     },
+     {
+      "saleId": "71324212",
+      "date": "2026-07-20",
+      "time": "15:38:16",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "72324533",
+      "date": "2026-07-20",
+      "time": "21:25:02",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "71324637",
+      "date": "2026-07-21",
+      "time": "14:46:54",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "72324697",
+      "date": "2026-07-21",
+      "time": "15:56:08",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "71324962",
+      "date": "2026-07-21",
+      "time": "21:35:27",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "72325045",
+      "date": "2026-07-22",
+      "time": "13:36:11",
+      "bowl": "Go Bowl Tare",
+      "discounts": "$10 OFF BIRTHDAY VOUCHER"
+     },
+     {
+      "saleId": "72325074",
+      "date": "2026-07-22",
+      "time": "14:34:29",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "71325162",
+      "date": "2026-07-22",
+      "time": "16:01:36",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "71325475",
+      "date": "2026-07-22",
+      "time": "21:28:54",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "72325712",
+      "date": "2026-07-23",
+      "time": "16:34:03",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "72325713",
+      "date": "2026-07-23",
+      "time": "16:34:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "71325761",
+      "date": "2026-07-23",
+      "time": "17:15:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "71325823",
+      "date": "2026-07-23",
+      "time": "18:24:02",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "71326050",
+      "date": "2026-07-23",
+      "time": "21:03:25",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "71326096",
+      "date": "2026-07-23",
+      "time": "21:29:34",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
     ]
    },
    "Manly": {
@@ -1828,7 +3292,58 @@
     "otherDisc": 7,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "43404112",
+      "date": "2026-07-20",
+      "time": "12:34:33",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "44404435",
+      "date": "2026-07-20",
+      "time": "15:33:53",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "43404574",
+      "date": "2026-07-20",
+      "time": "17:06:54",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "44404868",
+      "date": "2026-07-21",
+      "time": "13:40:13",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "43406280",
+      "date": "2026-07-23",
+      "time": "20:44:02",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "43406300",
+      "date": "2026-07-23",
+      "time": "21:05:47",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "43406339",
+      "date": "2026-07-23",
+      "time": "21:58:25",
+      "bowl": "RG Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Chatswood": {
     "reusable": 28,
@@ -1836,7 +3351,156 @@
     "otherDisc": 21,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "109061244",
+      "date": "2026-07-20",
+      "time": "14:05:51",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "108061285",
+      "date": "2026-07-20",
+      "time": "14:34:39",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109061408",
+      "date": "2026-07-20",
+      "time": "15:47:00",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109061488",
+      "date": "2026-07-20",
+      "time": "17:05:07",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109061498",
+      "date": "2026-07-20",
+      "time": "17:21:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109061702",
+      "date": "2026-07-20",
+      "time": "21:25:41",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109061734",
+      "date": "2026-07-21",
+      "time": "11:39:53",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109061997",
+      "date": "2026-07-21",
+      "time": "19:03:46",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109062114",
+      "date": "2026-07-21",
+      "time": "20:53:32",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "108062125",
+      "date": "2026-07-21",
+      "time": "21:10:00",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109062163",
+      "date": "2026-07-21",
+      "time": "21:53:59",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "108062217",
+      "date": "2026-07-22",
+      "time": "13:03:45",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "108062230",
+      "date": "2026-07-22",
+      "time": "13:27:18",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109062609",
+      "date": "2026-07-22",
+      "time": "20:48:03",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109062628",
+      "date": "2026-07-22",
+      "time": "21:08:49",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "108062726",
+      "date": "2026-07-23",
+      "time": "13:40:57",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "108062741",
+      "date": "2026-07-23",
+      "time": "14:03:56",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109062791",
+      "date": "2026-07-23",
+      "time": "15:11:02",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "108062886",
+      "date": "2026-07-23",
+      "time": "16:44:13",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109063092",
+      "date": "2026-07-23",
+      "time": "20:10:31",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109063197",
+      "date": "2026-07-23",
+      "time": "21:08:08",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Cronulla": {
     "reusable": 18,
@@ -1851,6 +3515,64 @@
       "time": "20:56:42",
       "bowl": "Icy Go Bowl Tare"
      }
+    ],
+    "otherList": [
+     {
+      "saleId": "100282660",
+      "date": "2026-07-20",
+      "time": "14:18:10",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "100282757",
+      "date": "2026-07-20",
+      "time": "15:43:23",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "101283252",
+      "date": "2026-07-21",
+      "time": "18:10:25",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "100283535",
+      "date": "2026-07-22",
+      "time": "15:29:05",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "100283697",
+      "date": "2026-07-22",
+      "time": "19:45:01",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "100283755",
+      "date": "2026-07-22",
+      "time": "20:22:32",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "100283793",
+      "date": "2026-07-22",
+      "time": "20:44:04",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "100284177",
+      "date": "2026-07-23",
+      "time": "21:12:40",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
     ]
    },
    "Newtown": {
@@ -1859,7 +3581,142 @@
     "otherDisc": 19,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "21401039",
+      "date": "2026-07-20",
+      "time": "14:33:00",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "22401108",
+      "date": "2026-07-20",
+      "time": "16:07:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21401300",
+      "date": "2026-07-20",
+      "time": "20:08:11",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21401328",
+      "date": "2026-07-20",
+      "time": "20:24:18",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21401330",
+      "date": "2026-07-20",
+      "time": "20:26:12",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21401512",
+      "date": "2026-07-21",
+      "time": "13:27:12",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21401773",
+      "date": "2026-07-21",
+      "time": "19:29:40",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "22401775",
+      "date": "2026-07-21",
+      "time": "19:32:16",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21401857",
+      "date": "2026-07-21",
+      "time": "20:28:50",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21401918",
+      "date": "2026-07-21",
+      "time": "21:02:45",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21401944",
+      "date": "2026-07-21",
+      "time": "21:23:17",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "22402051",
+      "date": "2026-07-22",
+      "time": "12:56:45",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "22402169",
+      "date": "2026-07-22",
+      "time": "16:04:38",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21402401",
+      "date": "2026-07-22",
+      "time": "20:19:44",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21402550",
+      "date": "2026-07-22",
+      "time": "21:35:18",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21402635",
+      "date": "2026-07-22",
+      "time": "22:32:45",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "22402657",
+      "date": "2026-07-23",
+      "time": "12:49:50",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "22402872",
+      "date": "2026-07-23",
+      "time": "19:19:54",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21403069",
+      "date": "2026-07-23",
+      "time": "21:22:04",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Bondi": {
     "reusable": 19,
@@ -1867,7 +3724,107 @@
     "otherDisc": 14,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "59369045",
+      "date": "2026-07-20",
+      "time": "11:35:30",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "59369133",
+      "date": "2026-07-20",
+      "time": "13:48:05",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "59369439",
+      "date": "2026-07-20",
+      "time": "19:45:59",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "59369457",
+      "date": "2026-07-20",
+      "time": "20:04:42",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "58369557",
+      "date": "2026-07-21",
+      "time": "11:42:53",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "59369725",
+      "date": "2026-07-21",
+      "time": "17:21:41",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "59369875",
+      "date": "2026-07-21",
+      "time": "20:45:52",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "58369965",
+      "date": "2026-07-21",
+      "time": "22:17:50",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "59370362",
+      "date": "2026-07-22",
+      "time": "20:40:10",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "59370411",
+      "date": "2026-07-22",
+      "time": "21:24:05",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "59370506",
+      "date": "2026-07-23",
+      "time": "13:57:24",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "59370689",
+      "date": "2026-07-23",
+      "time": "17:29:20",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "59370692",
+      "date": "2026-07-23",
+      "time": "17:31:32",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "59370893",
+      "date": "2026-07-23",
+      "time": "21:48:15",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Coogee": {
     "reusable": 19,
@@ -1875,7 +3832,86 @@
     "otherDisc": 11,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "70355323",
+      "date": "2026-07-21",
+      "time": "12:32:38",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "70355346",
+      "date": "2026-07-21",
+      "time": "13:48:47",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "70355379",
+      "date": "2026-07-21",
+      "time": "14:42:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "70355555",
+      "date": "2026-07-21",
+      "time": "19:06:26",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "69355689",
+      "date": "2026-07-21",
+      "time": "21:12:56",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "69355731",
+      "date": "2026-07-22",
+      "time": "11:01:05",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "70355788",
+      "date": "2026-07-22",
+      "time": "14:49:37",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "69356022",
+      "date": "2026-07-22",
+      "time": "19:13:06",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "69356067",
+      "date": "2026-07-22",
+      "time": "19:38:51",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "69356397",
+      "date": "2026-07-23",
+      "time": "14:48:00",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "69356485",
+      "date": "2026-07-23",
+      "time": "16:37:48",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Surry Hills": {
     "reusable": 25,
@@ -1883,7 +3919,107 @@
     "otherDisc": 14,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "15347358",
+      "date": "2026-07-20",
+      "time": "13:05:28",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15347461",
+      "date": "2026-07-20",
+      "time": "16:14:13",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15347549",
+      "date": "2026-07-20",
+      "time": "19:01:07",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15347587",
+      "date": "2026-07-20",
+      "time": "19:49:50",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15347770",
+      "date": "2026-07-21",
+      "time": "12:39:10",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15347833",
+      "date": "2026-07-21",
+      "time": "14:48:34",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15348217",
+      "date": "2026-07-21",
+      "time": "22:08:24",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15348342",
+      "date": "2026-07-22",
+      "time": "15:51:39",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15348345",
+      "date": "2026-07-22",
+      "time": "15:58:59",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15348419",
+      "date": "2026-07-22",
+      "time": "17:53:05",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "14348445",
+      "date": "2026-07-22",
+      "time": "18:22:46",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "14348762",
+      "date": "2026-07-23",
+      "time": "13:06:18",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "14348782",
+      "date": "2026-07-23",
+      "time": "13:44:16",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Free Yo-Chi $10"
+     },
+     {
+      "saleId": "14348952",
+      "date": "2026-07-23",
+      "time": "18:45:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Top Ryde": {
     "reusable": 16,
@@ -1891,7 +4027,65 @@
     "otherDisc": 8,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "83174865",
+      "date": "2026-07-20",
+      "time": "19:46:32",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "84175254",
+      "date": "2026-07-22",
+      "time": "14:44:33",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "84175259",
+      "date": "2026-07-22",
+      "time": "15:03:25",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "83175428",
+      "date": "2026-07-22",
+      "time": "20:50:29",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "84175507",
+      "date": "2026-07-23",
+      "time": "14:49:41",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "84175614",
+      "date": "2026-07-23",
+      "time": "19:14:25",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "84175633",
+      "date": "2026-07-23",
+      "time": "19:45:48",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Loyalty Redemptions"
+     },
+     {
+      "saleId": "84175738",
+      "date": "2026-07-23",
+      "time": "22:09:26",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Randwick": {
     "reusable": 23,
@@ -1899,7 +4093,86 @@
     "otherDisc": 11,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "122109215",
+      "date": "2026-07-20",
+      "time": "12:24:14",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "122109375",
+      "date": "2026-07-20",
+      "time": "18:02:27",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "122109489",
+      "date": "2026-07-20",
+      "time": "21:15:04",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "122109533",
+      "date": "2026-07-21",
+      "time": "13:14:32",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "122109539",
+      "date": "2026-07-21",
+      "time": "13:38:09",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "123109834",
+      "date": "2026-07-21",
+      "time": "21:36:33",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "123110158",
+      "date": "2026-07-22",
+      "time": "19:31:17",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "122110222",
+      "date": "2026-07-22",
+      "time": "20:15:33",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "122110340",
+      "date": "2026-07-23",
+      "time": "12:18:30",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Free Yo-Chi $10"
+     },
+     {
+      "saleId": "122110529",
+      "date": "2026-07-23",
+      "time": "17:52:24",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "122110710",
+      "date": "2026-07-23",
+      "time": "21:12:13",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Bondi Junction": {
     "reusable": 6,
@@ -1907,7 +4180,37 @@
     "otherDisc": 4,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "85184050",
+      "date": "2026-07-20",
+      "time": "12:15:07",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "85184402",
+      "date": "2026-07-21",
+      "time": "12:42:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "86184731",
+      "date": "2026-07-22",
+      "time": "13:30:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "85185188",
+      "date": "2026-07-23",
+      "time": "16:09:08",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Lane Cove": {
     "reusable": 13,
@@ -1922,6 +4225,29 @@
       "time": "16:38:50",
       "bowl": "Go Bowl Tare"
      }
+    ],
+    "otherList": [
+     {
+      "saleId": "36216147",
+      "date": "2026-07-21",
+      "time": "13:36:57",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "36216445",
+      "date": "2026-07-22",
+      "time": "13:44:22",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Free Yo-Chi $10"
+     },
+     {
+      "saleId": "36216891",
+      "date": "2026-07-23",
+      "time": "19:42:47",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
     ]
    },
    "Double Bay": {
@@ -1930,7 +4256,79 @@
     "otherDisc": 10,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "66197913",
+      "date": "2026-07-20",
+      "time": "14:31:10",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "66198185",
+      "date": "2026-07-21",
+      "time": "12:10:49",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "66198217",
+      "date": "2026-07-21",
+      "time": "14:43:39",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "64198450",
+      "date": "2026-07-21",
+      "time": "20:53:42",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "66198483",
+      "date": "2026-07-22",
+      "time": "12:51:07",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "64198506",
+      "date": "2026-07-22",
+      "time": "14:05:44",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "64198716",
+      "date": "2026-07-22",
+      "time": "20:54:23",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "66198759",
+      "date": "2026-07-23",
+      "time": "13:16:25",
+      "bowl": "Co-Chi Bowl Tare",
+      "discounts": "Loyalty Redemptions"
+     },
+     {
+      "saleId": "64198782",
+      "date": "2026-07-23",
+      "time": "15:19:25",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "64198946",
+      "date": "2026-07-23",
+      "time": "20:12:24",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Chippendale": {
     "reusable": 17,
@@ -1938,7 +4336,79 @@
     "otherDisc": 10,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "126144623",
+      "date": "2026-07-20",
+      "time": "15:52:50",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "125144735",
+      "date": "2026-07-20",
+      "time": "18:32:56",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "126144762",
+      "date": "2026-07-20",
+      "time": "19:14:55",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "126145003",
+      "date": "2026-07-21",
+      "time": "14:37:31",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "126145198",
+      "date": "2026-07-21",
+      "time": "18:18:27",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "126145220",
+      "date": "2026-07-21",
+      "time": "18:48:48",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "125145250",
+      "date": "2026-07-21",
+      "time": "19:34:50",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "126145968",
+      "date": "2026-07-22",
+      "time": "21:55:37",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "126146087",
+      "date": "2026-07-23",
+      "time": "14:27:04",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "126146337",
+      "date": "2026-07-23",
+      "time": "19:56:02",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Crows Nest": {
     "reusable": 32,
@@ -1946,7 +4416,107 @@
     "otherDisc": 14,
     "missed": 0,
     "pct": 100.0,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "141042021",
+      "date": "2026-07-20",
+      "time": "19:20:17",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "141042090",
+      "date": "2026-07-20",
+      "time": "20:32:59",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "141042143",
+      "date": "2026-07-20",
+      "time": "21:42:32",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "142042167",
+      "date": "2026-07-21",
+      "time": "13:05:51",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "142042201",
+      "date": "2026-07-21",
+      "time": "15:03:39",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "141042397",
+      "date": "2026-07-21",
+      "time": "20:19:29",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "141042449",
+      "date": "2026-07-21",
+      "time": "21:19:35",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "142042506",
+      "date": "2026-07-22",
+      "time": "13:17:13",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "141042579",
+      "date": "2026-07-22",
+      "time": "15:27:57",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "142042899",
+      "date": "2026-07-23",
+      "time": "13:22:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "142042921",
+      "date": "2026-07-23",
+      "time": "14:38:49",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "141042952",
+      "date": "2026-07-23",
+      "time": "15:34:02",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "141043010",
+      "date": "2026-07-23",
+      "time": "16:54:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "141043018",
+      "date": "2026-07-23",
+      "time": "17:19:46",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Fish Market": {
     "reusable": 5,
@@ -1954,7 +4524,44 @@
     "otherDisc": 5,
     "missed": 0,
     "pct": null,
-    "missedList": []
+    "missedList": [],
+    "otherList": [
+     {
+      "saleId": "143014410",
+      "date": "2026-07-20",
+      "time": "19:19:13",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Loyalty Redemptions"
+     },
+     {
+      "saleId": "143014531",
+      "date": "2026-07-21",
+      "time": "15:53:07",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 10%"
+     },
+     {
+      "saleId": "143014683",
+      "date": "2026-07-22",
+      "time": "14:17:43",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Ops Only 100%"
+     },
+     {
+      "saleId": "143014751",
+      "date": "2026-07-22",
+      "time": "17:39:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "143014851",
+      "date": "2026-07-23",
+      "time": "12:36:37",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 10%"
+     }
+    ]
    },
    "Green Hills": {
     "reusable": 36,
@@ -1998,6 +4605,71 @@
       "date": "2026-07-23",
       "time": "21:13:08",
       "bowl": "Icy Go Bowl Tare"
+     }
+    ],
+    "otherList": [
+     {
+      "saleId": "105040089",
+      "date": "2026-07-20",
+      "time": "10:15:12",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105040566",
+      "date": "2026-07-20",
+      "time": "19:01:38",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team 25% Off"
+     },
+     {
+      "saleId": "105040914",
+      "date": "2026-07-21",
+      "time": "15:49:54",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105041082",
+      "date": "2026-07-21",
+      "time": "19:38:03",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 10%"
+     },
+     {
+      "saleId": "105041145",
+      "date": "2026-07-21",
+      "time": "20:44:20",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 10%"
+     },
+     {
+      "saleId": "106041318",
+      "date": "2026-07-22",
+      "time": "14:11:33",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105041586",
+      "date": "2026-07-22",
+      "time": "19:22:53",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 10%"
+     },
+     {
+      "saleId": "105041595",
+      "date": "2026-07-22",
+      "time": "19:26:23",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 10%"
+     },
+     {
+      "saleId": "106041947",
+      "date": "2026-07-23",
+      "time": "15:40:37",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    }
