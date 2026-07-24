@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-07-23",
-  "generatedAt": "2026-07-24T18:18:27+00:00",
+  "generatedAt": "2026-07-24T20:22:38+00:00",
   "windows": "daily = 23 Jul · WTD = 20–23 Jul · MTD = 1–23 Jul",
   "venues": 27,
   "sources": {
@@ -251,7 +251,7 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 14,
+    "reviews": 16,
     "sales": {
      "actual": 6089,
      "budget": null
@@ -696,7 +696,7 @@
     "hopperTemps": 25,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 14,
+    "reviews": 16,
     "sales": {
      "actual": 26803,
      "budget": null
@@ -1141,7 +1141,7 @@
     "hopperTemps": 25,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 14,
+    "reviews": 16,
     "sales": {
      "actual": 201706,
      "budget": null
