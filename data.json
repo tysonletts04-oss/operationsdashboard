@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-07-23",
-  "generatedAt": "2026-07-24T16:42:43+00:00",
+  "generatedAt": "2026-07-24T18:18:27+00:00",
   "windows": "daily = 23 Jul · WTD = 20–23 Jul · MTD = 1–23 Jul",
   "venues": 27,
   "sources": {
@@ -31,10 +31,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.7,
+     "pct": 16.1,
      "budgetPct": null
     },
-    "policies": 94.4,
+    "policies": 94.6,
     "comms": 85.5,
     "training": 83.7
    },
@@ -47,7 +47,7 @@
      "actual": 11089,
      "budget": null
     },
-    "policies": 91.3,
+    "policies": 91.4,
     "comms": 76.9,
     "training": 87.5
    },
@@ -61,10 +61,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.9,
+     "pct": 17.1,
      "budgetPct": null
     },
-    "policies": 90.3,
+    "policies": 91.0,
     "comms": 79.3,
     "training": 78.6
    },
@@ -77,7 +77,7 @@
      "actual": 9880,
      "budget": null
     },
-    "policies": 92.6,
+    "policies": 93.6,
     "comms": 76.7,
     "training": 78.3
    },
@@ -90,7 +90,7 @@
      "actual": 10891,
      "budget": null
     },
-    "policies": 93.5,
+    "policies": 94.4,
     "comms": 81.7,
     "training": 90.9
    },
@@ -104,10 +104,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 7.6,
+     "pct": 14.6,
      "budgetPct": null
     },
-    "policies": 94.6,
+    "policies": 95.5,
     "comms": 87.7,
     "training": 93.2
    },
@@ -121,10 +121,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.3,
+     "pct": 15.6,
      "budgetPct": null
     },
-    "policies": 93.8,
+    "policies": 93.9,
     "comms": 77.4,
     "training": 78.6
    },
@@ -138,10 +138,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 7.7,
+     "pct": 15.5,
      "budgetPct": null
     },
-    "policies": 95.5,
+    "policies": 97.4,
     "comms": 79.2,
     "training": 83.2
    },
@@ -155,12 +155,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.0,
+     "pct": 14.9,
      "budgetPct": null
     },
-    "policies": 94.7,
+    "policies": 96.0,
     "comms": 76.4,
-    "training": 88.9
+    "training": 89.3
    },
    "Burwood": {
     "hopperTemps": 4,
@@ -172,10 +172,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.6,
+     "pct": 15.9,
      "budgetPct": null
     },
-    "policies": 90.0,
+    "policies": 90.4,
     "comms": 69.1,
     "training": 87.0
    },
@@ -189,10 +189,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 7.9,
+     "pct": 14.5,
      "budgetPct": null
     },
-    "policies": 88.6,
+    "policies": 89.2,
     "comms": 69.8,
     "training": 82.9
    },
@@ -206,10 +206,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.4,
+     "pct": 14.9,
      "budgetPct": null
     },
-    "policies": 90.6,
+    "policies": 91.4,
     "comms": 72.5,
     "training": 77.3
    },
@@ -223,10 +223,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.1,
+     "pct": 16.8,
      "budgetPct": null
     },
-    "policies": 91.1,
+    "policies": 91.4,
     "comms": 69.4,
     "training": 79.3
    },
@@ -240,10 +240,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.2,
+     "pct": 17.4,
      "budgetPct": null
     },
-    "policies": 90.5,
+    "policies": 90.6,
     "comms": 81.6,
     "training": 86.2
    },
@@ -257,12 +257,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.4,
+     "pct": 19.5,
      "budgetPct": null
     },
-    "policies": 94.4,
-    "comms": 76.2,
-    "training": 85.8
+    "policies": 95.2,
+    "comms": 76.0,
+    "training": 86.0
    },
    "Bondi": {
     "hopperTemps": 3,
@@ -274,12 +274,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.0,
+     "pct": 18.3,
      "budgetPct": null
     },
-    "policies": 88.4,
+    "policies": 88.9,
     "comms": 60.6,
-    "training": 65.7
+    "training": 65.8
    },
    "Coogee": {
     "hopperTemps": 3,
@@ -291,12 +291,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.4,
+     "pct": 19.3,
      "budgetPct": null
     },
-    "policies": 89.2,
+    "policies": 92.6,
     "comms": 76.7,
-    "training": 88.7
+    "training": 90.6
    },
    "Surry Hills": {
     "hopperTemps": 3,
@@ -308,10 +308,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.0,
+     "pct": 19.6,
      "budgetPct": null
     },
-    "policies": 89.1,
+    "policies": 90.2,
     "comms": 71.7,
     "training": 81.1
    },
@@ -325,10 +325,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.1,
+     "pct": 18.2,
      "budgetPct": null
     },
-    "policies": 94.5,
+    "policies": 95.2,
     "comms": 85.6,
     "training": 89.8
    },
@@ -342,12 +342,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.5,
+     "pct": 19.8,
      "budgetPct": null
     },
-    "policies": 76.8,
-    "comms": 62.8,
-    "training": 63.0
+    "policies": 81.0,
+    "comms": 64.2,
+    "training": 62.6
    },
    "Bondi Junction": {
     "hopperTemps": 3,
@@ -359,7 +359,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.0,
+     "pct": 18.4,
      "budgetPct": null
     },
     "policies": 87.8,
@@ -376,11 +376,11 @@
      "budget": null
     },
     "labour": {
-     "pct": 12.9,
+     "pct": 25.2,
      "budgetPct": null
     },
-    "policies": 91.8,
-    "comms": 69.1,
+    "policies": 92.8,
+    "comms": 69.5,
     "training": 78.4
    },
    "Double Bay": {
@@ -393,10 +393,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.0,
+     "pct": 21.8,
      "budgetPct": null
     },
-    "policies": 87.8,
+    "policies": 88.1,
     "comms": 41.4,
     "training": 71.3
    },
@@ -410,10 +410,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.6,
+     "pct": 18.3,
      "budgetPct": null
     },
-    "policies": 93.4,
+    "policies": 93.9,
     "comms": 82.5,
     "training": 72.2
    },
@@ -427,10 +427,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.8,
+     "pct": 19.4,
      "budgetPct": null
     },
-    "policies": 90.1,
+    "policies": 91.2,
     "comms": 75.6,
     "training": 78.3
    },
@@ -444,10 +444,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.7,
+     "pct": 24.4,
      "budgetPct": null
     },
-    "policies": 86.4,
+    "policies": 87.1,
     "comms": 41.5,
     "training": 61.1
    },
@@ -460,7 +460,7 @@
      "actual": 10830,
      "budget": null
     },
-    "policies": 89.3,
+    "policies": 90.4,
     "comms": 60.4,
     "training": 82.8
    }
@@ -476,10 +476,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.7,
+     "pct": 16.1,
      "budgetPct": null
     },
-    "policies": 94.4,
+    "policies": 94.6,
     "comms": 85.5,
     "training": 83.7
    },
@@ -492,7 +492,7 @@
      "actual": 39152,
      "budget": null
     },
-    "policies": 91.3,
+    "policies": 91.4,
     "comms": 76.9,
     "training": 87.5
    },
@@ -506,10 +506,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.9,
+     "pct": 17.1,
      "budgetPct": null
     },
-    "policies": 90.3,
+    "policies": 91.0,
     "comms": 79.3,
     "training": 78.6
    },
@@ -522,7 +522,7 @@
      "actual": 39033,
      "budget": null
     },
-    "policies": 92.6,
+    "policies": 93.6,
     "comms": 76.7,
     "training": 78.3
    },
@@ -535,7 +535,7 @@
      "actual": 35102,
      "budget": null
     },
-    "policies": 93.5,
+    "policies": 94.4,
     "comms": 81.7,
     "training": 90.9
    },
@@ -549,10 +549,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 7.6,
+     "pct": 14.6,
      "budgetPct": null
     },
-    "policies": 94.6,
+    "policies": 95.5,
     "comms": 87.7,
     "training": 93.2
    },
@@ -566,10 +566,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.3,
+     "pct": 15.6,
      "budgetPct": null
     },
-    "policies": 93.8,
+    "policies": 93.9,
     "comms": 77.4,
     "training": 78.6
    },
@@ -583,10 +583,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 7.7,
+     "pct": 15.5,
      "budgetPct": null
     },
-    "policies": 95.5,
+    "policies": 97.4,
     "comms": 79.2,
     "training": 83.2
    },
@@ -600,12 +600,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.0,
+     "pct": 14.9,
      "budgetPct": null
     },
-    "policies": 94.7,
+    "policies": 96.0,
     "comms": 76.4,
-    "training": 88.9
+    "training": 89.3
    },
    "Burwood": {
     "hopperTemps": 25,
@@ -617,10 +617,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.6,
+     "pct": 15.9,
      "budgetPct": null
     },
-    "policies": 90.0,
+    "policies": 90.4,
     "comms": 69.1,
     "training": 87.0
    },
@@ -634,10 +634,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 7.9,
+     "pct": 14.5,
      "budgetPct": null
     },
-    "policies": 88.6,
+    "policies": 89.2,
     "comms": 69.8,
     "training": 82.9
    },
@@ -651,10 +651,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.4,
+     "pct": 14.9,
      "budgetPct": null
     },
-    "policies": 90.6,
+    "policies": 91.4,
     "comms": 72.5,
     "training": 77.3
    },
@@ -668,10 +668,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.1,
+     "pct": 16.8,
      "budgetPct": null
     },
-    "policies": 91.1,
+    "policies": 91.4,
     "comms": 69.4,
     "training": 79.3
    },
@@ -685,10 +685,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.2,
+     "pct": 17.4,
      "budgetPct": null
     },
-    "policies": 90.5,
+    "policies": 90.6,
     "comms": 81.6,
     "training": 86.2
    },
@@ -702,12 +702,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.4,
+     "pct": 19.5,
      "budgetPct": null
     },
-    "policies": 94.4,
-    "comms": 76.2,
-    "training": 85.8
+    "policies": 95.2,
+    "comms": 76.0,
+    "training": 86.0
    },
    "Bondi": {
     "hopperTemps": 19,
@@ -719,12 +719,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.0,
+     "pct": 18.3,
      "budgetPct": null
     },
-    "policies": 88.4,
+    "policies": 88.9,
     "comms": 60.6,
-    "training": 65.7
+    "training": 65.8
    },
    "Coogee": {
     "hopperTemps": 20,
@@ -736,12 +736,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.4,
+     "pct": 19.3,
      "budgetPct": null
     },
-    "policies": 89.2,
+    "policies": 92.6,
     "comms": 76.7,
-    "training": 88.7
+    "training": 90.6
    },
    "Surry Hills": {
     "hopperTemps": 24,
@@ -753,10 +753,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.0,
+     "pct": 19.6,
      "budgetPct": null
     },
-    "policies": 89.1,
+    "policies": 90.2,
     "comms": 71.7,
     "training": 81.1
    },
@@ -770,10 +770,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.1,
+     "pct": 18.2,
      "budgetPct": null
     },
-    "policies": 94.5,
+    "policies": 95.2,
     "comms": 85.6,
     "training": 89.8
    },
@@ -787,12 +787,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.5,
+     "pct": 19.8,
      "budgetPct": null
     },
-    "policies": 76.8,
-    "comms": 62.8,
-    "training": 63.0
+    "policies": 81.0,
+    "comms": 64.2,
+    "training": 62.6
    },
    "Bondi Junction": {
     "hopperTemps": 22,
@@ -804,7 +804,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.0,
+     "pct": 18.4,
      "budgetPct": null
     },
     "policies": 87.8,
@@ -821,11 +821,11 @@
      "budget": null
     },
     "labour": {
-     "pct": 12.9,
+     "pct": 25.2,
      "budgetPct": null
     },
-    "policies": 91.8,
-    "comms": 69.1,
+    "policies": 92.8,
+    "comms": 69.5,
     "training": 78.4
    },
    "Double Bay": {
@@ -838,10 +838,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.0,
+     "pct": 21.8,
      "budgetPct": null
     },
-    "policies": 87.8,
+    "policies": 88.1,
     "comms": 41.4,
     "training": 71.3
    },
@@ -855,10 +855,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.6,
+     "pct": 18.3,
      "budgetPct": null
     },
-    "policies": 93.4,
+    "policies": 93.9,
     "comms": 82.5,
     "training": 72.2
    },
@@ -872,10 +872,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.8,
+     "pct": 19.4,
      "budgetPct": null
     },
-    "policies": 90.1,
+    "policies": 91.2,
     "comms": 75.6,
     "training": 78.3
    },
@@ -889,10 +889,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.7,
+     "pct": 24.4,
      "budgetPct": null
     },
-    "policies": 86.4,
+    "policies": 87.1,
     "comms": 41.5,
     "training": 61.1
    },
@@ -905,7 +905,7 @@
      "actual": 35155,
      "budget": null
     },
-    "policies": 89.3,
+    "policies": 90.4,
     "comms": 60.4,
     "training": 82.8
    }
@@ -921,10 +921,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.7,
+     "pct": 16.1,
      "budgetPct": null
     },
-    "policies": 94.4,
+    "policies": 94.6,
     "comms": 85.5,
     "training": 83.7
    },
@@ -937,7 +937,7 @@
      "actual": 356125,
      "budget": null
     },
-    "policies": 91.3,
+    "policies": 91.4,
     "comms": 76.9,
     "training": 87.5
    },
@@ -951,10 +951,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.9,
+     "pct": 17.1,
      "budgetPct": null
     },
-    "policies": 90.3,
+    "policies": 91.0,
     "comms": 79.3,
     "training": 78.6
    },
@@ -967,7 +967,7 @@
      "actual": 325739,
      "budget": null
     },
-    "policies": 92.6,
+    "policies": 93.6,
     "comms": 76.7,
     "training": 78.3
    },
@@ -980,7 +980,7 @@
      "actual": 313910,
      "budget": null
     },
-    "policies": 93.5,
+    "policies": 94.4,
     "comms": 81.7,
     "training": 90.9
    },
@@ -994,10 +994,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 7.6,
+     "pct": 14.6,
      "budgetPct": null
     },
-    "policies": 94.6,
+    "policies": 95.5,
     "comms": 87.7,
     "training": 93.2
    },
@@ -1011,10 +1011,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.3,
+     "pct": 15.6,
      "budgetPct": null
     },
-    "policies": 93.8,
+    "policies": 93.9,
     "comms": 77.4,
     "training": 78.6
    },
@@ -1028,10 +1028,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 7.7,
+     "pct": 15.5,
      "budgetPct": null
     },
-    "policies": 95.5,
+    "policies": 97.4,
     "comms": 79.2,
     "training": 83.2
    },
@@ -1045,12 +1045,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.0,
+     "pct": 14.9,
      "budgetPct": null
     },
-    "policies": 94.7,
+    "policies": 96.0,
     "comms": 76.4,
-    "training": 88.9
+    "training": 89.3
    },
    "Burwood": {
     "hopperTemps": 25,
@@ -1062,10 +1062,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.6,
+     "pct": 15.9,
      "budgetPct": null
     },
-    "policies": 90.0,
+    "policies": 90.4,
     "comms": 69.1,
     "training": 87.0
    },
@@ -1079,10 +1079,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 7.9,
+     "pct": 14.5,
      "budgetPct": null
     },
-    "policies": 88.6,
+    "policies": 89.2,
     "comms": 69.8,
     "training": 82.9
    },
@@ -1096,10 +1096,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 8.4,
+     "pct": 14.9,
      "budgetPct": null
     },
-    "policies": 90.6,
+    "policies": 91.4,
     "comms": 72.5,
     "training": 77.3
    },
@@ -1113,10 +1113,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.1,
+     "pct": 16.8,
      "budgetPct": null
     },
-    "policies": 91.1,
+    "policies": 91.4,
     "comms": 69.4,
     "training": 79.3
    },
@@ -1130,10 +1130,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.2,
+     "pct": 17.4,
      "budgetPct": null
     },
-    "policies": 90.5,
+    "policies": 90.6,
     "comms": 81.6,
     "training": 86.2
    },
@@ -1147,12 +1147,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.4,
+     "pct": 19.5,
      "budgetPct": null
     },
-    "policies": 94.4,
-    "comms": 76.2,
-    "training": 85.8
+    "policies": 95.2,
+    "comms": 76.0,
+    "training": 86.0
    },
    "Bondi": {
     "hopperTemps": 19,
@@ -1164,12 +1164,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.0,
+     "pct": 18.3,
      "budgetPct": null
     },
-    "policies": 88.4,
+    "policies": 88.9,
     "comms": 60.6,
-    "training": 65.7
+    "training": 65.8
    },
    "Coogee": {
     "hopperTemps": 20,
@@ -1181,12 +1181,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.4,
+     "pct": 19.3,
      "budgetPct": null
     },
-    "policies": 89.2,
+    "policies": 92.6,
     "comms": 76.7,
-    "training": 88.7
+    "training": 90.6
    },
    "Surry Hills": {
     "hopperTemps": 24,
@@ -1198,10 +1198,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.0,
+     "pct": 19.6,
      "budgetPct": null
     },
-    "policies": 89.1,
+    "policies": 90.2,
     "comms": 71.7,
     "training": 81.1
    },
@@ -1215,10 +1215,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.1,
+     "pct": 18.2,
      "budgetPct": null
     },
-    "policies": 94.5,
+    "policies": 95.2,
     "comms": 85.6,
     "training": 89.8
    },
@@ -1232,12 +1232,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.5,
+     "pct": 19.8,
      "budgetPct": null
     },
-    "policies": 76.8,
-    "comms": 62.8,
-    "training": 63.0
+    "policies": 81.0,
+    "comms": 64.2,
+    "training": 62.6
    },
    "Bondi Junction": {
     "hopperTemps": 22,
@@ -1249,7 +1249,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.0,
+     "pct": 18.4,
      "budgetPct": null
     },
     "policies": 87.8,
@@ -1266,11 +1266,11 @@
      "budget": null
     },
     "labour": {
-     "pct": 12.9,
+     "pct": 25.2,
      "budgetPct": null
     },
-    "policies": 91.8,
-    "comms": 69.1,
+    "policies": 92.8,
+    "comms": 69.5,
     "training": 78.4
    },
    "Double Bay": {
@@ -1283,10 +1283,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.0,
+     "pct": 21.8,
      "budgetPct": null
     },
-    "policies": 87.8,
+    "policies": 88.1,
     "comms": 41.4,
     "training": 71.3
    },
@@ -1300,10 +1300,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.6,
+     "pct": 18.3,
      "budgetPct": null
     },
-    "policies": 93.4,
+    "policies": 93.9,
     "comms": 82.5,
     "training": 72.2
    },
@@ -1317,10 +1317,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.8,
+     "pct": 19.4,
      "budgetPct": null
     },
-    "policies": 90.1,
+    "policies": 91.2,
     "comms": 75.6,
     "training": 78.3
    },
@@ -1334,10 +1334,10 @@
      "budget": null
     },
     "labour": {
-     "pct": 13.7,
+     "pct": 24.4,
      "budgetPct": null
     },
-    "policies": 86.4,
+    "policies": 87.1,
     "comms": 41.5,
     "training": 61.1
    },
@@ -1350,7 +1350,7 @@
      "actual": 299426,
      "budget": null
     },
-    "policies": 89.3,
+    "policies": 90.4,
     "comms": 60.4,
     "training": 82.8
    }
