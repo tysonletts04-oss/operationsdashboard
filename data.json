@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-07-24",
-  "generatedAt": "2026-07-25T18:00:42+00:00",
+  "generatedAt": "2026-07-25T19:23:33+00:00",
   "windows": "daily = 24 Jul · WTD = 20–24 Jul · MTD = 1–24 Jul",
   "venues": 27,
   "sources": {
@@ -302,7 +302,7 @@
     "hopperTemps": 3,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
      "actual": 7081,
      "budget": null
@@ -370,7 +370,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
      "actual": 4831,
      "budget": null
@@ -747,7 +747,7 @@
     "hopperTemps": 24,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
      "actual": 31085,
      "budget": null
@@ -815,7 +815,7 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
      "actual": 18751,
      "budget": null
@@ -1192,7 +1192,7 @@
     "hopperTemps": 24,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
      "actual": 168040,
      "budget": null
@@ -1260,7 +1260,7 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
      "actual": 101534,
      "budget": null
