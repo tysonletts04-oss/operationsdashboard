@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-07-25",
-  "generatedAt": "2026-07-26T17:01:32+00:00",
+  "generatedAt": "2026-07-26T18:09:38+00:00",
   "windows": "daily = 25 Jul · WTD = 20–25 Jul · MTD = 1–25 Jul",
   "venues": 27,
   "sources": {
@@ -34,7 +34,7 @@
      "pct": 16.3,
      "budgetPct": null
     },
-    "policies": 95.1,
+    "policies": 95.2,
     "comms": 85.5,
     "training": 83.7
    },
@@ -48,7 +48,7 @@
      "budget": null
     },
     "policies": 93.0,
-    "comms": 77.5,
+    "comms": 77.2,
     "training": 87.7
    },
    "Barangaroo": {
@@ -64,8 +64,8 @@
      "pct": 17.0,
      "budgetPct": null
     },
-    "policies": 91.4,
-    "comms": 79.8,
+    "policies": 91.6,
+    "comms": 80.0,
     "training": 78.7
    },
    "Wollongong": {
@@ -77,8 +77,8 @@
      "actual": 18413,
      "budget": null
     },
-    "policies": 94.5,
-    "comms": 76.7,
+    "policies": 95.1,
+    "comms": 77.9,
     "training": 78.3
    },
    "Charlestown": {
@@ -90,7 +90,7 @@
      "actual": 16340,
      "budget": null
     },
-    "policies": 94.8,
+    "policies": 94.9,
     "comms": 81.7,
     "training": 91.0
    },
@@ -124,7 +124,7 @@
      "pct": 15.5,
      "budgetPct": null
     },
-    "policies": 94.3,
+    "policies": 94.5,
     "comms": 77.4,
     "training": 78.6
    },
@@ -141,9 +141,9 @@
      "pct": 15.4,
      "budgetPct": null
     },
-    "policies": 97.7,
+    "policies": 98.0,
     "comms": 79.2,
-    "training": 83.0
+    "training": 83.4
    },
    "Castle Towers": {
     "hopperTemps": 3,
@@ -160,7 +160,7 @@
     },
     "policies": 96.5,
     "comms": 78.4,
-    "training": 89.3
+    "training": 90.2
    },
    "Burwood": {
     "hopperTemps": 4,
@@ -175,9 +175,9 @@
      "pct": 15.8,
      "budgetPct": null
     },
-    "policies": 92.6,
+    "policies": 92.7,
     "comms": 70.1,
-    "training": 85.9
+    "training": 85.5
    },
    "Penrith": {
     "hopperTemps": 3,
@@ -192,7 +192,7 @@
      "pct": 14.4,
      "budgetPct": null
     },
-    "policies": 89.4,
+    "policies": 89.8,
     "comms": 69.8,
     "training": 82.9
    },
@@ -209,7 +209,7 @@
      "pct": 14.5,
      "budgetPct": null
     },
-    "policies": 91.6,
+    "policies": 91.7,
     "comms": 72.5,
     "training": 77.3
    },
@@ -226,8 +226,8 @@
      "pct": 16.8,
      "budgetPct": null
     },
-    "policies": 92.2,
-    "comms": 69.4,
+    "policies": 92.6,
+    "comms": 69.7,
     "training": 79.3
    },
    "Cronulla": {
@@ -260,7 +260,7 @@
      "pct": 19.2,
      "budgetPct": null
     },
-    "policies": 95.9,
+    "policies": 96.7,
     "comms": 76.0,
     "training": 86.0
    },
@@ -277,7 +277,7 @@
      "pct": 18.2,
      "budgetPct": null
     },
-    "policies": 88.9,
+    "policies": 89.4,
     "comms": 60.6,
     "training": 65.8
    },
@@ -294,9 +294,9 @@
      "pct": 19.2,
      "budgetPct": null
     },
-    "policies": 94.8,
-    "comms": 76.7,
-    "training": 91.3
+    "policies": 95.5,
+    "comms": 77.2,
+    "training": 91.6
    },
    "Surry Hills": {
     "hopperTemps": 3,
@@ -328,7 +328,7 @@
      "pct": 18.2,
      "budgetPct": null
     },
-    "policies": 95.9,
+    "policies": 96.3,
     "comms": 86.0,
     "training": 90.8
    },
@@ -345,7 +345,7 @@
      "pct": 19.5,
      "budgetPct": null
     },
-    "policies": 81.5,
+    "policies": 81.9,
     "comms": 64.2,
     "training": 62.6
    },
@@ -362,9 +362,9 @@
      "pct": 18.5,
      "budgetPct": null
     },
-    "policies": 88.1,
+    "policies": 88.4,
     "comms": 77.9,
-    "training": 85.9
+    "training": 84.9
    },
    "Lane Cove": {
     "hopperTemps": 3,
@@ -379,7 +379,7 @@
      "pct": 24.9,
      "budgetPct": null
     },
-    "policies": 93.1,
+    "policies": 93.6,
     "comms": 69.5,
     "training": 78.5
    },
@@ -396,9 +396,9 @@
      "pct": 21.8,
      "budgetPct": null
     },
-    "policies": 88.1,
-    "comms": 41.4,
-    "training": 71.3
+    "policies": 87.3,
+    "comms": 44.1,
+    "training": 70.9
    },
    "Chippendale": {
     "hopperTemps": 4,
@@ -413,9 +413,9 @@
      "pct": 16.2,
      "budgetPct": null
     },
-    "policies": 94.3,
+    "policies": 94.9,
     "comms": 82.5,
-    "training": 72.2
+    "training": 72.5
    },
    "Crows Nest": {
     "hopperTemps": 3,
@@ -431,8 +431,8 @@
      "budgetPct": null
     },
     "policies": 91.9,
-    "comms": 75.6,
-    "training": 78.3
+    "comms": 75.5,
+    "training": 78.2
    },
    "Fish Market": {
     "hopperTemps": 3,
@@ -460,9 +460,9 @@
      "actual": 14956,
      "budget": null
     },
-    "policies": 91.4,
-    "comms": 59.4,
-    "training": 81.6
+    "policies": 92.9,
+    "comms": 59.9,
+    "training": 82.3
    }
   },
   "wtd": {
@@ -479,7 +479,7 @@
      "pct": 16.3,
      "budgetPct": null
     },
-    "policies": 95.1,
+    "policies": 95.2,
     "comms": 85.5,
     "training": 83.7
    },
@@ -493,7 +493,7 @@
      "budget": null
     },
     "policies": 93.0,
-    "comms": 77.5,
+    "comms": 77.2,
     "training": 87.7
    },
    "Barangaroo": {
@@ -509,8 +509,8 @@
      "pct": 17.0,
      "budgetPct": null
     },
-    "policies": 91.4,
-    "comms": 79.8,
+    "policies": 91.6,
+    "comms": 80.0,
     "training": 78.7
    },
    "Wollongong": {
@@ -522,8 +522,8 @@
      "actual": 69662,
      "budget": null
     },
-    "policies": 94.5,
-    "comms": 76.7,
+    "policies": 95.1,
+    "comms": 77.9,
     "training": 78.3
    },
    "Charlestown": {
@@ -535,7 +535,7 @@
      "actual": 61422,
      "budget": null
     },
-    "policies": 94.8,
+    "policies": 94.9,
     "comms": 81.7,
     "training": 91.0
    },
@@ -569,7 +569,7 @@
      "pct": 15.5,
      "budgetPct": null
     },
-    "policies": 94.3,
+    "policies": 94.5,
     "comms": 77.4,
     "training": 78.6
    },
@@ -586,9 +586,9 @@
      "pct": 15.4,
      "budgetPct": null
     },
-    "policies": 97.7,
+    "policies": 98.0,
     "comms": 79.2,
-    "training": 83.0
+    "training": 83.4
    },
    "Castle Towers": {
     "hopperTemps": 20,
@@ -605,7 +605,7 @@
     },
     "policies": 96.5,
     "comms": 78.4,
-    "training": 89.3
+    "training": 90.2
    },
    "Burwood": {
     "hopperTemps": 25,
@@ -620,9 +620,9 @@
      "pct": 15.8,
      "budgetPct": null
     },
-    "policies": 92.6,
+    "policies": 92.7,
     "comms": 70.1,
-    "training": 85.9
+    "training": 85.5
    },
    "Penrith": {
     "hopperTemps": 20,
@@ -637,7 +637,7 @@
      "pct": 14.4,
      "budgetPct": null
     },
-    "policies": 89.4,
+    "policies": 89.8,
     "comms": 69.8,
     "training": 82.9
    },
@@ -654,7 +654,7 @@
      "pct": 14.5,
      "budgetPct": null
     },
-    "policies": 91.6,
+    "policies": 91.7,
     "comms": 72.5,
     "training": 77.3
    },
@@ -671,8 +671,8 @@
      "pct": 16.8,
      "budgetPct": null
     },
-    "policies": 92.2,
-    "comms": 69.4,
+    "policies": 92.6,
+    "comms": 69.7,
     "training": 79.3
    },
    "Cronulla": {
@@ -705,7 +705,7 @@
      "pct": 19.2,
      "budgetPct": null
     },
-    "policies": 95.9,
+    "policies": 96.7,
     "comms": 76.0,
     "training": 86.0
    },
@@ -722,7 +722,7 @@
      "pct": 18.2,
      "budgetPct": null
     },
-    "policies": 88.9,
+    "policies": 89.4,
     "comms": 60.6,
     "training": 65.8
    },
@@ -739,9 +739,9 @@
      "pct": 19.2,
      "budgetPct": null
     },
-    "policies": 94.8,
-    "comms": 76.7,
-    "training": 91.3
+    "policies": 95.5,
+    "comms": 77.2,
+    "training": 91.6
    },
    "Surry Hills": {
     "hopperTemps": 24,
@@ -773,7 +773,7 @@
      "pct": 18.2,
      "budgetPct": null
     },
-    "policies": 95.9,
+    "policies": 96.3,
     "comms": 86.0,
     "training": 90.8
    },
@@ -790,7 +790,7 @@
      "pct": 19.5,
      "budgetPct": null
     },
-    "policies": 81.5,
+    "policies": 81.9,
     "comms": 64.2,
     "training": 62.6
    },
@@ -807,9 +807,9 @@
      "pct": 18.5,
      "budgetPct": null
     },
-    "policies": 88.1,
+    "policies": 88.4,
     "comms": 77.9,
-    "training": 85.9
+    "training": 84.9
    },
    "Lane Cove": {
     "hopperTemps": 21,
@@ -824,7 +824,7 @@
      "pct": 24.9,
      "budgetPct": null
     },
-    "policies": 93.1,
+    "policies": 93.6,
     "comms": 69.5,
     "training": 78.5
    },
@@ -841,9 +841,9 @@
      "pct": 21.8,
      "budgetPct": null
     },
-    "policies": 88.1,
-    "comms": 41.4,
-    "training": 71.3
+    "policies": 87.3,
+    "comms": 44.1,
+    "training": 70.9
    },
    "Chippendale": {
     "hopperTemps": 27,
@@ -858,9 +858,9 @@
      "pct": 16.2,
      "budgetPct": null
     },
-    "policies": 94.3,
+    "policies": 94.9,
     "comms": 82.5,
-    "training": 72.2
+    "training": 72.5
    },
    "Crows Nest": {
     "hopperTemps": 21,
@@ -876,8 +876,8 @@
      "budgetPct": null
     },
     "policies": 91.9,
-    "comms": 75.6,
-    "training": 78.3
+    "comms": 75.5,
+    "training": 78.2
    },
    "Fish Market": {
     "hopperTemps": 24,
@@ -905,9 +905,9 @@
      "actual": 61979,
      "budget": null
     },
-    "policies": 91.4,
-    "comms": 59.4,
-    "training": 81.6
+    "policies": 92.9,
+    "comms": 59.9,
+    "training": 82.3
    }
   },
   "mtd": {
@@ -924,7 +924,7 @@
      "pct": 16.3,
      "budgetPct": null
     },
-    "policies": 95.1,
+    "policies": 95.2,
     "comms": 85.5,
     "training": 83.7
    },
@@ -938,7 +938,7 @@
      "budget": null
     },
     "policies": 93.0,
-    "comms": 77.5,
+    "comms": 77.2,
     "training": 87.7
    },
    "Barangaroo": {
@@ -954,8 +954,8 @@
      "pct": 17.0,
      "budgetPct": null
     },
-    "policies": 91.4,
-    "comms": 79.8,
+    "policies": 91.6,
+    "comms": 80.0,
     "training": 78.7
    },
    "Wollongong": {
@@ -967,8 +967,8 @@
      "actual": 356367,
      "budget": null
     },
-    "policies": 94.5,
-    "comms": 76.7,
+    "policies": 95.1,
+    "comms": 77.9,
     "training": 78.3
    },
    "Charlestown": {
@@ -980,7 +980,7 @@
      "actual": 340231,
      "budget": null
     },
-    "policies": 94.8,
+    "policies": 94.9,
     "comms": 81.7,
     "training": 91.0
    },
@@ -1014,7 +1014,7 @@
      "pct": 15.5,
      "budgetPct": null
     },
-    "policies": 94.3,
+    "policies": 94.5,
     "comms": 77.4,
     "training": 78.6
    },
@@ -1031,9 +1031,9 @@
      "pct": 15.4,
      "budgetPct": null
     },
-    "policies": 97.7,
+    "policies": 98.0,
     "comms": 79.2,
-    "training": 83.0
+    "training": 83.4
    },
    "Castle Towers": {
     "hopperTemps": 20,
@@ -1050,7 +1050,7 @@
     },
     "policies": 96.5,
     "comms": 78.4,
-    "training": 89.3
+    "training": 90.2
    },
    "Burwood": {
     "hopperTemps": 25,
@@ -1065,9 +1065,9 @@
      "pct": 15.8,
      "budgetPct": null
     },
-    "policies": 92.6,
+    "policies": 92.7,
     "comms": 70.1,
-    "training": 85.9
+    "training": 85.5
    },
    "Penrith": {
     "hopperTemps": 20,
@@ -1082,7 +1082,7 @@
      "pct": 14.4,
      "budgetPct": null
     },
-    "policies": 89.4,
+    "policies": 89.8,
     "comms": 69.8,
     "training": 82.9
    },
@@ -1099,7 +1099,7 @@
      "pct": 14.5,
      "budgetPct": null
     },
-    "policies": 91.6,
+    "policies": 91.7,
     "comms": 72.5,
     "training": 77.3
    },
@@ -1116,8 +1116,8 @@
      "pct": 16.8,
      "budgetPct": null
     },
-    "policies": 92.2,
-    "comms": 69.4,
+    "policies": 92.6,
+    "comms": 69.7,
     "training": 79.3
    },
    "Cronulla": {
@@ -1150,7 +1150,7 @@
      "pct": 19.2,
      "budgetPct": null
     },
-    "policies": 95.9,
+    "policies": 96.7,
     "comms": 76.0,
     "training": 86.0
    },
@@ -1167,7 +1167,7 @@
      "pct": 18.2,
      "budgetPct": null
     },
-    "policies": 88.9,
+    "policies": 89.4,
     "comms": 60.6,
     "training": 65.8
    },
@@ -1184,9 +1184,9 @@
      "pct": 19.2,
      "budgetPct": null
     },
-    "policies": 94.8,
-    "comms": 76.7,
-    "training": 91.3
+    "policies": 95.5,
+    "comms": 77.2,
+    "training": 91.6
    },
    "Surry Hills": {
     "hopperTemps": 24,
@@ -1218,7 +1218,7 @@
      "pct": 18.2,
      "budgetPct": null
     },
-    "policies": 95.9,
+    "policies": 96.3,
     "comms": 86.0,
     "training": 90.8
    },
@@ -1235,7 +1235,7 @@
      "pct": 19.5,
      "budgetPct": null
     },
-    "policies": 81.5,
+    "policies": 81.9,
     "comms": 64.2,
     "training": 62.6
    },
@@ -1252,9 +1252,9 @@
      "pct": 18.5,
      "budgetPct": null
     },
-    "policies": 88.1,
+    "policies": 88.4,
     "comms": 77.9,
-    "training": 85.9
+    "training": 84.9
    },
    "Lane Cove": {
     "hopperTemps": 21,
@@ -1269,7 +1269,7 @@
      "pct": 24.9,
      "budgetPct": null
     },
-    "policies": 93.1,
+    "policies": 93.6,
     "comms": 69.5,
     "training": 78.5
    },
@@ -1286,9 +1286,9 @@
      "pct": 21.8,
      "budgetPct": null
     },
-    "policies": 88.1,
-    "comms": 41.4,
-    "training": 71.3
+    "policies": 87.3,
+    "comms": 44.1,
+    "training": 70.9
    },
    "Chippendale": {
     "hopperTemps": 27,
@@ -1303,9 +1303,9 @@
      "pct": 16.2,
      "budgetPct": null
     },
-    "policies": 94.3,
+    "policies": 94.9,
     "comms": 82.5,
-    "training": 72.2
+    "training": 72.5
    },
    "Crows Nest": {
     "hopperTemps": 21,
@@ -1321,8 +1321,8 @@
      "budgetPct": null
     },
     "policies": 91.9,
-    "comms": 75.6,
-    "training": 78.3
+    "comms": 75.5,
+    "training": 78.2
    },
    "Fish Market": {
     "hopperTemps": 24,
@@ -1350,9 +1350,9 @@
      "actual": 326249,
      "budget": null
     },
-    "policies": 91.4,
-    "comms": 59.4,
-    "training": 81.6
+    "policies": 92.9,
+    "comms": 59.9,
+    "training": 82.3
    }
   }
  },
