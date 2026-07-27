@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-07-27",
-  "generatedAt": "2026-07-27T16:21:54+00:00",
+  "generatedAt": "2026-07-27T18:25:00+00:00",
   "windows": "daily = 27 Jul · WTD = 27–27 Jul · MTD = 1–27 Jul",
   "venues": 27,
   "sources": {
@@ -34,9 +34,9 @@
      "pct": 16.8,
      "budgetPct": null
     },
-    "policies": 95.2,
-    "comms": 85.5,
-    "training": 83.7
+    "policies": 95.3,
+    "comms": 85.7,
+    "training": 84.0
    },
    "Erina Fair": {
     "hopperTemps": 3,
@@ -47,7 +47,7 @@
      "actual": 1032,
      "budget": null
     },
-    "policies": 93.0,
+    "policies": 93.2,
     "comms": 77.2,
     "training": 87.7
    },
@@ -64,9 +64,9 @@
      "pct": 17.3,
      "budgetPct": null
     },
-    "policies": 91.6,
-    "comms": 80.0,
-    "training": 78.7
+    "policies": 92.0,
+    "comms": 77.8,
+    "training": 78.4
    },
    "Wollongong": {
     "hopperTemps": 3,
@@ -77,7 +77,7 @@
      "actual": 1054,
      "budget": null
     },
-    "policies": 95.1,
+    "policies": 95.5,
     "comms": 77.9,
     "training": 78.3
    },
@@ -90,9 +90,9 @@
      "actual": 934,
      "budget": null
     },
-    "policies": 94.9,
-    "comms": 81.7,
-    "training": 91.0
+    "policies": 92.9,
+    "comms": 79.4,
+    "training": 91.1
    },
    "Rouse Hill": {
     "hopperTemps": 3,
@@ -107,7 +107,7 @@
      "pct": 14.9,
      "budgetPct": null
     },
-    "policies": 96.1,
+    "policies": 96.4,
     "comms": 87.7,
     "training": 93.2
    },
@@ -124,8 +124,8 @@
      "pct": 15.8,
      "budgetPct": null
     },
-    "policies": 94.5,
-    "comms": 77.4,
+    "policies": 95.3,
+    "comms": 77.7,
     "training": 78.6
    },
    "Macquarie": {
@@ -160,7 +160,7 @@
     },
     "policies": 96.5,
     "comms": 78.4,
-    "training": 90.2
+    "training": 91.1
    },
    "Burwood": {
     "hopperTemps": 4,
@@ -175,9 +175,9 @@
      "pct": 16.1,
      "budgetPct": null
     },
-    "policies": 92.7,
-    "comms": 70.1,
-    "training": 85.5
+    "policies": 91.3,
+    "comms": 69.1,
+    "training": 83.5
    },
    "Penrith": {
     "hopperTemps": 3,
@@ -192,7 +192,7 @@
      "pct": 15.0,
      "budgetPct": null
     },
-    "policies": 89.8,
+    "policies": 89.9,
     "comms": 69.8,
     "training": 82.9
    },
@@ -209,8 +209,8 @@
      "pct": 14.8,
      "budgetPct": null
     },
-    "policies": 91.7,
-    "comms": 72.5,
+    "policies": 93.5,
+    "comms": 72.8,
     "training": 77.3
    },
    "Chatswood": {
@@ -226,7 +226,7 @@
      "pct": 17.0,
      "budgetPct": null
     },
-    "policies": 92.6,
+    "policies": 93.1,
     "comms": 69.7,
     "training": 79.3
    },
@@ -243,9 +243,9 @@
      "pct": 17.6,
      "budgetPct": null
     },
-    "policies": 90.7,
+    "policies": 91.0,
     "comms": 81.6,
-    "training": 86.2
+    "training": 86.3
    },
    "Newtown": {
     "hopperTemps": 4,
@@ -260,8 +260,8 @@
      "pct": 19.2,
      "budgetPct": null
     },
-    "policies": 96.7,
-    "comms": 76.0,
+    "policies": 96.8,
+    "comms": 76.7,
     "training": 86.0
    },
    "Bondi": {
@@ -295,8 +295,8 @@
      "budgetPct": null
     },
     "policies": 95.5,
-    "comms": 77.2,
-    "training": 91.6
+    "comms": 77.0,
+    "training": 91.7
    },
    "Surry Hills": {
     "hopperTemps": 3,
@@ -311,7 +311,7 @@
      "pct": 19.4,
      "budgetPct": null
     },
-    "policies": 90.9,
+    "policies": 91.2,
     "comms": 72.5,
     "training": 81.1
    },
@@ -328,9 +328,9 @@
      "pct": 19.1,
      "budgetPct": null
     },
-    "policies": 96.3,
+    "policies": 97.0,
     "comms": 86.0,
-    "training": 90.8
+    "training": 90.9
    },
    "Randwick": {
     "hopperTemps": 3,
@@ -345,9 +345,9 @@
      "pct": 20.5,
      "budgetPct": null
     },
-    "policies": 81.9,
-    "comms": 64.2,
-    "training": 62.6
+    "policies": 82.1,
+    "comms": 64.7,
+    "training": 63.4
    },
    "Bondi Junction": {
     "hopperTemps": 3,
@@ -362,7 +362,7 @@
      "pct": 19.1,
      "budgetPct": null
     },
-    "policies": 88.4,
+    "policies": 89.4,
     "comms": 77.9,
     "training": 84.9
    },
@@ -379,7 +379,7 @@
      "pct": 25.5,
      "budgetPct": null
     },
-    "policies": 93.6,
+    "policies": 94.2,
     "comms": 69.5,
     "training": 78.5
    },
@@ -396,7 +396,7 @@
      "pct": 22.5,
      "budgetPct": null
     },
-    "policies": 87.3,
+    "policies": 87.6,
     "comms": 44.1,
     "training": 70.9
    },
@@ -413,7 +413,7 @@
      "pct": 16.9,
      "budgetPct": null
     },
-    "policies": 94.9,
+    "policies": 95.5,
     "comms": 82.5,
     "training": 72.5
    },
@@ -430,7 +430,7 @@
      "pct": 19.3,
      "budgetPct": null
     },
-    "policies": 91.9,
+    "policies": 92.1,
     "comms": 75.5,
     "training": 78.2
    },
@@ -447,9 +447,9 @@
      "pct": 23.8,
      "budgetPct": null
     },
-    "policies": 87.2,
-    "comms": 41.8,
-    "training": 61.1
+    "policies": 88.2,
+    "comms": 42.4,
+    "training": 61.0
    },
    "Green Hills": {
     "hopperTemps": 3,
@@ -460,9 +460,9 @@
      "actual": 1305,
      "budget": null
     },
-    "policies": 92.9,
+    "policies": 93.3,
     "comms": 59.9,
-    "training": 82.3
+    "training": 82.8
    }
   },
   "wtd": {
@@ -479,9 +479,9 @@
      "pct": 16.8,
      "budgetPct": null
     },
-    "policies": 95.2,
-    "comms": 85.5,
-    "training": 83.7
+    "policies": 95.3,
+    "comms": 85.7,
+    "training": 84.0
    },
    "Erina Fair": {
     "hopperTemps": 19,
@@ -492,7 +492,7 @@
      "actual": 1032,
      "budget": null
     },
-    "policies": 93.0,
+    "policies": 93.2,
     "comms": 77.2,
     "training": 87.7
    },
@@ -509,9 +509,9 @@
      "pct": 17.3,
      "budgetPct": null
     },
-    "policies": 91.6,
-    "comms": 80.0,
-    "training": 78.7
+    "policies": 92.0,
+    "comms": 77.8,
+    "training": 78.4
    },
    "Wollongong": {
     "hopperTemps": 21,
@@ -522,7 +522,7 @@
      "actual": 1054,
      "budget": null
     },
-    "policies": 95.1,
+    "policies": 95.5,
     "comms": 77.9,
     "training": 78.3
    },
@@ -535,9 +535,9 @@
      "actual": 934,
      "budget": null
     },
-    "policies": 94.9,
-    "comms": 81.7,
-    "training": 91.0
+    "policies": 92.9,
+    "comms": 79.4,
+    "training": 91.1
    },
    "Rouse Hill": {
     "hopperTemps": 20,
@@ -552,7 +552,7 @@
      "pct": 14.9,
      "budgetPct": null
     },
-    "policies": 96.1,
+    "policies": 96.4,
     "comms": 87.7,
     "training": 93.2
    },
@@ -569,8 +569,8 @@
      "pct": 15.8,
      "budgetPct": null
     },
-    "policies": 94.5,
-    "comms": 77.4,
+    "policies": 95.3,
+    "comms": 77.7,
     "training": 78.6
    },
    "Macquarie": {
@@ -605,7 +605,7 @@
     },
     "policies": 96.5,
     "comms": 78.4,
-    "training": 90.2
+    "training": 91.1
    },
    "Burwood": {
     "hopperTemps": 27,
@@ -620,9 +620,9 @@
      "pct": 16.1,
      "budgetPct": null
     },
-    "policies": 92.7,
-    "comms": 70.1,
-    "training": 85.5
+    "policies": 91.3,
+    "comms": 69.1,
+    "training": 83.5
    },
    "Penrith": {
     "hopperTemps": 20,
@@ -637,7 +637,7 @@
      "pct": 15.0,
      "budgetPct": null
     },
-    "policies": 89.8,
+    "policies": 89.9,
     "comms": 69.8,
     "training": 82.9
    },
@@ -654,8 +654,8 @@
      "pct": 14.8,
      "budgetPct": null
     },
-    "policies": 91.7,
-    "comms": 72.5,
+    "policies": 93.5,
+    "comms": 72.8,
     "training": 77.3
    },
    "Chatswood": {
@@ -671,7 +671,7 @@
      "pct": 17.0,
      "budgetPct": null
     },
-    "policies": 92.6,
+    "policies": 93.1,
     "comms": 69.7,
     "training": 79.3
    },
@@ -688,9 +688,9 @@
      "pct": 17.6,
      "budgetPct": null
     },
-    "policies": 90.7,
+    "policies": 91.0,
     "comms": 81.6,
-    "training": 86.2
+    "training": 86.3
    },
    "Newtown": {
     "hopperTemps": 27,
@@ -705,8 +705,8 @@
      "pct": 19.2,
      "budgetPct": null
     },
-    "policies": 96.7,
-    "comms": 76.0,
+    "policies": 96.8,
+    "comms": 76.7,
     "training": 86.0
    },
    "Bondi": {
@@ -740,8 +740,8 @@
      "budgetPct": null
     },
     "policies": 95.5,
-    "comms": 77.2,
-    "training": 91.6
+    "comms": 77.0,
+    "training": 91.7
    },
    "Surry Hills": {
     "hopperTemps": 23,
@@ -756,7 +756,7 @@
      "pct": 19.4,
      "budgetPct": null
     },
-    "policies": 90.9,
+    "policies": 91.2,
     "comms": 72.5,
     "training": 81.1
    },
@@ -773,9 +773,9 @@
      "pct": 19.1,
      "budgetPct": null
     },
-    "policies": 96.3,
+    "policies": 97.0,
     "comms": 86.0,
-    "training": 90.8
+    "training": 90.9
    },
    "Randwick": {
     "hopperTemps": 23,
@@ -790,9 +790,9 @@
      "pct": 20.5,
      "budgetPct": null
     },
-    "policies": 81.9,
-    "comms": 64.2,
-    "training": 62.6
+    "policies": 82.1,
+    "comms": 64.7,
+    "training": 63.4
    },
    "Bondi Junction": {
     "hopperTemps": 21,
@@ -807,7 +807,7 @@
      "pct": 19.1,
      "budgetPct": null
     },
-    "policies": 88.4,
+    "policies": 89.4,
     "comms": 77.9,
     "training": 84.9
    },
@@ -824,7 +824,7 @@
      "pct": 25.5,
      "budgetPct": null
     },
-    "policies": 93.6,
+    "policies": 94.2,
     "comms": 69.5,
     "training": 78.5
    },
@@ -841,7 +841,7 @@
      "pct": 22.5,
      "budgetPct": null
     },
-    "policies": 87.3,
+    "policies": 87.6,
     "comms": 44.1,
     "training": 70.9
    },
@@ -858,7 +858,7 @@
      "pct": 16.9,
      "budgetPct": null
     },
-    "policies": 94.9,
+    "policies": 95.5,
     "comms": 82.5,
     "training": 72.5
    },
@@ -875,7 +875,7 @@
      "pct": 19.3,
      "budgetPct": null
     },
-    "policies": 91.9,
+    "policies": 92.1,
     "comms": 75.5,
     "training": 78.2
    },
@@ -892,9 +892,9 @@
      "pct": 23.8,
      "budgetPct": null
     },
-    "policies": 87.2,
-    "comms": 41.8,
-    "training": 61.1
+    "policies": 88.2,
+    "comms": 42.4,
+    "training": 61.0
    },
    "Green Hills": {
     "hopperTemps": 19,
@@ -905,9 +905,9 @@
      "actual": 1305,
      "budget": null
     },
-    "policies": 92.9,
+    "policies": 93.3,
     "comms": 59.9,
-    "training": 82.3
+    "training": 82.8
    }
   },
   "mtd": {
@@ -924,9 +924,9 @@
      "pct": 16.8,
      "budgetPct": null
     },
-    "policies": 95.2,
-    "comms": 85.5,
-    "training": 83.7
+    "policies": 95.3,
+    "comms": 85.7,
+    "training": 84.0
    },
    "Erina Fair": {
     "hopperTemps": 19,
@@ -937,7 +937,7 @@
      "actual": 405107,
      "budget": null
     },
-    "policies": 93.0,
+    "policies": 93.2,
     "comms": 77.2,
     "training": 87.7
    },
@@ -954,9 +954,9 @@
      "pct": 17.3,
      "budgetPct": null
     },
-    "policies": 91.6,
-    "comms": 80.0,
-    "training": 78.7
+    "policies": 92.0,
+    "comms": 77.8,
+    "training": 78.4
    },
    "Wollongong": {
     "hopperTemps": 21,
@@ -967,7 +967,7 @@
      "actual": 372567,
      "budget": null
     },
-    "policies": 95.1,
+    "policies": 95.5,
     "comms": 77.9,
     "training": 78.3
    },
@@ -980,9 +980,9 @@
      "actual": 354469,
      "budget": null
     },
-    "policies": 94.9,
-    "comms": 81.7,
-    "training": 91.0
+    "policies": 92.9,
+    "comms": 79.4,
+    "training": 91.1
    },
    "Rouse Hill": {
     "hopperTemps": 20,
@@ -997,7 +997,7 @@
      "pct": 14.9,
      "budgetPct": null
     },
-    "policies": 96.1,
+    "policies": 96.4,
     "comms": 87.7,
     "training": 93.2
    },
@@ -1014,8 +1014,8 @@
      "pct": 15.8,
      "budgetPct": null
     },
-    "policies": 94.5,
-    "comms": 77.4,
+    "policies": 95.3,
+    "comms": 77.7,
     "training": 78.6
    },
    "Macquarie": {
@@ -1050,7 +1050,7 @@
     },
     "policies": 96.5,
     "comms": 78.4,
-    "training": 90.2
+    "training": 91.1
    },
    "Burwood": {
     "hopperTemps": 27,
@@ -1065,9 +1065,9 @@
      "pct": 16.1,
      "budgetPct": null
     },
-    "policies": 92.7,
-    "comms": 70.1,
-    "training": 85.5
+    "policies": 91.3,
+    "comms": 69.1,
+    "training": 83.5
    },
    "Penrith": {
     "hopperTemps": 20,
@@ -1082,7 +1082,7 @@
      "pct": 15.0,
      "budgetPct": null
     },
-    "policies": 89.8,
+    "policies": 89.9,
     "comms": 69.8,
     "training": 82.9
    },
@@ -1099,8 +1099,8 @@
      "pct": 14.8,
      "budgetPct": null
     },
-    "policies": 91.7,
-    "comms": 72.5,
+    "policies": 93.5,
+    "comms": 72.8,
     "training": 77.3
    },
    "Chatswood": {
@@ -1116,7 +1116,7 @@
      "pct": 17.0,
      "budgetPct": null
     },
-    "policies": 92.6,
+    "policies": 93.1,
     "comms": 69.7,
     "training": 79.3
    },
@@ -1133,9 +1133,9 @@
      "pct": 17.6,
      "budgetPct": null
     },
-    "policies": 90.7,
+    "policies": 91.0,
     "comms": 81.6,
-    "training": 86.2
+    "training": 86.3
    },
    "Newtown": {
     "hopperTemps": 27,
@@ -1150,8 +1150,8 @@
      "pct": 19.2,
      "budgetPct": null
     },
-    "policies": 96.7,
-    "comms": 76.0,
+    "policies": 96.8,
+    "comms": 76.7,
     "training": 86.0
    },
    "Bondi": {
@@ -1185,8 +1185,8 @@
      "budgetPct": null
     },
     "policies": 95.5,
-    "comms": 77.2,
-    "training": 91.6
+    "comms": 77.0,
+    "training": 91.7
    },
    "Surry Hills": {
     "hopperTemps": 23,
@@ -1201,7 +1201,7 @@
      "pct": 19.4,
      "budgetPct": null
     },
-    "policies": 90.9,
+    "policies": 91.2,
     "comms": 72.5,
     "training": 81.1
    },
@@ -1218,9 +1218,9 @@
      "pct": 19.1,
      "budgetPct": null
     },
-    "policies": 96.3,
+    "policies": 97.0,
     "comms": 86.0,
-    "training": 90.8
+    "training": 90.9
    },
    "Randwick": {
     "hopperTemps": 23,
@@ -1235,9 +1235,9 @@
      "pct": 20.5,
      "budgetPct": null
     },
-    "policies": 81.9,
-    "comms": 64.2,
-    "training": 62.6
+    "policies": 82.1,
+    "comms": 64.7,
+    "training": 63.4
    },
    "Bondi Junction": {
     "hopperTemps": 21,
@@ -1252,7 +1252,7 @@
      "pct": 19.1,
      "budgetPct": null
     },
-    "policies": 88.4,
+    "policies": 89.4,
     "comms": 77.9,
     "training": 84.9
    },
@@ -1269,7 +1269,7 @@
      "pct": 25.5,
      "budgetPct": null
     },
-    "policies": 93.6,
+    "policies": 94.2,
     "comms": 69.5,
     "training": 78.5
    },
@@ -1286,7 +1286,7 @@
      "pct": 22.5,
      "budgetPct": null
     },
-    "policies": 87.3,
+    "policies": 87.6,
     "comms": 44.1,
     "training": 70.9
    },
@@ -1303,7 +1303,7 @@
      "pct": 16.9,
      "budgetPct": null
     },
-    "policies": 94.9,
+    "policies": 95.5,
     "comms": 82.5,
     "training": 72.5
    },
@@ -1320,7 +1320,7 @@
      "pct": 19.3,
      "budgetPct": null
     },
-    "policies": 91.9,
+    "policies": 92.1,
     "comms": 75.5,
     "training": 78.2
    },
@@ -1337,9 +1337,9 @@
      "pct": 23.8,
      "budgetPct": null
     },
-    "policies": 87.2,
-    "comms": 41.8,
-    "training": 61.1
+    "policies": 88.2,
+    "comms": 42.4,
+    "training": 61.0
    },
    "Green Hills": {
     "hopperTemps": 19,
@@ -1350,9 +1350,9 @@
      "actual": 340242,
      "budget": null
     },
-    "policies": 92.9,
+    "policies": 93.3,
     "comms": 59.9,
-    "training": 82.3
+    "training": 82.8
    }
   }
  },
