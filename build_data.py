@@ -730,6 +730,54 @@ def compute_discounts(start, end, with_other=False):
             "venues": out}
 
 
+# How far back the date-range picker can reach. The board bakes per-venue DAILY
+# reusable-discount counts over this trailing window so the page can total ANY
+# date range the user picks (this week, last week, a custom Mon–Sun) with no
+# backend — the client just sums the days in range. 8 weeks keeps data.json small
+# and each per-venue Polygon scan quick.
+DISCOUNT_DAILY_WEEKS = 8
+
+
+def compute_discounts_daily(start, end):
+    """Per-venue DAILY reusable-discount counts over start..end, so the dashboard's
+    date-range calendar can total any window client-side. Same classification as
+    compute_discounts (got-10% / other-discount / MISS = no discount of any kind),
+    but bucketed by TxnDate instead of summed, plus the full dated list of missed
+    sales for the window. One query per venue (StoreName is the fast Polygon filter);
+    a slow or failed venue is skipped, not fatal. Returns None if nothing came back."""
+    venues = {}
+    for display, sales_store, *_ in VENUES:
+        try:
+            rows = datasights_query(SQL["discount_detail"],
+                                    {"store": sales_store, "winStart": start, "dailyDate": end}) or []
+        except (SystemExit, Exception) as e:
+            print(f"WARN  daily discounts unavailable for {display}: {str(e)[:120]}", file=sys.stderr)
+            continue
+        daily, missed = {}, []
+        for r in rows:
+            date = str(r.get("txn_date"))[:10]
+            got10 = int(_num(r.get("got_10"))) == 1
+            any_disc = int(_num(r.get("any_disc"))) == 1
+            b = daily.setdefault(date, [0, 0, 0, 0])   # [reusable, discounted, otherDisc, missed]
+            b[0] += 1
+            if got10:
+                b[1] += 1
+            elif any_disc:
+                b[2] += 1
+            else:
+                b[3] += 1
+                missed.append({"saleId": str(r.get("SaleID")), "date": date,
+                               "time": str(r.get("txn_time"))[:8], "bowl": r.get("bowl")})
+        if daily:
+            venues[display] = {"daily": daily,
+                               "missedList": sorted(missed, key=lambda m: (m["date"], m["time"]))}
+    if not venues:
+        return None
+    return {"metric": "Reusable bowl 10% discount", "items": list(REUSABLE_ITEMS),
+            "discountName": REUSABLE_DISCOUNT, "windowStart": start, "windowEnd": end,
+            "venues": venues}
+
+
 # Offline sample for the Reusable Discounts tab (real Yo-Chi Burwood figures, calendar
 # week 13–19 Jul; matches Mitch's official Polygon report: 4 missed). Live mode replaces
 # this with all venues via compute_discounts().
@@ -771,6 +819,32 @@ DISCOUNT_FIXTURE_LIVE = {
 }
 
 
+# Offline sample for the date-range calendar (per-venue DAILY counts). Small multi-week
+# slice so "This week" / "Last week" / a custom range all return something offline.
+# [reusable, discounted, otherDisc, missed] per day. Live mode replaces via compute_discounts_daily().
+DISCOUNT_FIXTURE_DAILY = {
+    "metric": "Reusable bowl 10% discount", "items": list(REUSABLE_ITEMS),
+    "discountName": REUSABLE_DISCOUNT, "windowStart": "2026-07-06", "windowEnd": "2026-07-20",
+    "venues": {
+        "Burwood": {"daily": {
+            "2026-07-06": [9, 3, 6, 0], "2026-07-07": [8, 3, 5, 0],
+            "2026-07-13": [11, 4, 6, 1], "2026-07-14": [13, 5, 7, 1], "2026-07-15": [10, 4, 6, 0],
+            "2026-07-16": [9, 3, 6, 0], "2026-07-17": [12, 4, 8, 0], "2026-07-18": [11, 3, 7, 1],
+            "2026-07-19": [10, 3, 6, 1], "2026-07-20": [11, 4, 6, 1]},
+            "missedList": [
+                {"saleId": "115220135", "date": "2026-07-13", "time": "13:59:37", "bowl": "Icy Go Bowl Tare"},
+                {"saleId": "115221326", "date": "2026-07-14", "time": "19:31:05", "bowl": "Icy Go Bowl Tare"},
+                {"saleId": "115223880", "date": "2026-07-18", "time": "18:22:41", "bowl": "Go Bowl Tare"},
+                {"saleId": "115224511", "date": "2026-07-19", "time": "20:05:55", "bowl": "Go Bowl Tare"},
+                {"saleId": "115230011", "date": "2026-07-20", "time": "12:04:11", "bowl": "Go Bowl Tare"}]},
+        "Chatswood": {"daily": {
+            "2026-07-13": [9, 2, 7, 0], "2026-07-14": [8, 2, 6, 0], "2026-07-20": [9, 2, 6, 1]},
+            "missedList": [
+                {"saleId": "115240022", "date": "2026-07-20", "time": "14:38:22", "bowl": "Icy Go Bowl Tare"}]},
+    },
+}
+
+
 def main():
     ap = argparse.ArgumentParser(description="Rebuild data.json for the NSW Operations Dashboard")
     ap.add_argument("--offline", action="store_true", help="rebuild from the bundled snapshot (no DB)")
@@ -781,6 +855,7 @@ def main():
         snap, fixture, down = SNAPSHOT, FIXTURE, set()
         discounts = DISCOUNT_FIXTURE
         discounts_live = DISCOUNT_FIXTURE_LIVE
+        discounts_daily = DISCOUNT_FIXTURE_DAILY
     else:
         snap = resolve_snapshot()
         print(f"Resolved window: {snap['reportDate']} ({snap['windows']})", file=sys.stderr)
@@ -806,6 +881,18 @@ def main():
         except (SystemExit, Exception) as e:
             print(f"WARN  live discount view skipped: {str(e)[:160]}", file=sys.stderr)
             discounts_live = None
+        # Daily history for the date-range calendar: trailing DISCOUNT_DAILY_WEEKS weeks
+        # (aligned to a Monday) through the freshest data, so the picker can total any
+        # window. Heavy but optional — never let it sink the board.
+        try:
+            d_end = _dt.date.fromisoformat(
+                discounts_live["windowEnd"] if discounts_live else snap["dailyDate"])
+            hist_start = (d_end - _dt.timedelta(days=d_end.weekday())
+                          - _dt.timedelta(weeks=DISCOUNT_DAILY_WEEKS - 1)).isoformat()
+            discounts_daily = compute_discounts_daily(hist_start, d_end.isoformat())
+        except (SystemExit, Exception) as e:
+            print(f"WARN  daily discount history skipped: {str(e)[:160]}", file=sys.stderr)
+            discounts_daily = None
     periods = build_periods(fixture)
     errors, warnings, coverage = validate(periods)
 
@@ -842,6 +929,8 @@ def main():
         payload["discounts"] = discounts
     if discounts_live:
         payload["discountsLive"] = discounts_live
+    if discounts_daily:
+        payload["discountsDaily"] = discounts_daily
 
     # Only rewrite (and therefore commit/redeploy) when the DATA actually changed
     # — ignore the generatedAt timestamp. Lets the job run every few hours to catch
