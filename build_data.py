@@ -731,11 +731,15 @@ def compute_discounts(start, end, with_other=False):
 
 
 # How far back the date-range picker can reach. The board bakes per-venue DAILY
-# reusable-discount counts over this trailing window so the page can total ANY
-# date range the user picks (this week, last week, a custom Mon–Sun) with no
-# backend — the client just sums the days in range. 8 weeks keeps data.json small
-# and each per-venue Polygon scan quick.
-DISCOUNT_DAILY_WEEKS = 8
+# reusable-discount counts over this trailing window so the page can total ANY date
+# range the user picks (this week, last week, last 4 weeks, a custom Mon–Sun) with no
+# backend — the client just sums the days in range.
+#
+# Keep this at 4 weeks. The per-venue Polygon scan is a fast index seek for a recent
+# window (~1.4s at 4 weeks) but the optimiser flips to a full scan past ~6 weeks
+# (~46s/venue → a 20-min refresh across 27 venues). 4 weeks covers every preset and
+# stays well inside the fast plan; widen only if you also re-check the query time.
+DISCOUNT_DAILY_WEEKS = 4
 
 
 def compute_discounts_daily(start, end):

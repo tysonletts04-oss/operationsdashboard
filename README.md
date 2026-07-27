@@ -43,7 +43,7 @@ Every metric had a trap that lives as documented logic in `build_data.py`:
 | Celsi | Hopper temps / calibrations / corrective | **weekly-bucketed** by `Date`; daily = week ÷ 7 |
 | Tanda | Labour % | **Tanda timesheet cost** ÷ net sales (MTD); shift `department_id` → team → venue location. Franchise venues run own payroll (not in Tanda) → "—" |
 | Chi Central | Policy / comms read % | OpCentral sign-off completion rate (not raw unread counts) |
-| Polygon POS | Reusable-bowl discount | per-venue compliance: a reusable-bowl sale that carried **no discount of any kind** is a "miss" (matches the official Polygon report); a **date-range calendar** on the *Reusable Discounts* tab totals any window from ~8 weeks of baked daily data, with a CSV export of the missed sales |
+| Polygon POS | Reusable-bowl discount | per-venue compliance: a reusable-bowl sale that carried **no discount of any kind** is a "miss" (matches the official Polygon report); a **date-range calendar** on the *Reusable Discounts* tab totals any window from ~4 weeks of baked daily data, with a CSV export of the missed sales |
 
 **Held back on purpose:**
 - **Sales budget** — the only Xero budget is monthly to Jun 2026 and its "Revenue"
