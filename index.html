@@ -895,7 +895,7 @@ function discControlsHtml(rng){
   const D=DISCOUNTS_DAILY||{}; const min=D.windowStart||'', max=D.windowEnd||'';
   const pill=(p,lbl)=>`<button class="disc-preset${state_disc.preset===p?' active':''}" onclick="setDiscPreset('${p}')">${lbl}</button>`;
   return `<div class="disc-cal">
-      <span class="disc-cal-lbl">📅 Dates:</span>
+      <span class="disc-cal-lbl">Dates:</span>
       ${pill('thisweek','This week')}${pill('lastweek','Last week')}${pill('last4w','Last 4 weeks')}${pill('custom','Custom')}
       <span class="disc-cal-range">
         <input type="date" value="${rng.start}" min="${min}" max="${max}" onchange="setDiscDate('from',this.value)" aria-label="From date">
