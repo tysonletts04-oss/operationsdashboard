@@ -1,8 +1,8 @@
 {
  "meta": {
-  "reportDate": "2026-07-25",
-  "generatedAt": "2026-07-26T20:13:47+00:00",
-  "windows": "daily = 25 Jul · WTD = 20–25 Jul · MTD = 1–25 Jul",
+  "reportDate": "2026-07-27",
+  "generatedAt": "2026-07-27T16:21:54+00:00",
+  "windows": "daily = 27 Jul · WTD = 27–27 Jul · MTD = 1–27 Jul",
   "venues": 27,
   "sources": {
    "Sales": "snapshot",
@@ -25,13 +25,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 19206,
+     "actual": 1502,
      "budget": null
     },
     "labour": {
-     "pct": 16.3,
+     "pct": 16.8,
      "budgetPct": null
     },
     "policies": 95.2,
@@ -42,9 +42,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 18247,
+     "actual": 1032,
      "budget": null
     },
     "policies": 93.0,
@@ -55,13 +55,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 20,
+    "reviews": 0,
     "sales": {
-     "actual": 20814,
+     "actual": 1824,
      "budget": null
     },
     "labour": {
-     "pct": 17.0,
+     "pct": 17.3,
      "budgetPct": null
     },
     "policies": 91.6,
@@ -72,9 +72,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 0,
     "sales": {
-     "actual": 18413,
+     "actual": 1054,
      "budget": null
     },
     "policies": 95.1,
@@ -85,9 +85,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 16340,
+     "actual": 934,
      "budget": null
     },
     "policies": 94.9,
@@ -98,13 +98,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 20,
+    "reviews": 0,
     "sales": {
-     "actual": 15567,
+     "actual": 601,
      "budget": null
     },
     "labour": {
-     "pct": 14.5,
+     "pct": 14.9,
      "budgetPct": null
     },
     "policies": 96.1,
@@ -113,15 +113,15 @@
    },
    "Circular Quay": {
     "hopperTemps": 3,
-    "calibrations": "complete",
+    "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 13699,
+     "actual": 1231,
      "budget": null
     },
     "labour": {
-     "pct": 15.5,
+     "pct": 15.8,
      "budgetPct": null
     },
     "policies": 94.5,
@@ -131,14 +131,14 @@
    "Macquarie": {
     "hopperTemps": 3,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 4,
+    "correctiveA": "ok",
+    "reviews": 0,
     "sales": {
-     "actual": 11531,
+     "actual": 793,
      "budget": null
     },
     "labour": {
-     "pct": 15.4,
+     "pct": 15.7,
      "budgetPct": null
     },
     "policies": 98.0,
@@ -149,13 +149,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 17,
+    "reviews": 0,
     "sales": {
-     "actual": 14616,
+     "actual": 505,
      "budget": null
     },
     "labour": {
-     "pct": 14.7,
+     "pct": 14.9,
      "budgetPct": null
     },
     "policies": 96.5,
@@ -165,14 +165,14 @@
    "Burwood": {
     "hopperTemps": 4,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 8,
+    "correctiveA": "none",
+    "reviews": 0,
     "sales": {
-     "actual": 14187,
+     "actual": 796,
      "budget": null
     },
     "labour": {
-     "pct": 15.8,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 92.7,
@@ -183,13 +183,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 0,
     "sales": {
-     "actual": 12928,
+     "actual": 774,
      "budget": null
     },
     "labour": {
-     "pct": 14.4,
+     "pct": 15.0,
      "budgetPct": null
     },
     "policies": 89.8,
@@ -200,13 +200,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 0,
     "sales": {
-     "actual": 15522,
+     "actual": 726,
      "budget": null
     },
     "labour": {
-     "pct": 14.5,
+     "pct": 14.8,
      "budgetPct": null
     },
     "policies": 91.7,
@@ -217,13 +217,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 26,
+    "reviews": 0,
     "sales": {
-     "actual": 12837,
+     "actual": 508,
      "budget": null
     },
     "labour": {
-     "pct": 16.8,
+     "pct": 17.0,
      "budgetPct": null
     },
     "policies": 92.6,
@@ -234,13 +234,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 0,
     "sales": {
-     "actual": 14472,
+     "actual": 369,
      "budget": null
     },
     "labour": {
-     "pct": 16.9,
+     "pct": 17.6,
      "budgetPct": null
     },
     "policies": 90.7,
@@ -251,9 +251,9 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 21,
+    "reviews": 0,
     "sales": {
-     "actual": 11086,
+     "actual": 618,
      "budget": null
     },
     "labour": {
@@ -268,13 +268,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 11124,
+     "actual": 577,
      "budget": null
     },
     "labour": {
-     "pct": 18.2,
+     "pct": 18.5,
      "budgetPct": null
     },
     "policies": 89.4,
@@ -285,13 +285,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 0,
     "sales": {
-     "actual": 10607,
+     "actual": 421,
      "budget": null
     },
     "labour": {
-     "pct": 19.2,
+     "pct": 19.6,
      "budgetPct": null
     },
     "policies": 95.5,
@@ -300,15 +300,15 @@
    },
    "Surry Hills": {
     "hopperTemps": 3,
-    "calibrations": "missed",
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 0,
     "sales": {
-     "actual": 9284,
+     "actual": 511,
      "budget": null
     },
     "labour": {
-     "pct": 19.1,
+     "pct": 19.4,
      "budgetPct": null
     },
     "policies": 90.9,
@@ -317,15 +317,15 @@
    },
    "Top Ryde": {
     "hopperTemps": 3,
-    "calibrations": "missed",
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 8105,
+     "actual": 160,
      "budget": null
     },
     "labour": {
-     "pct": 18.2,
+     "pct": 19.1,
      "budgetPct": null
     },
     "policies": 96.3,
@@ -333,16 +333,16 @@
     "training": 90.8
    },
    "Randwick": {
-    "hopperTemps": 4,
+    "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 6592,
+     "actual": 307,
      "budget": null
     },
     "labour": {
-     "pct": 19.5,
+     "pct": 20.5,
      "budgetPct": null
     },
     "policies": 81.9,
@@ -352,14 +352,14 @@
    "Bondi Junction": {
     "hopperTemps": 3,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 12,
+    "correctiveA": "ok",
+    "reviews": 0,
     "sales": {
-     "actual": 5409,
+     "actual": 274,
      "budget": null
     },
     "labour": {
-     "pct": 18.5,
+     "pct": 19.1,
      "budgetPct": null
     },
     "policies": 88.4,
@@ -370,13 +370,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 0,
     "sales": {
-     "actual": 6308,
+     "actual": 268,
      "budget": null
     },
     "labour": {
-     "pct": 24.9,
+     "pct": 25.5,
      "budgetPct": null
     },
     "policies": 93.6,
@@ -384,16 +384,16 @@
     "training": 78.5
    },
    "Double Bay": {
-    "hopperTemps": 3,
-    "calibrations": "complete",
+    "hopperTemps": 2,
+    "calibrations": "missed",
     "correctiveA": "none",
     "reviews": 0,
     "sales": {
-     "actual": 6167,
+     "actual": 168,
      "budget": null
     },
     "labour": {
-     "pct": 21.8,
+     "pct": 22.5,
      "budgetPct": null
     },
     "policies": 87.3,
@@ -401,16 +401,16 @@
     "training": 70.9
    },
    "Chippendale": {
-    "hopperTemps": 4,
-    "calibrations": "missed",
+    "hopperTemps": 3,
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 5211,
+     "actual": 540,
      "budget": null
     },
     "labour": {
-     "pct": 16.2,
+     "pct": 16.9,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -421,13 +421,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 8980,
+     "actual": 196,
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 19.3,
      "budgetPct": null
     },
     "policies": 91.9,
@@ -437,14 +437,14 @@
    "Fish Market": {
     "hopperTemps": 3,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 1,
+    "correctiveA": "none",
+    "reviews": 0,
     "sales": {
-     "actual": 6936,
+     "actual": 473,
      "budget": null
     },
     "labour": {
-     "pct": 23.6,
+     "pct": 23.8,
      "budgetPct": null
     },
     "policies": 87.2,
@@ -455,9 +455,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 13,
+    "reviews": 0,
     "sales": {
-     "actual": 14956,
+     "actual": 1305,
      "budget": null
     },
     "policies": 92.9,
@@ -467,16 +467,16 @@
   },
   "wtd": {
    "George St": {
-    "hopperTemps": 19,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 91817,
+     "actual": 1502,
      "budget": null
     },
     "labour": {
-     "pct": 16.3,
+     "pct": 16.8,
      "budgetPct": null
     },
     "policies": 95.2,
@@ -484,12 +484,12 @@
     "training": 83.7
    },
    "Erina Fair": {
-    "hopperTemps": 18,
+    "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 70768,
+     "actual": 1032,
      "budget": null
     },
     "policies": 93.0,
@@ -500,13 +500,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 20,
+    "reviews": 0,
     "sales": {
-     "actual": 72152,
+     "actual": 1824,
      "budget": null
     },
     "labour": {
-     "pct": 17.0,
+     "pct": 17.3,
      "budgetPct": null
     },
     "policies": 91.6,
@@ -514,12 +514,12 @@
     "training": 78.7
    },
    "Wollongong": {
-    "hopperTemps": 20,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 0,
     "sales": {
-     "actual": 69662,
+     "actual": 1054,
      "budget": null
     },
     "policies": 95.1,
@@ -530,9 +530,9 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 61422,
+     "actual": 934,
      "budget": null
     },
     "policies": 94.9,
@@ -543,13 +543,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 20,
+    "reviews": 0,
     "sales": {
-     "actual": 65936,
+     "actual": 601,
      "budget": null
     },
     "labour": {
-     "pct": 14.5,
+     "pct": 14.9,
      "budgetPct": null
     },
     "policies": 96.1,
@@ -557,16 +557,16 @@
     "training": 93.2
    },
    "Circular Quay": {
-    "hopperTemps": 22,
-    "calibrations": "complete",
+    "hopperTemps": 24,
+    "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 57028,
+     "actual": 1231,
      "budget": null
     },
     "labour": {
-     "pct": 15.5,
+     "pct": 15.8,
      "budgetPct": null
     },
     "policies": 94.5,
@@ -576,14 +576,14 @@
    "Macquarie": {
     "hopperTemps": 20,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 4,
+    "correctiveA": "ok",
+    "reviews": 0,
     "sales": {
-     "actual": 50243,
+     "actual": 793,
      "budget": null
     },
     "labour": {
-     "pct": 15.4,
+     "pct": 15.7,
      "budgetPct": null
     },
     "policies": 98.0,
@@ -594,13 +594,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 17,
+    "reviews": 0,
     "sales": {
-     "actual": 53098,
+     "actual": 505,
      "budget": null
     },
     "labour": {
-     "pct": 14.7,
+     "pct": 14.9,
      "budgetPct": null
     },
     "policies": 96.5,
@@ -608,16 +608,16 @@
     "training": 90.2
    },
    "Burwood": {
-    "hopperTemps": 25,
+    "hopperTemps": 27,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 8,
+    "correctiveA": "none",
+    "reviews": 0,
     "sales": {
-     "actual": 56375,
+     "actual": 796,
      "budget": null
     },
     "labour": {
-     "pct": 15.8,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 92.7,
@@ -628,13 +628,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 0,
     "sales": {
-     "actual": 52800,
+     "actual": 774,
      "budget": null
     },
     "labour": {
-     "pct": 14.4,
+     "pct": 15.0,
      "budgetPct": null
     },
     "policies": 89.8,
@@ -642,16 +642,16 @@
     "training": 82.9
    },
    "Manly": {
-    "hopperTemps": 20,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 0,
     "sales": {
-     "actual": 54459,
+     "actual": 726,
      "budget": null
     },
     "labour": {
-     "pct": 14.5,
+     "pct": 14.8,
      "budgetPct": null
     },
     "policies": 91.7,
@@ -659,16 +659,16 @@
     "training": 77.3
    },
    "Chatswood": {
-    "hopperTemps": 21,
+    "hopperTemps": 18,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 26,
+    "reviews": 0,
     "sales": {
-     "actual": 45569,
+     "actual": 508,
      "budget": null
     },
     "labour": {
-     "pct": 16.8,
+     "pct": 17.0,
      "budgetPct": null
     },
     "policies": 92.6,
@@ -679,13 +679,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 0,
     "sales": {
-     "actual": 48500,
+     "actual": 369,
      "budget": null
     },
     "labour": {
-     "pct": 16.9,
+     "pct": 17.6,
      "budgetPct": null
     },
     "policies": 90.7,
@@ -693,12 +693,12 @@
     "training": 86.2
    },
    "Newtown": {
-    "hopperTemps": 25,
+    "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 21,
+    "reviews": 0,
     "sales": {
-     "actual": 46754,
+     "actual": 618,
      "budget": null
     },
     "labour": {
@@ -710,16 +710,16 @@
     "training": 86.0
    },
    "Bondi": {
-    "hopperTemps": 19,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 39499,
+     "actual": 577,
      "budget": null
     },
     "labour": {
-     "pct": 18.2,
+     "pct": 18.5,
      "budgetPct": null
     },
     "policies": 89.4,
@@ -730,13 +730,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 0,
     "sales": {
-     "actual": 44172,
+     "actual": 421,
      "budget": null
     },
     "labour": {
-     "pct": 19.2,
+     "pct": 19.6,
      "budgetPct": null
     },
     "policies": 95.5,
@@ -744,16 +744,16 @@
     "training": 91.6
    },
    "Surry Hills": {
-    "hopperTemps": 24,
-    "calibrations": "missed",
+    "hopperTemps": 23,
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 0,
     "sales": {
-     "actual": 40369,
+     "actual": 511,
      "budget": null
     },
     "labour": {
-     "pct": 19.1,
+     "pct": 19.4,
      "budgetPct": null
     },
     "policies": 90.9,
@@ -762,15 +762,15 @@
    },
    "Top Ryde": {
     "hopperTemps": 20,
-    "calibrations": "missed",
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 26600,
+     "actual": 160,
      "budget": null
     },
     "labour": {
-     "pct": 18.2,
+     "pct": 19.1,
      "budgetPct": null
     },
     "policies": 96.3,
@@ -778,16 +778,16 @@
     "training": 90.8
    },
    "Randwick": {
-    "hopperTemps": 26,
+    "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 30642,
+     "actual": 307,
      "budget": null
     },
     "labour": {
-     "pct": 19.5,
+     "pct": 20.5,
      "budgetPct": null
     },
     "policies": 81.9,
@@ -795,16 +795,16 @@
     "training": 62.6
    },
    "Bondi Junction": {
-    "hopperTemps": 22,
+    "hopperTemps": 21,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 12,
+    "correctiveA": "ok",
+    "reviews": 0,
     "sales": {
-     "actual": 26860,
+     "actual": 274,
      "budget": null
     },
     "labour": {
-     "pct": 18.5,
+     "pct": 19.1,
      "budgetPct": null
     },
     "policies": 88.4,
@@ -812,16 +812,16 @@
     "training": 84.9
    },
    "Lane Cove": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 0,
     "sales": {
-     "actual": 25060,
+     "actual": 268,
      "budget": null
     },
     "labour": {
-     "pct": 24.9,
+     "pct": 25.5,
      "budgetPct": null
     },
     "policies": 93.6,
@@ -829,16 +829,16 @@
     "training": 78.5
    },
    "Double Bay": {
-    "hopperTemps": 19,
-    "calibrations": "complete",
+    "hopperTemps": 13,
+    "calibrations": "missed",
     "correctiveA": "none",
     "reviews": 0,
     "sales": {
-     "actual": 26724,
+     "actual": 168,
      "budget": null
     },
     "labour": {
-     "pct": 21.8,
+     "pct": 22.5,
      "budgetPct": null
     },
     "policies": 87.3,
@@ -846,16 +846,16 @@
     "training": 70.9
    },
    "Chippendale": {
-    "hopperTemps": 27,
-    "calibrations": "missed",
+    "hopperTemps": 23,
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 32391,
+     "actual": 540,
      "budget": null
     },
     "labour": {
-     "pct": 16.2,
+     "pct": 16.9,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -863,16 +863,16 @@
     "training": 72.5
    },
    "Crows Nest": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 33646,
+     "actual": 196,
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 19.3,
      "budgetPct": null
     },
     "policies": 91.9,
@@ -880,16 +880,16 @@
     "training": 78.2
    },
    "Fish Market": {
-    "hopperTemps": 24,
+    "hopperTemps": 22,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 1,
+    "correctiveA": "none",
+    "reviews": 0,
     "sales": {
-     "actual": 20738,
+     "actual": 473,
      "budget": null
     },
     "labour": {
-     "pct": 23.6,
+     "pct": 23.8,
      "budgetPct": null
     },
     "policies": 87.2,
@@ -900,9 +900,9 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 13,
+    "reviews": 0,
     "sales": {
-     "actual": 61979,
+     "actual": 1305,
      "budget": null
     },
     "policies": 92.9,
@@ -912,16 +912,16 @@
   },
   "mtd": {
    "George St": {
-    "hopperTemps": 19,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 463926,
+     "actual": 481966,
      "budget": null
     },
     "labour": {
-     "pct": 16.3,
+     "pct": 16.8,
      "budgetPct": null
     },
     "policies": 95.2,
@@ -929,12 +929,12 @@
     "training": 83.7
    },
    "Erina Fair": {
-    "hopperTemps": 18,
+    "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 387741,
+     "actual": 405107,
      "budget": null
     },
     "policies": 93.0,
@@ -945,13 +945,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 20,
+    "reviews": 0,
     "sales": {
-     "actual": 369140,
+     "actual": 386952,
      "budget": null
     },
     "labour": {
-     "pct": 17.0,
+     "pct": 17.3,
      "budgetPct": null
     },
     "policies": 91.6,
@@ -959,12 +959,12 @@
     "training": 78.7
    },
    "Wollongong": {
-    "hopperTemps": 20,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 0,
     "sales": {
-     "actual": 356367,
+     "actual": 372567,
      "budget": null
     },
     "policies": 95.1,
@@ -975,9 +975,9 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 340231,
+     "actual": 354469,
      "budget": null
     },
     "policies": 94.9,
@@ -988,13 +988,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 20,
+    "reviews": 0,
     "sales": {
-     "actual": 331224,
+     "actual": 345877,
      "budget": null
     },
     "labour": {
-     "pct": 14.5,
+     "pct": 14.9,
      "budgetPct": null
     },
     "policies": 96.1,
@@ -1002,16 +1002,16 @@
     "training": 93.2
    },
    "Circular Quay": {
-    "hopperTemps": 22,
-    "calibrations": "complete",
+    "hopperTemps": 24,
+    "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 291008,
+     "actual": 304210,
      "budget": null
     },
     "labour": {
-     "pct": 15.5,
+     "pct": 15.8,
      "budgetPct": null
     },
     "policies": 94.5,
@@ -1021,14 +1021,14 @@
    "Macquarie": {
     "hopperTemps": 20,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 4,
+    "correctiveA": "ok",
+    "reviews": 0,
     "sales": {
-     "actual": 280646,
+     "actual": 291946,
      "budget": null
     },
     "labour": {
-     "pct": 15.4,
+     "pct": 15.7,
      "budgetPct": null
     },
     "policies": 98.0,
@@ -1039,13 +1039,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 17,
+    "reviews": 0,
     "sales": {
-     "actual": 294976,
+     "actual": 309383,
      "budget": null
     },
     "labour": {
-     "pct": 14.7,
+     "pct": 14.9,
      "budgetPct": null
     },
     "policies": 96.5,
@@ -1053,16 +1053,16 @@
     "training": 90.2
    },
    "Burwood": {
-    "hopperTemps": 25,
+    "hopperTemps": 27,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 8,
+    "correctiveA": "none",
+    "reviews": 0,
     "sales": {
-     "actual": 275505,
+     "actual": 288681,
      "budget": null
     },
     "labour": {
-     "pct": 15.8,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 92.7,
@@ -1073,13 +1073,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 0,
     "sales": {
-     "actual": 270575,
+     "actual": 283313,
      "budget": null
     },
     "labour": {
-     "pct": 14.4,
+     "pct": 15.0,
      "budgetPct": null
     },
     "policies": 89.8,
@@ -1087,16 +1087,16 @@
     "training": 82.9
    },
    "Manly": {
-    "hopperTemps": 20,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 0,
     "sales": {
-     "actual": 267809,
+     "actual": 283010,
      "budget": null
     },
     "labour": {
-     "pct": 14.5,
+     "pct": 14.8,
      "budgetPct": null
     },
     "policies": 91.7,
@@ -1104,16 +1104,16 @@
     "training": 77.3
    },
    "Chatswood": {
-    "hopperTemps": 21,
+    "hopperTemps": 18,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 26,
+    "reviews": 0,
     "sales": {
-     "actual": 233916,
+     "actual": 245587,
      "budget": null
     },
     "labour": {
-     "pct": 16.8,
+     "pct": 17.0,
      "budgetPct": null
     },
     "policies": 92.6,
@@ -1124,13 +1124,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 0,
     "sales": {
-     "actual": 244771,
+     "actual": 257954,
      "budget": null
     },
     "labour": {
-     "pct": 16.9,
+     "pct": 17.6,
      "budgetPct": null
     },
     "policies": 90.7,
@@ -1138,12 +1138,12 @@
     "training": 86.2
    },
    "Newtown": {
-    "hopperTemps": 25,
+    "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 21,
+    "reviews": 0,
     "sales": {
-     "actual": 221657,
+     "actual": 232183,
      "budget": null
     },
     "labour": {
@@ -1155,16 +1155,16 @@
     "training": 86.0
    },
    "Bondi": {
-    "hopperTemps": 19,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 192879,
+     "actual": 204616,
      "budget": null
     },
     "labour": {
-     "pct": 18.2,
+     "pct": 18.5,
      "budgetPct": null
     },
     "policies": 89.4,
@@ -1175,13 +1175,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 0,
     "sales": {
-     "actual": 190522,
+     "actual": 203098,
      "budget": null
     },
     "labour": {
-     "pct": 19.2,
+     "pct": 19.6,
      "budgetPct": null
     },
     "policies": 95.5,
@@ -1189,16 +1189,16 @@
     "training": 91.6
    },
    "Surry Hills": {
-    "hopperTemps": 24,
-    "calibrations": "missed",
+    "hopperTemps": 23,
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 0,
     "sales": {
-     "actual": 177324,
+     "actual": 185706,
      "budget": null
     },
     "labour": {
-     "pct": 19.1,
+     "pct": 19.4,
      "budgetPct": null
     },
     "policies": 90.9,
@@ -1207,15 +1207,15 @@
    },
    "Top Ryde": {
     "hopperTemps": 20,
-    "calibrations": "missed",
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 135184,
+     "actual": 141693,
      "budget": null
     },
     "labour": {
-     "pct": 18.2,
+     "pct": 19.1,
      "budgetPct": null
     },
     "policies": 96.3,
@@ -1223,16 +1223,16 @@
     "training": 90.8
    },
    "Randwick": {
-    "hopperTemps": 26,
+    "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 128969,
+     "actual": 135295,
      "budget": null
     },
     "labour": {
-     "pct": 19.5,
+     "pct": 20.5,
      "budgetPct": null
     },
     "policies": 81.9,
@@ -1240,16 +1240,16 @@
     "training": 62.6
    },
    "Bondi Junction": {
-    "hopperTemps": 22,
+    "hopperTemps": 21,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 12,
+    "correctiveA": "ok",
+    "reviews": 0,
     "sales": {
-     "actual": 121800,
+     "actual": 127566,
      "budget": null
     },
     "labour": {
-     "pct": 18.5,
+     "pct": 19.1,
      "budgetPct": null
     },
     "policies": 88.4,
@@ -1257,16 +1257,16 @@
     "training": 84.9
    },
    "Lane Cove": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 0,
     "sales": {
-     "actual": 107842,
+     "actual": 113715,
      "budget": null
     },
     "labour": {
-     "pct": 24.9,
+     "pct": 25.5,
      "budgetPct": null
     },
     "policies": 93.6,
@@ -1274,16 +1274,16 @@
     "training": 78.5
    },
    "Double Bay": {
-    "hopperTemps": 19,
-    "calibrations": "complete",
+    "hopperTemps": 13,
+    "calibrations": "missed",
     "correctiveA": "none",
     "reviews": 0,
     "sales": {
-     "actual": 103057,
+     "actual": 108784,
      "budget": null
     },
     "labour": {
-     "pct": 21.8,
+     "pct": 22.5,
      "budgetPct": null
     },
     "policies": 87.3,
@@ -1291,16 +1291,16 @@
     "training": 70.9
    },
    "Chippendale": {
-    "hopperTemps": 27,
-    "calibrations": "missed",
+    "hopperTemps": 23,
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 124786,
+     "actual": 129577,
      "budget": null
     },
     "labour": {
-     "pct": 16.2,
+     "pct": 16.9,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -1308,16 +1308,16 @@
     "training": 72.5
    },
    "Crows Nest": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 146113,
+     "actual": 153634,
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 19.3,
      "budgetPct": null
     },
     "policies": 91.9,
@@ -1325,16 +1325,16 @@
     "training": 78.2
    },
    "Fish Market": {
-    "hopperTemps": 24,
+    "hopperTemps": 22,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 1,
+    "correctiveA": "none",
+    "reviews": 0,
     "sales": {
-     "actual": 106221,
+     "actual": 112986,
      "budget": null
     },
     "labour": {
-     "pct": 23.6,
+     "pct": 23.8,
      "budgetPct": null
     },
     "policies": 87.2,
@@ -1345,9 +1345,9 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 13,
+    "reviews": 0,
     "sales": {
-     "actual": 326249,
+     "actual": 340242,
      "budget": null
     },
     "policies": 92.9,
@@ -1365,411 +1365,232 @@
    "Co-Chi Bowl Tare"
   ],
   "discountName": "Reusable 10% Off",
-  "windowStart": "2026-07-20",
-  "windowEnd": "2026-07-25",
-  "window": "20 Jul – 25 Jul",
+  "windowStart": "2026-07-27",
+  "windowEnd": "2026-07-27",
+  "window": "27 Jul",
   "totals": {
-   "reusable": 1144,
-   "discounted": 479,
-   "otherDisc": 637,
-   "missed": 28,
-   "pct": 94.5
+   "reusable": 166,
+   "discounted": 68,
+   "otherDisc": 98,
+   "missed": 0,
+   "pct": 100.0
   },
   "venues": {
    "George St": {
-    "reusable": 53,
-    "discounted": 19,
-    "otherDisc": 34,
+    "reusable": 5,
+    "discounted": 1,
+    "otherDisc": 4,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Erina Fair": {
-    "reusable": 42,
-    "discounted": 31,
-    "otherDisc": 7,
-    "missed": 4,
-    "pct": 88.6,
-    "missedList": [
-     {
-      "saleId": "106132125",
-      "date": "2026-07-21",
-      "time": "20:02:57",
-      "bowl": "RG Bowl Tare"
-     },
-     {
-      "saleId": "105133681",
-      "date": "2026-07-23",
-      "time": "21:04:11",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "106133684",
-      "date": "2026-07-23",
-      "time": "21:04:46",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "105135856",
-      "date": "2026-07-25",
-      "time": "20:05:17",
-      "bowl": "Icy Go Bowl Tare"
-     }
-    ]
+    "reusable": 4,
+    "discounted": 3,
+    "otherDisc": 1,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
    },
    "Barangaroo": {
-    "reusable": 45,
-    "discounted": 19,
-    "otherDisc": 26,
+    "reusable": 6,
+    "discounted": 1,
+    "otherDisc": 5,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Wollongong": {
-    "reusable": 82,
-    "discounted": 24,
-    "otherDisc": 58,
+    "reusable": 12,
+    "discounted": 4,
+    "otherDisc": 8,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Charlestown": {
-    "reusable": 63,
-    "discounted": 17,
-    "otherDisc": 45,
-    "missed": 1,
-    "pct": 94.4,
-    "missedList": [
-     {
-      "saleId": "105250645",
-      "date": "2026-07-23",
-      "time": "19:10:05",
-      "bowl": "RG Bowl Tare"
-     }
-    ]
+    "reusable": 8,
+    "discounted": 4,
+    "otherDisc": 4,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
    },
    "Rouse Hill": {
-    "reusable": 59,
-    "discounted": 21,
-    "otherDisc": 38,
+    "reusable": 8,
+    "discounted": 2,
+    "otherDisc": 6,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Circular Quay": {
-    "reusable": 51,
-    "discounted": 15,
-    "otherDisc": 34,
-    "missed": 2,
-    "pct": 88.2,
-    "missedList": [
-     {
-      "saleId": "78429706",
-      "date": "2026-07-22",
-      "time": "13:38:54",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "78429707",
-      "date": "2026-07-22",
-      "time": "13:39:24",
-      "bowl": "Icy Go Bowl Tare"
-     }
-    ]
+    "reusable": 7,
+    "discounted": 2,
+    "otherDisc": 5,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
    },
    "Macquarie": {
-    "reusable": 55,
-    "discounted": 23,
-    "otherDisc": 29,
-    "missed": 3,
-    "pct": 88.5,
-    "missedList": [
-     {
-      "saleId": "33451790",
-      "date": "2026-07-24",
-      "time": "20:49:18",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "33451809",
-      "date": "2026-07-24",
-      "time": "21:06:16",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "33451832",
-      "date": "2026-07-24",
-      "time": "21:19:42",
-      "bowl": "Icy Go Bowl Tare"
-     }
-    ]
+    "reusable": 12,
+    "discounted": 5,
+    "otherDisc": 7,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
    },
    "Castle Towers": {
-    "reusable": 41,
-    "discounted": 25,
-    "otherDisc": 14,
-    "missed": 2,
-    "pct": 92.6,
-    "missedList": [
-     {
-      "saleId": "116215543",
-      "date": "2026-07-20",
-      "time": "14:10:34",
-      "bowl": "Co-Chi Bowl Tare"
-     },
-     {
-      "saleId": "116216741",
-      "date": "2026-07-22",
-      "time": "18:48:31",
-      "bowl": "Icy Go Bowl Tare"
-     }
-    ]
+    "reusable": 3,
+    "discounted": 2,
+    "otherDisc": 1,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
    },
    "Burwood": {
-    "reusable": 56,
-    "discounted": 13,
-    "otherDisc": 43,
+    "reusable": 11,
+    "discounted": 1,
+    "otherDisc": 10,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Penrith": {
-    "reusable": 47,
-    "discounted": 20,
-    "otherDisc": 25,
-    "missed": 2,
-    "pct": 90.9,
-    "missedList": [
-     {
-      "saleId": "72325312",
-      "date": "2026-07-22",
-      "time": "19:08:05",
-      "bowl": "RG Bowl Tare"
-     },
-     {
-      "saleId": "72326947",
-      "date": "2026-07-25",
-      "time": "12:38:12",
-      "bowl": "Co-Chi Bowl Tare"
-     }
-    ]
+    "reusable": 4,
+    "discounted": 1,
+    "otherDisc": 3,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
    },
    "Manly": {
-    "reusable": 23,
-    "discounted": 11,
-    "otherDisc": 11,
-    "missed": 1,
-    "pct": 91.7,
-    "missedList": [
-     {
-      "saleId": "43406389",
-      "date": "2026-07-24",
-      "time": "13:08:06",
-      "bowl": "Go Bowl Tare"
-     }
-    ]
+    "reusable": 1,
+    "discounted": 1,
+    "otherDisc": 0,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
    },
    "Chatswood": {
-    "reusable": 46,
-    "discounted": 14,
-    "otherDisc": 32,
+    "reusable": 4,
+    "discounted": 1,
+    "otherDisc": 3,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Cronulla": {
-    "reusable": 36,
-    "discounted": 16,
-    "otherDisc": 19,
-    "missed": 1,
-    "pct": 94.1,
-    "missedList": [
-     {
-      "saleId": "101283025",
-      "date": "2026-07-20",
-      "time": "20:56:42",
-      "bowl": "Icy Go Bowl Tare"
-     }
-    ]
+    "reusable": 6,
+    "discounted": 4,
+    "otherDisc": 2,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
    },
    "Newtown": {
-    "reusable": 57,
-    "discounted": 27,
-    "otherDisc": 30,
+    "reusable": 8,
+    "discounted": 3,
+    "otherDisc": 5,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Bondi": {
-    "reusable": 31,
-    "discounted": 9,
-    "otherDisc": 22,
+    "reusable": 5,
+    "discounted": 3,
+    "otherDisc": 2,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Coogee": {
-    "reusable": 31,
-    "discounted": 11,
-    "otherDisc": 20,
+    "reusable": 4,
+    "discounted": 1,
+    "otherDisc": 3,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Surry Hills": {
-    "reusable": 36,
-    "discounted": 12,
-    "otherDisc": 24,
+    "reusable": 4,
+    "discounted": 1,
+    "otherDisc": 3,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Top Ryde": {
-    "reusable": 37,
-    "discounted": 17,
-    "otherDisc": 20,
+    "reusable": 6,
+    "discounted": 5,
+    "otherDisc": 1,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Randwick": {
-    "reusable": 37,
-    "discounted": 19,
-    "otherDisc": 18,
+    "reusable": 6,
+    "discounted": 2,
+    "otherDisc": 4,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Bondi Junction": {
-    "reusable": 14,
-    "discounted": 6,
-    "otherDisc": 8,
+    "reusable": 2,
+    "discounted": 1,
+    "otherDisc": 1,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Lane Cove": {
-    "reusable": 20,
-    "discounted": 15,
-    "otherDisc": 4,
-    "missed": 1,
-    "pct": 93.8,
-    "missedList": [
-     {
-      "saleId": "37216547",
-      "date": "2026-07-22",
-      "time": "16:38:50",
-      "bowl": "Go Bowl Tare"
-     }
-    ]
+    "reusable": 4,
+    "discounted": 3,
+    "otherDisc": 1,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
    },
    "Double Bay": {
-    "reusable": 28,
-    "discounted": 13,
-    "otherDisc": 14,
-    "missed": 1,
-    "pct": 92.9,
-    "missedList": [
-     {
-      "saleId": "66199841",
-      "date": "2026-07-25",
-      "time": "21:19:17",
-      "bowl": "RG Bowl Tare"
-     }
-    ]
+    "reusable": 6,
+    "discounted": 2,
+    "otherDisc": 4,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
    },
    "Chippendale": {
-    "reusable": 29,
-    "discounted": 12,
-    "otherDisc": 17,
+    "reusable": 5,
+    "discounted": 1,
+    "otherDisc": 4,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Crows Nest": {
-    "reusable": 57,
-    "discounted": 34,
-    "otherDisc": 23,
+    "reusable": 11,
+    "discounted": 9,
+    "otherDisc": 2,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Fish Market": {
-    "reusable": 8,
+    "reusable": 3,
     "discounted": 0,
-    "otherDisc": 8,
+    "otherDisc": 3,
     "missed": 0,
     "pct": null,
     "missedList": []
    },
    "Green Hills": {
-    "reusable": 60,
-    "discounted": 36,
-    "otherDisc": 14,
-    "missed": 10,
-    "pct": 78.3,
-    "missedList": [
-     {
-      "saleId": "105041694",
-      "date": "2026-07-22",
-      "time": "20:37:10",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105041862",
-      "date": "2026-07-23",
-      "time": "13:45:54",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105042126",
-      "date": "2026-07-23",
-      "time": "18:14:53",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105042143",
-      "date": "2026-07-23",
-      "time": "18:21:34",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105042362",
-      "date": "2026-07-23",
-      "time": "20:17:53",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "106042470",
-      "date": "2026-07-23",
-      "time": "21:13:08",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105042711",
-      "date": "2026-07-24",
-      "time": "14:16:18",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105043677",
-      "date": "2026-07-25",
-      "time": "14:40:29",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105043690",
-      "date": "2026-07-25",
-      "time": "14:46:41",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "105044270",
-      "date": "2026-07-25",
-      "time": "21:18:20",
-      "bowl": "RG Bowl Tare"
-     }
-    ]
+    "reusable": 11,
+    "discounted": 5,
+    "otherDisc": 6,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
    }
   }
  },
@@ -1786,255 +1607,967 @@
   "windowEnd": "2026-07-27",
   "window": "27 Jul",
   "totals": {
-   "reusable": 0,
-   "discounted": 0,
-   "otherDisc": 0,
+   "reusable": 166,
+   "discounted": 68,
+   "otherDisc": 98,
    "missed": 0,
-   "pct": null
+   "pct": 100.0
   },
   "venues": {
    "George St": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 5,
+    "discounted": 1,
+    "otherDisc": 4,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "103504870",
+      "date": "2026-07-27",
+      "time": "12:21:24",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103504896",
+      "date": "2026-07-27",
+      "time": "13:06:38",
+      "bowl": "RG Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "104504960",
+      "date": "2026-07-27",
+      "time": "13:59:43",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103505572",
+      "date": "2026-07-27",
+      "time": "19:58:49",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Erina Fair": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 4,
+    "discounted": 3,
+    "otherDisc": 1,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "106137883",
+      "date": "2026-07-27",
+      "time": "21:52:52",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 10%"
+     }
+    ]
    },
    "Barangaroo": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 6,
+    "discounted": 1,
+    "otherDisc": 5,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "73561812",
+      "date": "2026-07-27",
+      "time": "12:02:37",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74561819",
+      "date": "2026-07-27",
+      "time": "12:23:18",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "73562008",
+      "date": "2026-07-27",
+      "time": "14:45:54",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74562194",
+      "date": "2026-07-27",
+      "time": "18:05:28",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74562244",
+      "date": "2026-07-27",
+      "time": "19:18:46",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Wollongong": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 12,
+    "discounted": 4,
+    "otherDisc": 8,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "106316338",
+      "date": "2026-07-27",
+      "time": "12:35:03",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105316400",
+      "date": "2026-07-27",
+      "time": "14:21:41",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Free Yo-Chi $10"
+     },
+     {
+      "saleId": "106316543",
+      "date": "2026-07-27",
+      "time": "17:21:07",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106316683",
+      "date": "2026-07-27",
+      "time": "19:35:54",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105316839",
+      "date": "2026-07-27",
+      "time": "21:13:45",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106316869",
+      "date": "2026-07-27",
+      "time": "21:33:38",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106316880",
+      "date": "2026-07-27",
+      "time": "21:49:08",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105316886",
+      "date": "2026-07-27",
+      "time": "22:05:18",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Charlestown": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 8,
+    "discounted": 4,
+    "otherDisc": 4,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "105253893",
+      "date": "2026-07-27",
+      "time": "14:16:00",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106253976",
+      "date": "2026-07-27",
+      "time": "16:09:09",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106254208",
+      "date": "2026-07-27",
+      "time": "20:30:18",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106254243",
+      "date": "2026-07-27",
+      "time": "20:51:24",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Rouse Hill": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 8,
+    "discounted": 2,
+    "otherDisc": 6,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "120223569",
+      "date": "2026-07-27",
+      "time": "14:19:08",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121223580",
+      "date": "2026-07-27",
+      "time": "14:34:40",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121223635",
+      "date": "2026-07-27",
+      "time": "15:42:16",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121223960",
+      "date": "2026-07-27",
+      "time": "20:18:25",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121224002",
+      "date": "2026-07-27",
+      "time": "20:55:09",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121224010",
+      "date": "2026-07-27",
+      "time": "21:04:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Circular Quay": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 7,
+    "discounted": 2,
+    "otherDisc": 5,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "78433925",
+      "date": "2026-07-27",
+      "time": "13:23:35",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77434204",
+      "date": "2026-07-27",
+      "time": "17:12:17",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "78434248",
+      "date": "2026-07-27",
+      "time": "17:59:12",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77434344",
+      "date": "2026-07-27",
+      "time": "19:32:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77434406",
+      "date": "2026-07-27",
+      "time": "20:39:22",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Macquarie": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 12,
+    "discounted": 5,
+    "otherDisc": 7,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "32453913",
+      "date": "2026-07-27",
+      "time": "11:47:25",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32453935",
+      "date": "2026-07-27",
+      "time": "12:45:32",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "33454174",
+      "date": "2026-07-27",
+      "time": "16:34:16",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "33454368",
+      "date": "2026-07-27",
+      "time": "19:09:59",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Free Yo-Chi $10"
+     },
+     {
+      "saleId": "32454457",
+      "date": "2026-07-27",
+      "time": "20:06:34",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "33454554",
+      "date": "2026-07-27",
+      "time": "21:16:31",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32454567",
+      "date": "2026-07-27",
+      "time": "21:27:29",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi, LAM 10%"
+     }
+    ]
    },
    "Castle Towers": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 3,
+    "discounted": 2,
+    "otherDisc": 1,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "116220621",
+      "date": "2026-07-27",
+      "time": "13:15:50",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Burwood": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 11,
+    "discounted": 1,
+    "otherDisc": 10,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "114231143",
+      "date": "2026-07-27",
+      "time": "11:26:42",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114231157",
+      "date": "2026-07-27",
+      "time": "12:09:22",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114231182",
+      "date": "2026-07-27",
+      "time": "13:09:44",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114231211",
+      "date": "2026-07-27",
+      "time": "13:49:17",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "115231417",
+      "date": "2026-07-27",
+      "time": "17:37:48",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "115231518",
+      "date": "2026-07-27",
+      "time": "19:38:46",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114231547",
+      "date": "2026-07-27",
+      "time": "20:04:39",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "115231597",
+      "date": "2026-07-27",
+      "time": "20:44:01",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114231627",
+      "date": "2026-07-27",
+      "time": "21:13:46",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114231696",
+      "date": "2026-07-27",
+      "time": "22:32:35",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Penrith": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 4,
+    "discounted": 1,
+    "otherDisc": 3,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "72328552",
+      "date": "2026-07-27",
+      "time": "11:22:36",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "71328721",
+      "date": "2026-07-27",
+      "time": "16:17:10",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "71328837",
+      "date": "2026-07-27",
+      "time": "19:05:15",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Manly": {
-    "reusable": 0,
-    "discounted": 0,
+    "reusable": 1,
+    "discounted": 1,
     "otherDisc": 0,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
     "otherList": []
    },
    "Chatswood": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 4,
+    "discounted": 1,
+    "otherDisc": 3,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "108066072",
+      "date": "2026-07-27",
+      "time": "13:36:41",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "108066121",
+      "date": "2026-07-27",
+      "time": "14:36:12",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "108066460",
+      "date": "2026-07-27",
+      "time": "21:04:50",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Free Yo-Chi $10"
+     }
+    ]
    },
    "Cronulla": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 6,
+    "discounted": 4,
+    "otherDisc": 2,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "101287054",
+      "date": "2026-07-27",
+      "time": "17:32:29",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "100287200",
+      "date": "2026-07-27",
+      "time": "20:44:07",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Newtown": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 8,
+    "discounted": 3,
+    "otherDisc": 5,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "21405674",
+      "date": "2026-07-27",
+      "time": "16:29:35",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "22405708",
+      "date": "2026-07-27",
+      "time": "17:12:12",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "22405971",
+      "date": "2026-07-27",
+      "time": "21:26:17",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21406038",
+      "date": "2026-07-27",
+      "time": "22:30:15",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21406041",
+      "date": "2026-07-27",
+      "time": "22:32:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Bondi": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 5,
+    "discounted": 3,
+    "otherDisc": 2,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "59373301",
+      "date": "2026-07-27",
+      "time": "13:36:46",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "58373699",
+      "date": "2026-07-27",
+      "time": "22:34:18",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Coogee": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 4,
+    "discounted": 1,
+    "otherDisc": 3,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "69359128",
+      "date": "2026-07-27",
+      "time": "17:02:24",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "70359135",
+      "date": "2026-07-27",
+      "time": "17:33:01",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "69359173",
+      "date": "2026-07-27",
+      "time": "19:09:52",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Surry Hills": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 4,
+    "discounted": 1,
+    "otherDisc": 3,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "15351183",
+      "date": "2026-07-27",
+      "time": "13:43:40",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15351192",
+      "date": "2026-07-27",
+      "time": "14:01:33",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15351373",
+      "date": "2026-07-27",
+      "time": "18:23:20",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Top Ryde": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 6,
+    "discounted": 5,
+    "otherDisc": 1,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "84177294",
+      "date": "2026-07-27",
+      "time": "20:21:00",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Randwick": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 6,
+    "discounted": 2,
+    "otherDisc": 4,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "122112144",
+      "date": "2026-07-27",
+      "time": "12:36:34",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "123112237",
+      "date": "2026-07-27",
+      "time": "16:13:32",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "122112311",
+      "date": "2026-07-27",
+      "time": "18:45:46",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "122112403",
+      "date": "2026-07-27",
+      "time": "21:06:45",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team 25% Off"
+     }
+    ]
    },
    "Bondi Junction": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 2,
+    "discounted": 1,
+    "otherDisc": 1,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "85186672",
+      "date": "2026-07-27",
+      "time": "13:34:47",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Lane Cove": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 4,
+    "discounted": 3,
+    "otherDisc": 1,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "37218295",
+      "date": "2026-07-27",
+      "time": "12:25:14",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Double Bay": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 6,
+    "discounted": 2,
+    "otherDisc": 4,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "66200302",
+      "date": "2026-07-27",
+      "time": "13:53:15",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "66200307",
+      "date": "2026-07-27",
+      "time": "14:43:22",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "64200461",
+      "date": "2026-07-27",
+      "time": "19:23:30",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "64200490",
+      "date": "2026-07-27",
+      "time": "20:17:01",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Chippendale": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 5,
+    "discounted": 1,
+    "otherDisc": 4,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "126147967",
+      "date": "2026-07-27",
+      "time": "15:50:56",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "126147981",
+      "date": "2026-07-27",
+      "time": "16:13:05",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "125148117",
+      "date": "2026-07-27",
+      "time": "18:43:43",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "126148163",
+      "date": "2026-07-27",
+      "time": "19:28:45",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Crows Nest": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 11,
+    "discounted": 9,
+    "otherDisc": 2,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "141045296",
+      "date": "2026-07-27",
+      "time": "17:53:20",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "141045424",
+      "date": "2026-07-27",
+      "time": "20:53:56",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Fish Market": {
-    "reusable": 0,
+    "reusable": 3,
     "discounted": 0,
-    "otherDisc": 0,
+    "otherDisc": 3,
     "missed": 0,
     "pct": null,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "143016356",
+      "date": "2026-07-27",
+      "time": "15:04:34",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "144016408",
+      "date": "2026-07-27",
+      "time": "17:26:34",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 10%"
+     },
+     {
+      "saleId": "144016472",
+      "date": "2026-07-27",
+      "time": "21:31:23",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Ops Only 100%"
+     }
+    ]
    },
    "Green Hills": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
+    "reusable": 11,
+    "discounted": 5,
+    "otherDisc": 6,
     "missed": 0,
-    "pct": null,
+    "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "105045190",
+      "date": "2026-07-27",
+      "time": "12:24:39",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105045425",
+      "date": "2026-07-27",
+      "time": "18:05:43",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106045461",
+      "date": "2026-07-27",
+      "time": "18:57:55",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105045510",
+      "date": "2026-07-27",
+      "time": "20:08:15",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106045550",
+      "date": "2026-07-27",
+      "time": "21:03:07",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106045553",
+      "date": "2026-07-27",
+      "time": "21:04:54",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team 25% Off"
+     }
+    ]
    }
   },
   "live": true
