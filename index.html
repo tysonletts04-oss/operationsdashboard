@@ -209,6 +209,17 @@
   tr.disc-row:hover td { background:var(--neutral-bg); }
   .disc-caret { color:var(--faint); font-size:10px; }
   tr.disc-detail > td { background:var(--neutral-bg); padding:10px 16px; }
+  /* Date-range calendar bar */
+  .disc-cal { display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding:12px 18px 4px; }
+  .disc-cal-lbl { font-size:12px; font-weight:700; color:var(--faint); }
+  .disc-preset { font:inherit; font-size:12px; padding:5px 11px; border:1px solid var(--border); background:var(--card); color:var(--ink); border-radius:999px; cursor:pointer; }
+  .disc-preset:hover { border-color:var(--acc); }
+  .disc-preset.active { background:var(--acc); color:#fff; border-color:var(--acc); }
+  .disc-cal-range { display:inline-flex; align-items:center; gap:6px; }
+  .disc-cal-range input[type=date] { font:inherit; font-size:12px; padding:4px 7px; border:1px solid var(--border); border-radius:7px; background:var(--card); color:var(--ink); color-scheme:light dark; }
+  .disc-dl { font:inherit; font-size:12px; font-weight:600; padding:5px 11px; border:1px solid var(--border); background:var(--card); color:var(--ink); border-radius:7px; cursor:pointer; }
+  .disc-dl:hover { border-color:var(--acc); color:var(--acc); }
+  .disc-cal-note { font-size:11px; color:var(--muted); margin-left:2px; }
   table.mini { width:100%; border-collapse:collapse; font-size:12px; font-variant-numeric:tabular-nums; }
   table.mini th { text-align:left; color:var(--faint); font-weight:700; padding:4px 10px; border-bottom:1px solid var(--border); text-transform:uppercase; font-size:9.5px; letter-spacing:.05em; }
   table.mini td { text-align:left; padding:4px 10px; border-bottom:1px solid var(--border); }
@@ -799,8 +810,111 @@ let DISCOUNTS_LIVE = {
       {saleId:"114226628",date:"2026-07-20",time:"22:07:15",bowl:"Go Bowl Tare",discounts:"Team Free Yo-Chi"}
     ]}}
 };
+/* Daily history for the date-range calendar. Per venue: `daily` maps each date to
+ * [reusable, discounted, otherDisc, missed]; `missedList` is the dated misses for the
+ * whole window. The client totals any date range from this — no backend. Fed by
+ * data.json `discountsDaily`; the embed is a file:// fallback. */
+let DISCOUNTS_DAILY = {
+  metric:"Reusable bowl 10% discount", discountName:"Reusable 10% Off",
+  items:["Go Bowl Tare","RG Bowl Tare","Icy Go Bowl Tare","Co-Chi Bowl Tare"],
+  windowStart:"2026-07-06", windowEnd:"2026-07-20",
+  venues:{
+    "Burwood":{daily:{"2026-07-06":[9,3,6,0],"2026-07-07":[8,3,5,0],"2026-07-13":[11,4,6,1],
+      "2026-07-14":[13,5,7,1],"2026-07-15":[10,4,6,0],"2026-07-16":[9,3,6,0],"2026-07-17":[12,4,8,0],
+      "2026-07-18":[11,3,7,1],"2026-07-19":[10,3,6,1],"2026-07-20":[11,4,6,1]}, missedList:[
+      {saleId:"115220135",date:"2026-07-13",time:"13:59:37",bowl:"Icy Go Bowl Tare"},
+      {saleId:"115221326",date:"2026-07-14",time:"19:31:05",bowl:"Icy Go Bowl Tare"},
+      {saleId:"115223880",date:"2026-07-18",time:"18:22:41",bowl:"Go Bowl Tare"},
+      {saleId:"115224511",date:"2026-07-19",time:"20:05:55",bowl:"Go Bowl Tare"},
+      {saleId:"115230011",date:"2026-07-20",time:"12:04:11",bowl:"Go Bowl Tare"}]},
+    "Chatswood":{daily:{"2026-07-13":[9,2,7,0],"2026-07-14":[8,2,6,0],"2026-07-20":[9,2,6,1]}, missedList:[
+      {saleId:"115240022",date:"2026-07-20",time:"14:38:22",bowl:"Icy Go Bowl Tare"}]}
+  }
+};
 const _DM=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 function fmtDate(iso){ const p=(iso||'').split('-'); return p.length===3? (+p[2])+' '+_DM[+p[1]-1] : (iso||''); }
+
+/* ── Date-range calendar for the Reusable Discounts tab ───────────────────────
+ * The pipeline bakes ~8 weeks of per-venue DAILY counts (DISCOUNTS_DAILY); here we
+ * total any date range the user picks, entirely client-side. */
+const state_disc = { preset:'thisweek', from:null, to:null };
+function _iso(d){ return d.toISOString().slice(0,10); }
+function _pd(s){ const p=(s||'').split('-'); return new Date(+p[0], +p[1]-1, +p[2]); }
+function _monday(d){ const x=new Date(d); const wd=(x.getDay()+6)%7; x.setDate(x.getDate()-wd); return x; }
+/* Resolve the active range from the preset/custom state, anchored to the freshest
+ * baked day (windowEnd) so "this week / last week" line up with the data we have. */
+function activeDiscRange(){
+  const D=DISCOUNTS_DAILY||{}; const end=_pd(D.windowEnd||CONFIG.reportDate); const min=_pd(D.windowStart||D.windowEnd||CONFIG.reportDate);
+  const clamp=d=> d<min?min : d>end?end : d;
+  if(state_disc.preset==='custom' && state_disc.from && state_disc.to){
+    let a=_pd(state_disc.from), b=_pd(state_disc.to); if(a>b){const t=a;a=b;b=t;}
+    return {start:_iso(clamp(a)), end:_iso(clamp(b)), label:'custom'};
+  }
+  if(state_disc.preset==='lastweek'){ const m=_monday(end); const lm=new Date(m); lm.setDate(m.getDate()-7);
+    const ls=new Date(lm); ls.setDate(lm.getDate()+6); return {start:_iso(clamp(lm)), end:_iso(clamp(ls)), label:'lastweek'}; }
+  if(state_disc.preset==='last4w'){ const s=new Date(end); s.setDate(end.getDate()-27); return {start:_iso(clamp(s)), end:_iso(end), label:'last4w'}; }
+  return {start:_iso(clamp(_monday(end))), end:_iso(end), label:'thisweek'};   // default: this week to date
+}
+/* Build a dataset in the exact shape renderDiscounts() expects, by summing the daily
+ * arrays in [start,end] and filtering each venue's missed list to that range. */
+function discountsForRange(start, end){
+  const D=DISCOUNTS_DAILY; const venues={}; let tR=0,tD=0,tO=0,tM=0;
+  Object.entries(D.venues||{}).forEach(([v,vd])=>{
+    let r=0,disc=0,oth=0,miss=0;
+    Object.entries(vd.daily||{}).forEach(([date,a])=>{ if(date>=start && date<=end){ r+=a[0];disc+=a[1];oth+=a[2];miss+=a[3]; }});
+    if(r===0) return;
+    const ml=(vd.missedList||[]).filter(m=>m.date>=start && m.date<=end);
+    const elig=disc+miss;
+    venues[v]={reusable:r,discounted:disc,otherDisc:oth,missed:miss,
+      pct: elig? Math.round(1000*disc/elig)/10 : null, missedList:ml};
+    tR+=r;tD+=disc;tO+=oth;tM+=miss;
+  });
+  const elig=tD+tM;
+  const label = start===end ? fmtDate(start) : fmtDate(start)+' – '+fmtDate(end);
+  return { metric:D.metric, items:D.items, discountName:D.discountName, window:label,
+    windowStart:start, windowEnd:end, ranged:true,
+    totals:{reusable:tR,discounted:tD,otherDisc:tO,missed:tM, pct: elig? Math.round(1000*tD/elig)/10 : null},
+    venues };
+}
+function setDiscPreset(p){ state_disc.preset=p; if(p!=='custom'){ state_disc.from=null; state_disc.to=null; } render(); }
+function setDiscDate(which, val){ state_disc[which]=val||null; if(state_disc.from&&state_disc.to) state_disc.preset='custom'; render(); }
+/* Download the missed sales in the active range as CSV (venue, date, time, item, sale id). */
+function discDownloadCsv(){
+  const D=window._discActive; if(!D) return;
+  const rows=[['Venue','Date','Time','Reusable item','Sale ID']];
+  Object.entries(D.venues).forEach(([v,d])=>(d.missedList||[]).forEach(m=>
+    rows.push([v, m.date, m.time||'', m.bowl||'', m.saleId||''])));
+  const csv=rows.map(r=>r.map(c=>/[",\n]/.test(c)?'"'+c.replace(/"/g,'""')+'"':c).join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='reusable-bowl-misses_'+D.windowStart+'_to_'+D.windowEnd+'.csv';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+/* The date-range control bar injected at the top of the Reusable Discounts card. */
+function discControlsHtml(rng){
+  const D=DISCOUNTS_DAILY||{}; const min=D.windowStart||'', max=D.windowEnd||'';
+  const pill=(p,lbl)=>`<button class="disc-preset${state_disc.preset===p?' active':''}" onclick="setDiscPreset('${p}')">${lbl}</button>`;
+  return `<div class="disc-cal">
+      <span class="disc-cal-lbl">📅 Dates:</span>
+      ${pill('thisweek','This week')}${pill('lastweek','Last week')}${pill('last4w','Last 4 weeks')}${pill('custom','Custom')}
+      <span class="disc-cal-range">
+        <input type="date" value="${rng.start}" min="${min}" max="${max}" onchange="setDiscDate('from',this.value)" aria-label="From date">
+        <span>→</span>
+        <input type="date" value="${rng.end}" min="${min}" max="${max}" onchange="setDiscDate('to',this.value)" aria-label="To date">
+      </span>
+      <button class="disc-dl" onclick="discDownloadCsv()" title="Download the missed sales in this range as CSV">⭳ CSV</button>
+      <span class="disc-cal-note">showing <b>${fmtDate(rng.start)} – ${fmtDate(rng.end)}</b>${max?` · data available ${fmtDate(min)} – ${fmtDate(max)}`:''}</span>
+    </div>`;
+}
+/* Reusable Discounts tab: date-range calendar + the compliance table for that range. */
+function renderDiscountTab(){
+  const hasDaily = DISCOUNTS_DAILY && DISCOUNTS_DAILY.venues && Object.keys(DISCOUNTS_DAILY.venues).length;
+  if(!hasDaily){ renderDiscounts(DISCOUNTS, 'stable'); return; }   // old data.json → baked weekly view
+  const rng=activeDiscRange();
+  const D=discountsForRange(rng.start, rng.end);
+  window._discActive=D;
+  renderDiscounts(D, 'ranged', discControlsHtml(rng));
+}
 function toggleDisc(i){ const el=document.getElementById('disc-'+i); if(el) el.style.display = el.style.display==='none'?'':'none'; }
 
 /* Column sort for the discount tables. Default keeps "most misses first"; clicking a
@@ -834,14 +948,18 @@ function discSortRows(venues){
   });
 }
 
-function renderDiscounts(D, mode){
+function renderDiscounts(D, mode, controlsHtml){
   D = D || DISCOUNTS;
   const live = mode === 'live';
+  const ranged = mode === 'ranged';
+  controlsHtml = controlsHtml || '';
   const title = live ? 'Live · Reusable Discounts' : 'Reusable Discount Compliance';
   const host=document.getElementById('view');
   if(!D || !D.venues || !Object.keys(D.venues).length){
-    host.innerHTML='<div class="card"><div class="head"><h2>'+title+'</h2></div>'+
-      '<p style="padding:16px;color:var(--muted)">'+(live
+    host.innerHTML='<div class="card"><div class="head"><h2>'+title+'</h2></div>'+controlsHtml+
+      '<p style="padding:16px;color:var(--muted)">'+(ranged
+        ? 'No reusable-bowl sales in the selected dates — try a different range.'
+        : live
         ? 'No sales in the current week yet — this fills in as today’s transactions come through.'
         : 'No discount data yet — it loads from the live feed on the next refresh.')+'</p></div>';
     return;
@@ -864,7 +982,9 @@ function renderDiscounts(D, mode){
       : '<p style="margin:0;color:var(--muted)">No missed discounts in this window 🎉</p>';
     body+=`<tr class="disc-detail" id="disc-${i}" style="display:none"><td colspan="6">${detail}</td></tr>`;
   });
-  const hint = live
+  const hint = ranged
+    ? `Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · <b>${D.window||''}</b> · a “miss” had no discount of any kind, matching the official Polygon report · pick any dates above · click a venue for the exact sales · click a column header to sort`
+    : live
     ? `Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · <b>this week to date (${D.window||''})</b> · updated each morning with the previous day’s sales, not same-day · a “miss” had no discount of any kind · click a venue for the exact sales · click a column header to sort`
     : `Reusable bowls (${(D.items||[]).join(', ')}) that missed the 10% discount · this week to date (${D.window||''}) · a “miss” had no discount of any kind, matching the official Polygon report · click a venue for the sales · click a column header to sort`;
   const badge = live ? ' <span class="sample-badge" style="background:var(--neutral,#8a9aa5);color:#fff">UPDATED DAILY</span>' : '';
@@ -872,6 +992,7 @@ function renderDiscounts(D, mode){
     <div class="card">
       <div class="head"><h2>${title}${badge}</h2>
         <span class="hint">${hint}</span></div>
+      ${controlsHtml}
       <div class="disc-summary">
         <div><div class="k">Overall compliance</div><div class="v">${t.pct==null?'—':t.pct+'%'}</div></div>
         <div><div class="k">Reusable-bowl sales</div><div class="v">${t.reusable||0}</div></div>
@@ -963,7 +1084,7 @@ function render() {
   else if (state.view === 'cards') renderCards();
   else if (state.view === 'live') renderDiscounts(DISCOUNTS_LIVE, 'live');
   else if (state.view === 'applied') renderApplied();
-  else renderDiscounts(DISCOUNTS, 'stable');
+  else renderDiscountTab();
 }
 
 /* Wire up controls */
@@ -1008,6 +1129,7 @@ async function loadData() {
         SAMPLE = d.periods;
         if (d.discounts) DISCOUNTS = d.discounts;
         if (d.discountsLive) DISCOUNTS_LIVE = d.discountsLive;
+        if (d.discountsDaily) DISCOUNTS_DAILY = d.discountsDaily;
         DATA = structuredClone(SAMPLE);
         if (d.meta) {
           if (d.meta.reportDate) CONFIG.reportDate = d.meta.reportDate;
