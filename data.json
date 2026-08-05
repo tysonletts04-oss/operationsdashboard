@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-08-04",
-  "generatedAt": "2026-08-05T15:14:38+00:00",
+  "generatedAt": "2026-08-05T17:31:54+00:00",
   "windows": "daily = 4 Aug · WTD = 3–4 Aug · MTD = 1–4 Aug",
   "venues": 27,
   "sources": {
@@ -31,7 +31,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -61,7 +61,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 17.7,
+     "pct": 17.8,
      "budgetPct": null
     },
     "policies": 96.7,
@@ -104,7 +104,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.4,
+     "pct": 16.0,
      "budgetPct": null
     },
     "policies": 96.9,
@@ -138,7 +138,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.0,
+     "pct": 13.7,
      "budgetPct": null
     },
     "policies": 98.5,
@@ -172,7 +172,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 16.8,
      "budgetPct": null
     },
     "policies": 98.1,
@@ -206,7 +206,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 19.2,
      "budgetPct": null
     },
     "policies": 97.1,
@@ -223,7 +223,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.4,
+     "pct": 14.5,
      "budgetPct": null
     },
     "policies": 92.2,
@@ -257,7 +257,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 17.8,
+     "pct": 17.0,
      "budgetPct": null
     },
     "policies": 97.5,
@@ -308,7 +308,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.8,
+     "pct": 19.8,
      "budgetPct": null
     },
     "policies": 94.8,
@@ -325,7 +325,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 21.0,
+     "pct": 20.8,
      "budgetPct": null
     },
     "policies": 98.3,
@@ -342,7 +342,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 20.5,
      "budgetPct": null
     },
     "policies": 87.1,
@@ -359,7 +359,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.2,
+     "pct": 18.4,
      "budgetPct": null
     },
     "policies": 90.3,
@@ -393,7 +393,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 24.8,
+     "pct": 24.7,
      "budgetPct": null
     },
     "policies": 88.1,
@@ -410,7 +410,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.8,
+     "pct": 15.3,
      "budgetPct": null
     },
     "policies": 94.3,
@@ -476,7 +476,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -506,7 +506,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 17.7,
+     "pct": 17.8,
      "budgetPct": null
     },
     "policies": 96.7,
@@ -549,7 +549,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.4,
+     "pct": 16.0,
      "budgetPct": null
     },
     "policies": 96.9,
@@ -583,7 +583,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.0,
+     "pct": 13.7,
      "budgetPct": null
     },
     "policies": 98.5,
@@ -617,7 +617,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 16.8,
      "budgetPct": null
     },
     "policies": 98.1,
@@ -651,7 +651,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 19.2,
      "budgetPct": null
     },
     "policies": 97.1,
@@ -668,7 +668,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.4,
+     "pct": 14.5,
      "budgetPct": null
     },
     "policies": 92.2,
@@ -702,7 +702,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 17.8,
+     "pct": 17.0,
      "budgetPct": null
     },
     "policies": 97.5,
@@ -753,7 +753,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.8,
+     "pct": 19.8,
      "budgetPct": null
     },
     "policies": 94.8,
@@ -770,7 +770,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 21.0,
+     "pct": 20.8,
      "budgetPct": null
     },
     "policies": 98.3,
@@ -787,7 +787,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 20.5,
      "budgetPct": null
     },
     "policies": 87.1,
@@ -804,7 +804,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.2,
+     "pct": 18.4,
      "budgetPct": null
     },
     "policies": 90.3,
@@ -838,7 +838,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 24.8,
+     "pct": 24.7,
      "budgetPct": null
     },
     "policies": 88.1,
@@ -855,7 +855,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.8,
+     "pct": 15.3,
      "budgetPct": null
     },
     "policies": 94.3,
@@ -921,7 +921,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 16.1,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -951,7 +951,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 17.7,
+     "pct": 17.8,
      "budgetPct": null
     },
     "policies": 96.7,
@@ -994,7 +994,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.4,
+     "pct": 16.0,
      "budgetPct": null
     },
     "policies": 96.9,
@@ -1028,7 +1028,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.0,
+     "pct": 13.7,
      "budgetPct": null
     },
     "policies": 98.5,
@@ -1062,7 +1062,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 16.8,
      "budgetPct": null
     },
     "policies": 98.1,
@@ -1096,7 +1096,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 19.2,
      "budgetPct": null
     },
     "policies": 97.1,
@@ -1113,7 +1113,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.4,
+     "pct": 14.5,
      "budgetPct": null
     },
     "policies": 92.2,
@@ -1147,7 +1147,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 17.8,
+     "pct": 17.0,
      "budgetPct": null
     },
     "policies": 97.5,
@@ -1198,7 +1198,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 15.8,
+     "pct": 19.8,
      "budgetPct": null
     },
     "policies": 94.8,
@@ -1215,7 +1215,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 21.0,
+     "pct": 20.8,
      "budgetPct": null
     },
     "policies": 98.3,
@@ -1232,7 +1232,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 20.5,
      "budgetPct": null
     },
     "policies": 87.1,
@@ -1249,7 +1249,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 18.2,
+     "pct": 18.4,
      "budgetPct": null
     },
     "policies": 90.3,
@@ -1283,7 +1283,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 24.8,
+     "pct": 24.7,
      "budgetPct": null
     },
     "policies": 88.1,
@@ -1300,7 +1300,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 14.8,
+     "pct": 15.3,
      "budgetPct": null
     },
     "policies": 94.3,
@@ -1624,20 +1624,20 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-08-03",
-  "windowEnd": "2026-08-04",
-  "window": "3 Aug – 4 Aug",
+  "windowEnd": "2026-08-05",
+  "window": "3 Aug – 5 Aug",
   "totals": {
-   "reusable": 298,
-   "discounted": 121,
-   "otherDisc": 174,
-   "missed": 3,
-   "pct": 97.6
+   "reusable": 457,
+   "discounted": 188,
+   "otherDisc": 264,
+   "missed": 5,
+   "pct": 97.4
   },
   "venues": {
    "George St": {
-    "reusable": 13,
-    "discounted": 4,
-    "otherDisc": 9,
+    "reusable": 23,
+    "discounted": 7,
+    "otherDisc": 16,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -1704,12 +1704,61 @@
       "time": "22:31:19",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "104517598",
+      "date": "2026-08-05",
+      "time": "13:13:32",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103517763",
+      "date": "2026-08-05",
+      "time": "15:25:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103517902",
+      "date": "2026-08-05",
+      "time": "16:31:39",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103518048",
+      "date": "2026-08-05",
+      "time": "17:59:32",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "104518392",
+      "date": "2026-08-05",
+      "time": "20:12:32",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "104518479",
+      "date": "2026-08-05",
+      "time": "20:44:19",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "103518638",
+      "date": "2026-08-05",
+      "time": "21:39:41",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Erina Fair": {
-    "reusable": 8,
-    "discounted": 5,
+    "reusable": 15,
+    "discounted": 12,
     "otherDisc": 3,
     "missed": 0,
     "pct": 100.0,
@@ -1739,9 +1788,9 @@
     ]
    },
    "Barangaroo": {
-    "reusable": 12,
-    "discounted": 5,
-    "otherDisc": 7,
+    "reusable": 16,
+    "discounted": 6,
+    "otherDisc": 10,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -1794,13 +1843,34 @@
       "time": "19:31:32",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "73570486",
+      "date": "2026-08-05",
+      "time": "13:33:53",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74570851",
+      "date": "2026-08-05",
+      "time": "18:59:57",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "74570987",
+      "date": "2026-08-05",
+      "time": "20:48:01",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Wollongong": {
-    "reusable": 17,
-    "discounted": 5,
-    "otherDisc": 12,
+    "reusable": 39,
+    "discounted": 17,
+    "otherDisc": 22,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -1888,13 +1958,83 @@
       "time": "21:14:07",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105323723",
+      "date": "2026-08-05",
+      "time": "10:24:50",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106323748",
+      "date": "2026-08-05",
+      "time": "12:06:46",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Loyalty Redemptions, Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105323850",
+      "date": "2026-08-05",
+      "time": "14:40:38",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106323865",
+      "date": "2026-08-05",
+      "time": "15:05:08",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106324150",
+      "date": "2026-08-05",
+      "time": "19:48:16",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106324186",
+      "date": "2026-08-05",
+      "time": "20:04:44",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106324340",
+      "date": "2026-08-05",
+      "time": "21:24:32",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105324368",
+      "date": "2026-08-05",
+      "time": "21:41:26",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106324375",
+      "date": "2026-08-05",
+      "time": "21:57:18",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105324381",
+      "date": "2026-08-05",
+      "time": "22:30:19",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Charlestown": {
-    "reusable": 20,
-    "discounted": 7,
-    "otherDisc": 13,
+    "reusable": 25,
+    "discounted": 8,
+    "otherDisc": 17,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -1989,13 +2129,41 @@
       "time": "21:22:22",
       "bowl": "Icy Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106260533",
+      "date": "2026-08-05",
+      "time": "13:03:22",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105260979",
+      "date": "2026-08-05",
+      "time": "20:41:01",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105261034",
+      "date": "2026-08-05",
+      "time": "21:28:00",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "105261047",
+      "date": "2026-08-05",
+      "time": "21:42:04",
+      "bowl": "RG Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Rouse Hill": {
-    "reusable": 15,
+    "reusable": 20,
     "discounted": 6,
-    "otherDisc": 9,
+    "otherDisc": 14,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2062,13 +2230,48 @@
       "time": "21:22:19",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "120230906",
+      "date": "2026-08-05",
+      "time": "13:48:07",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121230932",
+      "date": "2026-08-05",
+      "time": "14:33:21",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "120231457",
+      "date": "2026-08-05",
+      "time": "21:05:40",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121231464",
+      "date": "2026-08-05",
+      "time": "21:10:06",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "121231492",
+      "date": "2026-08-05",
+      "time": "21:29:29",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Circular Quay": {
-    "reusable": 10,
-    "discounted": 2,
-    "otherDisc": 8,
+    "reusable": 18,
+    "discounted": 5,
+    "otherDisc": 13,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2128,13 +2331,48 @@
       "time": "20:38:18",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77441612",
+      "date": "2026-08-05",
+      "time": "12:26:17",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77441920",
+      "date": "2026-08-05",
+      "time": "16:27:51",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "78442138",
+      "date": "2026-08-05",
+      "time": "19:10:05",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77442236",
+      "date": "2026-08-05",
+      "time": "20:35:58",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "77442313",
+      "date": "2026-08-05",
+      "time": "21:34:48",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Macquarie": {
-    "reusable": 12,
-    "discounted": 7,
-    "otherDisc": 5,
+    "reusable": 19,
+    "discounted": 10,
+    "otherDisc": 9,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2173,13 +2411,41 @@
       "time": "18:46:19",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32461962",
+      "date": "2026-08-05",
+      "time": "14:09:21",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "33462249",
+      "date": "2026-08-05",
+      "time": "18:07:14",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32462427",
+      "date": "2026-08-05",
+      "time": "19:55:05",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Loyalty Redemptions, Team Free Yo-Chi"
+     },
+     {
+      "saleId": "32462635",
+      "date": "2026-08-05",
+      "time": "21:34:26",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Castle Towers": {
-    "reusable": 6,
-    "discounted": 4,
-    "otherDisc": 2,
+    "reusable": 13,
+    "discounted": 8,
+    "otherDisc": 5,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2197,16 +2463,44 @@
       "time": "22:33:33",
       "bowl": "Icy Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "117226992",
+      "date": "2026-08-05",
+      "time": "16:08:10",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "116227073",
+      "date": "2026-08-05",
+      "time": "17:48:32",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "116227267",
+      "date": "2026-08-05",
+      "time": "20:35:07",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Burwood": {
-    "reusable": 13,
-    "discounted": 3,
-    "otherDisc": 10,
-    "missed": 0,
-    "pct": 100.0,
-    "missedList": [],
+    "reusable": 21,
+    "discounted": 6,
+    "otherDisc": 14,
+    "missed": 1,
+    "pct": 85.7,
+    "missedList": [
+     {
+      "saleId": "114238239",
+      "date": "2026-08-05",
+      "time": "20:28:29",
+      "bowl": "Go Bowl Tare"
+     }
+    ],
     "otherList": [
      {
       "saleId": "114236647",
@@ -2277,13 +2571,41 @@
       "time": "19:52:10",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114237802",
+      "date": "2026-08-05",
+      "time": "13:44:30",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114237851",
+      "date": "2026-08-05",
+      "time": "14:47:53",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114238032",
+      "date": "2026-08-05",
+      "time": "17:07:49",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "114238166",
+      "date": "2026-08-05",
+      "time": "19:37:45",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Penrith": {
-    "reusable": 11,
-    "discounted": 5,
-    "otherDisc": 6,
+    "reusable": 16,
+    "discounted": 8,
+    "otherDisc": 8,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2329,13 +2651,27 @@
       "time": "22:48:42",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "71334394",
+      "date": "2026-08-05",
+      "time": "18:11:54",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "71334420",
+      "date": "2026-08-05",
+      "time": "18:51:12",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Manly": {
-    "reusable": 11,
+    "reusable": 14,
     "discounted": 4,
-    "otherDisc": 7,
+    "otherDisc": 10,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2388,13 +2724,34 @@
       "time": "20:56:18",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "44415146",
+      "date": "2026-08-05",
+      "time": "12:06:22",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "43415278",
+      "date": "2026-08-05",
+      "time": "15:23:51",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "43415414",
+      "date": "2026-08-05",
+      "time": "18:13:05",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Chatswood": {
-    "reusable": 21,
-    "discounted": 6,
-    "otherDisc": 15,
+    "reusable": 25,
+    "discounted": 7,
+    "otherDisc": 18,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2503,13 +2860,34 @@
       "time": "20:58:00",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "108073009",
+      "date": "2026-08-05",
+      "time": "12:47:24",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109073024",
+      "date": "2026-08-05",
+      "time": "13:32:18",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "109073306",
+      "date": "2026-08-05",
+      "time": "19:11:43",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Cronulla": {
-    "reusable": 9,
+    "reusable": 10,
     "discounted": 5,
-    "otherDisc": 4,
+    "otherDisc": 5,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2541,13 +2919,20 @@
       "time": "20:50:02",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "100292331",
+      "date": "2026-08-05",
+      "time": "20:36:10",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Newtown": {
-    "reusable": 14,
-    "discounted": 8,
-    "otherDisc": 6,
+    "reusable": 27,
+    "discounted": 14,
+    "otherDisc": 13,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2593,13 +2978,62 @@
       "time": "14:04:00",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "22411666",
+      "date": "2026-08-05",
+      "time": "12:50:25",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "22411667",
+      "date": "2026-08-05",
+      "time": "13:14:24",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21411835",
+      "date": "2026-08-05",
+      "time": "17:23:37",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21412021",
+      "date": "2026-08-05",
+      "time": "20:19:09",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21412037",
+      "date": "2026-08-05",
+      "time": "20:31:12",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "21412105",
+      "date": "2026-08-05",
+      "time": "21:09:25",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "22412134",
+      "date": "2026-08-05",
+      "time": "21:47:44",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Loyalty Redemptions, Team Free Yo-Chi"
      }
     ]
    },
    "Bondi": {
-    "reusable": 11,
-    "discounted": 2,
-    "otherDisc": 9,
+    "reusable": 14,
+    "discounted": 3,
+    "otherDisc": 11,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2666,13 +3100,27 @@
       "time": "21:14:46",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "59378293",
+      "date": "2026-08-05",
+      "time": "16:03:11",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "58378574",
+      "date": "2026-08-05",
+      "time": "21:56:52",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Coogee": {
-    "reusable": 10,
-    "discounted": 2,
-    "otherDisc": 8,
+    "reusable": 14,
+    "discounted": 3,
+    "otherDisc": 11,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2732,13 +3180,34 @@
       "time": "19:18:44",
       "bowl": "Icy Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "70364070",
+      "date": "2026-08-05",
+      "time": "16:25:59",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "69364156",
+      "date": "2026-08-05",
+      "time": "19:19:49",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "69364288",
+      "date": "2026-08-05",
+      "time": "20:38:05",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Surry Hills": {
-    "reusable": 13,
-    "discounted": 5,
-    "otherDisc": 8,
+    "reusable": 19,
+    "discounted": 8,
+    "otherDisc": 11,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2798,16 +3267,44 @@
       "time": "22:38:32",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15356661",
+      "date": "2026-08-05",
+      "time": "13:27:08",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15356773",
+      "date": "2026-08-05",
+      "time": "17:04:21",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "15356836",
+      "date": "2026-08-05",
+      "time": "19:11:12",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Top Ryde": {
-    "reusable": 6,
-    "discounted": 2,
-    "otherDisc": 4,
-    "missed": 0,
-    "pct": 100.0,
-    "missedList": [],
+    "reusable": 12,
+    "discounted": 4,
+    "otherDisc": 7,
+    "missed": 1,
+    "pct": 80.0,
+    "missedList": [
+     {
+      "saleId": "84180465",
+      "date": "2026-08-05",
+      "time": "17:48:35",
+      "bowl": "Go Bowl Tare"
+     }
+    ],
     "otherList": [
      {
       "saleId": "84180115",
@@ -2836,13 +3333,34 @@
       "time": "21:25:11",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "84180466",
+      "date": "2026-08-05",
+      "time": "17:50:22",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi, Loyalty Redemptions"
+     },
+     {
+      "saleId": "84180543",
+      "date": "2026-08-05",
+      "time": "20:15:08",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "BLC 20% OFF JAN 31 2027 EXPIRY"
+     },
+     {
+      "saleId": "84180578",
+      "date": "2026-08-05",
+      "time": "21:02:54",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Randwick": {
-    "reusable": 6,
-    "discounted": 2,
-    "otherDisc": 4,
+    "reusable": 11,
+    "discounted": 4,
+    "otherDisc": 7,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2874,15 +3392,36 @@
       "time": "20:52:54",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "122115956",
+      "date": "2026-08-05",
+      "time": "13:41:25",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "123115968",
+      "date": "2026-08-05",
+      "time": "14:07:56",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "122116301",
+      "date": "2026-08-05",
+      "time": "21:01:30",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Bondi Junction": {
-    "reusable": 6,
-    "discounted": 4,
-    "otherDisc": 1,
+    "reusable": 8,
+    "discounted": 5,
+    "otherDisc": 2,
     "missed": 1,
-    "pct": 80.0,
+    "pct": 83.3,
     "missedList": [
      {
       "saleId": "85190183",
@@ -2898,22 +3437,37 @@
       "time": "20:08:47",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "85190888",
+      "date": "2026-08-05",
+      "time": "22:31:29",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Lane Cove": {
-    "reusable": 5,
+    "reusable": 6,
     "discounted": 5,
-    "otherDisc": 0,
+    "otherDisc": 1,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
-    "otherList": []
+    "otherList": [
+     {
+      "saleId": "36221764",
+      "date": "2026-08-05",
+      "time": "19:37:13",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     }
+    ]
    },
    "Double Bay": {
-    "reusable": 9,
-    "discounted": 2,
-    "otherDisc": 7,
+    "reusable": 13,
+    "discounted": 4,
+    "otherDisc": 9,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -2966,13 +3520,27 @@
       "time": "20:27:06",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "66203536",
+      "date": "2026-08-05",
+      "time": "15:12:16",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "66203669",
+      "date": "2026-08-05",
+      "time": "19:15:00",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Chippendale": {
-    "reusable": 10,
-    "discounted": 5,
-    "otherDisc": 5,
+    "reusable": 18,
+    "discounted": 7,
+    "otherDisc": 11,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -3011,13 +3579,55 @@
       "time": "20:50:01",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "125154328",
+      "date": "2026-08-05",
+      "time": "12:12:25",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "125154466",
+      "date": "2026-08-05",
+      "time": "13:45:05",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "LAM 25%"
+     },
+     {
+      "saleId": "126154504",
+      "date": "2026-08-05",
+      "time": "14:17:14",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "125154607",
+      "date": "2026-08-05",
+      "time": "15:17:36",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "126155122",
+      "date": "2026-08-05",
+      "time": "20:38:21",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "125155291",
+      "date": "2026-08-05",
+      "time": "22:02:17",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
    "Crows Nest": {
-    "reusable": 18,
-    "discounted": 10,
-    "otherDisc": 8,
+    "reusable": 23,
+    "discounted": 11,
+    "otherDisc": 12,
     "missed": 0,
     "pct": 100.0,
     "missedList": [],
@@ -3077,6 +3687,34 @@
       "time": "20:43:23",
       "bowl": "Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "142049347",
+      "date": "2026-08-05",
+      "time": "13:50:33",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "142049531",
+      "date": "2026-08-05",
+      "time": "18:59:23",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "141049541",
+      "date": "2026-08-05",
+      "time": "19:10:29",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "141049668",
+      "date": "2026-08-05",
+      "time": "21:01:26",
+      "bowl": "Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    },
@@ -3098,11 +3736,11 @@
     ]
    },
    "Green Hills": {
-    "reusable": 11,
-    "discounted": 6,
-    "otherDisc": 3,
+    "reusable": 17,
+    "discounted": 11,
+    "otherDisc": 4,
     "missed": 2,
-    "pct": 75.0,
+    "pct": 84.6,
     "missedList": [
      {
       "saleId": "105050561",
@@ -3138,6 +3776,13 @@
       "time": "14:35:32",
       "bowl": "Icy Go Bowl Tare",
       "discounts": "Team Free Yo-Chi"
+     },
+     {
+      "saleId": "106051526",
+      "date": "2026-08-05",
+      "time": "15:50:24",
+      "bowl": "Icy Go Bowl Tare",
+      "discounts": "Team Free Yo-Chi"
      }
     ]
    }
@@ -3154,7 +3799,7 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-07-13",
-  "windowEnd": "2026-08-04",
+  "windowEnd": "2026-08-05",
   "venues": {
    "George St": {
     "daily": {
@@ -3242,12 +3887,6 @@
       4,
       0
      ],
-     "2026-07-25": [
-      6,
-      3,
-      3,
-      0
-     ],
      "2026-07-28": [
       12,
       5,
@@ -3258,6 +3897,12 @@
       8,
       0,
       8,
+      0
+     ],
+     "2026-07-25": [
+      6,
+      3,
+      3,
       0
      ],
      "2026-07-30": [
@@ -3294,6 +3939,12 @@
       7,
       3,
       4,
+      0
+     ],
+     "2026-08-05": [
+      10,
+      3,
+      7,
       0
      ]
     },
@@ -3368,29 +4019,23 @@
       1,
       1
      ],
-     "2026-07-22": [
-      6,
-      3,
-      3,
-      0
-     ],
      "2026-07-23": [
       8,
       6,
       0,
       2
      ],
-     "2026-07-25": [
-      5,
-      3,
-      1,
-      1
-     ],
      "2026-07-26": [
       19,
       16,
       2,
       1
+     ],
+     "2026-07-22": [
+      6,
+      3,
+      3,
+      0
      ],
      "2026-07-28": [
       12,
@@ -3404,17 +4049,23 @@
       2,
       2
      ],
-     "2026-08-01": [
-      6,
-      3,
-      2,
-      1
-     ],
      "2026-07-31": [
       3,
       3,
       0,
       0
+     ],
+     "2026-07-25": [
+      5,
+      3,
+      1,
+      1
+     ],
+     "2026-08-01": [
+      6,
+      3,
+      2,
+      1
      ],
      "2026-08-02": [
       18,
@@ -3455,6 +4106,12 @@
      "2026-08-04": [
       5,
       5,
+      0,
+      0
+     ],
+     "2026-08-05": [
+      7,
+      7,
       0,
       0
      ]
@@ -3680,16 +4337,22 @@
       5,
       0
      ],
+     "2026-08-04": [
+      9,
+      4,
+      5,
+      0
+     ],
      "2026-08-03": [
       3,
       1,
       2,
       0
      ],
-     "2026-08-04": [
-      9,
+     "2026-08-05": [
       4,
-      5,
+      1,
+      3,
       0
      ],
      "2026-07-19": [
@@ -3847,6 +4510,12 @@
       2,
       5,
       0
+     ],
+     "2026-08-05": [
+      22,
+      12,
+      10,
+      0
      ]
     },
     "missedList": [
@@ -3986,16 +4655,22 @@
       11,
       2
      ],
-     "2026-07-27": [
-      8,
-      4,
-      4,
-      0
-     ],
      "2026-08-03": [
       10,
       1,
       9,
+      0
+     ],
+     "2026-08-05": [
+      5,
+      1,
+      4,
+      0
+     ],
+     "2026-07-27": [
+      8,
+      4,
+      4,
       0
      ],
      "2026-08-04": [
@@ -4142,12 +4817,6 @@
       5,
       0
      ],
-     "2026-07-25": [
-      11,
-      3,
-      8,
-      0
-     ],
      "2026-07-26": [
       19,
       10,
@@ -4158,6 +4827,12 @@
       8,
       2,
       6,
+      0
+     ],
+     "2026-07-25": [
+      11,
+      3,
+      8,
       0
      ],
      "2026-07-28": [
@@ -4206,6 +4881,12 @@
       6,
       2,
       4,
+      0
+     ],
+     "2026-08-05": [
+      5,
+      0,
+      5,
       0
      ]
     },
@@ -4393,6 +5074,12 @@
       1,
       3,
       0
+     ],
+     "2026-08-05": [
+      8,
+      3,
+      5,
+      0
      ]
     },
     "missedList": [
@@ -4490,16 +5177,16 @@
       8,
       0
      ],
-     "2026-07-27": [
-      12,
-      5,
-      7,
-      0
-     ],
      "2026-07-21": [
       8,
       4,
       4,
+      0
+     ],
+     "2026-07-27": [
+      12,
+      5,
+      7,
       0
      ],
      "2026-07-28": [
@@ -4532,6 +5219,12 @@
       10,
       0
      ],
+     "2026-07-31": [
+      7,
+      5,
+      2,
+      0
+     ],
      "2026-08-03": [
       8,
       5,
@@ -4544,10 +5237,10 @@
       2,
       0
      ],
-     "2026-07-31": [
+     "2026-08-05": [
       7,
-      5,
-      2,
+      3,
+      4,
       0
      ]
     },
@@ -4724,6 +5417,12 @@
       2,
       0
      ],
+     "2026-08-05": [
+      7,
+      4,
+      3,
+      0
+     ],
      "2026-07-15": [
       1,
       0,
@@ -4772,12 +5471,6 @@
       8,
       2
      ],
-     "2026-07-15": [
-      7,
-      3,
-      4,
-      0
-     ],
      "2026-07-16": [
       11,
       6,
@@ -4788,6 +5481,12 @@
       11,
       2,
       9,
+      0
+     ],
+     "2026-07-15": [
+      7,
+      3,
+      4,
       0
      ],
      "2026-07-18": [
@@ -4892,6 +5591,12 @@
       5,
       0
      ],
+     "2026-08-05": [
+      8,
+      3,
+      4,
+      1
+     ],
      "2026-08-04": [
       8,
       3,
@@ -4929,6 +5634,12 @@
       "date": "2026-07-28",
       "time": "21:23:11",
       "bowl": "Icy Go Bowl Tare"
+     },
+     {
+      "saleId": "114238239",
+      "date": "2026-08-05",
+      "time": "20:28:29",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
@@ -4944,6 +5655,12 @@
       5,
       1,
       4,
+      0
+     ],
+     "2026-07-15": [
+      6,
+      5,
+      1,
       0
      ],
      "2026-07-17": [
@@ -4964,22 +5681,16 @@
       2,
       1
      ],
-     "2026-07-20": [
-      4,
-      1,
-      3,
-      0
-     ],
-     "2026-07-15": [
-      6,
-      5,
-      1,
-      0
-     ],
      "2026-07-16": [
       8,
       6,
       2,
+      0
+     ],
+     "2026-07-20": [
+      4,
+      1,
+      3,
       0
      ],
      "2026-07-21": [
@@ -5036,6 +5747,12 @@
       4,
       3
      ],
+     "2026-07-27": [
+      4,
+      1,
+      3,
+      0
+     ],
      "2026-08-01": [
       10,
       2,
@@ -5048,12 +5765,6 @@
       6,
       0
      ],
-     "2026-07-27": [
-      4,
-      1,
-      3,
-      0
-     ],
      "2026-08-03": [
       8,
       5,
@@ -5064,6 +5775,12 @@
       3,
       0,
       3,
+      0
+     ],
+     "2026-08-05": [
+      5,
+      3,
+      2,
       0
      ],
      "2026-07-28": [
@@ -5180,16 +5897,16 @@
       3,
       0
      ],
-     "2026-07-23": [
-      4,
-      1,
-      3,
-      0
-     ],
      "2026-07-22": [
       3,
       3,
       0,
+      0
+     ],
+     "2026-07-23": [
+      4,
+      1,
+      3,
       0
      ],
      "2026-07-24": [
@@ -5222,16 +5939,16 @@
       6,
       0
      ],
-     "2026-07-30": [
-      3,
-      1,
-      2,
-      0
-     ],
      "2026-07-29": [
       5,
       1,
       4,
+      0
+     ],
+     "2026-07-30": [
+      3,
+      1,
+      2,
       0
      ],
      "2026-07-31": [
@@ -5268,6 +5985,12 @@
       3,
       2,
       1,
+      0
+     ],
+     "2026-08-05": [
+      3,
+      0,
+      3,
       0
      ]
     },
@@ -5425,6 +6148,12 @@
       1,
       6,
       0
+     ],
+     "2026-08-05": [
+      4,
+      1,
+      3,
+      0
      ]
     },
     "missedList": [
@@ -5498,16 +6227,16 @@
       4,
       0
      ],
-     "2026-07-24": [
-      6,
-      1,
-      5,
-      0
-     ],
      "2026-07-23": [
       1,
       0,
       1,
+      0
+     ],
+     "2026-07-24": [
+      6,
+      1,
+      5,
       0
      ],
      "2026-07-25": [
@@ -5516,9 +6245,15 @@
       6,
       0
      ],
-     "2026-07-28": [
+     "2026-07-26": [
+      5,
       2,
-      0,
+      2,
+      1
+     ],
+     "2026-07-27": [
+      6,
+      4,
       2,
       0
      ],
@@ -5540,15 +6275,9 @@
       2,
       0
      ],
-     "2026-07-26": [
-      5,
+     "2026-07-28": [
       2,
-      2,
-      1
-     ],
-     "2026-07-27": [
-      6,
-      4,
+      0,
       2,
       0
      ],
@@ -5558,16 +6287,22 @@
       4,
       1
      ],
-     "2026-08-03": [
-      2,
-      1,
-      1,
-      0
-     ],
      "2026-08-04": [
       7,
       4,
       3,
+      0
+     ],
+     "2026-08-05": [
+      1,
+      0,
+      1,
+      0
+     ],
+     "2026-08-03": [
+      2,
+      1,
+      1,
       0
      ],
      "2026-07-21": [
@@ -5738,12 +6473,6 @@
       8,
       0
      ],
-     "2026-07-31": [
-      7,
-      2,
-      5,
-      0
-     ],
      "2026-08-01": [
       12,
       8,
@@ -5767,6 +6496,18 @@
       4,
       1,
       0
+     ],
+     "2026-08-05": [
+      13,
+      6,
+      7,
+      0
+     ],
+     "2026-07-31": [
+      7,
+      2,
+      5,
+      0
      ]
     },
     "missedList": []
@@ -5782,12 +6523,6 @@
      "2026-07-14": [
       7,
       0,
-      7,
-      0
-     ],
-     "2026-07-15": [
-      8,
-      1,
       7,
       0
      ],
@@ -5809,13 +6544,13 @@
       5,
       0
      ],
-     "2026-07-21": [
-      5,
+     "2026-07-15": [
+      8,
       1,
-      4,
+      7,
       0
      ],
-     "2026-07-24": [
+     "2026-07-21": [
       5,
       1,
       4,
@@ -5827,9 +6562,9 @@
       5,
       0
      ],
-     "2026-07-25": [
-      7,
-      3,
+     "2026-07-24": [
+      5,
+      1,
       4,
       0
      ],
@@ -5839,22 +6574,28 @@
       4,
       0
      ],
+     "2026-07-25": [
+      7,
+      3,
+      4,
+      0
+     ],
      "2026-07-22": [
       4,
       2,
       2,
       0
      ],
-     "2026-07-23": [
-      5,
-      1,
-      4,
-      0
-     ],
      "2026-07-26": [
       6,
       1,
       5,
+      0
+     ],
+     "2026-07-23": [
+      5,
+      1,
+      4,
       0
      ],
      "2026-07-27": [
@@ -5899,16 +6640,22 @@
       3,
       0
      ],
-     "2026-07-28": [
+     "2026-08-05": [
       3,
-      0,
-      3,
+      1,
+      2,
       0
      ],
      "2026-08-04": [
       7,
       1,
       6,
+      0
+     ],
+     "2026-07-28": [
+      3,
+      0,
+      3,
       0
      ]
     },
@@ -5923,23 +6670,17 @@
    },
    "Coogee": {
     "daily": {
-     "2026-07-15": [
-      6,
-      1,
-      5,
-      0
-     ],
      "2026-07-13": [
       4,
       1,
       3,
       0
      ],
-     "2026-07-14": [
+     "2026-07-15": [
+      6,
+      1,
       5,
-      2,
-      2,
-      1
+      0
      ],
      "2026-07-18": [
       10,
@@ -5947,17 +6688,11 @@
       8,
       1
      ],
-     "2026-07-16": [
-      3,
-      0,
-      3,
-      0
-     ],
-     "2026-07-17": [
-      4,
-      0,
-      4,
-      0
+     "2026-07-14": [
+      5,
+      2,
+      2,
+      1
      ],
      "2026-07-19": [
       17,
@@ -5965,16 +6700,22 @@
       11,
       0
      ],
-     "2026-07-21": [
-      7,
-      2,
-      5,
+     "2026-07-20": [
+      4,
+      4,
+      0,
       0
      ],
      "2026-07-22": [
       4,
       0,
       4,
+      0
+     ],
+     "2026-07-16": [
+      3,
+      0,
+      3,
       0
      ],
      "2026-07-23": [
@@ -5989,10 +6730,10 @@
       4,
       0
      ],
-     "2026-07-20": [
-      4,
+     "2026-07-17": [
       4,
       0,
+      4,
       0
      ],
      "2026-07-25": [
@@ -6023,6 +6764,18 @@
       8,
       1,
       7,
+      0
+     ],
+     "2026-07-21": [
+      7,
+      2,
+      5,
+      0
+     ],
+     "2026-07-30": [
+      5,
+      4,
+      1,
       0
      ],
      "2026-07-31": [
@@ -6043,16 +6796,16 @@
       8,
       0
      ],
-     "2026-07-30": [
-      5,
-      4,
-      1,
-      0
-     ],
      "2026-08-03": [
       8,
       2,
       6,
+      0
+     ],
+     "2026-08-05": [
+      4,
+      1,
+      3,
       0
      ],
      "2026-08-04": [
@@ -6103,12 +6856,6 @@
       5,
       0
      ],
-     "2026-07-17": [
-      6,
-      0,
-      6,
-      0
-     ],
      "2026-07-18": [
       13,
       5,
@@ -6121,10 +6868,10 @@
       6,
       0
      ],
-     "2026-07-20": [
-      5,
-      1,
-      4,
+     "2026-07-17": [
+      6,
+      0,
+      6,
       0
      ],
      "2026-07-21": [
@@ -6136,6 +6883,12 @@
      "2026-07-22": [
       8,
       4,
+      4,
+      0
+     ],
+     "2026-07-20": [
+      5,
+      1,
       4,
       0
      ],
@@ -6187,16 +6940,22 @@
       5,
       1
      ],
+     "2026-08-03": [
+      7,
+      3,
+      4,
+      0
+     ],
      "2026-08-02": [
       10,
       4,
       6,
       0
      ],
-     "2026-08-03": [
-      7,
+     "2026-08-05": [
+      6,
       3,
-      4,
+      3,
       0
      ],
      "2026-08-04": [
@@ -6301,6 +7060,12 @@
       1,
       0
      ],
+     "2026-07-14": [
+      6,
+      2,
+      4,
+      0
+     ],
      "2026-07-22": [
       4,
       1,
@@ -6310,12 +7075,6 @@
      "2026-07-24": [
       10,
       6,
-      4,
-      0
-     ],
-     "2026-07-14": [
-      6,
-      2,
       4,
       0
      ],
@@ -6378,6 +7137,12 @@
       0,
       1,
       0
+     ],
+     "2026-08-05": [
+      6,
+      2,
+      3,
+      1
      ]
     },
     "missedList": [
@@ -6398,6 +7163,12 @@
       "date": "2026-07-31",
       "time": "19:35:37",
       "bowl": "Go Bowl Tare"
+     },
+     {
+      "saleId": "84180465",
+      "date": "2026-08-05",
+      "time": "17:48:35",
+      "bowl": "Go Bowl Tare"
      }
     ]
    },
@@ -6415,6 +7186,12 @@
       3,
       0
      ],
+     "2026-07-17": [
+      7,
+      3,
+      4,
+      0
+     ],
      "2026-07-15": [
       2,
       0,
@@ -6425,12 +7202,6 @@
       5,
       0,
       5,
-      0
-     ],
-     "2026-07-17": [
-      7,
-      3,
-      4,
       0
      ],
      "2026-07-18": [
@@ -6521,6 +7292,12 @@
       9,
       7,
       2,
+      0
+     ],
+     "2026-08-05": [
+      5,
+      2,
+      3,
       0
      ],
      "2026-08-04": [
@@ -6672,6 +7449,12 @@
       0,
       0
      ],
+     "2026-08-05": [
+      2,
+      1,
+      1,
+      0
+     ],
      "2026-07-22": [
       1,
       0,
@@ -6708,12 +7491,6 @@
       0,
       0
      ],
-     "2026-07-22": [
-      4,
-      2,
-      1,
-      1
-     ],
      "2026-07-15": [
       3,
       1,
@@ -6725,6 +7502,12 @@
       0,
       1,
       0
+     ],
+     "2026-07-22": [
+      4,
+      2,
+      1,
+      1
      ],
      "2026-07-21": [
       3,
@@ -6774,6 +7557,12 @@
       1,
       0
      ],
+     "2026-07-30": [
+      8,
+      6,
+      2,
+      0
+     ],
      "2026-08-02": [
       4,
       3,
@@ -6786,9 +7575,15 @@
       0,
       0
      ],
-     "2026-07-30": [
-      8,
-      6,
+     "2026-08-05": [
+      1,
+      0,
+      1,
+      0
+     ],
+     "2026-07-19": [
+      7,
+      5,
       2,
       0
      ],
@@ -6802,12 +7597,6 @@
       2,
       2,
       0,
-      0
-     ],
-     "2026-07-19": [
-      7,
-      5,
-      2,
       0
      ],
      "2026-07-18": [
@@ -6870,16 +7659,16 @@
       3,
       0
      ],
-     "2026-07-14": [
-      2,
-      0,
-      2,
-      0
-     ],
      "2026-07-22": [
       4,
       1,
       3,
+      0
+     ],
+     "2026-07-14": [
+      2,
+      0,
+      2,
       0
      ],
      "2026-07-23": [
@@ -6900,12 +7689,6 @@
       1,
       0
      ],
-     "2026-08-01": [
-      4,
-      2,
-      2,
-      0
-     ],
      "2026-07-25": [
       6,
       1,
@@ -6918,28 +7701,10 @@
       4,
       0
      ],
-     "2026-08-02": [
-      7,
-      4,
-      3,
-      0
-     ],
      "2026-07-29": [
       6,
       5,
       1,
-      0
-     ],
-     "2026-08-04": [
-      4,
-      2,
-      2,
-      0
-     ],
-     "2026-07-15": [
-      1,
-      1,
-      0,
       0
      ],
      "2026-08-03": [
@@ -6948,16 +7713,34 @@
       5,
       0
      ],
+     "2026-08-04": [
+      4,
+      2,
+      2,
+      0
+     ],
+     "2026-08-01": [
+      4,
+      2,
+      2,
+      0
+     ],
+     "2026-08-02": [
+      7,
+      4,
+      3,
+      0
+     ],
+     "2026-07-15": [
+      1,
+      1,
+      0,
+      0
+     ],
      "2026-07-19": [
       7,
       5,
       2,
-      0
-     ],
-     "2026-07-18": [
-      1,
-      1,
-      0,
       0
      ],
      "2026-07-20": [
@@ -6966,13 +7749,13 @@
       1,
       0
      ],
-     "2026-07-26": [
-      2,
+     "2026-07-18": [
       1,
       1,
+      0,
       0
      ],
-     "2026-07-28": [
+     "2026-07-26": [
       2,
       1,
       1,
@@ -6982,6 +7765,18 @@
       2,
       2,
       0,
+      0
+     ],
+     "2026-07-28": [
+      2,
+      1,
+      1,
+      0
+     ],
+     "2026-08-05": [
+      4,
+      2,
+      2,
       0
      ]
     },
@@ -7056,16 +7851,16 @@
       4,
       0
      ],
-     "2026-07-22": [
-      2,
-      1,
-      1,
-      0
-     ],
      "2026-07-26": [
       5,
       2,
       3,
+      0
+     ],
+     "2026-07-22": [
+      2,
+      1,
+      1,
       0
      ],
      "2026-07-23": [
@@ -7126,6 +7921,12 @@
       3,
       1,
       2,
+      0
+     ],
+     "2026-08-05": [
+      8,
+      2,
+      6,
       0
      ],
      "2026-07-24": [
@@ -7188,12 +7989,6 @@
       4,
       0
      ],
-     "2026-07-20": [
-      11,
-      8,
-      3,
-      0
-     ],
      "2026-07-22": [
       5,
       3,
@@ -7218,10 +8013,10 @@
       3,
       0
      ],
-     "2026-07-21": [
-      9,
-      5,
-      4,
+     "2026-07-20": [
+      11,
+      8,
+      3,
       0
      ],
      "2026-07-26": [
@@ -7248,6 +8043,12 @@
       1,
       0
      ],
+     "2026-07-21": [
+      9,
+      5,
+      4,
+      0
+     ],
      "2026-07-31": [
       8,
       4,
@@ -7266,12 +8067,6 @@
       3,
       0
      ],
-     "2026-07-28": [
-      7,
-      4,
-      3,
-      0
-     ],
      "2026-08-03": [
       10,
       6,
@@ -7284,11 +8079,23 @@
       4,
       0
      ],
+     "2026-07-28": [
+      7,
+      4,
+      3,
+      0
+     ],
      "2026-07-14": [
       7,
       1,
       4,
       2
+     ],
+     "2026-08-05": [
+      5,
+      1,
+      4,
+      0
      ]
     },
     "missedList": [
@@ -7350,12 +8157,6 @@
       1,
       0
      ],
-     "2026-07-21": [
-      1,
-      0,
-      1,
-      0
-     ],
      "2026-07-22": [
       2,
       0,
@@ -7368,10 +8169,10 @@
       1,
       0
      ],
-     "2026-07-25": [
-      2,
+     "2026-07-21": [
+      1,
       0,
-      2,
+      1,
       0
      ],
      "2026-07-24": [
@@ -7380,16 +8181,10 @@
       1,
       0
      ],
-     "2026-07-27": [
-      3,
-      0,
-      3,
-      0
-     ],
-     "2026-07-31": [
-      3,
+     "2026-07-25": [
       2,
-      1,
+      0,
+      2,
       0
      ],
      "2026-07-26": [
@@ -7402,6 +8197,18 @@
       3,
       0,
       3,
+      0
+     ],
+     "2026-07-27": [
+      3,
+      0,
+      3,
+      0
+     ],
+     "2026-07-31": [
+      3,
+      2,
+      1,
       0
      ],
      "2026-08-01": [
@@ -7464,6 +8271,12 @@
       3,
       1
      ],
+     "2026-07-16": [
+      10,
+      5,
+      4,
+      1
+     ],
      "2026-07-17": [
       12,
       5,
@@ -7475,12 +8288,6 @@
       2,
       2,
       2
-     ],
-     "2026-07-16": [
-      10,
-      5,
-      4,
-      1
      ],
      "2026-07-19": [
       11,
@@ -7581,6 +8388,12 @@
      "2026-08-04": [
       3,
       2,
+      1,
+      0
+     ],
+     "2026-08-05": [
+      6,
+      5,
       1,
       0
      ]
