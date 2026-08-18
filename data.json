@@ -1,8 +1,8 @@
 {
  "meta": {
-  "reportDate": "2026-08-16",
-  "generatedAt": "2026-08-17T22:28:19+00:00",
-  "windows": "daily = 16 Aug · WTD = 10–16 Aug · MTD = 1–16 Aug",
+  "reportDate": "2026-08-17",
+  "generatedAt": "2026-08-18T14:34:19+00:00",
+  "windows": "daily = 17 Aug · WTD = 17–17 Aug · MTD = 1–17 Aug",
   "venues": 27,
   "sources": {
    "Sales": "snapshot",
@@ -25,13 +25,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 0,
     "sales": {
-     "actual": 17561,
+     "actual": 14990,
      "budget": null
     },
     "labour": {
-     "pct": 17.1,
+     "pct": 17.3,
      "budgetPct": null
     },
     "policies": 91.4,
@@ -42,9 +42,9 @@
     "hopperTemps": 2,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 1,
     "sales": {
-     "actual": 17605,
+     "actual": 8508,
      "budget": null
     },
     "policies": 92.6,
@@ -55,13 +55,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 2,
     "sales": {
-     "actual": 15597,
+     "actual": 7336,
      "budget": null
     },
     "labour": {
-     "pct": 18.5,
+     "pct": 18.7,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -72,9 +72,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 0,
     "sales": {
-     "actual": 16192,
+     "actual": 7476,
      "budget": null
     },
     "policies": 96.8,
@@ -85,9 +85,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 15261,
+     "actual": 6547,
      "budget": null
     },
     "policies": 91.0,
@@ -98,13 +98,13 @@
     "hopperTemps": 3,
     "calibrations": "missed",
     "correctiveA": "ok",
-    "reviews": 6,
+    "reviews": 0,
     "sales": {
-     "actual": 15856,
+     "actual": 6382,
      "budget": null
     },
     "labour": {
-     "pct": 15.1,
+     "pct": 15.5,
      "budgetPct": null
     },
     "policies": 96.1,
@@ -115,9 +115,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 1,
     "sales": {
-     "actual": 13230,
+     "actual": 8616,
      "budget": null
     },
     "labour": {
@@ -132,13 +132,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 13,
+    "reviews": 2,
     "sales": {
-     "actual": 13061,
+     "actual": 7225,
      "budget": null
     },
     "labour": {
-     "pct": 13.5,
+     "pct": 13.7,
      "budgetPct": null
     },
     "policies": 97.9,
@@ -149,13 +149,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 0,
     "sales": {
-     "actual": 14574,
+     "actual": 6049,
      "budget": null
     },
     "labour": {
-     "pct": 14.8,
+     "pct": 14.9,
      "budgetPct": null
     },
     "policies": 94.7,
@@ -166,13 +166,13 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 0,
     "sales": {
-     "actual": 13158,
+     "actual": 6501,
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 16.8,
      "budgetPct": null
     },
     "policies": 98.1,
@@ -183,13 +183,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 13225,
+     "actual": 5792,
      "budget": null
     },
     "labour": {
-     "pct": 17.2,
+     "pct": 17.5,
      "budgetPct": null
     },
     "policies": 97.7,
@@ -200,13 +200,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 0,
     "sales": {
-     "actual": 13598,
+     "actual": 4911,
      "budget": null
     },
     "labour": {
-     "pct": 17.4,
+     "pct": 17.5,
      "budgetPct": null
     },
     "policies": 94.6,
@@ -217,13 +217,13 @@
     "hopperTemps": 3,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 15,
+    "reviews": 0,
     "sales": {
-     "actual": 11608,
+     "actual": 5190,
      "budget": null
     },
     "labour": {
-     "pct": 17.3,
+     "pct": 17.2,
      "budgetPct": null
     },
     "policies": 95.0,
@@ -234,13 +234,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 3,
     "sales": {
-     "actual": 12431,
+     "actual": 4426,
      "budget": null
     },
     "labour": {
-     "pct": 16.4,
+     "pct": 16.9,
      "budgetPct": null
     },
     "policies": 86.2,
@@ -251,13 +251,13 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 0,
     "sales": {
-     "actual": 10317,
+     "actual": 5945,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 15.9,
      "budgetPct": null
     },
     "policies": 96.4,
@@ -268,13 +268,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 1,
     "sales": {
-     "actual": 11417,
+     "actual": 4321,
      "budget": null
     },
     "labour": {
-     "pct": 19.7,
+     "pct": 20.0,
      "budgetPct": null
     },
     "policies": 79.0,
@@ -285,13 +285,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 11624,
+     "actual": 4823,
      "budget": null
     },
     "labour": {
-     "pct": 18.9,
+     "pct": 19.4,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -302,13 +302,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 1,
     "sales": {
-     "actual": 8650,
+     "actual": 4526,
      "budget": null
     },
     "labour": {
-     "pct": 19.4,
+     "pct": 19.3,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -319,13 +319,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 15,
+    "reviews": 1,
     "sales": {
-     "actual": 6691,
+     "actual": 2912,
      "budget": null
     },
     "labour": {
-     "pct": 20.0,
+     "pct": 20.3,
      "budgetPct": null
     },
     "policies": 97.1,
@@ -336,13 +336,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 2,
     "sales": {
-     "actual": 6529,
+     "actual": 3960,
      "budget": null
     },
     "labour": {
-     "pct": 18.7,
+     "pct": 18.6,
      "budgetPct": null
     },
     "policies": 80.2,
@@ -353,13 +353,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 16,
+    "reviews": 7,
     "sales": {
-     "actual": 6390,
+     "actual": 4093,
      "budget": null
     },
     "labour": {
-     "pct": 18.5,
+     "pct": 18.8,
      "budgetPct": null
     },
     "policies": 88.3,
@@ -370,13 +370,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 5781,
+     "actual": 2244,
      "budget": null
     },
     "labour": {
-     "pct": 20.6,
+     "pct": 21.1,
      "budgetPct": null
     },
     "policies": 89.9,
@@ -387,13 +387,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 3,
     "sales": {
-     "actual": 5897,
+     "actual": 3722,
      "budget": null
     },
     "labour": {
-     "pct": 20.4,
+     "pct": 20.5,
      "budgetPct": null
     },
     "policies": 79.6,
@@ -404,9 +404,9 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 3,
     "sales": {
-     "actual": 5831,
+     "actual": 8720,
      "budget": null
     },
     "labour": {
@@ -421,13 +421,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 15,
+    "reviews": 0,
     "sales": {
-     "actual": 6850,
+     "actual": 3653,
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 19.2,
      "budgetPct": null
     },
     "policies": 92.9,
@@ -438,13 +438,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 5,
+    "reviews": 0,
     "sales": {
-     "actual": 6374,
+     "actual": 2135,
      "budget": null
     },
     "labour": {
-     "pct": 23.2,
+     "pct": 23.9,
      "budgetPct": null
     },
     "policies": 88.4,
@@ -455,9 +455,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 19,
+    "reviews": 0,
     "sales": {
-     "actual": 13778,
+     "actual": 6385,
      "budget": null
     },
     "policies": 89.9,
@@ -470,13 +470,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 0,
     "sales": {
-     "actual": 118712,
+     "actual": 14990,
      "budget": null
     },
     "labour": {
-     "pct": 17.1,
+     "pct": 17.3,
      "budgetPct": null
     },
     "policies": 91.4,
@@ -487,9 +487,9 @@
     "hopperTemps": 17,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 1,
     "sales": {
-     "actual": 82939,
+     "actual": 8508,
      "budget": null
     },
     "policies": 92.6,
@@ -500,13 +500,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 2,
     "sales": {
-     "actual": 84528,
+     "actual": 7336,
      "budget": null
     },
     "labour": {
-     "pct": 18.5,
+     "pct": 18.7,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -517,9 +517,9 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 0,
     "sales": {
-     "actual": 87216,
+     "actual": 7476,
      "budget": null
     },
     "policies": 96.8,
@@ -530,9 +530,9 @@
     "hopperTemps": 18,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 77897,
+     "actual": 6547,
      "budget": null
     },
     "policies": 91.0,
@@ -543,13 +543,13 @@
     "hopperTemps": 20,
     "calibrations": "missed",
     "correctiveA": "ok",
-    "reviews": 6,
+    "reviews": 0,
     "sales": {
-     "actual": 79639,
+     "actual": 6382,
      "budget": null
     },
     "labour": {
-     "pct": 15.1,
+     "pct": 15.5,
      "budgetPct": null
     },
     "policies": 96.1,
@@ -560,9 +560,9 @@
     "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 1,
     "sales": {
-     "actual": 79819,
+     "actual": 8616,
      "budget": null
     },
     "labour": {
@@ -577,13 +577,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 13,
+    "reviews": 2,
     "sales": {
-     "actual": 75142,
+     "actual": 7225,
      "budget": null
     },
     "labour": {
-     "pct": 13.5,
+     "pct": 13.7,
      "budgetPct": null
     },
     "policies": 97.9,
@@ -594,13 +594,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 0,
     "sales": {
-     "actual": 70563,
+     "actual": 6049,
      "budget": null
     },
     "labour": {
-     "pct": 14.8,
+     "pct": 14.9,
      "budgetPct": null
     },
     "policies": 94.7,
@@ -611,13 +611,13 @@
     "hopperTemps": 26,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 0,
     "sales": {
-     "actual": 69195,
+     "actual": 6501,
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 16.8,
      "budgetPct": null
     },
     "policies": 98.1,
@@ -628,13 +628,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 68640,
+     "actual": 5792,
      "budget": null
     },
     "labour": {
-     "pct": 17.2,
+     "pct": 17.5,
      "budgetPct": null
     },
     "policies": 97.7,
@@ -645,13 +645,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 0,
     "sales": {
-     "actual": 63092,
+     "actual": 4911,
      "budget": null
     },
     "labour": {
-     "pct": 17.4,
+     "pct": 17.5,
      "budgetPct": null
     },
     "policies": 94.6,
@@ -662,13 +662,13 @@
     "hopperTemps": 20,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 15,
+    "reviews": 0,
     "sales": {
-     "actual": 64518,
+     "actual": 5190,
      "budget": null
     },
     "labour": {
-     "pct": 17.3,
+     "pct": 17.2,
      "budgetPct": null
     },
     "policies": 95.0,
@@ -679,13 +679,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 3,
     "sales": {
-     "actual": 60084,
+     "actual": 4426,
      "budget": null
     },
     "labour": {
-     "pct": 16.4,
+     "pct": 16.9,
      "budgetPct": null
     },
     "policies": 86.2,
@@ -696,13 +696,13 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 0,
     "sales": {
-     "actual": 63366,
+     "actual": 5945,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 15.9,
      "budgetPct": null
     },
     "policies": 96.4,
@@ -713,13 +713,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 1,
     "sales": {
-     "actual": 49262,
+     "actual": 4321,
      "budget": null
     },
     "labour": {
-     "pct": 19.7,
+     "pct": 20.0,
      "budgetPct": null
     },
     "policies": 79.0,
@@ -730,13 +730,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 51818,
+     "actual": 4823,
      "budget": null
     },
     "labour": {
-     "pct": 18.9,
+     "pct": 19.4,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -747,13 +747,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 1,
     "sales": {
-     "actual": 48279,
+     "actual": 4526,
      "budget": null
     },
     "labour": {
-     "pct": 19.4,
+     "pct": 19.3,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -764,13 +764,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 15,
+    "reviews": 1,
     "sales": {
-     "actual": 33208,
+     "actual": 2912,
      "budget": null
     },
     "labour": {
-     "pct": 20.0,
+     "pct": 20.3,
      "budgetPct": null
     },
     "policies": 97.1,
@@ -781,13 +781,13 @@
     "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 2,
     "sales": {
-     "actual": 36648,
+     "actual": 3960,
      "budget": null
     },
     "labour": {
-     "pct": 18.7,
+     "pct": 18.6,
      "budgetPct": null
     },
     "policies": 80.2,
@@ -798,13 +798,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 16,
+    "reviews": 7,
     "sales": {
-     "actual": 35324,
+     "actual": 4093,
      "budget": null
     },
     "labour": {
-     "pct": 18.5,
+     "pct": 18.8,
      "budgetPct": null
     },
     "policies": 88.3,
@@ -815,13 +815,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 28219,
+     "actual": 2244,
      "budget": null
     },
     "labour": {
-     "pct": 20.6,
+     "pct": 21.1,
      "budgetPct": null
     },
     "policies": 89.9,
@@ -832,13 +832,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 3,
     "sales": {
-     "actual": 33547,
+     "actual": 3722,
      "budget": null
     },
     "labour": {
-     "pct": 20.4,
+     "pct": 20.5,
      "budgetPct": null
     },
     "policies": 79.6,
@@ -849,9 +849,9 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 3,
     "sales": {
-     "actual": 62567,
+     "actual": 8720,
      "budget": null
     },
     "labour": {
@@ -866,13 +866,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 15,
+    "reviews": 0,
     "sales": {
-     "actual": 40227,
+     "actual": 3653,
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 19.2,
      "budgetPct": null
     },
     "policies": 92.9,
@@ -883,13 +883,13 @@
     "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 5,
+    "reviews": 0,
     "sales": {
-     "actual": 25212,
+     "actual": 2135,
      "budget": null
     },
     "labour": {
-     "pct": 23.2,
+     "pct": 23.9,
      "budgetPct": null
     },
     "policies": 88.4,
@@ -900,9 +900,9 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 19,
+    "reviews": 0,
     "sales": {
-     "actual": 70661,
+     "actual": 6385,
      "budget": null
     },
     "policies": 89.9,
@@ -915,13 +915,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 0,
     "sales": {
-     "actual": 284580,
+     "actual": 299570,
      "budget": null
     },
     "labour": {
-     "pct": 17.1,
+     "pct": 17.3,
      "budgetPct": null
     },
     "policies": 91.4,
@@ -932,9 +932,9 @@
     "hopperTemps": 17,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 1,
     "sales": {
-     "actual": 203949,
+     "actual": 212457,
      "budget": null
     },
     "policies": 92.6,
@@ -945,13 +945,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 2,
     "sales": {
-     "actual": 210789,
+     "actual": 218125,
      "budget": null
     },
     "labour": {
-     "pct": 18.5,
+     "pct": 18.7,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -962,9 +962,9 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 0,
     "sales": {
-     "actual": 207972,
+     "actual": 215448,
      "budget": null
     },
     "policies": 96.8,
@@ -975,9 +975,9 @@
     "hopperTemps": 18,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 184366,
+     "actual": 190913,
      "budget": null
     },
     "policies": 91.0,
@@ -988,13 +988,13 @@
     "hopperTemps": 20,
     "calibrations": "missed",
     "correctiveA": "ok",
-    "reviews": 6,
+    "reviews": 0,
     "sales": {
-     "actual": 195339,
+     "actual": 201722,
      "budget": null
     },
     "labour": {
-     "pct": 15.1,
+     "pct": 15.5,
      "budgetPct": null
     },
     "policies": 96.1,
@@ -1005,9 +1005,9 @@
     "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 1,
     "sales": {
-     "actual": 187178,
+     "actual": 195794,
      "budget": null
     },
     "labour": {
@@ -1022,13 +1022,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 13,
+    "reviews": 2,
     "sales": {
-     "actual": 172990,
+     "actual": 180216,
      "budget": null
     },
     "labour": {
-     "pct": 13.5,
+     "pct": 13.7,
      "budgetPct": null
     },
     "policies": 97.9,
@@ -1039,13 +1039,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 0,
     "sales": {
-     "actual": 171723,
+     "actual": 177772,
      "budget": null
     },
     "labour": {
-     "pct": 14.8,
+     "pct": 14.9,
      "budgetPct": null
     },
     "policies": 94.7,
@@ -1056,13 +1056,13 @@
     "hopperTemps": 26,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 0,
     "sales": {
-     "actual": 161850,
+     "actual": 168351,
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 16.8,
      "budgetPct": null
     },
     "policies": 98.1,
@@ -1073,13 +1073,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 163046,
+     "actual": 168837,
      "budget": null
     },
     "labour": {
-     "pct": 17.2,
+     "pct": 17.5,
      "budgetPct": null
     },
     "policies": 97.7,
@@ -1090,13 +1090,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 0,
     "sales": {
-     "actual": 144962,
+     "actual": 149873,
      "budget": null
     },
     "labour": {
-     "pct": 17.4,
+     "pct": 17.5,
      "budgetPct": null
     },
     "policies": 94.6,
@@ -1107,13 +1107,13 @@
     "hopperTemps": 20,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 15,
+    "reviews": 0,
     "sales": {
-     "actual": 155310,
+     "actual": 160500,
      "budget": null
     },
     "labour": {
-     "pct": 17.3,
+     "pct": 17.2,
      "budgetPct": null
     },
     "policies": 95.0,
@@ -1124,13 +1124,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 3,
     "sales": {
-     "actual": 143167,
+     "actual": 147593,
      "budget": null
     },
     "labour": {
-     "pct": 16.4,
+     "pct": 16.9,
      "budgetPct": null
     },
     "policies": 86.2,
@@ -1141,13 +1141,13 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 0,
     "sales": {
-     "actual": 145714,
+     "actual": 151660,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 15.9,
      "budgetPct": null
     },
     "policies": 96.4,
@@ -1158,13 +1158,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 1,
     "sales": {
-     "actual": 121270,
+     "actual": 125591,
      "budget": null
     },
     "labour": {
-     "pct": 19.7,
+     "pct": 20.0,
      "budgetPct": null
     },
     "policies": 79.0,
@@ -1175,13 +1175,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 0,
     "sales": {
-     "actual": 128119,
+     "actual": 132941,
      "budget": null
     },
     "labour": {
-     "pct": 18.9,
+     "pct": 19.4,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -1192,13 +1192,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 1,
     "sales": {
-     "actual": 118305,
+     "actual": 122831,
      "budget": null
     },
     "labour": {
-     "pct": 19.4,
+     "pct": 19.3,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -1209,13 +1209,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 15,
+    "reviews": 1,
     "sales": {
-     "actual": 83630,
+     "actual": 86542,
      "budget": null
     },
     "labour": {
-     "pct": 20.0,
+     "pct": 20.3,
      "budgetPct": null
     },
     "policies": 97.1,
@@ -1226,13 +1226,13 @@
     "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 2,
     "sales": {
-     "actual": 89652,
+     "actual": 93612,
      "budget": null
     },
     "labour": {
-     "pct": 18.7,
+     "pct": 18.6,
      "budgetPct": null
     },
     "policies": 80.2,
@@ -1243,13 +1243,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 16,
+    "reviews": 7,
     "sales": {
-     "actual": 85287,
+     "actual": 89380,
      "budget": null
     },
     "labour": {
-     "pct": 18.5,
+     "pct": 18.8,
      "budgetPct": null
     },
     "policies": 88.3,
@@ -1260,13 +1260,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 69659,
+     "actual": 71903,
      "budget": null
     },
     "labour": {
-     "pct": 20.6,
+     "pct": 21.1,
      "budgetPct": null
     },
     "policies": 89.9,
@@ -1277,13 +1277,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 3,
     "sales": {
-     "actual": 80724,
+     "actual": 84445,
      "budget": null
     },
     "labour": {
-     "pct": 20.4,
+     "pct": 20.5,
      "budgetPct": null
     },
     "policies": 79.6,
@@ -1294,9 +1294,9 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 3,
     "sales": {
-     "actual": 134627,
+     "actual": 143346,
      "budget": null
     },
     "labour": {
@@ -1311,13 +1311,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 15,
+    "reviews": 0,
     "sales": {
-     "actual": 98933,
+     "actual": 102586,
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 19.2,
      "budgetPct": null
     },
     "policies": 92.9,
@@ -1328,13 +1328,13 @@
     "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 5,
+    "reviews": 0,
     "sales": {
-     "actual": 63553,
+     "actual": 65688,
      "budget": null
     },
     "labour": {
-     "pct": 23.2,
+     "pct": 23.9,
      "budgetPct": null
     },
     "policies": 88.4,
@@ -1345,9 +1345,9 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 19,
+    "reviews": 0,
     "sales": {
-     "actual": 171518,
+     "actual": 177903,
      "budget": null
     },
     "policies": 89.9,
@@ -1365,347 +1365,256 @@
    "Co-Chi Bowl Tare"
   ],
   "discountName": "Reusable 10% Off",
-  "windowStart": "2026-08-10",
-  "windowEnd": "2026-08-16",
-  "window": "10 Aug – 16 Aug",
+  "windowStart": "2026-08-17",
+  "windowEnd": "2026-08-17",
+  "window": "17 Aug",
   "totals": {
-   "reusable": 1345,
-   "discounted": 535,
-   "otherDisc": 792,
-   "missed": 18,
-   "pct": 96.7
+   "reusable": 141,
+   "discounted": 48,
+   "otherDisc": 89,
+   "missed": 4,
+   "pct": 92.3
   },
   "venues": {
    "George St": {
-    "reusable": 59,
-    "discounted": 14,
-    "otherDisc": 45,
+    "reusable": 6,
+    "discounted": 2,
+    "otherDisc": 4,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Erina Fair": {
-    "reusable": 37,
-    "discounted": 27,
-    "otherDisc": 10,
+    "reusable": 8,
+    "discounted": 8,
+    "otherDisc": 0,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Barangaroo": {
-    "reusable": 45,
-    "discounted": 18,
-    "otherDisc": 27,
+    "reusable": 6,
+    "discounted": 0,
+    "otherDisc": 6,
     "missed": 0,
-    "pct": 100.0,
+    "pct": null,
     "missedList": []
    },
    "Wollongong": {
-    "reusable": 81,
-    "discounted": 23,
-    "otherDisc": 58,
+    "reusable": 9,
+    "discounted": 2,
+    "otherDisc": 7,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Charlestown": {
-    "reusable": 71,
-    "discounted": 22,
-    "otherDisc": 48,
+    "reusable": 4,
+    "discounted": 0,
+    "otherDisc": 4,
+    "missed": 0,
+    "pct": null,
+    "missedList": []
+   },
+   "Rouse Hill": {
+    "reusable": 9,
+    "discounted": 0,
+    "otherDisc": 8,
     "missed": 1,
-    "pct": 95.7,
+    "pct": 0.0,
     "missedList": [
      {
-      "saleId": "106269284",
-      "date": "2026-08-15",
-      "time": "19:42:23",
+      "saleId": "120241668",
+      "date": "2026-08-17",
+      "time": "14:25:32",
       "bowl": "Icy Go Bowl Tare"
      }
     ]
    },
-   "Rouse Hill": {
-    "reusable": 89,
-    "discounted": 35,
-    "otherDisc": 54,
-    "missed": 0,
-    "pct": 100.0,
-    "missedList": []
-   },
    "Circular Quay": {
-    "reusable": 54,
-    "discounted": 14,
-    "otherDisc": 40,
+    "reusable": 6,
+    "discounted": 1,
+    "otherDisc": 5,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Macquarie": {
-    "reusable": 72,
-    "discounted": 33,
-    "otherDisc": 39,
+    "reusable": 7,
+    "discounted": 2,
+    "otherDisc": 5,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Castle Towers": {
-    "reusable": 47,
-    "discounted": 18,
-    "otherDisc": 24,
-    "missed": 5,
-    "pct": 78.3,
+    "reusable": 2,
+    "discounted": 0,
+    "otherDisc": 0,
+    "missed": 2,
+    "pct": 0.0,
     "missedList": [
      {
-      "saleId": "116231888",
-      "date": "2026-08-11",
-      "time": "17:56:57",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "116234363",
-      "date": "2026-08-14",
-      "time": "21:38:44",
+      "saleId": "116237061",
+      "date": "2026-08-17",
+      "time": "20:09:51",
       "bowl": "Icy Go Bowl Tare"
      },
      {
-      "saleId": "116235648",
-      "date": "2026-08-16",
-      "time": "11:53:19",
+      "saleId": "116237062",
+      "date": "2026-08-17",
+      "time": "20:10:26",
       "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "116236211",
-      "date": "2026-08-16",
-      "time": "17:46:37",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "116236355",
-      "date": "2026-08-16",
-      "time": "19:14:37",
-      "bowl": "Go Bowl Tare"
      }
     ]
    },
    "Burwood": {
-    "reusable": 60,
-    "discounted": 21,
-    "otherDisc": 39,
+    "reusable": 5,
+    "discounted": 0,
+    "otherDisc": 5,
     "missed": 0,
-    "pct": 100.0,
+    "pct": null,
     "missedList": []
    },
    "Penrith": {
-    "reusable": 50,
-    "discounted": 19,
-    "otherDisc": 31,
-    "missed": 0,
-    "pct": 100.0,
-    "missedList": []
-   },
-   "Manly": {
-    "reusable": 40,
-    "discounted": 11,
-    "otherDisc": 28,
-    "missed": 1,
-    "pct": 91.7,
-    "missedList": [
-     {
-      "saleId": "43419361",
-      "date": "2026-08-11",
-      "time": "12:41:11",
-      "bowl": "Co-Chi Bowl Tare"
-     }
-    ]
-   },
-   "Chatswood": {
-    "reusable": 59,
-    "discounted": 18,
-    "otherDisc": 40,
-    "missed": 1,
-    "pct": 94.7,
-    "missedList": [
-     {
-      "saleId": "108082415",
-      "date": "2026-08-16",
-      "time": "17:06:33",
-      "bowl": "Icy Go Bowl Tare"
-     }
-    ]
-   },
-   "Cronulla": {
-    "reusable": 37,
-    "discounted": 15,
-    "otherDisc": 22,
-    "missed": 0,
-    "pct": 100.0,
-    "missedList": []
-   },
-   "Newtown": {
-    "reusable": 64,
-    "discounted": 23,
-    "otherDisc": 41,
-    "missed": 0,
-    "pct": 100.0,
-    "missedList": []
-   },
-   "Bondi": {
-    "reusable": 51,
-    "discounted": 12,
-    "otherDisc": 38,
-    "missed": 1,
-    "pct": 92.3,
-    "missedList": [
-     {
-      "saleId": "58382386",
-      "date": "2026-08-11",
-      "time": "21:16:00",
-      "bowl": "Go Bowl Tare"
-     }
-    ]
-   },
-   "Coogee": {
-    "reusable": 52,
-    "discounted": 21,
-    "otherDisc": 30,
-    "missed": 1,
-    "pct": 95.5,
-    "missedList": [
-     {
-      "saleId": "70368158",
-      "date": "2026-08-12",
-      "time": "14:34:38",
-      "bowl": "Go Bowl Tare"
-     }
-    ]
-   },
-   "Surry Hills": {
-    "reusable": 43,
-    "discounted": 11,
-    "otherDisc": 32,
-    "missed": 0,
-    "pct": 100.0,
-    "missedList": []
-   },
-   "Top Ryde": {
-    "reusable": 40,
-    "discounted": 23,
-    "otherDisc": 17,
-    "missed": 0,
-    "pct": 100.0,
-    "missedList": []
-   },
-   "Randwick": {
-    "reusable": 48,
-    "discounted": 25,
-    "otherDisc": 23,
-    "missed": 0,
-    "pct": 100.0,
-    "missedList": []
-   },
-   "Bondi Junction": {
-    "reusable": 36,
-    "discounted": 21,
-    "otherDisc": 14,
-    "missed": 1,
-    "pct": 95.5,
-    "missedList": [
-     {
-      "saleId": "85193524",
-      "date": "2026-08-11",
-      "time": "17:17:12",
-      "bowl": "Icy Go Bowl Tare"
-     }
-    ]
-   },
-   "Lane Cove": {
-    "reusable": 21,
-    "discounted": 18,
+    "reusable": 6,
+    "discounted": 3,
     "otherDisc": 3,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
+   "Manly": {
+    "reusable": 2,
+    "discounted": 0,
+    "otherDisc": 2,
+    "missed": 0,
+    "pct": null,
+    "missedList": []
+   },
+   "Chatswood": {
+    "reusable": 5,
+    "discounted": 1,
+    "otherDisc": 4,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Cronulla": {
+    "reusable": 2,
+    "discounted": 0,
+    "otherDisc": 2,
+    "missed": 0,
+    "pct": null,
+    "missedList": []
+   },
+   "Newtown": {
+    "reusable": 13,
+    "discounted": 7,
+    "otherDisc": 6,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Bondi": {
+    "reusable": 4,
+    "discounted": 0,
+    "otherDisc": 4,
+    "missed": 0,
+    "pct": null,
+    "missedList": []
+   },
+   "Coogee": {
+    "reusable": 5,
+    "discounted": 1,
+    "otherDisc": 4,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Surry Hills": {
+    "reusable": 5,
+    "discounted": 2,
+    "otherDisc": 3,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Top Ryde": {
+    "reusable": 2,
+    "discounted": 0,
+    "otherDisc": 2,
+    "missed": 0,
+    "pct": null,
+    "missedList": []
+   },
+   "Randwick": {
+    "reusable": 2,
+    "discounted": 0,
+    "otherDisc": 2,
+    "missed": 0,
+    "pct": null,
+    "missedList": []
+   },
+   "Bondi Junction": {
+    "reusable": 1,
+    "discounted": 1,
+    "otherDisc": 0,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
+   "Lane Cove": {
+    "reusable": 3,
+    "discounted": 2,
+    "otherDisc": 1,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
+   },
    "Double Bay": {
-    "reusable": 21,
-    "discounted": 13,
-    "otherDisc": 8,
+    "reusable": 1,
+    "discounted": 1,
+    "otherDisc": 0,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Chippendale": {
-    "reusable": 48,
-    "discounted": 22,
-    "otherDisc": 23,
-    "missed": 3,
-    "pct": 88.0,
-    "missedList": [
-     {
-      "saleId": "125161760",
-      "date": "2026-08-13",
-      "time": "16:28:55",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "125161776",
-      "date": "2026-08-13",
-      "time": "16:42:22",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "125164043",
-      "date": "2026-08-16",
-      "time": "16:42:49",
-      "bowl": "Go Bowl Tare"
-     }
-    ]
+    "reusable": 11,
+    "discounted": 7,
+    "otherDisc": 4,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
    },
    "Crows Nest": {
-    "reusable": 64,
-    "discounted": 36,
-    "otherDisc": 28,
+    "reusable": 10,
+    "discounted": 3,
+    "otherDisc": 7,
     "missed": 0,
     "pct": 100.0,
     "missedList": []
    },
    "Fish Market": {
-    "reusable": 11,
+    "reusable": 2,
     "discounted": 1,
-    "otherDisc": 7,
-    "missed": 3,
-    "pct": 25.0,
-    "missedList": [
-     {
-      "saleId": "143022064",
-      "date": "2026-08-16",
-      "time": "16:59:14",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "143022128",
-      "date": "2026-08-16",
-      "time": "18:50:41",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "143022187",
-      "date": "2026-08-16",
-      "time": "20:26:17",
-      "bowl": "Icy Go Bowl Tare"
-     }
-    ]
+    "otherDisc": 1,
+    "missed": 0,
+    "pct": 100.0,
+    "missedList": []
    },
    "Green Hills": {
-    "reusable": 45,
-    "discounted": 21,
-    "otherDisc": 23,
+    "reusable": 5,
+    "discounted": 4,
+    "otherDisc": 0,
     "missed": 1,
-    "pct": 95.5,
+    "pct": 80.0,
     "missedList": [
      {
-      "saleId": "105056660",
-      "date": "2026-08-13",
-      "time": "13:37:00",
+      "saleId": "105060098",
+      "date": "2026-08-17",
+      "time": "14:05:26",
       "bowl": "Icy Go Bowl Tare"
      }
     ]
@@ -2766,10 +2675,10 @@
       8,
       0
      ],
-     "2026-08-14": [
-      6,
+     "2026-08-13": [
+      7,
       1,
-      5,
+      6,
       0
      ],
      "2026-08-15": [
@@ -2784,10 +2693,10 @@
       7,
       0
      ],
-     "2026-08-13": [
-      7,
-      1,
+     "2026-08-14": [
       6,
+      1,
+      5,
       0
      ],
      "2026-08-17": [
@@ -2820,17 +2729,17 @@
       2,
       2
      ],
-     "2026-08-01": [
-      6,
-      3,
-      2,
-      1
-     ],
      "2026-07-31": [
       3,
       3,
       0,
       0
+     ],
+     "2026-08-01": [
+      6,
+      3,
+      2,
+      1
      ],
      "2026-08-02": [
       18,
@@ -2838,16 +2747,16 @@
       3,
       3
      ],
-     "2026-08-03": [
-      3,
-      0,
-      3,
-      0
-     ],
      "2026-08-07": [
       7,
       7,
       0,
+      0
+     ],
+     "2026-08-03": [
+      3,
+      0,
+      3,
       0
      ],
      "2026-08-08": [
@@ -2862,12 +2771,6 @@
       2,
       0
      ],
-     "2026-08-13": [
-      5,
-      4,
-      1,
-      0
-     ],
      "2026-08-10": [
       8,
       3,
@@ -2880,9 +2783,21 @@
       0,
       0
      ],
+     "2026-08-13": [
+      5,
+      4,
+      1,
+      0
+     ],
      "2026-08-15": [
       7,
       6,
+      1,
+      0
+     ],
+     "2026-07-27": [
+      4,
+      3,
       1,
       0
      ],
@@ -2890,12 +2805,6 @@
       4,
       4,
       0,
-      0
-     ],
-     "2026-07-27": [
-      4,
-      3,
-      1,
       0
      ],
      "2026-07-29": [
@@ -3096,16 +3005,16 @@
       3,
       0
      ],
-     "2026-08-16": [
-      5,
-      1,
-      4,
-      0
-     ],
      "2026-08-17": [
       6,
       0,
       6,
+      0
+     ],
+     "2026-08-16": [
+      5,
+      1,
+      4,
       0
      ],
      "2026-08-15": [
@@ -3227,16 +3136,16 @@
       9,
       0
      ],
-     "2026-08-15": [
-      11,
-      3,
-      8,
-      0
-     ],
      "2026-08-13": [
       14,
       4,
       10,
+      0
+     ],
+     "2026-08-15": [
+      11,
+      3,
+      8,
       0
      ],
      "2026-08-17": [
@@ -3329,12 +3238,6 @@
       7,
       1
      ],
-     "2026-08-06": [
-      9,
-      6,
-      3,
-      0
-     ],
      "2026-08-08": [
       16,
       4,
@@ -3347,9 +3250,9 @@
       6,
       0
      ],
-     "2026-08-12": [
-      4,
-      1,
+     "2026-08-06": [
+      9,
+      6,
       3,
       0
      ],
@@ -3357,6 +3260,12 @@
       3,
       0,
       3,
+      0
+     ],
+     "2026-08-11": [
+      7,
+      3,
+      4,
       0
      ],
      "2026-08-13": [
@@ -3371,17 +3280,17 @@
       11,
       0
      ],
-     "2026-08-11": [
-      7,
-      3,
-      4,
-      0
-     ],
      "2026-08-15": [
       12,
       3,
       8,
       1
+     ],
+     "2026-08-12": [
+      4,
+      1,
+      3,
+      0
      ],
      "2026-08-16": [
       16,
@@ -3533,6 +3442,12 @@
       9,
       0
      ],
+     "2026-08-11": [
+      10,
+      5,
+      5,
+      0
+     ],
      "2026-08-12": [
       14,
       6,
@@ -3543,12 +3458,6 @@
       12,
       6,
       6,
-      0
-     ],
-     "2026-08-11": [
-      10,
-      5,
-      5,
       0
      ],
      "2026-08-14": [
@@ -3701,12 +3610,6 @@
       6,
       0
      ],
-     "2026-08-12": [
-      6,
-      2,
-      4,
-      0
-     ],
      "2026-08-14": [
       8,
       1,
@@ -3723,6 +3626,12 @@
       11,
       3,
       8,
+      0
+     ],
+     "2026-08-12": [
+      6,
+      2,
+      4,
       0
      ],
      "2026-08-17": [
@@ -3803,16 +3712,16 @@
       4,
       0
      ],
-     "2026-08-07": [
-      10,
-      5,
-      5,
-      0
-     ],
      "2026-08-06": [
       3,
       1,
       2,
+      0
+     ],
+     "2026-08-07": [
+      10,
+      5,
+      5,
       0
      ],
      "2026-08-08": [
@@ -3833,16 +3742,16 @@
       7,
       0
      ],
-     "2026-08-10": [
-      6,
-      4,
-      2,
-      0
-     ],
      "2026-08-12": [
       9,
       4,
       5,
+      0
+     ],
+     "2026-08-10": [
+      6,
+      4,
+      2,
       0
      ],
      "2026-08-13": [
@@ -4120,6 +4029,12 @@
       5,
       0
      ],
+     "2026-08-04": [
+      8,
+      3,
+      5,
+      0
+     ],
      "2026-08-05": [
       8,
       3,
@@ -4150,12 +4065,6 @@
       5,
       0
      ],
-     "2026-08-04": [
-      8,
-      3,
-      5,
-      0
-     ],
      "2026-08-10": [
       9,
       3,
@@ -4166,6 +4075,12 @@
       9,
       3,
       6,
+      0
+     ],
+     "2026-08-12": [
+      5,
+      2,
+      3,
       0
      ],
      "2026-08-13": [
@@ -4180,10 +4095,10 @@
       6,
       0
      ],
-     "2026-08-12": [
-      5,
-      2,
+     "2026-08-15": [
+      8,
       3,
+      5,
       0
      ],
      "2026-08-16": [
@@ -4195,12 +4110,6 @@
      "2026-08-17": [
       5,
       0,
-      5,
-      0
-     ],
-     "2026-08-15": [
-      8,
-      3,
       5,
       0
      ]
@@ -4222,6 +4131,12 @@
    },
    "Penrith": {
     "daily": {
+     "2026-07-27": [
+      4,
+      1,
+      3,
+      0
+     ],
      "2026-07-29": [
       3,
       0,
@@ -4233,12 +4148,6 @@
       3,
       7,
       1
-     ],
-     "2026-07-27": [
-      4,
-      1,
-      3,
-      0
      ],
      "2026-07-31": [
       16,
@@ -4264,12 +4173,6 @@
       3,
       0
      ],
-     "2026-08-04": [
-      3,
-      0,
-      3,
-      0
-     ],
      "2026-08-05": [
       5,
       3,
@@ -4291,6 +4194,12 @@
      "2026-08-08": [
       6,
       3,
+      3,
+      0
+     ],
+     "2026-08-04": [
+      3,
+      0,
       3,
       0
      ],
@@ -4438,6 +4347,18 @@
       2,
       0
      ],
+     "2026-08-05": [
+      3,
+      0,
+      3,
+      0
+     ],
+     "2026-08-06": [
+      2,
+      1,
+      1,
+      0
+     ],
      "2026-08-07": [
       3,
       0,
@@ -4448,12 +4369,6 @@
       8,
       3,
       5,
-      0
-     ],
-     "2026-08-05": [
-      3,
-      0,
-      3,
       0
      ],
      "2026-08-09": [
@@ -4473,12 +4388,6 @@
       1,
       3,
       1
-     ],
-     "2026-08-06": [
-      2,
-      1,
-      1,
-      0
      ],
      "2026-08-12": [
       3,
@@ -4684,6 +4593,12 @@
    },
    "Cronulla": {
     "daily": {
+     "2026-07-28": [
+      2,
+      0,
+      2,
+      0
+     ],
      "2026-07-27": [
       6,
       4,
@@ -4693,12 +4608,6 @@
      "2026-07-29": [
       4,
       2,
-      2,
-      0
-     ],
-     "2026-07-28": [
-      2,
-      0,
       2,
       0
      ],
@@ -4744,12 +4653,6 @@
       4,
       0
      ],
-     "2026-08-03": [
-      2,
-      1,
-      1,
-      0
-     ],
      "2026-08-09": [
       10,
       5,
@@ -4762,10 +4665,22 @@
       4,
       0
      ],
+     "2026-08-03": [
+      2,
+      1,
+      1,
+      0
+     ],
      "2026-08-12": [
       8,
       4,
       4,
+      0
+     ],
+     "2026-08-15": [
+      11,
+      5,
+      6,
       0
      ],
      "2026-08-07": [
@@ -4773,12 +4688,6 @@
       1,
       1,
       1
-     ],
-     "2026-08-15": [
-      11,
-      5,
-      6,
-      0
      ],
      "2026-08-14": [
       6,
@@ -4900,12 +4809,6 @@
       5,
       0
      ],
-     "2026-08-04": [
-      5,
-      4,
-      1,
-      0
-     ],
      "2026-08-05": [
       13,
       6,
@@ -4922,6 +4825,12 @@
       8,
       2,
       6,
+      0
+     ],
+     "2026-08-04": [
+      5,
+      4,
+      1,
       0
      ],
      "2026-08-08": [
@@ -5031,22 +4940,16 @@
       3,
       0
      ],
-     "2026-08-05": [
-      3,
-      1,
-      2,
-      0
-     ],
      "2026-08-04": [
       7,
       1,
       6,
       0
      ],
-     "2026-08-07": [
-      6,
+     "2026-08-05": [
+      3,
       1,
-      5,
+      2,
       0
      ],
      "2026-08-06": [
@@ -5055,16 +4958,16 @@
       3,
       1
      ],
+     "2026-08-07": [
+      6,
+      1,
+      5,
+      0
+     ],
      "2026-08-09": [
       7,
       0,
       7,
-      0
-     ],
-     "2026-08-08": [
-      3,
-      1,
-      2,
       0
      ],
      "2026-08-10": [
@@ -5085,6 +4988,24 @@
       5,
       0
      ],
+     "2026-08-08": [
+      3,
+      1,
+      2,
+      0
+     ],
+     "2026-08-16": [
+      15,
+      6,
+      9,
+      0
+     ],
+     "2026-07-28": [
+      3,
+      0,
+      3,
+      0
+     ],
      "2026-08-13": [
       7,
       1,
@@ -5097,22 +5018,10 @@
       5,
       0
      ],
-     "2026-08-16": [
-      15,
-      6,
-      9,
-      0
-     ],
      "2026-08-15": [
       7,
       0,
       7,
-      0
-     ],
-     "2026-07-28": [
-      3,
-      0,
-      3,
       0
      ],
      "2026-08-17": [
@@ -5223,15 +5132,15 @@
       9,
       0
      ],
-     "2026-08-11": [
-      3,
-      0,
-      3,
-      0
-     ],
      "2026-08-10": [
       5,
       2,
+      3,
+      0
+     ],
+     "2026-08-11": [
+      3,
+      0,
       3,
       0
      ],
@@ -5337,6 +5246,12 @@
       3,
       0
      ],
+     "2026-08-04": [
+      6,
+      2,
+      4,
+      0
+     ],
      "2026-08-06": [
       7,
       4,
@@ -5347,12 +5262,6 @@
       11,
       5,
       6,
-      0
-     ],
-     "2026-08-04": [
-      6,
-      2,
-      4,
       0
      ],
      "2026-08-08": [
@@ -5403,16 +5312,16 @@
       3,
       0
      ],
-     "2026-07-28": [
-      4,
-      0,
-      4,
-      0
-     ],
      "2026-08-14": [
       9,
       2,
       7,
+      0
+     ],
+     "2026-07-28": [
+      4,
+      0,
+      4,
       0
      ],
      "2026-08-15": [
@@ -5457,6 +5366,12 @@
       7,
       0
      ],
+     "2026-08-01": [
+      8,
+      3,
+      5,
+      0
+     ],
      "2026-08-04": [
       5,
       2,
@@ -5467,24 +5382,6 @@
       2,
       0,
       2,
-      0
-     ],
-     "2026-08-01": [
-      8,
-      3,
-      5,
-      0
-     ],
-     "2026-08-07": [
-      4,
-      0,
-      4,
-      0
-     ],
-     "2026-08-08": [
-      10,
-      6,
-      4,
       0
      ],
      "2026-08-11": [
@@ -5499,13 +5396,19 @@
       2,
       0
      ],
-     "2026-08-15": [
-      8,
+     "2026-08-07": [
       4,
+      0,
       4,
       0
      ],
-     "2026-08-16": [
+     "2026-08-08": [
+      10,
+      6,
+      4,
+      0
+     ],
+     "2026-08-15": [
       8,
       4,
       4,
@@ -5521,6 +5424,12 @@
       6,
       5,
       1,
+      0
+     ],
+     "2026-08-16": [
+      8,
+      4,
+      4,
       0
      ],
      "2026-07-29": [
@@ -5553,16 +5462,16 @@
       3,
       0
      ],
-     "2026-08-17": [
-      2,
-      0,
-      2,
-      0
-     ],
      "2026-08-12": [
       1,
       0,
       1,
+      0
+     ],
+     "2026-08-17": [
+      2,
+      0,
+      2,
       0
      ]
     },
@@ -5625,12 +5534,6 @@
       2,
       0
      ],
-     "2026-08-04": [
-      3,
-      2,
-      1,
-      0
-     ],
      "2026-08-05": [
       5,
       2,
@@ -5641,6 +5544,12 @@
       5,
       2,
       3,
+      0
+     ],
+     "2026-08-04": [
+      3,
+      2,
+      1,
       0
      ],
      "2026-08-07": [
@@ -5786,16 +5695,16 @@
       1,
       0
      ],
-     "2026-08-06": [
-      4,
-      1,
-      3,
-      0
-     ],
      "2026-08-07": [
       7,
       3,
       4,
+      0
+     ],
+     "2026-08-06": [
+      4,
+      1,
+      3,
       0
      ],
      "2026-08-08": [
@@ -5888,28 +5797,10 @@
       1,
       0
      ],
-     "2026-07-30": [
-      8,
-      6,
-      2,
-      0
-     ],
      "2026-07-29": [
       2,
       2,
       0,
-      0
-     ],
-     "2026-08-01": [
-      5,
-      4,
-      1,
-      0
-     ],
-     "2026-08-02": [
-      4,
-      3,
-      1,
       0
      ],
      "2026-07-31": [
@@ -5918,27 +5809,27 @@
       1,
       0
      ],
-     "2026-08-08": [
+     "2026-08-01": [
       5,
       4,
+      1,
+      0
+     ],
+     "2026-07-30": [
+      8,
+      6,
+      2,
+      0
+     ],
+     "2026-08-02": [
+      4,
+      3,
       1,
       0
      ],
      "2026-08-03": [
       3,
       3,
-      0,
-      0
-     ],
-     "2026-08-12": [
-      4,
-      4,
-      0,
-      0
-     ],
-     "2026-08-13": [
-      2,
-      2,
       0,
       0
      ],
@@ -5954,6 +5845,30 @@
       0,
       0
      ],
+     "2026-08-08": [
+      5,
+      4,
+      1,
+      0
+     ],
+     "2026-08-07": [
+      6,
+      5,
+      1,
+      0
+     ],
+     "2026-08-12": [
+      4,
+      4,
+      0,
+      0
+     ],
+     "2026-08-13": [
+      2,
+      2,
+      0,
+      0
+     ],
      "2026-08-14": [
       1,
       1,
@@ -5964,12 +5879,6 @@
       5,
       5,
       0,
-      0
-     ],
-     "2026-08-07": [
-      6,
-      5,
-      1,
       0
      ],
      "2026-08-09": [
@@ -5990,16 +5899,16 @@
       1,
       0
      ],
-     "2026-07-27": [
-      4,
-      3,
-      1,
-      0
-     ],
      "2026-08-10": [
       1,
       1,
       0,
+      0
+     ],
+     "2026-07-27": [
+      4,
+      3,
+      1,
       0
      ],
      "2026-08-04": [
@@ -6043,40 +5952,16 @@
       1,
       0
      ],
-     "2026-08-02": [
-      7,
-      4,
-      3,
+     "2026-08-03": [
+      5,
+      0,
+      5,
       0
      ],
      "2026-08-04": [
       4,
       2,
       2,
-      0
-     ],
-     "2026-08-10": [
-      1,
-      0,
-      1,
-      0
-     ],
-     "2026-08-13": [
-      2,
-      1,
-      1,
-      0
-     ],
-     "2026-08-16": [
-      6,
-      4,
-      2,
-      0
-     ],
-     "2026-08-03": [
-      5,
-      0,
-      5,
       0
      ],
      "2026-08-06": [
@@ -6088,6 +5973,18 @@
      "2026-08-07": [
       5,
       4,
+      1,
+      0
+     ],
+     "2026-08-02": [
+      7,
+      4,
+      3,
+      0
+     ],
+     "2026-08-10": [
+      1,
+      0,
       1,
       0
      ],
@@ -6103,12 +6000,6 @@
       1,
       0
      ],
-     "2026-07-30": [
-      2,
-      2,
-      0,
-      0
-     ],
      "2026-08-15": [
       3,
       2,
@@ -6119,6 +6010,24 @@
       2,
       1,
       1,
+      0
+     ],
+     "2026-08-13": [
+      2,
+      1,
+      1,
+      0
+     ],
+     "2026-08-16": [
+      6,
+      4,
+      2,
+      0
+     ],
+     "2026-07-30": [
+      2,
+      2,
+      0,
       0
      ],
      "2026-08-05": [
@@ -6174,12 +6083,6 @@
       2,
       0
      ],
-     "2026-07-29": [
-      7,
-      0,
-      6,
-      1
-     ],
      "2026-07-31": [
       3,
       1,
@@ -6191,6 +6094,12 @@
       5,
       3,
       0
+     ],
+     "2026-07-29": [
+      7,
+      0,
+      6,
+      1
      ],
      "2026-08-02": [
       12,
@@ -6324,12 +6233,6 @@
       2,
       0
      ],
-     "2026-07-28": [
-      7,
-      4,
-      3,
-      0
-     ],
      "2026-07-29": [
       8,
       5,
@@ -6340,6 +6243,12 @@
       4,
       3,
       1,
+      0
+     ],
+     "2026-07-28": [
+      7,
+      4,
+      3,
       0
      ],
      "2026-07-31": [
@@ -6390,6 +6299,12 @@
       5,
       0
      ],
+     "2026-08-05": [
+      5,
+      1,
+      4,
+      0
+     ],
      "2026-08-09": [
       7,
       3,
@@ -6402,22 +6317,10 @@
       4,
       0
      ],
-     "2026-08-05": [
-      5,
-      1,
-      4,
-      0
-     ],
      "2026-08-11": [
       10,
       4,
       6,
-      0
-     ],
-     "2026-08-12": [
-      6,
-      4,
-      2,
       0
      ],
      "2026-08-13": [
@@ -6432,9 +6335,9 @@
       5,
       0
      ],
-     "2026-08-15": [
-      8,
+     "2026-08-12": [
       6,
+      4,
       2,
       0
      ],
@@ -6442,6 +6345,12 @@
       10,
       6,
       4,
+      0
+     ],
+     "2026-08-15": [
+      8,
+      6,
+      2,
       0
      ],
      "2026-08-17": [
@@ -6533,13 +6442,13 @@
       0,
       3
      ],
-     "2026-08-15": [
+     "2026-08-02": [
       1,
       0,
       1,
       0
      ],
-     "2026-08-02": [
+     "2026-08-15": [
       1,
       0,
       1,
@@ -6665,6 +6574,12 @@
       5,
       1
      ],
+     "2026-08-14": [
+      8,
+      3,
+      5,
+      0
+     ],
      "2026-08-10": [
       1,
       1,
@@ -6675,12 +6590,6 @@
       1,
       1,
       0,
-      0
-     ],
-     "2026-08-14": [
-      8,
-      3,
-      5,
       0
      ],
      "2026-08-15": [
