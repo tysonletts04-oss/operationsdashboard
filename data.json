@@ -1,8 +1,8 @@
 {
  "meta": {
-  "reportDate": "2026-09-04",
-  "generatedAt": "2026-09-06T13:59:45+00:00",
-  "windows": "daily = 4 Sep · WTD = 31 Aug–4 Sep · MTD = 1–4 Sep",
+  "reportDate": "2026-09-05",
+  "generatedAt": "2026-09-06T16:49:27+00:00",
+  "windows": "daily = 5 Sep · WTD = 31 Aug–5 Sep · MTD = 1–5 Sep",
   "venues": 27,
   "sources": {
    "Sales": "snapshot",
@@ -13,7 +13,7 @@
    "Restoke": "nosource"
   },
   "coverage": {
-   "labour": "23/27",
+   "labour": "0/27",
    "policies": "27/27",
    "comms": "27/27",
    "training": "27/27"
@@ -25,14 +25,10 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 13,
     "sales": {
-     "actual": 18716,
+     "actual": 22594,
      "budget": null
-    },
-    "labour": {
-     "pct": 19.6,
-     "budgetPct": null
     },
     "policies": 95.0,
     "comms": 78.2,
@@ -42,9 +38,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 2,
     "sales": {
-     "actual": 12453,
+     "actual": 17119,
      "budget": null
     },
     "policies": 92.7,
@@ -57,12 +53,8 @@
     "correctiveA": "ok",
     "reviews": 19,
     "sales": {
-     "actual": 18057,
+     "actual": 23060,
      "budget": null
-    },
-    "labour": {
-     "pct": 15.2,
-     "budgetPct": null
     },
     "policies": 91.0,
     "comms": 74.0,
@@ -74,7 +66,7 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 14585,
+     "actual": 22238,
      "budget": null
     },
     "policies": 96.5,
@@ -85,9 +77,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 7,
     "sales": {
-     "actual": 11304,
+     "actual": 16032,
      "budget": null
     },
     "policies": 92.4,
@@ -98,14 +90,10 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 6,
     "sales": {
-     "actual": 15434,
+     "actual": 19540,
      "budget": null
-    },
-    "labour": {
-     "pct": 16.6,
-     "budgetPct": null
     },
     "policies": 96.5,
     "comms": 87.8,
@@ -115,14 +103,10 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 18,
     "sales": {
-     "actual": 13632,
+     "actual": 15782,
      "budget": null
-    },
-    "labour": {
-     "pct": 15.9,
-     "budgetPct": null
     },
     "policies": 95.8,
     "comms": 81.4,
@@ -134,12 +118,8 @@
     "correctiveA": "none",
     "reviews": 8,
     "sales": {
-     "actual": 10954,
+     "actual": 13505,
      "budget": null
-    },
-    "labour": {
-     "pct": 15.6,
-     "budgetPct": null
     },
     "policies": 98.1,
     "comms": 82.1,
@@ -151,12 +131,8 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 11836,
+     "actual": 17171,
      "budget": null
-    },
-    "labour": {
-     "pct": 16.6,
-     "budgetPct": null
     },
     "policies": 92.9,
     "comms": 74.0,
@@ -166,14 +142,10 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 10,
     "sales": {
-     "actual": 11255,
+     "actual": 15481,
      "budget": null
-    },
-    "labour": {
-     "pct": 14.9,
-     "budgetPct": null
     },
     "policies": 98.3,
     "comms": 77.0,
@@ -183,14 +155,10 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 14,
     "sales": {
-     "actual": 10353,
+     "actual": 15070,
      "budget": null
-    },
-    "labour": {
-     "pct": 17.6,
-     "budgetPct": null
     },
     "policies": 97.0,
     "comms": 73.5,
@@ -200,14 +168,10 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
-     "actual": 13324,
+     "actual": 19990,
      "budget": null
-    },
-    "labour": {
-     "pct": 14.1,
-     "budgetPct": null
     },
     "policies": 95.1,
     "comms": 69.9,
@@ -219,12 +183,8 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 10241,
+     "actual": 18042,
      "budget": null
-    },
-    "labour": {
-     "pct": 16.9,
-     "budgetPct": null
     },
     "policies": 92.8,
     "comms": 66.6,
@@ -234,14 +194,10 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 6,
     "sales": {
-     "actual": 12476,
+     "actual": 20967,
      "budget": null
-    },
-    "labour": {
-     "pct": 18.0,
-     "budgetPct": null
     },
     "policies": 95.5,
     "comms": 64.1,
@@ -251,14 +207,10 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 10,
     "sales": {
-     "actual": 10672,
+     "actual": 11447,
      "budget": null
-    },
-    "labour": {
-     "pct": 15.3,
-     "budgetPct": null
     },
     "policies": 89.5,
     "comms": 70.3,
@@ -268,14 +220,10 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 7,
     "sales": {
-     "actual": 10084,
+     "actual": 14656,
      "budget": null
-    },
-    "labour": {
-     "pct": 19.5,
-     "budgetPct": null
     },
     "policies": 86.3,
     "comms": 41.9,
@@ -285,14 +233,10 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
-     "actual": 11515,
+     "actual": 16435,
      "budget": null
-    },
-    "labour": {
-     "pct": 14.7,
-     "budgetPct": null
     },
     "policies": 94.9,
     "comms": 78.2,
@@ -302,14 +246,10 @@
     "hopperTemps": 2,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 14,
+    "reviews": 17,
     "sales": {
-     "actual": 8665,
+     "actual": 11495,
      "budget": null
-    },
-    "labour": {
-     "pct": 18.5,
-     "budgetPct": null
     },
     "policies": 95.1,
     "comms": 72.1,
@@ -319,14 +259,10 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
-     "actual": 6464,
+     "actual": 9797,
      "budget": null
-    },
-    "labour": {
-     "pct": 16.8,
-     "budgetPct": null
     },
     "policies": 98.0,
     "comms": 89.4,
@@ -338,12 +274,8 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 5669,
+     "actual": 8478,
      "budget": null
-    },
-    "labour": {
-     "pct": 22.1,
-     "budgetPct": null
     },
     "policies": 92.2,
     "comms": 64.3,
@@ -353,14 +285,10 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
-     "actual": 5637,
+     "actual": 7182,
      "budget": null
-    },
-    "labour": {
-     "pct": 21.2,
-     "budgetPct": null
     },
     "policies": 78.1,
     "comms": 48.5,
@@ -372,12 +300,8 @@
     "correctiveA": "none",
     "reviews": 0,
     "sales": {
-     "actual": 5755,
+     "actual": 6839,
      "budget": null
-    },
-    "labour": {
-     "pct": 18.6,
-     "budgetPct": null
     },
     "policies": 86.1,
     "comms": 51.9,
@@ -387,14 +311,10 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 10,
     "sales": {
-     "actual": 6385,
+     "actual": 8110,
      "budget": null
-    },
-    "labour": {
-     "pct": 19.3,
-     "budgetPct": null
     },
     "policies": 95.8,
     "comms": 66.7,
@@ -404,14 +324,10 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 11,
     "sales": {
-     "actual": 10174,
+     "actual": 6168,
      "budget": null
-    },
-    "labour": {
-     "pct": 17.8,
-     "budgetPct": null
     },
     "policies": 92.0,
     "comms": 65.7,
@@ -421,14 +337,10 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
-     "actual": 9072,
+     "actual": 10873,
      "budget": null
-    },
-    "labour": {
-     "pct": 17.8,
-     "budgetPct": null
     },
     "policies": 93.5,
     "comms": 69.2,
@@ -438,14 +350,10 @@
     "hopperTemps": 2,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 9,
+    "reviews": 12,
     "sales": {
-     "actual": 3967,
+     "actual": 7883,
      "budget": null
-    },
-    "labour": {
-     "pct": 30.1,
-     "budgetPct": null
     },
     "policies": 90.0,
     "comms": 45.7,
@@ -455,9 +363,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 5,
     "sales": {
-     "actual": 10815,
+     "actual": 14296,
      "budget": null
     },
     "policies": 91.3,
@@ -470,14 +378,10 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 13,
     "sales": {
-     "actual": 80464,
+     "actual": 103059,
      "budget": null
-    },
-    "labour": {
-     "pct": 19.6,
-     "budgetPct": null
     },
     "policies": 95.0,
     "comms": 78.2,
@@ -487,9 +391,9 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 2,
     "sales": {
-     "actual": 48856,
+     "actual": 65975,
      "budget": null
     },
     "policies": 92.7,
@@ -502,12 +406,8 @@
     "correctiveA": "ok",
     "reviews": 19,
     "sales": {
-     "actual": 68137,
+     "actual": 91197,
      "budget": null
-    },
-    "labour": {
-     "pct": 15.2,
-     "budgetPct": null
     },
     "policies": 91.0,
     "comms": 74.0,
@@ -519,7 +419,7 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 54651,
+     "actual": 76889,
      "budget": null
     },
     "policies": 96.5,
@@ -530,9 +430,9 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 7,
     "sales": {
-     "actual": 47348,
+     "actual": 63381,
      "budget": null
     },
     "policies": 92.4,
@@ -543,14 +443,10 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 6,
     "sales": {
-     "actual": 54059,
+     "actual": 73599,
      "budget": null
-    },
-    "labour": {
-     "pct": 16.6,
-     "budgetPct": null
     },
     "policies": 96.5,
     "comms": 87.8,
@@ -560,14 +456,10 @@
     "hopperTemps": 24,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 18,
     "sales": {
-     "actual": 57471,
+     "actual": 73253,
      "budget": null
-    },
-    "labour": {
-     "pct": 15.9,
-     "budgetPct": null
     },
     "policies": 95.8,
     "comms": 81.4,
@@ -579,12 +471,8 @@
     "correctiveA": "none",
     "reviews": 8,
     "sales": {
-     "actual": 46937,
+     "actual": 60442,
      "budget": null
-    },
-    "labour": {
-     "pct": 15.6,
-     "budgetPct": null
     },
     "policies": 98.1,
     "comms": 82.1,
@@ -596,12 +484,8 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 42834,
+     "actual": 60006,
      "budget": null
-    },
-    "labour": {
-     "pct": 16.6,
-     "budgetPct": null
     },
     "policies": 92.9,
     "comms": 74.0,
@@ -611,14 +495,10 @@
     "hopperTemps": 26,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 10,
     "sales": {
-     "actual": 48765,
+     "actual": 64246,
      "budget": null
-    },
-    "labour": {
-     "pct": 14.9,
-     "budgetPct": null
     },
     "policies": 98.3,
     "comms": 77.0,
@@ -628,14 +508,10 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 14,
     "sales": {
-     "actual": 39852,
+     "actual": 54922,
      "budget": null
-    },
-    "labour": {
-     "pct": 17.6,
-     "budgetPct": null
     },
     "policies": 97.0,
     "comms": 73.5,
@@ -645,14 +521,10 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
-     "actual": 52574,
+     "actual": 72564,
      "budget": null
-    },
-    "labour": {
-     "pct": 14.1,
-     "budgetPct": null
     },
     "policies": 95.1,
     "comms": 69.9,
@@ -664,12 +536,8 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 39307,
+     "actual": 57349,
      "budget": null
-    },
-    "labour": {
-     "pct": 16.9,
-     "budgetPct": null
     },
     "policies": 92.8,
     "comms": 66.6,
@@ -679,14 +547,10 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 6,
     "sales": {
-     "actual": 44392,
+     "actual": 65359,
      "budget": null
-    },
-    "labour": {
-     "pct": 18.0,
-     "budgetPct": null
     },
     "policies": 95.5,
     "comms": 64.1,
@@ -696,14 +560,10 @@
     "hopperTemps": 28,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 10,
     "sales": {
-     "actual": 43227,
+     "actual": 54674,
      "budget": null
-    },
-    "labour": {
-     "pct": 15.3,
-     "budgetPct": null
     },
     "policies": 89.5,
     "comms": 70.3,
@@ -713,14 +573,10 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 7,
     "sales": {
-     "actual": 45856,
+     "actual": 60512,
      "budget": null
-    },
-    "labour": {
-     "pct": 19.5,
-     "budgetPct": null
     },
     "policies": 86.3,
     "comms": 41.9,
@@ -730,14 +586,10 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
-     "actual": 49717,
+     "actual": 66151,
      "budget": null
-    },
-    "labour": {
-     "pct": 14.7,
-     "budgetPct": null
     },
     "policies": 94.9,
     "comms": 78.2,
@@ -747,14 +599,10 @@
     "hopperTemps": 17,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 14,
+    "reviews": 17,
     "sales": {
-     "actual": 33181,
+     "actual": 44676,
      "budget": null
-    },
-    "labour": {
-     "pct": 18.5,
-     "budgetPct": null
     },
     "policies": 95.1,
     "comms": 72.1,
@@ -764,14 +612,10 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
-     "actual": 23674,
+     "actual": 33471,
      "budget": null
-    },
-    "labour": {
-     "pct": 16.8,
-     "budgetPct": null
     },
     "policies": 98.0,
     "comms": 89.4,
@@ -783,12 +627,8 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 23051,
+     "actual": 31529,
      "budget": null
-    },
-    "labour": {
-     "pct": 22.1,
-     "budgetPct": null
     },
     "policies": 92.2,
     "comms": 64.3,
@@ -798,14 +638,10 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
-     "actual": 23958,
+     "actual": 31140,
      "budget": null
-    },
-    "labour": {
-     "pct": 21.2,
-     "budgetPct": null
     },
     "policies": 78.1,
     "comms": 48.5,
@@ -817,12 +653,8 @@
     "correctiveA": "none",
     "reviews": 0,
     "sales": {
-     "actual": 20346,
+     "actual": 27186,
      "budget": null
-    },
-    "labour": {
-     "pct": 18.6,
-     "budgetPct": null
     },
     "policies": 86.1,
     "comms": 51.9,
@@ -832,14 +664,10 @@
     "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 10,
     "sales": {
-     "actual": 23425,
+     "actual": 31535,
      "budget": null
-    },
-    "labour": {
-     "pct": 19.3,
-     "budgetPct": null
     },
     "policies": 95.8,
     "comms": 66.7,
@@ -849,14 +677,10 @@
     "hopperTemps": 24,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 11,
     "sales": {
-     "actual": 51346,
+     "actual": 57514,
      "budget": null
-    },
-    "labour": {
-     "pct": 17.8,
-     "budgetPct": null
     },
     "policies": 92.0,
     "comms": 65.7,
@@ -866,14 +690,10 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
-     "actual": 31177,
+     "actual": 42050,
      "budget": null
-    },
-    "labour": {
-     "pct": 17.8,
-     "budgetPct": null
     },
     "policies": 93.5,
     "comms": 69.2,
@@ -883,14 +703,10 @@
     "hopperTemps": 17,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 9,
+    "reviews": 12,
     "sales": {
-     "actual": 16834,
+     "actual": 24718,
      "budget": null
-    },
-    "labour": {
-     "pct": 30.1,
-     "budgetPct": null
     },
     "policies": 90.0,
     "comms": 45.7,
@@ -900,9 +716,9 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 5,
     "sales": {
-     "actual": 40512,
+     "actual": 54808,
      "budget": null
     },
     "policies": 91.3,
@@ -915,14 +731,10 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 13,
     "sales": {
-     "actual": 66304,
+     "actual": 88898,
      "budget": null
-    },
-    "labour": {
-     "pct": 19.6,
-     "budgetPct": null
     },
     "policies": 95.0,
     "comms": 78.2,
@@ -932,9 +744,9 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 2,
     "sales": {
-     "actual": 41610,
+     "actual": 58729,
      "budget": null
     },
     "policies": 92.7,
@@ -947,12 +759,8 @@
     "correctiveA": "ok",
     "reviews": 19,
     "sales": {
-     "actual": 56837,
+     "actual": 79897,
      "budget": null
-    },
-    "labour": {
-     "pct": 15.2,
-     "budgetPct": null
     },
     "policies": 91.0,
     "comms": 74.0,
@@ -964,7 +772,7 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 45939,
+     "actual": 68177,
      "budget": null
     },
     "policies": 96.5,
@@ -975,9 +783,9 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 7,
     "sales": {
-     "actual": 39864,
+     "actual": 55896,
      "budget": null
     },
     "policies": 92.4,
@@ -988,14 +796,10 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 6,
     "sales": {
-     "actual": 46501,
+     "actual": 66041,
      "budget": null
-    },
-    "labour": {
-     "pct": 16.6,
-     "budgetPct": null
     },
     "policies": 96.5,
     "comms": 87.8,
@@ -1005,14 +809,10 @@
     "hopperTemps": 24,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 18,
     "sales": {
-     "actual": 45802,
+     "actual": 61585,
      "budget": null
-    },
-    "labour": {
-     "pct": 15.9,
-     "budgetPct": null
     },
     "policies": 95.8,
     "comms": 81.4,
@@ -1024,12 +824,8 @@
     "correctiveA": "none",
     "reviews": 8,
     "sales": {
-     "actual": 39647,
+     "actual": 53152,
      "budget": null
-    },
-    "labour": {
-     "pct": 15.6,
-     "budgetPct": null
     },
     "policies": 98.1,
     "comms": 82.1,
@@ -1041,12 +837,8 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 36368,
+     "actual": 53540,
      "budget": null
-    },
-    "labour": {
-     "pct": 16.6,
-     "budgetPct": null
     },
     "policies": 92.9,
     "comms": 74.0,
@@ -1056,14 +848,10 @@
     "hopperTemps": 26,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 10,
     "sales": {
-     "actual": 40311,
+     "actual": 55792,
      "budget": null
-    },
-    "labour": {
-     "pct": 14.9,
-     "budgetPct": null
     },
     "policies": 98.3,
     "comms": 77.0,
@@ -1073,14 +861,10 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 14,
     "sales": {
-     "actual": 33979,
+     "actual": 49049,
      "budget": null
-    },
-    "labour": {
-     "pct": 17.6,
-     "budgetPct": null
     },
     "policies": 97.0,
     "comms": 73.5,
@@ -1090,14 +874,10 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
-     "actual": 43862,
+     "actual": 63852,
      "budget": null
-    },
-    "labour": {
-     "pct": 14.1,
-     "budgetPct": null
     },
     "policies": 95.1,
     "comms": 69.9,
@@ -1109,12 +889,8 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 32988,
+     "actual": 51030,
      "budget": null
-    },
-    "labour": {
-     "pct": 16.9,
-     "budgetPct": null
     },
     "policies": 92.8,
     "comms": 66.6,
@@ -1124,14 +900,10 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 6,
     "sales": {
-     "actual": 38375,
+     "actual": 59342,
      "budget": null
-    },
-    "labour": {
-     "pct": 18.0,
-     "budgetPct": null
     },
     "policies": 95.5,
     "comms": 64.1,
@@ -1141,14 +913,10 @@
     "hopperTemps": 28,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 10,
     "sales": {
-     "actual": 36085,
+     "actual": 47532,
      "budget": null
-    },
-    "labour": {
-     "pct": 15.3,
-     "budgetPct": null
     },
     "policies": 89.5,
     "comms": 70.3,
@@ -1158,14 +926,10 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 7,
     "sales": {
-     "actual": 37255,
+     "actual": 51911,
      "budget": null
-    },
-    "labour": {
-     "pct": 19.5,
-     "budgetPct": null
     },
     "policies": 86.3,
     "comms": 41.9,
@@ -1175,14 +939,10 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
-     "actual": 42543,
+     "actual": 58978,
      "budget": null
-    },
-    "labour": {
-     "pct": 14.7,
-     "budgetPct": null
     },
     "policies": 94.9,
     "comms": 78.2,
@@ -1192,14 +952,10 @@
     "hopperTemps": 17,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 14,
+    "reviews": 17,
     "sales": {
-     "actual": 28087,
+     "actual": 39582,
      "budget": null
-    },
-    "labour": {
-     "pct": 18.5,
-     "budgetPct": null
     },
     "policies": 95.1,
     "comms": 72.1,
@@ -1209,14 +965,10 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
-     "actual": 20106,
+     "actual": 29903,
      "budget": null
-    },
-    "labour": {
-     "pct": 16.8,
-     "budgetPct": null
     },
     "policies": 98.0,
     "comms": 89.4,
@@ -1228,12 +980,8 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 19347,
+     "actual": 27825,
      "budget": null
-    },
-    "labour": {
-     "pct": 22.1,
-     "budgetPct": null
     },
     "policies": 92.2,
     "comms": 64.3,
@@ -1243,14 +991,10 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
-     "actual": 20074,
+     "actual": 27256,
      "budget": null
-    },
-    "labour": {
-     "pct": 21.2,
-     "budgetPct": null
     },
     "policies": 78.1,
     "comms": 48.5,
@@ -1262,12 +1006,8 @@
     "correctiveA": "none",
     "reviews": 0,
     "sales": {
-     "actual": 17228,
+     "actual": 24067,
      "budget": null
-    },
-    "labour": {
-     "pct": 18.6,
-     "budgetPct": null
     },
     "policies": 86.1,
     "comms": 51.9,
@@ -1277,14 +1017,10 @@
     "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 10,
     "sales": {
-     "actual": 19677,
+     "actual": 27788,
      "budget": null
-    },
-    "labour": {
-     "pct": 19.3,
-     "budgetPct": null
     },
     "policies": 95.8,
     "comms": 66.7,
@@ -1294,14 +1030,10 @@
     "hopperTemps": 24,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 11,
     "sales": {
-     "actual": 42150,
+     "actual": 48319,
      "budget": null
-    },
-    "labour": {
-     "pct": 17.8,
-     "budgetPct": null
     },
     "policies": 92.0,
     "comms": 65.7,
@@ -1311,14 +1043,10 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
-     "actual": 27270,
+     "actual": 38143,
      "budget": null
-    },
-    "labour": {
-     "pct": 17.8,
-     "budgetPct": null
     },
     "policies": 93.5,
     "comms": 69.2,
@@ -1328,14 +1056,10 @@
     "hopperTemps": 17,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 9,
+    "reviews": 12,
     "sales": {
-     "actual": 13035,
+     "actual": 20918,
      "budget": null
-    },
-    "labour": {
-     "pct": 30.1,
-     "budgetPct": null
     },
     "policies": 90.0,
     "comms": 45.7,
@@ -1345,9 +1069,9 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 5,
     "sales": {
-     "actual": 34705,
+     "actual": 49002,
      "budget": null
     },
     "policies": 91.3,
@@ -1366,8 +1090,8 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-08-31",
-  "windowEnd": "2026-09-04",
-  "window": "31 Aug – 4 Sep",
+  "windowEnd": "2026-09-05",
+  "window": "31 Aug – 5 Sep",
   "totals": {
    "reusable": 2,
    "discounted": 0,
@@ -1604,8 +1328,8 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-08-31",
-  "windowEnd": "2026-09-05",
-  "window": "31 Aug – 5 Sep",
+  "windowEnd": "2026-09-06",
+  "window": "31 Aug – 6 Sep",
   "totals": {
    "reusable": 2,
    "discounted": 0,
@@ -1886,7 +1610,7 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-08-10",
-  "windowEnd": "2026-09-05",
+  "windowEnd": "2026-09-06",
   "venues": {
    "George St": {
     "daily": {
@@ -1956,16 +1680,16 @@
       10,
       1
      ],
-     "2026-08-21": [
-      12,
-      3,
-      9,
-      0
-     ],
      "2026-08-22": [
       10,
       3,
       7,
+      0
+     ],
+     "2026-08-21": [
+      12,
+      3,
+      9,
       0
      ],
      "2026-08-23": [
@@ -2016,12 +1740,6 @@
    },
    "Erina Fair": {
     "daily": {
-     "2026-08-13": [
-      5,
-      4,
-      1,
-      0
-     ],
      "2026-08-10": [
       8,
       3,
@@ -2032,6 +1750,12 @@
       3,
       3,
       0,
+      0
+     ],
+     "2026-08-13": [
+      5,
+      4,
+      1,
       0
      ],
      "2026-08-15": [
@@ -2046,17 +1770,23 @@
       0,
       0
      ],
+     "2026-08-22": [
+      9,
+      3,
+      3,
+      3
+     ],
      "2026-08-19": [
       5,
       5,
       0,
       0
      ],
-     "2026-08-22": [
-      9,
-      3,
-      3,
-      3
+     "2026-08-26": [
+      8,
+      7,
+      1,
+      0
      ],
      "2026-08-23": [
       5,
@@ -2068,12 +1798,6 @@
       2,
       0,
       2,
-      0
-     ],
-     "2026-08-26": [
-      8,
-      7,
-      1,
       0
      ],
      "2026-08-11": [
@@ -2154,24 +1878,6 @@
       3,
       0
      ],
-     "2026-08-12": [
-      4,
-      0,
-      4,
-      0
-     ],
-     "2026-08-13": [
-      4,
-      2,
-      2,
-      0
-     ],
-     "2026-08-14": [
-      8,
-      5,
-      3,
-      0
-     ],
      "2026-08-16": [
       5,
       1,
@@ -2238,6 +1944,24 @@
       4,
       0
      ],
+     "2026-08-12": [
+      4,
+      0,
+      4,
+      0
+     ],
+     "2026-08-13": [
+      4,
+      2,
+      2,
+      0
+     ],
+     "2026-08-14": [
+      8,
+      5,
+      3,
+      0
+     ],
      "2026-08-15": [
       6,
       0,
@@ -2280,12 +2004,6 @@
       7,
       0
      ],
-     "2026-08-13": [
-      14,
-      4,
-      10,
-      0
-     ],
      "2026-08-14": [
       12,
       3,
@@ -2298,22 +2016,10 @@
       8,
       0
      ],
-     "2026-08-16": [
-      10,
-      1,
-      9,
-      0
-     ],
      "2026-08-17": [
       9,
       2,
       7,
-      0
-     ],
-     "2026-08-18": [
-      8,
-      0,
-      8,
       0
      ],
      "2026-08-19": [
@@ -2363,6 +2069,24 @@
       0,
       7,
       0
+     ],
+     "2026-08-13": [
+      14,
+      4,
+      10,
+      0
+     ],
+     "2026-08-16": [
+      10,
+      1,
+      9,
+      0
+     ],
+     "2026-08-18": [
+      8,
+      0,
+      8,
+      0
      ]
     },
     "missedList": []
@@ -2385,12 +2109,6 @@
       15,
       6,
       9,
-      0
-     ],
-     "2026-08-12": [
-      4,
-      1,
-      3,
       0
      ],
      "2026-08-14": [
@@ -2423,12 +2141,6 @@
       7,
       0
      ],
-     "2026-08-18": [
-      7,
-      4,
-      3,
-      0
-     ],
      "2026-08-20": [
       19,
       10,
@@ -2457,6 +2169,18 @@
       7,
       2,
       5,
+      0
+     ],
+     "2026-08-12": [
+      4,
+      1,
+      3,
+      0
+     ],
+     "2026-08-18": [
+      7,
+      4,
+      3,
       0
      ],
      "2026-08-25": [
@@ -2645,12 +2369,6 @@
       2,
       0
      ],
-     "2026-08-12": [
-      6,
-      2,
-      4,
-      0
-     ],
      "2026-08-13": [
       9,
       3,
@@ -2661,6 +2379,12 @@
       8,
       1,
       7,
+      0
+     ],
+     "2026-08-12": [
+      6,
+      2,
+      4,
       0
      ],
      "2026-08-15": [
@@ -2765,16 +2489,16 @@
       5,
       0
      ],
-     "2026-08-13": [
-      11,
-      4,
-      7,
-      0
-     ],
      "2026-08-10": [
       6,
       4,
       2,
+      0
+     ],
+     "2026-08-13": [
+      11,
+      4,
+      7,
       0
      ],
      "2026-08-14": [
@@ -2957,15 +2681,15 @@
       3,
       0
      ],
-     "2026-08-23": [
-      13,
-      9,
-      4,
-      0
-     ],
      "2026-08-21": [
       9,
       5,
+      4,
+      0
+     ],
+     "2026-08-23": [
+      13,
+      9,
       4,
       0
      ],
@@ -3232,6 +2956,12 @@
       4,
       0
      ],
+     "2026-08-24": [
+      3,
+      1,
+      2,
+      0
+     ],
      "2026-08-25": [
       3,
       1,
@@ -3248,12 +2978,6 @@
       7,
       2,
       5,
-      0
-     ],
-     "2026-08-24": [
-      3,
-      1,
-      2,
       0
      ],
      "2026-08-11": [
@@ -3303,9 +3027,21 @@
       2,
       0
      ],
+     "2026-08-15": [
+      7,
+      0,
+      7,
+      0
+     ],
      "2026-08-18": [
       3,
       1,
+      2,
+      0
+     ],
+     "2026-08-17": [
+      2,
+      0,
       2,
       0
      ],
@@ -3313,18 +3049,6 @@
       6,
       1,
       5,
-      0
-     ],
-     "2026-08-15": [
-      7,
-      0,
-      7,
-      0
-     ],
-     "2026-08-17": [
-      2,
-      0,
-      2,
       0
      ],
      "2026-08-22": [
@@ -3357,16 +3081,16 @@
       1,
       1
      ],
-     "2026-08-26": [
-      5,
-      2,
-      3,
-      0
-     ],
      "2026-08-25": [
       7,
       2,
       5,
+      0
+     ],
+     "2026-08-26": [
+      5,
+      2,
+      3,
       0
      ]
     },
@@ -3429,19 +3153,7 @@
       5,
       1
      ],
-     "2026-08-18": [
-      6,
-      0,
-      6,
-      0
-     ],
      "2026-08-17": [
-      5,
-      1,
-      4,
-      0
-     ],
-     "2026-08-19": [
       5,
       1,
       4,
@@ -3453,10 +3165,16 @@
       7,
       0
      ],
-     "2026-08-21": [
-      7,
-      2,
+     "2026-08-18": [
+      6,
+      0,
+      6,
+      0
+     ],
+     "2026-08-19": [
       5,
+      1,
+      4,
       0
      ],
      "2026-08-22": [
@@ -3469,6 +3187,12 @@
       9,
       3,
       6,
+      0
+     ],
+     "2026-08-21": [
+      7,
+      2,
+      5,
       0
      ],
      "2026-08-24": [
@@ -3549,15 +3273,27 @@
       2,
       0
      ],
-     "2026-08-17": [
-      2,
-      0,
-      2,
-      0
-     ],
      "2026-08-22": [
       8,
       6,
+      2,
+      0
+     ],
+     "2026-08-23": [
+      6,
+      2,
+      4,
+      0
+     ],
+     "2026-08-24": [
+      7,
+      3,
+      4,
+      0
+     ],
+     "2026-08-17": [
+      2,
+      0,
       2,
       0
      ],
@@ -3567,27 +3303,15 @@
       1,
       0
      ],
-     "2026-08-24": [
-      7,
-      3,
+     "2026-08-26": [
+      5,
       4,
-      0
-     ],
-     "2026-08-23": [
-      6,
-      2,
-      4,
+      1,
       0
      ],
      "2026-08-25": [
       1,
       0,
-      1,
-      0
-     ],
-     "2026-08-26": [
-      5,
-      4,
       1,
       0
      ],
@@ -3740,12 +3464,6 @@
       2,
       1
      ],
-     "2026-08-12": [
-      5,
-      0,
-      5,
-      0
-     ],
      "2026-08-13": [
       7,
       1,
@@ -3758,17 +3476,29 @@
       5,
       0
      ],
+     "2026-08-15": [
+      7,
+      0,
+      7,
+      0
+     ],
      "2026-08-16": [
       15,
       6,
       9,
       0
      ],
-     "2026-08-15": [
-      7,
+     "2026-08-17": [
+      4,
       0,
-      7,
+      4,
       0
+     ],
+     "2026-08-18": [
+      5,
+      0,
+      4,
+      1
      ],
      "2026-08-19": [
       7,
@@ -3782,10 +3512,10 @@
       6,
       0
      ],
-     "2026-08-17": [
-      4,
+     "2026-08-21": [
+      5,
       0,
-      4,
+      5,
       0
      ],
      "2026-08-22": [
@@ -3800,11 +3530,17 @@
       9,
       2
      ],
-     "2026-08-18": [
+     "2026-08-26": [
+      11,
+      3,
+      7,
+      1
+     ],
+     "2026-08-12": [
       5,
       0,
-      4,
-      1
+      5,
+      0
      ],
      "2026-08-24": [
       7,
@@ -3817,18 +3553,6 @@
       1,
       4,
       0
-     ],
-     "2026-08-21": [
-      5,
-      0,
-      5,
-      0
-     ],
-     "2026-08-26": [
-      11,
-      3,
-      7,
-      1
      ],
      "2026-09-03": [
       1,
@@ -4028,16 +3752,16 @@
       3,
       0
      ],
-     "2026-08-12": [
-      6,
-      2,
-      4,
-      0
-     ],
      "2026-08-11": [
       3,
       0,
       3,
+      0
+     ],
+     "2026-08-12": [
+      6,
+      2,
+      4,
       0
      ],
      "2026-08-13": [
@@ -4088,6 +3812,12 @@
       3,
       0
      ],
+     "2026-08-21": [
+      5,
+      0,
+      5,
+      0
+     ],
      "2026-08-22": [
       7,
       3,
@@ -4104,12 +3834,6 @@
       5,
       2,
       3,
-      0
-     ],
-     "2026-08-21": [
-      5,
-      0,
-      5,
       0
      ],
      "2026-08-26": [
@@ -4141,18 +3865,6 @@
       4,
       0
      ],
-     "2026-08-10": [
-      2,
-      0,
-      2,
-      0
-     ],
-     "2026-08-11": [
-      6,
-      5,
-      1,
-      0
-     ],
      "2026-08-20": [
       7,
       4,
@@ -4169,6 +3881,18 @@
       9,
       5,
       4,
+      0
+     ],
+     "2026-08-10": [
+      2,
+      0,
+      2,
+      0
+     ],
+     "2026-08-11": [
+      6,
+      5,
+      1,
       0
      ],
      "2026-08-25": [
@@ -4260,16 +3984,16 @@
       4,
       0
      ],
-     "2026-08-14": [
-      9,
-      5,
-      4,
-      0
-     ],
      "2026-08-13": [
       5,
       3,
       2,
+      0
+     ],
+     "2026-08-14": [
+      9,
+      5,
+      4,
       0
      ],
      "2026-08-15": [
@@ -4320,21 +4044,15 @@
       4,
       1
      ],
-     "2026-08-24": [
-      3,
-      0,
-      3,
-      0
-     ],
-     "2026-08-25": [
-      4,
-      2,
-      2,
-      0
-     ],
      "2026-08-26": [
       6,
       3,
+      3,
+      0
+     ],
+     "2026-08-24": [
+      3,
+      0,
       3,
       0
      ],
@@ -4342,6 +4060,12 @@
       7,
       4,
       3,
+      0
+     ],
+     "2026-08-25": [
+      4,
+      2,
+      2,
       0
      ],
      "2026-08-21": [
@@ -4410,6 +4134,12 @@
       2,
       0
      ],
+     "2026-08-14": [
+      4,
+      3,
+      1,
+      0
+     ],
      "2026-08-17": [
       1,
       1,
@@ -4420,12 +4150,6 @@
       5,
       2,
       3,
-      0
-     ],
-     "2026-08-14": [
-      4,
-      3,
-      1,
       0
      ],
      "2026-08-19": [
@@ -4500,6 +4224,24 @@
       0,
       0
      ],
+     "2026-08-13": [
+      2,
+      2,
+      0,
+      0
+     ],
+     "2026-08-14": [
+      1,
+      1,
+      0,
+      0
+     ],
+     "2026-08-15": [
+      5,
+      5,
+      0,
+      0
+     ],
      "2026-08-10": [
       1,
       1,
@@ -4530,27 +4272,15 @@
       0,
       0
      ],
-     "2026-08-13": [
-      2,
-      2,
-      0,
-      0
-     ],
      "2026-08-22": [
       5,
       5,
       0,
       0
      ],
-     "2026-08-14": [
-      1,
-      1,
-      0,
-      0
-     ],
-     "2026-08-15": [
-      5,
-      5,
+     "2026-08-11": [
+      2,
+      2,
       0,
       0
      ],
@@ -4572,22 +4302,16 @@
       1,
       0
      ],
-     "2026-08-11": [
+     "2026-08-25": [
+      5,
+      3,
       2,
-      2,
-      0,
       0
      ],
      "2026-08-18": [
       3,
       2,
       1,
-      0
-     ],
-     "2026-08-25": [
-      5,
-      3,
-      2,
       0
      ],
      "2026-08-20": [
@@ -4644,24 +4368,6 @@
       0,
       0
      ],
-     "2026-08-11": [
-      3,
-      2,
-      1,
-      0
-     ],
-     "2026-08-15": [
-      3,
-      2,
-      1,
-      0
-     ],
-     "2026-08-19": [
-      3,
-      2,
-      1,
-      0
-     ],
      "2026-08-22": [
       5,
       4,
@@ -4674,16 +4380,10 @@
       3,
       1
      ],
-     "2026-08-21": [
-      2,
-      0,
-      2,
-      0
-     ],
-     "2026-08-24": [
+     "2026-08-11": [
       3,
-      0,
-      3,
+      2,
+      1,
       0
      ],
      "2026-08-12": [
@@ -4704,9 +4404,33 @@
       0,
       0
      ],
+     "2026-08-19": [
+      3,
+      2,
+      1,
+      0
+     ],
+     "2026-08-24": [
+      3,
+      0,
+      3,
+      0
+     ],
      "2026-08-26": [
       7,
       5,
+      2,
+      0
+     ],
+     "2026-08-15": [
+      3,
+      2,
+      1,
+      0
+     ],
+     "2026-08-21": [
+      2,
+      0,
       2,
       0
      ],
@@ -4740,28 +4464,28 @@
       3,
       0
      ],
-     "2026-08-13": [
-      8,
-      4,
-      2,
-      2
-     ],
-     "2026-08-14": [
-      5,
-      0,
-      5,
-      0
-     ],
      "2026-08-12": [
       5,
       2,
       3,
       0
      ],
+     "2026-08-13": [
+      8,
+      4,
+      2,
+      2
+     ],
      "2026-08-15": [
       5,
       2,
       3,
+      0
+     ],
+     "2026-08-14": [
+      5,
+      0,
+      5,
       0
      ],
      "2026-08-16": [
@@ -4884,15 +4608,21 @@
       5,
       0
      ],
+     "2026-08-12": [
+      6,
+      4,
+      2,
+      0
+     ],
      "2026-08-14": [
       11,
       6,
       5,
       0
      ],
-     "2026-08-12": [
+     "2026-08-15": [
+      8,
       6,
-      4,
       2,
       0
      ],
@@ -4906,12 +4636,6 @@
       10,
       3,
       7,
-      0
-     ],
-     "2026-08-15": [
-      8,
-      6,
-      2,
       0
      ],
      "2026-08-18": [
@@ -5010,17 +4734,17 @@
       2,
       0
      ],
-     "2026-08-17": [
-      2,
-      1,
-      1,
-      0
-     ],
      "2026-08-16": [
       3,
       0,
       0,
       3
+     ],
+     "2026-08-17": [
+      2,
+      1,
+      1,
+      0
      ],
      "2026-08-18": [
       4,
@@ -5142,10 +4866,10 @@
       0,
       0
      ],
-     "2026-08-11": [
-      2,
+     "2026-08-12": [
+      1,
+      1,
       0,
-      2,
       0
      ],
      "2026-08-13": [
@@ -5153,12 +4877,6 @@
       4,
       5,
       1
-     ],
-     "2026-08-12": [
-      1,
-      1,
-      0,
-      0
      ],
      "2026-08-14": [
       8,
@@ -5237,6 +4955,12 @@
       3,
       3,
       1
+     ],
+     "2026-08-11": [
+      2,
+      0,
+      2,
+      0
      ]
     },
     "missedList": [
