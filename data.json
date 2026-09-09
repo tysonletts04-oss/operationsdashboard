@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-09-08",
-  "generatedAt": "2026-09-09T17:39:11+00:00",
+  "generatedAt": "2026-09-09T20:47:33+00:00",
   "windows": "daily = 8 Sep · WTD = 7–8 Sep · MTD = 1–8 Sep",
   "venues": 27,
   "sources": {
@@ -34,9 +34,9 @@
      "pct": 19.1,
      "budgetPct": null
     },
-    "policies": 95.4,
-    "comms": 78.1,
-    "training": 89.0
+    "policies": 91.9,
+    "comms": 67.5,
+    "training": 84.5
    },
    "Erina Fair": {
     "hopperTemps": 3,
@@ -48,8 +48,8 @@
      "budget": null
     },
     "policies": 93.0,
-    "comms": 72.7,
-    "training": 90.4
+    "comms": 72.8,
+    "training": 89.7
    },
    "Barangaroo": {
     "hopperTemps": 3,
@@ -65,8 +65,8 @@
      "budgetPct": null
     },
     "policies": 93.1,
-    "comms": 72.3,
-    "training": 79.6
+    "comms": 72.5,
+    "training": 79.8
    },
    "Wollongong": {
     "hopperTemps": 3,
@@ -77,9 +77,9 @@
      "actual": 7526,
      "budget": null
     },
-    "policies": 96.6,
-    "comms": 77.4,
-    "training": 81.2
+    "policies": 96.8,
+    "comms": 78.0,
+    "training": 81.0
    },
    "Charlestown": {
     "hopperTemps": 2,
@@ -90,15 +90,15 @@
      "actual": 7185,
      "budget": null
     },
-    "policies": 92.5,
-    "comms": 70.6,
-    "training": 86.4
+    "policies": 92.6,
+    "comms": 71.1,
+    "training": 86.6
    },
    "Rouse Hill": {
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
      "actual": 6484,
      "budget": null
@@ -107,9 +107,9 @@
      "pct": 16.1,
      "budgetPct": null
     },
-    "policies": 96.9,
-    "comms": 86.2,
-    "training": 94.1
+    "policies": 94.5,
+    "comms": 85.1,
+    "training": 93.5
    },
    "Circular Quay": {
     "hopperTemps": 3,
@@ -125,7 +125,7 @@
      "budgetPct": null
     },
     "policies": 98.0,
-    "comms": 82.8,
+    "comms": 83.1,
     "training": 87.1
    },
    "Macquarie": {
@@ -142,7 +142,7 @@
      "budgetPct": null
     },
     "policies": 98.2,
-    "comms": 81.7,
+    "comms": 82.2,
     "training": 85.5
    },
    "Castle Towers": {
@@ -158,8 +158,8 @@
      "pct": 16.0,
      "budgetPct": null
     },
-    "policies": 94.9,
-    "comms": 74.8,
+    "policies": 95.1,
+    "comms": 75.5,
     "training": 90.0
    },
    "Burwood": {
@@ -176,7 +176,7 @@
      "budgetPct": null
     },
     "policies": 98.4,
-    "comms": 77.2,
+    "comms": 74.9,
     "training": 90.3
    },
    "Penrith": {
@@ -193,7 +193,7 @@
      "budgetPct": null
     },
     "policies": 98.1,
-    "comms": 74.5,
+    "comms": 74.8,
     "training": 93.0
    },
    "Manly": {
@@ -226,9 +226,9 @@
      "pct": 17.7,
      "budgetPct": null
     },
-    "policies": 92.2,
-    "comms": 63.3,
-    "training": 82.4
+    "policies": 92.3,
+    "comms": 64.1,
+    "training": 81.9
    },
    "Cronulla": {
     "hopperTemps": 3,
@@ -243,9 +243,9 @@
      "pct": 18.5,
      "budgetPct": null
     },
-    "policies": 96.9,
-    "comms": 63.5,
-    "training": 82.2
+    "policies": 93.3,
+    "comms": 52.6,
+    "training": 80.6
    },
    "Newtown": {
     "hopperTemps": 4,
@@ -260,9 +260,9 @@
      "pct": 18.8,
      "budgetPct": null
     },
-    "policies": 86.7,
-    "comms": 66.9,
-    "training": 83.9
+    "policies": 88.8,
+    "comms": 67.6,
+    "training": 82.9
    },
    "Bondi": {
     "hopperTemps": 3,
@@ -277,9 +277,9 @@
      "pct": 19.3,
      "budgetPct": null
     },
-    "policies": 81.2,
-    "comms": 38.7,
-    "training": 59.6
+    "policies": 81.8,
+    "comms": 39.2,
+    "training": 59.9
    },
    "Coogee": {
     "hopperTemps": 3,
@@ -295,14 +295,14 @@
      "budgetPct": null
     },
     "policies": 96.4,
-    "comms": 78.9,
-    "training": 94.6
+    "comms": 79.2,
+    "training": 94.7
    },
    "Surry Hills": {
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
      "actual": 4776,
      "budget": null
@@ -311,9 +311,9 @@
      "pct": 17.9,
      "budgetPct": null
     },
-    "policies": 87.0,
-    "comms": 58.3,
-    "training": 76.1
+    "policies": 91.7,
+    "comms": 58.9,
+    "training": 76.4
    },
    "Top Ryde": {
     "hopperTemps": 3,
@@ -345,15 +345,15 @@
      "pct": 19.2,
      "budgetPct": null
     },
-    "policies": 94.5,
-    "comms": 64.6,
+    "policies": 94.7,
+    "comms": 66.5,
     "training": 64.9
    },
    "Bondi Junction": {
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 4,
     "sales": {
      "actual": 4178,
      "budget": null
@@ -413,9 +413,9 @@
      "pct": 20.4,
      "budgetPct": null
     },
-    "policies": 92.8,
-    "comms": 65.4,
-    "training": 79.5
+    "policies": 93.7,
+    "comms": 62.7,
+    "training": 79.7
    },
    "Crows Nest": {
     "hopperTemps": 3,
@@ -432,7 +432,7 @@
     },
     "policies": 94.0,
     "comms": 70.4,
-    "training": 80.5
+    "training": 80.9
    },
    "Fish Market": {
     "hopperTemps": 3,
@@ -447,9 +447,9 @@
      "pct": 21.5,
      "budgetPct": null
     },
-    "policies": 90.6,
-    "comms": 47.0,
-    "training": 64.8
+    "policies": 91.7,
+    "comms": 47.5,
+    "training": 65.1
    },
    "Green Hills": {
     "hopperTemps": 3,
@@ -461,8 +461,8 @@
      "budget": null
     },
     "policies": 92.5,
-    "comms": 61.9,
-    "training": 85.0
+    "comms": 62.1,
+    "training": 84.8
    }
   },
   "wtd": {
@@ -479,9 +479,9 @@
      "pct": 19.1,
      "budgetPct": null
     },
-    "policies": 95.4,
-    "comms": 78.1,
-    "training": 89.0
+    "policies": 91.9,
+    "comms": 67.5,
+    "training": 84.5
    },
    "Erina Fair": {
     "hopperTemps": 18,
@@ -493,8 +493,8 @@
      "budget": null
     },
     "policies": 93.0,
-    "comms": 72.7,
-    "training": 90.4
+    "comms": 72.8,
+    "training": 89.7
    },
    "Barangaroo": {
     "hopperTemps": 21,
@@ -510,8 +510,8 @@
      "budgetPct": null
     },
     "policies": 93.1,
-    "comms": 72.3,
-    "training": 79.6
+    "comms": 72.5,
+    "training": 79.8
    },
    "Wollongong": {
     "hopperTemps": 20,
@@ -522,9 +522,9 @@
      "actual": 14426,
      "budget": null
     },
-    "policies": 96.6,
-    "comms": 77.4,
-    "training": 81.2
+    "policies": 96.8,
+    "comms": 78.0,
+    "training": 81.0
    },
    "Charlestown": {
     "hopperTemps": 17,
@@ -535,15 +535,15 @@
      "actual": 14729,
      "budget": null
     },
-    "policies": 92.5,
-    "comms": 70.6,
-    "training": 86.4
+    "policies": 92.6,
+    "comms": 71.1,
+    "training": 86.6
    },
    "Rouse Hill": {
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
      "actual": 13376,
      "budget": null
@@ -552,9 +552,9 @@
      "pct": 16.1,
      "budgetPct": null
     },
-    "policies": 96.9,
-    "comms": 86.2,
-    "training": 94.1
+    "policies": 94.5,
+    "comms": 85.1,
+    "training": 93.5
    },
    "Circular Quay": {
     "hopperTemps": 24,
@@ -570,7 +570,7 @@
      "budgetPct": null
     },
     "policies": 98.0,
-    "comms": 82.8,
+    "comms": 83.1,
     "training": 87.1
    },
    "Macquarie": {
@@ -587,7 +587,7 @@
      "budgetPct": null
     },
     "policies": 98.2,
-    "comms": 81.7,
+    "comms": 82.2,
     "training": 85.5
    },
    "Castle Towers": {
@@ -603,8 +603,8 @@
      "pct": 16.0,
      "budgetPct": null
     },
-    "policies": 94.9,
-    "comms": 74.8,
+    "policies": 95.1,
+    "comms": 75.5,
     "training": 90.0
    },
    "Burwood": {
@@ -621,7 +621,7 @@
      "budgetPct": null
     },
     "policies": 98.4,
-    "comms": 77.2,
+    "comms": 74.9,
     "training": 90.3
    },
    "Penrith": {
@@ -638,7 +638,7 @@
      "budgetPct": null
     },
     "policies": 98.1,
-    "comms": 74.5,
+    "comms": 74.8,
     "training": 93.0
    },
    "Manly": {
@@ -671,9 +671,9 @@
      "pct": 17.7,
      "budgetPct": null
     },
-    "policies": 92.2,
-    "comms": 63.3,
-    "training": 82.4
+    "policies": 92.3,
+    "comms": 64.1,
+    "training": 81.9
    },
    "Cronulla": {
     "hopperTemps": 21,
@@ -688,9 +688,9 @@
      "pct": 18.5,
      "budgetPct": null
     },
-    "policies": 96.9,
-    "comms": 63.5,
-    "training": 82.2
+    "policies": 93.3,
+    "comms": 52.6,
+    "training": 80.6
    },
    "Newtown": {
     "hopperTemps": 27,
@@ -705,9 +705,9 @@
      "pct": 18.8,
      "budgetPct": null
     },
-    "policies": 86.7,
-    "comms": 66.9,
-    "training": 83.9
+    "policies": 88.8,
+    "comms": 67.6,
+    "training": 82.9
    },
    "Bondi": {
     "hopperTemps": 20,
@@ -722,9 +722,9 @@
      "pct": 19.3,
      "budgetPct": null
     },
-    "policies": 81.2,
-    "comms": 38.7,
-    "training": 59.6
+    "policies": 81.8,
+    "comms": 39.2,
+    "training": 59.9
    },
    "Coogee": {
     "hopperTemps": 19,
@@ -740,14 +740,14 @@
      "budgetPct": null
     },
     "policies": 96.4,
-    "comms": 78.9,
-    "training": 94.6
+    "comms": 79.2,
+    "training": 94.7
    },
    "Surry Hills": {
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
      "actual": 9700,
      "budget": null
@@ -756,9 +756,9 @@
      "pct": 17.9,
      "budgetPct": null
     },
-    "policies": 87.0,
-    "comms": 58.3,
-    "training": 76.1
+    "policies": 91.7,
+    "comms": 58.9,
+    "training": 76.4
    },
    "Top Ryde": {
     "hopperTemps": 20,
@@ -790,15 +790,15 @@
      "pct": 19.2,
      "budgetPct": null
     },
-    "policies": 94.5,
-    "comms": 64.6,
+    "policies": 94.7,
+    "comms": 66.5,
     "training": 64.9
    },
    "Bondi Junction": {
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 4,
     "sales": {
      "actual": 8335,
      "budget": null
@@ -858,9 +858,9 @@
      "pct": 20.4,
      "budgetPct": null
     },
-    "policies": 92.8,
-    "comms": 65.4,
-    "training": 79.5
+    "policies": 93.7,
+    "comms": 62.7,
+    "training": 79.7
    },
    "Crows Nest": {
     "hopperTemps": 20,
@@ -877,7 +877,7 @@
     },
     "policies": 94.0,
     "comms": 70.4,
-    "training": 80.5
+    "training": 80.9
    },
    "Fish Market": {
     "hopperTemps": 23,
@@ -892,9 +892,9 @@
      "pct": 21.5,
      "budgetPct": null
     },
-    "policies": 90.6,
-    "comms": 47.0,
-    "training": 64.8
+    "policies": 91.7,
+    "comms": 47.5,
+    "training": 65.1
    },
    "Green Hills": {
     "hopperTemps": 20,
@@ -906,8 +906,8 @@
      "budget": null
     },
     "policies": 92.5,
-    "comms": 61.9,
-    "training": 85.0
+    "comms": 62.1,
+    "training": 84.8
    }
   },
   "mtd": {
@@ -924,9 +924,9 @@
      "pct": 19.1,
      "budgetPct": null
     },
-    "policies": 95.4,
-    "comms": 78.1,
-    "training": 89.0
+    "policies": 91.9,
+    "comms": 67.5,
+    "training": 84.5
    },
    "Erina Fair": {
     "hopperTemps": 18,
@@ -938,8 +938,8 @@
      "budget": null
     },
     "policies": 93.0,
-    "comms": 72.7,
-    "training": 90.4
+    "comms": 72.8,
+    "training": 89.7
    },
    "Barangaroo": {
     "hopperTemps": 21,
@@ -955,8 +955,8 @@
      "budgetPct": null
     },
     "policies": 93.1,
-    "comms": 72.3,
-    "training": 79.6
+    "comms": 72.5,
+    "training": 79.8
    },
    "Wollongong": {
     "hopperTemps": 20,
@@ -967,9 +967,9 @@
      "actual": 102257,
      "budget": null
     },
-    "policies": 96.6,
-    "comms": 77.4,
-    "training": 81.2
+    "policies": 96.8,
+    "comms": 78.0,
+    "training": 81.0
    },
    "Charlestown": {
     "hopperTemps": 17,
@@ -980,15 +980,15 @@
      "actual": 84354,
      "budget": null
     },
-    "policies": 92.5,
-    "comms": 70.6,
-    "training": 86.4
+    "policies": 92.6,
+    "comms": 71.1,
+    "training": 86.6
    },
    "Rouse Hill": {
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
      "actual": 99878,
      "budget": null
@@ -997,9 +997,9 @@
      "pct": 16.1,
      "budgetPct": null
     },
-    "policies": 96.9,
-    "comms": 86.2,
-    "training": 94.1
+    "policies": 94.5,
+    "comms": 85.1,
+    "training": 93.5
    },
    "Circular Quay": {
     "hopperTemps": 24,
@@ -1015,7 +1015,7 @@
      "budgetPct": null
     },
     "policies": 98.0,
-    "comms": 82.8,
+    "comms": 83.1,
     "training": 87.1
    },
    "Macquarie": {
@@ -1032,7 +1032,7 @@
      "budgetPct": null
     },
     "policies": 98.2,
-    "comms": 81.7,
+    "comms": 82.2,
     "training": 85.5
    },
    "Castle Towers": {
@@ -1048,8 +1048,8 @@
      "pct": 16.0,
      "budgetPct": null
     },
-    "policies": 94.9,
-    "comms": 74.8,
+    "policies": 95.1,
+    "comms": 75.5,
     "training": 90.0
    },
    "Burwood": {
@@ -1066,7 +1066,7 @@
      "budgetPct": null
     },
     "policies": 98.4,
-    "comms": 77.2,
+    "comms": 74.9,
     "training": 90.3
    },
    "Penrith": {
@@ -1083,7 +1083,7 @@
      "budgetPct": null
     },
     "policies": 98.1,
-    "comms": 74.5,
+    "comms": 74.8,
     "training": 93.0
    },
    "Manly": {
@@ -1116,9 +1116,9 @@
      "pct": 17.7,
      "budgetPct": null
     },
-    "policies": 92.2,
-    "comms": 63.3,
-    "training": 82.4
+    "policies": 92.3,
+    "comms": 64.1,
+    "training": 81.9
    },
    "Cronulla": {
     "hopperTemps": 21,
@@ -1133,9 +1133,9 @@
      "pct": 18.5,
      "budgetPct": null
     },
-    "policies": 96.9,
-    "comms": 63.5,
-    "training": 82.2
+    "policies": 93.3,
+    "comms": 52.6,
+    "training": 80.6
    },
    "Newtown": {
     "hopperTemps": 27,
@@ -1150,9 +1150,9 @@
      "pct": 18.8,
      "budgetPct": null
     },
-    "policies": 86.7,
-    "comms": 66.9,
-    "training": 83.9
+    "policies": 88.8,
+    "comms": 67.6,
+    "training": 82.9
    },
    "Bondi": {
     "hopperTemps": 20,
@@ -1167,9 +1167,9 @@
      "pct": 19.3,
      "budgetPct": null
     },
-    "policies": 81.2,
-    "comms": 38.7,
-    "training": 59.6
+    "policies": 81.8,
+    "comms": 39.2,
+    "training": 59.9
    },
    "Coogee": {
     "hopperTemps": 19,
@@ -1185,14 +1185,14 @@
      "budgetPct": null
     },
     "policies": 96.4,
-    "comms": 78.9,
-    "training": 94.6
+    "comms": 79.2,
+    "training": 94.7
    },
    "Surry Hills": {
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
      "actual": 59899,
      "budget": null
@@ -1201,9 +1201,9 @@
      "pct": 17.9,
      "budgetPct": null
     },
-    "policies": 87.0,
-    "comms": 58.3,
-    "training": 76.1
+    "policies": 91.7,
+    "comms": 58.9,
+    "training": 76.4
    },
    "Top Ryde": {
     "hopperTemps": 20,
@@ -1235,15 +1235,15 @@
      "pct": 19.2,
      "budgetPct": null
     },
-    "policies": 94.5,
-    "comms": 64.6,
+    "policies": 94.7,
+    "comms": 66.5,
     "training": 64.9
    },
    "Bondi Junction": {
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 4,
     "sales": {
      "actual": 42486,
      "budget": null
@@ -1303,9 +1303,9 @@
      "pct": 20.4,
      "budgetPct": null
     },
-    "policies": 92.8,
-    "comms": 65.4,
-    "training": 79.5
+    "policies": 93.7,
+    "comms": 62.7,
+    "training": 79.7
    },
    "Crows Nest": {
     "hopperTemps": 20,
@@ -1322,7 +1322,7 @@
     },
     "policies": 94.0,
     "comms": 70.4,
-    "training": 80.5
+    "training": 80.9
    },
    "Fish Market": {
     "hopperTemps": 23,
@@ -1337,9 +1337,9 @@
      "pct": 21.5,
      "budgetPct": null
     },
-    "policies": 90.6,
-    "comms": 47.0,
-    "training": 64.8
+    "policies": 91.7,
+    "comms": 47.5,
+    "training": 65.1
    },
    "Green Hills": {
     "hopperTemps": 20,
@@ -1351,8 +1351,8 @@
      "budget": null
     },
     "policies": 92.5,
-    "comms": 61.9,
-    "training": 85.0
+    "comms": 62.1,
+    "training": 84.8
    }
   }
  },
@@ -1880,258 +1880,6 @@
   "windowStart": "2026-08-17",
   "windowEnd": "2026-09-09",
   "venues": {
-   "George St": {
-    "daily": {
-     "2026-08-18": [
-      15,
-      2,
-      13,
-      0
-     ],
-     "2026-08-17": [
-      6,
-      2,
-      4,
-      0
-     ],
-     "2026-08-19": [
-      10,
-      2,
-      8,
-      0
-     ],
-     "2026-08-20": [
-      13,
-      2,
-      10,
-      1
-     ],
-     "2026-08-21": [
-      12,
-      3,
-      9,
-      0
-     ],
-     "2026-08-22": [
-      10,
-      3,
-      7,
-      0
-     ],
-     "2026-08-23": [
-      17,
-      4,
-      12,
-      1
-     ],
-     "2026-08-24": [
-      13,
-      1,
-      11,
-      1
-     ],
-     "2026-08-25": [
-      10,
-      1,
-      9,
-      0
-     ],
-     "2026-08-26": [
-      7,
-      1,
-      6,
-      0
-     ]
-    },
-    "missedList": [
-     {
-      "saleId": "104540382",
-      "date": "2026-08-20",
-      "time": "15:33:03",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "104545467",
-      "date": "2026-08-23",
-      "time": "14:24:06",
-      "bowl": "Go Bowl Tare"
-     },
-     {
-      "saleId": "103547265",
-      "date": "2026-08-24",
-      "time": "16:15:19",
-      "bowl": "RG Bowl Tare"
-     }
-    ]
-   },
-   "Erina Fair": {
-    "daily": {
-     "2026-08-19": [
-      5,
-      5,
-      0,
-      0
-     ],
-     "2026-08-23": [
-      5,
-      4,
-      1,
-      0
-     ],
-     "2026-08-22": [
-      9,
-      3,
-      3,
-      3
-     ],
-     "2026-08-26": [
-      8,
-      7,
-      1,
-      0
-     ],
-     "2026-08-25": [
-      2,
-      0,
-      2,
-      0
-     ],
-     "2026-08-17": [
-      8,
-      8,
-      0,
-      0
-     ],
-     "2026-08-20": [
-      6,
-      6,
-      0,
-      0
-     ],
-     "2026-08-18": [
-      3,
-      3,
-      0,
-      0
-     ],
-     "2026-08-21": [
-      4,
-      3,
-      1,
-      0
-     ],
-     "2026-08-24": [
-      4,
-      4,
-      0,
-      0
-     ]
-    },
-    "missedList": [
-     {
-      "saleId": "106161098",
-      "date": "2026-08-22",
-      "time": "10:02:16",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "106161575",
-      "date": "2026-08-22",
-      "time": "14:47:27",
-      "bowl": "Icy Go Bowl Tare"
-     },
-     {
-      "saleId": "106161576",
-      "date": "2026-08-22",
-      "time": "14:47:50",
-      "bowl": "Icy Go Bowl Tare"
-     }
-    ]
-   },
-   "Barangaroo": {
-    "daily": {
-     "2026-08-17": [
-      6,
-      0,
-      6,
-      0
-     ],
-     "2026-08-18": [
-      7,
-      2,
-      5,
-      0
-     ],
-     "2026-08-19": [
-      5,
-      1,
-      4,
-      0
-     ],
-     "2026-08-20": [
-      10,
-      5,
-      5,
-      0
-     ],
-     "2026-08-21": [
-      8,
-      4,
-      4,
-      0
-     ],
-     "2026-08-22": [
-      8,
-      4,
-      4,
-      0
-     ],
-     "2026-08-24": [
-      5,
-      3,
-      2,
-      0
-     ],
-     "2026-08-26": [
-      6,
-      4,
-      2,
-      0
-     ],
-     "2026-08-27": [
-      8,
-      4,
-      4,
-      0
-     ],
-     "2026-08-25": [
-      4,
-      0,
-      3,
-      1
-     ],
-     "2026-08-23": [
-      4,
-      0,
-      4,
-      0
-     ],
-     "2026-09-07": [
-      1,
-      0,
-      1,
-      0
-     ]
-    },
-    "missedList": [
-     {
-      "saleId": "74590853",
-      "date": "2026-08-25",
-      "time": "18:23:58",
-      "bowl": "Icy Go Bowl Tare"
-     }
-    ]
-   },
    "Wollongong": {
     "daily": {
      "2026-08-17": [
@@ -2211,17 +1959,17 @@
       7,
       0
      ],
-     "2026-08-17": [
-      4,
-      0,
-      4,
-      0
-     ],
      "2026-08-20": [
       19,
       10,
       8,
       1
+     ],
+     "2026-08-17": [
+      4,
+      0,
+      4,
+      0
      ],
      "2026-08-21": [
       14,
@@ -2337,16 +2085,16 @@
       6,
       0
      ],
-     "2026-08-26": [
-      9,
-      3,
-      6,
-      0
-     ],
      "2026-08-25": [
       10,
       6,
       4,
+      0
+     ],
+     "2026-08-26": [
+      9,
+      3,
+      6,
       0
      ]
     },
@@ -2541,17 +2289,17 @@
    },
    "Castle Towers": {
     "daily": {
-     "2026-08-17": [
-      2,
-      0,
-      0,
-      2
-     ],
      "2026-08-19": [
       4,
       1,
       3,
       0
+     ],
+     "2026-08-17": [
+      2,
+      0,
+      0,
+      2
      ],
      "2026-08-18": [
       3,
@@ -2696,12 +2444,6 @@
    },
    "Penrith": {
     "daily": {
-     "2026-08-17": [
-      6,
-      3,
-      3,
-      0
-     ],
      "2026-08-18": [
       6,
       1,
@@ -2712,6 +2454,12 @@
       4,
       3,
       1,
+      0
+     ],
+     "2026-08-17": [
+      6,
+      3,
+      3,
       0
      ],
      "2026-08-20": [
@@ -2738,12 +2486,6 @@
       4,
       0
      ],
-     "2026-08-24": [
-      3,
-      1,
-      2,
-      0
-     ],
      "2026-08-25": [
       3,
       1,
@@ -2761,21 +2503,27 @@
       2,
       5,
       0
+     ],
+     "2026-08-24": [
+      3,
+      1,
+      2,
+      0
      ]
     },
     "missedList": []
    },
    "Manly": {
     "daily": {
-     "2026-08-18": [
-      3,
-      1,
-      2,
-      0
-     ],
      "2026-08-17": [
       2,
       0,
+      2,
+      0
+     ],
+     "2026-08-18": [
+      3,
+      1,
       2,
       0
      ],
@@ -2851,28 +2599,28 @@
       6,
       0
      ],
-     "2026-08-19": [
-      5,
-      1,
-      4,
-      0
-     ],
      "2026-08-20": [
       9,
       2,
       7,
       0
      ],
-     "2026-08-21": [
-      7,
-      2,
+     "2026-08-19": [
       5,
+      1,
+      4,
       0
      ],
      "2026-08-22": [
       17,
       5,
       12,
+      0
+     ],
+     "2026-08-21": [
+      7,
+      2,
+      5,
       0
      ],
      "2026-08-23": [
@@ -2923,6 +2671,18 @@
       2,
       0
      ],
+     "2026-08-20": [
+      2,
+      1,
+      1,
+      0
+     ],
+     "2026-08-24": [
+      7,
+      3,
+      4,
+      0
+     ],
      "2026-08-19": [
       2,
       0,
@@ -2941,27 +2701,9 @@
       4,
       0
      ],
-     "2026-08-24": [
-      7,
-      3,
-      4,
-      0
-     ],
-     "2026-08-20": [
-      2,
-      1,
-      1,
-      0
-     ],
      "2026-08-25": [
       1,
       0,
-      1,
-      0
-     ],
-     "2026-08-26": [
-      5,
-      4,
       1,
       0
      ],
@@ -2969,6 +2711,12 @@
       4,
       4,
       0,
+      0
+     ],
+     "2026-08-26": [
+      5,
+      4,
+      1,
       0
      ]
     },
@@ -3054,15 +2802,21 @@
    },
    "Bondi": {
     "daily": {
+     "2026-08-19": [
+      7,
+      2,
+      4,
+      1
+     ],
      "2026-08-17": [
       4,
       0,
       4,
       0
      ],
-     "2026-08-19": [
-      7,
-      2,
+     "2026-08-18": [
+      5,
+      0,
       4,
       1
      ],
@@ -3071,12 +2825,6 @@
       1,
       6,
       0
-     ],
-     "2026-08-18": [
-      5,
-      0,
-      4,
-      1
      ],
      "2026-08-21": [
       5,
@@ -3162,16 +2910,16 @@
    },
    "Coogee": {
     "daily": {
-     "2026-08-17": [
-      5,
-      1,
-      4,
-      0
-     ],
      "2026-08-18": [
       3,
       0,
       3,
+      0
+     ],
+     "2026-08-17": [
+      5,
+      1,
+      4,
       0
      ],
      "2026-08-19": [
@@ -3258,22 +3006,16 @@
       3,
       0
      ],
-     "2026-08-19": [
-      6,
-      2,
-      4,
-      0
-     ],
      "2026-08-18": [
       3,
       0,
       3,
       0
      ],
-     "2026-08-21": [
-      5,
-      0,
-      5,
+     "2026-08-19": [
+      6,
+      2,
+      4,
       0
      ],
      "2026-08-20": [
@@ -3286,6 +3028,12 @@
       7,
       3,
       4,
+      0
+     ],
+     "2026-08-21": [
+      5,
+      0,
+      5,
       0
      ],
      "2026-08-23": [
@@ -3329,18 +3077,6 @@
       4,
       0
      ],
-     "2026-08-17": [
-      2,
-      0,
-      2,
-      0
-     ],
-     "2026-08-19": [
-      6,
-      3,
-      3,
-      0
-     ],
      "2026-08-20": [
       7,
       4,
@@ -3353,12 +3089,6 @@
       5,
       0
      ],
-     "2026-08-21": [
-      7,
-      5,
-      2,
-      0
-     ],
      "2026-08-25": [
       4,
       1,
@@ -3368,6 +3098,24 @@
      "2026-08-27": [
       4,
       2,
+      2,
+      0
+     ],
+     "2026-08-17": [
+      2,
+      0,
+      2,
+      0
+     ],
+     "2026-08-19": [
+      6,
+      3,
+      3,
+      0
+     ],
+     "2026-08-21": [
+      7,
+      5,
       2,
       0
      ],
@@ -3436,16 +3184,16 @@
       3,
       0
      ],
-     "2026-08-25": [
-      4,
-      2,
-      2,
-      0
-     ],
      "2026-08-27": [
       7,
       4,
       3,
+      0
+     ],
+     "2026-08-25": [
+      4,
+      2,
+      2,
       0
      ],
      "2026-08-21": [
@@ -3490,27 +3238,21 @@
       3,
       0
      ],
-     "2026-08-20": [
-      7,
-      3,
-      4,
-      0
-     ],
      "2026-08-19": [
       5,
       1,
       3,
       1
      ],
+     "2026-08-20": [
+      7,
+      3,
+      4,
+      0
+     ],
      "2026-08-21": [
       4,
       1,
-      3,
-      0
-     ],
-     "2026-08-23": [
-      5,
-      2,
       3,
       0
      ],
@@ -3520,16 +3262,22 @@
       2,
       0
      ],
-     "2026-08-25": [
-      1,
-      1,
-      0,
+     "2026-08-23": [
+      5,
+      2,
+      3,
       0
      ],
      "2026-08-26": [
       6,
       4,
       2,
+      0
+     ],
+     "2026-08-25": [
+      1,
+      1,
+      0,
       0
      ],
      "2026-08-22": [
@@ -3592,6 +3340,12 @@
       1,
       0
      ],
+     "2026-08-25": [
+      5,
+      3,
+      2,
+      0
+     ],
      "2026-08-18": [
       3,
       2,
@@ -3602,12 +3356,6 @@
       1,
       1,
       0,
-      0
-     ],
-     "2026-08-25": [
-      5,
-      3,
-      2,
       0
      ],
      "2026-08-28": [
@@ -3634,6 +3382,18 @@
       1,
       0
      ],
+     "2026-08-21": [
+      2,
+      0,
+      2,
+      0
+     ],
+     "2026-08-23": [
+      5,
+      1,
+      3,
+      1
+     ],
      "2026-08-18": [
       4,
       3,
@@ -3652,16 +3412,10 @@
       1,
       0
      ],
-     "2026-08-23": [
-      5,
-      1,
+     "2026-08-24": [
       3,
-      1
-     ],
-     "2026-08-21": [
-      2,
       0,
-      2,
+      3,
       0
      ],
      "2026-08-17": [
@@ -3670,22 +3424,16 @@
       0,
       0
      ],
-     "2026-08-24": [
-      3,
-      0,
-      3,
+     "2026-08-25": [
+      2,
+      1,
+      1,
       0
      ],
      "2026-08-26": [
       7,
       5,
       2,
-      0
-     ],
-     "2026-08-25": [
-      2,
-      1,
-      1,
       0
      ]
     },
@@ -3862,17 +3610,17 @@
    },
    "Fish Market": {
     "daily": {
-     "2026-08-18": [
-      4,
-      0,
-      2,
-      2
-     ],
      "2026-08-17": [
       2,
       1,
       1,
       0
+     ],
+     "2026-08-18": [
+      4,
+      0,
+      2,
+      2
      ],
      "2026-08-19": [
       2,
