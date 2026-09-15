@@ -1,8 +1,8 @@
 {
  "meta": {
-  "reportDate": "2026-09-13",
-  "generatedAt": "2026-09-15T11:13:34+00:00",
-  "windows": "daily = 13 Sep · WTD = 7–13 Sep · MTD = 1–13 Sep",
+  "reportDate": "2026-09-14",
+  "generatedAt": "2026-09-15T16:26:39+00:00",
+  "windows": "daily = 14 Sep · WTD = 14–14 Sep · MTD = 1–14 Sep",
   "venues": 27,
   "sources": {
    "Sales": "snapshot",
@@ -25,13 +25,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 0,
     "sales": {
-     "actual": 17097,
+     "actual": 14737,
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 8.2,
      "budgetPct": null
     },
     "policies": 92.5,
@@ -42,9 +42,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 2,
     "sales": {
-     "actual": 14705,
+     "actual": 7235,
      "budget": null
     },
     "policies": 92.4,
@@ -55,13 +55,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 0,
     "sales": {
-     "actual": 18107,
+     "actual": 8558,
      "budget": null
     },
     "labour": {
-     "pct": 16.7,
+     "pct": 7.6,
      "budgetPct": null
     },
     "policies": 92.2,
@@ -72,9 +72,9 @@
     "hopperTemps": 3,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 0,
     "sales": {
-     "actual": 18394,
+     "actual": 7666,
      "budget": null
     },
     "policies": 95.9,
@@ -85,9 +85,9 @@
     "hopperTemps": 3,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 0,
     "sales": {
-     "actual": 13650,
+     "actual": 8045,
      "budget": null
     },
     "policies": 92.2,
@@ -98,13 +98,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 1,
     "sales": {
-     "actual": 17776,
+     "actual": 7561,
      "budget": null
     },
     "labour": {
-     "pct": 15.8,
+     "pct": 6.9,
      "budgetPct": null
     },
     "policies": 91.8,
@@ -115,13 +115,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 12962,
+     "actual": 9911,
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 7.1,
      "budgetPct": null
     },
     "policies": 97.8,
@@ -132,13 +132,13 @@
     "hopperTemps": 3,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 2,
     "sales": {
-     "actual": 11519,
+     "actual": 6947,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 6.5,
      "budgetPct": null
     },
     "policies": 98.8,
@@ -149,13 +149,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 18,
+    "reviews": 0,
     "sales": {
-     "actual": 14651,
+     "actual": 5607,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 6.9,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -166,13 +166,13 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 10,
+    "reviews": 1,
     "sales": {
-     "actual": 13264,
+     "actual": 9064,
      "budget": null
     },
     "labour": {
-     "pct": 15.6,
+     "pct": 6.7,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -183,13 +183,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 18,
+    "reviews": 1,
     "sales": {
-     "actual": 11941,
+     "actual": 6043,
      "budget": null
     },
     "labour": {
-     "pct": 15.7,
+     "pct": 7.1,
      "budgetPct": null
     },
     "policies": 98.3,
@@ -200,13 +200,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 19,
+    "reviews": 0,
     "sales": {
-     "actual": 17438,
+     "actual": 9153,
      "budget": null
     },
     "labour": {
-     "pct": 15.6,
+     "pct": 6.7,
      "budgetPct": null
     },
     "policies": 94.7,
@@ -217,13 +217,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 0,
     "sales": {
-     "actual": 13970,
+     "actual": 5583,
      "budget": null
     },
     "labour": {
-     "pct": 16.4,
+     "pct": 8.0,
      "budgetPct": null
     },
     "policies": 92.9,
@@ -234,13 +234,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 16,
+    "reviews": 1,
     "sales": {
-     "actual": 16823,
+     "actual": 6192,
      "budget": null
     },
     "labour": {
-     "pct": 19.0,
+     "pct": 8.4,
      "budgetPct": null
     },
     "policies": 90.1,
@@ -251,13 +251,13 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 2,
     "sales": {
-     "actual": 11516,
+     "actual": 7330,
      "budget": null
     },
     "labour": {
-     "pct": 17.9,
+     "pct": 6.5,
      "budgetPct": null
     },
     "policies": 89.3,
@@ -268,13 +268,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 7,
+    "reviews": 1,
     "sales": {
-     "actual": 14365,
+     "actual": 7247,
      "budget": null
     },
     "labour": {
-     "pct": 19.4,
+     "pct": 9.0,
      "budgetPct": null
     },
     "policies": 80.4,
@@ -285,13 +285,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 0,
     "sales": {
-     "actual": 14651,
+     "actual": 6984,
      "budget": null
     },
     "labour": {
-     "pct": 14.9,
+     "pct": 7.6,
      "budgetPct": null
     },
     "policies": 95.3,
@@ -302,13 +302,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 26,
+    "reviews": 0,
     "sales": {
-     "actual": 7636,
+     "actual": 4877,
      "budget": null
     },
     "labour": {
-     "pct": 17.4,
+     "pct": 7.4,
      "budgetPct": null
     },
     "policies": 91.6,
@@ -319,13 +319,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 0,
     "sales": {
-     "actual": 6962,
+     "actual": 3345,
      "budget": null
     },
     "labour": {
-     "pct": 17.1,
+     "pct": 8.5,
      "budgetPct": null
     },
     "policies": 97.3,
@@ -336,13 +336,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 13,
+    "reviews": 0,
     "sales": {
-     "actual": 7693,
+     "actual": 4168,
      "budget": null
     },
     "labour": {
-     "pct": 20.8,
+     "pct": 9.6,
      "budgetPct": null
     },
     "policies": 93.8,
@@ -353,13 +353,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 0,
     "sales": {
-     "actual": 8109,
+     "actual": 4498,
      "budget": null
     },
     "labour": {
-     "pct": 21.1,
+     "pct": 8.9,
      "budgetPct": null
     },
     "policies": 82.7,
@@ -370,13 +370,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 19,
+    "reviews": 2,
     "sales": {
-     "actual": 7002,
+     "actual": 3813,
      "budget": null
     },
     "labour": {
-     "pct": 17.7,
+     "pct": 8.0,
      "budgetPct": null
     },
     "policies": 85.5,
@@ -387,13 +387,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 0,
     "sales": {
-     "actual": 7776,
+     "actual": 3862,
      "budget": null
     },
     "labour": {
-     "pct": 19.7,
+     "pct": 8.8,
      "budgetPct": null
     },
     "policies": 65.5,
@@ -404,13 +404,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 0,
     "sales": {
-     "actual": 5453,
+     "actual": 7648,
      "budget": null
     },
     "labour": {
-     "pct": 20.3,
+     "pct": 9.0,
      "budgetPct": null
     },
     "policies": 90.7,
@@ -421,13 +421,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 21,
+    "reviews": 1,
     "sales": {
-     "actual": 8654,
+     "actual": 5185,
      "budget": null
     },
     "labour": {
-     "pct": 18.0,
+     "pct": 8.3,
      "budgetPct": null
     },
     "policies": 92.5,
@@ -438,13 +438,13 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 6569,
+     "actual": 2480,
      "budget": null
     },
     "labour": {
-     "pct": 24.9,
+     "pct": 10.8,
      "budgetPct": null
     },
     "policies": 90.8,
@@ -455,9 +455,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 0,
     "sales": {
-     "actual": 11235,
+     "actual": 5555,
      "budget": null
     },
     "policies": 92.3,
@@ -470,13 +470,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 0,
     "sales": {
-     "actual": 110826,
+     "actual": 14737,
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 8.2,
      "budgetPct": null
     },
     "policies": 92.5,
@@ -487,9 +487,9 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 2,
     "sales": {
-     "actual": 79404,
+     "actual": 7235,
      "budget": null
     },
     "policies": 92.4,
@@ -500,13 +500,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 0,
     "sales": {
-     "actual": 92541,
+     "actual": 8558,
      "budget": null
     },
     "labour": {
-     "pct": 16.7,
+     "pct": 7.6,
      "budgetPct": null
     },
     "policies": 92.2,
@@ -517,9 +517,9 @@
     "hopperTemps": 21,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 0,
     "sales": {
-     "actual": 88099,
+     "actual": 7666,
      "budget": null
     },
     "policies": 95.9,
@@ -530,9 +530,9 @@
     "hopperTemps": 19,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 0,
     "sales": {
-     "actual": 73542,
+     "actual": 8045,
      "budget": null
     },
     "policies": 92.2,
@@ -543,13 +543,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 1,
     "sales": {
-     "actual": 81182,
+     "actual": 7561,
      "budget": null
     },
     "labour": {
-     "pct": 15.8,
+     "pct": 6.9,
      "budgetPct": null
     },
     "policies": 91.8,
@@ -560,13 +560,13 @@
     "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 74755,
+     "actual": 9911,
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 7.1,
      "budgetPct": null
     },
     "policies": 97.8,
@@ -577,13 +577,13 @@
     "hopperTemps": 20,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 2,
     "sales": {
-     "actual": 66238,
+     "actual": 6947,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 6.5,
      "budgetPct": null
     },
     "policies": 98.8,
@@ -594,13 +594,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 18,
+    "reviews": 0,
     "sales": {
-     "actual": 68707,
+     "actual": 5607,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 6.9,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -611,13 +611,13 @@
     "hopperTemps": 26,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 10,
+    "reviews": 1,
     "sales": {
-     "actual": 70098,
+     "actual": 9064,
      "budget": null
     },
     "labour": {
-     "pct": 15.6,
+     "pct": 6.7,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -628,13 +628,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 18,
+    "reviews": 1,
     "sales": {
-     "actual": 67076,
+     "actual": 6043,
      "budget": null
     },
     "labour": {
-     "pct": 15.7,
+     "pct": 7.1,
      "budgetPct": null
     },
     "policies": 98.3,
@@ -645,13 +645,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 19,
+    "reviews": 0,
     "sales": {
-     "actual": 72937,
+     "actual": 9153,
      "budget": null
     },
     "labour": {
-     "pct": 15.6,
+     "pct": 6.7,
      "budgetPct": null
     },
     "policies": 94.7,
@@ -662,13 +662,13 @@
     "hopperTemps": 18,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 0,
     "sales": {
-     "actual": 68212,
+     "actual": 5583,
      "budget": null
     },
     "labour": {
-     "pct": 16.4,
+     "pct": 8.0,
      "budgetPct": null
     },
     "policies": 92.9,
@@ -679,13 +679,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 16,
+    "reviews": 1,
     "sales": {
-     "actual": 64832,
+     "actual": 6192,
      "budget": null
     },
     "labour": {
-     "pct": 19.0,
+     "pct": 8.4,
      "budgetPct": null
     },
     "policies": 90.1,
@@ -696,13 +696,13 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 2,
     "sales": {
-     "actual": 60589,
+     "actual": 7330,
      "budget": null
     },
     "labour": {
-     "pct": 17.9,
+     "pct": 6.5,
      "budgetPct": null
     },
     "policies": 89.3,
@@ -713,13 +713,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 7,
+    "reviews": 1,
     "sales": {
-     "actual": 56558,
+     "actual": 7247,
      "budget": null
     },
     "labour": {
-     "pct": 19.4,
+     "pct": 9.0,
      "budgetPct": null
     },
     "policies": 80.4,
@@ -730,13 +730,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 0,
     "sales": {
-     "actual": 60630,
+     "actual": 6984,
      "budget": null
     },
     "labour": {
-     "pct": 14.9,
+     "pct": 7.6,
      "budgetPct": null
     },
     "policies": 95.3,
@@ -747,13 +747,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 26,
+    "reviews": 0,
     "sales": {
-     "actual": 47146,
+     "actual": 4877,
      "budget": null
     },
     "labour": {
-     "pct": 17.4,
+     "pct": 7.4,
      "budgetPct": null
     },
     "policies": 91.6,
@@ -764,13 +764,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 0,
     "sales": {
-     "actual": 32076,
+     "actual": 3345,
      "budget": null
     },
     "labour": {
-     "pct": 17.1,
+     "pct": 8.5,
      "budgetPct": null
     },
     "policies": 97.3,
@@ -781,13 +781,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 13,
+    "reviews": 0,
     "sales": {
-     "actual": 35640,
+     "actual": 4168,
      "budget": null
     },
     "labour": {
-     "pct": 20.8,
+     "pct": 9.6,
      "budgetPct": null
     },
     "policies": 93.8,
@@ -798,13 +798,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 0,
     "sales": {
-     "actual": 36878,
+     "actual": 4498,
      "budget": null
     },
     "labour": {
-     "pct": 21.1,
+     "pct": 8.9,
      "budgetPct": null
     },
     "policies": 82.7,
@@ -815,13 +815,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 19,
+    "reviews": 2,
     "sales": {
-     "actual": 35067,
+     "actual": 3813,
      "budget": null
     },
     "labour": {
-     "pct": 17.7,
+     "pct": 8.0,
      "budgetPct": null
     },
     "policies": 85.5,
@@ -832,13 +832,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 0,
     "sales": {
-     "actual": 35667,
+     "actual": 3862,
      "budget": null
     },
     "labour": {
-     "pct": 19.7,
+     "pct": 8.8,
      "budgetPct": null
     },
     "policies": 65.5,
@@ -849,13 +849,13 @@
     "hopperTemps": 22,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 0,
     "sales": {
-     "actual": 52634,
+     "actual": 7648,
      "budget": null
     },
     "labour": {
-     "pct": 20.3,
+     "pct": 9.0,
      "budgetPct": null
     },
     "policies": 90.7,
@@ -866,13 +866,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 21,
+    "reviews": 1,
     "sales": {
-     "actual": 46277,
+     "actual": 5185,
      "budget": null
     },
     "labour": {
-     "pct": 18.0,
+     "pct": 8.3,
      "budgetPct": null
     },
     "policies": 92.5,
@@ -883,13 +883,13 @@
     "hopperTemps": 26,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 25473,
+     "actual": 2480,
      "budget": null
     },
     "labour": {
-     "pct": 24.9,
+     "pct": 10.8,
      "budgetPct": null
     },
     "policies": 90.8,
@@ -900,9 +900,9 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 0,
     "sales": {
-     "actual": 64360,
+     "actual": 5555,
      "budget": null
     },
     "policies": 92.3,
@@ -915,13 +915,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 0,
     "sales": {
-     "actual": 217555,
+     "actual": 232292,
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 8.2,
      "budgetPct": null
     },
     "policies": 92.5,
@@ -932,9 +932,9 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 2,
     "sales": {
-     "actual": 150968,
+     "actual": 158204,
      "budget": null
     },
     "policies": 92.4,
@@ -945,13 +945,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 7,
+    "reviews": 0,
     "sales": {
-     "actual": 197145,
+     "actual": 205704,
      "budget": null
     },
     "labour": {
-     "pct": 16.7,
+     "pct": 7.6,
      "budgetPct": null
     },
     "policies": 92.2,
@@ -962,9 +962,9 @@
     "hopperTemps": 21,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 0,
     "sales": {
-     "actual": 175930,
+     "actual": 183597,
      "budget": null
     },
     "policies": 95.9,
@@ -975,9 +975,9 @@
     "hopperTemps": 19,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 0,
     "sales": {
-     "actual": 143167,
+     "actual": 151212,
      "budget": null
     },
     "policies": 92.2,
@@ -988,13 +988,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 1,
     "sales": {
-     "actual": 167685,
+     "actual": 175246,
      "budget": null
     },
     "labour": {
-     "pct": 15.8,
+     "pct": 6.9,
      "budgetPct": null
     },
     "policies": 91.8,
@@ -1005,13 +1005,13 @@
     "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 0,
     "sales": {
-     "actual": 148928,
+     "actual": 158838,
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 7.1,
      "budgetPct": null
     },
     "policies": 97.8,
@@ -1022,13 +1022,13 @@
     "hopperTemps": 20,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 2,
     "sales": {
-     "actual": 129714,
+     "actual": 136661,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 6.5,
      "budgetPct": null
     },
     "policies": 98.8,
@@ -1039,13 +1039,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 18,
+    "reviews": 0,
     "sales": {
-     "actual": 139651,
+     "actual": 145258,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 6.9,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -1056,13 +1056,13 @@
     "hopperTemps": 26,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 10,
+    "reviews": 1,
     "sales": {
-     "actual": 139659,
+     "actual": 148723,
      "budget": null
     },
     "labour": {
-     "pct": 15.6,
+     "pct": 6.7,
      "budgetPct": null
     },
     "policies": 95.9,
@@ -1073,13 +1073,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 18,
+    "reviews": 1,
     "sales": {
-     "actual": 127700,
+     "actual": 133743,
      "budget": null
     },
     "labour": {
-     "pct": 15.7,
+     "pct": 7.1,
      "budgetPct": null
     },
     "policies": 98.3,
@@ -1090,13 +1090,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 19,
+    "reviews": 0,
     "sales": {
-     "actual": 151581,
+     "actual": 160734,
      "budget": null
     },
     "labour": {
-     "pct": 15.6,
+     "pct": 6.7,
      "budgetPct": null
     },
     "policies": 94.7,
@@ -1107,13 +1107,13 @@
     "hopperTemps": 18,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 0,
     "sales": {
-     "actual": 131579,
+     "actual": 137161,
      "budget": null
     },
     "labour": {
-     "pct": 16.4,
+     "pct": 8.0,
      "budgetPct": null
     },
     "policies": 92.9,
@@ -1124,13 +1124,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 16,
+    "reviews": 1,
     "sales": {
-     "actual": 142592,
+     "actual": 148784,
      "budget": null
     },
     "labour": {
-     "pct": 19.0,
+     "pct": 8.4,
      "budgetPct": null
     },
     "policies": 90.1,
@@ -1141,13 +1141,13 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 2,
     "sales": {
-     "actual": 119387,
+     "actual": 126717,
      "budget": null
     },
     "labour": {
-     "pct": 17.9,
+     "pct": 6.5,
      "budgetPct": null
     },
     "policies": 89.3,
@@ -1158,13 +1158,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 7,
+    "reviews": 1,
     "sales": {
-     "actual": 120462,
+     "actual": 127708,
      "budget": null
     },
     "labour": {
-     "pct": 19.4,
+     "pct": 9.0,
      "budgetPct": null
     },
     "policies": 80.4,
@@ -1175,13 +1175,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 0,
     "sales": {
-     "actual": 132996,
+     "actual": 139980,
      "budget": null
     },
     "labour": {
-     "pct": 14.9,
+     "pct": 7.6,
      "budgetPct": null
     },
     "policies": 95.3,
@@ -1192,13 +1192,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 26,
+    "reviews": 0,
     "sales": {
-     "actual": 97345,
+     "actual": 102221,
      "budget": null
     },
     "labour": {
-     "pct": 17.4,
+     "pct": 7.4,
      "budgetPct": null
     },
     "policies": 91.6,
@@ -1209,13 +1209,13 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 0,
     "sales": {
-     "actual": 70849,
+     "actual": 74194,
      "budget": null
     },
     "labour": {
-     "pct": 17.1,
+     "pct": 8.5,
      "budgetPct": null
     },
     "policies": 97.3,
@@ -1226,13 +1226,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 13,
+    "reviews": 0,
     "sales": {
-     "actual": 71490,
+     "actual": 75658,
      "budget": null
     },
     "labour": {
-     "pct": 20.8,
+     "pct": 9.6,
      "budgetPct": null
     },
     "policies": 93.8,
@@ -1243,13 +1243,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 0,
     "sales": {
-     "actual": 71029,
+     "actual": 75527,
      "budget": null
     },
     "labour": {
-     "pct": 21.1,
+     "pct": 8.9,
      "budgetPct": null
     },
     "policies": 82.7,
@@ -1260,13 +1260,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 19,
+    "reviews": 2,
     "sales": {
-     "actual": 66753,
+     "actual": 70565,
      "budget": null
     },
     "labour": {
-     "pct": 17.7,
+     "pct": 8.0,
      "budgetPct": null
     },
     "policies": 85.5,
@@ -1277,13 +1277,13 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 0,
     "sales": {
-     "actual": 70971,
+     "actual": 74834,
      "budget": null
     },
     "labour": {
-     "pct": 19.7,
+     "pct": 8.8,
      "budgetPct": null
     },
     "policies": 65.5,
@@ -1294,13 +1294,13 @@
     "hopperTemps": 22,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 12,
+    "reviews": 0,
     "sales": {
-     "actual": 107596,
+     "actual": 115244,
      "budget": null
     },
     "labour": {
-     "pct": 20.3,
+     "pct": 9.0,
      "budgetPct": null
     },
     "policies": 90.7,
@@ -1311,13 +1311,13 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 21,
+    "reviews": 1,
     "sales": {
-     "actual": 94266,
+     "actual": 99450,
      "budget": null
     },
     "labour": {
-     "pct": 18.0,
+     "pct": 8.3,
      "budgetPct": null
     },
     "policies": 92.5,
@@ -1328,13 +1328,13 @@
     "hopperTemps": 26,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 2,
+    "reviews": 0,
     "sales": {
-     "actual": 58835,
+     "actual": 61315,
      "budget": null
     },
     "labour": {
-     "pct": 24.9,
+     "pct": 10.8,
      "budgetPct": null
     },
     "policies": 90.8,
@@ -1345,9 +1345,9 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 0,
     "sales": {
-     "actual": 124069,
+     "actual": 129623,
      "budget": null
     },
     "policies": 92.3,
@@ -1365,13 +1365,13 @@
    "Co-Chi Bowl Tare"
   ],
   "discountName": "Reusable 10% Off",
-  "windowStart": "2026-09-07",
-  "windowEnd": "2026-09-13",
-  "window": "7 Sep – 13 Sep",
+  "windowStart": "2026-09-14",
+  "windowEnd": "2026-09-14",
+  "window": "14 Sep",
   "totals": {
-   "reusable": 2,
+   "reusable": 1,
    "discounted": 0,
-   "otherDisc": 2,
+   "otherDisc": 1,
    "missed": 0,
    "pct": null
   },
@@ -1393,9 +1393,9 @@
     "missedList": []
    },
    "Barangaroo": {
-    "reusable": 2,
+    "reusable": 0,
     "discounted": 0,
-    "otherDisc": 2,
+    "otherDisc": 0,
     "missed": 0,
     "pct": null,
     "missedList": []
@@ -1497,9 +1497,9 @@
     "missedList": []
    },
    "Bondi": {
-    "reusable": 0,
+    "reusable": 1,
     "discounted": 0,
-    "otherDisc": 0,
+    "otherDisc": 1,
     "missed": 0,
     "pct": null,
     "missedList": []
@@ -1941,17 +1941,17 @@
       2,
       0
      ],
-     "2026-08-25": [
-      4,
-      0,
-      3,
-      1
-     ],
      "2026-08-26": [
       6,
       4,
       2,
       0
+     ],
+     "2026-08-25": [
+      4,
+      0,
+      3,
+      1
      ],
      "2026-08-27": [
       8,
@@ -2048,16 +2048,16 @@
       6,
       0
      ],
-     "2026-08-26": [
-      9,
-      3,
-      6,
-      0
-     ],
      "2026-08-25": [
       10,
       6,
       4,
+      0
+     ],
+     "2026-08-26": [
+      9,
+      3,
+      6,
       0
      ]
     },
@@ -2224,16 +2224,16 @@
       1,
       1
      ],
-     "2026-08-25": [
-      7,
-      2,
-      5,
-      0
-     ],
      "2026-08-26": [
       5,
       2,
       3,
+      0
+     ],
+     "2026-08-25": [
+      7,
+      2,
+      5,
       0
      ]
     },
@@ -2330,12 +2330,6 @@
    },
    "Bondi": {
     "daily": {
-     "2026-08-26": [
-      11,
-      3,
-      7,
-      1
-     ],
      "2026-08-24": [
       7,
       1,
@@ -2347,6 +2341,12 @@
       1,
       4,
       0
+     ],
+     "2026-08-26": [
+      11,
+      3,
+      7,
+      1
      ],
      "2026-09-03": [
       1,
@@ -2472,16 +2472,16 @@
       3,
       0
      ],
-     "2026-08-25": [
-      4,
-      2,
-      2,
-      0
-     ],
      "2026-08-26": [
       6,
       3,
       3,
+      0
+     ],
+     "2026-08-25": [
+      4,
+      2,
+      2,
       0
      ],
      "2026-08-27": [
@@ -2671,16 +2671,16 @@
    },
    "Green Hills": {
     "daily": {
-     "2026-08-25": [
-      11,
-      7,
-      4,
-      0
-     ],
      "2026-08-24": [
       2,
       1,
       1,
+      0
+     ],
+     "2026-08-25": [
+      11,
+      7,
+      4,
       0
      ],
      "2026-08-26": [
