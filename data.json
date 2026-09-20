@@ -1,8 +1,8 @@
 {
  "meta": {
-  "reportDate": "2026-09-18",
-  "generatedAt": "2026-09-19T19:23:24+00:00",
-  "windows": "daily = 18 Sep · WTD = 14–18 Sep · MTD = 1–18 Sep",
+  "reportDate": "2026-09-20",
+  "generatedAt": "2026-09-20T14:33:18+00:00",
+  "windows": "daily = 20 Sep · WTD = 14–20 Sep · MTD = 1–20 Sep",
   "venues": 27,
   "sources": {
    "Sales": "snapshot",
@@ -27,11 +27,11 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 19142,
+     "actual": 224,
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 18.5,
      "budgetPct": null
     },
     "policies": 94.4,
@@ -39,12 +39,12 @@
     "training": 85.7
    },
    "Erina Fair": {
-    "hopperTemps": 3,
+    "hopperTemps": 2,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
-     "actual": 13488,
+     "actual": 633,
      "budget": null
     },
     "policies": 93.6,
@@ -57,11 +57,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 18092,
+     "actual": 598,
      "budget": null
     },
     "labour": {
-     "pct": 17.5,
+     "pct": 17.1,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -70,11 +70,11 @@
    },
    "Wollongong": {
     "hopperTemps": 3,
-    "calibrations": "missed",
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
-     "actual": 14908,
+     "actual": 289,
      "budget": null
     },
     "policies": 96.4,
@@ -82,12 +82,12 @@
     "training": 81.4
    },
    "Charlestown": {
-    "hopperTemps": 3,
-    "calibrations": "missed",
+    "hopperTemps": 2,
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
-     "actual": 12027,
+     "actual": 434,
      "budget": null
     },
     "policies": 85.4,
@@ -98,13 +98,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
-     "actual": 15804,
+     "actual": 188,
      "budget": null
     },
     "labour": {
-     "pct": 17.0,
+     "pct": 16.6,
      "budgetPct": null
     },
     "policies": 94.4,
@@ -113,15 +113,15 @@
    },
    "Circular Quay": {
     "hopperTemps": 3,
-    "calibrations": "complete",
+    "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 15,
     "sales": {
-     "actual": 13498,
+     "actual": 482,
      "budget": null
     },
     "labour": {
-     "pct": 17.0,
+     "pct": 16.7,
      "budgetPct": null
     },
     "policies": 97.9,
@@ -134,11 +134,11 @@
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 9639,
+     "actual": 162,
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 15.4,
      "budgetPct": null
     },
     "policies": 98.8,
@@ -148,14 +148,14 @@
    "Castle Towers": {
     "hopperTemps": 3,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 5,
+    "correctiveA": "none",
+    "reviews": 9,
     "sales": {
-     "actual": 12429,
+     "actual": 117,
      "budget": null
     },
     "labour": {
-     "pct": 16.3,
+     "pct": 15.7,
      "budgetPct": null
     },
     "policies": 94.3,
@@ -165,14 +165,14 @@
    "Burwood": {
     "hopperTemps": 4,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 6,
+    "correctiveA": "none",
+    "reviews": 12,
     "sales": {
-     "actual": 10901,
+     "actual": 276,
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 15.5,
      "budgetPct": null
     },
     "policies": 96.5,
@@ -185,11 +185,11 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 11037,
+     "actual": 266,
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 15.7,
      "budgetPct": null
     },
     "policies": 98.3,
@@ -202,11 +202,11 @@
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 13856,
+     "actual": 1232,
      "budget": null
     },
     "labour": {
-     "pct": 15.6,
+     "pct": 15.3,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -219,11 +219,11 @@
     "correctiveA": "none",
     "reviews": 0,
     "sales": {
-     "actual": 11309,
+     "actual": 199,
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 95.5,
@@ -234,13 +234,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 8,
     "sales": {
-     "actual": 12191,
+     "actual": 358,
      "budget": null
     },
     "labour": {
-     "pct": 19.9,
+     "pct": 19.0,
      "budgetPct": null
     },
     "policies": 92.2,
@@ -251,13 +251,13 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 6,
     "sales": {
-     "actual": 10833,
+     "actual": 0,
      "budget": null
     },
     "labour": {
-     "pct": 18.1,
+     "pct": 18.2,
      "budgetPct": null
     },
     "policies": 89.7,
@@ -267,14 +267,14 @@
    "Bondi": {
     "hopperTemps": 3,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 4,
+    "correctiveA": "none",
+    "reviews": 5,
     "sales": {
-     "actual": 9339,
+     "actual": 219,
      "budget": null
     },
     "labour": {
-     "pct": 21.7,
+     "pct": 20.9,
      "budgetPct": null
     },
     "policies": 79.4,
@@ -285,13 +285,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 3,
     "sales": {
-     "actual": 10771,
+     "actual": 524,
      "budget": null
     },
     "labour": {
-     "pct": 15.2,
+     "pct": 14.9,
      "budgetPct": null
     },
     "policies": 93.5,
@@ -302,13 +302,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 12,
     "sales": {
-     "actual": 8520,
+     "actual": 0,
      "budget": null
     },
     "labour": {
-     "pct": 17.4,
+     "pct": 17.1,
      "budgetPct": null
     },
     "policies": 91.4,
@@ -321,11 +321,11 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 6505,
+     "actual": 82,
      "budget": null
     },
     "labour": {
-     "pct": 17.6,
+     "pct": 17.5,
      "budgetPct": null
     },
     "policies": 97.8,
@@ -338,11 +338,11 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 6669,
+     "actual": 0,
      "budget": null
     },
     "labour": {
-     "pct": 20.6,
+     "pct": 20.3,
      "budgetPct": null
     },
     "policies": 88.2,
@@ -355,11 +355,11 @@
     "correctiveA": "none",
     "reviews": 7,
     "sales": {
-     "actual": 6782,
+     "actual": 121,
      "budget": null
     },
     "labour": {
-     "pct": 21.8,
+     "pct": 21.1,
      "budgetPct": null
     },
     "policies": 84.0,
@@ -372,11 +372,11 @@
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 6794,
+     "actual": 148,
      "budget": null
     },
     "labour": {
-     "pct": 18.5,
+     "pct": 18.2,
      "budgetPct": null
     },
     "policies": 86.7,
@@ -386,14 +386,14 @@
    "Double Bay": {
     "hopperTemps": 3,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 4,
+    "correctiveA": "ok",
+    "reviews": 6,
     "sales": {
-     "actual": 6786,
+     "actual": 194,
      "budget": null
     },
     "labour": {
-     "pct": 20.2,
+     "pct": 19.7,
      "budgetPct": null
     },
     "policies": 65.0,
@@ -403,14 +403,14 @@
    "Chippendale": {
     "hopperTemps": 3,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 1,
+    "correctiveA": "ok",
+    "reviews": 8,
     "sales": {
-     "actual": 9756,
+     "actual": 0,
      "budget": null
     },
     "labour": {
-     "pct": 19.6,
+     "pct": 20.0,
      "budgetPct": null
     },
     "policies": 93.0,
@@ -421,13 +421,13 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 6,
     "sales": {
-     "actual": 8789,
+     "actual": 67,
      "budget": null
     },
     "labour": {
-     "pct": 18.7,
+     "pct": 18.4,
      "budgetPct": null
     },
     "policies": 94.0,
@@ -435,16 +435,16 @@
     "training": 81.4
    },
    "Fish Market": {
-    "hopperTemps": 4,
+    "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "ok",
     "reviews": 2,
     "sales": {
-     "actual": 3551,
+     "actual": 110,
      "budget": null
     },
     "labour": {
-     "pct": 28.5,
+     "pct": 27.6,
      "budgetPct": null
     },
     "policies": 91.3,
@@ -455,9 +455,9 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 24,
     "sales": {
-     "actual": 10731,
+     "actual": 437,
      "budget": null
     },
     "policies": 93.3,
@@ -467,16 +467,16 @@
   },
   "wtd": {
    "George St": {
-    "hopperTemps": 19,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 76284,
+     "actual": 98732,
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 18.5,
      "budgetPct": null
     },
     "policies": 94.4,
@@ -484,12 +484,12 @@
     "training": 85.7
    },
    "Erina Fair": {
-    "hopperTemps": 20,
+    "hopperTemps": 17,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
-     "actual": 49905,
+     "actual": 67356,
      "budget": null
     },
     "policies": 93.6,
@@ -502,11 +502,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 56076,
+     "actual": 82308,
      "budget": null
     },
     "labour": {
-     "pct": 17.5,
+     "pct": 17.1,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -514,12 +514,12 @@
     "training": 80.2
    },
    "Wollongong": {
-    "hopperTemps": 21,
-    "calibrations": "missed",
+    "hopperTemps": 20,
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
-     "actual": 55119,
+     "actual": 77223,
      "budget": null
     },
     "policies": 96.4,
@@ -527,12 +527,12 @@
     "training": 81.4
    },
    "Charlestown": {
-    "hopperTemps": 19,
-    "calibrations": "missed",
+    "hopperTemps": 16,
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
-     "actual": 45110,
+     "actual": 62465,
      "budget": null
     },
     "policies": 85.4,
@@ -540,16 +540,16 @@
     "training": 81.1
    },
    "Rouse Hill": {
-    "hopperTemps": 20,
+    "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
-     "actual": 51367,
+     "actual": 71936,
      "budget": null
     },
     "labour": {
-     "pct": 17.0,
+     "pct": 16.6,
      "budgetPct": null
     },
     "policies": 94.4,
@@ -558,15 +558,15 @@
    },
    "Circular Quay": {
     "hopperTemps": 23,
-    "calibrations": "complete",
+    "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 15,
     "sales": {
-     "actual": 50132,
+     "actual": 66175,
      "budget": null
     },
     "labour": {
-     "pct": 17.0,
+     "pct": 16.7,
      "budgetPct": null
     },
     "policies": 97.9,
@@ -574,16 +574,16 @@
     "training": 87.0
    },
    "Macquarie": {
-    "hopperTemps": 20,
+    "hopperTemps": 19,
     "calibrations": "missed",
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 42158,
+     "actual": 55311,
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 15.4,
      "budgetPct": null
     },
     "policies": 98.8,
@@ -591,16 +591,16 @@
     "training": 86.3
    },
    "Castle Towers": {
-    "hopperTemps": 19,
+    "hopperTemps": 21,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 5,
+    "correctiveA": "none",
+    "reviews": 9,
     "sales": {
-     "actual": 39571,
+     "actual": 56291,
      "budget": null
     },
     "labour": {
-     "pct": 16.3,
+     "pct": 15.7,
      "budgetPct": null
     },
     "policies": 94.3,
@@ -608,16 +608,16 @@
     "training": 88.2
    },
    "Burwood": {
-    "hopperTemps": 26,
+    "hopperTemps": 28,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 6,
+    "correctiveA": "none",
+    "reviews": 12,
     "sales": {
-     "actual": 45155,
+     "actual": 61298,
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 15.5,
      "budgetPct": null
     },
     "policies": 96.5,
@@ -630,11 +630,11 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 40110,
+     "actual": 55896,
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 15.7,
      "budgetPct": null
     },
     "policies": 98.3,
@@ -642,16 +642,16 @@
     "training": 93.0
    },
    "Manly": {
-    "hopperTemps": 21,
+    "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 45731,
+     "actual": 68021,
      "budget": null
     },
     "labour": {
-     "pct": 15.6,
+     "pct": 15.3,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -664,11 +664,11 @@
     "correctiveA": "none",
     "reviews": 0,
     "sales": {
-     "actual": 36771,
+     "actual": 54081,
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 95.5,
@@ -676,16 +676,16 @@
     "training": 82.4
    },
    "Cronulla": {
-    "hopperTemps": 20,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 8,
     "sales": {
-     "actual": 35826,
+     "actual": 56419,
      "budget": null
     },
     "labour": {
-     "pct": 19.9,
+     "pct": 19.0,
      "budgetPct": null
     },
     "policies": 92.2,
@@ -696,13 +696,13 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 6,
     "sales": {
-     "actual": 39913,
+     "actual": 52898,
      "budget": null
     },
     "labour": {
-     "pct": 18.1,
+     "pct": 18.2,
      "budgetPct": null
     },
     "policies": 89.7,
@@ -712,14 +712,14 @@
    "Bondi": {
     "hopperTemps": 20,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 4,
+    "correctiveA": "none",
+    "reviews": 5,
     "sales": {
-     "actual": 32527,
+     "actual": 48201,
      "budget": null
     },
     "labour": {
-     "pct": 21.7,
+     "pct": 20.9,
      "budgetPct": null
     },
     "policies": 79.4,
@@ -727,16 +727,16 @@
     "training": 56.8
    },
    "Coogee": {
-    "hopperTemps": 20,
+    "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 3,
     "sales": {
-     "actual": 36669,
+     "actual": 53050,
      "budget": null
     },
     "labour": {
-     "pct": 15.2,
+     "pct": 14.9,
      "budgetPct": null
     },
     "policies": 93.5,
@@ -744,16 +744,16 @@
     "training": 92.0
    },
    "Surry Hills": {
-    "hopperTemps": 19,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 12,
     "sales": {
-     "actual": 30809,
+     "actual": 42272,
      "budget": null
     },
     "labour": {
-     "pct": 17.4,
+     "pct": 17.1,
      "budgetPct": null
     },
     "policies": 91.4,
@@ -761,16 +761,16 @@
     "training": 77.7
    },
    "Top Ryde": {
-    "hopperTemps": 19,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 19848,
+     "actual": 28216,
      "budget": null
     },
     "labour": {
-     "pct": 17.6,
+     "pct": 17.5,
      "budgetPct": null
     },
     "policies": 97.8,
@@ -778,16 +778,16 @@
     "training": 91.9
    },
    "Randwick": {
-    "hopperTemps": 21,
+    "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 24861,
+     "actual": 33416,
      "budget": null
     },
     "labour": {
-     "pct": 20.6,
+     "pct": 20.3,
      "budgetPct": null
     },
     "policies": 88.2,
@@ -800,11 +800,11 @@
     "correctiveA": "none",
     "reviews": 7,
     "sales": {
-     "actual": 26623,
+     "actual": 35054,
      "budget": null
     },
     "labour": {
-     "pct": 21.8,
+     "pct": 21.1,
      "budgetPct": null
     },
     "policies": 84.0,
@@ -812,16 +812,16 @@
     "training": 67.4
    },
    "Lane Cove": {
-    "hopperTemps": 20,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 21983,
+     "actual": 29721,
      "budget": null
     },
     "labour": {
-     "pct": 18.5,
+     "pct": 18.2,
      "budgetPct": null
     },
     "policies": 86.7,
@@ -829,16 +829,16 @@
     "training": 77.1
    },
    "Double Bay": {
-    "hopperTemps": 20,
+    "hopperTemps": 24,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 4,
+    "correctiveA": "ok",
+    "reviews": 6,
     "sales": {
-     "actual": 24725,
+     "actual": 33038,
      "budget": null
     },
     "labour": {
-     "pct": 20.2,
+     "pct": 19.7,
      "budgetPct": null
     },
     "policies": 65.0,
@@ -846,16 +846,16 @@
     "training": 57.3
    },
    "Chippendale": {
-    "hopperTemps": 22,
+    "hopperTemps": 20,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 1,
+    "correctiveA": "ok",
+    "reviews": 8,
     "sales": {
-     "actual": 44166,
+     "actual": 50563,
      "budget": null
     },
     "labour": {
-     "pct": 19.6,
+     "pct": 20.0,
      "budgetPct": null
     },
     "policies": 93.0,
@@ -863,16 +863,16 @@
     "training": 79.7
    },
    "Crows Nest": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 6,
     "sales": {
-     "actual": 27718,
+     "actual": 38505,
      "budget": null
     },
     "labour": {
-     "pct": 18.7,
+     "pct": 18.4,
      "budgetPct": null
     },
     "policies": 94.0,
@@ -880,16 +880,16 @@
     "training": 81.4
    },
    "Fish Market": {
-    "hopperTemps": 26,
+    "hopperTemps": 22,
     "calibrations": "complete",
     "correctiveA": "ok",
     "reviews": 2,
     "sales": {
-     "actual": 12386,
+     "actual": 20575,
      "budget": null
     },
     "labour": {
-     "pct": 28.5,
+     "pct": 27.6,
      "budgetPct": null
     },
     "policies": 91.3,
@@ -897,12 +897,12 @@
     "training": 64.7
    },
    "Green Hills": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 24,
     "sales": {
-     "actual": 40395,
+     "actual": 54567,
      "budget": null
     },
     "policies": 93.3,
@@ -912,16 +912,16 @@
   },
   "mtd": {
    "George St": {
-    "hopperTemps": 19,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 293783,
+     "actual": 316231,
      "budget": null
     },
     "labour": {
-     "pct": 18.8,
+     "pct": 18.5,
      "budgetPct": null
     },
     "policies": 94.4,
@@ -929,12 +929,12 @@
     "training": 85.7
    },
    "Erina Fair": {
-    "hopperTemps": 20,
+    "hopperTemps": 17,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
-     "actual": 200778,
+     "actual": 218230,
      "budget": null
     },
     "policies": 93.6,
@@ -947,11 +947,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 253165,
+     "actual": 279398,
      "budget": null
     },
     "labour": {
-     "pct": 17.5,
+     "pct": 17.1,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -959,12 +959,12 @@
     "training": 80.2
    },
    "Wollongong": {
-    "hopperTemps": 21,
-    "calibrations": "missed",
+    "hopperTemps": 20,
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
-     "actual": 231023,
+     "actual": 253127,
      "budget": null
     },
     "policies": 96.4,
@@ -972,12 +972,12 @@
     "training": 81.4
    },
    "Charlestown": {
-    "hopperTemps": 19,
-    "calibrations": "missed",
+    "hopperTemps": 16,
+    "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
-     "actual": 188210,
+     "actual": 205565,
      "budget": null
     },
     "policies": 85.4,
@@ -985,16 +985,16 @@
     "training": 81.1
    },
    "Rouse Hill": {
-    "hopperTemps": 20,
+    "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 2,
     "sales": {
-     "actual": 218989,
+     "actual": 239559,
      "budget": null
     },
     "labour": {
-     "pct": 17.0,
+     "pct": 16.6,
      "budgetPct": null
     },
     "policies": 94.4,
@@ -1003,15 +1003,15 @@
    },
    "Circular Quay": {
     "hopperTemps": 23,
-    "calibrations": "complete",
+    "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 15,
     "sales": {
-     "actual": 199030,
+     "actual": 215073,
      "budget": null
     },
     "labour": {
-     "pct": 17.0,
+     "pct": 16.7,
      "budgetPct": null
     },
     "policies": 97.9,
@@ -1019,16 +1019,16 @@
     "training": 87.0
    },
    "Macquarie": {
-    "hopperTemps": 20,
+    "hopperTemps": 19,
     "calibrations": "missed",
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 171828,
+     "actual": 184981,
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 15.4,
      "budgetPct": null
     },
     "policies": 98.8,
@@ -1036,16 +1036,16 @@
     "training": 86.3
    },
    "Castle Towers": {
-    "hopperTemps": 19,
+    "hopperTemps": 21,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 5,
+    "correctiveA": "none",
+    "reviews": 9,
     "sales": {
-     "actual": 179195,
+     "actual": 195914,
      "budget": null
     },
     "labour": {
-     "pct": 16.3,
+     "pct": 15.7,
      "budgetPct": null
     },
     "policies": 94.3,
@@ -1053,16 +1053,16 @@
     "training": 88.2
    },
    "Burwood": {
-    "hopperTemps": 26,
+    "hopperTemps": 28,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 6,
+    "correctiveA": "none",
+    "reviews": 12,
     "sales": {
-     "actual": 184781,
+     "actual": 200925,
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 15.5,
      "budgetPct": null
     },
     "policies": 96.5,
@@ -1075,11 +1075,11 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 167810,
+     "actual": 183596,
      "budget": null
     },
     "labour": {
-     "pct": 15.9,
+     "pct": 15.7,
      "budgetPct": null
     },
     "policies": 98.3,
@@ -1087,16 +1087,16 @@
     "training": 93.0
    },
    "Manly": {
-    "hopperTemps": 21,
+    "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 197287,
+     "actual": 219577,
      "budget": null
     },
     "labour": {
-     "pct": 15.6,
+     "pct": 15.3,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -1109,11 +1109,11 @@
     "correctiveA": "none",
     "reviews": 0,
     "sales": {
-     "actual": 168337,
+     "actual": 185647,
      "budget": null
     },
     "labour": {
-     "pct": 16.6,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 95.5,
@@ -1121,16 +1121,16 @@
     "training": 82.4
    },
    "Cronulla": {
-    "hopperTemps": 20,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 8,
     "sales": {
-     "actual": 178419,
+     "actual": 199011,
      "budget": null
     },
     "labour": {
-     "pct": 19.9,
+     "pct": 19.0,
      "budgetPct": null
     },
     "policies": 92.2,
@@ -1141,13 +1141,13 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 6,
     "sales": {
-     "actual": 159300,
+     "actual": 172285,
      "budget": null
     },
     "labour": {
-     "pct": 18.1,
+     "pct": 18.2,
      "budgetPct": null
     },
     "policies": 89.7,
@@ -1157,14 +1157,14 @@
    "Bondi": {
     "hopperTemps": 20,
     "calibrations": "complete",
-    "correctiveA": "ok",
-    "reviews": 4,
+    "correctiveA": "none",
+    "reviews": 5,
     "sales": {
-     "actual": 152915,
+     "actual": 168589,
      "budget": null
     },
     "labour": {
-     "pct": 21.7,
+     "pct": 20.9,
      "budgetPct": null
     },
     "policies": 79.4,
@@ -1172,16 +1172,16 @@
     "training": 56.8
    },
    "Coogee": {
-    "hopperTemps": 20,
+    "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 1,
+    "reviews": 3,
     "sales": {
-     "actual": 169665,
+     "actual": 186046,
      "budget": null
     },
     "labour": {
-     "pct": 15.2,
+     "pct": 14.9,
      "budgetPct": null
     },
     "policies": 93.5,
@@ -1189,16 +1189,16 @@
     "training": 92.0
    },
    "Surry Hills": {
-    "hopperTemps": 19,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 12,
     "sales": {
-     "actual": 128154,
+     "actual": 139616,
      "budget": null
     },
     "labour": {
-     "pct": 17.4,
+     "pct": 17.1,
      "budgetPct": null
     },
     "policies": 91.4,
@@ -1206,16 +1206,16 @@
     "training": 77.7
    },
    "Top Ryde": {
-    "hopperTemps": 19,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 90649,
+     "actual": 99016,
      "budget": null
     },
     "labour": {
-     "pct": 17.6,
+     "pct": 17.5,
      "budgetPct": null
     },
     "policies": 97.8,
@@ -1223,16 +1223,16 @@
     "training": 91.9
    },
    "Randwick": {
-    "hopperTemps": 21,
+    "hopperTemps": 23,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 96351,
+     "actual": 104906,
      "budget": null
     },
     "labour": {
-     "pct": 20.6,
+     "pct": 20.3,
      "budgetPct": null
     },
     "policies": 88.2,
@@ -1245,11 +1245,11 @@
     "correctiveA": "none",
     "reviews": 7,
     "sales": {
-     "actual": 97652,
+     "actual": 106083,
      "budget": null
     },
     "labour": {
-     "pct": 21.8,
+     "pct": 21.1,
      "budgetPct": null
     },
     "policies": 84.0,
@@ -1257,16 +1257,16 @@
     "training": 67.4
    },
    "Lane Cove": {
-    "hopperTemps": 20,
+    "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 88723,
+     "actual": 96462,
      "budget": null
     },
     "labour": {
-     "pct": 18.5,
+     "pct": 18.2,
      "budgetPct": null
     },
     "policies": 86.7,
@@ -1274,16 +1274,16 @@
     "training": 77.1
    },
    "Double Bay": {
-    "hopperTemps": 20,
+    "hopperTemps": 24,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 4,
+    "correctiveA": "ok",
+    "reviews": 6,
     "sales": {
-     "actual": 95644,
+     "actual": 103957,
      "budget": null
     },
     "labour": {
-     "pct": 20.2,
+     "pct": 19.7,
      "budgetPct": null
     },
     "policies": 65.0,
@@ -1291,16 +1291,16 @@
     "training": 57.3
    },
    "Chippendale": {
-    "hopperTemps": 22,
+    "hopperTemps": 20,
     "calibrations": "complete",
-    "correctiveA": "none",
-    "reviews": 1,
+    "correctiveA": "ok",
+    "reviews": 8,
     "sales": {
-     "actual": 151739,
+     "actual": 158136,
      "budget": null
     },
     "labour": {
-     "pct": 19.6,
+     "pct": 20.0,
      "budgetPct": null
     },
     "policies": 93.0,
@@ -1308,16 +1308,16 @@
     "training": 79.7
    },
    "Crows Nest": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 5,
+    "reviews": 6,
     "sales": {
-     "actual": 121966,
+     "actual": 132753,
      "budget": null
     },
     "labour": {
-     "pct": 18.7,
+     "pct": 18.4,
      "budgetPct": null
     },
     "policies": 94.0,
@@ -1325,16 +1325,16 @@
     "training": 81.4
    },
    "Fish Market": {
-    "hopperTemps": 26,
+    "hopperTemps": 22,
     "calibrations": "complete",
     "correctiveA": "ok",
     "reviews": 2,
     "sales": {
-     "actual": 71188,
+     "actual": 79377,
      "budget": null
     },
     "labour": {
-     "pct": 28.5,
+     "pct": 27.6,
      "budgetPct": null
     },
     "policies": 91.3,
@@ -1342,12 +1342,12 @@
     "training": 64.7
    },
    "Green Hills": {
-    "hopperTemps": 21,
+    "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 11,
+    "reviews": 24,
     "sales": {
-     "actual": 164437,
+     "actual": 178609,
      "budget": null
     },
     "policies": 93.3,
@@ -1366,8 +1366,8 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-09-14",
-  "windowEnd": "2026-09-18",
-  "window": "14 Sep – 18 Sep",
+  "windowEnd": "2026-09-20",
+  "window": "14 Sep – 20 Sep",
   "totals": {
    "reusable": 1,
    "discounted": 0,
@@ -1941,6 +1941,12 @@
       2,
       0
      ],
+     "2026-08-25": [
+      4,
+      0,
+      3,
+      1
+     ],
      "2026-08-26": [
       6,
       4,
@@ -1952,12 +1958,6 @@
       4,
       4,
       0
-     ],
-     "2026-08-25": [
-      4,
-      0,
-      3,
-      1
      ],
      "2026-09-07": [
       1,
@@ -2136,12 +2136,6 @@
       3,
       0
      ],
-     "2026-08-27": [
-      2,
-      1,
-      1,
-      0
-     ],
      "2026-08-25": [
       6,
       2,
@@ -2151,6 +2145,12 @@
      "2026-08-26": [
       5,
       4,
+      1,
+      0
+     ],
+     "2026-08-27": [
+      2,
+      1,
       1,
       0
      ]
@@ -2189,12 +2189,6 @@
    },
    "Penrith": {
     "daily": {
-     "2026-08-26": [
-      8,
-      3,
-      5,
-      0
-     ],
      "2026-08-25": [
       3,
       1,
@@ -2211,6 +2205,12 @@
       3,
       1,
       2,
+      0
+     ],
+     "2026-08-26": [
+      8,
+      3,
+      5,
       0
      ]
     },
@@ -2248,11 +2248,11 @@
    },
    "Chatswood": {
     "daily": {
-     "2026-08-24": [
-      8,
-      1,
-      7,
-      0
+     "2026-08-25": [
+      5,
+      0,
+      4,
+      1
      ],
      "2026-08-26": [
       5,
@@ -2260,11 +2260,11 @@
       5,
       0
      ],
-     "2026-08-25": [
-      5,
-      0,
-      4,
-      1
+     "2026-08-24": [
+      8,
+      1,
+      7,
+      0
      ]
     },
     "missedList": [
@@ -2330,17 +2330,17 @@
    },
    "Bondi": {
     "daily": {
-     "2026-08-25": [
-      5,
-      1,
-      4,
-      0
-     ],
      "2026-08-24": [
       7,
       1,
       5,
       1
+     ],
+     "2026-08-25": [
+      5,
+      1,
+      4,
+      0
      ],
      "2026-08-26": [
       11,
@@ -2378,6 +2378,12 @@
    },
    "Coogee": {
     "daily": {
+     "2026-08-24": [
+      6,
+      2,
+      4,
+      0
+     ],
      "2026-08-25": [
       12,
       6,
@@ -2388,12 +2394,6 @@
       8,
       2,
       6,
-      0
-     ],
-     "2026-08-24": [
-      6,
-      2,
-      4,
       0
      ]
     },
@@ -2420,16 +2420,16 @@
       3,
       0
      ],
-     "2026-08-26": [
-      5,
-      0,
-      5,
-      0
-     ],
      "2026-08-25": [
       3,
       0,
       3,
+      0
+     ],
+     "2026-08-26": [
+      5,
+      0,
+      5,
       0
      ]
     },
@@ -2466,12 +2466,6 @@
    },
    "Randwick": {
     "daily": {
-     "2026-08-24": [
-      3,
-      0,
-      3,
-      0
-     ],
      "2026-08-26": [
       6,
       3,
@@ -2482,6 +2476,12 @@
       4,
       2,
       2,
+      0
+     ],
+     "2026-08-24": [
+      3,
+      0,
+      3,
       0
      ],
      "2026-08-27": [
@@ -2495,10 +2495,10 @@
    },
    "Bondi Junction": {
     "daily": {
-     "2026-08-26": [
-      6,
-      4,
-      2,
+     "2026-08-25": [
+      1,
+      1,
+      0,
       0
      ],
      "2026-08-24": [
@@ -2507,10 +2507,10 @@
       2,
       0
      ],
-     "2026-08-25": [
-      1,
-      1,
-      0,
+     "2026-08-26": [
+      6,
+      4,
+      2,
       0
      ]
     },
@@ -2547,16 +2547,16 @@
    },
    "Double Bay": {
     "daily": {
-     "2026-08-25": [
-      2,
-      1,
-      1,
-      0
-     ],
      "2026-08-24": [
       3,
       0,
       3,
+      0
+     ],
+     "2026-08-25": [
+      2,
+      1,
+      1,
       0
      ],
      "2026-08-26": [
@@ -2576,15 +2576,15 @@
       5,
       0
      ],
-     "2026-08-26": [
-      22,
-      14,
-      8,
-      0
-     ],
      "2026-08-25": [
       10,
       2,
+      8,
+      0
+     ],
+     "2026-08-26": [
+      22,
+      14,
       8,
       0
      ]
@@ -2593,6 +2593,12 @@
    },
    "Crows Nest": {
     "daily": {
+     "2026-08-24": [
+      8,
+      3,
+      5,
+      0
+     ],
      "2026-08-25": [
       8,
       4,
@@ -2604,12 +2610,6 @@
       5,
       5,
       1
-     ],
-     "2026-08-24": [
-      8,
-      3,
-      5,
-      0
      ],
      "2026-08-27": [
       6,
