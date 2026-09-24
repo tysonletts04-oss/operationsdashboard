@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-09-23",
-  "generatedAt": "2026-09-24T18:16:02+00:00",
+  "generatedAt": "2026-09-24T22:02:10+00:00",
   "windows": "daily = 23 Sep · WTD = 21–23 Sep · MTD = 1–23 Sep",
   "venues": 27,
   "sources": {
@@ -166,7 +166,7 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 4,
     "sales": {
      "actual": 8313,
      "budget": null
@@ -183,7 +183,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 7,
     "sales": {
      "actual": 7761,
      "budget": null
@@ -285,7 +285,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 1,
     "sales": {
      "actual": 5721,
      "budget": null
@@ -302,7 +302,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
      "actual": 6095,
      "budget": null
@@ -387,7 +387,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 4806,
      "budget": null
@@ -404,7 +404,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
      "actual": 6604,
      "budget": null
@@ -611,7 +611,7 @@
     "hopperTemps": 28,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 4,
     "sales": {
      "actual": 21170,
      "budget": null
@@ -628,7 +628,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 7,
     "sales": {
      "actual": 19996,
      "budget": null
@@ -730,7 +730,7 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 1,
     "sales": {
      "actual": 14806,
      "budget": null
@@ -747,7 +747,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
      "actual": 13886,
      "budget": null
@@ -832,7 +832,7 @@
     "hopperTemps": 24,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 11788,
      "budget": null
@@ -849,7 +849,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
      "actual": 17375,
      "budget": null
@@ -1056,7 +1056,7 @@
     "hopperTemps": 28,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 4,
     "sales": {
      "actual": 236938,
      "budget": null
@@ -1073,7 +1073,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 7,
     "sales": {
      "actual": 217120,
      "budget": null
@@ -1175,7 +1175,7 @@
     "hopperTemps": 19,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 1,
     "sales": {
      "actual": 216160,
      "budget": null
@@ -1192,7 +1192,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
      "actual": 162730,
      "budget": null
@@ -1277,7 +1277,7 @@
     "hopperTemps": 24,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 124872,
      "budget": null
@@ -1294,7 +1294,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
      "actual": 182064,
      "budget": null
@@ -1891,13 +1891,13 @@
    },
    "Bondi": {
     "daily": {
-     "2026-09-03": [
+     "2026-09-14": [
       1,
       0,
       1,
       0
      ],
-     "2026-09-14": [
+     "2026-09-03": [
       1,
       0,
       1,
