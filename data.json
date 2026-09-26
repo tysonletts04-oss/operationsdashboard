@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-09-25",
-  "generatedAt": "2026-09-26T18:24:53+00:00",
+  "generatedAt": "2026-09-26T21:53:55+00:00",
   "windows": "daily = 25 Sep · WTD = 21–25 Sep · MTD = 1–25 Sep",
   "venues": 27,
   "sources": {
@@ -55,7 +55,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
      "actual": 19685,
      "budget": null
@@ -183,7 +183,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 17,
+    "reviews": 18,
     "sales": {
      "actual": 10768,
      "budget": null
@@ -251,7 +251,7 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 11,
     "sales": {
      "actual": 10186,
      "budget": null
@@ -302,7 +302,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 13,
+    "reviews": 15,
     "sales": {
      "actual": 10550,
      "budget": null
@@ -500,7 +500,7 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
      "actual": 57773,
      "budget": null
@@ -628,7 +628,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 17,
+    "reviews": 18,
     "sales": {
      "actual": 41099,
      "budget": null
@@ -696,7 +696,7 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 11,
     "sales": {
      "actual": 39950,
      "budget": null
@@ -747,7 +747,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 13,
+    "reviews": 15,
     "sales": {
      "actual": 31632,
      "budget": null
@@ -945,7 +945,7 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 7,
     "sales": {
      "actual": 359055,
      "budget": null
@@ -1073,7 +1073,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 17,
+    "reviews": 18,
     "sales": {
      "actual": 238222,
      "budget": null
@@ -1141,7 +1141,7 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 11,
     "sales": {
      "actual": 223434,
      "budget": null
@@ -1192,7 +1192,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 13,
+    "reviews": 15,
     "sales": {
      "actual": 180475,
      "budget": null
@@ -1604,8 +1604,8 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-09-21",
-  "windowEnd": "2026-09-26",
-  "window": "21 Sep – 26 Sep",
+  "windowEnd": "2026-09-27",
+  "window": "21 Sep – 27 Sep",
   "totals": {
    "reusable": 0,
    "discounted": 0,
@@ -1870,7 +1870,7 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-08-31",
-  "windowEnd": "2026-09-26",
+  "windowEnd": "2026-09-27",
   "venues": {
    "Barangaroo": {
     "daily": {
