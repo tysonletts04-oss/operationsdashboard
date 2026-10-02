@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-10-01",
-  "generatedAt": "2026-10-02T19:02:50+00:00",
+  "generatedAt": "2026-10-02T23:06:52+00:00",
   "windows": "daily = 1 Oct · WTD = 28 Sep–1 Oct · MTD = 1–1 Oct",
   "venues": 27,
   "sources": {
@@ -183,7 +183,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 1,
     "sales": {
      "actual": 12294,
      "budget": null
@@ -234,7 +234,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 25,
+    "reviews": 24,
     "sales": {
      "actual": 18637,
      "budget": null
@@ -251,7 +251,7 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
      "actual": 9338,
      "budget": null
@@ -285,7 +285,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 13615,
      "budget": null
@@ -628,7 +628,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 1,
     "sales": {
      "actual": 44477,
      "budget": null
@@ -679,7 +679,7 @@
     "hopperTemps": 22,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 25,
+    "reviews": 24,
     "sales": {
      "actual": 54541,
      "budget": null
@@ -696,7 +696,7 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
      "actual": 33623,
      "budget": null
@@ -730,7 +730,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 45678,
      "budget": null
@@ -1073,7 +1073,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 1,
     "sales": {
      "actual": 12294,
      "budget": null
@@ -1124,7 +1124,7 @@
     "hopperTemps": 22,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 25,
+    "reviews": 24,
     "sales": {
      "actual": 18637,
      "budget": null
@@ -1141,7 +1141,7 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
      "actual": 9338,
      "budget": null
@@ -1175,7 +1175,7 @@
     "hopperTemps": 20,
     "calibrations": "complete",
     "correctiveA": "ok",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 13615,
      "budget": null
