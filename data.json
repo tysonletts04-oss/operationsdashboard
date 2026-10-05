@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-10-04",
-  "generatedAt": "2026-10-05T18:07:34+00:00",
+  "generatedAt": "2026-10-05T23:59:37+00:00",
   "windows": "daily = 4 Oct · WTD = 28 Sep–4 Oct · MTD = 1–4 Oct",
   "venues": 27,
   "sources": {
@@ -42,7 +42,7 @@
     "hopperTemps": 2,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
      "actual": 12855,
      "budget": null
@@ -78,7 +78,7 @@
      "budget": null
     },
     "policies": 94.5,
-    "comms": 74.3,
+    "comms": 74.6,
     "training": 80.5
    },
    "Charlestown": {
@@ -108,7 +108,7 @@
      "budgetPct": null
     },
     "policies": 92.2,
-    "comms": 85.3,
+    "comms": 85.6,
     "training": 92.6
    },
    "Circular Quay": {
@@ -126,7 +126,7 @@
     },
     "policies": 94.9,
     "comms": 75.2,
-    "training": 83.5
+    "training": 84.2
    },
    "Macquarie": {
     "hopperTemps": 3,
@@ -142,8 +142,8 @@
      "budgetPct": null
     },
     "policies": 83.3,
-    "comms": 56.3,
-    "training": 68.3
+    "comms": 57.0,
+    "training": 69.7
    },
    "Castle Towers": {
     "hopperTemps": 3,
@@ -176,8 +176,8 @@
      "budgetPct": null
     },
     "policies": 95.9,
-    "comms": 69.5,
-    "training": 88.0
+    "comms": 69.2,
+    "training": 88.1
    },
    "Penrith": {
     "hopperTemps": 3,
@@ -210,7 +210,7 @@
      "budgetPct": null
     },
     "policies": 96.2,
-    "comms": 74.3,
+    "comms": 74.4,
     "training": 82.1
    },
    "Chatswood": {
@@ -227,8 +227,8 @@
      "budgetPct": null
     },
     "policies": 96.0,
-    "comms": 71.5,
-    "training": 81.3
+    "comms": 72.0,
+    "training": 81.5
    },
    "Cronulla": {
     "hopperTemps": 3,
@@ -244,14 +244,14 @@
      "budgetPct": null
     },
     "policies": 89.7,
-    "comms": 54.9,
+    "comms": 55.4,
     "training": 79.3
    },
    "Newtown": {
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 11,
     "sales": {
      "actual": 11057,
      "budget": null
@@ -278,8 +278,8 @@
      "budgetPct": null
     },
     "policies": 75.4,
-    "comms": 29.3,
-    "training": 51.7
+    "comms": 28.3,
+    "training": 50.5
    },
    "Coogee": {
     "hopperTemps": 3,
@@ -295,8 +295,8 @@
      "budgetPct": null
     },
     "policies": 89.7,
-    "comms": 73.0,
-    "training": 89.4
+    "comms": 73.2,
+    "training": 89.5
    },
    "Surry Hills": {
     "hopperTemps": 3,
@@ -312,7 +312,7 @@
      "budgetPct": null
     },
     "policies": 88.7,
-    "comms": 51.0,
+    "comms": 51.7,
     "training": 73.5
    },
    "Top Ryde": {
@@ -370,7 +370,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 2,
     "sales": {
      "actual": 5785,
      "budget": null
@@ -380,7 +380,7 @@
      "budgetPct": null
     },
     "policies": 92.5,
-    "comms": 63.5,
+    "comms": 64.0,
     "training": 79.0
    },
    "Double Bay": {
@@ -415,7 +415,7 @@
     },
     "policies": 91.7,
     "comms": 62.6,
-    "training": 76.6
+    "training": 77.1
    },
    "Crows Nest": {
     "hopperTemps": 3,
@@ -431,7 +431,7 @@
      "budgetPct": null
     },
     "policies": 95.0,
-    "comms": 73.6,
+    "comms": 74.0,
     "training": 82.6
    },
    "Fish Market": {
@@ -448,7 +448,7 @@
      "budgetPct": null
     },
     "policies": 95.3,
-    "comms": 55.2,
+    "comms": 56.4,
     "training": 66.7
    },
    "Green Hills": {
@@ -461,7 +461,7 @@
      "budget": null
     },
     "policies": 92.8,
-    "comms": 68.8,
+    "comms": 69.0,
     "training": 86.7
    }
   },
@@ -487,7 +487,7 @@
     "hopperTemps": 16,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
      "actual": 106807,
      "budget": null
@@ -523,7 +523,7 @@
      "budget": null
     },
     "policies": 94.5,
-    "comms": 74.3,
+    "comms": 74.6,
     "training": 80.5
    },
    "Charlestown": {
@@ -553,7 +553,7 @@
      "budgetPct": null
     },
     "policies": 92.2,
-    "comms": 85.3,
+    "comms": 85.6,
     "training": 92.6
    },
    "Circular Quay": {
@@ -571,7 +571,7 @@
     },
     "policies": 94.9,
     "comms": 75.2,
-    "training": 83.5
+    "training": 84.2
    },
    "Macquarie": {
     "hopperTemps": 21,
@@ -587,8 +587,8 @@
      "budgetPct": null
     },
     "policies": 83.3,
-    "comms": 56.3,
-    "training": 68.3
+    "comms": 57.0,
+    "training": 69.7
    },
    "Castle Towers": {
     "hopperTemps": 18,
@@ -621,8 +621,8 @@
      "budgetPct": null
     },
     "policies": 95.9,
-    "comms": 69.5,
-    "training": 88.0
+    "comms": 69.2,
+    "training": 88.1
    },
    "Penrith": {
     "hopperTemps": 21,
@@ -655,7 +655,7 @@
      "budgetPct": null
     },
     "policies": 96.2,
-    "comms": 74.3,
+    "comms": 74.4,
     "training": 82.1
    },
    "Chatswood": {
@@ -672,8 +672,8 @@
      "budgetPct": null
     },
     "policies": 96.0,
-    "comms": 71.5,
-    "training": 81.3
+    "comms": 72.0,
+    "training": 81.5
    },
    "Cronulla": {
     "hopperTemps": 20,
@@ -689,14 +689,14 @@
      "budgetPct": null
     },
     "policies": 89.7,
-    "comms": 54.9,
+    "comms": 55.4,
     "training": 79.3
    },
    "Newtown": {
     "hopperTemps": 28,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 11,
     "sales": {
      "actual": 64759,
      "budget": null
@@ -723,8 +723,8 @@
      "budgetPct": null
     },
     "policies": 75.4,
-    "comms": 29.3,
-    "training": 51.7
+    "comms": 28.3,
+    "training": 50.5
    },
    "Coogee": {
     "hopperTemps": 21,
@@ -740,8 +740,8 @@
      "budgetPct": null
     },
     "policies": 89.7,
-    "comms": 73.0,
-    "training": 89.4
+    "comms": 73.2,
+    "training": 89.5
    },
    "Surry Hills": {
     "hopperTemps": 20,
@@ -757,7 +757,7 @@
      "budgetPct": null
     },
     "policies": 88.7,
-    "comms": 51.0,
+    "comms": 51.7,
     "training": 73.5
    },
    "Top Ryde": {
@@ -815,7 +815,7 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 2,
     "sales": {
      "actual": 32449,
      "budget": null
@@ -825,7 +825,7 @@
      "budgetPct": null
     },
     "policies": 92.5,
-    "comms": 63.5,
+    "comms": 64.0,
     "training": 79.0
    },
    "Double Bay": {
@@ -860,7 +860,7 @@
     },
     "policies": 91.7,
     "comms": 62.6,
-    "training": 76.6
+    "training": 77.1
    },
    "Crows Nest": {
     "hopperTemps": 21,
@@ -876,7 +876,7 @@
      "budgetPct": null
     },
     "policies": 95.0,
-    "comms": 73.6,
+    "comms": 74.0,
     "training": 82.6
    },
    "Fish Market": {
@@ -893,7 +893,7 @@
      "budgetPct": null
     },
     "policies": 95.3,
-    "comms": 55.2,
+    "comms": 56.4,
     "training": 66.7
    },
    "Green Hills": {
@@ -906,7 +906,7 @@
      "budget": null
     },
     "policies": 92.8,
-    "comms": 68.8,
+    "comms": 69.0,
     "training": 86.7
    }
   },
@@ -932,7 +932,7 @@
     "hopperTemps": 16,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
      "actual": 63367,
      "budget": null
@@ -968,7 +968,7 @@
      "budget": null
     },
     "policies": 94.5,
-    "comms": 74.3,
+    "comms": 74.6,
     "training": 80.5
    },
    "Charlestown": {
@@ -998,7 +998,7 @@
      "budgetPct": null
     },
     "policies": 92.2,
-    "comms": 85.3,
+    "comms": 85.6,
     "training": 92.6
    },
    "Circular Quay": {
@@ -1016,7 +1016,7 @@
     },
     "policies": 94.9,
     "comms": 75.2,
-    "training": 83.5
+    "training": 84.2
    },
    "Macquarie": {
     "hopperTemps": 21,
@@ -1032,8 +1032,8 @@
      "budgetPct": null
     },
     "policies": 83.3,
-    "comms": 56.3,
-    "training": 68.3
+    "comms": 57.0,
+    "training": 69.7
    },
    "Castle Towers": {
     "hopperTemps": 18,
@@ -1066,8 +1066,8 @@
      "budgetPct": null
     },
     "policies": 95.9,
-    "comms": 69.5,
-    "training": 88.0
+    "comms": 69.2,
+    "training": 88.1
    },
    "Penrith": {
     "hopperTemps": 21,
@@ -1100,7 +1100,7 @@
      "budgetPct": null
     },
     "policies": 96.2,
-    "comms": 74.3,
+    "comms": 74.4,
     "training": 82.1
    },
    "Chatswood": {
@@ -1117,8 +1117,8 @@
      "budgetPct": null
     },
     "policies": 96.0,
-    "comms": 71.5,
-    "training": 81.3
+    "comms": 72.0,
+    "training": 81.5
    },
    "Cronulla": {
     "hopperTemps": 20,
@@ -1134,14 +1134,14 @@
      "budgetPct": null
     },
     "policies": 89.7,
-    "comms": 54.9,
+    "comms": 55.4,
     "training": 79.3
    },
    "Newtown": {
     "hopperTemps": 28,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 9,
+    "reviews": 11,
     "sales": {
      "actual": 40473,
      "budget": null
@@ -1168,8 +1168,8 @@
      "budgetPct": null
     },
     "policies": 75.4,
-    "comms": 29.3,
-    "training": 51.7
+    "comms": 28.3,
+    "training": 50.5
    },
    "Coogee": {
     "hopperTemps": 21,
@@ -1185,8 +1185,8 @@
      "budgetPct": null
     },
     "policies": 89.7,
-    "comms": 73.0,
-    "training": 89.4
+    "comms": 73.2,
+    "training": 89.5
    },
    "Surry Hills": {
     "hopperTemps": 20,
@@ -1202,7 +1202,7 @@
      "budgetPct": null
     },
     "policies": 88.7,
-    "comms": 51.0,
+    "comms": 51.7,
     "training": 73.5
    },
    "Top Ryde": {
@@ -1260,7 +1260,7 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 2,
     "sales": {
      "actual": 19905,
      "budget": null
@@ -1270,7 +1270,7 @@
      "budgetPct": null
     },
     "policies": 92.5,
-    "comms": 63.5,
+    "comms": 64.0,
     "training": 79.0
    },
    "Double Bay": {
@@ -1305,7 +1305,7 @@
     },
     "policies": 91.7,
     "comms": 62.6,
-    "training": 76.6
+    "training": 77.1
    },
    "Crows Nest": {
     "hopperTemps": 21,
@@ -1321,7 +1321,7 @@
      "budgetPct": null
     },
     "policies": 95.0,
-    "comms": 73.6,
+    "comms": 74.0,
     "training": 82.6
    },
    "Fish Market": {
@@ -1338,7 +1338,7 @@
      "budgetPct": null
     },
     "policies": 95.3,
-    "comms": 55.2,
+    "comms": 56.4,
     "training": 66.7
    },
    "Green Hills": {
@@ -1351,7 +1351,7 @@
      "budget": null
     },
     "policies": 92.8,
-    "comms": 68.8,
+    "comms": 69.0,
     "training": 86.7
    }
   }
