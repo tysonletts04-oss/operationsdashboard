@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-10-04",
-  "generatedAt": "2026-10-05T23:59:37+00:00",
+  "generatedAt": "2026-10-06T12:53:05+00:00",
   "windows": "daily = 4 Oct · WTD = 28 Sep–4 Oct · MTD = 1–4 Oct",
   "venues": 27,
   "sources": {
@@ -1604,8 +1604,8 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-10-05",
-  "windowEnd": "2026-10-05",
-  "window": "5 Oct",
+  "windowEnd": "2026-10-06",
+  "window": "5 Oct – 6 Oct",
   "totals": {
    "reusable": 0,
    "discounted": 0,
@@ -1870,7 +1870,7 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-09-14",
-  "windowEnd": "2026-10-05",
+  "windowEnd": "2026-10-06",
   "venues": {
    "Bondi": {
     "daily": {
