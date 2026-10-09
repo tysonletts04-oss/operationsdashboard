@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-10-07",
-  "generatedAt": "2026-10-08T23:10:07+00:00",
+  "generatedAt": "2026-10-09T02:55:15+00:00",
   "windows": "daily = 7 Oct · WTD = 5–7 Oct · MTD = 1–7 Oct",
   "venues": 27,
   "sources": {
@@ -1880,6 +1880,17 @@
   "windowStart": "2026-09-14",
   "windowEnd": "2026-10-08",
   "venues": {
+   "Barangaroo": {
+    "daily": {
+     "2026-10-08": [
+      1,
+      0,
+      1,
+      0
+     ]
+    },
+    "missedList": []
+   },
    "Bondi": {
     "daily": {
      "2026-09-14": [
