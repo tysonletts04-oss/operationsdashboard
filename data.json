@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-10-16",
-  "generatedAt": "2026-10-17T18:15:25+00:00",
+  "generatedAt": "2026-10-17T21:24:07+00:00",
   "windows": "daily = 16 Oct · WTD = 12–16 Oct · MTD = 1–16 Oct",
   "venues": 27,
   "sources": {
@@ -25,7 +25,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
      "actual": 17211,
      "budget": null
@@ -251,7 +251,7 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 8,
     "sales": {
      "actual": 9057,
      "budget": null
@@ -268,7 +268,7 @@
     "hopperTemps": 2,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 1,
     "sales": {
      "actual": 8971,
      "budget": null
@@ -302,7 +302,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 12,
     "sales": {
      "actual": 10522,
      "budget": null
@@ -319,7 +319,7 @@
     "hopperTemps": 3,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
      "actual": 6431,
      "budget": null
@@ -470,7 +470,7 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
      "actual": 71172,
      "budget": null
@@ -696,7 +696,7 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 8,
     "sales": {
      "actual": 35637,
      "budget": null
@@ -713,7 +713,7 @@
     "hopperTemps": 17,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 1,
     "sales": {
      "actual": 36043,
      "budget": null
@@ -747,7 +747,7 @@
     "hopperTemps": 22,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 12,
     "sales": {
      "actual": 33457,
      "budget": null
@@ -764,7 +764,7 @@
     "hopperTemps": 21,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
      "actual": 21054,
      "budget": null
@@ -915,7 +915,7 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
      "actual": 308349,
      "budget": null
@@ -1141,7 +1141,7 @@
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 6,
+    "reviews": 8,
     "sales": {
      "actual": 148315,
      "budget": null
@@ -1158,7 +1158,7 @@
     "hopperTemps": 17,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 1,
     "sales": {
      "actual": 170709,
      "budget": null
@@ -1192,7 +1192,7 @@
     "hopperTemps": 22,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 10,
+    "reviews": 12,
     "sales": {
      "actual": 126419,
      "budget": null
@@ -1209,7 +1209,7 @@
     "hopperTemps": 21,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 2,
+    "reviews": 3,
     "sales": {
      "actual": 97419,
      "budget": null
@@ -1888,13 +1888,13 @@
   "venues": {
    "Barangaroo": {
     "daily": {
-     "2026-10-08": [
+     "2026-10-10": [
       1,
       0,
       1,
       0
      ],
-     "2026-10-10": [
+     "2026-10-08": [
       1,
       0,
       1,
