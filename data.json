@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-10-17",
-  "generatedAt": "2026-10-18T16:43:34+00:00",
+  "generatedAt": "2026-10-18T19:25:50+00:00",
   "windows": "daily = 17 Oct · WTD = 12–17 Oct · MTD = 1–17 Oct",
   "venues": 27,
   "sources": {
@@ -31,12 +31,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.0,
+     "pct": 16.8,
      "budgetPct": null
     },
-    "policies": 95.1,
-    "comms": 74.0,
-    "training": 87.5
+    "policies": 95.2,
+    "comms": 74.5,
+    "training": 88.2
    },
    "Erina Fair": {
     "hopperTemps": 3,
@@ -49,7 +49,7 @@
     },
     "policies": 93.5,
     "comms": 74.4,
-    "training": 91.9
+    "training": 92.0
    },
    "Barangaroo": {
     "hopperTemps": 3,
@@ -61,12 +61,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.7,
+     "pct": 16.6,
      "budgetPct": null
     },
-    "policies": 93.1,
+    "policies": 93.7,
     "comms": 67.5,
-    "training": 77.8
+    "training": 77.9
    },
    "Wollongong": {
     "hopperTemps": 3,
@@ -77,8 +77,8 @@
      "actual": 20419,
      "budget": null
     },
-    "policies": 96.3,
-    "comms": 75.0,
+    "policies": 96.4,
+    "comms": 75.2,
     "training": 81.3
    },
    "Charlestown": {
@@ -90,8 +90,8 @@
      "actual": 17246,
      "budget": null
     },
-    "policies": 92.0,
-    "comms": 64.0,
+    "policies": 92.2,
+    "comms": 64.2,
     "training": 88.4
    },
    "Rouse Hill": {
@@ -104,12 +104,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.5,
+     "pct": 14.9,
      "budgetPct": null
     },
-    "policies": 92.8,
-    "comms": 81.8,
-    "training": 91.0
+    "policies": 95.3,
+    "comms": 82.7,
+    "training": 89.5
    },
    "Circular Quay": {
     "hopperTemps": 3,
@@ -121,7 +121,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.6,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 97.4,
@@ -138,11 +138,11 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.7,
+     "pct": 15.8,
      "budgetPct": null
     },
-    "policies": 93.6,
-    "comms": 61.9,
+    "policies": 94.2,
+    "comms": 62.1,
     "training": 74.8
    },
    "Castle Towers": {
@@ -155,7 +155,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.0,
+     "pct": 13.7,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -172,28 +172,28 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.0,
+     "pct": 15.8,
      "budgetPct": null
     },
-    "policies": 96.4,
-    "comms": 70.5,
+    "policies": 96.5,
+    "comms": 70.7,
     "training": 89.0
    },
    "Penrith": {
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
      "actual": 13734,
      "budget": null
     },
     "labour": {
-     "pct": 9.5,
+     "pct": 15.5,
      "budgetPct": null
     },
     "policies": 98.4,
-    "comms": 79.1,
+    "comms": 79.4,
     "training": 92.8
    },
    "Manly": {
@@ -206,7 +206,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.2,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 96.9,
@@ -223,11 +223,11 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.6,
+     "pct": 16.8,
      "budgetPct": null
     },
     "policies": 96.7,
-    "comms": 69.3,
+    "comms": 69.5,
     "training": 80.6
    },
    "Cronulla": {
@@ -240,28 +240,28 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.7,
+     "pct": 16.9,
      "budgetPct": null
     },
-    "policies": 94.3,
-    "comms": 57.6,
+    "policies": 94.4,
+    "comms": 58.2,
     "training": 80.4
    },
    "Newtown": {
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
      "actual": 12589,
      "budget": null
     },
     "labour": {
-     "pct": 11.1,
+     "pct": 17.3,
      "budgetPct": null
     },
-    "policies": 95.2,
-    "comms": 77.8,
+    "policies": 94.0,
+    "comms": 72.7,
     "training": 84.5
    },
    "Bondi": {
@@ -274,12 +274,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.7,
+     "pct": 17.6,
      "budgetPct": null
     },
-    "policies": 85.9,
+    "policies": 86.3,
     "comms": 30.8,
-    "training": 53.2
+    "training": 52.3
    },
    "Coogee": {
     "hopperTemps": 3,
@@ -291,12 +291,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.8,
+     "pct": 17.0,
      "budgetPct": null
     },
-    "policies": 94.5,
-    "comms": 75.4,
-    "training": 91.3
+    "policies": 94.9,
+    "comms": 75.6,
+    "training": 91.9
    },
    "Surry Hills": {
     "hopperTemps": 3,
@@ -308,7 +308,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.8,
+     "pct": 17.1,
      "budgetPct": null
     },
     "policies": 91.6,
@@ -319,17 +319,17 @@
     "hopperTemps": 3,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
      "actual": 8037,
      "budget": null
     },
     "labour": {
-     "pct": 11.3,
+     "pct": 17.5,
      "budgetPct": null
     },
-    "policies": 96.8,
-    "comms": 84.8,
+    "policies": 97.0,
+    "comms": 85.0,
     "training": 90.7
    },
    "Randwick": {
@@ -342,7 +342,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 12.5,
+     "pct": 19.4,
      "budgetPct": null
     },
     "policies": 95.0,
@@ -359,7 +359,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.4,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -376,24 +376,24 @@
      "budget": null
     },
     "labour": {
-     "pct": 12.4,
+     "pct": 19.8,
      "budgetPct": null
     },
-    "policies": 93.9,
-    "comms": 66.3,
+    "policies": 94.3,
+    "comms": 66.6,
     "training": 79.3
    },
    "Double Bay": {
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
      "actual": 8540,
      "budget": null
     },
     "labour": {
-     "pct": 12.9,
+     "pct": 20.7,
      "budgetPct": null
     },
     "policies": 92.8,
@@ -410,12 +410,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.0,
+     "pct": 17.9,
      "budgetPct": null
     },
-    "policies": 93.2,
-    "comms": 61.7,
-    "training": 78.7
+    "policies": 93.3,
+    "comms": 61.8,
+    "training": 79.0
    },
    "Crows Nest": {
     "hopperTemps": 3,
@@ -427,7 +427,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.8,
+     "pct": 18.1,
      "budgetPct": null
     },
     "policies": 96.1,
@@ -444,7 +444,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.8,
+     "pct": 24.9,
      "budgetPct": null
     },
     "policies": 96.2,
@@ -460,9 +460,9 @@
      "actual": 14063,
      "budget": null
     },
-    "policies": 94.9,
-    "comms": 70.7,
-    "training": 87.2
+    "policies": 95.1,
+    "comms": 71.4,
+    "training": 87.1
    }
   },
   "wtd": {
@@ -476,12 +476,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.0,
+     "pct": 16.8,
      "budgetPct": null
     },
-    "policies": 95.1,
-    "comms": 74.0,
-    "training": 87.5
+    "policies": 95.2,
+    "comms": 74.5,
+    "training": 88.2
    },
    "Erina Fair": {
     "hopperTemps": 21,
@@ -494,7 +494,7 @@
     },
     "policies": 93.5,
     "comms": 74.4,
-    "training": 91.9
+    "training": 92.0
    },
    "Barangaroo": {
     "hopperTemps": 21,
@@ -506,12 +506,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.7,
+     "pct": 16.6,
      "budgetPct": null
     },
-    "policies": 93.1,
+    "policies": 93.7,
     "comms": 67.5,
-    "training": 77.8
+    "training": 77.9
    },
    "Wollongong": {
     "hopperTemps": 21,
@@ -522,8 +522,8 @@
      "actual": 71371,
      "budget": null
     },
-    "policies": 96.3,
-    "comms": 75.0,
+    "policies": 96.4,
+    "comms": 75.2,
     "training": 81.3
    },
    "Charlestown": {
@@ -535,8 +535,8 @@
      "actual": 62948,
      "budget": null
     },
-    "policies": 92.0,
-    "comms": 64.0,
+    "policies": 92.2,
+    "comms": 64.2,
     "training": 88.4
    },
    "Rouse Hill": {
@@ -549,12 +549,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.5,
+     "pct": 14.9,
      "budgetPct": null
     },
-    "policies": 92.8,
-    "comms": 81.8,
-    "training": 91.0
+    "policies": 95.3,
+    "comms": 82.7,
+    "training": 89.5
    },
    "Circular Quay": {
     "hopperTemps": 23,
@@ -566,7 +566,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.6,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 97.4,
@@ -583,11 +583,11 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.7,
+     "pct": 15.8,
      "budgetPct": null
     },
-    "policies": 93.6,
-    "comms": 61.9,
+    "policies": 94.2,
+    "comms": 62.1,
     "training": 74.8
    },
    "Castle Towers": {
@@ -600,7 +600,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.0,
+     "pct": 13.7,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -617,28 +617,28 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.0,
+     "pct": 15.8,
      "budgetPct": null
     },
-    "policies": 96.4,
-    "comms": 70.5,
+    "policies": 96.5,
+    "comms": 70.7,
     "training": 89.0
    },
    "Penrith": {
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
      "actual": 54588,
      "budget": null
     },
     "labour": {
-     "pct": 9.5,
+     "pct": 15.5,
      "budgetPct": null
     },
     "policies": 98.4,
-    "comms": 79.1,
+    "comms": 79.4,
     "training": 92.8
    },
    "Manly": {
@@ -651,7 +651,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.2,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 96.9,
@@ -668,11 +668,11 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.6,
+     "pct": 16.8,
      "budgetPct": null
     },
     "policies": 96.7,
-    "comms": 69.3,
+    "comms": 69.5,
     "training": 80.6
    },
    "Cronulla": {
@@ -685,28 +685,28 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.7,
+     "pct": 16.9,
      "budgetPct": null
     },
-    "policies": 94.3,
-    "comms": 57.6,
+    "policies": 94.4,
+    "comms": 58.2,
     "training": 80.4
    },
    "Newtown": {
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
      "actual": 48226,
      "budget": null
     },
     "labour": {
-     "pct": 11.1,
+     "pct": 17.3,
      "budgetPct": null
     },
-    "policies": 95.2,
-    "comms": 77.8,
+    "policies": 94.0,
+    "comms": 72.7,
     "training": 84.5
    },
    "Bondi": {
@@ -719,12 +719,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.7,
+     "pct": 17.6,
      "budgetPct": null
     },
-    "policies": 85.9,
+    "policies": 86.3,
     "comms": 30.8,
-    "training": 53.2
+    "training": 52.3
    },
    "Coogee": {
     "hopperTemps": 21,
@@ -736,12 +736,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.8,
+     "pct": 17.0,
      "budgetPct": null
     },
-    "policies": 94.5,
-    "comms": 75.4,
-    "training": 91.3
+    "policies": 94.9,
+    "comms": 75.6,
+    "training": 91.9
    },
    "Surry Hills": {
     "hopperTemps": 22,
@@ -753,7 +753,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.8,
+     "pct": 17.1,
      "budgetPct": null
     },
     "policies": 91.6,
@@ -764,17 +764,17 @@
     "hopperTemps": 21,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
      "actual": 29091,
      "budget": null
     },
     "labour": {
-     "pct": 11.3,
+     "pct": 17.5,
      "budgetPct": null
     },
-    "policies": 96.8,
-    "comms": 84.8,
+    "policies": 97.0,
+    "comms": 85.0,
     "training": 90.7
    },
    "Randwick": {
@@ -787,7 +787,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 12.5,
+     "pct": 19.4,
      "budgetPct": null
     },
     "policies": 95.0,
@@ -804,7 +804,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.4,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -821,24 +821,24 @@
      "budget": null
     },
     "labour": {
-     "pct": 12.4,
+     "pct": 19.8,
      "budgetPct": null
     },
-    "policies": 93.9,
-    "comms": 66.3,
+    "policies": 94.3,
+    "comms": 66.6,
     "training": 79.3
    },
    "Double Bay": {
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
      "actual": 33272,
      "budget": null
     },
     "labour": {
-     "pct": 12.9,
+     "pct": 20.7,
      "budgetPct": null
     },
     "policies": 92.8,
@@ -855,12 +855,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.0,
+     "pct": 17.9,
      "budgetPct": null
     },
-    "policies": 93.2,
-    "comms": 61.7,
-    "training": 78.7
+    "policies": 93.3,
+    "comms": 61.8,
+    "training": 79.0
    },
    "Crows Nest": {
     "hopperTemps": 21,
@@ -872,7 +872,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.8,
+     "pct": 18.1,
      "budgetPct": null
     },
     "policies": 96.1,
@@ -889,7 +889,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.8,
+     "pct": 24.9,
      "budgetPct": null
     },
     "policies": 96.2,
@@ -905,9 +905,9 @@
      "actual": 54169,
      "budget": null
     },
-    "policies": 94.9,
-    "comms": 70.7,
-    "training": 87.2
+    "policies": 95.1,
+    "comms": 71.4,
+    "training": 87.1
    }
   },
   "mtd": {
@@ -921,12 +921,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.0,
+     "pct": 16.8,
      "budgetPct": null
     },
-    "policies": 95.1,
-    "comms": 74.0,
-    "training": 87.5
+    "policies": 95.2,
+    "comms": 74.5,
+    "training": 88.2
    },
    "Erina Fair": {
     "hopperTemps": 21,
@@ -939,7 +939,7 @@
     },
     "policies": 93.5,
     "comms": 74.4,
-    "training": 91.9
+    "training": 92.0
    },
    "Barangaroo": {
     "hopperTemps": 21,
@@ -951,12 +951,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.7,
+     "pct": 16.6,
      "budgetPct": null
     },
-    "policies": 93.1,
+    "policies": 93.7,
     "comms": 67.5,
-    "training": 77.8
+    "training": 77.9
    },
    "Wollongong": {
     "hopperTemps": 21,
@@ -967,8 +967,8 @@
      "actual": 262683,
      "budget": null
     },
-    "policies": 96.3,
-    "comms": 75.0,
+    "policies": 96.4,
+    "comms": 75.2,
     "training": 81.3
    },
    "Charlestown": {
@@ -980,8 +980,8 @@
      "actual": 224575,
      "budget": null
     },
-    "policies": 92.0,
-    "comms": 64.0,
+    "policies": 92.2,
+    "comms": 64.2,
     "training": 88.4
    },
    "Rouse Hill": {
@@ -994,12 +994,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.5,
+     "pct": 14.9,
      "budgetPct": null
     },
-    "policies": 92.8,
-    "comms": 81.8,
-    "training": 91.0
+    "policies": 95.3,
+    "comms": 82.7,
+    "training": 89.5
    },
    "Circular Quay": {
     "hopperTemps": 23,
@@ -1011,7 +1011,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.6,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 97.4,
@@ -1028,11 +1028,11 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.7,
+     "pct": 15.8,
      "budgetPct": null
     },
-    "policies": 93.6,
-    "comms": 61.9,
+    "policies": 94.2,
+    "comms": 62.1,
     "training": 74.8
    },
    "Castle Towers": {
@@ -1045,7 +1045,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.0,
+     "pct": 13.7,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -1062,28 +1062,28 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.0,
+     "pct": 15.8,
      "budgetPct": null
     },
-    "policies": 96.4,
-    "comms": 70.5,
+    "policies": 96.5,
+    "comms": 70.7,
     "training": 89.0
    },
    "Penrith": {
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
      "actual": 198470,
      "budget": null
     },
     "labour": {
-     "pct": 9.5,
+     "pct": 15.5,
      "budgetPct": null
     },
     "policies": 98.4,
-    "comms": 79.1,
+    "comms": 79.4,
     "training": 92.8
    },
    "Manly": {
@@ -1096,7 +1096,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.2,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 96.9,
@@ -1113,11 +1113,11 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.6,
+     "pct": 16.8,
      "budgetPct": null
     },
     "policies": 96.7,
-    "comms": 69.3,
+    "comms": 69.5,
     "training": 80.6
    },
    "Cronulla": {
@@ -1130,28 +1130,28 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.7,
+     "pct": 16.9,
      "budgetPct": null
     },
-    "policies": 94.3,
-    "comms": 57.6,
+    "policies": 94.4,
+    "comms": 58.2,
     "training": 80.4
    },
    "Newtown": {
     "hopperTemps": 27,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 8,
+    "reviews": 9,
     "sales": {
      "actual": 160871,
      "budget": null
     },
     "labour": {
-     "pct": 11.1,
+     "pct": 17.3,
      "budgetPct": null
     },
-    "policies": 95.2,
-    "comms": 77.8,
+    "policies": 94.0,
+    "comms": 72.7,
     "training": 84.5
    },
    "Bondi": {
@@ -1164,12 +1164,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 9.7,
+     "pct": 17.6,
      "budgetPct": null
     },
-    "policies": 85.9,
+    "policies": 86.3,
     "comms": 30.8,
-    "training": 53.2
+    "training": 52.3
    },
    "Coogee": {
     "hopperTemps": 21,
@@ -1181,12 +1181,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.8,
+     "pct": 17.0,
      "budgetPct": null
     },
-    "policies": 94.5,
-    "comms": 75.4,
-    "training": 91.3
+    "policies": 94.9,
+    "comms": 75.6,
+    "training": 91.9
    },
    "Surry Hills": {
     "hopperTemps": 22,
@@ -1198,7 +1198,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.8,
+     "pct": 17.1,
      "budgetPct": null
     },
     "policies": 91.6,
@@ -1209,17 +1209,17 @@
     "hopperTemps": 21,
     "calibrations": "missed",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
      "actual": 105456,
      "budget": null
     },
     "labour": {
-     "pct": 11.3,
+     "pct": 17.5,
      "budgetPct": null
     },
-    "policies": 96.8,
-    "comms": 84.8,
+    "policies": 97.0,
+    "comms": 85.0,
     "training": 90.7
    },
    "Randwick": {
@@ -1232,7 +1232,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 12.5,
+     "pct": 19.4,
      "budgetPct": null
     },
     "policies": 95.0,
@@ -1249,7 +1249,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.4,
+     "pct": 16.3,
      "budgetPct": null
     },
     "policies": 93.9,
@@ -1266,24 +1266,24 @@
      "budget": null
     },
     "labour": {
-     "pct": 12.4,
+     "pct": 19.8,
      "budgetPct": null
     },
-    "policies": 93.9,
-    "comms": 66.3,
+    "policies": 94.3,
+    "comms": 66.6,
     "training": 79.3
    },
    "Double Bay": {
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 4,
+    "reviews": 5,
     "sales": {
      "actual": 96373,
      "budget": null
     },
     "labour": {
-     "pct": 12.9,
+     "pct": 20.7,
      "budgetPct": null
     },
     "policies": 92.8,
@@ -1300,12 +1300,12 @@
      "budget": null
     },
     "labour": {
-     "pct": 11.0,
+     "pct": 17.9,
      "budgetPct": null
     },
-    "policies": 93.2,
-    "comms": 61.7,
-    "training": 78.7
+    "policies": 93.3,
+    "comms": 61.8,
+    "training": 79.0
    },
    "Crows Nest": {
     "hopperTemps": 21,
@@ -1317,7 +1317,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 10.8,
+     "pct": 18.1,
      "budgetPct": null
     },
     "policies": 96.1,
@@ -1334,7 +1334,7 @@
      "budget": null
     },
     "labour": {
-     "pct": 16.8,
+     "pct": 24.9,
      "budgetPct": null
     },
     "policies": 96.2,
@@ -1350,9 +1350,9 @@
      "actual": 182347,
      "budget": null
     },
-    "policies": 94.9,
-    "comms": 70.7,
-    "training": 87.2
+    "policies": 95.1,
+    "comms": 71.4,
+    "training": 87.1
    }
   }
  },
@@ -1888,13 +1888,13 @@
   "venues": {
    "Barangaroo": {
     "daily": {
-     "2026-10-08": [
+     "2026-10-10": [
       1,
       0,
       1,
       0
      ],
-     "2026-10-10": [
+     "2026-10-08": [
       1,
       0,
       1,
