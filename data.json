@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-10-19",
-  "generatedAt": "2026-10-19T19:14:32+00:00",
+  "generatedAt": "2026-10-19T23:28:03+00:00",
   "windows": "daily = 19 Oct · WTD = 19–19 Oct · MTD = 1–19 Oct",
   "venues": 27,
   "sources": {
@@ -1376,6 +1376,14 @@
    "pct": null
   },
   "venues": {
+   "George St": {
+    "reusable": 0,
+    "discounted": 0,
+    "otherDisc": 0,
+    "missed": 0,
+    "pct": null,
+    "missedList": []
+   },
    "Erina Fair": {
     "reusable": 0,
     "discounted": 0,
