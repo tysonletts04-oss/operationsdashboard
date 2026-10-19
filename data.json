@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-10-17",
-  "generatedAt": "2026-10-18T19:25:50+00:00",
+  "generatedAt": "2026-10-19T12:17:51+00:00",
   "windows": "daily = 17 Oct · WTD = 12–17 Oct · MTD = 1–17 Oct",
   "venues": 27,
   "sources": {
@@ -1610,15 +1610,15 @@
    "Co-Chi Bowl Tare"
   ],
   "discountName": "Reusable 10% Off",
-  "windowStart": "2026-10-12",
-  "windowEnd": "2026-10-18",
-  "window": "12 Oct – 18 Oct",
+  "windowStart": "2026-10-19",
+  "windowEnd": "2026-10-19",
+  "window": "19 Oct",
   "totals": {
-   "reusable": 1,
+   "reusable": 0,
    "discounted": 0,
    "otherDisc": 0,
-   "missed": 1,
-   "pct": 0.0
+   "missed": 0,
+   "pct": null
   },
   "venues": {
    "George St": {
@@ -1721,19 +1721,12 @@
     "otherList": []
    },
    "Manly": {
-    "reusable": 1,
+    "reusable": 0,
     "discounted": 0,
     "otherDisc": 0,
-    "missed": 1,
-    "pct": 0.0,
-    "missedList": [
-     {
-      "saleId": "44479935",
-      "date": "2026-10-16",
-      "time": "15:51:10",
-      "bowl": "Co-Chi Bowl Tare"
-     }
-    ],
+    "missed": 0,
+    "pct": null,
+    "missedList": [],
     "otherList": []
    },
    "Chatswood": {
@@ -1883,8 +1876,8 @@
    "Co-Chi Bowl Tare"
   ],
   "discountName": "Reusable 10% Off",
-  "windowStart": "2026-09-21",
-  "windowEnd": "2026-10-18",
+  "windowStart": "2026-09-28",
+  "windowEnd": "2026-10-19",
   "venues": {
    "Barangaroo": {
     "daily": {
