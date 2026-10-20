@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-10-19",
-  "generatedAt": "2026-10-20T18:59:45+00:00",
+  "generatedAt": "2026-10-20T22:19:36+00:00",
   "windows": "daily = 19 Oct · WTD = 19–19 Oct · MTD = 1–19 Oct",
   "venues": 27,
   "sources": {
@@ -55,7 +55,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 1,
     "sales": {
      "actual": 9639,
      "budget": null
@@ -251,7 +251,7 @@
     "hopperTemps": 4,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 7113,
      "budget": null
@@ -500,7 +500,7 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 1,
     "sales": {
      "actual": 9639,
      "budget": null
@@ -696,7 +696,7 @@
     "hopperTemps": 28,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 7113,
      "budget": null
@@ -945,7 +945,7 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 0,
+    "reviews": 1,
     "sales": {
      "actual": 342229,
      "budget": null
@@ -1141,7 +1141,7 @@
     "hopperTemps": 28,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 179207,
      "budget": null
@@ -1874,13 +1874,13 @@
   "venues": {
    "Barangaroo": {
     "daily": {
-     "2026-10-08": [
+     "2026-10-10": [
       1,
       0,
       1,
       0
      ],
-     "2026-10-10": [
+     "2026-10-08": [
       1,
       0,
       1,
