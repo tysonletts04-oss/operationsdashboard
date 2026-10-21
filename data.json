@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-10-20",
-  "generatedAt": "2026-10-21T18:33:51+00:00",
+  "generatedAt": "2026-10-21T22:09:56+00:00",
   "windows": "daily = 20 Oct · WTD = 19–20 Oct · MTD = 1–20 Oct",
   "venues": 27,
   "sources": {
@@ -98,7 +98,7 @@
     "hopperTemps": 3,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 8316,
      "budget": null
@@ -543,7 +543,7 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 15926,
      "budget": null
@@ -988,7 +988,7 @@
     "hopperTemps": 21,
     "calibrations": "complete",
     "correctiveA": "none",
-    "reviews": 3,
+    "reviews": 4,
     "sales": {
      "actual": 290227,
      "budget": null
