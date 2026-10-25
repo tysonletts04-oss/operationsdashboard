@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-10-23",
-  "generatedAt": "2026-10-24T20:32:38+00:00",
+  "generatedAt": "2026-10-25T05:46:10+00:00",
   "windows": "daily = 23 Oct · WTD = 19–23 Oct · MTD = 1–23 Oct",
   "venues": 27,
   "sources": {
@@ -1604,8 +1604,8 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-10-19",
-  "windowEnd": "2026-10-24",
-  "window": "19 Oct – 24 Oct",
+  "windowEnd": "2026-10-25",
+  "window": "19 Oct – 25 Oct",
   "totals": {
    "reusable": 1,
    "discounted": 1,
@@ -1870,7 +1870,7 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-09-28",
-  "windowEnd": "2026-10-24",
+  "windowEnd": "2026-10-25",
   "venues": {
    "Barangaroo": {
     "daily": {
