@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-10-25",
-  "generatedAt": "2026-10-25T21:36:52+00:00",
+  "generatedAt": "2026-10-26T16:34:17+00:00",
   "windows": "daily = 25 Oct · WTD = 19–25 Oct · MTD = 1–25 Oct",
   "venues": 27,
   "sources": {
@@ -27,11 +27,11 @@
     "correctiveA": "none",
     "reviews": 9,
     "sales": {
-     "actual": 3940,
+     "actual": 18673,
      "budget": null
     },
     "labour": {
-     "pct": 17.5,
+     "pct": 12.5,
      "budgetPct": null
     },
     "policies": 94.2,
@@ -44,7 +44,7 @@
     "correctiveA": "none",
     "reviews": 9,
     "sales": {
-     "actual": 6028,
+     "actual": 14241,
      "budget": null
     },
     "policies": 91.4,
@@ -57,11 +57,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 7565,
+     "actual": 20141,
      "budget": null
     },
     "labour": {
-     "pct": 16.9,
+     "pct": 12.5,
      "budgetPct": null
     },
     "policies": 90.8,
@@ -74,7 +74,7 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 7169,
+     "actual": 19285,
      "budget": null
     },
     "policies": 95.5,
@@ -87,7 +87,7 @@
     "correctiveA": "none",
     "reviews": 8,
     "sales": {
-     "actual": 6329,
+     "actual": 15525,
      "budget": null
     },
     "policies": 93.9,
@@ -100,11 +100,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 4185,
+     "actual": 17816,
      "budget": null
     },
     "labour": {
-     "pct": 16.0,
+     "pct": 11.5,
      "budgetPct": null
     },
     "policies": 86.4,
@@ -117,11 +117,11 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 4597,
+     "actual": 12801,
      "budget": null
     },
     "labour": {
-     "pct": 16.7,
+     "pct": 12.0,
      "budgetPct": null
     },
     "policies": 96.5,
@@ -134,11 +134,11 @@
     "correctiveA": "none",
     "reviews": 8,
     "sales": {
-     "actual": 3577,
+     "actual": 11403,
      "budget": null
     },
     "labour": {
-     "pct": 16.4,
+     "pct": 11.8,
      "budgetPct": null
     },
     "policies": 90.1,
@@ -151,11 +151,11 @@
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 4006,
+     "actual": 14295,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 10.9,
      "budgetPct": null
     },
     "policies": 95.5,
@@ -168,11 +168,11 @@
     "correctiveA": "ok",
     "reviews": 7,
     "sales": {
-     "actual": 3874,
+     "actual": 13837,
      "budget": null
     },
     "labour": {
-     "pct": 16.1,
+     "pct": 11.6,
      "budgetPct": null
     },
     "policies": 97.3,
@@ -185,11 +185,11 @@
     "correctiveA": "none",
     "reviews": 8,
     "sales": {
-     "actual": 4370,
+     "actual": 12779,
      "budget": null
     },
     "labour": {
-     "pct": 16.0,
+     "pct": 12.0,
      "budgetPct": null
     },
     "policies": 96.5,
@@ -202,11 +202,11 @@
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 6960,
+     "actual": 16711,
      "budget": null
     },
     "labour": {
-     "pct": 16.7,
+     "pct": 12.7,
      "budgetPct": null
     },
     "policies": 95.2,
@@ -219,11 +219,11 @@
     "correctiveA": "none",
     "reviews": 6,
     "sales": {
-     "actual": 4108,
+     "actual": 13513,
      "budget": null
     },
     "labour": {
-     "pct": 17.4,
+     "pct": 12.3,
      "budgetPct": null
     },
     "policies": 94.6,
@@ -236,11 +236,11 @@
     "correctiveA": "none",
     "reviews": 7,
     "sales": {
-     "actual": 6314,
+     "actual": 18277,
      "budget": null
     },
     "labour": {
-     "pct": 17.1,
+     "pct": 12.7,
      "budgetPct": null
     },
     "policies": 92.7,
@@ -253,11 +253,11 @@
     "correctiveA": "none",
     "reviews": 13,
     "sales": {
-     "actual": 2413,
+     "actual": 10724,
      "budget": null
     },
     "labour": {
-     "pct": 17.5,
+     "pct": 12.6,
      "budgetPct": null
     },
     "policies": 94.2,
@@ -270,11 +270,11 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 5615,
+     "actual": 14727,
      "budget": null
     },
     "labour": {
-     "pct": 17.7,
+     "pct": 12.6,
      "budgetPct": null
     },
     "policies": 79.2,
@@ -287,11 +287,11 @@
     "correctiveA": "ok",
     "reviews": 25,
     "sales": {
-     "actual": 5787,
+     "actual": 16448,
      "budget": null
     },
     "labour": {
-     "pct": 17.3,
+     "pct": 12.3,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -304,11 +304,11 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 2169,
+     "actual": 10163,
      "budget": null
     },
     "labour": {
-     "pct": 17.9,
+     "pct": 12.6,
      "budgetPct": null
     },
     "policies": 91.0,
@@ -321,11 +321,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 1964,
+     "actual": 8146,
      "budget": null
     },
     "labour": {
-     "pct": 17.3,
+     "pct": 12.1,
      "budgetPct": null
     },
     "policies": 89.7,
@@ -338,11 +338,11 @@
     "correctiveA": "none",
     "reviews": 7,
     "sales": {
-     "actual": 2367,
+     "actual": 8704,
      "budget": null
     },
     "labour": {
-     "pct": 20.7,
+     "pct": 14.4,
      "budgetPct": null
     },
     "policies": 92.9,
@@ -355,11 +355,11 @@
     "correctiveA": "ok",
     "reviews": 14,
     "sales": {
-     "actual": 2091,
+     "actual": 7836,
      "budget": null
     },
     "labour": {
-     "pct": 16.9,
+     "pct": 12.3,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -372,11 +372,11 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 2385,
+     "actual": 7133,
      "budget": null
     },
     "labour": {
-     "pct": 20.2,
+     "pct": 14.0,
      "budgetPct": null
     },
     "policies": 92.7,
@@ -389,11 +389,11 @@
     "correctiveA": "ok",
     "reviews": 9,
     "sales": {
-     "actual": 2393,
+     "actual": 8285,
      "budget": null
     },
     "labour": {
-     "pct": 20.3,
+     "pct": 14.5,
      "budgetPct": null
     },
     "policies": 94.3,
@@ -406,11 +406,11 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 1209,
+     "actual": 6104,
      "budget": null
     },
     "labour": {
-     "pct": 18.4,
+     "pct": 12.8,
      "budgetPct": null
     },
     "policies": 92.2,
@@ -423,11 +423,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 2589,
+     "actual": 8912,
      "budget": null
     },
     "labour": {
-     "pct": 18.0,
+     "pct": 12.8,
      "budgetPct": null
     },
     "policies": 95.1,
@@ -440,11 +440,11 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 3936,
+     "actual": 7887,
      "budget": null
     },
     "labour": {
-     "pct": 24.5,
+     "pct": 18.2,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -457,7 +457,7 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 5262,
+     "actual": 11621,
      "budget": null
     },
     "policies": 95.0,
@@ -472,11 +472,11 @@
     "correctiveA": "none",
     "reviews": 9,
     "sales": {
-     "actual": 105876,
+     "actual": 120609,
      "budget": null
     },
     "labour": {
-     "pct": 17.5,
+     "pct": 12.5,
      "budgetPct": null
     },
     "policies": 94.2,
@@ -489,7 +489,7 @@
     "correctiveA": "none",
     "reviews": 9,
     "sales": {
-     "actual": 67250,
+     "actual": 75463,
      "budget": null
     },
     "policies": 91.4,
@@ -502,11 +502,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 91289,
+     "actual": 103866,
      "budget": null
     },
     "labour": {
-     "pct": 16.9,
+     "pct": 12.5,
      "budgetPct": null
     },
     "policies": 90.8,
@@ -519,7 +519,7 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 66107,
+     "actual": 78223,
      "budget": null
     },
     "policies": 95.5,
@@ -532,7 +532,7 @@
     "correctiveA": "none",
     "reviews": 8,
     "sales": {
-     "actual": 68905,
+     "actual": 78101,
      "budget": null
     },
     "policies": 93.9,
@@ -545,11 +545,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 76131,
+     "actual": 89762,
      "budget": null
     },
     "labour": {
-     "pct": 16.0,
+     "pct": 11.5,
      "budgetPct": null
     },
     "policies": 86.4,
@@ -562,11 +562,11 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 72185,
+     "actual": 80389,
      "budget": null
     },
     "labour": {
-     "pct": 16.7,
+     "pct": 12.0,
      "budgetPct": null
     },
     "policies": 96.5,
@@ -579,11 +579,11 @@
     "correctiveA": "none",
     "reviews": 8,
     "sales": {
-     "actual": 57100,
+     "actual": 64926,
      "budget": null
     },
     "labour": {
-     "pct": 16.4,
+     "pct": 11.8,
      "budgetPct": null
     },
     "policies": 90.1,
@@ -596,11 +596,11 @@
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 55463,
+     "actual": 65751,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 10.9,
      "budgetPct": null
     },
     "policies": 95.5,
@@ -613,11 +613,11 @@
     "correctiveA": "ok",
     "reviews": 7,
     "sales": {
-     "actual": 63916,
+     "actual": 73879,
      "budget": null
     },
     "labour": {
-     "pct": 16.1,
+     "pct": 11.6,
      "budgetPct": null
     },
     "policies": 97.3,
@@ -630,11 +630,11 @@
     "correctiveA": "none",
     "reviews": 8,
     "sales": {
-     "actual": 57963,
+     "actual": 66372,
      "budget": null
     },
     "labour": {
-     "pct": 16.0,
+     "pct": 12.0,
      "budgetPct": null
     },
     "policies": 96.5,
@@ -647,11 +647,11 @@
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 70404,
+     "actual": 80155,
      "budget": null
     },
     "labour": {
-     "pct": 16.7,
+     "pct": 12.7,
      "budgetPct": null
     },
     "policies": 95.2,
@@ -664,11 +664,11 @@
     "correctiveA": "none",
     "reviews": 6,
     "sales": {
-     "actual": 53708,
+     "actual": 63113,
      "budget": null
     },
     "labour": {
-     "pct": 17.4,
+     "pct": 12.3,
      "budgetPct": null
     },
     "policies": 94.6,
@@ -681,11 +681,11 @@
     "correctiveA": "none",
     "reviews": 7,
     "sales": {
-     "actual": 62220,
+     "actual": 74184,
      "budget": null
     },
     "labour": {
-     "pct": 17.1,
+     "pct": 12.7,
      "budgetPct": null
     },
     "policies": 92.7,
@@ -698,11 +698,11 @@
     "correctiveA": "none",
     "reviews": 13,
     "sales": {
-     "actual": 52599,
+     "actual": 60910,
      "budget": null
     },
     "labour": {
-     "pct": 17.5,
+     "pct": 12.6,
      "budgetPct": null
     },
     "policies": 94.2,
@@ -715,11 +715,11 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 66115,
+     "actual": 75227,
      "budget": null
     },
     "labour": {
-     "pct": 17.7,
+     "pct": 12.6,
      "budgetPct": null
     },
     "policies": 79.2,
@@ -732,11 +732,11 @@
     "correctiveA": "ok",
     "reviews": 25,
     "sales": {
-     "actual": 64200,
+     "actual": 74861,
      "budget": null
     },
     "labour": {
-     "pct": 17.3,
+     "pct": 12.3,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -749,11 +749,11 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 44350,
+     "actual": 52345,
      "budget": null
     },
     "labour": {
-     "pct": 17.9,
+     "pct": 12.6,
      "budgetPct": null
     },
     "policies": 91.0,
@@ -766,11 +766,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 29999,
+     "actual": 36181,
      "budget": null
     },
     "labour": {
-     "pct": 17.3,
+     "pct": 12.1,
      "budgetPct": null
     },
     "policies": 89.7,
@@ -783,11 +783,11 @@
     "correctiveA": "none",
     "reviews": 7,
     "sales": {
-     "actual": 35257,
+     "actual": 41594,
      "budget": null
     },
     "labour": {
-     "pct": 20.7,
+     "pct": 14.4,
      "budgetPct": null
     },
     "policies": 92.9,
@@ -800,11 +800,11 @@
     "correctiveA": "ok",
     "reviews": 14,
     "sales": {
-     "actual": 37288,
+     "actual": 43033,
      "budget": null
     },
     "labour": {
-     "pct": 16.9,
+     "pct": 12.3,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -817,11 +817,11 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 30992,
+     "actual": 35739,
      "budget": null
     },
     "labour": {
-     "pct": 20.2,
+     "pct": 14.0,
      "budgetPct": null
     },
     "policies": 92.7,
@@ -834,11 +834,11 @@
     "correctiveA": "ok",
     "reviews": 9,
     "sales": {
-     "actual": 35330,
+     "actual": 41221,
      "budget": null
     },
     "labour": {
-     "pct": 20.3,
+     "pct": 14.5,
      "budgetPct": null
     },
     "policies": 94.3,
@@ -851,11 +851,11 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 51496,
+     "actual": 56391,
      "budget": null
     },
     "labour": {
-     "pct": 18.4,
+     "pct": 12.8,
      "budgetPct": null
     },
     "policies": 92.2,
@@ -868,11 +868,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 40389,
+     "actual": 46712,
      "budget": null
     },
     "labour": {
-     "pct": 18.0,
+     "pct": 12.8,
      "budgetPct": null
     },
     "policies": 95.1,
@@ -885,11 +885,11 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 26318,
+     "actual": 30269,
      "budget": null
     },
     "labour": {
-     "pct": 24.5,
+     "pct": 18.2,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -902,7 +902,7 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 57113,
+     "actual": 63472,
      "budget": null
     },
     "policies": 95.0,
@@ -917,11 +917,11 @@
     "correctiveA": "none",
     "reviews": 9,
     "sales": {
-     "actual": 454330,
+     "actual": 469063,
      "budget": null
     },
     "labour": {
-     "pct": 17.5,
+     "pct": 12.5,
      "budgetPct": null
     },
     "policies": 94.2,
@@ -934,7 +934,7 @@
     "correctiveA": "none",
     "reviews": 9,
     "sales": {
-     "actual": 323136,
+     "actual": 331349,
      "budget": null
     },
     "policies": 91.4,
@@ -947,11 +947,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 423880,
+     "actual": 436457,
      "budget": null
     },
     "labour": {
-     "pct": 16.9,
+     "pct": 12.5,
      "budgetPct": null
     },
     "policies": 90.8,
@@ -964,7 +964,7 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 345258,
+     "actual": 357374,
      "budget": null
     },
     "policies": 95.5,
@@ -977,7 +977,7 @@
     "correctiveA": "none",
     "reviews": 8,
     "sales": {
-     "actual": 309450,
+     "actual": 318647,
      "budget": null
     },
     "policies": 93.9,
@@ -990,11 +990,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 350432,
+     "actual": 364063,
      "budget": null
     },
     "labour": {
-     "pct": 16.0,
+     "pct": 11.5,
      "budgetPct": null
     },
     "policies": 86.4,
@@ -1007,11 +1007,11 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 305371,
+     "actual": 313575,
      "budget": null
     },
     "labour": {
-     "pct": 16.7,
+     "pct": 12.0,
      "budgetPct": null
     },
     "policies": 96.5,
@@ -1024,11 +1024,11 @@
     "correctiveA": "none",
     "reviews": 8,
     "sales": {
-     "actual": 259169,
+     "actual": 266995,
      "budget": null
     },
     "labour": {
-     "pct": 16.4,
+     "pct": 11.8,
      "budgetPct": null
     },
     "policies": 90.1,
@@ -1041,11 +1041,11 @@
     "correctiveA": "none",
     "reviews": 4,
     "sales": {
-     "actual": 279945,
+     "actual": 290234,
      "budget": null
     },
     "labour": {
-     "pct": 15.3,
+     "pct": 10.9,
      "budgetPct": null
     },
     "policies": 95.5,
@@ -1058,11 +1058,11 @@
     "correctiveA": "ok",
     "reviews": 7,
     "sales": {
-     "actual": 277768,
+     "actual": 287732,
      "budget": null
     },
     "labour": {
-     "pct": 16.1,
+     "pct": 11.6,
      "budgetPct": null
     },
     "policies": 97.3,
@@ -1075,11 +1075,11 @@
     "correctiveA": "none",
     "reviews": 8,
     "sales": {
-     "actual": 269196,
+     "actual": 277605,
      "budget": null
     },
     "labour": {
-     "pct": 16.0,
+     "pct": 12.0,
      "budgetPct": null
     },
     "policies": 96.5,
@@ -1092,11 +1092,11 @@
     "correctiveA": "none",
     "reviews": 2,
     "sales": {
-     "actual": 320509,
+     "actual": 330260,
      "budget": null
     },
     "labour": {
-     "pct": 16.7,
+     "pct": 12.7,
      "budgetPct": null
     },
     "policies": 95.2,
@@ -1109,11 +1109,11 @@
     "correctiveA": "none",
     "reviews": 6,
     "sales": {
-     "actual": 234095,
+     "actual": 243500,
      "budget": null
     },
     "labour": {
-     "pct": 17.4,
+     "pct": 12.3,
      "budgetPct": null
     },
     "policies": 94.6,
@@ -1126,11 +1126,11 @@
     "correctiveA": "none",
     "reviews": 7,
     "sales": {
-     "actual": 296430,
+     "actual": 308394,
      "budget": null
     },
     "labour": {
-     "pct": 17.1,
+     "pct": 12.7,
      "budgetPct": null
     },
     "policies": 92.7,
@@ -1143,11 +1143,11 @@
     "correctiveA": "none",
     "reviews": 13,
     "sales": {
-     "actual": 224693,
+     "actual": 233004,
      "budget": null
     },
     "labour": {
-     "pct": 17.5,
+     "pct": 12.6,
      "budgetPct": null
     },
     "policies": 94.2,
@@ -1160,11 +1160,11 @@
     "correctiveA": "none",
     "reviews": 3,
     "sales": {
-     "actual": 265273,
+     "actual": 274385,
      "budget": null
     },
     "labour": {
-     "pct": 17.7,
+     "pct": 12.6,
      "budgetPct": null
     },
     "policies": 79.2,
@@ -1177,11 +1177,11 @@
     "correctiveA": "ok",
     "reviews": 25,
     "sales": {
-     "actual": 264188,
+     "actual": 274848,
      "budget": null
     },
     "labour": {
-     "pct": 17.3,
+     "pct": 12.3,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -1194,11 +1194,11 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 191946,
+     "actual": 199940,
      "budget": null
     },
     "labour": {
-     "pct": 17.9,
+     "pct": 12.6,
      "budgetPct": null
     },
     "policies": 91.0,
@@ -1211,11 +1211,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 143243,
+     "actual": 149425,
      "budget": null
     },
     "labour": {
-     "pct": 17.3,
+     "pct": 12.1,
      "budgetPct": null
     },
     "policies": 89.7,
@@ -1228,11 +1228,11 @@
     "correctiveA": "none",
     "reviews": 7,
     "sales": {
-     "actual": 149090,
+     "actual": 155427,
      "budget": null
     },
     "labour": {
-     "pct": 20.7,
+     "pct": 14.4,
      "budgetPct": null
     },
     "policies": 92.9,
@@ -1245,11 +1245,11 @@
     "correctiveA": "ok",
     "reviews": 14,
     "sales": {
-     "actual": 158765,
+     "actual": 164510,
      "budget": null
     },
     "labour": {
-     "pct": 16.9,
+     "pct": 12.3,
      "budgetPct": null
     },
     "policies": 95.8,
@@ -1262,11 +1262,11 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 120686,
+     "actual": 125433,
      "budget": null
     },
     "labour": {
-     "pct": 20.2,
+     "pct": 14.0,
      "budgetPct": null
     },
     "policies": 92.7,
@@ -1279,11 +1279,11 @@
     "correctiveA": "ok",
     "reviews": 9,
     "sales": {
-     "actual": 139502,
+     "actual": 145393,
      "budget": null
     },
     "labour": {
-     "pct": 20.3,
+     "pct": 14.5,
      "budgetPct": null
     },
     "policies": 94.3,
@@ -1296,11 +1296,11 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 187744,
+     "actual": 192638,
      "budget": null
     },
     "labour": {
-     "pct": 18.4,
+     "pct": 12.8,
      "budgetPct": null
     },
     "policies": 92.2,
@@ -1313,11 +1313,11 @@
     "correctiveA": "none",
     "reviews": 10,
     "sales": {
-     "actual": 170944,
+     "actual": 177267,
      "budget": null
     },
     "labour": {
-     "pct": 18.0,
+     "pct": 12.8,
      "budgetPct": null
     },
     "policies": 95.1,
@@ -1330,11 +1330,11 @@
     "correctiveA": "none",
     "reviews": 1,
     "sales": {
-     "actual": 123836,
+     "actual": 127787,
      "budget": null
     },
     "labour": {
-     "pct": 24.5,
+     "pct": 18.2,
      "budgetPct": null
     },
     "policies": 94.9,
@@ -1347,7 +1347,7 @@
     "correctiveA": "none",
     "reviews": 5,
     "sales": {
-     "actual": 251964,
+     "actual": 258323,
      "budget": null
     },
     "policies": 95.0,
@@ -1603,15 +1603,15 @@
    "Co-Chi Bowl Tare"
   ],
   "discountName": "Reusable 10% Off",
-  "windowStart": "2026-10-19",
-  "windowEnd": "2026-10-25",
-  "window": "19 Oct – 25 Oct",
+  "windowStart": "2026-10-26",
+  "windowEnd": "2026-10-26",
+  "window": "26 Oct",
   "totals": {
-   "reusable": 1,
-   "discounted": 1,
+   "reusable": 0,
+   "discounted": 0,
    "otherDisc": 0,
    "missed": 0,
-   "pct": 100.0
+   "pct": null
   },
   "venues": {
    "George St": {
@@ -1642,11 +1642,11 @@
     "otherList": []
    },
    "Wollongong": {
-    "reusable": 1,
-    "discounted": 1,
+    "reusable": 0,
+    "discounted": 0,
     "otherDisc": 0,
     "missed": 0,
-    "pct": 100.0,
+    "pct": null,
     "missedList": [],
     "otherList": []
    },
@@ -1869,18 +1869,18 @@
    "Co-Chi Bowl Tare"
   ],
   "discountName": "Reusable 10% Off",
-  "windowStart": "2026-09-28",
-  "windowEnd": "2026-10-25",
+  "windowStart": "2026-10-05",
+  "windowEnd": "2026-10-26",
   "venues": {
    "Barangaroo": {
     "daily": {
-     "2026-10-08": [
+     "2026-10-10": [
       1,
       0,
       1,
       0
      ],
-     "2026-10-10": [
+     "2026-10-08": [
       1,
       0,
       1,
@@ -1917,17 +1917,6 @@
       "bowl": "Co-Chi Bowl Tare"
      }
     ]
-   },
-   "Crows Nest": {
-    "daily": {
-     "2026-10-03": [
-      1,
-      1,
-      0,
-      0
-     ]
-    },
-    "missedList": []
    }
   }
  }
