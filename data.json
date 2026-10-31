@@ -1,7 +1,7 @@
 {
  "meta": {
   "reportDate": "2026-10-29",
-  "generatedAt": "2026-10-30T20:29:22+00:00",
+  "generatedAt": "2026-10-31T13:24:07+00:00",
   "windows": "daily = 29 Oct · WTD = 26–29 Oct · MTD = 1–29 Oct",
   "venues": 27,
   "sources": {
@@ -1369,21 +1369,13 @@
   "windowEnd": "2026-10-29",
   "window": "26 Oct – 29 Oct",
   "totals": {
-   "reusable": 1,
+   "reusable": 0,
    "discounted": 0,
-   "otherDisc": 1,
+   "otherDisc": 0,
    "missed": 0,
    "pct": null
   },
   "venues": {
-   "George St": {
-    "reusable": 0,
-    "discounted": 0,
-    "otherDisc": 0,
-    "missed": 0,
-    "pct": null,
-    "missedList": []
-   },
    "Erina Fair": {
     "reusable": 0,
     "discounted": 0,
@@ -1393,9 +1385,9 @@
     "missedList": []
    },
    "Barangaroo": {
-    "reusable": 1,
+    "reusable": 0,
     "discounted": 0,
-    "otherDisc": 1,
+    "otherDisc": 0,
     "missed": 0,
     "pct": null,
     "missedList": []
@@ -1604,12 +1596,12 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-10-26",
-  "windowEnd": "2026-10-30",
-  "window": "26 Oct – 30 Oct",
+  "windowEnd": "2026-10-29",
+  "window": "26 Oct – 29 Oct",
   "totals": {
-   "reusable": 1,
+   "reusable": 0,
    "discounted": 0,
-   "otherDisc": 1,
+   "otherDisc": 0,
    "missed": 0,
    "pct": null
   },
@@ -1633,21 +1625,13 @@
     "otherList": []
    },
    "Barangaroo": {
-    "reusable": 1,
+    "reusable": 0,
     "discounted": 0,
-    "otherDisc": 1,
+    "otherDisc": 0,
     "missed": 0,
     "pct": null,
     "missedList": [],
-    "otherList": [
-     {
-      "saleId": "74669392",
-      "date": "2026-10-29",
-      "time": "17:52:08",
-      "bowl": "Go Bowl Tare",
-      "discounts": "Team Free Yo-Chi"
-     }
-    ]
+    "otherList": []
    },
    "Wollongong": {
     "reusable": 0,
@@ -1878,17 +1862,11 @@
   ],
   "discountName": "Reusable 10% Off",
   "windowStart": "2026-10-05",
-  "windowEnd": "2026-10-30",
+  "windowEnd": "2026-10-29",
   "venues": {
    "Barangaroo": {
     "daily": {
      "2026-10-08": [
-      1,
-      0,
-      1,
-      0
-     ],
-     "2026-10-29": [
       1,
       0,
       1,
@@ -1902,35 +1880,6 @@
      ]
     },
     "missedList": []
-   },
-   "Wollongong": {
-    "daily": {
-     "2026-10-22": [
-      1,
-      1,
-      0,
-      0
-     ]
-    },
-    "missedList": []
-   },
-   "Manly": {
-    "daily": {
-     "2026-10-16": [
-      1,
-      0,
-      0,
-      1
-     ]
-    },
-    "missedList": [
-     {
-      "saleId": "44479935",
-      "date": "2026-10-16",
-      "time": "15:51:10",
-      "bowl": "Co-Chi Bowl Tare"
-     }
-    ]
    }
   }
  }
